@@ -4,7 +4,7 @@ dataConfig = suites/SPLENDID/crossDomain.ttl
 
 querySet = CROSSDOMAIN
 
-evalRuns = 2
+evalRuns = 6
 
 timeout = 120000
 
@@ -14,4 +14,3 @@ fill = false
 
 evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluation
 
-baseDir = /root/workspace/EvalBenchmark/suites/SPLENDID/

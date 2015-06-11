@@ -1,7 +1,6 @@
 dataConfig = doc/fedx/CrossDomain-FedX-SPARQL.ttl
 
 querySet = CROSSDOMAIN
-#querySet = CUSTOM1
 
 evalRuns = 6
 

@@ -1,4 +1,4 @@
-dataConfig = /root/workspace/EvalBenchmark/doc/fedx/LifeScience-FedX-SPARQL.ttl
+dataConfig = doc/fedx/LifeScience-FedX-SPARQL.ttl
 
 querySet = LIFESCIENCEDOMAIN
 
@@ -20,8 +20,6 @@ sparqlRequestReport = true
 showResults = true
 
 #fedxConfig = suites/fedx/fedxConfig.prop
-baseDir=/root/workspace/EvalBenchmark/doc/fedx/
-
 
 #earlyResultsMonitorClass = org.semanticweb.fbench.report.FileEarlyResultsMonitor
 

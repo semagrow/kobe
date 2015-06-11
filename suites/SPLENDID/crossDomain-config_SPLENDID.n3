@@ -49,23 +49,23 @@
          fed:member [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/dbpedia3.5.1_subset-void.n3> ;
-            void:sparqlEndpoint <http://10.0.100.57:8891/sparql>
+            void:sparqlEndpoint <http://143.233.226.25:8891/sparql>
          ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/nytimes-2010-01-13-void.n3> ;
-            void:sparqlEndpoint <http://10.0.100.57:8897/sparql>
+            void:sparqlEndpoint <http://143.233.226.25:8897/sparql>
          ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/linkedmdb-dump-2010-01-19-void.n3> ;
-            void:sparqlEndpoint <http://10.0.100.57:8896/sparql>
+            void:sparqlEndpoint <http://143.233.226.25:8896/sparql>
          ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/jamendo-void.n3> ;
-            void:sparqlEndpoint <http://10.0.100.57:8894/sparql>
+            void:sparqlEndpoint <http://143.233.226.25:8894/sparql>
          ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/all-geonames-2010-11-28_cleaned-void.n3> ;
-            void:sparqlEndpoint <http://10.0.100.57:8893/sparql>
+            void:sparqlEndpoint <http://143.233.226.25:8893/sparql>
 	 ]
       ]
    ] .

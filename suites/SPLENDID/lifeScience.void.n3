@@ -25,7 +25,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 _:node-1cpji4tx1 a void:Dataset ;
-	void:sparqlEndpoint <http://10.0.100.57:8891/sparql> ;
+	void:sparqlEndpoint <http://143.233.226.25:8891/sparql> ;
 	void:triples "43620475"^^xsd:integer ;
 	void:entities "2222456"^^xsd:integer ;
 	void:properties "1063"^^xsd:integer ;
@@ -6094,7 +6094,7 @@ _:node-1cpji4tx1 a void:Dataset ;
 	] .@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 _:nodefn1jemx1 a void:Dataset ;
-	void:sparqlEndpoint <http://10.0.100.57:8895/sparql> ;
+	void:sparqlEndpoint <http://143.233.226.25:8895/sparql> ;
 	void:triples "1090830"^^xsd:integer ;
 	void:entities "34260"^^xsd:integer ;
 	void:properties "21"^^xsd:integer ;
@@ -6221,7 +6221,7 @@ _:nodefn1jemx1 a void:Dataset ;
 	] .
 
 _:node19l0p8bx1 a void:Dataset ;
-	void:sparqlEndpoint <http://10.0.100.57:8890/sparql> ;
+	void:sparqlEndpoint <http://143.233.226.25:8890/sparql> ;
 	void:triples "7325744"^^xsd:integer ;
 	void:entities "50477"^^xsd:integer ;
 	void:properties "28"^^xsd:integer ;
@@ -6374,7 +6374,7 @@ _:node19l0p8bx1 a void:Dataset ;
 	] .
 
 _:node-16vledbx1 a void:Dataset ;
-	void:sparqlEndpoint <http://10.0.100.57:8892/sparql> ;
+	void:sparqlEndpoint <http://143.233.226.25:8892/sparql> ;
 	void:triples "766920"^^xsd:integer ;
 	void:entities "19693"^^xsd:integer ;
 	void:properties "119"^^xsd:integer ;

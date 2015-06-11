@@ -26,7 +26,7 @@
 #fluid:SPARQLEndpoint "http://api.talis.com/stores/nytimes/services/sparql".
 
 #<http://DBpedia> fluid:store "SPARQLEndpoint";
-#fluid:SPARQLEndpoint "http://10.0.100.57:8891/sparql".
+#fluid:SPARQLEndpoint "http://143.233.226.25:8891/sparql".
 
 #<http://NYtimes> fluid:store "SPARQLEndpoint";
-#fluid:SPARQLEndpoint "http://10.0.100.57:8897/sparql".
+#fluid:SPARQLEndpoint "http://143.233.226.25:8897/sparql".
