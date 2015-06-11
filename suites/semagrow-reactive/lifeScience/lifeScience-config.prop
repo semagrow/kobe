@@ -15,8 +15,6 @@ fill = false
 
 evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluationReactive
 
-baseDir = /root/workspace/EvalBenchmark/suites/semagrow-reactive/lifeScience/
-
 #debugMode = false
 #showResults = true
 

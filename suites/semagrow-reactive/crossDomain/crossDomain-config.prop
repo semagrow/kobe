@@ -14,4 +14,3 @@ fill = false
 
 evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluationReactive
 
-baseDir = /root/workspace/EvalBenchmark/suites/semagrow-reactive/crossDomain/
