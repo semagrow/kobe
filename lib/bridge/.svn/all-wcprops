@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/141/trunk/EvalBenchmark/lib/bridge
+END
+FedBench-SPLENDID-bridge.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/123/trunk/EvalBenchmark/lib/bridge/FedBench-SPLENDID-bridge.jar
+END
+FedBench-FedX-bridge.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/141/trunk/EvalBenchmark/lib/bridge/FedBench-FedX-bridge.jar
+END
+FedBench-OWLIM-bridge.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/140/trunk/EvalBenchmark/lib/bridge/FedBench-OWLIM-bridge.jar
+END
+FedBench-DARQ-bridge.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/123/trunk/EvalBenchmark/lib/bridge/FedBench-DARQ-bridge.jar
+END
+fbench-owlim-bridge.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/140/trunk/EvalBenchmark/lib/bridge/fbench-owlim-bridge.jar
+END

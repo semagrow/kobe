@@ -1,0 +1,5243 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dbpo: <http://dbpedia.org/ontology/> .
+@prefix dbpp: <http://dbpedia.org/property/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix swrc: <http://swrc.ontoware.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix gml: <http://www.opengis.net/gml/> .
+@prefix georss: <http://www.georss.org/georss/> .
+
+_:node-161n453x1 a void:Dataset ;
+	void:sparqlEndpoint <http://dbpedia.org/sparql> ;
+	void:triples "11135627"^^xsd:integer ;
+	void:entities "289190"^^xsd:integer ;
+	void:properties "1043"^^xsd:integer ;
+	void:distinctSubjects "1440767"^^xsd:integer ;
+	void:distinctObjects "3541216"^^xsd:integer ;
+	void:propertyPartition [
+		void:property dbpo:aSide ;
+		void:triples "1600"^^xsd:integer ;
+		void:distinctSubjects "1552"^^xsd:integer ;
+		void:distinctObjects "1554"^^xsd:integer
+	] , [
+		void:property dbpo:abbreviation ;
+		void:triples "1144"^^xsd:integer ;
+		void:distinctSubjects "1141"^^xsd:integer ;
+		void:distinctObjects "1096"^^xsd:integer
+	] , [
+		void:property dbpo:academicAdvisor ;
+		void:triples "255"^^xsd:integer ;
+		void:distinctSubjects "221"^^xsd:integer ;
+		void:distinctObjects "216"^^xsd:integer
+	] , [
+		void:property dbpo:academyAward ;
+		void:triples "424"^^xsd:integer ;
+		void:distinctSubjects "193"^^xsd:integer ;
+		void:distinctObjects "244"^^xsd:integer
+	] , [
+		void:property dbpo:acceleration ;
+		void:triples "481"^^xsd:integer ;
+		void:distinctSubjects "481"^^xsd:integer ;
+		void:distinctObjects "121"^^xsd:integer
+	] , [
+		void:property dbpo:access ;
+		void:triples "73"^^xsd:integer ;
+		void:distinctSubjects "68"^^xsd:integer ;
+		void:distinctObjects "62"^^xsd:integer
+	] , [
+		void:property dbpo:activeYearsEndDate ;
+		void:triples "31502"^^xsd:integer ;
+		void:distinctSubjects "23555"^^xsd:integer ;
+		void:distinctObjects "15900"^^xsd:integer
+	] , [
+		void:property dbpo:activeYearsEndYear ;
+		void:triples "102022"^^xsd:integer ;
+		void:distinctSubjects "83669"^^xsd:integer ;
+		void:distinctObjects "1402"^^xsd:integer
+	] , [
+		void:property dbpo:activeYearsStartDate ;
+		void:triples "39414"^^xsd:integer ;
+		void:distinctSubjects "29746"^^xsd:integer ;
+		void:distinctObjects "17583"^^xsd:integer
+	] , [
+		void:property dbpo:activeYearsStartYear ;
+		void:triples "172976"^^xsd:integer ;
+		void:distinctSubjects "143004"^^xsd:integer ;
+		void:distinctObjects "1485"^^xsd:integer
+	] , [
+		void:property dbpo:added ;
+		void:triples "22538"^^xsd:integer ;
+		void:distinctSubjects "22371"^^xsd:integer ;
+		void:distinctObjects "4807"^^xsd:integer
+	] , [
+		void:property dbpo:address ;
+		void:triples "8091"^^xsd:integer ;
+		void:distinctSubjects "4696"^^xsd:integer ;
+		void:distinctObjects "6902"^^xsd:integer
+	] , [
+		void:property dbpo:administrativeCollectivity ;
+		void:triples "56"^^xsd:integer ;
+		void:distinctSubjects "56"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:administrativeDistrict ;
+		void:triples "98"^^xsd:integer ;
+		void:distinctSubjects "98"^^xsd:integer ;
+		void:distinctObjects "21"^^xsd:integer
+	] , [
+		void:property dbpo:affiliation ;
+		void:triples "13576"^^xsd:integer ;
+		void:distinctSubjects "11843"^^xsd:integer ;
+		void:distinctObjects "2747"^^xsd:integer
+	] , [
+		void:property dbpo:afiAward ;
+		void:triples "47"^^xsd:integer ;
+		void:distinctSubjects "16"^^xsd:integer ;
+		void:distinctObjects "34"^^xsd:integer
+	] , [
+		void:property dbpo:ageRange ;
+		void:triples "98"^^xsd:integer ;
+		void:distinctSubjects "95"^^xsd:integer ;
+		void:distinctObjects "16"^^xsd:integer
+	] , [
+		void:property dbpo:airDate ;
+		void:triples "4634"^^xsd:integer ;
+		void:distinctSubjects "4456"^^xsd:integer ;
+		void:distinctObjects "3839"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftAttack ;
+		void:triples "193"^^xsd:integer ;
+		void:distinctSubjects "146"^^xsd:integer ;
+		void:distinctObjects "90"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftBomber ;
+		void:triples "100"^^xsd:integer ;
+		void:distinctSubjects "74"^^xsd:integer ;
+		void:distinctObjects "52"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftElectronic ;
+		void:triples "31"^^xsd:integer ;
+		void:distinctSubjects "27"^^xsd:integer ;
+		void:distinctObjects "25"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftFighter ;
+		void:triples "413"^^xsd:integer ;
+		void:distinctSubjects "202"^^xsd:integer ;
+		void:distinctObjects "114"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftHelicopter ;
+		void:triples "47"^^xsd:integer ;
+		void:distinctSubjects "40"^^xsd:integer ;
+		void:distinctObjects "38"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftHelicopterAttack ;
+		void:triples "10"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftHelicopterCargo ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftHelicopterMultirole ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftHelicopterObservation ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftHelicopterTransport ;
+		void:triples "4"^^xsd:integer ;
+		void:distinctSubjects "4"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftHelicopterUtility ;
+		void:triples "12"^^xsd:integer ;
+		void:distinctSubjects "12"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftInterceptor ;
+		void:triples "28"^^xsd:integer ;
+		void:distinctSubjects "28"^^xsd:integer ;
+		void:distinctObjects "21"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftPatrol ;
+		void:triples "64"^^xsd:integer ;
+		void:distinctSubjects "51"^^xsd:integer ;
+		void:distinctObjects "45"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftRecon ;
+		void:triples "100"^^xsd:integer ;
+		void:distinctSubjects "78"^^xsd:integer ;
+		void:distinctObjects "65"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftTrainer ;
+		void:triples "146"^^xsd:integer ;
+		void:distinctSubjects "127"^^xsd:integer ;
+		void:distinctObjects "94"^^xsd:integer
+	] , [
+		void:property dbpo:aircraftTransport ;
+		void:triples "153"^^xsd:integer ;
+		void:distinctSubjects "131"^^xsd:integer ;
+		void:distinctObjects "84"^^xsd:integer
+	] , [
+		void:property dbpo:album ;
+		void:triples "10302"^^xsd:integer ;
+		void:distinctSubjects "10278"^^xsd:integer ;
+		void:distinctObjects "5759"^^xsd:integer
+	] , [
+		void:property dbpo:alias ;
+		void:triples "17013"^^xsd:integer ;
+		void:distinctSubjects "13979"^^xsd:integer ;
+		void:distinctObjects "16273"^^xsd:integer
+	] , [
+		void:property dbpo:alliance ;
+		void:triples "194"^^xsd:integer ;
+		void:distinctSubjects "188"^^xsd:integer ;
+		void:distinctObjects "41"^^xsd:integer
+	] , [
+		void:property dbpo:almaMater ;
+		void:triples "22583"^^xsd:integer ;
+		void:distinctSubjects "16797"^^xsd:integer ;
+		void:distinctObjects "4310"^^xsd:integer
+	] , [
+		void:property dbpo:alumni ;
+		void:triples "56"^^xsd:integer ;
+		void:distinctSubjects "34"^^xsd:integer ;
+		void:distinctObjects "56"^^xsd:integer
+	] , [
+		void:property dbpo:americanComedyAward ;
+		void:triples "12"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "11"^^xsd:integer
+	] , [
+		void:property dbpo:amgid ;
+		void:triples "1344"^^xsd:integer ;
+		void:distinctSubjects "1344"^^xsd:integer ;
+		void:distinctObjects "1332"^^xsd:integer
+	] , [
+		void:property dbpo:animal ;
+		void:triples "46"^^xsd:integer ;
+		void:distinctSubjects "31"^^xsd:integer ;
+		void:distinctObjects "39"^^xsd:integer
+	] , [
+		void:property dbpo:anniversary ;
+		void:triples "104"^^xsd:integer ;
+		void:distinctSubjects "93"^^xsd:integer ;
+		void:distinctObjects "98"^^xsd:integer
+	] , [
+		void:property dbpo:anthem ;
+		void:triples "464"^^xsd:integer ;
+		void:distinctSubjects "403"^^xsd:integer ;
+		void:distinctObjects "326"^^xsd:integer
+	] , [
+		void:property dbpo:apoapsis ;
+		void:triples "12258"^^xsd:integer ;
+		void:distinctSubjects "12225"^^xsd:integer ;
+		void:distinctObjects "12245"^^xsd:integer
+	] , [
+		void:property dbpo:appointer ;
+		void:triples "483"^^xsd:integer ;
+		void:distinctSubjects "481"^^xsd:integer ;
+		void:distinctObjects "170"^^xsd:integer
+	] , [
+		void:property dbpo:archipelago ;
+		void:triples "1007"^^xsd:integer ;
+		void:distinctSubjects "886"^^xsd:integer ;
+		void:distinctObjects "150"^^xsd:integer
+	] , [
+		void:property dbpo:architect ;
+		void:triples "4800"^^xsd:integer ;
+		void:distinctSubjects "4567"^^xsd:integer ;
+		void:distinctObjects "2442"^^xsd:integer
+	] , [
+		void:property dbpo:architectualBureau ;
+		void:triples "1383"^^xsd:integer ;
+		void:distinctSubjects "1362"^^xsd:integer ;
+		void:distinctObjects "161"^^xsd:integer
+	] , [
+		void:property dbpo:architecturalStyle ;
+		void:triples "327"^^xsd:integer ;
+		void:distinctSubjects "324"^^xsd:integer ;
+		void:distinctObjects "139"^^xsd:integer
+	] , [
+		void:property dbpo:area ;
+		void:triples "10000"^^xsd:integer ;
+		void:distinctSubjects "8999"^^xsd:integer ;
+		void:distinctObjects "2986"^^xsd:integer
+	] , [
+		void:property dbpo:areaCode ;
+		void:triples "60808"^^xsd:integer ;
+		void:distinctSubjects "60607"^^xsd:integer ;
+		void:distinctObjects "9028"^^xsd:integer
+	] , [
+		void:property dbpo:areaLand ;
+		void:triples "74087"^^xsd:integer ;
+		void:distinctSubjects "39652"^^xsd:integer ;
+		void:distinctObjects "9891"^^xsd:integer
+	] , [
+		void:property dbpo:areaMetro ;
+		void:triples "961"^^xsd:integer ;
+		void:distinctSubjects "584"^^xsd:integer ;
+		void:distinctObjects "889"^^xsd:integer
+	] , [
+		void:property dbpo:areaOfCatchment ;
+		void:triples "717"^^xsd:integer ;
+		void:distinctSubjects "715"^^xsd:integer ;
+		void:distinctObjects "656"^^xsd:integer
+	] , [
+		void:property dbpo:areaOfSearch ;
+		void:triples "38"^^xsd:integer ;
+		void:distinctSubjects "38"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:areaTotal ;
+		void:triples "142813"^^xsd:integer ;
+		void:distinctSubjects "107092"^^xsd:integer ;
+		void:distinctObjects "25414"^^xsd:integer
+	] , [
+		void:property dbpo:areaUrban ;
+		void:triples "259"^^xsd:integer ;
+		void:distinctSubjects "218"^^xsd:integer ;
+		void:distinctObjects "248"^^xsd:integer
+	] , [
+		void:property dbpo:areaWater ;
+		void:triples "72078"^^xsd:integer ;
+		void:distinctSubjects "37694"^^xsd:integer ;
+		void:distinctObjects "1849"^^xsd:integer
+	] , [
+		void:property dbpo:arielAward ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:arm ;
+		void:triples "1566"^^xsd:integer ;
+		void:distinctSubjects "1566"^^xsd:integer ;
+		void:distinctObjects "19"^^xsd:integer
+	] , [
+		void:property dbpo:arrondissement ;
+		void:triples "563"^^xsd:integer ;
+		void:distinctSubjects "563"^^xsd:integer ;
+		void:distinctObjects "50"^^xsd:integer
+	] , [
+		void:property dbpo:artery ;
+		void:triples "337"^^xsd:integer ;
+		void:distinctSubjects "326"^^xsd:integer ;
+		void:distinctObjects "191"^^xsd:integer
+	] , [
+		void:property dbpo:artist ;
+		void:triples "90041"^^xsd:integer ;
+		void:distinctSubjects "89900"^^xsd:integer ;
+		void:distinctObjects "20319"^^xsd:integer
+	] , [
+		void:property dbpo:ascent ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:ascentDate ;
+		void:triples "7"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:assembly ;
+		void:triples "3932"^^xsd:integer ;
+		void:distinctSubjects "2157"^^xsd:integer ;
+		void:distinctObjects "852"^^xsd:integer
+	] , [
+		void:property dbpo:assetUnderManagement ;
+		void:triples "16"^^xsd:integer ;
+		void:distinctSubjects "16"^^xsd:integer ;
+		void:distinctObjects "16"^^xsd:integer
+	] , [
+		void:property dbpo:assets ;
+		void:triples "1212"^^xsd:integer ;
+		void:distinctSubjects "1205"^^xsd:integer ;
+		void:distinctObjects "1024"^^xsd:integer
+	] , [
+		void:property dbpo:associate ;
+		void:triples "349"^^xsd:integer ;
+		void:distinctSubjects "302"^^xsd:integer ;
+		void:distinctObjects "322"^^xsd:integer
+	] , [
+		void:property dbpo:associateEditor ;
+		void:triples "10"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "10"^^xsd:integer
+	] , [
+		void:property dbpo:associatedAct ;
+		void:triples "83"^^xsd:integer ;
+		void:distinctSubjects "73"^^xsd:integer ;
+		void:distinctObjects "51"^^xsd:integer
+	] , [
+		void:property dbpo:associatedBand ;
+		void:triples "35147"^^xsd:integer ;
+		void:distinctSubjects "20345"^^xsd:integer ;
+		void:distinctObjects "18984"^^xsd:integer
+	] , [
+		void:property dbpo:associatedMusicalArtist ;
+		void:triples "35147"^^xsd:integer ;
+		void:distinctSubjects "20345"^^xsd:integer ;
+		void:distinctObjects "18984"^^xsd:integer
+	] , [
+		void:property dbpo:associatedRocket ;
+		void:triples "144"^^xsd:integer ;
+		void:distinctSubjects "30"^^xsd:integer ;
+		void:distinctObjects "90"^^xsd:integer
+	] , [
+		void:property dbpo:associationOfLocalGovernment ;
+		void:triples "7"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:atcPrefix ;
+		void:triples "3602"^^xsd:integer ;
+		void:distinctSubjects "3602"^^xsd:integer ;
+		void:distinctObjects "94"^^xsd:integer
+	] , [
+		void:property dbpo:atcSuffix ;
+		void:triples "2433"^^xsd:integer ;
+		void:distinctSubjects "2433"^^xsd:integer ;
+		void:distinctObjects "746"^^xsd:integer
+	] , [
+		void:property dbpo:atcSupplemental ;
+		void:triples "72"^^xsd:integer ;
+		void:distinctSubjects "63"^^xsd:integer ;
+		void:distinctObjects "34"^^xsd:integer
+	] , [
+		void:property dbpo:athletics ;
+		void:triples "487"^^xsd:integer ;
+		void:distinctSubjects "412"^^xsd:integer ;
+		void:distinctObjects "113"^^xsd:integer
+	] , [
+		void:property dbpo:author ;
+		void:triples "23350"^^xsd:integer ;
+		void:distinctSubjects "21656"^^xsd:integer ;
+		void:distinctObjects "10024"^^xsd:integer
+	] , [
+		void:property dbpo:automobileModel ;
+		void:triples "3439"^^xsd:integer ;
+		void:distinctSubjects "3385"^^xsd:integer ;
+		void:distinctObjects "2476"^^xsd:integer
+	] , [
+		void:property dbpo:automobilePlatform ;
+		void:triples "1207"^^xsd:integer ;
+		void:distinctSubjects "1179"^^xsd:integer ;
+		void:distinctObjects "364"^^xsd:integer
+	] , [
+		void:property dbpo:averageClassSize ;
+		void:triples "612"^^xsd:integer ;
+		void:distinctSubjects "534"^^xsd:integer ;
+		void:distinctObjects "132"^^xsd:integer
+	] , [
+		void:property dbpo:averageSpeed ;
+		void:triples "732"^^xsd:integer ;
+		void:distinctSubjects "731"^^xsd:integer ;
+		void:distinctObjects "445"^^xsd:integer
+	] , [
+		void:property dbpo:award ;
+		void:triples "30799"^^xsd:integer ;
+		void:distinctSubjects "13750"^^xsd:integer ;
+		void:distinctObjects "4758"^^xsd:integer
+	] , [
+		void:property dbpo:awards ;
+		void:triples "63"^^xsd:integer ;
+		void:distinctSubjects "59"^^xsd:integer ;
+		void:distinctObjects "25"^^xsd:integer
+	] , [
+		void:property dbpo:bSide ;
+		void:triples "12079"^^xsd:integer ;
+		void:distinctSubjects "10241"^^xsd:integer ;
+		void:distinctObjects "11267"^^xsd:integer
+	] , [
+		void:property dbpo:background ;
+		void:triples "44951"^^xsd:integer ;
+		void:distinctSubjects "44948"^^xsd:integer ;
+		void:distinctObjects "831"^^xsd:integer
+	] , [
+		void:property dbpo:baftaAward ;
+		void:triples "257"^^xsd:integer ;
+		void:distinctSubjects "109"^^xsd:integer ;
+		void:distinctObjects "154"^^xsd:integer
+	] , [
+		void:property dbpo:band ;
+		void:triples "1533"^^xsd:integer ;
+		void:distinctSubjects "1533"^^xsd:integer ;
+		void:distinctObjects "178"^^xsd:integer
+	] , [
+		void:property dbpo:barPassRate ;
+		void:triples "85"^^xsd:integer ;
+		void:distinctSubjects "82"^^xsd:integer ;
+		void:distinctObjects "59"^^xsd:integer
+	] , [
+		void:property dbpo:basedOn ;
+		void:triples "628"^^xsd:integer ;
+		void:distinctSubjects "495"^^xsd:integer ;
+		void:distinctObjects "578"^^xsd:integer
+	] , [
+		void:property dbpo:battle ;
+		void:triples "41993"^^xsd:integer ;
+		void:distinctSubjects "15568"^^xsd:integer ;
+		void:distinctObjects "5204"^^xsd:integer
+	] , [
+		void:property dbpo:battleHonours ;
+		void:triples "1592"^^xsd:integer ;
+		void:distinctSubjects "446"^^xsd:integer ;
+		void:distinctObjects "1171"^^xsd:integer
+	] , [
+		void:property dbpo:beatifiedBy ;
+		void:triples "350"^^xsd:integer ;
+		void:distinctSubjects "350"^^xsd:integer ;
+		void:distinctObjects "64"^^xsd:integer
+	] , [
+		void:property dbpo:beatifiedDate ;
+		void:triples "332"^^xsd:integer ;
+		void:distinctSubjects "332"^^xsd:integer ;
+		void:distinctObjects "275"^^xsd:integer
+	] , [
+		void:property dbpo:beatifiedPlace ;
+		void:triples "133"^^xsd:integer ;
+		void:distinctSubjects "133"^^xsd:integer ;
+		void:distinctObjects "38"^^xsd:integer
+	] , [
+		void:property dbpo:bedCount ;
+		void:triples "1019"^^xsd:integer ;
+		void:distinctSubjects "1014"^^xsd:integer ;
+		void:distinctObjects "542"^^xsd:integer
+	] , [
+		void:property dbpo:beltwayCity ;
+		void:triples "39"^^xsd:integer ;
+		void:distinctSubjects "38"^^xsd:integer ;
+		void:distinctObjects "34"^^xsd:integer
+	] , [
+		void:property dbpo:billed ;
+		void:triples "842"^^xsd:integer ;
+		void:distinctSubjects "687"^^xsd:integer ;
+		void:distinctObjects "510"^^xsd:integer
+	] , [
+		void:property dbpo:binomial ;
+		void:triples "55"^^xsd:integer ;
+		void:distinctSubjects "55"^^xsd:integer ;
+		void:distinctObjects "52"^^xsd:integer
+	] , [
+		void:property dbpo:binomialAuthority ;
+		void:triples "43684"^^xsd:integer ;
+		void:distinctSubjects "43674"^^xsd:integer ;
+		void:distinctObjects "6014"^^xsd:integer
+	] , [
+		void:property dbpo:biome ;
+		void:triples "77"^^xsd:integer ;
+		void:distinctSubjects "53"^^xsd:integer ;
+		void:distinctObjects "40"^^xsd:integer
+	] , [
+		void:property dbpo:birthDate ;
+		void:triples "232642"^^xsd:integer ;
+		void:distinctSubjects "232608"^^xsd:integer ;
+		void:distinctObjects "57351"^^xsd:integer
+	] , [
+		void:property dbpo:birthName ;
+		void:triples "8836"^^xsd:integer ;
+		void:distinctSubjects "8725"^^xsd:integer ;
+		void:distinctObjects "8718"^^xsd:integer
+	] , [
+		void:property dbpo:birthPlace ;
+		void:triples "264969"^^xsd:integer ;
+		void:distinctSubjects "207100"^^xsd:integer ;
+		void:distinctObjects "45752"^^xsd:integer
+	] , [
+		void:property dbpo:birthYear ;
+		void:triples "23132"^^xsd:integer ;
+		void:distinctSubjects "23112"^^xsd:integer ;
+		void:distinctObjects "816"^^xsd:integer
+	] , [
+		void:property dbpo:blockAlloy ;
+		void:triples "54"^^xsd:integer ;
+		void:distinctSubjects "53"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property dbpo:board ;
+		void:triples "296"^^xsd:integer ;
+		void:distinctSubjects "209"^^xsd:integer ;
+		void:distinctObjects "254"^^xsd:integer
+	] , [
+		void:property dbpo:bodyDiscovered ;
+		void:triples "12"^^xsd:integer ;
+		void:distinctSubjects "12"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property dbpo:bodyStyle ;
+		void:triples "6900"^^xsd:integer ;
+		void:distinctSubjects "3960"^^xsd:integer ;
+		void:distinctObjects "186"^^xsd:integer
+	] , [
+		void:property dbpo:booster ;
+		void:triples "58"^^xsd:integer ;
+		void:distinctSubjects "58"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property dbpo:border ;
+		void:triples "72"^^xsd:integer ;
+		void:distinctSubjects "52"^^xsd:integer ;
+		void:distinctObjects "59"^^xsd:integer
+	] , [
+		void:property dbpo:borough ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:bowlRecord ;
+		void:triples "232"^^xsd:integer ;
+		void:distinctSubjects "232"^^xsd:integer ;
+		void:distinctObjects "132"^^xsd:integer
+	] , [
+		void:property dbpo:brainInfoNumber ;
+		void:triples "388"^^xsd:integer ;
+		void:distinctSubjects "388"^^xsd:integer ;
+		void:distinctObjects "353"^^xsd:integer
+	] , [
+		void:property dbpo:brainInfoType ;
+		void:triples "387"^^xsd:integer ;
+		void:distinctSubjects "387"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:branchFrom ;
+		void:triples "548"^^xsd:integer ;
+		void:distinctSubjects "548"^^xsd:integer ;
+		void:distinctObjects "210"^^xsd:integer
+	] , [
+		void:property dbpo:branchTo ;
+		void:triples "139"^^xsd:integer ;
+		void:distinctSubjects "139"^^xsd:integer ;
+		void:distinctObjects "128"^^xsd:integer
+	] , [
+		void:property dbpo:brand ;
+		void:triples "118"^^xsd:integer ;
+		void:distinctSubjects "76"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:britishComedyAwards ;
+		void:triples "17"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property dbpo:broadcastArea ;
+		void:triples "934"^^xsd:integer ;
+		void:distinctSubjects "647"^^xsd:integer ;
+		void:distinctObjects "287"^^xsd:integer
+	] , [
+		void:property dbpo:budget ;
+		void:triples "6294"^^xsd:integer ;
+		void:distinctSubjects "6236"^^xsd:integer ;
+		void:distinctObjects "1285"^^xsd:integer
+	] , [
+		void:property dbpo:building ;
+		void:triples "4"^^xsd:integer ;
+		void:distinctSubjects "4"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:buildingEndDate ;
+		void:triples "148"^^xsd:integer ;
+		void:distinctSubjects "147"^^xsd:integer ;
+		void:distinctObjects "146"^^xsd:integer
+	] , [
+		void:property dbpo:buildingStartDate ;
+		void:triples "154"^^xsd:integer ;
+		void:distinctSubjects "152"^^xsd:integer ;
+		void:distinctObjects "153"^^xsd:integer
+	] , [
+		void:property dbpo:callSign ;
+		void:triples "39"^^xsd:integer ;
+		void:distinctSubjects "38"^^xsd:integer ;
+		void:distinctObjects "37"^^xsd:integer
+	] , [
+		void:property dbpo:callsignMeaning ;
+		void:triples "6390"^^xsd:integer ;
+		void:distinctSubjects "5627"^^xsd:integer ;
+		void:distinctObjects "5834"^^xsd:integer
+	] , [
+		void:property dbpo:campus ;
+		void:triples "4179"^^xsd:integer ;
+		void:distinctSubjects "3952"^^xsd:integer ;
+		void:distinctObjects "608"^^xsd:integer
+	] , [
+		void:property dbpo:campusSize ;
+		void:triples "484"^^xsd:integer ;
+		void:distinctSubjects "481"^^xsd:integer ;
+		void:distinctObjects "207"^^xsd:integer
+	] , [
+		void:property dbpo:campusType ;
+		void:triples "816"^^xsd:integer ;
+		void:distinctSubjects "814"^^xsd:integer ;
+		void:distinctObjects "123"^^xsd:integer
+	] , [
+		void:property dbpo:canonizedBy ;
+		void:triples "399"^^xsd:integer ;
+		void:distinctSubjects "399"^^xsd:integer ;
+		void:distinctObjects "107"^^xsd:integer
+	] , [
+		void:property dbpo:canonizedDate ;
+		void:triples "323"^^xsd:integer ;
+		void:distinctSubjects "323"^^xsd:integer ;
+		void:distinctObjects "200"^^xsd:integer
+	] , [
+		void:property dbpo:canonizedPlace ;
+		void:triples "171"^^xsd:integer ;
+		void:distinctSubjects "171"^^xsd:integer ;
+		void:distinctObjects "35"^^xsd:integer
+	] , [
+		void:property dbpo:capacity ;
+		void:triples "7994"^^xsd:integer ;
+		void:distinctSubjects "7924"^^xsd:integer ;
+		void:distinctObjects "1374"^^xsd:integer
+	] , [
+		void:property dbpo:capital ;
+		void:triples "2339"^^xsd:integer ;
+		void:distinctSubjects "2025"^^xsd:integer ;
+		void:distinctObjects "1848"^^xsd:integer
+	] , [
+		void:property dbpo:capitalElevation ;
+		void:triples "47"^^xsd:integer ;
+		void:distinctSubjects "47"^^xsd:integer ;
+		void:distinctObjects "40"^^xsd:integer
+	] , [
+		void:property dbpo:capitalPosition ;
+		void:triples "87"^^xsd:integer ;
+		void:distinctSubjects "87"^^xsd:integer ;
+		void:distinctObjects "87"^^xsd:integer
+	] , [
+		void:property dbpo:careerPoints ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:careerPrizeMoney ;
+		void:triples "1221"^^xsd:integer ;
+		void:distinctSubjects "1221"^^xsd:integer ;
+		void:distinctObjects "1218"^^xsd:integer
+	] , [
+		void:property dbpo:casNumber ;
+		void:triples "3706"^^xsd:integer ;
+		void:distinctSubjects "3706"^^xsd:integer ;
+		void:distinctObjects "3676"^^xsd:integer
+	] , [
+		void:property dbpo:casSupplemental ;
+		void:triples "159"^^xsd:integer ;
+		void:distinctSubjects "142"^^xsd:integer ;
+		void:distinctObjects "115"^^xsd:integer
+	] , [
+		void:property dbpo:category ;
+		void:triples "28"^^xsd:integer ;
+		void:distinctSubjects "28"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:causalties ;
+		void:triples "9633"^^xsd:integer ;
+		void:distinctSubjects "5951"^^xsd:integer ;
+		void:distinctObjects "6487"^^xsd:integer
+	] , [
+		void:property dbpo:ceeb ;
+		void:triples "367"^^xsd:integer ;
+		void:distinctSubjects "364"^^xsd:integer ;
+		void:distinctObjects "359"^^xsd:integer
+	] , [
+		void:property dbpo:ceo ;
+		void:triples "69"^^xsd:integer ;
+		void:distinctSubjects "68"^^xsd:integer ;
+		void:distinctObjects "66"^^xsd:integer
+	] , [
+		void:property dbpo:ceremonialCounty ;
+		void:triples "2975"^^xsd:integer ;
+		void:distinctSubjects "2972"^^xsd:integer ;
+		void:distinctObjects "54"^^xsd:integer
+	] , [
+		void:property dbpo:certification ;
+		void:triples "2641"^^xsd:integer ;
+		void:distinctSubjects "2268"^^xsd:integer ;
+		void:distinctObjects "340"^^xsd:integer
+	] , [
+		void:property dbpo:certificationDate ;
+		void:triples "17"^^xsd:integer ;
+		void:distinctSubjects "16"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:cesarAward ;
+		void:triples "75"^^xsd:integer ;
+		void:distinctSubjects "33"^^xsd:integer ;
+		void:distinctObjects "49"^^xsd:integer
+	] , [
+		void:property dbpo:chairman ;
+		void:triples "3033"^^xsd:integer ;
+		void:distinctSubjects "3005"^^xsd:integer ;
+		void:distinctObjects "2664"^^xsd:integer
+	] , [
+		void:property dbpo:chairmanTitle ;
+		void:triples "396"^^xsd:integer ;
+		void:distinctSubjects "396"^^xsd:integer ;
+		void:distinctObjects "34"^^xsd:integer
+	] , [
+		void:property dbpo:chairperson ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:championships ;
+		void:triples "699"^^xsd:integer ;
+		void:distinctSubjects "699"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:chancellor ;
+		void:triples "682"^^xsd:integer ;
+		void:distinctSubjects "655"^^xsd:integer ;
+		void:distinctObjects "484"^^xsd:integer
+	] , [
+		void:property dbpo:channel ;
+		void:triples "3535"^^xsd:integer ;
+		void:distinctSubjects "3189"^^xsd:integer ;
+		void:distinctObjects "571"^^xsd:integer
+	] , [
+		void:property dbpo:chaplain ;
+		void:triples "7"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:chiefEditor ;
+		void:triples "55"^^xsd:integer ;
+		void:distinctSubjects "53"^^xsd:integer ;
+		void:distinctObjects "54"^^xsd:integer
+	] , [
+		void:property dbpo:child ;
+		void:triples "3691"^^xsd:integer ;
+		void:distinctSubjects "2551"^^xsd:integer ;
+		void:distinctObjects "3353"^^xsd:integer
+	] , [
+		void:property dbpo:choreographer ;
+		void:triples "996"^^xsd:integer ;
+		void:distinctSubjects "755"^^xsd:integer ;
+		void:distinctObjects "443"^^xsd:integer
+	] , [
+		void:property dbpo:chromosome ;
+		void:triples "1610"^^xsd:integer ;
+		void:distinctSubjects "1610"^^xsd:integer ;
+		void:distinctObjects "26"^^xsd:integer
+	] , [
+		void:property dbpo:cinematography ;
+		void:triples "18364"^^xsd:integer ;
+		void:distinctSubjects "16997"^^xsd:integer ;
+		void:distinctObjects "5741"^^xsd:integer
+	] , [
+		void:property dbpo:circulation ;
+		void:triples "1766"^^xsd:integer ;
+		void:distinctSubjects "1493"^^xsd:integer ;
+		void:distinctObjects "1277"^^xsd:integer
+	] , [
+		void:property dbpo:citizenship ;
+		void:triples "1607"^^xsd:integer ;
+		void:distinctSubjects "1559"^^xsd:integer ;
+		void:distinctObjects "178"^^xsd:integer
+	] , [
+		void:property dbpo:city ;
+		void:triples "56507"^^xsd:integer ;
+		void:distinctSubjects "46778"^^xsd:integer ;
+		void:distinctObjects "22428"^^xsd:integer
+	] , [
+		void:property dbpo:cityType ;
+		void:triples "107"^^xsd:integer ;
+		void:distinctSubjects "107"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:class ;
+		void:triples "156957"^^xsd:integer ;
+		void:distinctSubjects "146615"^^xsd:integer ;
+		void:distinctObjects "895"^^xsd:integer
+	] , [
+		void:property dbpo:classes ;
+		void:triples "34"^^xsd:integer ;
+		void:distinctSubjects "34"^^xsd:integer ;
+		void:distinctObjects "23"^^xsd:integer
+	] , [
+		void:property dbpo:closed ;
+		void:triples "15"^^xsd:integer ;
+		void:distinctSubjects "15"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property dbpo:closingDate ;
+		void:triples "240"^^xsd:integer ;
+		void:distinctSubjects "234"^^xsd:integer ;
+		void:distinctObjects "189"^^xsd:integer
+	] , [
+		void:property dbpo:closingFilm ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:club ;
+		void:triples "11"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "10"^^xsd:integer
+	] , [
+		void:property dbpo:clubsRecordGoalscorer ;
+		void:triples "18"^^xsd:integer ;
+		void:distinctSubjects "18"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:cmykCoordinateBlack ;
+		void:triples "507"^^xsd:integer ;
+		void:distinctSubjects "507"^^xsd:integer ;
+		void:distinctObjects "69"^^xsd:integer
+	] , [
+		void:property dbpo:cmykCoordinateCyanic ;
+		void:triples "508"^^xsd:integer ;
+		void:distinctSubjects "508"^^xsd:integer ;
+		void:distinctObjects "74"^^xsd:integer
+	] , [
+		void:property dbpo:cmykCoordinateMagenta ;
+		void:triples "500"^^xsd:integer ;
+		void:distinctSubjects "500"^^xsd:integer ;
+		void:distinctObjects "101"^^xsd:integer
+	] , [
+		void:property dbpo:cmykCoordinateYellow ;
+		void:triples "503"^^xsd:integer ;
+		void:distinctSubjects "503"^^xsd:integer ;
+		void:distinctObjects "93"^^xsd:integer
+	] , [
+		void:property dbpo:co2Emission ;
+		void:triples "43"^^xsd:integer ;
+		void:distinctSubjects "43"^^xsd:integer ;
+		void:distinctObjects "24"^^xsd:integer
+	] , [
+		void:property dbpo:coach ;
+		void:triples "1325"^^xsd:integer ;
+		void:distinctSubjects "952"^^xsd:integer ;
+		void:distinctObjects "664"^^xsd:integer
+	] , [
+		void:property dbpo:coachedTeam ;
+		void:triples "12067"^^xsd:integer ;
+		void:distinctSubjects "3431"^^xsd:integer ;
+		void:distinctObjects "2755"^^xsd:integer
+	] , [
+		void:property dbpo:coachingRecord ;
+		void:triples "15"^^xsd:integer ;
+		void:distinctSubjects "11"^^xsd:integer ;
+		void:distinctObjects "14"^^xsd:integer
+	] , [
+		void:property dbpo:coachingTeam ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:code ;
+		void:triples "715"^^xsd:integer ;
+		void:distinctSubjects "715"^^xsd:integer ;
+		void:distinctObjects "153"^^xsd:integer
+	] , [
+		void:property dbpo:college ;
+		void:triples "11287"^^xsd:integer ;
+		void:distinctSubjects "10907"^^xsd:integer ;
+		void:distinctObjects "1489"^^xsd:integer
+	] , [
+		void:property dbpo:color ;
+		void:triples "4433"^^xsd:integer ;
+		void:distinctSubjects "4372"^^xsd:integer ;
+		void:distinctObjects "687"^^xsd:integer
+	] , [
+		void:property dbpo:colours ;
+		void:triples "15761"^^xsd:integer ;
+		void:distinctSubjects "15157"^^xsd:integer ;
+		void:distinctObjects "5015"^^xsd:integer
+	] , [
+		void:property dbpo:combatant ;
+		void:triples "20739"^^xsd:integer ;
+		void:distinctSubjects "7491"^^xsd:integer ;
+		void:distinctObjects "7647"^^xsd:integer
+	] , [
+		void:property dbpo:commandModule ;
+		void:triples "36"^^xsd:integer ;
+		void:distinctSubjects "15"^^xsd:integer ;
+		void:distinctObjects "36"^^xsd:integer
+	] , [
+		void:property dbpo:commandStructure ;
+		void:triples "4209"^^xsd:integer ;
+		void:distinctSubjects "3510"^^xsd:integer ;
+		void:distinctObjects "1146"^^xsd:integer
+	] , [
+		void:property dbpo:commander ;
+		void:triples "22517"^^xsd:integer ;
+		void:distinctSubjects "7190"^^xsd:integer ;
+		void:distinctObjects "11929"^^xsd:integer
+	] , [
+		void:property dbpo:committee ;
+		void:triples "353"^^xsd:integer ;
+		void:distinctSubjects "285"^^xsd:integer ;
+		void:distinctObjects "329"^^xsd:integer
+	] , [
+		void:property dbpo:company ;
+		void:triples "2506"^^xsd:integer ;
+		void:distinctSubjects "1887"^^xsd:integer ;
+		void:distinctObjects "1043"^^xsd:integer
+	] , [
+		void:property dbpo:comparable ;
+		void:triples "21"^^xsd:integer ;
+		void:distinctSubjects "17"^^xsd:integer ;
+		void:distinctObjects "18"^^xsd:integer
+	] , [
+		void:property dbpo:compiler ;
+		void:triples "166"^^xsd:integer ;
+		void:distinctSubjects "164"^^xsd:integer ;
+		void:distinctObjects "92"^^xsd:integer
+	] , [
+		void:property dbpo:completionDate ;
+		void:triples "6689"^^xsd:integer ;
+		void:distinctSubjects "6610"^^xsd:integer ;
+		void:distinctObjects "4754"^^xsd:integer
+	] , [
+		void:property dbpo:component ;
+		void:triples "11"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "11"^^xsd:integer
+	] , [
+		void:property dbpo:composer ;
+		void:triples "4583"^^xsd:integer ;
+		void:distinctSubjects "3554"^^xsd:integer ;
+		void:distinctObjects "1991"^^xsd:integer
+	] , [
+		void:property dbpo:compressionRatio ;
+		void:triples "226"^^xsd:integer ;
+		void:distinctSubjects "217"^^xsd:integer ;
+		void:distinctObjects "96"^^xsd:integer
+	] , [
+		void:property dbpo:computingInput ;
+		void:triples "7390"^^xsd:integer ;
+		void:distinctSubjects "7194"^^xsd:integer ;
+		void:distinctObjects "177"^^xsd:integer
+	] , [
+		void:property dbpo:computingMedia ;
+		void:triples "8193"^^xsd:integer ;
+		void:distinctSubjects "7834"^^xsd:integer ;
+		void:distinctObjects "240"^^xsd:integer
+	] , [
+		void:property dbpo:computingPlatform ;
+		void:triples "16841"^^xsd:integer ;
+		void:distinctSubjects "15846"^^xsd:integer ;
+		void:distinctObjects "562"^^xsd:integer
+	] , [
+		void:property dbpo:configuration ;
+		void:triples "11228"^^xsd:integer ;
+		void:distinctSubjects "10924"^^xsd:integer ;
+		void:distinctObjects "29"^^xsd:integer
+	] , [
+		void:property dbpo:connotation ;
+		void:triples "18"^^xsd:integer ;
+		void:distinctSubjects "18"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:conservationStatus ;
+		void:triples "42322"^^xsd:integer ;
+		void:distinctSubjects "42317"^^xsd:integer ;
+		void:distinctObjects "136"^^xsd:integer
+	] , [
+		void:property dbpo:conservationStatusSystem ;
+		void:triples "40596"^^xsd:integer ;
+		void:distinctSubjects "40596"^^xsd:integer ;
+		void:distinctObjects "16"^^xsd:integer
+	] , [
+		void:property dbpo:contractAward ;
+		void:triples "7"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:contractor ;
+		void:triples "202"^^xsd:integer ;
+		void:distinctSubjects "186"^^xsd:integer ;
+		void:distinctObjects "123"^^xsd:integer
+	] , [
+		void:property dbpo:coolingSystem ;
+		void:triples "46"^^xsd:integer ;
+		void:distinctSubjects "46"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:cosparId ;
+		void:triples "32"^^xsd:integer ;
+		void:distinctSubjects "32"^^xsd:integer ;
+		void:distinctObjects "29"^^xsd:integer
+	] , [
+		void:property dbpo:cost ;
+		void:triples "459"^^xsd:integer ;
+		void:distinctSubjects "448"^^xsd:integer ;
+		void:distinctObjects "300"^^xsd:integer
+	] , [
+		void:property dbpo:councilArea ;
+		void:triples "1162"^^xsd:integer ;
+		void:distinctSubjects "1161"^^xsd:integer ;
+		void:distinctObjects "49"^^xsd:integer
+	] , [
+		void:property dbpo:country ;
+		void:triples "110739"^^xsd:integer ;
+		void:distinctSubjects "95741"^^xsd:integer ;
+		void:distinctObjects "1535"^^xsd:integer
+	] , [
+		void:property dbpo:countryOrigin ;
+		void:triples "81"^^xsd:integer ;
+		void:distinctSubjects "81"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property dbpo:countryWithFirstAstronaut ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:county ;
+		void:triples "8715"^^xsd:integer ;
+		void:distinctSubjects "8608"^^xsd:integer ;
+		void:distinctObjects "1703"^^xsd:integer
+	] , [
+		void:property dbpo:course ;
+		void:triples "1430"^^xsd:integer ;
+		void:distinctSubjects "717"^^xsd:integer ;
+		void:distinctObjects "547"^^xsd:integer
+	] , [
+		void:property dbpo:coverArtist ;
+		void:triples "1951"^^xsd:integer ;
+		void:distinctSubjects "1920"^^xsd:integer ;
+		void:distinctObjects "769"^^xsd:integer
+	] , [
+		void:property dbpo:cpu ;
+		void:triples "388"^^xsd:integer ;
+		void:distinctSubjects "377"^^xsd:integer ;
+		void:distinctObjects "61"^^xsd:integer
+	] , [
+		void:property dbpo:creativeDirector ;
+		void:triples "35"^^xsd:integer ;
+		void:distinctSubjects "25"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property dbpo:creator ;
+		void:triples "7556"^^xsd:integer ;
+		void:distinctSubjects "5998"^^xsd:integer ;
+		void:distinctObjects "4225"^^xsd:integer
+	] , [
+		void:property dbpo:crew ;
+		void:triples "79"^^xsd:integer ;
+		void:distinctSubjects "60"^^xsd:integer ;
+		void:distinctObjects "36"^^xsd:integer
+	] , [
+		void:property dbpo:crewMember ;
+		void:triples "39"^^xsd:integer ;
+		void:distinctSubjects "38"^^xsd:integer ;
+		void:distinctObjects "37"^^xsd:integer
+	] , [
+		void:property dbpo:crewSize ;
+		void:triples "68"^^xsd:integer ;
+		void:distinctSubjects "68"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:crews ;
+		void:triples "5"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:crosses ;
+		void:triples "1850"^^xsd:integer ;
+		void:distinctSubjects "1834"^^xsd:integer ;
+		void:distinctObjects "687"^^xsd:integer
+	] , [
+		void:property dbpo:crownDependency ;
+		void:triples "32"^^xsd:integer ;
+		void:distinctSubjects "32"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:currency ;
+		void:triples "12"^^xsd:integer ;
+		void:distinctSubjects "12"^^xsd:integer ;
+		void:distinctObjects "10"^^xsd:integer
+	] , [
+		void:property dbpo:currentDomicile ;
+		void:triples "422"^^xsd:integer ;
+		void:distinctSubjects "399"^^xsd:integer ;
+		void:distinctObjects "86"^^xsd:integer
+	] , [
+		void:property dbpo:currentMember ;
+		void:triples "62"^^xsd:integer ;
+		void:distinctSubjects "27"^^xsd:integer ;
+		void:distinctObjects "62"^^xsd:integer
+	] , [
+		void:property dbpo:currentPartner ;
+		void:triples "482"^^xsd:integer ;
+		void:distinctSubjects "477"^^xsd:integer ;
+		void:distinctObjects "479"^^xsd:integer
+	] , [
+		void:property dbpo:currentRecord ;
+		void:triples "417"^^xsd:integer ;
+		void:distinctSubjects "414"^^xsd:integer ;
+		void:distinctObjects "377"^^xsd:integer
+	] , [
+		void:property dbpo:currentSeason ;
+		void:triples "255"^^xsd:integer ;
+		void:distinctSubjects "255"^^xsd:integer ;
+		void:distinctObjects "250"^^xsd:integer
+	] , [
+		void:property dbpo:currentStatus ;
+		void:triples "192"^^xsd:integer ;
+		void:distinctSubjects "192"^^xsd:integer ;
+		void:distinctObjects "16"^^xsd:integer
+	] , [
+		void:property dbpo:custodian ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:cylinderBore ;
+		void:triples "157"^^xsd:integer ;
+		void:distinctSubjects "122"^^xsd:integer ;
+		void:distinctObjects "63"^^xsd:integer
+	] , [
+		void:property dbpo:date ;
+		void:triples "6896"^^xsd:integer ;
+		void:distinctSubjects "6811"^^xsd:integer ;
+		void:distinctObjects "5994"^^xsd:integer
+	] , [
+		void:property dbpo:dateAct ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:dateCompleted ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:dateConstruction ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:dateOfAbandonment ;
+		void:triples "260"^^xsd:integer ;
+		void:distinctSubjects "245"^^xsd:integer ;
+		void:distinctObjects "214"^^xsd:integer
+	] , [
+		void:property dbpo:dateOfBurial ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:dateUse ;
+		void:triples "4"^^xsd:integer ;
+		void:distinctSubjects "4"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:day ;
+		void:triples "27"^^xsd:integer ;
+		void:distinctSubjects "27"^^xsd:integer ;
+		void:distinctObjects "27"^^xsd:integer
+	] , [
+		void:property dbpo:daylightSavingTimeZone ;
+		void:triples "4296"^^xsd:integer ;
+		void:distinctSubjects "4296"^^xsd:integer ;
+		void:distinctObjects "21"^^xsd:integer
+	] , [
+		void:property dbpo:dcc ;
+		void:triples "4859"^^xsd:integer ;
+		void:distinctSubjects "4859"^^xsd:integer ;
+		void:distinctObjects "1604"^^xsd:integer
+	] , [
+		void:property dbpo:dean ;
+		void:triples "297"^^xsd:integer ;
+		void:distinctSubjects "293"^^xsd:integer ;
+		void:distinctObjects "276"^^xsd:integer
+	] , [
+		void:property dbpo:deathCause ;
+		void:triples "913"^^xsd:integer ;
+		void:distinctSubjects "912"^^xsd:integer ;
+		void:distinctObjects "388"^^xsd:integer
+	] , [
+		void:property dbpo:deathDate ;
+		void:triples "69706"^^xsd:integer ;
+		void:distinctSubjects "69696"^^xsd:integer ;
+		void:distinctObjects "39226"^^xsd:integer
+	] , [
+		void:property dbpo:deathPlace ;
+		void:triples "56019"^^xsd:integer ;
+		void:distinctSubjects "52038"^^xsd:integer ;
+		void:distinctObjects "15242"^^xsd:integer
+	] , [
+		void:property dbpo:deathYear ;
+		void:triples "13056"^^xsd:integer ;
+		void:distinctSubjects "13031"^^xsd:integer ;
+		void:distinctObjects "802"^^xsd:integer
+	] , [
+		void:property dbpo:debut ;
+		void:triples "553"^^xsd:integer ;
+		void:distinctSubjects "551"^^xsd:integer ;
+		void:distinctObjects "511"^^xsd:integer
+	] , [
+		void:property dbpo:debutTeam ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "6"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:decay ;
+		void:triples "58"^^xsd:integer ;
+		void:distinctSubjects "58"^^xsd:integer ;
+		void:distinctObjects "58"^^xsd:integer
+	] , [
+		void:property dbpo:demolitionDate ;
+		void:triples "49"^^xsd:integer ;
+		void:distinctSubjects "48"^^xsd:integer ;
+		void:distinctObjects "49"^^xsd:integer
+	] , [
+		void:property dbpo:demonym ;
+		void:triples "1450"^^xsd:integer ;
+		void:distinctSubjects "1397"^^xsd:integer ;
+		void:distinctObjects "1425"^^xsd:integer
+	] , [
+		void:property dbpo:denomination ;
+		void:triples "463"^^xsd:integer ;
+		void:distinctSubjects "462"^^xsd:integer ;
+		void:distinctObjects "85"^^xsd:integer
+	] , [
+		void:property dbpo:density ;
+		void:triples "145"^^xsd:integer ;
+		void:distinctSubjects "143"^^xsd:integer ;
+		void:distinctObjects "44"^^xsd:integer
+	] , [
+		void:property dbpo:department ;
+		void:triples "17"^^xsd:integer ;
+		void:distinctSubjects "17"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:depth ;
+		void:triples "4383"^^xsd:integer ;
+		void:distinctSubjects "3390"^^xsd:integer ;
+		void:distinctObjects "986"^^xsd:integer
+	] , [
+		void:property dbpo:deputy ;
+		void:triples "679"^^xsd:integer ;
+		void:distinctSubjects "411"^^xsd:integer ;
+		void:distinctObjects "581"^^xsd:integer
+	] , [
+		void:property dbpo:derivative ;
+		void:triples "241"^^xsd:integer ;
+		void:distinctSubjects "205"^^xsd:integer ;
+		void:distinctObjects "197"^^xsd:integer
+	] , [
+		void:property dbpo:designCompany ;
+		void:triples "666"^^xsd:integer ;
+		void:distinctSubjects "617"^^xsd:integer ;
+		void:distinctObjects "253"^^xsd:integer
+	] , [
+		void:property dbpo:designer ;
+		void:triples "4123"^^xsd:integer ;
+		void:distinctSubjects "3466"^^xsd:integer ;
+		void:distinctObjects "1967"^^xsd:integer
+	] , [
+		void:property dbpo:destination ;
+		void:triples "158"^^xsd:integer ;
+		void:distinctSubjects "89"^^xsd:integer ;
+		void:distinctObjects "99"^^xsd:integer
+	] , [
+		void:property dbpo:destructionDate ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "6"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:detectionMethod ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:developer ;
+		void:triples "18664"^^xsd:integer ;
+		void:distinctSubjects "17465"^^xsd:integer ;
+		void:distinctObjects "6018"^^xsd:integer
+	] , [
+		void:property dbpo:diameter ;
+		void:triples "1994"^^xsd:integer ;
+		void:distinctSubjects "1994"^^xsd:integer ;
+		void:distinctObjects "468"^^xsd:integer
+	] , [
+		void:property dbpo:director ;
+		void:triples "52669"^^xsd:integer ;
+		void:distinctSubjects "48106"^^xsd:integer ;
+		void:distinctObjects "17894"^^xsd:integer
+	] , [
+		void:property dbpo:disbanded ;
+		void:triples "56"^^xsd:integer ;
+		void:distinctSubjects "55"^^xsd:integer ;
+		void:distinctObjects "53"^^xsd:integer
+	] , [
+		void:property dbpo:discharge ;
+		void:triples "1335"^^xsd:integer ;
+		void:distinctSubjects "1317"^^xsd:integer ;
+		void:distinctObjects "962"^^xsd:integer
+	] , [
+		void:property dbpo:dischargeAverage ;
+		void:triples "89"^^xsd:integer ;
+		void:distinctSubjects "89"^^xsd:integer ;
+		void:distinctObjects "87"^^xsd:integer
+	] , [
+		void:property dbpo:discovered ;
+		void:triples "11574"^^xsd:integer ;
+		void:distinctSubjects "11572"^^xsd:integer ;
+		void:distinctObjects "4438"^^xsd:integer
+	] , [
+		void:property dbpo:discoverer ;
+		void:triples "11638"^^xsd:integer ;
+		void:distinctSubjects "11468"^^xsd:integer ;
+		void:distinctObjects "1067"^^xsd:integer
+	] , [
+		void:property dbpo:diseasesdb ;
+		void:triples "2593"^^xsd:integer ;
+		void:distinctSubjects "2593"^^xsd:integer ;
+		void:distinctObjects "2366"^^xsd:integer
+	] , [
+		void:property dbpo:displacement ;
+		void:triples "11563"^^xsd:integer ;
+		void:distinctSubjects "11453"^^xsd:integer ;
+		void:distinctObjects "1080"^^xsd:integer
+	] , [
+		void:property dbpo:dissolutionDate ;
+		void:triples "613"^^xsd:integer ;
+		void:distinctSubjects "613"^^xsd:integer ;
+		void:distinctObjects "541"^^xsd:integer
+	] , [
+		void:property dbpo:dissolutionYear ;
+		void:triples "1666"^^xsd:integer ;
+		void:distinctSubjects "1666"^^xsd:integer ;
+		void:distinctObjects "719"^^xsd:integer
+	] , [
+		void:property dbpo:dissolved ;
+		void:triples "25"^^xsd:integer ;
+		void:distinctSubjects "25"^^xsd:integer ;
+		void:distinctObjects "20"^^xsd:integer
+	] , [
+		void:property dbpo:distance ;
+		void:triples "1431"^^xsd:integer ;
+		void:distinctSubjects "720"^^xsd:integer ;
+		void:distinctObjects "873"^^xsd:integer
+	] , [
+		void:property dbpo:distanceLaps ;
+		void:triples "720"^^xsd:integer ;
+		void:distinctSubjects "720"^^xsd:integer ;
+		void:distinctObjects "81"^^xsd:integer
+	] , [
+		void:property dbpo:distanceToBelfast ;
+		void:triples "86"^^xsd:integer ;
+		void:distinctSubjects "86"^^xsd:integer ;
+		void:distinctObjects "61"^^xsd:integer
+	] , [
+		void:property dbpo:distanceToCardiff ;
+		void:triples "27"^^xsd:integer ;
+		void:distinctSubjects "27"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:distanceToCharingCross ;
+		void:triples "74"^^xsd:integer ;
+		void:distinctSubjects "74"^^xsd:integer ;
+		void:distinctObjects "54"^^xsd:integer
+	] , [
+		void:property dbpo:distanceToDouglas ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:distanceToDublin ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:distanceToEdinburgh ;
+		void:triples "61"^^xsd:integer ;
+		void:distinctSubjects "59"^^xsd:integer ;
+		void:distinctObjects "45"^^xsd:integer
+	] , [
+		void:property dbpo:distanceToLondon ;
+		void:triples "953"^^xsd:integer ;
+		void:distinctSubjects "951"^^xsd:integer ;
+		void:distinctObjects "312"^^xsd:integer
+	] , [
+		void:property dbpo:distanceTraveled ;
+		void:triples "16"^^xsd:integer ;
+		void:distinctSubjects "16"^^xsd:integer ;
+		void:distinctObjects "15"^^xsd:integer
+	] , [
+		void:property dbpo:distributingCompany ;
+		void:triples "816"^^xsd:integer ;
+		void:distinctSubjects "644"^^xsd:integer ;
+		void:distinctObjects "315"^^xsd:integer
+	] , [
+		void:property dbpo:distributingLabel ;
+		void:triples "816"^^xsd:integer ;
+		void:distinctSubjects "644"^^xsd:integer ;
+		void:distinctObjects "315"^^xsd:integer
+	] , [
+		void:property dbpo:distributor ;
+		void:triples "29235"^^xsd:integer ;
+		void:distinctSubjects "24801"^^xsd:integer ;
+		void:distinctObjects "4988"^^xsd:integer
+	] , [
+		void:property dbpo:district ;
+		void:triples "23644"^^xsd:integer ;
+		void:distinctSubjects "23169"^^xsd:integer ;
+		void:distinctObjects "3544"^^xsd:integer
+	] , [
+		void:property dbpo:division ;
+		void:triples "45308"^^xsd:integer ;
+		void:distinctSubjects "43808"^^xsd:integer ;
+		void:distinctObjects "456"^^xsd:integer
+	] , [
+		void:property dbpo:dockedTime ;
+		void:triples "19"^^xsd:integer ;
+		void:distinctSubjects "19"^^xsd:integer ;
+		void:distinctObjects "18"^^xsd:integer
+	] , [
+		void:property dbpo:doctoralAdvisor ;
+		void:triples "1971"^^xsd:integer ;
+		void:distinctSubjects "1874"^^xsd:integer ;
+		void:distinctObjects "1533"^^xsd:integer
+	] , [
+		void:property dbpo:doctoralStudent ;
+		void:triples "1803"^^xsd:integer ;
+		void:distinctSubjects "877"^^xsd:integer ;
+		void:distinctObjects "1753"^^xsd:integer
+	] , [
+		void:property dbpo:domain ;
+		void:triples "1647"^^xsd:integer ;
+		void:distinctSubjects "1646"^^xsd:integer ;
+		void:distinctObjects "14"^^xsd:integer
+	] , [
+		void:property dbpo:dorlandsPrefix ;
+		void:triples "2803"^^xsd:integer ;
+		void:distinctSubjects "2803"^^xsd:integer ;
+		void:distinctObjects "299"^^xsd:integer
+	] , [
+		void:property dbpo:dorlandsSuffix ;
+		void:triples "2808"^^xsd:integer ;
+		void:distinctSubjects "2808"^^xsd:integer ;
+		void:distinctObjects "2760"^^xsd:integer
+	] , [
+		void:property dbpo:draft ;
+		void:triples "5385"^^xsd:integer ;
+		void:distinctSubjects "5320"^^xsd:integer ;
+		void:distinctObjects "836"^^xsd:integer
+	] , [
+		void:property dbpo:draftPick ;
+		void:triples "5939"^^xsd:integer ;
+		void:distinctSubjects "5574"^^xsd:integer ;
+		void:distinctObjects "537"^^xsd:integer
+	] , [
+		void:property dbpo:draftRound ;
+		void:triples "5509"^^xsd:integer ;
+		void:distinctSubjects "5509"^^xsd:integer ;
+		void:distinctObjects "44"^^xsd:integer
+	] , [
+		void:property dbpo:draftTeam ;
+		void:triples "4642"^^xsd:integer ;
+		void:distinctSubjects "4621"^^xsd:integer ;
+		void:distinctObjects "132"^^xsd:integer
+	] , [
+		void:property dbpo:draftYear ;
+		void:triples "10391"^^xsd:integer ;
+		void:distinctSubjects "10391"^^xsd:integer ;
+		void:distinctObjects "78"^^xsd:integer
+	] , [
+		void:property dbpo:drainsFrom ;
+		void:triples "72"^^xsd:integer ;
+		void:distinctSubjects "72"^^xsd:integer ;
+		void:distinctObjects "56"^^xsd:integer
+	] , [
+		void:property dbpo:drainsTo ;
+		void:triples "230"^^xsd:integer ;
+		void:distinctSubjects "229"^^xsd:integer ;
+		void:distinctObjects "113"^^xsd:integer
+	] , [
+		void:property dbpo:drugbank ;
+		void:triples "1115"^^xsd:integer ;
+		void:distinctSubjects "1114"^^xsd:integer ;
+		void:distinctObjects "1060"^^xsd:integer
+	] , [
+		void:property dbpo:ecNumber ;
+		void:triples "401"^^xsd:integer ;
+		void:distinctSubjects "401"^^xsd:integer ;
+		void:distinctObjects "279"^^xsd:integer
+	] , [
+		void:property dbpo:editing ;
+		void:triples "15005"^^xsd:integer ;
+		void:distinctSubjects "13250"^^xsd:integer ;
+		void:distinctObjects "5675"^^xsd:integer
+	] , [
+		void:property dbpo:editor ;
+		void:triples "1354"^^xsd:integer ;
+		void:distinctSubjects "1172"^^xsd:integer ;
+		void:distinctObjects "1269"^^xsd:integer
+	] , [
+		void:property dbpo:editorTitle ;
+		void:triples "900"^^xsd:integer ;
+		void:distinctSubjects "890"^^xsd:integer ;
+		void:distinctObjects "93"^^xsd:integer
+	] , [
+		void:property dbpo:education ;
+		void:triples "3624"^^xsd:integer ;
+		void:distinctSubjects "2747"^^xsd:integer ;
+		void:distinctObjects "1648"^^xsd:integer
+	] , [
+		void:property dbpo:electionDate ;
+		void:triples "77"^^xsd:integer ;
+		void:distinctSubjects "75"^^xsd:integer ;
+		void:distinctObjects "18"^^xsd:integer
+	] , [
+		void:property dbpo:electionMajority ;
+		void:triples "1001"^^xsd:integer ;
+		void:distinctSubjects "962"^^xsd:integer ;
+		void:distinctObjects "951"^^xsd:integer
+	] , [
+		void:property dbpo:elevation ;
+		void:triples "142707"^^xsd:integer ;
+		void:distinctSubjects "98542"^^xsd:integer ;
+		void:distinctObjects "11280"^^xsd:integer
+	] , [
+		void:property dbpo:emedicineSubject ;
+		void:triples "1919"^^xsd:integer ;
+		void:distinctSubjects "1919"^^xsd:integer ;
+		void:distinctObjects "27"^^xsd:integer
+	] , [
+		void:property dbpo:emedicineTopic ;
+		void:triples "1919"^^xsd:integer ;
+		void:distinctSubjects "1919"^^xsd:integer ;
+		void:distinctObjects "1400"^^xsd:integer
+	] , [
+		void:property dbpo:emmyAward ;
+		void:triples "515"^^xsd:integer ;
+		void:distinctSubjects "215"^^xsd:integer ;
+		void:distinctObjects "204"^^xsd:integer
+	] , [
+		void:property dbpo:employer ;
+		void:triples "1469"^^xsd:integer ;
+		void:distinctSubjects "1276"^^xsd:integer ;
+		void:distinctObjects "1080"^^xsd:integer
+	] , [
+		void:property dbpo:endDate ;
+		void:triples "45"^^xsd:integer ;
+		void:distinctSubjects "45"^^xsd:integer ;
+		void:distinctObjects "45"^^xsd:integer
+	] , [
+		void:property dbpo:endPoint ;
+		void:triples "31"^^xsd:integer ;
+		void:distinctSubjects "31"^^xsd:integer ;
+		void:distinctObjects "30"^^xsd:integer
+	] , [
+		void:property dbpo:endYearOfInsertion ;
+		void:triples "1279"^^xsd:integer ;
+		void:distinctSubjects "1230"^^xsd:integer ;
+		void:distinctObjects "95"^^xsd:integer
+	] , [
+		void:property dbpo:endYearOfSales ;
+		void:triples "100"^^xsd:integer ;
+		void:distinctSubjects "100"^^xsd:integer ;
+		void:distinctObjects "39"^^xsd:integer
+	] , [
+		void:property dbpo:endingTheme ;
+		void:triples "325"^^xsd:integer ;
+		void:distinctSubjects "288"^^xsd:integer ;
+		void:distinctObjects "252"^^xsd:integer
+	] , [
+		void:property dbpo:endowment ;
+		void:triples "1486"^^xsd:integer ;
+		void:distinctSubjects "1476"^^xsd:integer ;
+		void:distinctObjects "1121"^^xsd:integer
+	] , [
+		void:property dbpo:engine ;
+		void:triples "13510"^^xsd:integer ;
+		void:distinctSubjects "4452"^^xsd:integer ;
+		void:distinctObjects "13510"^^xsd:integer
+	] , [
+		void:property dbpo:engineer ;
+		void:triples "115"^^xsd:integer ;
+		void:distinctSubjects "110"^^xsd:integer ;
+		void:distinctObjects "59"^^xsd:integer
+	] , [
+		void:property dbpo:entrezgene ;
+		void:triples "1647"^^xsd:integer ;
+		void:distinctSubjects "1647"^^xsd:integer ;
+		void:distinctObjects "1586"^^xsd:integer
+	] , [
+		void:property dbpo:episodeNumber ;
+		void:triples "5410"^^xsd:integer ;
+		void:distinctSubjects "5394"^^xsd:integer ;
+		void:distinctObjects "264"^^xsd:integer
+	] , [
+		void:property dbpo:equipment ;
+		void:triples "49"^^xsd:integer ;
+		void:distinctSubjects "46"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property dbpo:equity ;
+		void:triples "489"^^xsd:integer ;
+		void:distinctSubjects "488"^^xsd:integer ;
+		void:distinctObjects "470"^^xsd:integer
+	] , [
+		void:property dbpo:era ;
+		void:triples "641"^^xsd:integer ;
+		void:distinctSubjects "635"^^xsd:integer ;
+		void:distinctObjects "55"^^xsd:integer
+	] , [
+		void:property dbpo:espnId ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:ethnicGroup ;
+		void:triples "468"^^xsd:integer ;
+		void:distinctSubjects "351"^^xsd:integer ;
+		void:distinctObjects "236"^^xsd:integer
+	] , [
+		void:property dbpo:ethnicGroupsInYear ;
+		void:triples "11"^^xsd:integer ;
+		void:distinctSubjects "11"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:ethnicity ;
+		void:triples "2273"^^xsd:integer ;
+		void:distinctSubjects "2254"^^xsd:integer ;
+		void:distinctObjects "471"^^xsd:integer
+	] , [
+		void:property dbpo:executiveProducer ;
+		void:triples "4132"^^xsd:integer ;
+		void:distinctSubjects "2383"^^xsd:integer ;
+		void:distinctObjects "2346"^^xsd:integer
+	] , [
+		void:property dbpo:extinctionDate ;
+		void:triples "161"^^xsd:integer ;
+		void:distinctSubjects "161"^^xsd:integer ;
+		void:distinctObjects "135"^^xsd:integer
+	] , [
+		void:property dbpo:extinctionYear ;
+		void:triples "1749"^^xsd:integer ;
+		void:distinctSubjects "1729"^^xsd:integer ;
+		void:distinctObjects "135"^^xsd:integer
+	] , [
+		void:property dbpo:faaLocationIdentifier ;
+		void:triples "2816"^^xsd:integer ;
+		void:distinctSubjects "2816"^^xsd:integer ;
+		void:distinctObjects "2790"^^xsd:integer
+	] , [
+		void:property dbpo:facilityId ;
+		void:triples "9425"^^xsd:integer ;
+		void:distinctSubjects "9327"^^xsd:integer ;
+		void:distinctObjects "9377"^^xsd:integer
+	] , [
+		void:property dbpo:facultySize ;
+		void:triples "6694"^^xsd:integer ;
+		void:distinctSubjects "6561"^^xsd:integer ;
+		void:distinctObjects "1047"^^xsd:integer
+	] , [
+		void:property dbpo:failedLaunches ;
+		void:triples "143"^^xsd:integer ;
+		void:distinctSubjects "134"^^xsd:integer ;
+		void:distinctObjects "23"^^xsd:integer
+	] , [
+		void:property dbpo:family ;
+		void:triples "215168"^^xsd:integer ;
+		void:distinctSubjects "136248"^^xsd:integer ;
+		void:distinctObjects "8336"^^xsd:integer
+	] , [
+		void:property dbpo:fansgroup ;
+		void:triples "20"^^xsd:integer ;
+		void:distinctSubjects "17"^^xsd:integer ;
+		void:distinctObjects "20"^^xsd:integer
+	] , [
+		void:property dbpo:fastestDriver ;
+		void:triples "671"^^xsd:integer ;
+		void:distinctSubjects "664"^^xsd:integer ;
+		void:distinctObjects "162"^^xsd:integer
+	] , [
+		void:property dbpo:fastestDriverTeam ;
+		void:triples "660"^^xsd:integer ;
+		void:distinctSubjects "652"^^xsd:integer ;
+		void:distinctObjects "66"^^xsd:integer
+	] , [
+		void:property dbpo:fastestLap ;
+		void:triples "699"^^xsd:integer ;
+		void:distinctSubjects "699"^^xsd:integer ;
+		void:distinctObjects "26"^^xsd:integer
+	] , [
+		void:property dbpo:fate ;
+		void:triples "1636"^^xsd:integer ;
+		void:distinctSubjects "1595"^^xsd:integer ;
+		void:distinctObjects "833"^^xsd:integer
+	] , [
+		void:property dbpo:father ;
+		void:triples "5936"^^xsd:integer ;
+		void:distinctSubjects "5642"^^xsd:integer ;
+		void:distinctObjects "3917"^^xsd:integer
+	] , [
+		void:property dbpo:fc ;
+		void:triples "1780"^^xsd:integer ;
+		void:distinctSubjects "1780"^^xsd:integer ;
+		void:distinctObjects "417"^^xsd:integer
+	] , [
+		void:property dbpo:fcRuns ;
+		void:triples "1781"^^xsd:integer ;
+		void:distinctSubjects "1781"^^xsd:integer ;
+		void:distinctObjects "1436"^^xsd:integer
+	] , [
+		void:property dbpo:feastDay ;
+		void:triples "21"^^xsd:integer ;
+		void:distinctSubjects "19"^^xsd:integer ;
+		void:distinctObjects "21"^^xsd:integer
+	] , [
+		void:property dbpo:federalState ;
+		void:triples "81"^^xsd:integer ;
+		void:distinctSubjects "81"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:fees ;
+		void:triples "377"^^xsd:integer ;
+		void:distinctSubjects "287"^^xsd:integer ;
+		void:distinctObjects "343"^^xsd:integer
+	] , [
+		void:property dbpo:field ;
+		void:triples "2876"^^xsd:integer ;
+		void:distinctSubjects "2808"^^xsd:integer ;
+		void:distinctObjects "353"^^xsd:integer
+	] , [
+		void:property dbpo:fileSize ;
+		void:triples "230"^^xsd:integer ;
+		void:distinctSubjects "207"^^xsd:integer ;
+		void:distinctObjects "171"^^xsd:integer
+	] , [
+		void:property dbpo:film ;
+		void:triples "29"^^xsd:integer ;
+		void:distinctSubjects "4"^^xsd:integer ;
+		void:distinctObjects "29"^^xsd:integer
+	] , [
+		void:property dbpo:filmFareAward ;
+		void:triples "157"^^xsd:integer ;
+		void:distinctSubjects "74"^^xsd:integer ;
+		void:distinctObjects "94"^^xsd:integer
+	] , [
+		void:property dbpo:finalFlight ;
+		void:triples "143"^^xsd:integer ;
+		void:distinctSubjects "117"^^xsd:integer ;
+		void:distinctObjects "139"^^xsd:integer
+	] , [
+		void:property dbpo:firstDriver ;
+		void:triples "660"^^xsd:integer ;
+		void:distinctSubjects "658"^^xsd:integer ;
+		void:distinctObjects "152"^^xsd:integer
+	] , [
+		void:property dbpo:firstDriverTeam ;
+		void:triples "629"^^xsd:integer ;
+		void:distinctSubjects "628"^^xsd:integer ;
+		void:distinctObjects "66"^^xsd:integer
+	] , [
+		void:property dbpo:firstFlight ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "6"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:firstFlightEndDate ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:firstFlightStartDate ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:firstGame ;
+		void:triples "64"^^xsd:integer ;
+		void:distinctSubjects "32"^^xsd:integer ;
+		void:distinctObjects "58"^^xsd:integer
+	] , [
+		void:property dbpo:firstLaunchDate ;
+		void:triples "45"^^xsd:integer ;
+		void:distinctSubjects "28"^^xsd:integer ;
+		void:distinctObjects "45"^^xsd:integer
+	] , [
+		void:property dbpo:firstLaunchRocket ;
+		void:triples "22"^^xsd:integer ;
+		void:distinctSubjects "13"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:firstRace ;
+		void:triples "703"^^xsd:integer ;
+		void:distinctSubjects "703"^^xsd:integer ;
+		void:distinctObjects "316"^^xsd:integer
+	] , [
+		void:property dbpo:firstWin ;
+		void:triples "91"^^xsd:integer ;
+		void:distinctSubjects "91"^^xsd:integer ;
+		void:distinctObjects "91"^^xsd:integer
+	] , [
+		void:property dbpo:firstWinner ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:flagBearer ;
+		void:triples "532"^^xsd:integer ;
+		void:distinctSubjects "464"^^xsd:integer ;
+		void:distinctObjects "498"^^xsd:integer
+	] , [
+		void:property dbpo:floorArea ;
+		void:triples "1652"^^xsd:integer ;
+		void:distinctSubjects "1607"^^xsd:integer ;
+		void:distinctObjects "1201"^^xsd:integer
+	] , [
+		void:property dbpo:floorCount ;
+		void:triples "2625"^^xsd:integer ;
+		void:distinctSubjects "2545"^^xsd:integer ;
+		void:distinctObjects "135"^^xsd:integer
+	] , [
+		void:property dbpo:followingEvent ;
+		void:triples "1300"^^xsd:integer ;
+		void:distinctSubjects "1300"^^xsd:integer ;
+		void:distinctObjects "1293"^^xsd:integer
+	] , [
+		void:property dbpo:format ;
+		void:triples "55465"^^xsd:integer ;
+		void:distinctSubjects "48010"^^xsd:integer ;
+		void:distinctObjects "1771"^^xsd:integer
+	] , [
+		void:property dbpo:formationDate ;
+		void:triples "4267"^^xsd:integer ;
+		void:distinctSubjects "4200"^^xsd:integer ;
+		void:distinctObjects "3678"^^xsd:integer
+	] , [
+		void:property dbpo:formationYear ;
+		void:triples "26464"^^xsd:integer ;
+		void:distinctSubjects "26030"^^xsd:integer ;
+		void:distinctObjects "358"^^xsd:integer
+	] , [
+		void:property dbpo:formerCallsign ;
+		void:triples "7662"^^xsd:integer ;
+		void:distinctSubjects "4196"^^xsd:integer ;
+		void:distinctObjects "7568"^^xsd:integer
+	] , [
+		void:property dbpo:formerChoreographer ;
+		void:triples "355"^^xsd:integer ;
+		void:distinctSubjects "238"^^xsd:integer ;
+		void:distinctObjects "183"^^xsd:integer
+	] , [
+		void:property dbpo:formerCoach ;
+		void:triples "1355"^^xsd:integer ;
+		void:distinctSubjects "816"^^xsd:integer ;
+		void:distinctObjects "692"^^xsd:integer
+	] , [
+		void:property dbpo:formerHighschool ;
+		void:triples "33"^^xsd:integer ;
+		void:distinctSubjects "29"^^xsd:integer ;
+		void:distinctObjects "31"^^xsd:integer
+	] , [
+		void:property dbpo:formerName ;
+		void:triples "1231"^^xsd:integer ;
+		void:distinctSubjects "868"^^xsd:integer ;
+		void:distinctObjects "1221"^^xsd:integer
+	] , [
+		void:property dbpo:formerPartner ;
+		void:triples "803"^^xsd:integer ;
+		void:distinctSubjects "538"^^xsd:integer ;
+		void:distinctObjects "740"^^xsd:integer
+	] , [
+		void:property dbpo:formerTeam ;
+		void:triples "58000"^^xsd:integer ;
+		void:distinctSubjects "21879"^^xsd:integer ;
+		void:distinctObjects "3199"^^xsd:integer
+	] , [
+		void:property dbpo:foundationOrganisation ;
+		void:triples "983"^^xsd:integer ;
+		void:distinctSubjects "829"^^xsd:integer ;
+		void:distinctObjects "921"^^xsd:integer
+	] , [
+		void:property dbpo:foundationPerson ;
+		void:triples "4226"^^xsd:integer ;
+		void:distinctSubjects "3716"^^xsd:integer ;
+		void:distinctObjects "3859"^^xsd:integer
+	] , [
+		void:property dbpo:foundationPlace ;
+		void:triples "8035"^^xsd:integer ;
+		void:distinctSubjects "7927"^^xsd:integer ;
+		void:distinctObjects "2539"^^xsd:integer
+	] , [
+		void:property dbpo:foundingDate ;
+		void:triples "7351"^^xsd:integer ;
+		void:distinctSubjects "6840"^^xsd:integer ;
+		void:distinctObjects "5093"^^xsd:integer
+	] , [
+		void:property dbpo:foundingPerson ;
+		void:triples "65"^^xsd:integer ;
+		void:distinctSubjects "64"^^xsd:integer ;
+		void:distinctObjects "60"^^xsd:integer
+	] , [
+		void:property dbpo:foundingYear ;
+		void:triples "3543"^^xsd:integer ;
+		void:distinctSubjects "3468"^^xsd:integer ;
+		void:distinctObjects "894"^^xsd:integer
+	] , [
+		void:property dbpo:fourthCommander ;
+		void:triples "33"^^xsd:integer ;
+		void:distinctSubjects "32"^^xsd:integer ;
+		void:distinctObjects "31"^^xsd:integer
+	] , [
+		void:property dbpo:frazioni ;
+		void:triples "557"^^xsd:integer ;
+		void:distinctSubjects "545"^^xsd:integer ;
+		void:distinctObjects "518"^^xsd:integer
+	] , [
+		void:property dbpo:freeFlightTime ;
+		void:triples "50"^^xsd:integer ;
+		void:distinctSubjects "50"^^xsd:integer ;
+		void:distinctObjects "11"^^xsd:integer
+	] , [
+		void:property dbpo:frequency ;
+		void:triples "14071"^^xsd:integer ;
+		void:distinctSubjects "13698"^^xsd:integer ;
+		void:distinctObjects "534"^^xsd:integer
+	] , [
+		void:property dbpo:frozen ;
+		void:triples "111"^^xsd:integer ;
+		void:distinctSubjects "111"^^xsd:integer ;
+		void:distinctObjects "70"^^xsd:integer
+	] , [
+		void:property dbpo:fuelCapacity ;
+		void:triples "525"^^xsd:integer ;
+		void:distinctSubjects "525"^^xsd:integer ;
+		void:distinctObjects "193"^^xsd:integer
+	] , [
+		void:property dbpo:fuelSystem ;
+		void:triples "42"^^xsd:integer ;
+		void:distinctSubjects "36"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:fuelType ;
+		void:triples "186"^^xsd:integer ;
+		void:distinctSubjects "186"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:functionEndDate ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:functionEndYear ;
+		void:triples "461"^^xsd:integer ;
+		void:distinctSubjects "461"^^xsd:integer ;
+		void:distinctObjects "187"^^xsd:integer
+	] , [
+		void:property dbpo:functionStartDate ;
+		void:triples "19"^^xsd:integer ;
+		void:distinctSubjects "19"^^xsd:integer ;
+		void:distinctObjects "19"^^xsd:integer
+	] , [
+		void:property dbpo:functionStartYear ;
+		void:triples "923"^^xsd:integer ;
+		void:distinctSubjects "923"^^xsd:integer ;
+		void:distinctObjects "236"^^xsd:integer
+	] , [
+		void:property dbpo:gameEngine ;
+		void:triples "1572"^^xsd:integer ;
+		void:distinctSubjects "1503"^^xsd:integer ;
+		void:distinctObjects "529"^^xsd:integer
+	] , [
+		void:property dbpo:games ;
+		void:triples "691"^^xsd:integer ;
+		void:distinctSubjects "691"^^xsd:integer ;
+		void:distinctObjects "47"^^xsd:integer
+	] , [
+		void:property dbpo:garrison ;
+		void:triples "4227"^^xsd:integer ;
+		void:distinctSubjects "3834"^^xsd:integer ;
+		void:distinctObjects "2109"^^xsd:integer
+	] , [
+		void:property dbpo:geminiAward ;
+		void:triples "16"^^xsd:integer ;
+		void:distinctSubjects "11"^^xsd:integer ;
+		void:distinctObjects "11"^^xsd:integer
+	] , [
+		void:property dbpo:generalManager ;
+		void:triples "28"^^xsd:integer ;
+		void:distinctSubjects "28"^^xsd:integer ;
+		void:distinctObjects "28"^^xsd:integer
+	] , [
+		void:property dbpo:genre ;
+		void:triples "245231"^^xsd:integer ;
+		void:distinctSubjects "210674"^^xsd:integer ;
+		void:distinctObjects "8233"^^xsd:integer
+	] , [
+		void:property dbpo:genus ;
+		void:triples "88288"^^xsd:integer ;
+		void:distinctSubjects "85901"^^xsd:integer ;
+		void:distinctObjects "17266"^^xsd:integer
+	] , [
+		void:property dbpo:geologicPeriod ;
+		void:triples "156"^^xsd:integer ;
+		void:distinctSubjects "155"^^xsd:integer ;
+		void:distinctObjects "69"^^xsd:integer
+	] , [
+		void:property dbpo:geology ;
+		void:triples "313"^^xsd:integer ;
+		void:distinctSubjects "232"^^xsd:integer ;
+		void:distinctObjects "145"^^xsd:integer
+	] , [
+		void:property dbpo:goldenCalfAward ;
+		void:triples "14"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "13"^^xsd:integer
+	] , [
+		void:property dbpo:goldenGlobeAward ;
+		void:triples "133"^^xsd:integer ;
+		void:distinctSubjects "67"^^xsd:integer ;
+		void:distinctObjects "92"^^xsd:integer
+	] , [
+		void:property dbpo:goldenRaspberryAward ;
+		void:triples "26"^^xsd:integer ;
+		void:distinctSubjects "13"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:government ;
+		void:triples "142"^^xsd:integer ;
+		void:distinctSubjects "110"^^xsd:integer ;
+		void:distinctObjects "22"^^xsd:integer
+	] , [
+		void:property dbpo:governmentElevation ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property dbpo:governmentPosition ;
+		void:triples "14"^^xsd:integer ;
+		void:distinctSubjects "14"^^xsd:integer ;
+		void:distinctObjects "14"^^xsd:integer
+	] , [
+		void:property dbpo:governmentType ;
+		void:triples "550"^^xsd:integer ;
+		void:distinctSubjects "491"^^xsd:integer ;
+		void:distinctObjects "159"^^xsd:integer
+	] , [
+		void:property dbpo:governor ;
+		void:triples "940"^^xsd:integer ;
+		void:distinctSubjects "648"^^xsd:integer ;
+		void:distinctObjects "527"^^xsd:integer
+	] , [
+		void:property dbpo:governorGeneral ;
+		void:triples "99"^^xsd:integer ;
+		void:distinctSubjects "71"^^xsd:integer ;
+		void:distinctObjects "54"^^xsd:integer
+	] , [
+		void:property dbpo:goyaAward ;
+		void:triples "46"^^xsd:integer ;
+		void:distinctSubjects "17"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property dbpo:grammyAward ;
+		void:triples "51"^^xsd:integer ;
+		void:distinctSubjects "16"^^xsd:integer ;
+		void:distinctObjects "42"^^xsd:integer
+	] , [
+		void:property dbpo:grayPage ;
+		void:triples "2936"^^xsd:integer ;
+		void:distinctSubjects "2936"^^xsd:integer ;
+		void:distinctObjects "916"^^xsd:integer
+	] , [
+		void:property dbpo:graySubject ;
+		void:triples "2941"^^xsd:integer ;
+		void:distinctSubjects "2941"^^xsd:integer ;
+		void:distinctObjects "255"^^xsd:integer
+	] , [
+		void:property dbpo:gross ;
+		void:triples "4338"^^xsd:integer ;
+		void:distinctSubjects "4161"^^xsd:integer ;
+		void:distinctObjects "4119"^^xsd:integer
+	] , [
+		void:property dbpo:grossDomesticProduct ;
+		void:triples "20"^^xsd:integer ;
+		void:distinctSubjects "20"^^xsd:integer ;
+		void:distinctObjects "20"^^xsd:integer
+	] , [
+		void:property dbpo:ground ;
+		void:triples "15019"^^xsd:integer ;
+		void:distinctSubjects "9314"^^xsd:integer ;
+		void:distinctObjects "11110"^^xsd:integer
+	] , [
+		void:property dbpo:growingGrape ;
+		void:triples "221"^^xsd:integer ;
+		void:distinctSubjects "219"^^xsd:integer ;
+		void:distinctObjects "45"^^xsd:integer
+	] , [
+		void:property dbpo:guest ;
+		void:triples "17761"^^xsd:integer ;
+		void:distinctSubjects "3634"^^xsd:integer ;
+		void:distinctObjects "9611"^^xsd:integer
+	] , [
+		void:property dbpo:hallOfFame ;
+		void:triples "218"^^xsd:integer ;
+		void:distinctSubjects "218"^^xsd:integer ;
+		void:distinctObjects "56"^^xsd:integer
+	] , [
+		void:property dbpo:hasJunctionWith ;
+		void:triples "24"^^xsd:integer ;
+		void:distinctSubjects "22"^^xsd:integer ;
+		void:distinctObjects "21"^^xsd:integer
+	] , [
+		void:property dbpo:head ;
+		void:triples "544"^^xsd:integer ;
+		void:distinctSubjects "531"^^xsd:integer ;
+		void:distinctObjects "437"^^xsd:integer
+	] , [
+		void:property dbpo:headAlloy ;
+		void:triples "32"^^xsd:integer ;
+		void:distinctSubjects "32"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:headLabel ;
+		void:triples "2581"^^xsd:integer ;
+		void:distinctSubjects "2580"^^xsd:integer ;
+		void:distinctObjects "174"^^xsd:integer
+	] , [
+		void:property dbpo:headquarter ;
+		void:triples "3817"^^xsd:integer ;
+		void:distinctSubjects "3721"^^xsd:integer ;
+		void:distinctObjects "1788"^^xsd:integer
+	] , [
+		void:property dbpo:headquarters ;
+		void:triples "3215"^^xsd:integer ;
+		void:distinctSubjects "2784"^^xsd:integer ;
+		void:distinctObjects "1759"^^xsd:integer
+	] , [
+		void:property dbpo:headteacher ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:height ;
+		void:triples "26891"^^xsd:integer ;
+		void:distinctSubjects "26885"^^xsd:integer ;
+		void:distinctObjects "1614"^^xsd:integer
+	] , [
+		void:property dbpo:heir ;
+		void:triples "37"^^xsd:integer ;
+		void:distinctSubjects "35"^^xsd:integer ;
+		void:distinctObjects "37"^^xsd:integer
+	] , [
+		void:property dbpo:hgncid ;
+		void:triples "1606"^^xsd:integer ;
+		void:distinctSubjects "1606"^^xsd:integer ;
+		void:distinctObjects "1545"^^xsd:integer
+	] , [
+		void:property dbpo:highestBuildingInYear ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:highestMountain ;
+		void:triples "55"^^xsd:integer ;
+		void:distinctSubjects "53"^^xsd:integer ;
+		void:distinctObjects "47"^^xsd:integer
+	] , [
+		void:property dbpo:highestPlace ;
+		void:triples "282"^^xsd:integer ;
+		void:distinctSubjects "253"^^xsd:integer ;
+		void:distinctObjects "247"^^xsd:integer
+	] , [
+		void:property dbpo:highestPosition ;
+		void:triples "538"^^xsd:integer ;
+		void:distinctSubjects "538"^^xsd:integer ;
+		void:distinctObjects "538"^^xsd:integer
+	] , [
+		void:property dbpo:highestRegion ;
+		void:triples "5"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:highestState ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:highschool ;
+		void:triples "1293"^^xsd:integer ;
+		void:distinctSubjects "994"^^xsd:integer ;
+		void:distinctObjects "1083"^^xsd:integer
+	] , [
+		void:property dbpo:highwaySystem ;
+		void:triples "234"^^xsd:integer ;
+		void:distinctSubjects "220"^^xsd:integer ;
+		void:distinctObjects "60"^^xsd:integer
+	] , [
+		void:property dbpo:homeStadium ;
+		void:triples "20"^^xsd:integer ;
+		void:distinctSubjects "18"^^xsd:integer ;
+		void:distinctObjects "18"^^xsd:integer
+	] , [
+		void:property dbpo:hometown ;
+		void:triples "35361"^^xsd:integer ;
+		void:distinctSubjects "34681"^^xsd:integer ;
+		void:distinctObjects "7589"^^xsd:integer
+	] , [
+		void:property dbpo:honours ;
+		void:triples "51"^^xsd:integer ;
+		void:distinctSubjects "21"^^xsd:integer ;
+		void:distinctObjects "27"^^xsd:integer
+	] , [
+		void:property dbpo:house ;
+		void:triples "179"^^xsd:integer ;
+		void:distinctSubjects "91"^^xsd:integer ;
+		void:distinctObjects "172"^^xsd:integer
+	] , [
+		void:property dbpo:hsvCoordinateHue ;
+		void:triples "635"^^xsd:integer ;
+		void:distinctSubjects "635"^^xsd:integer ;
+		void:distinctObjects "202"^^xsd:integer
+	] , [
+		void:property dbpo:hsvCoordinateSaturation ;
+		void:triples "638"^^xsd:integer ;
+		void:distinctSubjects "638"^^xsd:integer ;
+		void:distinctObjects "97"^^xsd:integer
+	] , [
+		void:property dbpo:hsvCoordinateValue ;
+		void:triples "640"^^xsd:integer ;
+		void:distinctSubjects "640"^^xsd:integer ;
+		void:distinctObjects "81"^^xsd:integer
+	] , [
+		void:property dbpo:hubAirport ;
+		void:triples "2684"^^xsd:integer ;
+		void:distinctSubjects "1846"^^xsd:integer ;
+		void:distinctObjects "1160"^^xsd:integer
+	] , [
+		void:property dbpo:iataLocationIdentifier ;
+		void:triples "5751"^^xsd:integer ;
+		void:distinctSubjects "5750"^^xsd:integer ;
+		void:distinctObjects "5493"^^xsd:integer
+	] , [
+		void:property dbpo:icaoLocationIdentifier ;
+		void:triples "6747"^^xsd:integer ;
+		void:distinctSubjects "6719"^^xsd:integer ;
+		void:distinctObjects "6511"^^xsd:integer
+	] , [
+		void:property dbpo:icd10 ;
+		void:triples "817"^^xsd:integer ;
+		void:distinctSubjects "815"^^xsd:integer ;
+		void:distinctObjects "283"^^xsd:integer
+	] , [
+		void:property dbpo:icd9 ;
+		void:triples "505"^^xsd:integer ;
+		void:distinctSubjects "499"^^xsd:integer ;
+		void:distinctObjects "62"^^xsd:integer
+	] , [
+		void:property dbpo:icdo ;
+		void:triples "197"^^xsd:integer ;
+		void:distinctSubjects "197"^^xsd:integer ;
+		void:distinctObjects "187"^^xsd:integer
+	] , [
+		void:property dbpo:id ;
+		void:triples "1113"^^xsd:integer ;
+		void:distinctSubjects "1113"^^xsd:integer ;
+		void:distinctObjects "856"^^xsd:integer
+	] , [
+		void:property dbpo:identificationSymbol ;
+		void:triples "2494"^^xsd:integer ;
+		void:distinctSubjects "1479"^^xsd:integer ;
+		void:distinctObjects "1592"^^xsd:integer
+	] , [
+		void:property dbpo:iftaAward ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:illustrator ;
+		void:triples "1207"^^xsd:integer ;
+		void:distinctSubjects "1153"^^xsd:integer ;
+		void:distinctObjects "631"^^xsd:integer
+	] , [
+		void:property dbpo:imdbId ;
+		void:triples "11476"^^xsd:integer ;
+		void:distinctSubjects "11474"^^xsd:integer ;
+		void:distinctObjects "11423"^^xsd:integer
+	] , [
+		void:property dbpo:inclination ;
+		void:triples "62"^^xsd:integer ;
+		void:distinctSubjects "62"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:incumbent ;
+		void:triples "94"^^xsd:integer ;
+		void:distinctSubjects "94"^^xsd:integer ;
+		void:distinctObjects "77"^^xsd:integer
+	] , [
+		void:property dbpo:industry ;
+		void:triples "20661"^^xsd:integer ;
+		void:distinctSubjects "19034"^^xsd:integer ;
+		void:distinctObjects "3231"^^xsd:integer
+	] , [
+		void:property dbpo:inflow ;
+		void:triples "1842"^^xsd:integer ;
+		void:distinctSubjects "1791"^^xsd:integer ;
+		void:distinctObjects "1436"^^xsd:integer
+	] , [
+		void:property dbpo:influenced ;
+		void:triples "1860"^^xsd:integer ;
+		void:distinctSubjects "1615"^^xsd:integer ;
+		void:distinctObjects "1542"^^xsd:integer
+	] , [
+		void:property dbpo:influencedBy ;
+		void:triples "3158"^^xsd:integer ;
+		void:distinctSubjects "2687"^^xsd:integer ;
+		void:distinctObjects "1919"^^xsd:integer
+	] , [
+		void:property dbpo:innervates ;
+		void:triples "109"^^xsd:integer ;
+		void:distinctSubjects "97"^^xsd:integer ;
+		void:distinctObjects "93"^^xsd:integer
+	] , [
+		void:property dbpo:instrument ;
+		void:triples "19934"^^xsd:integer ;
+		void:distinctSubjects "15152"^^xsd:integer ;
+		void:distinctObjects "1389"^^xsd:integer
+	] , [
+		void:property dbpo:intercommunality ;
+		void:triples "12551"^^xsd:integer ;
+		void:distinctSubjects "12419"^^xsd:integer ;
+		void:distinctObjects "1424"^^xsd:integer
+	] , [
+		void:property dbpo:interest ;
+		void:triples "394"^^xsd:integer ;
+		void:distinctSubjects "394"^^xsd:integer ;
+		void:distinctObjects "13"^^xsd:integer
+	] , [
+		void:property dbpo:internationally ;
+		void:triples "1504"^^xsd:integer ;
+		void:distinctSubjects "1503"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:introduced ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property dbpo:introductionDate ;
+		void:triples "45"^^xsd:integer ;
+		void:distinctSubjects "44"^^xsd:integer ;
+		void:distinctObjects "45"^^xsd:integer
+	] , [
+		void:property dbpo:isPartOf ;
+		void:triples "68"^^xsd:integer ;
+		void:distinctSubjects "67"^^xsd:integer ;
+		void:distinctObjects "29"^^xsd:integer
+	] , [
+		void:property dbpo:isbn ;
+		void:triples "17337"^^xsd:integer ;
+		void:distinctSubjects "16832"^^xsd:integer ;
+		void:distinctObjects "14482"^^xsd:integer
+	] , [
+		void:property dbpo:island ;
+		void:triples "143"^^xsd:integer ;
+		void:distinctSubjects "134"^^xsd:integer ;
+		void:distinctObjects "137"^^xsd:integer
+	] , [
+		void:property dbpo:issDockings ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:issn ;
+		void:triples "813"^^xsd:integer ;
+		void:distinctSubjects "810"^^xsd:integer ;
+		void:distinctObjects "797"^^xsd:integer
+	] , [
+		void:property dbpo:iucnCategory ;
+		void:triples "3049"^^xsd:integer ;
+		void:distinctSubjects "3049"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:iupacName ;
+		void:triples "4573"^^xsd:integer ;
+		void:distinctSubjects "3887"^^xsd:integer ;
+		void:distinctObjects "4488"^^xsd:integer
+	] , [
+		void:property dbpo:jointCommunity ;
+		void:triples "7"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:keyPerson ;
+		void:triples "16792"^^xsd:integer ;
+		void:distinctSubjects "10499"^^xsd:integer ;
+		void:distinctObjects "9948"^^xsd:integer
+	] , [
+		void:property dbpo:kingdom ;
+		void:triples "145800"^^xsd:integer ;
+		void:distinctSubjects "144801"^^xsd:integer ;
+		void:distinctObjects "52"^^xsd:integer
+	] , [
+		void:property dbpo:knownFor ;
+		void:triples "10041"^^xsd:integer ;
+		void:distinctSubjects "8310"^^xsd:integer ;
+		void:distinctObjects "7997"^^xsd:integer
+	] , [
+		void:property dbpo:landingDate ;
+		void:triples "337"^^xsd:integer ;
+		void:distinctSubjects "330"^^xsd:integer ;
+		void:distinctObjects "311"^^xsd:integer
+	] , [
+		void:property dbpo:landingvehicle ;
+		void:triples "25"^^xsd:integer ;
+		void:distinctSubjects "19"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:language ;
+		void:triples "62882"^^xsd:integer ;
+		void:distinctSubjects "58484"^^xsd:integer ;
+		void:distinctObjects "885"^^xsd:integer
+	] , [
+		void:property dbpo:languageType ;
+		void:triples "77"^^xsd:integer ;
+		void:distinctSubjects "76"^^xsd:integer ;
+		void:distinctObjects "15"^^xsd:integer
+	] , [
+		void:property dbpo:largestCity ;
+		void:triples "412"^^xsd:integer ;
+		void:distinctSubjects "411"^^xsd:integer ;
+		void:distinctObjects "379"^^xsd:integer
+	] , [
+		void:property dbpo:largestSettlement ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:largestWin ;
+		void:triples "73"^^xsd:integer ;
+		void:distinctSubjects "33"^^xsd:integer ;
+		void:distinctObjects "64"^^xsd:integer
+	] , [
+		void:property dbpo:lastFlight ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "6"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:lastFlightEndDate ;
+		void:triples "7"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:lastFlightStartDate ;
+		void:triples "7"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:lastLaunchDate ;
+		void:triples "45"^^xsd:integer ;
+		void:distinctSubjects "28"^^xsd:integer ;
+		void:distinctObjects "45"^^xsd:integer
+	] , [
+		void:property dbpo:lastLaunchRocket ;
+		void:triples "22"^^xsd:integer ;
+		void:distinctSubjects "13"^^xsd:integer ;
+		void:distinctObjects "18"^^xsd:integer
+	] , [
+		void:property dbpo:lastPosition ;
+		void:triples "27"^^xsd:integer ;
+		void:distinctSubjects "27"^^xsd:integer ;
+		void:distinctObjects "22"^^xsd:integer
+	] , [
+		void:property dbpo:lastRace ;
+		void:triples "678"^^xsd:integer ;
+		void:distinctSubjects "678"^^xsd:integer ;
+		void:distinctObjects "319"^^xsd:integer
+	] , [
+		void:property dbpo:lastWin ;
+		void:triples "85"^^xsd:integer ;
+		void:distinctSubjects "85"^^xsd:integer ;
+		void:distinctObjects "85"^^xsd:integer
+	] , [
+		void:property dbpo:latestReleaseVersion ;
+		void:triples "1120"^^xsd:integer ;
+		void:distinctSubjects "1023"^^xsd:integer ;
+		void:distinctObjects "784"^^xsd:integer
+	] , [
+		void:property dbpo:launch ;
+		void:triples "61"^^xsd:integer ;
+		void:distinctSubjects "61"^^xsd:integer ;
+		void:distinctObjects "61"^^xsd:integer
+	] , [
+		void:property dbpo:launchDate ;
+		void:triples "63"^^xsd:integer ;
+		void:distinctSubjects "57"^^xsd:integer ;
+		void:distinctObjects "53"^^xsd:integer
+	] , [
+		void:property dbpo:launchPad ;
+		void:triples "190"^^xsd:integer ;
+		void:distinctSubjects "166"^^xsd:integer ;
+		void:distinctObjects "24"^^xsd:integer
+	] , [
+		void:property dbpo:launchSite ;
+		void:triples "396"^^xsd:integer ;
+		void:distinctSubjects "318"^^xsd:integer ;
+		void:distinctObjects "100"^^xsd:integer
+	] , [
+		void:property dbpo:launches ;
+		void:triples "40"^^xsd:integer ;
+		void:distinctSubjects "24"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property dbpo:launchvehicle ;
+		void:triples "39"^^xsd:integer ;
+		void:distinctSubjects "31"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property dbpo:laurenceOlivierAward ;
+		void:triples "78"^^xsd:integer ;
+		void:distinctSubjects "34"^^xsd:integer ;
+		void:distinctObjects "49"^^xsd:integer
+	] , [
+		void:property dbpo:layout ;
+		void:triples "3276"^^xsd:integer ;
+		void:distinctSubjects "3070"^^xsd:integer ;
+		void:distinctObjects "58"^^xsd:integer
+	] , [
+		void:property dbpo:lcc ;
+		void:triples "6237"^^xsd:integer ;
+		void:distinctSubjects "6237"^^xsd:integer ;
+		void:distinctObjects "6167"^^xsd:integer
+	] , [
+		void:property dbpo:leader ;
+		void:triples "371"^^xsd:integer ;
+		void:distinctSubjects "371"^^xsd:integer ;
+		void:distinctObjects "314"^^xsd:integer
+	] , [
+		void:property dbpo:leaderFunction ;
+		void:triples "62"^^xsd:integer ;
+		void:distinctSubjects "17"^^xsd:integer ;
+		void:distinctObjects "62"^^xsd:integer
+	] , [
+		void:property dbpo:leaderName ;
+		void:triples "10319"^^xsd:integer ;
+		void:distinctSubjects "6409"^^xsd:integer ;
+		void:distinctObjects "5428"^^xsd:integer
+	] , [
+		void:property dbpo:leaderParty ;
+		void:triples "384"^^xsd:integer ;
+		void:distinctSubjects "383"^^xsd:integer ;
+		void:distinctObjects "45"^^xsd:integer
+	] , [
+		void:property dbpo:leaderTitle ;
+		void:triples "31115"^^xsd:integer ;
+		void:distinctSubjects "20983"^^xsd:integer ;
+		void:distinctObjects "1568"^^xsd:integer
+	] , [
+		void:property dbpo:league ;
+		void:triples "13941"^^xsd:integer ;
+		void:distinctSubjects "13769"^^xsd:integer ;
+		void:distinctObjects "1639"^^xsd:integer
+	] , [
+		void:property dbpo:leftChild ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:leftTributary ;
+		void:triples "3510"^^xsd:integer ;
+		void:distinctSubjects "1574"^^xsd:integer ;
+		void:distinctObjects "3505"^^xsd:integer
+	] , [
+		void:property dbpo:length ;
+		void:triples "37168"^^xsd:integer ;
+		void:distinctSubjects "36978"^^xsd:integer ;
+		void:distinctObjects "11328"^^xsd:integer
+	] , [
+		void:property dbpo:license ;
+		void:triples "5553"^^xsd:integer ;
+		void:distinctSubjects "5501"^^xsd:integer ;
+		void:distinctObjects "295"^^xsd:integer
+	] , [
+		void:property dbpo:lieutenancyArea ;
+		void:triples "618"^^xsd:integer ;
+		void:distinctSubjects "617"^^xsd:integer ;
+		void:distinctObjects "48"^^xsd:integer
+	] , [
+		void:property dbpo:lieutenant ;
+		void:triples "1117"^^xsd:integer ;
+		void:distinctSubjects "878"^^xsd:integer ;
+		void:distinctObjects "985"^^xsd:integer
+	] , [
+		void:property dbpo:locatedInArea ;
+		void:triples "1967"^^xsd:integer ;
+		void:distinctSubjects "1896"^^xsd:integer ;
+		void:distinctObjects "1185"^^xsd:integer
+	] , [
+		void:property dbpo:location ;
+		void:triples "83706"^^xsd:integer ;
+		void:distinctSubjects "79061"^^xsd:integer ;
+		void:distinctObjects "25097"^^xsd:integer
+	] , [
+		void:property dbpo:locationCity ;
+		void:triples "6841"^^xsd:integer ;
+		void:distinctSubjects "6765"^^xsd:integer ;
+		void:distinctObjects "2944"^^xsd:integer
+	] , [
+		void:property dbpo:locationCountry ;
+		void:triples "6607"^^xsd:integer ;
+		void:distinctSubjects "6546"^^xsd:integer ;
+		void:distinctObjects "273"^^xsd:integer
+	] , [
+		void:property dbpo:locationIdentifier ;
+		void:triples "1142"^^xsd:integer ;
+		void:distinctSubjects "1142"^^xsd:integer ;
+		void:distinctObjects "1140"^^xsd:integer
+	] , [
+		void:property dbpo:locusSupplementaryData ;
+		void:triples "398"^^xsd:integer ;
+		void:distinctSubjects "398"^^xsd:integer ;
+		void:distinctObjects "145"^^xsd:integer
+	] , [
+		void:property dbpo:longtype ;
+		void:triples "988"^^xsd:integer ;
+		void:distinctSubjects "987"^^xsd:integer ;
+		void:distinctObjects "363"^^xsd:integer
+	] , [
+		void:property dbpo:lounge ;
+		void:triples "62"^^xsd:integer ;
+		void:distinctSubjects "53"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property dbpo:lowerAge ;
+		void:triples "2939"^^xsd:integer ;
+		void:distinctSubjects "2939"^^xsd:integer ;
+		void:distinctObjects "21"^^xsd:integer
+	] , [
+		void:property dbpo:lowerEarthOrbitPayload ;
+		void:triples "56"^^xsd:integer ;
+		void:distinctSubjects "53"^^xsd:integer ;
+		void:distinctObjects "49"^^xsd:integer
+	] , [
+		void:property dbpo:lowest ;
+		void:triples "97"^^xsd:integer ;
+		void:distinctSubjects "97"^^xsd:integer ;
+		void:distinctObjects "65"^^xsd:integer
+	] , [
+		void:property dbpo:lowestMountain ;
+		void:triples "34"^^xsd:integer ;
+		void:distinctSubjects "34"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property dbpo:lowestPlace ;
+		void:triples "34"^^xsd:integer ;
+		void:distinctSubjects "34"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property dbpo:lowestPosition ;
+		void:triples "44"^^xsd:integer ;
+		void:distinctSubjects "44"^^xsd:integer ;
+		void:distinctObjects "44"^^xsd:integer
+	] , [
+		void:property dbpo:lowestRegion ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:lowestState ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:lunarEvaTime ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:lunarModule ;
+		void:triples "34"^^xsd:integer ;
+		void:distinctSubjects "13"^^xsd:integer ;
+		void:distinctObjects "33"^^xsd:integer
+	] , [
+		void:property dbpo:lunarOrbitTime ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:lunarSampleMass ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "6"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:lunarSurfaceTime ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "6"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:lymph ;
+		void:triples "37"^^xsd:integer ;
+		void:distinctSubjects "36"^^xsd:integer ;
+		void:distinctObjects "15"^^xsd:integer
+	] , [
+		void:property dbpo:lyrics ;
+		void:triples "1031"^^xsd:integer ;
+		void:distinctSubjects "782"^^xsd:integer ;
+		void:distinctObjects "533"^^xsd:integer
+	] , [
+		void:property dbpo:maidenFlight ;
+		void:triples "211"^^xsd:integer ;
+		void:distinctSubjects "160"^^xsd:integer ;
+		void:distinctObjects "199"^^xsd:integer
+	] , [
+		void:property dbpo:maidenFlightRocket ;
+		void:triples "163"^^xsd:integer ;
+		void:distinctSubjects "42"^^xsd:integer ;
+		void:distinctObjects "114"^^xsd:integer
+	] , [
+		void:property dbpo:mainInterest ;
+		void:triples "793"^^xsd:integer ;
+		void:distinctSubjects "649"^^xsd:integer ;
+		void:distinctObjects "296"^^xsd:integer
+	] , [
+		void:property dbpo:mainOrgan ;
+		void:triples "26"^^xsd:integer ;
+		void:distinctSubjects "22"^^xsd:integer ;
+		void:distinctObjects "15"^^xsd:integer
+	] , [
+		void:property dbpo:mainspan ;
+		void:triples "793"^^xsd:integer ;
+		void:distinctSubjects "782"^^xsd:integer ;
+		void:distinctObjects "561"^^xsd:integer
+	] , [
+		void:property dbpo:majorIsland ;
+		void:triples "83"^^xsd:integer ;
+		void:distinctSubjects "79"^^xsd:integer ;
+		void:distinctObjects "71"^^xsd:integer
+	] , [
+		void:property dbpo:majorShrine ;
+		void:triples "477"^^xsd:integer ;
+		void:distinctSubjects "461"^^xsd:integer ;
+		void:distinctObjects "423"^^xsd:integer
+	] , [
+		void:property dbpo:majorityLeader ;
+		void:triples "13"^^xsd:integer ;
+		void:distinctSubjects "12"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property dbpo:management ;
+		void:triples "245"^^xsd:integer ;
+		void:distinctSubjects "245"^^xsd:integer ;
+		void:distinctObjects "72"^^xsd:integer
+	] , [
+		void:property dbpo:managementElevation ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:managementMountain ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:managementPlace ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:managementPosition ;
+		void:triples "5"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:manager ;
+		void:triples "4166"^^xsd:integer ;
+		void:distinctSubjects "4106"^^xsd:integer ;
+		void:distinctObjects "3834"^^xsd:integer
+	] , [
+		void:property dbpo:managerClub ;
+		void:triples "8064"^^xsd:integer ;
+		void:distinctSubjects "1771"^^xsd:integer ;
+		void:distinctObjects "2906"^^xsd:integer
+	] , [
+		void:property dbpo:managerTitle ;
+		void:triples "952"^^xsd:integer ;
+		void:distinctSubjects "948"^^xsd:integer ;
+		void:distinctObjects "63"^^xsd:integer
+	] , [
+		void:property dbpo:managingEditor ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:manufacturer ;
+		void:triples "10489"^^xsd:integer ;
+		void:distinctSubjects "10031"^^xsd:integer ;
+		void:distinctObjects "2043"^^xsd:integer
+	] , [
+		void:property dbpo:march ;
+		void:triples "228"^^xsd:integer ;
+		void:distinctSubjects "208"^^xsd:integer ;
+		void:distinctObjects "98"^^xsd:integer
+	] , [
+		void:property dbpo:mascot ;
+		void:triples "10125"^^xsd:integer ;
+		void:distinctSubjects "10057"^^xsd:integer ;
+		void:distinctObjects "3368"^^xsd:integer
+	] , [
+		void:property dbpo:mass ;
+		void:triples "411"^^xsd:integer ;
+		void:distinctSubjects "399"^^xsd:integer ;
+		void:distinctObjects "262"^^xsd:integer
+	] , [
+		void:property dbpo:material ;
+		void:triples "80"^^xsd:integer ;
+		void:distinctSubjects "79"^^xsd:integer ;
+		void:distinctObjects "39"^^xsd:integer
+	] , [
+		void:property dbpo:maximumBoatBeam ;
+		void:triples "40"^^xsd:integer ;
+		void:distinctSubjects "40"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:maximumBoatLength ;
+		void:triples "38"^^xsd:integer ;
+		void:distinctSubjects "38"^^xsd:integer ;
+		void:distinctObjects "22"^^xsd:integer
+	] , [
+		void:property dbpo:maximumDischarge ;
+		void:triples "1169"^^xsd:integer ;
+		void:distinctSubjects "1156"^^xsd:integer ;
+		void:distinctObjects "818"^^xsd:integer
+	] , [
+		void:property dbpo:maximumElevation ;
+		void:triples "2639"^^xsd:integer ;
+		void:distinctSubjects "2616"^^xsd:integer ;
+		void:distinctObjects "1841"^^xsd:integer
+	] , [
+		void:property dbpo:maximumTemperature ;
+		void:triples "25"^^xsd:integer ;
+		void:distinctSubjects "20"^^xsd:integer ;
+		void:distinctObjects "22"^^xsd:integer
+	] , [
+		void:property dbpo:mayor ;
+		void:triples "456"^^xsd:integer ;
+		void:distinctSubjects "456"^^xsd:integer ;
+		void:distinctObjects "381"^^xsd:integer
+	] , [
+		void:property dbpo:meanRadius ;
+		void:triples "36"^^xsd:integer ;
+		void:distinctSubjects "36"^^xsd:integer ;
+		void:distinctObjects "30"^^xsd:integer
+	] , [
+		void:property dbpo:meanTemperature ;
+		void:triples "31"^^xsd:integer ;
+		void:distinctSubjects "20"^^xsd:integer ;
+		void:distinctObjects "28"^^xsd:integer
+	] , [
+		void:property dbpo:meaning ;
+		void:triples "85"^^xsd:integer ;
+		void:distinctSubjects "84"^^xsd:integer ;
+		void:distinctObjects "85"^^xsd:integer
+	] , [
+		void:property dbpo:mediaType ;
+		void:triples "14414"^^xsd:integer ;
+		void:distinctSubjects "14328"^^xsd:integer ;
+		void:distinctObjects "96"^^xsd:integer
+	] , [
+		void:property dbpo:medlineplus ;
+		void:triples "799"^^xsd:integer ;
+		void:distinctSubjects "799"^^xsd:integer ;
+		void:distinctObjects "750"^^xsd:integer
+	] , [
+		void:property dbpo:meetingBuilding ;
+		void:triples "393"^^xsd:integer ;
+		void:distinctSubjects "334"^^xsd:integer ;
+		void:distinctObjects "259"^^xsd:integer
+	] , [
+		void:property dbpo:meetingCity ;
+		void:triples "393"^^xsd:integer ;
+		void:distinctSubjects "334"^^xsd:integer ;
+		void:distinctObjects "259"^^xsd:integer
+	] , [
+		void:property dbpo:memberOfParliament ;
+		void:triples "325"^^xsd:integer ;
+		void:distinctSubjects "30"^^xsd:integer ;
+		void:distinctObjects "324"^^xsd:integer
+	] , [
+		void:property dbpo:membership ;
+		void:triples "998"^^xsd:integer ;
+		void:distinctSubjects "882"^^xsd:integer ;
+		void:distinctObjects "887"^^xsd:integer
+	] , [
+		void:property dbpo:meshId ;
+		void:triples "2674"^^xsd:integer ;
+		void:distinctSubjects "2674"^^xsd:integer ;
+		void:distinctObjects "2427"^^xsd:integer
+	] , [
+		void:property dbpo:meshName ;
+		void:triples "553"^^xsd:integer ;
+		void:distinctSubjects "553"^^xsd:integer ;
+		void:distinctObjects "506"^^xsd:integer
+	] , [
+		void:property dbpo:meshNumber ;
+		void:triples "520"^^xsd:integer ;
+		void:distinctSubjects "518"^^xsd:integer ;
+		void:distinctObjects "459"^^xsd:integer
+	] , [
+		void:property dbpo:metropolitanBorough ;
+		void:triples "1115"^^xsd:integer ;
+		void:distinctSubjects "1111"^^xsd:integer ;
+		void:distinctObjects "69"^^xsd:integer
+	] , [
+		void:property dbpo:militaryBranch ;
+		void:triples "19927"^^xsd:integer ;
+		void:distinctSubjects "18331"^^xsd:integer ;
+		void:distinctObjects "1032"^^xsd:integer
+	] , [
+		void:property dbpo:militaryCommand ;
+		void:triples "12974"^^xsd:integer ;
+		void:distinctSubjects "5675"^^xsd:integer ;
+		void:distinctObjects "9338"^^xsd:integer
+	] , [
+		void:property dbpo:militaryRank ;
+		void:triples "712"^^xsd:integer ;
+		void:distinctSubjects "672"^^xsd:integer ;
+		void:distinctObjects "181"^^xsd:integer
+	] , [
+		void:property dbpo:militaryUnit ;
+		void:triples "5973"^^xsd:integer ;
+		void:distinctSubjects "4792"^^xsd:integer ;
+		void:distinctObjects "2801"^^xsd:integer
+	] , [
+		void:property dbpo:militaryUnitSize ;
+		void:triples "3302"^^xsd:integer ;
+		void:distinctSubjects "2949"^^xsd:integer ;
+		void:distinctObjects "1513"^^xsd:integer
+	] , [
+		void:property dbpo:minimumDischarge ;
+		void:triples "451"^^xsd:integer ;
+		void:distinctSubjects "451"^^xsd:integer ;
+		void:distinctObjects "246"^^xsd:integer
+	] , [
+		void:property dbpo:minimumElevation ;
+		void:triples "1305"^^xsd:integer ;
+		void:distinctSubjects "1283"^^xsd:integer ;
+		void:distinctObjects "576"^^xsd:integer
+	] , [
+		void:property dbpo:minimumTemperature ;
+		void:triples "17"^^xsd:integer ;
+		void:distinctSubjects "12"^^xsd:integer ;
+		void:distinctObjects "14"^^xsd:integer
+	] , [
+		void:property dbpo:mirDockings ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:mission ;
+		void:triples "527"^^xsd:integer ;
+		void:distinctSubjects "523"^^xsd:integer ;
+		void:distinctObjects "256"^^xsd:integer
+	] , [
+		void:property dbpo:missionDuration ;
+		void:triples "39"^^xsd:integer ;
+		void:distinctSubjects "39"^^xsd:integer ;
+		void:distinctObjects "29"^^xsd:integer
+	] , [
+		void:property dbpo:missions ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:model ;
+		void:triples "136"^^xsd:integer ;
+		void:distinctSubjects "136"^^xsd:integer ;
+		void:distinctObjects "131"^^xsd:integer
+	] , [
+		void:property dbpo:modelEndYear ;
+		void:triples "237"^^xsd:integer ;
+		void:distinctSubjects "237"^^xsd:integer ;
+		void:distinctObjects "53"^^xsd:integer
+	] , [
+		void:property dbpo:modelStartYear ;
+		void:triples "335"^^xsd:integer ;
+		void:distinctSubjects "335"^^xsd:integer ;
+		void:distinctObjects "58"^^xsd:integer
+	] , [
+		void:property dbpo:monarch ;
+		void:triples "2525"^^xsd:integer ;
+		void:distinctSubjects "1463"^^xsd:integer ;
+		void:distinctObjects "224"^^xsd:integer
+	] , [
+		void:property dbpo:mostWinner ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property dbpo:mother ;
+		void:triples "4976"^^xsd:integer ;
+		void:distinctSubjects "4693"^^xsd:integer ;
+		void:distinctObjects "3303"^^xsd:integer
+	] , [
+		void:property dbpo:motto ;
+		void:triples "20087"^^xsd:integer ;
+		void:distinctSubjects "16978"^^xsd:integer ;
+		void:distinctObjects "18022"^^xsd:integer
+	] , [
+		void:property dbpo:mouthCountry ;
+		void:triples "180"^^xsd:integer ;
+		void:distinctSubjects "180"^^xsd:integer ;
+		void:distinctObjects "34"^^xsd:integer
+	] , [
+		void:property dbpo:mouthElevation ;
+		void:triples "1716"^^xsd:integer ;
+		void:distinctSubjects "1703"^^xsd:integer ;
+		void:distinctObjects "748"^^xsd:integer
+	] , [
+		void:property dbpo:mouthMountain ;
+		void:triples "4041"^^xsd:integer ;
+		void:distinctSubjects "4021"^^xsd:integer ;
+		void:distinctObjects "2824"^^xsd:integer
+	] , [
+		void:property dbpo:mouthPlace ;
+		void:triples "4041"^^xsd:integer ;
+		void:distinctSubjects "4021"^^xsd:integer ;
+		void:distinctObjects "2824"^^xsd:integer
+	] , [
+		void:property dbpo:mouthPosition ;
+		void:triples "1405"^^xsd:integer ;
+		void:distinctSubjects "1405"^^xsd:integer ;
+		void:distinctObjects "1405"^^xsd:integer
+	] , [
+		void:property dbpo:mouthRegion ;
+		void:triples "289"^^xsd:integer ;
+		void:distinctSubjects "289"^^xsd:integer ;
+		void:distinctObjects "195"^^xsd:integer
+	] , [
+		void:property dbpo:movement ;
+		void:triples "2009"^^xsd:integer ;
+		void:distinctSubjects "1924"^^xsd:integer ;
+		void:distinctObjects "644"^^xsd:integer
+	] , [
+		void:property dbpo:municipality ;
+		void:triples "351"^^xsd:integer ;
+		void:distinctSubjects "336"^^xsd:integer ;
+		void:distinctObjects "274"^^xsd:integer
+	] , [
+		void:property dbpo:musicBy ;
+		void:triples "1087"^^xsd:integer ;
+		void:distinctSubjects "898"^^xsd:integer ;
+		void:distinctObjects "521"^^xsd:integer
+	] , [
+		void:property dbpo:musicComposer ;
+		void:triples "26669"^^xsd:integer ;
+		void:distinctSubjects "22316"^^xsd:integer ;
+		void:distinctObjects "8955"^^xsd:integer
+	] , [
+		void:property dbpo:musicFusionGenre ;
+		void:triples "149"^^xsd:integer ;
+		void:distinctSubjects "145"^^xsd:integer ;
+		void:distinctObjects "128"^^xsd:integer
+	] , [
+		void:property dbpo:musicSubgenre ;
+		void:triples "157"^^xsd:integer ;
+		void:distinctSubjects "145"^^xsd:integer ;
+		void:distinctObjects "152"^^xsd:integer
+	] , [
+		void:property dbpo:musicalArtist ;
+		void:triples "32327"^^xsd:integer ;
+		void:distinctSubjects "32285"^^xsd:integer ;
+		void:distinctObjects "6938"^^xsd:integer
+	] , [
+		void:property dbpo:musicalBand ;
+		void:triples "32327"^^xsd:integer ;
+		void:distinctSubjects "32285"^^xsd:integer ;
+		void:distinctObjects "6938"^^xsd:integer
+	] , [
+		void:property dbpo:naacpImageAward ;
+		void:triples "73"^^xsd:integer ;
+		void:distinctSubjects "23"^^xsd:integer ;
+		void:distinctObjects "29"^^xsd:integer
+	] , [
+		void:property dbpo:namedAfter ;
+		void:triples "5"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:narrator ;
+		void:triples "2132"^^xsd:integer ;
+		void:distinctSubjects "1754"^^xsd:integer ;
+		void:distinctObjects "1406"^^xsd:integer
+	] , [
+		void:property dbpo:nationalFilmAward ;
+		void:triples "120"^^xsd:integer ;
+		void:distinctSubjects "42"^^xsd:integer ;
+		void:distinctObjects "71"^^xsd:integer
+	] , [
+		void:property dbpo:nationalOlympicCommittee ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:nationalOrigin ;
+		void:triples "1047"^^xsd:integer ;
+		void:distinctSubjects "1043"^^xsd:integer ;
+		void:distinctObjects "59"^^xsd:integer
+	] , [
+		void:property dbpo:nationalRanking ;
+		void:triples "23"^^xsd:integer ;
+		void:distinctSubjects "23"^^xsd:integer ;
+		void:distinctObjects "20"^^xsd:integer
+	] , [
+		void:property dbpo:nationalTeam ;
+		void:triples "26"^^xsd:integer ;
+		void:distinctSubjects "24"^^xsd:integer ;
+		void:distinctObjects "22"^^xsd:integer
+	] , [
+		void:property dbpo:nationality ;
+		void:triples "27997"^^xsd:integer ;
+		void:distinctSubjects "27849"^^xsd:integer ;
+		void:distinctObjects "980"^^xsd:integer
+	] , [
+		void:property dbpo:nearestCity ;
+		void:triples "7224"^^xsd:integer ;
+		void:distinctSubjects "7175"^^xsd:integer ;
+		void:distinctObjects "4500"^^xsd:integer
+	] , [
+		void:property dbpo:nerve ;
+		void:triples "337"^^xsd:integer ;
+		void:distinctSubjects "327"^^xsd:integer ;
+		void:distinctObjects "152"^^xsd:integer
+	] , [
+		void:property dbpo:netIncome ;
+		void:triples "2795"^^xsd:integer ;
+		void:distinctSubjects "2795"^^xsd:integer ;
+		void:distinctObjects "2577"^^xsd:integer
+	] , [
+		void:property dbpo:network ;
+		void:triples "13055"^^xsd:integer ;
+		void:distinctSubjects "11627"^^xsd:integer ;
+		void:distinctObjects "1673"^^xsd:integer
+	] , [
+		void:property dbpo:networth ;
+		void:triples "363"^^xsd:integer ;
+		void:distinctSubjects "357"^^xsd:integer ;
+		void:distinctObjects "232"^^xsd:integer
+	] , [
+		void:property dbpo:nextMission ;
+		void:triples "363"^^xsd:integer ;
+		void:distinctSubjects "358"^^xsd:integer ;
+		void:distinctObjects "346"^^xsd:integer
+	] , [
+		void:property dbpo:nobelLaureates ;
+		void:triples "26"^^xsd:integer ;
+		void:distinctSubjects "15"^^xsd:integer ;
+		void:distinctObjects "26"^^xsd:integer
+	] , [
+		void:property dbpo:nominee ;
+		void:triples "32"^^xsd:integer ;
+		void:distinctSubjects "32"^^xsd:integer ;
+		void:distinctObjects "28"^^xsd:integer
+	] , [
+		void:property dbpo:notableCommander ;
+		void:triples "2734"^^xsd:integer ;
+		void:distinctSubjects "1527"^^xsd:integer ;
+		void:distinctObjects "2063"^^xsd:integer
+	] , [
+		void:property dbpo:notableIdea ;
+		void:triples "422"^^xsd:integer ;
+		void:distinctSubjects "331"^^xsd:integer ;
+		void:distinctObjects "396"^^xsd:integer
+	] , [
+		void:property dbpo:notableStudent ;
+		void:triples "250"^^xsd:integer ;
+		void:distinctSubjects "171"^^xsd:integer ;
+		void:distinctObjects "243"^^xsd:integer
+	] , [
+		void:property dbpo:notableWine ;
+		void:triples "37"^^xsd:integer ;
+		void:distinctSubjects "37"^^xsd:integer ;
+		void:distinctObjects "33"^^xsd:integer
+	] , [
+		void:property dbpo:notableWork ;
+		void:triples "1860"^^xsd:integer ;
+		void:distinctSubjects "1270"^^xsd:integer ;
+		void:distinctObjects "1781"^^xsd:integer
+	] , [
+		void:property dbpo:note ;
+		void:triples "702"^^xsd:integer ;
+		void:distinctSubjects "676"^^xsd:integer ;
+		void:distinctObjects "435"^^xsd:integer
+	] , [
+		void:property dbpo:notes ;
+		void:triples "276"^^xsd:integer ;
+		void:distinctSubjects "164"^^xsd:integer ;
+		void:distinctObjects "260"^^xsd:integer
+	] , [
+		void:property dbpo:nssdcId ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:number ;
+		void:triples "37691"^^xsd:integer ;
+		void:distinctSubjects "37683"^^xsd:integer ;
+		void:distinctObjects "153"^^xsd:integer
+	] , [
+		void:property dbpo:numberBuilt ;
+		void:triples "4714"^^xsd:integer ;
+		void:distinctSubjects "4612"^^xsd:integer ;
+		void:distinctObjects "856"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfBronzeMedalsWon ;
+		void:triples "585"^^xsd:integer ;
+		void:distinctSubjects "585"^^xsd:integer ;
+		void:distinctObjects "33"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfCompetitors ;
+		void:triples "478"^^xsd:integer ;
+		void:distinctSubjects "478"^^xsd:integer ;
+		void:distinctObjects "210"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfDoctoralStudents ;
+		void:triples "215"^^xsd:integer ;
+		void:distinctSubjects "215"^^xsd:integer ;
+		void:distinctObjects "168"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfEmployees ;
+		void:triples "270"^^xsd:integer ;
+		void:distinctSubjects "269"^^xsd:integer ;
+		void:distinctObjects "108"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfEntrances ;
+		void:triples "58"^^xsd:integer ;
+		void:distinctSubjects "58"^^xsd:integer ;
+		void:distinctObjects "15"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfEpisodes ;
+		void:triples "11161"^^xsd:integer ;
+		void:distinctSubjects "10811"^^xsd:integer ;
+		void:distinctObjects "661"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfFilms ;
+		void:triples "799"^^xsd:integer ;
+		void:distinctSubjects "749"^^xsd:integer ;
+		void:distinctObjects "327"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfGoldMedalsWon ;
+		void:triples "585"^^xsd:integer ;
+		void:distinctSubjects "585"^^xsd:integer ;
+		void:distinctObjects "37"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfGraduateStudents ;
+		void:triples "101"^^xsd:integer ;
+		void:distinctSubjects "101"^^xsd:integer ;
+		void:distinctObjects "84"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfIslands ;
+		void:triples "118"^^xsd:integer ;
+		void:distinctSubjects "118"^^xsd:integer ;
+		void:distinctObjects "41"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfMembers ;
+		void:triples "434"^^xsd:integer ;
+		void:distinctSubjects "369"^^xsd:integer ;
+		void:distinctObjects "193"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfOfficials ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfOrbits ;
+		void:triples "240"^^xsd:integer ;
+		void:distinctSubjects "240"^^xsd:integer ;
+		void:distinctObjects "162"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfPads ;
+		void:triples "39"^^xsd:integer ;
+		void:distinctSubjects "39"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfParticipatingAthletes ;
+		void:triples "72"^^xsd:integer ;
+		void:distinctSubjects "47"^^xsd:integer ;
+		void:distinctObjects "71"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfParticipatingNations ;
+		void:triples "48"^^xsd:integer ;
+		void:distinctSubjects "48"^^xsd:integer ;
+		void:distinctObjects "39"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfPostgraduateStudents ;
+		void:triples "2193"^^xsd:integer ;
+		void:distinctSubjects "2156"^^xsd:integer ;
+		void:distinctObjects "1331"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfSeasons ;
+		void:triples "6782"^^xsd:integer ;
+		void:distinctSubjects "6737"^^xsd:integer ;
+		void:distinctObjects "54"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfSilverMedalsWon ;
+		void:triples "585"^^xsd:integer ;
+		void:distinctSubjects "585"^^xsd:integer ;
+		void:distinctObjects "37"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfSports ;
+		void:triples "353"^^xsd:integer ;
+		void:distinctSubjects "353"^^xsd:integer ;
+		void:distinctObjects "30"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfStaff ;
+		void:triples "10276"^^xsd:integer ;
+		void:distinctSubjects "10214"^^xsd:integer ;
+		void:distinctObjects "2820"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfStudents ;
+		void:triples "19222"^^xsd:integer ;
+		void:distinctSubjects "18800"^^xsd:integer ;
+		void:distinctObjects "4265"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfUndergraduateStudents ;
+		void:triples "2776"^^xsd:integer ;
+		void:distinctSubjects "2746"^^xsd:integer ;
+		void:distinctObjects "1859"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfVineyards ;
+		void:triples "25"^^xsd:integer ;
+		void:distinctSubjects "25"^^xsd:integer ;
+		void:distinctObjects "19"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfVisitors ;
+		void:triples "523"^^xsd:integer ;
+		void:distinctSubjects "523"^^xsd:integer ;
+		void:distinctObjects "461"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfVolunteers ;
+		void:triples "64"^^xsd:integer ;
+		void:distinctSubjects "63"^^xsd:integer ;
+		void:distinctObjects "47"^^xsd:integer
+	] , [
+		void:property dbpo:numberOfWineries ;
+		void:triples "84"^^xsd:integer ;
+		void:distinctSubjects "84"^^xsd:integer ;
+		void:distinctObjects "50"^^xsd:integer
+	] , [
+		void:property dbpo:nutsRegion ;
+		void:triples "20"^^xsd:integer ;
+		void:distinctSubjects "20"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:occupation ;
+		void:triples "75112"^^xsd:integer ;
+		void:distinctSubjects "57429"^^xsd:integer ;
+		void:distinctObjects "26827"^^xsd:integer
+	] , [
+		void:property dbpo:oclc ;
+		void:triples "12211"^^xsd:integer ;
+		void:distinctSubjects "12211"^^xsd:integer ;
+		void:distinctObjects "12098"^^xsd:integer
+	] , [
+		void:property dbpo:offeredClasses ;
+		void:triples "68"^^xsd:integer ;
+		void:distinctSubjects "58"^^xsd:integer ;
+		void:distinctObjects "63"^^xsd:integer
+	] , [
+		void:property dbpo:office ;
+		void:triples "12537"^^xsd:integer ;
+		void:distinctSubjects "6753"^^xsd:integer ;
+		void:distinctObjects "7550"^^xsd:integer
+	] , [
+		void:property dbpo:officerInCharge ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:oilSystem ;
+		void:triples "23"^^xsd:integer ;
+		void:distinctSubjects "22"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:olivierAward ;
+		void:triples "7"^^xsd:integer ;
+		void:distinctSubjects "4"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:omim ;
+		void:triples "2638"^^xsd:integer ;
+		void:distinctSubjects "2638"^^xsd:integer ;
+		void:distinctObjects "2469"^^xsd:integer
+	] , [
+		void:property dbpo:openingDate ;
+		void:triples "4239"^^xsd:integer ;
+		void:distinctSubjects "4082"^^xsd:integer ;
+		void:distinctObjects "2806"^^xsd:integer
+	] , [
+		void:property dbpo:openingFilm ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property dbpo:openingTheme ;
+		void:triples "1504"^^xsd:integer ;
+		void:distinctSubjects "1367"^^xsd:integer ;
+		void:distinctObjects "1169"^^xsd:integer
+	] , [
+		void:property dbpo:operatingIncome ;
+		void:triples "1816"^^xsd:integer ;
+		void:distinctSubjects "1816"^^xsd:integer ;
+		void:distinctObjects "1723"^^xsd:integer
+	] , [
+		void:property dbpo:operator ;
+		void:triples "2293"^^xsd:integer ;
+		void:distinctSubjects "2243"^^xsd:integer ;
+		void:distinctObjects "765"^^xsd:integer
+	] , [
+		void:property dbpo:opponent ;
+		void:triples "161"^^xsd:integer ;
+		void:distinctSubjects "95"^^xsd:integer ;
+		void:distinctObjects "130"^^xsd:integer
+	] , [
+		void:property dbpo:orbitalFlights ;
+		void:triples "41"^^xsd:integer ;
+		void:distinctSubjects "41"^^xsd:integer ;
+		void:distinctObjects "11"^^xsd:integer
+	] , [
+		void:property dbpo:orbitalInclination ;
+		void:triples "244"^^xsd:integer ;
+		void:distinctSubjects "244"^^xsd:integer ;
+		void:distinctObjects "51"^^xsd:integer
+	] , [
+		void:property dbpo:orbitalPeriod ;
+		void:triples "12360"^^xsd:integer ;
+		void:distinctSubjects "12270"^^xsd:integer ;
+		void:distinctObjects "12323"^^xsd:integer
+	] , [
+		void:property dbpo:orbits ;
+		void:triples "7"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:order ;
+		void:triples "174668"^^xsd:integer ;
+		void:distinctSubjects "134545"^^xsd:integer ;
+		void:distinctObjects "1926"^^xsd:integer
+	] , [
+		void:property dbpo:orderInOffice ;
+		void:triples "31693"^^xsd:integer ;
+		void:distinctSubjects "22156"^^xsd:integer ;
+		void:distinctObjects "15049"^^xsd:integer
+	] , [
+		void:property dbpo:organSystem ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:organisation ;
+		void:triples "44"^^xsd:integer ;
+		void:distinctSubjects "44"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:origin ;
+		void:triples "523"^^xsd:integer ;
+		void:distinctSubjects "520"^^xsd:integer ;
+		void:distinctObjects "148"^^xsd:integer
+	] , [
+		void:property dbpo:originalEndPoint ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:originalMaximumBoatBeam ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "6"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:originalMaximumBoatLength ;
+		void:triples "5"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:originalStartPoint ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:orogeny ;
+		void:triples "43"^^xsd:integer ;
+		void:distinctSubjects "42"^^xsd:integer ;
+		void:distinctObjects "25"^^xsd:integer
+	] , [
+		void:property dbpo:other ;
+		void:triples "111"^^xsd:integer ;
+		void:distinctSubjects "108"^^xsd:integer ;
+		void:distinctObjects "107"^^xsd:integer
+	] , [
+		void:property dbpo:otherParty ;
+		void:triples "685"^^xsd:integer ;
+		void:distinctSubjects "528"^^xsd:integer ;
+		void:distinctObjects "332"^^xsd:integer
+	] , [
+		void:property dbpo:outflow ;
+		void:triples "2103"^^xsd:integer ;
+		void:distinctSubjects "2093"^^xsd:integer ;
+		void:distinctObjects "1613"^^xsd:integer
+	] , [
+		void:property dbpo:overallRecord ;
+		void:triples "2926"^^xsd:integer ;
+		void:distinctSubjects "2821"^^xsd:integer ;
+		void:distinctObjects "2558"^^xsd:integer
+	] , [
+		void:property dbpo:oversight ;
+		void:triples "446"^^xsd:integer ;
+		void:distinctSubjects "428"^^xsd:integer ;
+		void:distinctObjects "287"^^xsd:integer
+	] , [
+		void:property dbpo:owner ;
+		void:triples "17974"^^xsd:integer ;
+		void:distinctSubjects "17513"^^xsd:integer ;
+		void:distinctObjects "6860"^^xsd:integer
+	] , [
+		void:property dbpo:owningCompany ;
+		void:triples "6289"^^xsd:integer ;
+		void:distinctSubjects "5634"^^xsd:integer ;
+		void:distinctObjects "2157"^^xsd:integer
+	] , [
+		void:property dbpo:owningOrganisation ;
+		void:triples "4149"^^xsd:integer ;
+		void:distinctSubjects "4090"^^xsd:integer ;
+		void:distinctObjects "955"^^xsd:integer
+	] , [
+		void:property dbpo:pages ;
+		void:triples "14626"^^xsd:integer ;
+		void:distinctSubjects "14432"^^xsd:integer ;
+		void:distinctObjects "945"^^xsd:integer
+	] , [
+		void:property dbpo:parent ;
+		void:triples "604"^^xsd:integer ;
+		void:distinctSubjects "589"^^xsd:integer ;
+		void:distinctObjects "269"^^xsd:integer
+	] , [
+		void:property dbpo:parentCompany ;
+		void:triples "4671"^^xsd:integer ;
+		void:distinctSubjects "4344"^^xsd:integer ;
+		void:distinctObjects "2361"^^xsd:integer
+	] , [
+		void:property dbpo:parentOrganisation ;
+		void:triples "151"^^xsd:integer ;
+		void:distinctSubjects "151"^^xsd:integer ;
+		void:distinctObjects "126"^^xsd:integer
+	] , [
+		void:property dbpo:parish ;
+		void:triples "20"^^xsd:integer ;
+		void:distinctSubjects "20"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property dbpo:part ;
+		void:triples "53"^^xsd:integer ;
+		void:distinctSubjects "53"^^xsd:integer ;
+		void:distinctObjects "33"^^xsd:integer
+	] , [
+		void:property dbpo:partOf ;
+		void:triples "6789"^^xsd:integer ;
+		void:distinctSubjects "6647"^^xsd:integer ;
+		void:distinctObjects "1101"^^xsd:integer
+	] , [
+		void:property dbpo:partOfWineRegion ;
+		void:triples "217"^^xsd:integer ;
+		void:distinctSubjects "217"^^xsd:integer ;
+		void:distinctObjects "42"^^xsd:integer
+	] , [
+		void:property dbpo:partialFailedLaunches ;
+		void:triples "47"^^xsd:integer ;
+		void:distinctSubjects "45"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:partner ;
+		void:triples "504"^^xsd:integer ;
+		void:distinctSubjects "442"^^xsd:integer ;
+		void:distinctObjects "495"^^xsd:integer
+	] , [
+		void:property dbpo:party ;
+		void:triples "30604"^^xsd:integer ;
+		void:distinctSubjects "28992"^^xsd:integer ;
+		void:distinctObjects "2673"^^xsd:integer
+	] , [
+		void:property dbpo:pastMember ;
+		void:triples "18"^^xsd:integer ;
+		void:distinctSubjects "11"^^xsd:integer ;
+		void:distinctObjects "18"^^xsd:integer
+	] , [
+		void:property dbpo:patron ;
+		void:triples "84"^^xsd:integer ;
+		void:distinctSubjects "79"^^xsd:integer ;
+		void:distinctObjects "70"^^xsd:integer
+	] , [
+		void:property dbpo:pdb ;
+		void:triples "100"^^xsd:integer ;
+		void:distinctSubjects "100"^^xsd:integer ;
+		void:distinctObjects "92"^^xsd:integer
+	] , [
+		void:property dbpo:percentageOfAreaWater ;
+		void:triples "5026"^^xsd:integer ;
+		void:distinctSubjects "5025"^^xsd:integer ;
+		void:distinctObjects "768"^^xsd:integer
+	] , [
+		void:property dbpo:percentageOfAreaWaterRound ;
+		void:triples "176"^^xsd:integer ;
+		void:distinctSubjects "176"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:periapsis ;
+		void:triples "12305"^^xsd:integer ;
+		void:distinctSubjects "12267"^^xsd:integer ;
+		void:distinctObjects "12290"^^xsd:integer
+	] , [
+		void:property dbpo:person ;
+		void:triples "197"^^xsd:integer ;
+		void:distinctSubjects "154"^^xsd:integer ;
+		void:distinctObjects "182"^^xsd:integer
+	] , [
+		void:property dbpo:personFunction ;
+		void:triples "1683"^^xsd:integer ;
+		void:distinctSubjects "1533"^^xsd:integer ;
+		void:distinctObjects "1683"^^xsd:integer
+	] , [
+		void:property dbpo:personName ;
+		void:triples "31"^^xsd:integer ;
+		void:distinctSubjects "31"^^xsd:integer ;
+		void:distinctObjects "30"^^xsd:integer
+	] , [
+		void:property dbpo:philosophicalSchool ;
+		void:triples "776"^^xsd:integer ;
+		void:distinctSubjects "749"^^xsd:integer ;
+		void:distinctObjects "283"^^xsd:integer
+	] , [
+		void:property dbpo:photographer ;
+		void:triples "79"^^xsd:integer ;
+		void:distinctSubjects "78"^^xsd:integer ;
+		void:distinctObjects "19"^^xsd:integer
+	] , [
+		void:property dbpo:phylum ;
+		void:triples "109367"^^xsd:integer ;
+		void:distinctSubjects "101204"^^xsd:integer ;
+		void:distinctObjects "246"^^xsd:integer
+	] , [
+		void:property dbpo:pistonStroke ;
+		void:triples "157"^^xsd:integer ;
+		void:distinctSubjects "123"^^xsd:integer ;
+		void:distinctObjects "69"^^xsd:integer
+	] , [
+		void:property dbpo:place ;
+		void:triples "7656"^^xsd:integer ;
+		void:distinctSubjects "7523"^^xsd:integer ;
+		void:distinctObjects "5005"^^xsd:integer
+	] , [
+		void:property dbpo:placeOfBurial ;
+		void:triples "231"^^xsd:integer ;
+		void:distinctSubjects "229"^^xsd:integer ;
+		void:distinctObjects "164"^^xsd:integer
+	] , [
+		void:property dbpo:placeOfOrigin ;
+		void:triples "716"^^xsd:integer ;
+		void:distinctSubjects "707"^^xsd:integer ;
+		void:distinctObjects "103"^^xsd:integer
+	] , [
+		void:property dbpo:plant ;
+		void:triples "77"^^xsd:integer ;
+		void:distinctSubjects "38"^^xsd:integer ;
+		void:distinctObjects "61"^^xsd:integer
+	] , [
+		void:property dbpo:plays ;
+		void:triples "1264"^^xsd:integer ;
+		void:distinctSubjects "1253"^^xsd:integer ;
+		void:distinctObjects "125"^^xsd:integer
+	] , [
+		void:property dbpo:podiums ;
+		void:triples "702"^^xsd:integer ;
+		void:distinctSubjects "702"^^xsd:integer ;
+		void:distinctObjects "49"^^xsd:integer
+	] , [
+		void:property dbpo:poleDriver ;
+		void:triples "681"^^xsd:integer ;
+		void:distinctSubjects "680"^^xsd:integer ;
+		void:distinctObjects "133"^^xsd:integer
+	] , [
+		void:property dbpo:poleDriverTeam ;
+		void:triples "679"^^xsd:integer ;
+		void:distinctSubjects "678"^^xsd:integer ;
+		void:distinctObjects "65"^^xsd:integer
+	] , [
+		void:property dbpo:poles ;
+		void:triples "699"^^xsd:integer ;
+		void:distinctSubjects "699"^^xsd:integer ;
+		void:distinctObjects "25"^^xsd:integer
+	] , [
+		void:property dbpo:populationAsOf ;
+		void:triples "17876"^^xsd:integer ;
+		void:distinctSubjects "17876"^^xsd:integer ;
+		void:distinctObjects "277"^^xsd:integer
+	] , [
+		void:property dbpo:populationDensity ;
+		void:triples "84951"^^xsd:integer ;
+		void:distinctSubjects "52128"^^xsd:integer ;
+		void:distinctObjects "30429"^^xsd:integer
+	] , [
+		void:property dbpo:populationMetro ;
+		void:triples "1310"^^xsd:integer ;
+		void:distinctSubjects "1309"^^xsd:integer ;
+		void:distinctObjects "913"^^xsd:integer
+	] , [
+		void:property dbpo:populationMetroDensity ;
+		void:triples "169"^^xsd:integer ;
+		void:distinctSubjects "132"^^xsd:integer ;
+		void:distinctObjects "154"^^xsd:integer
+	] , [
+		void:property dbpo:populationPlace ;
+		void:triples "2778"^^xsd:integer ;
+		void:distinctSubjects "1897"^^xsd:integer ;
+		void:distinctObjects "1023"^^xsd:integer
+	] , [
+		void:property dbpo:populationTotal ;
+		void:triples "198888"^^xsd:integer ;
+		void:distinctSubjects "195681"^^xsd:integer ;
+		void:distinctObjects "34608"^^xsd:integer
+	] , [
+		void:property dbpo:populationUrban ;
+		void:triples "1879"^^xsd:integer ;
+		void:distinctSubjects "1873"^^xsd:integer ;
+		void:distinctObjects "1664"^^xsd:integer
+	] , [
+		void:property dbpo:populationUrbanDensity ;
+		void:triples "67"^^xsd:integer ;
+		void:distinctSubjects "63"^^xsd:integer ;
+		void:distinctObjects "64"^^xsd:integer
+	] , [
+		void:property dbpo:port1 ;
+		void:triples "59"^^xsd:integer ;
+		void:distinctSubjects "59"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:port1DockedTime ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:port1DockingDate ;
+		void:triples "59"^^xsd:integer ;
+		void:distinctSubjects "59"^^xsd:integer ;
+		void:distinctObjects "59"^^xsd:integer
+	] , [
+		void:property dbpo:port1UndockingDate ;
+		void:triples "58"^^xsd:integer ;
+		void:distinctSubjects "58"^^xsd:integer ;
+		void:distinctObjects "58"^^xsd:integer
+	] , [
+		void:property dbpo:port2 ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:port2DockedTime ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:port2DockingDate ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:port2UndockingDate ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:portfolio ;
+		void:triples "204"^^xsd:integer ;
+		void:distinctSubjects "148"^^xsd:integer ;
+		void:distinctObjects "198"^^xsd:integer
+	] , [
+		void:property dbpo:position ;
+		void:triples "103613"^^xsd:integer ;
+		void:distinctSubjects "101580"^^xsd:integer ;
+		void:distinctObjects "9544"^^xsd:integer
+	] , [
+		void:property dbpo:postalCode ;
+		void:triples "83484"^^xsd:integer ;
+		void:distinctSubjects "82940"^^xsd:integer ;
+		void:distinctObjects "55169"^^xsd:integer
+	] , [
+		void:property dbpo:powerOutput ;
+		void:triples "4111"^^xsd:integer ;
+		void:distinctSubjects "4030"^^xsd:integer ;
+		void:distinctObjects "924"^^xsd:integer
+	] , [
+		void:property dbpo:precursor ;
+		void:triples "196"^^xsd:integer ;
+		void:distinctSubjects "196"^^xsd:integer ;
+		void:distinctObjects "78"^^xsd:integer
+	] , [
+		void:property dbpo:predecessor ;
+		void:triples "8528"^^xsd:integer ;
+		void:distinctSubjects "8207"^^xsd:integer ;
+		void:distinctObjects "7658"^^xsd:integer
+	] , [
+		void:property dbpo:presenter ;
+		void:triples "4276"^^xsd:integer ;
+		void:distinctSubjects "2391"^^xsd:integer ;
+		void:distinctObjects "3055"^^xsd:integer
+	] , [
+		void:property dbpo:president ;
+		void:triples "5402"^^xsd:integer ;
+		void:distinctSubjects "3892"^^xsd:integer ;
+		void:distinctObjects "2147"^^xsd:integer
+	] , [
+		void:property dbpo:previousEditor ;
+		void:triples "100"^^xsd:integer ;
+		void:distinctSubjects "52"^^xsd:integer ;
+		void:distinctObjects "95"^^xsd:integer
+	] , [
+		void:property dbpo:previousEvent ;
+		void:triples "1303"^^xsd:integer ;
+		void:distinctSubjects "1303"^^xsd:integer ;
+		void:distinctObjects "1291"^^xsd:integer
+	] , [
+		void:property dbpo:previousInfrastructure ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:previousMission ;
+		void:triples "368"^^xsd:integer ;
+		void:distinctSubjects "361"^^xsd:integer ;
+		void:distinctObjects "353"^^xsd:integer
+	] , [
+		void:property dbpo:previousWork ;
+		void:triples "104673"^^xsd:integer ;
+		void:distinctSubjects "103677"^^xsd:integer ;
+		void:distinctObjects "99787"^^xsd:integer
+	] , [
+		void:property dbpo:primeMinister ;
+		void:triples "4801"^^xsd:integer ;
+		void:distinctSubjects "2163"^^xsd:integer ;
+		void:distinctObjects "1176"^^xsd:integer
+	] , [
+		void:property dbpo:principal ;
+		void:triples "1712"^^xsd:integer ;
+		void:distinctSubjects "1668"^^xsd:integer ;
+		void:distinctObjects "511"^^xsd:integer
+	] , [
+		void:property dbpo:principalArea ;
+		void:triples "739"^^xsd:integer ;
+		void:distinctSubjects "736"^^xsd:integer ;
+		void:distinctObjects "44"^^xsd:integer
+	] , [
+		void:property dbpo:principalEngineer ;
+		void:triples "11"^^xsd:integer ;
+		void:distinctSubjects "11"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property dbpo:producer ;
+		void:triples "108250"^^xsd:integer ;
+		void:distinctSubjects "86354"^^xsd:integer ;
+		void:distinctObjects "33257"^^xsd:integer
+	] , [
+		void:property dbpo:product ;
+		void:triples "15358"^^xsd:integer ;
+		void:distinctSubjects "10428"^^xsd:integer ;
+		void:distinctObjects "6966"^^xsd:integer
+	] , [
+		void:property dbpo:production ;
+		void:triples "33"^^xsd:integer ;
+		void:distinctSubjects "30"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property dbpo:productionEndDate ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:productionEndYear ;
+		void:triples "5071"^^xsd:integer ;
+		void:distinctSubjects "5066"^^xsd:integer ;
+		void:distinctObjects "121"^^xsd:integer
+	] , [
+		void:property dbpo:productionStartDate ;
+		void:triples "35"^^xsd:integer ;
+		void:distinctSubjects "35"^^xsd:integer ;
+		void:distinctObjects "30"^^xsd:integer
+	] , [
+		void:property dbpo:productionStartYear ;
+		void:triples "7112"^^xsd:integer ;
+		void:distinctSubjects "7103"^^xsd:integer ;
+		void:distinctObjects "171"^^xsd:integer
+	] , [
+		void:property dbpo:profession ;
+		void:triples "6071"^^xsd:integer ;
+		void:distinctSubjects "5818"^^xsd:integer ;
+		void:distinctObjects "738"^^xsd:integer
+	] , [
+		void:property dbpo:programCost ;
+		void:triples "23"^^xsd:integer ;
+		void:distinctSubjects "23"^^xsd:integer ;
+		void:distinctObjects "20"^^xsd:integer
+	] , [
+		void:property dbpo:prominence ;
+		void:triples "7"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:promotion ;
+		void:triples "750"^^xsd:integer ;
+		void:distinctSubjects "742"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property dbpo:prospectLeague ;
+		void:triples "477"^^xsd:integer ;
+		void:distinctSubjects "477"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property dbpo:prospectTeam ;
+		void:triples "468"^^xsd:integer ;
+		void:distinctSubjects "467"^^xsd:integer ;
+		void:distinctObjects "125"^^xsd:integer
+	] , [
+		void:property dbpo:province ;
+		void:triples "8835"^^xsd:integer ;
+		void:distinctSubjects "8835"^^xsd:integer ;
+		void:distinctObjects "424"^^xsd:integer
+	] , [
+		void:property dbpo:provost ;
+		void:triples "57"^^xsd:integer ;
+		void:distinctSubjects "57"^^xsd:integer ;
+		void:distinctObjects "57"^^xsd:integer
+	] , [
+		void:property dbpo:pseudonym ;
+		void:triples "1509"^^xsd:integer ;
+		void:distinctSubjects "1160"^^xsd:integer ;
+		void:distinctObjects "1504"^^xsd:integer
+	] , [
+		void:property dbpo:pubchem ;
+		void:triples "3731"^^xsd:integer ;
+		void:distinctSubjects "3731"^^xsd:integer ;
+		void:distinctObjects "3704"^^xsd:integer
+	] , [
+		void:property dbpo:publicationDate ;
+		void:triples "1658"^^xsd:integer ;
+		void:distinctSubjects "1607"^^xsd:integer ;
+		void:distinctObjects "1261"^^xsd:integer
+	] , [
+		void:property dbpo:publiclyAccessible ;
+		void:triples "66"^^xsd:integer ;
+		void:distinctSubjects "61"^^xsd:integer ;
+		void:distinctObjects "31"^^xsd:integer
+	] , [
+		void:property dbpo:publisher ;
+		void:triples "32094"^^xsd:integer ;
+		void:distinctSubjects "30227"^^xsd:integer ;
+		void:distinctObjects "5790"^^xsd:integer
+	] , [
+		void:property dbpo:purpose ;
+		void:triples "1231"^^xsd:integer ;
+		void:distinctSubjects "1216"^^xsd:integer ;
+		void:distinctObjects "838"^^xsd:integer
+	] , [
+		void:property dbpo:races ;
+		void:triples "705"^^xsd:integer ;
+		void:distinctSubjects "705"^^xsd:integer ;
+		void:distinctObjects "132"^^xsd:integer
+	] , [
+		void:property dbpo:railwayPlatforms ;
+		void:triples "3464"^^xsd:integer ;
+		void:distinctSubjects "3348"^^xsd:integer ;
+		void:distinctObjects "373"^^xsd:integer
+	] , [
+		void:property dbpo:range ;
+		void:triples "127"^^xsd:integer ;
+		void:distinctSubjects "123"^^xsd:integer ;
+		void:distinctObjects "63"^^xsd:integer
+	] , [
+		void:property dbpo:rankInFinalMedalCount ;
+		void:triples "524"^^xsd:integer ;
+		void:distinctSubjects "524"^^xsd:integer ;
+		void:distinctObjects "49"^^xsd:integer
+	] , [
+		void:property dbpo:ranking ;
+		void:triples "90"^^xsd:integer ;
+		void:distinctSubjects "89"^^xsd:integer ;
+		void:distinctObjects "42"^^xsd:integer
+	] , [
+		void:property dbpo:ratio ;
+		void:triples "1704"^^xsd:integer ;
+		void:distinctSubjects "1700"^^xsd:integer ;
+		void:distinctObjects "531"^^xsd:integer
+	] , [
+		void:property dbpo:rebuildingDate ;
+		void:triples "115"^^xsd:integer ;
+		void:distinctSubjects "112"^^xsd:integer ;
+		void:distinctObjects "83"^^xsd:integer
+	] , [
+		void:property dbpo:recentWinner ;
+		void:triples "14"^^xsd:integer ;
+		void:distinctSubjects "13"^^xsd:integer ;
+		void:distinctObjects "14"^^xsd:integer
+	] , [
+		void:property dbpo:recordDate ;
+		void:triples "7295"^^xsd:integer ;
+		void:distinctSubjects "7007"^^xsd:integer ;
+		void:distinctObjects "5472"^^xsd:integer
+	] , [
+		void:property dbpo:recordLabel ;
+		void:triples "148572"^^xsd:integer ;
+		void:distinctSubjects "130465"^^xsd:integer ;
+		void:distinctObjects "15619"^^xsd:integer
+	] , [
+		void:property dbpo:recordPlace ;
+		void:triples "21986"^^xsd:integer ;
+		void:distinctSubjects "19356"^^xsd:integer ;
+		void:distinctObjects "4174"^^xsd:integer
+	] , [
+		void:property dbpo:rector ;
+		void:triples "420"^^xsd:integer ;
+		void:distinctSubjects "420"^^xsd:integer ;
+		void:distinctObjects "410"^^xsd:integer
+	] , [
+		void:property dbpo:redline ;
+		void:triples "105"^^xsd:integer ;
+		void:distinctSubjects "105"^^xsd:integer ;
+		void:distinctObjects "22"^^xsd:integer
+	] , [
+		void:property dbpo:refseq ;
+		void:triples "1572"^^xsd:integer ;
+		void:distinctSubjects "1572"^^xsd:integer ;
+		void:distinctObjects "1490"^^xsd:integer
+	] , [
+		void:property dbpo:regime ;
+		void:triples "62"^^xsd:integer ;
+		void:distinctSubjects "62"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:region ;
+		void:triples "58482"^^xsd:integer ;
+		void:distinctSubjects "55901"^^xsd:integer ;
+		void:distinctObjects "7397"^^xsd:integer
+	] , [
+		void:property dbpo:regionServed ;
+		void:triples "3231"^^xsd:integer ;
+		void:distinctSubjects "2761"^^xsd:integer ;
+		void:distinctObjects "742"^^xsd:integer
+	] , [
+		void:property dbpo:regionalLanguage ;
+		void:triples "58"^^xsd:integer ;
+		void:distinctSubjects "56"^^xsd:integer ;
+		void:distinctObjects "55"^^xsd:integer
+	] , [
+		void:property dbpo:related ;
+		void:triples "4117"^^xsd:integer ;
+		void:distinctSubjects "3114"^^xsd:integer ;
+		void:distinctObjects "2492"^^xsd:integer
+	] , [
+		void:property dbpo:relatedMeanOfTransportation ;
+		void:triples "6198"^^xsd:integer ;
+		void:distinctSubjects "2586"^^xsd:integer ;
+		void:distinctObjects "2208"^^xsd:integer
+	] , [
+		void:property dbpo:relation ;
+		void:triples "1980"^^xsd:integer ;
+		void:distinctSubjects "1356"^^xsd:integer ;
+		void:distinctObjects "1710"^^xsd:integer
+	] , [
+		void:property dbpo:relative ;
+		void:triples "918"^^xsd:integer ;
+		void:distinctSubjects "649"^^xsd:integer ;
+		void:distinctObjects "777"^^xsd:integer
+	] , [
+		void:property dbpo:releaseDate ;
+		void:triples "127173"^^xsd:integer ;
+		void:distinctSubjects "113112"^^xsd:integer ;
+		void:distinctObjects "22764"^^xsd:integer
+	] , [
+		void:property dbpo:religion ;
+		void:triples "25517"^^xsd:integer ;
+		void:distinctSubjects "15636"^^xsd:integer ;
+		void:distinctObjects "750"^^xsd:integer
+	] , [
+		void:property dbpo:requirement ;
+		void:triples "7228"^^xsd:integer ;
+		void:distinctSubjects "3018"^^xsd:integer ;
+		void:distinctObjects "5063"^^xsd:integer
+	] , [
+		void:property dbpo:residence ;
+		void:triples "13431"^^xsd:integer ;
+		void:distinctSubjects "13073"^^xsd:integer ;
+		void:distinctObjects "5671"^^xsd:integer
+	] , [
+		void:property dbpo:resides ;
+		void:triples "738"^^xsd:integer ;
+		void:distinctSubjects "729"^^xsd:integer ;
+		void:distinctObjects "427"^^xsd:integer
+	] , [
+		void:property dbpo:resolution ;
+		void:triples "361"^^xsd:integer ;
+		void:distinctSubjects "248"^^xsd:integer ;
+		void:distinctObjects "29"^^xsd:integer
+	] , [
+		void:property dbpo:restingPlace ;
+		void:triples "4954"^^xsd:integer ;
+		void:distinctSubjects "4762"^^xsd:integer ;
+		void:distinctObjects "2327"^^xsd:integer
+	] , [
+		void:property dbpo:restingPlacePosition ;
+		void:triples "130"^^xsd:integer ;
+		void:distinctSubjects "130"^^xsd:integer ;
+		void:distinctObjects "130"^^xsd:integer
+	] , [
+		void:property dbpo:result ;
+		void:triples "8634"^^xsd:integer ;
+		void:distinctSubjects "7850"^^xsd:integer ;
+		void:distinctObjects "4184"^^xsd:integer
+	] , [
+		void:property dbpo:retiredDate ;
+		void:triples "76"^^xsd:integer ;
+		void:distinctSubjects "75"^^xsd:integer ;
+		void:distinctObjects "73"^^xsd:integer
+	] , [
+		void:property dbpo:retiredRocket ;
+		void:triples "108"^^xsd:integer ;
+		void:distinctSubjects "40"^^xsd:integer ;
+		void:distinctObjects "88"^^xsd:integer
+	] , [
+		void:property dbpo:revenue ;
+		void:triples "5753"^^xsd:integer ;
+		void:distinctSubjects "5706"^^xsd:integer ;
+		void:distinctObjects "4610"^^xsd:integer
+	] , [
+		void:property dbpo:review ;
+		void:triples "86964"^^xsd:integer ;
+		void:distinctSubjects "46043"^^xsd:integer ;
+		void:distinctObjects "83804"^^xsd:integer
+	] , [
+		void:property dbpo:rgbCoordinateBlue ;
+		void:triples "654"^^xsd:integer ;
+		void:distinctSubjects "654"^^xsd:integer ;
+		void:distinctObjects "214"^^xsd:integer
+	] , [
+		void:property dbpo:rgbCoordinateGreen ;
+		void:triples "654"^^xsd:integer ;
+		void:distinctSubjects "654"^^xsd:integer ;
+		void:distinctObjects "185"^^xsd:integer
+	] , [
+		void:property dbpo:rgbCoordinateRed ;
+		void:triples "654"^^xsd:integer ;
+		void:distinctSubjects "654"^^xsd:integer ;
+		void:distinctObjects "186"^^xsd:integer
+	] , [
+		void:property dbpo:rightChild ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:rightTributary ;
+		void:triples "3506"^^xsd:integer ;
+		void:distinctSubjects "1529"^^xsd:integer ;
+		void:distinctObjects "3499"^^xsd:integer
+	] , [
+		void:property dbpo:rival ;
+		void:triples "519"^^xsd:integer ;
+		void:distinctSubjects "420"^^xsd:integer ;
+		void:distinctObjects "444"^^xsd:integer
+	] , [
+		void:property dbpo:river ;
+		void:triples "201"^^xsd:integer ;
+		void:distinctSubjects "200"^^xsd:integer ;
+		void:distinctObjects "132"^^xsd:integer
+	] , [
+		void:property dbpo:riverBranch ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "6"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:riverBranchOf ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:riverMouth ;
+		void:triples "12687"^^xsd:integer ;
+		void:distinctSubjects "12664"^^xsd:integer ;
+		void:distinctObjects "3991"^^xsd:integer
+	] , [
+		void:property dbpo:rocket ;
+		void:triples "62"^^xsd:integer ;
+		void:distinctSubjects "62"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:rocketFunction ;
+		void:triples "185"^^xsd:integer ;
+		void:distinctSubjects "170"^^xsd:integer ;
+		void:distinctObjects "22"^^xsd:integer
+	] , [
+		void:property dbpo:rocketStages ;
+		void:triples "122"^^xsd:integer ;
+		void:distinctSubjects "121"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:role ;
+		void:triples "4226"^^xsd:integer ;
+		void:distinctSubjects "3615"^^xsd:integer ;
+		void:distinctObjects "1662"^^xsd:integer
+	] , [
+		void:property dbpo:royalAnthem ;
+		void:triples "46"^^xsd:integer ;
+		void:distinctSubjects "46"^^xsd:integer ;
+		void:distinctObjects "19"^^xsd:integer
+	] , [
+		void:property dbpo:runningMate ;
+		void:triples "14"^^xsd:integer ;
+		void:distinctSubjects "14"^^xsd:integer ;
+		void:distinctObjects "14"^^xsd:integer
+	] , [
+		void:property dbpo:runtime ;
+		void:triples "139673"^^xsd:integer ;
+		void:distinctSubjects "132681"^^xsd:integer ;
+		void:distinctObjects "904"^^xsd:integer
+	] , [
+		void:property dbpo:ruralMunicipality ;
+		void:triples "89"^^xsd:integer ;
+		void:distinctSubjects "73"^^xsd:integer ;
+		void:distinctObjects "71"^^xsd:integer
+	] , [
+		void:property dbpo:saint ;
+		void:triples "1787"^^xsd:integer ;
+		void:distinctSubjects "1778"^^xsd:integer ;
+		void:distinctObjects "788"^^xsd:integer
+	] , [
+		void:property dbpo:salary ;
+		void:triples "159"^^xsd:integer ;
+		void:distinctSubjects "136"^^xsd:integer ;
+		void:distinctObjects "137"^^xsd:integer
+	] , [
+		void:property dbpo:sales ;
+		void:triples "854"^^xsd:integer ;
+		void:distinctSubjects "166"^^xsd:integer ;
+		void:distinctObjects "817"^^xsd:integer
+	] , [
+		void:property dbpo:satellitesDeployed ;
+		void:triples "5"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:school ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:schoolCode ;
+		void:triples "221"^^xsd:integer ;
+		void:distinctSubjects "218"^^xsd:integer ;
+		void:distinctObjects "220"^^xsd:integer
+	] , [
+		void:property dbpo:schoolNumber ;
+		void:triples "864"^^xsd:integer ;
+		void:distinctSubjects "855"^^xsd:integer ;
+		void:distinctObjects "843"^^xsd:integer
+	] , [
+		void:property dbpo:screenActorsGuildAward ;
+		void:triples "43"^^xsd:integer ;
+		void:distinctSubjects "23"^^xsd:integer ;
+		void:distinctObjects "20"^^xsd:integer
+	] , [
+		void:property dbpo:season ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:seasonNumber ;
+		void:triples "5284"^^xsd:integer ;
+		void:distinctSubjects "5267"^^xsd:integer ;
+		void:distinctObjects "37"^^xsd:integer
+	] , [
+		void:property dbpo:secondCommander ;
+		void:triples "99"^^xsd:integer ;
+		void:distinctSubjects "87"^^xsd:integer ;
+		void:distinctObjects "76"^^xsd:integer
+	] , [
+		void:property dbpo:secondDriver ;
+		void:triples "684"^^xsd:integer ;
+		void:distinctSubjects "681"^^xsd:integer ;
+		void:distinctObjects "193"^^xsd:integer
+	] , [
+		void:property dbpo:secondTeam ;
+		void:triples "646"^^xsd:integer ;
+		void:distinctSubjects "646"^^xsd:integer ;
+		void:distinctObjects "74"^^xsd:integer
+	] , [
+		void:property dbpo:selection ;
+		void:triples "562"^^xsd:integer ;
+		void:distinctSubjects "561"^^xsd:integer ;
+		void:distinctObjects "51"^^xsd:integer
+	] , [
+		void:property dbpo:seniority ;
+		void:triples "80"^^xsd:integer ;
+		void:distinctSubjects "79"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:series ;
+		void:triples "10219"^^xsd:integer ;
+		void:distinctSubjects "10160"^^xsd:integer ;
+		void:distinctObjects "1962"^^xsd:integer
+	] , [
+		void:property dbpo:service ;
+		void:triples "1037"^^xsd:integer ;
+		void:distinctSubjects "718"^^xsd:integer ;
+		void:distinctObjects "621"^^xsd:integer
+	] , [
+		void:property dbpo:serviceEndYear ;
+		void:triples "8216"^^xsd:integer ;
+		void:distinctSubjects "8216"^^xsd:integer ;
+		void:distinctObjects "323"^^xsd:integer
+	] , [
+		void:property dbpo:serviceModule ;
+		void:triples "15"^^xsd:integer ;
+		void:distinctSubjects "14"^^xsd:integer ;
+		void:distinctObjects "15"^^xsd:integer
+	] , [
+		void:property dbpo:serviceNumber ;
+		void:triples "37"^^xsd:integer ;
+		void:distinctSubjects "37"^^xsd:integer ;
+		void:distinctObjects "37"^^xsd:integer
+	] , [
+		void:property dbpo:serviceStartYear ;
+		void:triples "9382"^^xsd:integer ;
+		void:distinctSubjects "9382"^^xsd:integer ;
+		void:distinctObjects "392"^^xsd:integer
+	] , [
+		void:property dbpo:share ;
+		void:triples "720"^^xsd:integer ;
+		void:distinctSubjects "719"^^xsd:integer ;
+		void:distinctObjects "171"^^xsd:integer
+	] , [
+		void:property dbpo:sheading ;
+		void:triples "25"^^xsd:integer ;
+		void:distinctSubjects "25"^^xsd:integer ;
+		void:distinctObjects "6"^^xsd:integer
+	] , [
+		void:property dbpo:shipBeam ;
+		void:triples "17115"^^xsd:integer ;
+		void:distinctSubjects "16699"^^xsd:integer ;
+		void:distinctObjects "1420"^^xsd:integer
+	] , [
+		void:property dbpo:shipDisplacement ;
+		void:triples "1053"^^xsd:integer ;
+		void:distinctSubjects "784"^^xsd:integer ;
+		void:distinctObjects "524"^^xsd:integer
+	] , [
+		void:property dbpo:shipDraft ;
+		void:triples "8735"^^xsd:integer ;
+		void:distinctSubjects "7973"^^xsd:integer ;
+		void:distinctObjects "556"^^xsd:integer
+	] , [
+		void:property dbpo:shoots ;
+		void:triples "5560"^^xsd:integer ;
+		void:distinctSubjects "5559"^^xsd:integer ;
+		void:distinctObjects "14"^^xsd:integer
+	] , [
+		void:property dbpo:shoreLength ;
+		void:triples "1060"^^xsd:integer ;
+		void:distinctSubjects "1052"^^xsd:integer ;
+		void:distinctObjects "853"^^xsd:integer
+	] , [
+		void:property dbpo:showJudge ;
+		void:triples "559"^^xsd:integer ;
+		void:distinctSubjects "196"^^xsd:integer ;
+		void:distinctObjects "435"^^xsd:integer
+	] , [
+		void:property dbpo:significantBuilding ;
+		void:triples "814"^^xsd:integer ;
+		void:distinctSubjects "398"^^xsd:integer ;
+		void:distinctObjects "785"^^xsd:integer
+	] , [
+		void:property dbpo:significantDesign ;
+		void:triples "18"^^xsd:integer ;
+		void:distinctSubjects "15"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:significantProject ;
+		void:triples "173"^^xsd:integer ;
+		void:distinctSubjects "140"^^xsd:integer ;
+		void:distinctObjects "163"^^xsd:integer
+	] , [
+		void:property dbpo:similar ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:sisterCollege ;
+		void:triples "69"^^xsd:integer ;
+		void:distinctSubjects "61"^^xsd:integer ;
+		void:distinctObjects "65"^^xsd:integer
+	] , [
+		void:property dbpo:sisterNewspaper ;
+		void:triples "83"^^xsd:integer ;
+		void:distinctSubjects "62"^^xsd:integer ;
+		void:distinctObjects "74"^^xsd:integer
+	] , [
+		void:property dbpo:sisterStation ;
+		void:triples "5896"^^xsd:integer ;
+		void:distinctSubjects "5528"^^xsd:integer ;
+		void:distinctObjects "3889"^^xsd:integer
+	] , [
+		void:property dbpo:sixthFormStudents ;
+		void:triples "16"^^xsd:integer ;
+		void:distinctSubjects "16"^^xsd:integer ;
+		void:distinctObjects "16"^^xsd:integer
+	] , [
+		void:property dbpo:slogan ;
+		void:triples "13084"^^xsd:integer ;
+		void:distinctSubjects "12639"^^xsd:integer ;
+		void:distinctObjects "11288"^^xsd:integer
+	] , [
+		void:property dbpo:source ;
+		void:triples "692"^^xsd:integer ;
+		void:distinctSubjects "677"^^xsd:integer ;
+		void:distinctObjects "480"^^xsd:integer
+	] , [
+		void:property dbpo:sourceConfluence ;
+		void:triples "18"^^xsd:integer ;
+		void:distinctSubjects "18"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property dbpo:sourceConfluenceElevation ;
+		void:triples "58"^^xsd:integer ;
+		void:distinctSubjects "58"^^xsd:integer ;
+		void:distinctObjects "58"^^xsd:integer
+	] , [
+		void:property dbpo:sourceConfluenceMountain ;
+		void:triples "56"^^xsd:integer ;
+		void:distinctSubjects "56"^^xsd:integer ;
+		void:distinctObjects "54"^^xsd:integer
+	] , [
+		void:property dbpo:sourceConfluencePlace ;
+		void:triples "56"^^xsd:integer ;
+		void:distinctSubjects "56"^^xsd:integer ;
+		void:distinctObjects "54"^^xsd:integer
+	] , [
+		void:property dbpo:sourceConfluencePosition ;
+		void:triples "78"^^xsd:integer ;
+		void:distinctSubjects "78"^^xsd:integer ;
+		void:distinctObjects "78"^^xsd:integer
+	] , [
+		void:property dbpo:sourceConfluenceRegion ;
+		void:triples "13"^^xsd:integer ;
+		void:distinctSubjects "13"^^xsd:integer ;
+		void:distinctObjects "11"^^xsd:integer
+	] , [
+		void:property dbpo:sourceConfluenceState ;
+		void:triples "22"^^xsd:integer ;
+		void:distinctSubjects "22"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:sourceCountry ;
+		void:triples "189"^^xsd:integer ;
+		void:distinctSubjects "181"^^xsd:integer ;
+		void:distinctObjects "38"^^xsd:integer
+	] , [
+		void:property dbpo:sourceElevation ;
+		void:triples "929"^^xsd:integer ;
+		void:distinctSubjects "872"^^xsd:integer ;
+		void:distinctObjects "754"^^xsd:integer
+	] , [
+		void:property dbpo:sourceMountain ;
+		void:triples "2836"^^xsd:integer ;
+		void:distinctSubjects "2706"^^xsd:integer ;
+		void:distinctObjects "1078"^^xsd:integer
+	] , [
+		void:property dbpo:sourcePlace ;
+		void:triples "2836"^^xsd:integer ;
+		void:distinctSubjects "2706"^^xsd:integer ;
+		void:distinctObjects "1078"^^xsd:integer
+	] , [
+		void:property dbpo:sourcePosition ;
+		void:triples "1201"^^xsd:integer ;
+		void:distinctSubjects "1134"^^xsd:integer ;
+		void:distinctObjects "1201"^^xsd:integer
+	] , [
+		void:property dbpo:sourceRegion ;
+		void:triples "393"^^xsd:integer ;
+		void:distinctSubjects "368"^^xsd:integer ;
+		void:distinctObjects "245"^^xsd:integer
+	] , [
+		void:property dbpo:spacecraft ;
+		void:triples "10"^^xsd:integer ;
+		void:distinctSubjects "10"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property dbpo:spacewalkBegin ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:spacewalkEnd ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:speaker ;
+		void:triples "22"^^xsd:integer ;
+		void:distinctSubjects "22"^^xsd:integer ;
+		void:distinctObjects "22"^^xsd:integer
+	] , [
+		void:property dbpo:specialist ;
+		void:triples "1627"^^xsd:integer ;
+		void:distinctSubjects "1586"^^xsd:integer ;
+		void:distinctObjects "472"^^xsd:integer
+	] , [
+		void:property dbpo:species ;
+		void:triples "1568"^^xsd:integer ;
+		void:distinctSubjects "1531"^^xsd:integer ;
+		void:distinctObjects "786"^^xsd:integer
+	] , [
+		void:property dbpo:sport ;
+		void:triples "713"^^xsd:integer ;
+		void:distinctSubjects "594"^^xsd:integer ;
+		void:distinctObjects "99"^^xsd:integer
+	] , [
+		void:property dbpo:sportGoverningBody ;
+		void:triples "70"^^xsd:integer ;
+		void:distinctSubjects "66"^^xsd:integer ;
+		void:distinctObjects "48"^^xsd:integer
+	] , [
+		void:property dbpo:spouse ;
+		void:triples "13904"^^xsd:integer ;
+		void:distinctSubjects "11975"^^xsd:integer ;
+		void:distinctObjects "12998"^^xsd:integer
+	] , [
+		void:property dbpo:staff ;
+		void:triples "3415"^^xsd:integer ;
+		void:distinctSubjects "3347"^^xsd:integer ;
+		void:distinctObjects "957"^^xsd:integer
+	] , [
+		void:property dbpo:starring ;
+		void:triples "187883"^^xsd:integer ;
+		void:distinctSubjects "49959"^^xsd:integer ;
+		void:distinctObjects "62333"^^xsd:integer
+	] , [
+		void:property dbpo:startDate ;
+		void:triples "50"^^xsd:integer ;
+		void:distinctSubjects "50"^^xsd:integer ;
+		void:distinctObjects "50"^^xsd:integer
+	] , [
+		void:property dbpo:startPoint ;
+		void:triples "34"^^xsd:integer ;
+		void:distinctSubjects "34"^^xsd:integer ;
+		void:distinctObjects "34"^^xsd:integer
+	] , [
+		void:property dbpo:startYearOfInsertion ;
+		void:triples "3391"^^xsd:integer ;
+		void:distinctSubjects "3284"^^xsd:integer ;
+		void:distinctObjects "156"^^xsd:integer
+	] , [
+		void:property dbpo:startYearOfSales ;
+		void:triples "136"^^xsd:integer ;
+		void:distinctSubjects "136"^^xsd:integer ;
+		void:distinctObjects "48"^^xsd:integer
+	] , [
+		void:property dbpo:state ;
+		void:triples "16214"^^xsd:integer ;
+		void:distinctSubjects "16054"^^xsd:integer ;
+		void:distinctObjects "1043"^^xsd:integer
+	] , [
+		void:property dbpo:stateOfOrigin ;
+		void:triples "5299"^^xsd:integer ;
+		void:distinctSubjects "5261"^^xsd:integer ;
+		void:distinctObjects "467"^^xsd:integer
+	] , [
+		void:property dbpo:states ;
+		void:triples "2264"^^xsd:integer ;
+		void:distinctSubjects "2134"^^xsd:integer ;
+		void:distinctObjects "378"^^xsd:integer
+	] , [
+		void:property dbpo:station ;
+		void:triples "62"^^xsd:integer ;
+		void:distinctSubjects "62"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:stationEvaDuration ;
+		void:triples "13"^^xsd:integer ;
+		void:distinctSubjects "13"^^xsd:integer ;
+		void:distinctObjects "11"^^xsd:integer
+	] , [
+		void:property dbpo:stationVisitDuration ;
+		void:triples "12"^^xsd:integer ;
+		void:distinctSubjects "12"^^xsd:integer ;
+		void:distinctObjects "11"^^xsd:integer
+	] , [
+		void:property dbpo:statisticLabel ;
+		void:triples "10221"^^xsd:integer ;
+		void:distinctSubjects "10221"^^xsd:integer ;
+		void:distinctObjects "41"^^xsd:integer
+	] , [
+		void:property dbpo:statisticValue ;
+		void:triples "6613"^^xsd:integer ;
+		void:distinctSubjects "6613"^^xsd:integer ;
+		void:distinctObjects "600"^^xsd:integer
+	] , [
+		void:property dbpo:statisticYear ;
+		void:triples "288"^^xsd:integer ;
+		void:distinctSubjects "288"^^xsd:integer ;
+		void:distinctObjects "94"^^xsd:integer
+	] , [
+		void:property dbpo:status ;
+		void:triples "6544"^^xsd:integer ;
+		void:distinctSubjects "6466"^^xsd:integer ;
+		void:distinctObjects "590"^^xsd:integer
+	] , [
+		void:property dbpo:storyEditor ;
+		void:triples "75"^^xsd:integer ;
+		void:distinctSubjects "46"^^xsd:integer ;
+		void:distinctObjects "73"^^xsd:integer
+	] , [
+		void:property dbpo:strength ;
+		void:triples "18931"^^xsd:integer ;
+		void:distinctSubjects "6200"^^xsd:integer ;
+		void:distinctObjects "12185"^^xsd:integer
+	] , [
+		void:property dbpo:structuralSystem ;
+		void:triples "74"^^xsd:integer ;
+		void:distinctSubjects "74"^^xsd:integer ;
+		void:distinctObjects "34"^^xsd:integer
+	] , [
+		void:property dbpo:style ;
+		void:triples "37"^^xsd:integer ;
+		void:distinctSubjects "37"^^xsd:integer ;
+		void:distinctObjects "21"^^xsd:integer
+	] , [
+		void:property dbpo:stylisticOrigin ;
+		void:triples "1247"^^xsd:integer ;
+		void:distinctSubjects "565"^^xsd:integer ;
+		void:distinctObjects "461"^^xsd:integer
+	] , [
+		void:property dbpo:subdivisions ;
+		void:triples "11"^^xsd:integer ;
+		void:distinctSubjects "10"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:subject ;
+		void:triples "1615"^^xsd:integer ;
+		void:distinctSubjects "1549"^^xsd:integer ;
+		void:distinctObjects "844"^^xsd:integer
+	] , [
+		void:property dbpo:suborbitalFlights ;
+		void:triples "4"^^xsd:integer ;
+		void:distinctSubjects "4"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:subregion ;
+		void:triples "88"^^xsd:integer ;
+		void:distinctSubjects "85"^^xsd:integer ;
+		void:distinctObjects "68"^^xsd:integer
+	] , [
+		void:property dbpo:subsequentInfrastructure ;
+		void:triples "4"^^xsd:integer ;
+		void:distinctSubjects "4"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:subsequentWork ;
+		void:triples "105887"^^xsd:integer ;
+		void:distinctSubjects "104873"^^xsd:integer ;
+		void:distinctObjects "101656"^^xsd:integer
+	] , [
+		void:property dbpo:subsidiary ;
+		void:triples "1615"^^xsd:integer ;
+		void:distinctSubjects "763"^^xsd:integer ;
+		void:distinctObjects "1433"^^xsd:integer
+	] , [
+		void:property dbpo:subtitle ;
+		void:triples "73"^^xsd:integer ;
+		void:distinctSubjects "71"^^xsd:integer ;
+		void:distinctObjects "72"^^xsd:integer
+	] , [
+		void:property dbpo:successfulLaunches ;
+		void:triples "211"^^xsd:integer ;
+		void:distinctSubjects "178"^^xsd:integer ;
+		void:distinctObjects "71"^^xsd:integer
+	] , [
+		void:property dbpo:successor ;
+		void:triples "37205"^^xsd:integer ;
+		void:distinctSubjects "27582"^^xsd:integer ;
+		void:distinctObjects "30513"^^xsd:integer
+	] , [
+		void:property dbpo:summerAppearances ;
+		void:triples "11"^^xsd:integer ;
+		void:distinctSubjects "11"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property dbpo:superintendent ;
+		void:triples "47"^^xsd:integer ;
+		void:distinctSubjects "47"^^xsd:integer ;
+		void:distinctObjects "18"^^xsd:integer
+	] , [
+		void:property dbpo:supplementalDraftRound ;
+		void:triples "28"^^xsd:integer ;
+		void:distinctSubjects "27"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property dbpo:supplementalDraftYear ;
+		void:triples "27"^^xsd:integer ;
+		void:distinctSubjects "27"^^xsd:integer ;
+		void:distinctObjects "16"^^xsd:integer
+	] , [
+		void:property dbpo:supplies ;
+		void:triples "149"^^xsd:integer ;
+		void:distinctSubjects "146"^^xsd:integer ;
+		void:distinctObjects "118"^^xsd:integer
+	] , [
+		void:property dbpo:suppreddedDate ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:surfaceArea ;
+		void:triples "53"^^xsd:integer ;
+		void:distinctSubjects "51"^^xsd:integer ;
+		void:distinctObjects "48"^^xsd:integer
+	] , [
+		void:property dbpo:symbol ;
+		void:triples "2428"^^xsd:integer ;
+		void:distinctSubjects "1678"^^xsd:integer ;
+		void:distinctObjects "2331"^^xsd:integer
+	] , [
+		void:property dbpo:synonym ;
+		void:triples "54537"^^xsd:integer ;
+		void:distinctSubjects "22253"^^xsd:integer ;
+		void:distinctObjects "53080"^^xsd:integer
+	] , [
+		void:property dbpo:targetAirport ;
+		void:triples "775"^^xsd:integer ;
+		void:distinctSubjects "392"^^xsd:integer ;
+		void:distinctObjects "525"^^xsd:integer
+	] , [
+		void:property dbpo:team ;
+		void:triples "379927"^^xsd:integer ;
+		void:distinctSubjects "84779"^^xsd:integer ;
+		void:distinctObjects "27369"^^xsd:integer
+	] , [
+		void:property dbpo:teamName ;
+		void:triples "1802"^^xsd:integer ;
+		void:distinctSubjects "1792"^^xsd:integer ;
+		void:distinctObjects "578"^^xsd:integer
+	] , [
+		void:property dbpo:teamOwner ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:teamSize ;
+		void:triples "39"^^xsd:integer ;
+		void:distinctSubjects "38"^^xsd:integer ;
+		void:distinctObjects "15"^^xsd:integer
+	] , [
+		void:property dbpo:temperature ;
+		void:triples "494"^^xsd:integer ;
+		void:distinctSubjects "457"^^xsd:integer ;
+		void:distinctObjects "133"^^xsd:integer
+	] , [
+		void:property dbpo:tenant ;
+		void:triples "7633"^^xsd:integer ;
+		void:distinctSubjects "4105"^^xsd:integer ;
+		void:distinctObjects "6095"^^xsd:integer
+	] , [
+		void:property dbpo:territory ;
+		void:triples "276"^^xsd:integer ;
+		void:distinctSubjects "246"^^xsd:integer ;
+		void:distinctObjects "236"^^xsd:integer
+	] , [
+		void:property dbpo:testaverage ;
+		void:triples "79"^^xsd:integer ;
+		void:distinctSubjects "69"^^xsd:integer ;
+		void:distinctObjects "68"^^xsd:integer
+	] , [
+		void:property dbpo:thirdCommander ;
+		void:triples "33"^^xsd:integer ;
+		void:distinctSubjects "32"^^xsd:integer ;
+		void:distinctObjects "31"^^xsd:integer
+	] , [
+		void:property dbpo:thirdDriver ;
+		void:triples "690"^^xsd:integer ;
+		void:distinctSubjects "687"^^xsd:integer ;
+		void:distinctObjects "225"^^xsd:integer
+	] , [
+		void:property dbpo:thirdTeam ;
+		void:triples "657"^^xsd:integer ;
+		void:distinctSubjects "657"^^xsd:integer ;
+		void:distinctObjects "87"^^xsd:integer
+	] , [
+		void:property dbpo:timeInSpace ;
+		void:triples "505"^^xsd:integer ;
+		void:distinctSubjects "504"^^xsd:integer ;
+		void:distinctObjects "156"^^xsd:integer
+	] , [
+		void:property dbpo:timeZone ;
+		void:triples "5103"^^xsd:integer ;
+		void:distinctSubjects "5103"^^xsd:integer ;
+		void:distinctObjects "26"^^xsd:integer
+	] , [
+		void:property dbpo:title ;
+		void:triples "33844"^^xsd:integer ;
+		void:distinctSubjects "33176"^^xsd:integer ;
+		void:distinctObjects "17954"^^xsd:integer
+	] , [
+		void:property dbpo:tonyAward ;
+		void:triples "425"^^xsd:integer ;
+		void:distinctSubjects "164"^^xsd:integer ;
+		void:distinctObjects "197"^^xsd:integer
+	] , [
+		void:property dbpo:topSpeed ;
+		void:triples "8889"^^xsd:integer ;
+		void:distinctSubjects "8889"^^xsd:integer ;
+		void:distinctObjects "532"^^xsd:integer
+	] , [
+		void:property dbpo:torchBearer ;
+		void:triples "35"^^xsd:integer ;
+		void:distinctSubjects "31"^^xsd:integer ;
+		void:distinctObjects "35"^^xsd:integer
+	] , [
+		void:property dbpo:torqueOutput ;
+		void:triples "1480"^^xsd:integer ;
+		void:distinctSubjects "1480"^^xsd:integer ;
+		void:distinctObjects "333"^^xsd:integer
+	] , [
+		void:property dbpo:totalLaunches ;
+		void:triples "291"^^xsd:integer ;
+		void:distinctSubjects "252"^^xsd:integer ;
+		void:distinctObjects "103"^^xsd:integer
+	] , [
+		void:property dbpo:totalPopulation ;
+		void:triples "2591"^^xsd:integer ;
+		void:distinctSubjects "2044"^^xsd:integer ;
+		void:distinctObjects "1317"^^xsd:integer
+	] , [
+		void:property dbpo:totalTravellers ;
+		void:triples "41"^^xsd:integer ;
+		void:distinctSubjects "41"^^xsd:integer ;
+		void:distinctObjects "27"^^xsd:integer
+	] , [
+		void:property dbpo:tournamentRecord ;
+		void:triples "14"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "14"^^xsd:integer
+	] , [
+		void:property dbpo:trackNumber ;
+		void:triples "2074"^^xsd:integer ;
+		void:distinctSubjects "2072"^^xsd:integer ;
+		void:distinctObjects "29"^^xsd:integer
+	] , [
+		void:property dbpo:trainer ;
+		void:triples "2227"^^xsd:integer ;
+		void:distinctSubjects "1266"^^xsd:integer ;
+		void:distinctObjects "767"^^xsd:integer
+	] , [
+		void:property dbpo:training ;
+		void:triples "1407"^^xsd:integer ;
+		void:distinctSubjects "1222"^^xsd:integer ;
+		void:distinctObjects "798"^^xsd:integer
+	] , [
+		void:property dbpo:translator ;
+		void:triples "440"^^xsd:integer ;
+		void:distinctSubjects "422"^^xsd:integer ;
+		void:distinctObjects "266"^^xsd:integer
+	] , [
+		void:property dbpo:transmission ;
+		void:triples "6106"^^xsd:integer ;
+		void:distinctSubjects "3402"^^xsd:integer ;
+		void:distinctObjects "1771"^^xsd:integer
+	] , [
+		void:property dbpo:trustee ;
+		void:triples "6"^^xsd:integer ;
+		void:distinctSubjects "6"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:tuition ;
+		void:triples "620"^^xsd:integer ;
+		void:distinctSubjects "552"^^xsd:integer ;
+		void:distinctObjects "415"^^xsd:integer
+	] , [
+		void:property dbpo:tvComId ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property dbpo:twinCity ;
+		void:triples "252"^^xsd:integer ;
+		void:distinctSubjects "87"^^xsd:integer ;
+		void:distinctObjects "240"^^xsd:integer
+	] , [
+		void:property dbpo:twinCountry ;
+		void:triples "43"^^xsd:integer ;
+		void:distinctSubjects "41"^^xsd:integer ;
+		void:distinctObjects "25"^^xsd:integer
+	] , [
+		void:property dbpo:type ;
+		void:triples "97437"^^xsd:integer ;
+		void:distinctSubjects "96581"^^xsd:integer ;
+		void:distinctObjects "4624"^^xsd:integer
+	] , [
+		void:property dbpo:undraftedYear ;
+		void:triples "1935"^^xsd:integer ;
+		void:distinctSubjects "1935"^^xsd:integer ;
+		void:distinctObjects "62"^^xsd:integer
+	] , [
+		void:property dbpo:uniprot ;
+		void:triples "1540"^^xsd:integer ;
+		void:distinctSubjects "1540"^^xsd:integer ;
+		void:distinctObjects "1480"^^xsd:integer
+	] , [
+		void:property dbpo:unitCost ;
+		void:triples "455"^^xsd:integer ;
+		void:distinctSubjects "431"^^xsd:integer ;
+		void:distinctObjects "367"^^xsd:integer
+	] , [
+		void:property dbpo:unitaryAuthority ;
+		void:triples "2355"^^xsd:integer ;
+		void:distinctSubjects "2352"^^xsd:integer ;
+		void:distinctObjects "74"^^xsd:integer
+	] , [
+		void:property dbpo:unitedStatesNationalBridgeId ;
+		void:triples "257"^^xsd:integer ;
+		void:distinctSubjects "232"^^xsd:integer ;
+		void:distinctObjects "253"^^xsd:integer
+	] , [
+		void:property dbpo:unknownOutcomes ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dbpo:upperAge ;
+		void:triples "2856"^^xsd:integer ;
+		void:distinctSubjects "2856"^^xsd:integer ;
+		void:distinctObjects "22"^^xsd:integer
+	] , [
+		void:property dbpo:usSales ;
+		void:triples "321"^^xsd:integer ;
+		void:distinctSubjects "321"^^xsd:integer ;
+		void:distinctObjects "317"^^xsd:integer
+	] , [
+		void:property dbpo:usingCountry ;
+		void:triples "169"^^xsd:integer ;
+		void:distinctSubjects "150"^^xsd:integer ;
+		void:distinctObjects "137"^^xsd:integer
+	] , [
+		void:property dbpo:valvetrain ;
+		void:triples "269"^^xsd:integer ;
+		void:distinctSubjects "268"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dbpo:variant ;
+		void:triples "39"^^xsd:integer ;
+		void:distinctSubjects "27"^^xsd:integer ;
+		void:distinctObjects "38"^^xsd:integer
+	] , [
+		void:property dbpo:variantOf ;
+		void:triples "3116"^^xsd:integer ;
+		void:distinctSubjects "3116"^^xsd:integer ;
+		void:distinctObjects "875"^^xsd:integer
+	] , [
+		void:property dbpo:varietals ;
+		void:triples "30"^^xsd:integer ;
+		void:distinctSubjects "28"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property dbpo:vehicle ;
+		void:triples "74"^^xsd:integer ;
+		void:distinctSubjects "27"^^xsd:integer ;
+		void:distinctObjects "68"^^xsd:integer
+	] , [
+		void:property dbpo:vein ;
+		void:triples "218"^^xsd:integer ;
+		void:distinctSubjects "216"^^xsd:integer ;
+		void:distinctObjects "158"^^xsd:integer
+	] , [
+		void:property dbpo:veneratedIn ;
+		void:triples "2463"^^xsd:integer ;
+		void:distinctSubjects "2044"^^xsd:integer ;
+		void:distinctObjects "70"^^xsd:integer
+	] , [
+		void:property dbpo:viceChancellor ;
+		void:triples "213"^^xsd:integer ;
+		void:distinctSubjects "213"^^xsd:integer ;
+		void:distinctObjects "207"^^xsd:integer
+	] , [
+		void:property dbpo:vicePresident ;
+		void:triples "592"^^xsd:integer ;
+		void:distinctSubjects "420"^^xsd:integer ;
+		void:distinctObjects "524"^^xsd:integer
+	] , [
+		void:property dbpo:vicePrimeMinister ;
+		void:triples "20"^^xsd:integer ;
+		void:distinctSubjects "17"^^xsd:integer ;
+		void:distinctObjects "15"^^xsd:integer
+	] , [
+		void:property dbpo:vicePrincipal ;
+		void:triples "16"^^xsd:integer ;
+		void:distinctSubjects "12"^^xsd:integer ;
+		void:distinctObjects "15"^^xsd:integer
+	] , [
+		void:property dbpo:visitorsPerYear ;
+		void:triples "1213"^^xsd:integer ;
+		void:distinctSubjects "1212"^^xsd:integer ;
+		void:distinctObjects "74"^^xsd:integer
+	] , [
+		void:property dbpo:visitorsTotal ;
+		void:triples "1140"^^xsd:integer ;
+		void:distinctSubjects "1139"^^xsd:integer ;
+		void:distinctObjects "1095"^^xsd:integer
+	] , [
+		void:property dbpo:voice ;
+		void:triples "3483"^^xsd:integer ;
+		void:distinctSubjects "710"^^xsd:integer ;
+		void:distinctObjects "1912"^^xsd:integer
+	] , [
+		void:property dbpo:voiceType ;
+		void:triples "22"^^xsd:integer ;
+		void:distinctSubjects "22"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property dbpo:volume ;
+		void:triples "971"^^xsd:integer ;
+		void:distinctSubjects "957"^^xsd:integer ;
+		void:distinctObjects "845"^^xsd:integer
+	] , [
+		void:property dbpo:wars ;
+		void:triples "1502"^^xsd:integer ;
+		void:distinctSubjects "1174"^^xsd:integer ;
+		void:distinctObjects "238"^^xsd:integer
+	] , [
+		void:property dbpo:watershed ;
+		void:triples "1706"^^xsd:integer ;
+		void:distinctSubjects "1702"^^xsd:integer ;
+		void:distinctObjects "1452"^^xsd:integer
+	] , [
+		void:property dbpo:wavelength ;
+		void:triples "7"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property dbpo:weight ;
+		void:triples "23818"^^xsd:integer ;
+		void:distinctSubjects "23769"^^xsd:integer ;
+		void:distinctObjects "2472"^^xsd:integer
+	] , [
+		void:property dbpo:whaDraft ;
+		void:triples "166"^^xsd:integer ;
+		void:distinctSubjects "165"^^xsd:integer ;
+		void:distinctObjects "99"^^xsd:integer
+	] , [
+		void:property dbpo:whaDraftTeam ;
+		void:triples "163"^^xsd:integer ;
+		void:distinctSubjects "163"^^xsd:integer ;
+		void:distinctObjects "26"^^xsd:integer
+	] , [
+		void:property dbpo:wheelbase ;
+		void:triples "3489"^^xsd:integer ;
+		void:distinctSubjects "3489"^^xsd:integer ;
+		void:distinctObjects "891"^^xsd:integer
+	] , [
+		void:property dbpo:width ;
+		void:triples "6527"^^xsd:integer ;
+		void:distinctSubjects "6527"^^xsd:integer ;
+		void:distinctObjects "1735"^^xsd:integer
+	] , [
+		void:property dbpo:wineProduced ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:wineRegion ;
+		void:triples "68"^^xsd:integer ;
+		void:distinctSubjects "67"^^xsd:integer ;
+		void:distinctObjects "49"^^xsd:integer
+	] , [
+		void:property dbpo:wins ;
+		void:triples "702"^^xsd:integer ;
+		void:distinctSubjects "702"^^xsd:integer ;
+		void:distinctObjects "27"^^xsd:integer
+	] , [
+		void:property dbpo:winterAppearances ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property dbpo:worstDefeat ;
+		void:triples "73"^^xsd:integer ;
+		void:distinctSubjects "33"^^xsd:integer ;
+		void:distinctObjects "67"^^xsd:integer
+	] , [
+		void:property dbpo:writer ;
+		void:triples "80363"^^xsd:integer ;
+		void:distinctSubjects "53026"^^xsd:integer ;
+		void:distinctObjects "31156"^^xsd:integer
+	] , [
+		void:property dbpo:year ;
+		void:triples "3241"^^xsd:integer ;
+		void:distinctSubjects "3237"^^xsd:integer ;
+		void:distinctObjects "102"^^xsd:integer
+	] , [
+		void:property dbpo:youthClub ;
+		void:triples "100"^^xsd:integer ;
+		void:distinctSubjects "98"^^xsd:integer ;
+		void:distinctObjects "87"^^xsd:integer
+	] , [
+		void:property georss:point ;
+		void:triples "289545"^^xsd:integer ;
+		void:distinctSubjects "289190"^^xsd:integer ;
+		void:distinctObjects "279919"^^xsd:integer
+	] , [
+		void:property rdf:type ;
+		void:triples "289545"^^xsd:integer ;
+		void:distinctSubjects "289190"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property geo:lat ;
+		void:triples "289545"^^xsd:integer ;
+		void:distinctSubjects "289190"^^xsd:integer ;
+		void:distinctObjects "137083"^^xsd:integer
+	] , [
+		void:property geo:long ;
+		void:triples "289545"^^xsd:integer ;
+		void:distinctSubjects "289190"^^xsd:integer ;
+		void:distinctObjects "177773"^^xsd:integer
+	] , [
+		void:property foaf:familyName ;
+		void:triples "539"^^xsd:integer ;
+		void:distinctSubjects "537"^^xsd:integer ;
+		void:distinctObjects "496"^^xsd:integer
+	] , [
+		void:property foaf:givenName ;
+		void:triples "15834"^^xsd:integer ;
+		void:distinctSubjects "15759"^^xsd:integer ;
+		void:distinctObjects "15581"^^xsd:integer
+	] , [
+		void:property foaf:homepage ;
+		void:triples "172721"^^xsd:integer ;
+		void:distinctSubjects "170340"^^xsd:integer ;
+		void:distinctObjects "164763"^^xsd:integer
+	] , [
+		void:property foaf:name ;
+		void:triples "1415786"^^xsd:integer ;
+		void:distinctSubjects "1249551"^^xsd:integer ;
+		void:distinctObjects "1222247"^^xsd:integer
+	] , [
+		void:property foaf:nick ;
+		void:triples "4933"^^xsd:integer ;
+		void:distinctSubjects "4593"^^xsd:integer ;
+		void:distinctObjects "4261"^^xsd:integer
+	] ;
+	void:classPartition [
+		void:class gml:_Feature ;
+		void:entities "289545"^^xsd:integer
+	] .

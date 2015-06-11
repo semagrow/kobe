@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+<web-app>
+	
+  <servlet>
+    <servlet-name>SPARQLServlet</servlet-name>
+    <servlet-class>org.semanticweb.fbench.sparqlendpoint.SparqlServlet2</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>SPARQLServlet</servlet-name>
+    <url-pattern>/sparql</url-pattern>
+  </servlet-mapping>
+	
+	
+</web-app>

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void
+END
+instance_types_en-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/instance_types_en-void.n3
+END
+semanticwebdog-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/semanticwebdog-void.n3
+END
+jamendo-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/jamendo-void.n3
+END
+chebi-2010-11-26-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/chebi-2010-11-26-void.n3
+END
+linkedmdb-dump-2010-01-19-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/linkedmdb-dump-2010-01-19-void.n3
+END
+KEGG-2010-11-26-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/KEGG-2010-11-26-void.n3
+END
+drugbank_dump_cleaned-2010-11.26-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/drugbank_dump_cleaned-2010-11.26-void.n3
+END
+dbpedia3.5.1_subset-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/dbpedia3.5.1_subset-void.n3
+END
+SP2B-100M-federated-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/SP2B-100M-federated-void.n3
+END
+SP2B-10M-federated-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/SP2B-10M-federated-void.n3
+END
+mappingbased_properties_en_cleaned-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/mappingbased_properties_en_cleaned-void.n3
+END
+all-geonames-2010-11-28_cleaned-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/all-geonames-2010-11-28_cleaned-void.n3
+END
+nytimes-2010-01-13-void.n3
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/119/trunk/EvalBenchmark/suites/SPLENDID/void/nytimes-2010-01-13-void.n3
+END

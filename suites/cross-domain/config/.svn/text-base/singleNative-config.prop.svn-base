@@ -1,0 +1,13 @@
+description = Centralized Store (Sesame) - Cross Domain Queries
+
+dataConfig = suites\\cross-domain\\config\\singleNative.ttl
+
+querySet = CROSSDOMAIN
+
+evalRuns = 3
+
+timeout = 600000
+
+fill = false
+
+envConfig = suites\\cross-domain\\env.prop

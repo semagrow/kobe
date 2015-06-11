@@ -1,0 +1,42 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://Data1> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8890/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://Data2> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8891/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://Data3> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8892/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://Data4> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8893/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://Data5> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8894/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://Data6> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8895/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://Data7> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8896/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://Data8> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8897/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://Data9> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8898/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://Data10> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8899/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+

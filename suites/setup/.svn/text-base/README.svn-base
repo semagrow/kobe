@@ -1,0 +1,10 @@
+Setup Scripts and Files
+
+This suite contains scripts to automatically download and prepare the data.
+
+1. Download:
+ - adjust the settings in download/setup.ttl to match your local environment
+ - run the downloadData batch
+ 
+2. Prepare the native stores
+ - run "ruby prepareData.rb"

@@ -1,0 +1,5 @@
+dataConfig = suites\\test\\fill-owlimTest.ttl
+
+fill = true
+
+envConfig = suites\\test\\env.prop

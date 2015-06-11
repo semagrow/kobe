@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/21/trunk/EvalBenchmark/doc/demos/SetupDemo
+END
+runDemo.bat
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/21/trunk/EvalBenchmark/doc/demos/SetupDemo/runDemo.bat
+END
+setup-config.prop
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/21/trunk/EvalBenchmark/doc/demos/SetupDemo/setup-config.prop
+END
+setup.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/21/trunk/EvalBenchmark/doc/demos/SetupDemo/setup.ttl
+END

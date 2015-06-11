@@ -1,0 +1,6 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://drugbank> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.drugbank";
+fluid:rdfFile "data\\rdf\\drugbank\\drugbank_dump.nt";
+fluid:context <http://drugbank.org>.

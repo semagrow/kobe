@@ -1,0 +1,95 @@
+10
+
+dir
+144
+http://fbench.googlecode.com/svn/trunk/EvalBenchmark/lib
+http://fbench.googlecode.com/svn
+
+
+
+2013-08-05T08:06:11.007976Z
+142
+aschwarte10@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+448d59bb-d1c0-2985-a03c-9d90f50fb865
+
+bridge
+dir
+
+sesame
+dir
+
+pskill.exe
+file
+
+
+
+
+2014-10-30T14:42:30.106295Z
+6f2f60af33a5caf03e1d0ac81a2de892
+2010-12-13T14:24:56.705244Z
+55
+aschwarte10@googlemail.com
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+621944
+
+log4j
+dir
+
+slf4j
+dir
+
+splendid
+dir
+
+jetty7
+dir
+
+fedx
+dir
+
+owlim
+dir
+
+darq
+dir
+
+lucene
+dir
+
+commons
+dir
+

@@ -1,0 +1,6 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://chEBI> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.chEBI";
+fluid:rdfFile "data\\rdf\\chEBI\\chebi.n3";
+fluid:context <http://chEBI.org>.

@@ -1,0 +1,15 @@
+description = DARQ - Life Science Queries
+
+dataConfig = suites/DARQ/lifeScience.ttl
+
+querySet = LIFESCIENCEDOMAIN
+
+evalRuns = 3
+
+timeout = 120000
+
+fill = false
+
+envConfig = suites/DARQ/env.prop
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluation

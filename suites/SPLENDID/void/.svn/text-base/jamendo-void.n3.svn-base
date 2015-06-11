@@ -1,0 +1,179 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+_:node-1a2ssjux1 a void:Dataset ;
+	void:sparqlEndpoint <http://dbtune.org/jamendo/sparql> ;
+	void:triples "1049639"^^xsd:integer ;
+	void:entities "290291"^^xsd:integer ;
+	void:properties "26"^^xsd:integer ;
+	void:distinctSubjects "335925"^^xsd:integer ;
+	void:distinctObjects "440603"^^xsd:integer ;
+	void:propertyPartition [
+		void:property <http://purl.org/NET/c4dm/event.owl#factor> ;
+		void:triples "8823"^^xsd:integer ;
+		void:distinctSubjects "8823"^^xsd:integer ;
+		void:distinctObjects "8823"^^xsd:integer
+	] , [
+		void:property <http://purl.org/NET/c4dm/timeline.owl#onTimeLine> ;
+		void:triples "45634"^^xsd:integer ;
+		void:distinctSubjects "45634"^^xsd:integer ;
+		void:distinctObjects "45634"^^xsd:integer
+	] , [
+		void:property dc:date ;
+		void:triples "5786"^^xsd:integer ;
+		void:distinctSubjects "5786"^^xsd:integer ;
+		void:distinctObjects "5518"^^xsd:integer
+	] , [
+		void:property dc:description ;
+		void:triples "880"^^xsd:integer ;
+		void:distinctSubjects "880"^^xsd:integer ;
+		void:distinctObjects "879"^^xsd:integer
+	] , [
+		void:property dc:format ;
+		void:triples "125948"^^xsd:integer ;
+		void:distinctSubjects "125948"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dc:title ;
+		void:triples "51394"^^xsd:integer ;
+		void:distinctSubjects "51394"^^xsd:integer ;
+		void:distinctObjects "47129"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/mo/available_as> ;
+		void:triples "125948"^^xsd:integer ;
+		void:distinctSubjects "51420"^^xsd:integer ;
+		void:distinctObjects "125948"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/mo/biography> ;
+		void:triples "485"^^xsd:integer ;
+		void:distinctSubjects "485"^^xsd:integer ;
+		void:distinctObjects "484"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/mo/image> ;
+		void:triples "23144"^^xsd:integer ;
+		void:distinctSubjects "5786"^^xsd:integer ;
+		void:distinctObjects "23144"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/mo/license> ;
+		void:triples "45634"^^xsd:integer ;
+		void:distinctSubjects "45634"^^xsd:integer ;
+		void:distinctObjects "92"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/mo/published_as> ;
+		void:triples "45634"^^xsd:integer ;
+		void:distinctSubjects "45634"^^xsd:integer ;
+		void:distinctObjects "45634"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/mo/recorded_as> ;
+		void:triples "45634"^^xsd:integer ;
+		void:distinctSubjects "45634"^^xsd:integer ;
+		void:distinctObjects "45634"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/mo/text> ;
+		void:triples "8823"^^xsd:integer ;
+		void:distinctSubjects "8823"^^xsd:integer ;
+		void:distinctObjects "7633"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/mo/time> ;
+		void:triples "45634"^^xsd:integer ;
+		void:distinctSubjects "45634"^^xsd:integer ;
+		void:distinctObjects "45634"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/mo/track> ;
+		void:triples "45634"^^xsd:integer ;
+		void:distinctSubjects "5785"^^xsd:integer ;
+		void:distinctObjects "45634"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/mo/track_number> ;
+		void:triples "45634"^^xsd:integer ;
+		void:distinctSubjects "45634"^^xsd:integer ;
+		void:distinctObjects "95"^^xsd:integer
+	] , [
+		void:property <http://www.holygoat.co.uk/owl/redwood/0.1/tags/tagName> ;
+		void:triples "9235"^^xsd:integer ;
+		void:distinctSubjects "9235"^^xsd:integer ;
+		void:distinctObjects "9235"^^xsd:integer
+	] , [
+		void:property <http://www.holygoat.co.uk/owl/redwood/0.1/tags/taggedWithTag> ;
+		void:triples "53438"^^xsd:integer ;
+		void:distinctSubjects "5341"^^xsd:integer ;
+		void:distinctObjects "9235"^^xsd:integer
+	] , [
+		void:property rdf:type ;
+		void:triples "290291"^^xsd:integer ;
+		void:distinctSubjects "290291"^^xsd:integer ;
+		void:distinctObjects "11"^^xsd:integer
+	] , [
+		void:property owl:sameAs ;
+		void:triples "1697"^^xsd:integer ;
+		void:distinctSubjects "1636"^^xsd:integer ;
+		void:distinctObjects "1672"^^xsd:integer
+	] , [
+		void:property foaf:based_near ;
+		void:triples "3244"^^xsd:integer ;
+		void:distinctSubjects "3244"^^xsd:integer ;
+		void:distinctObjects "289"^^xsd:integer
+	] , [
+		void:property foaf:homepage ;
+		void:triples "3006"^^xsd:integer ;
+		void:distinctSubjects "3006"^^xsd:integer ;
+		void:distinctObjects "2919"^^xsd:integer
+	] , [
+		void:property foaf:img ;
+		void:triples "2982"^^xsd:integer ;
+		void:distinctSubjects "2982"^^xsd:integer ;
+		void:distinctObjects "2982"^^xsd:integer
+	] , [
+		void:property foaf:made ;
+		void:triples "5786"^^xsd:integer ;
+		void:distinctSubjects "3505"^^xsd:integer ;
+		void:distinctObjects "5786"^^xsd:integer
+	] , [
+		void:property foaf:maker ;
+		void:triples "5786"^^xsd:integer ;
+		void:distinctSubjects "5786"^^xsd:integer ;
+		void:distinctObjects "3505"^^xsd:integer
+	] , [
+		void:property foaf:name ;
+		void:triples "3505"^^xsd:integer ;
+		void:distinctSubjects "3505"^^xsd:integer ;
+		void:distinctObjects "3489"^^xsd:integer
+	] ;
+	void:classPartition [
+		void:class <http://purl.org/ontology/mo/ED2K> ;
+		void:entities "11572"^^xsd:integer
+	] , [
+		void:class <http://purl.org/ontology/mo/Lyrics> ;
+		void:entities "8823"^^xsd:integer
+	] , [
+		void:class <http://purl.org/ontology/mo/MusicArtist> ;
+		void:entities "3505"^^xsd:integer
+	] , [
+		void:class <http://purl.org/ontology/mo/Playlist> ;
+		void:entities "102804"^^xsd:integer
+	] , [
+		void:class <http://purl.org/ontology/mo/Record> ;
+		void:entities "5786"^^xsd:integer
+	] , [
+		void:class <http://purl.org/ontology/mo/Signal> ;
+		void:entities "45634"^^xsd:integer
+	] , [
+		void:class <http://purl.org/ontology/mo/Torrent> ;
+		void:entities "11572"^^xsd:integer
+	] , [
+		void:class <http://purl.org/ontology/mo/Track> ;
+		void:entities "45634"^^xsd:integer
+	] , [
+		void:class <http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag> ;
+		void:entities "9235"^^xsd:integer
+	] , [
+		void:class <http://www.w3.org/2006/time#Interval> ;
+		void:entities "45634"^^xsd:integer
+	] , [
+		void:class foaf:Document ;
+		void:entities "92"^^xsd:integer
+	] .

@@ -1,0 +1,13 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://RDFFederator> fluid:store "DARQ";
+                      fluid:rdfFile "suites/DARQ/lifeScience-config_DARQ.n3".
+
+
+<http://DBpedia> fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://KEGG> fluid:localRepoLoc "data/repositories/native-storage.KEGG" .
+
+<http://chEBI> fluid:localRepoLoc "data/repositories/native-storage.chEBI" .
+
+<http://Drugbank> fluid:localRepoLoc "data/repositories/native-storage.drugbank" .

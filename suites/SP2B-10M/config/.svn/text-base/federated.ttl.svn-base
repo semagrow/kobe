@@ -1,0 +1,50 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://SP2B-a> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-a".
+
+<http://SP2B-b> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-b".
+
+<http://SP2B-c> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-c".
+
+<http://SP2B-d> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-d".
+
+<http://SP2B-e> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-e".
+
+<http://SP2B-f> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-f".
+
+<http://SP2B-g> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-g".
+
+<http://SP2B-h> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-h".
+
+<http://SP2B-i> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-i".
+
+<http://SP2B-j> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-j".
+
+<http://SP2B-k> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-k".
+
+<http://SP2B-l> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-l".
+
+<http://SP2B-m> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-m".
+
+<http://SP2B-n> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-n".
+
+<http://SP2B-o> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-o".
+
+<http://SP2B-p> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-p".
+

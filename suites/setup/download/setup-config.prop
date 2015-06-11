@@ -1,0 +1,3 @@
+dataConfig = suites\\setup\\download\\setup.ttl
+#uncomment to define your base directory, i.e. for download and unzipping of rdf data
+#baseDir = C:\\Data\\

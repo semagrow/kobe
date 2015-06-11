@@ -1,0 +1,7 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://DBpedia> fluid:store "BigOWLimRepo";
+fluid:RepositoryLocation "data\\repositories\\owlim-storage.dbpedia351".
+
+<http://NYTimes> fluid:store "BigOWLimRepo";
+fluid:RepositoryLocation "data\\repositories\\owlim-storage.nytimes".

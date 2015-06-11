@@ -1,0 +1,24 @@
+dataConfig = /root/workspace/EvalBenchmark/doc/federation/LifeScience-FedX-SPARQL.ttl
+
+querySet = LIFESCIENCEDOMAIN
+
+# warm up, 5 runs
+evalRuns = 5
+
+timeout = 1000000
+
+fill = false
+
+#envConfig = doc/fedx/env.prop
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameEvaluation
+
+reportStream = org.semanticweb.fbench.report.CsvReportStream2
+
+sparqlRequestReport = true
+
+#debugMode = true
+#showResults = true
+
+#fedxConfig = suites/fedx/fedxConfig.prop
+baseDir=/root/workspace/EvalBenchmark/doc/federation/

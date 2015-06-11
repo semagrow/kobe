@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/139/trunk/EvalBenchmark/src/org/semanticweb/fbench/report
+END
+VoidReportStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/VoidReportStream.java
+END
+MemoryReportStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/MemoryReportStream.java
+END
+PrintEarlyResultsMonitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/100/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/PrintEarlyResultsMonitor.java
+END
+RdfReportStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/139/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/RdfReportStream.java
+END
+CsvReportStream2.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/139/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/CsvReportStream2.java
+END
+ReportStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/ReportStream.java
+END
+CombinedReportStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/CombinedReportStream.java
+END
+SparqlQueryRequestReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/109/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/SparqlQueryRequestReport.java
+END
+CsvRdfReportStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/CsvRdfReportStream.java
+END
+SimpleReportStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/SimpleReportStream.java
+END
+NoOpEarlyResultsMonitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/100/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/NoOpEarlyResultsMonitor.java
+END
+RdfVocabulary.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/94/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/RdfVocabulary.java
+END
+CsvReportStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/139/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/CsvReportStream.java
+END
+EarlyResultsMonitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/100/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/EarlyResultsMonitor.java
+END
+FileEarlyResultsMonitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/100/trunk/EvalBenchmark/src/org/semanticweb/fbench/report/FileEarlyResultsMonitor.java
+END

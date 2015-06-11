@@ -1,0 +1,13 @@
+description = Local Federation (AliBaba) SP2B Queries
+
+dataConfig = suites\\SP2B-10M\\config\\federated.ttl
+
+querySet = SP2B
+
+evalRuns = 3
+
+timeout = 600000
+
+fill = false
+
+envConfig = suites\\SP2B-10M\\env.prop

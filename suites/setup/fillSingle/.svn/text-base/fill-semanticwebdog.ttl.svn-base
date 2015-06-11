@@ -1,0 +1,6 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://Semanticwebdog> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.semanticwebdog";
+fluid:rdfFile "data\\rdf\\semanticwebdog";
+fluid:context <http://semanticwebdog.org>.

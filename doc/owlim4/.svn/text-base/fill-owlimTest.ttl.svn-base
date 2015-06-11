@@ -1,0 +1,6 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://NYTimes.Locations> fluid:store "org.semanticweb.fbench.owlim.OwlimRepositoryFiller";
+fluid:rdfFile "data\\rdf\\nytimes\\organizations.rdf";
+fluid:RepositoryLocation "data\\repositories\\Owlim.nytimes";
+fluid:context <http://nytimes.org>.

@@ -1,0 +1,4 @@
+dataConfig = suites\\setup\\fillSingle\\fill-dbpedia.ttl
+
+fill = true
+

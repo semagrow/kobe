@@ -1,0 +1,15 @@
+description = SPLENDID - Life Science Queries
+
+dataConfig = suites/SPLENDID/lifeScience.ttl
+
+querySet = LIFESCIENCEDOMAIN
+
+evalRuns = 3
+
+timeout = 120000
+
+fill = false
+
+envConfig = suites/SPLENDID/env.prop
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluation

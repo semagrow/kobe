@@ -1,0 +1,21 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://KEGG.CPD> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.KEGG";
+fluid:rdfFile "data\\rdf\\KEGG\\kegg.cpd.n3";
+fluid:context <http://KEGG.org>.
+
+<http://KEGG.DR> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.KEGG";
+fluid:rdfFile "data\\rdf\\KEGG\\kegg.dr.n3";
+fluid:context <http://KEGG.org>.
+
+<http://KEGG.EC> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.KEGG";
+fluid:rdfFile "data\\rdf\\KEGG\\kegg.ec.n3";
+fluid:context <http://KEGG.org>.
+
+<http://KEGG.RN> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.KEGG";
+fluid:rdfFile "data\\rdf\\KEGG\\kegg.rn.n3";
+fluid:context <http://KEGG.org>.

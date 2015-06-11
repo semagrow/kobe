@@ -1,0 +1,14 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://RDFFederator> fluid:store "org.semanticweb.fbench.provider.DARQProvider";
+                      fluid:rdfFile "suites/DARQ/crossDomain-config_DARQ.n3".
+
+<http://DBpedia> fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://NYtimes> fluid:localRepoLoc "data/repositories/native-storage.nytimes" .
+
+<http://LinkedMDB> fluid:localRepoLoc "data/repositories/native-storage.linkedmdb" .
+
+<http://Jamendo> fluid:localRepoLoc "data/repositories/native-storage.jamendo" .
+
+<http://Geonames> fluid:localRepoLoc "data/repositories/native-storage.geonames" .

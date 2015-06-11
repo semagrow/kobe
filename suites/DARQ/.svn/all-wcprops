@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/126/trunk/EvalBenchmark/suites/DARQ
+END
+env.prop
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/126/trunk/EvalBenchmark/suites/DARQ/env.prop
+END
+crossDomain-config_DARQ.n3
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/126/trunk/EvalBenchmark/suites/DARQ/crossDomain-config_DARQ.n3
+END
+lifeScience-config.prop
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/126/trunk/EvalBenchmark/suites/DARQ/lifeScience-config.prop
+END
+lifeScience.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/126/trunk/EvalBenchmark/suites/DARQ/lifeScience.ttl
+END
+lifeScience-config_DARQ.n3
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/126/trunk/EvalBenchmark/suites/DARQ/lifeScience-config_DARQ.n3
+END
+crossDomain-config.prop
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/126/trunk/EvalBenchmark/suites/DARQ/crossDomain-config.prop
+END
+crossDomain.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/126/trunk/EvalBenchmark/suites/DARQ/crossDomain.ttl
+END

@@ -1,0 +1,920 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix swrc: <http://swrc.ontoware.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+_:node-3kf1cix1 a void:Dataset ;
+	void:sparqlEndpoint <http://data.semanticweb.org/sparql> ;
+	void:triples "103565"^^xsd:integer ;
+	void:entities "9881"^^xsd:integer ;
+	void:properties "118"^^xsd:integer ;
+	void:distinctSubjects "11974"^^xsd:integer ;
+	void:distinctObjects "37536"^^xsd:integer ;
+	void:propertyPartition [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#affiliation> ;
+		void:triples "557"^^xsd:integer ;
+		void:distinctSubjects "512"^^xsd:integer ;
+		void:distinctObjects "336"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#completeGraph> ;
+		void:triples "41"^^xsd:integer ;
+		void:distinctSubjects "41"^^xsd:integer ;
+		void:distinctObjects "41"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#editorList> ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#givesKeynoteTalk> ;
+		void:triples "19"^^xsd:integer ;
+		void:distinctSubjects "19"^^xsd:integer ;
+		void:distinctObjects "18"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#hasAcronym> ;
+		void:triples "139"^^xsd:integer ;
+		void:distinctSubjects "137"^^xsd:integer ;
+		void:distinctObjects "138"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#hasLocation> ;
+		void:triples "171"^^xsd:integer ;
+		void:distinctSubjects "171"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#hasLogo> ;
+		void:triples "20"^^xsd:integer ;
+		void:distinctSubjects "20"^^xsd:integer ;
+		void:distinctObjects "20"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#hasPart> ;
+		void:triples "1631"^^xsd:integer ;
+		void:distinctSubjects "44"^^xsd:integer ;
+		void:distinctObjects "1631"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#hasProgramme> ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#hasRelatedArtefact> ;
+		void:triples "31"^^xsd:integer ;
+		void:distinctSubjects "31"^^xsd:integer ;
+		void:distinctObjects "31"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> ;
+		void:triples "641"^^xsd:integer ;
+		void:distinctSubjects "636"^^xsd:integer ;
+		void:distinctObjects "617"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#hasRelatedEvent> ;
+		void:triples "193"^^xsd:integer ;
+		void:distinctSubjects "193"^^xsd:integer ;
+		void:distinctObjects "193"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#hasRole> ;
+		void:triples "469"^^xsd:integer ;
+		void:distinctSubjects "227"^^xsd:integer ;
+		void:distinctObjects "397"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#hasSponsorship> ;
+		void:triples "10"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "10"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#hasTopic> ;
+		void:triples "1028"^^xsd:integer ;
+		void:distinctSubjects "434"^^xsd:integer ;
+		void:distinctObjects "80"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#heldBy> ;
+		void:triples "1899"^^xsd:integer ;
+		void:distinctSubjects "290"^^xsd:integer ;
+		void:distinctObjects "1001"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#holdsRole> ;
+		void:triples "2075"^^xsd:integer ;
+		void:distinctSubjects "1064"^^xsd:integer ;
+		void:distinctObjects "472"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#homepage> ;
+		void:triples "16"^^xsd:integer ;
+		void:distinctSubjects "16"^^xsd:integer ;
+		void:distinctObjects "16"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#isLocationFor> ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#isPanelistAt> ;
+		void:triples "42"^^xsd:integer ;
+		void:distinctSubjects "40"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#isPartOf> ;
+		void:triples "1593"^^xsd:integer ;
+		void:distinctSubjects "1593"^^xsd:integer ;
+		void:distinctObjects "44"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#isProvidedBy> ;
+		void:triples "11"^^xsd:integer ;
+		void:distinctSubjects "10"^^xsd:integer ;
+		void:distinctObjects "11"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> ;
+		void:triples "583"^^xsd:integer ;
+		void:distinctSubjects "583"^^xsd:integer ;
+		void:distinctObjects "141"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> ;
+		void:triples "932"^^xsd:integer ;
+		void:distinctSubjects "905"^^xsd:integer ;
+		void:distinctObjects "198"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#isSuperEventOf> ;
+		void:triples "1023"^^xsd:integer ;
+		void:distinctSubjects "204"^^xsd:integer ;
+		void:distinctObjects "988"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#moderates> ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#moderator> ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#panelist> ;
+		void:triples "42"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "40"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#paperList> ;
+		void:triples "28"^^xsd:integer ;
+		void:distinctSubjects "28"^^xsd:integer ;
+		void:distinctObjects "28"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#partOf> ;
+		void:triples "51"^^xsd:integer ;
+		void:distinctSubjects "51"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> ;
+		void:triples "369"^^xsd:integer ;
+		void:distinctSubjects "366"^^xsd:integer ;
+		void:distinctObjects "315"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#speaker> ;
+		void:triples "19"^^xsd:integer ;
+		void:distinctSubjects "18"^^xsd:integer ;
+		void:distinctObjects "19"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#url> ;
+		void:triples "31"^^xsd:integer ;
+		void:distinctSubjects "31"^^xsd:integer ;
+		void:distinctObjects "31"^^xsd:integer
+	] , [
+		void:property <http://data.semanticweb.org/ns/swc/ontology#uuid> ;
+		void:triples "212"^^xsd:integer ;
+		void:distinctSubjects "212"^^xsd:integer ;
+		void:distinctObjects "212"^^xsd:integer
+	] , [
+		void:property dc:creator ;
+		void:triples "4273"^^xsd:integer ;
+		void:distinctSubjects "1331"^^xsd:integer ;
+		void:distinctObjects "2704"^^xsd:integer
+	] , [
+		void:property dc:subject ;
+		void:triples "2273"^^xsd:integer ;
+		void:distinctSubjects "777"^^xsd:integer ;
+		void:distinctObjects "1457"^^xsd:integer
+	] , [
+		void:property dc:title ;
+		void:triples "1555"^^xsd:integer ;
+		void:distinctSubjects "1555"^^xsd:integer ;
+		void:distinctObjects "1549"^^xsd:integer
+	] , [
+		void:property dcterms:creator ;
+		void:triples "32"^^xsd:integer ;
+		void:distinctSubjects "14"^^xsd:integer ;
+		void:distinctObjects "31"^^xsd:integer
+	] , [
+		void:property dcterms:format ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property dcterms:title ;
+		void:triples "224"^^xsd:integer ;
+		void:distinctSubjects "224"^^xsd:integer ;
+		void:distinctObjects "224"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/bibo/authorList> ;
+		void:triples "205"^^xsd:integer ;
+		void:distinctSubjects "205"^^xsd:integer ;
+		void:distinctObjects "205"^^xsd:integer
+	] , [
+		void:property <http://purl.org/ontology/bibo/editorList> ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property <http://rdfs.org/sioc/ns#topic> ;
+		void:triples "14"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "14"^^xsd:integer
+	] , [
+		void:property <http://sw.deri.org/2005/08/conf/cfp.owl#deadline> ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property <http://sw.deri.org/2005/08/conf/cfp.owl#for> ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property <http://sw.deri.org/2005/08/conf/cfp.owl#involved> ;
+		void:triples "4"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property <http://sw.deri.org/2005/08/conf/cfp.owl#takesplace> ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property swrc:abstract ;
+		void:triples "1722"^^xsd:integer ;
+		void:distinctSubjects "1722"^^xsd:integer ;
+		void:distinctObjects "1694"^^xsd:integer
+	] , [
+		void:property swrc:address ;
+		void:triples "5"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property swrc:affiliation ;
+		void:triples "3817"^^xsd:integer ;
+		void:distinctSubjects "3381"^^xsd:integer ;
+		void:distinctObjects "972"^^xsd:integer
+	] , [
+		void:property swrc:author ;
+		void:triples "4208"^^xsd:integer ;
+		void:distinctSubjects "1290"^^xsd:integer ;
+		void:distinctObjects "2639"^^xsd:integer
+	] , [
+		void:property swrc:booktitle ;
+		void:triples "36"^^xsd:integer ;
+		void:distinctSubjects "36"^^xsd:integer ;
+		void:distinctObjects "36"^^xsd:integer
+	] , [
+		void:property swrc:editor ;
+		void:triples "147"^^xsd:integer ;
+		void:distinctSubjects "33"^^xsd:integer ;
+		void:distinctObjects "116"^^xsd:integer
+	] , [
+		void:property swrc:isbn ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property swrc:keywords ;
+		void:triples "859"^^xsd:integer ;
+		void:distinctSubjects "248"^^xsd:integer ;
+		void:distinctObjects "583"^^xsd:integer
+	] , [
+		void:property swrc:month ;
+		void:triples "1585"^^xsd:integer ;
+		void:distinctSubjects "1585"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property swrc:pages ;
+		void:triples "332"^^xsd:integer ;
+		void:distinctSubjects "332"^^xsd:integer ;
+		void:distinctObjects "332"^^xsd:integer
+	] , [
+		void:property swrc:publisher ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property swrc:series ;
+		void:triples "5"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property swrc:title ;
+		void:triples "193"^^xsd:integer ;
+		void:distinctSubjects "193"^^xsd:integer ;
+		void:distinctObjects "192"^^xsd:integer
+	] , [
+		void:property swrc:url ;
+		void:triples "1423"^^xsd:integer ;
+		void:distinctSubjects "1208"^^xsd:integer ;
+		void:distinctObjects "1421"^^xsd:integer
+	] , [
+		void:property swrc:volume ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property swrc:year ;
+		void:triples "1585"^^xsd:integer ;
+		void:distinctSubjects "1585"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> ;
+		void:triples "1580"^^xsd:integer ;
+		void:distinctSubjects "1580"^^xsd:integer ;
+		void:distinctObjects "1580"^^xsd:integer
+	] , [
+		void:property <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#editorList> ;
+		void:triples "32"^^xsd:integer ;
+		void:distinctSubjects "30"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property rdf:_1 ;
+		void:triples "1850"^^xsd:integer ;
+		void:distinctSubjects "1847"^^xsd:integer ;
+		void:distinctObjects "1379"^^xsd:integer
+	] , [
+		void:property rdf:_10 ;
+		void:triples "11"^^xsd:integer ;
+		void:distinctSubjects "11"^^xsd:integer ;
+		void:distinctObjects "10"^^xsd:integer
+	] , [
+		void:property rdf:_11 ;
+		void:triples "5"^^xsd:integer ;
+		void:distinctSubjects "5"^^xsd:integer ;
+		void:distinctObjects "5"^^xsd:integer
+	] , [
+		void:property rdf:_12 ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property rdf:_13 ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property rdf:_2 ;
+		void:triples "1663"^^xsd:integer ;
+		void:distinctSubjects "1662"^^xsd:integer ;
+		void:distinctObjects "1278"^^xsd:integer
+	] , [
+		void:property rdf:_3 ;
+		void:triples "1235"^^xsd:integer ;
+		void:distinctSubjects "1235"^^xsd:integer ;
+		void:distinctObjects "965"^^xsd:integer
+	] , [
+		void:property rdf:_4 ;
+		void:triples "686"^^xsd:integer ;
+		void:distinctSubjects "686"^^xsd:integer ;
+		void:distinctObjects "552"^^xsd:integer
+	] , [
+		void:property rdf:_5 ;
+		void:triples "349"^^xsd:integer ;
+		void:distinctSubjects "349"^^xsd:integer ;
+		void:distinctObjects "296"^^xsd:integer
+	] , [
+		void:property rdf:_6 ;
+		void:triples "136"^^xsd:integer ;
+		void:distinctSubjects "136"^^xsd:integer ;
+		void:distinctObjects "122"^^xsd:integer
+	] , [
+		void:property rdf:_7 ;
+		void:triples "60"^^xsd:integer ;
+		void:distinctSubjects "60"^^xsd:integer ;
+		void:distinctObjects "58"^^xsd:integer
+	] , [
+		void:property rdf:_8 ;
+		void:triples "30"^^xsd:integer ;
+		void:distinctSubjects "30"^^xsd:integer ;
+		void:distinctObjects "29"^^xsd:integer
+	] , [
+		void:property rdf:_9 ;
+		void:triples "14"^^xsd:integer ;
+		void:distinctSubjects "14"^^xsd:integer ;
+		void:distinctObjects "13"^^xsd:integer
+	] , [
+		void:property rdf:type ;
+		void:triples "9945"^^xsd:integer ;
+		void:distinctSubjects "9881"^^xsd:integer ;
+		void:distinctObjects "103"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/1999/xhtml/vocab#alternate> ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/1999/xhtml/vocab#icon> ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/1999/xhtml/vocab#meta> ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/1999/xhtml/vocab#stylesheet> ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property rdfs:comment ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "7"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property rdfs:isDefinedBy ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property rdfs:label ;
+		void:triples "8214"^^xsd:integer ;
+		void:distinctSubjects "7523"^^xsd:integer ;
+		void:distinctObjects "7573"^^xsd:integer
+	] , [
+		void:property rdfs:seeAlso ;
+		void:triples "702"^^xsd:integer ;
+		void:distinctSubjects "656"^^xsd:integer ;
+		void:distinctObjects "702"^^xsd:integer
+	] , [
+		void:property rdfs:subClassOf ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property owl:imports ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property owl:sameAs ;
+		void:triples "1630"^^xsd:integer ;
+		void:distinctSubjects "1375"^^xsd:integer ;
+		void:distinctObjects "1630"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/2002/12/cal/ical#date> ;
+		void:triples "413"^^xsd:integer ;
+		void:distinctSubjects "413"^^xsd:integer ;
+		void:distinctObjects "142"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/2002/12/cal/ical#dateTime> ;
+		void:triples "139"^^xsd:integer ;
+		void:distinctSubjects "139"^^xsd:integer ;
+		void:distinctObjects "119"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/2002/12/cal/ical#description> ;
+		void:triples "29"^^xsd:integer ;
+		void:distinctSubjects "29"^^xsd:integer ;
+		void:distinctObjects "28"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/2002/12/cal/ical#dtend> ;
+		void:triples "423"^^xsd:integer ;
+		void:distinctSubjects "409"^^xsd:integer ;
+		void:distinctObjects "230"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/2002/12/cal/ical#dtstart> ;
+		void:triples "717"^^xsd:integer ;
+		void:distinctSubjects "702"^^xsd:integer ;
+		void:distinctObjects "473"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/2002/12/cal/ical#duration> ;
+		void:triples "283"^^xsd:integer ;
+		void:distinctSubjects "282"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/2002/12/cal/ical#summary> ;
+		void:triples "648"^^xsd:integer ;
+		void:distinctSubjects "646"^^xsd:integer ;
+		void:distinctObjects "629"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/2002/12/cal/ical#tzid> ;
+		void:triples "552"^^xsd:integer ;
+		void:distinctSubjects "552"^^xsd:integer ;
+		void:distinctObjects "10"^^xsd:integer
+	] , [
+		void:property <http://www.w3.org/2002/12/cal/ical#url> ;
+		void:triples "199"^^xsd:integer ;
+		void:distinctSubjects "196"^^xsd:integer ;
+		void:distinctObjects "195"^^xsd:integer
+	] , [
+		void:property geo:lat ;
+		void:triples "369"^^xsd:integer ;
+		void:distinctSubjects "363"^^xsd:integer ;
+		void:distinctObjects "298"^^xsd:integer
+	] , [
+		void:property geo:long ;
+		void:triples "369"^^xsd:integer ;
+		void:distinctSubjects "363"^^xsd:integer ;
+		void:distinctObjects "298"^^xsd:integer
+	] , [
+		void:property skos:broader ;
+		void:triples "38"^^xsd:integer ;
+		void:distinctSubjects "38"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property skos:prefLabel ;
+		void:triples "286"^^xsd:integer ;
+		void:distinctSubjects "286"^^xsd:integer ;
+		void:distinctObjects "285"^^xsd:integer
+	] , [
+		void:property foaf:based_near ;
+		void:triples "2313"^^xsd:integer ;
+		void:distinctSubjects "2118"^^xsd:integer ;
+		void:distinctObjects "447"^^xsd:integer
+	] , [
+		void:property foaf:depiction ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property foaf:family_name ;
+		void:triples "1734"^^xsd:integer ;
+		void:distinctSubjects "1714"^^xsd:integer ;
+		void:distinctObjects "1437"^^xsd:integer
+	] , [
+		void:property foaf:firstName ;
+		void:triples "1734"^^xsd:integer ;
+		void:distinctSubjects "1714"^^xsd:integer ;
+		void:distinctObjects "1249"^^xsd:integer
+	] , [
+		void:property foaf:homepage ;
+		void:triples "1193"^^xsd:integer ;
+		void:distinctSubjects "1070"^^xsd:integer ;
+		void:distinctObjects "1168"^^xsd:integer
+	] , [
+		void:property foaf:made ;
+		void:triples "5866"^^xsd:integer ;
+		void:distinctSubjects "3506"^^xsd:integer ;
+		void:distinctObjects "1787"^^xsd:integer
+	] , [
+		void:property foaf:maker ;
+		void:triples "4898"^^xsd:integer ;
+		void:distinctSubjects "1529"^^xsd:integer ;
+		void:distinctObjects "2946"^^xsd:integer
+	] , [
+		void:property foaf:mbox_sha1sum ;
+		void:triples "3100"^^xsd:integer ;
+		void:distinctSubjects "2713"^^xsd:integer ;
+		void:distinctObjects "3065"^^xsd:integer
+	] , [
+		void:property foaf:member ;
+		void:triples "3830"^^xsd:integer ;
+		void:distinctSubjects "972"^^xsd:integer ;
+		void:distinctObjects "3382"^^xsd:integer
+	] , [
+		void:property foaf:name ;
+		void:triples "5840"^^xsd:integer ;
+		void:distinctSubjects "5048"^^xsd:integer ;
+		void:distinctObjects "5822"^^xsd:integer
+	] , [
+		void:property foaf:page ;
+		void:triples "690"^^xsd:integer ;
+		void:distinctSubjects "656"^^xsd:integer ;
+		void:distinctObjects "690"^^xsd:integer
+	] , [
+		void:property foaf:primaryTopic ;
+		void:triples "2"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property foaf:status ;
+		void:triples "613"^^xsd:integer ;
+		void:distinctSubjects "613"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property foaf:topic ;
+		void:triples "555"^^xsd:integer ;
+		void:distinctSubjects "153"^^xsd:integer ;
+		void:distinctObjects "90"^^xsd:integer
+	] , [
+		void:property foaf:workplaceHomepage ;
+		void:triples "155"^^xsd:integer ;
+		void:distinctSubjects "155"^^xsd:integer ;
+		void:distinctObjects "132"^^xsd:integer
+	] ;
+	void:classPartition [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#AcademicEvent> ;
+		void:entities "2"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Administrator> ;
+		void:entities "2"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#BreakEvent> ;
+		void:entities "8"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Chair> ;
+		void:entities "107"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#ConferenceChair> ;
+		void:entities "2"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#ConferenceDinner> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent> ;
+		void:entities "16"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#ConferenceOpeningEvent> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#ConferencePCO> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#ConferenceVenuePlace> ;
+		void:entities "2"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Delegate> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#DemoChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#DemoandPostersChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#DemosChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#DevelopersTrackChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#DoctoralConsortiumChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#DogfoodTsar> ;
+		void:entities "2"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#ExhibitionChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#FellowshipChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#GeneralChair> ;
+		void:entities "4"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#GeneralViceChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#IW3C2Liaison> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#IndustryChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#KeynoteTalk> ;
+		void:entities "25"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#LocalChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#LocalOrganiser> ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#LocalOrganisingCommittee> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#MealEvent> ;
+		void:entities "12"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#MeetingRoomPlace> ;
+		void:entities "14"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#MetadataChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#OrganisingCommitteeMember> ;
+		void:entities "13"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PCMember> ;
+		void:entities "19"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PanelChair> ;
+		void:entities "2"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PanelEvent> ;
+		void:entities "14"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PanelsChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Paper> ;
+		void:entities "50"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> ;
+		void:entities "422"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PaperSession> ;
+		void:entities "18"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PhDSymposium> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PhDSymposiumChair> ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Place> ;
+		void:entities "14"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Poster> ;
+		void:entities "79"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PosterChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PosterSession> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PosterandDemoChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PostersChair> ;
+		void:entities "2"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Presenter> ;
+		void:entities "103"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PrintedProceedingsChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Proceedings> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#ProceedingsChair> ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Programme> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#ProgrammeChair> ;
+		void:entities "7"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember> ;
+		void:entities "169"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#PublicityChair> ;
+		void:entities "4"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Reception> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#RefereedPaperTrackChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Role> ;
+		void:entities "6"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SWChallengeChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SemanticWebChallengeChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SemanticWebIn-UseChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SemanticWebTechnologiesCo-ordinator> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SemanticWebTechnologiesCoordinator> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SemanticWebinUseChairs> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SessionChair> ;
+		void:entities "49"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SessionEvent> ;
+		void:entities "151"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SocialEvent> ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SponsorChair> ;
+		void:entities "2"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Sponsorship> ;
+		void:entities "10"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SponsorshipChair> ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SponsorshipManagers> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SystemDemonstration> ;
+		void:entities "17"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#SystemDescription> ;
+		void:entities "10"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#TalkEvent> ;
+		void:entities "252"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#TrackEvent> ;
+		void:entities "34"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Treasurer> ;
+		void:entities "2"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#TutorialChair> ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#TutorialEvent> ;
+		void:entities "44"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#TutorialPresenter> ;
+		void:entities "24"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#TutorialsChair> ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#VolunteersChair> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#Webmaster> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#WebmasterandConferenceAdministrator> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#WorkshopChair> ;
+		void:entities "6"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> ;
+		void:entities "120"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#WorkshopOrganiser> ;
+		void:entities "34"^^xsd:integer
+	] , [
+		void:class <http://data.semanticweb.org/ns/swc/ontology#WorkshopsChair> ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class <http://purl.org/rss/1.0/channel> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://rdfs.org/sioc/ns#Site> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class <http://sw.deri.org/2005/08/conf/cfp.owl#CallForPapers> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class swrc:ConferenceEvent ;
+		void:entities "2"^^xsd:integer
+	] , [
+		void:class swrc:InProceedings ;
+		void:entities "1755"^^xsd:integer
+	] , [
+		void:class swrc:Proceedings ;
+		void:entities "42"^^xsd:integer
+	] , [
+		void:class swrc:ResearchTopic ;
+		void:entities "59"^^xsd:integer
+	] , [
+		void:class rdf:Seq ;
+		void:entities "334"^^xsd:integer
+	] , [
+		void:class owl:Ontology ;
+		void:entities "11"^^xsd:integer
+	] , [
+		void:class owl:Thing ;
+		void:entities "390"^^xsd:integer
+	] , [
+		void:class <http://www.w3.org/2002/12/cal/ical#DemoSession> ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class geo:Point ;
+		void:entities "361"^^xsd:integer
+	] , [
+		void:class foaf:Document ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class foaf:Group ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class foaf:Image ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class foaf:Organization ;
+		void:entities "972"^^xsd:integer
+	] , [
+		void:class foaf:Person ;
+		void:entities "4078"^^xsd:integer
+	] .

@@ -1,0 +1,22 @@
+dataConfig = /root/workspace/EvalBenchmark/doc/federation/CrossDomain-FedX-SPARQL.ttl
+
+querySet = CROSSDOMAIN
+#querySet = CUSTOM1
+
+evalRuns = 5
+
+timeout = 600000
+
+fill = false
+
+#envConfig = doc/fedx/env.prop
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameEvaluation
+
+reportStream = org.semanticweb.fbench.report.CsvReportStream2
+
+sparqlRequestReport = true
+
+#fedxConfig = suites/fedx/fedxConfig.prop
+
+baseDir=/root/workspace/EvalBenchmark/doc/federation/

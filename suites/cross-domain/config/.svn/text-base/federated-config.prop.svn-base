@@ -1,0 +1,13 @@
+description = Local Federation (AliBaba) Cross Domain Queries
+
+dataConfig = suites\\cross-domain\\config\\federated.ttl
+
+querySet = CROSSDOMAIN
+
+evalRuns = 3
+
+timeout = 600000
+
+fill = false
+
+envConfig = suites\\cross-domain\\env.prop

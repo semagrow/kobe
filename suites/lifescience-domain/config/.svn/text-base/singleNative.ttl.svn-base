@@ -1,0 +1,4 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://Cross> fluid:store "SingleNative";
+fluid:RepositoryLocation "data\\repositories\\native-storage.Single-LifeScience.dbpedia351-KEGG-Drugbank-chEBI".

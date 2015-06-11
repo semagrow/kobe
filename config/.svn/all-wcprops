@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/140/trunk/EvalBenchmark/config
+END
+config.prop
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/116/trunk/EvalBenchmark/config/config.prop
+END
+env.prop
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/93/trunk/EvalBenchmark/config/env.prop
+END
+log4j-proxy.properties
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/57/trunk/EvalBenchmark/config/log4j-proxy.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/140/trunk/EvalBenchmark/config/log4j.properties
+END
+log4j-sparql.properties
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/57/trunk/EvalBenchmark/config/log4j-sparql.properties
+END
+bigOwlim.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/7/trunk/EvalBenchmark/config/bigOwlim.ttl
+END
+demoFederatedSparql.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/7/trunk/EvalBenchmark/config/demoFederatedSparql.ttl
+END

@@ -1,0 +1,151 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geonames: <http://www.geonames.org/ontology#> .
+
+_:node-9p69d9x1 a void:Dataset ;
+	void:sparqlEndpoint <http://geosparql.appspot.com/query> ;
+	void:triples "107983838"^^xsd:integer ;
+	void:entities "7479714"^^xsd:integer ;
+	void:properties "26"^^xsd:integer ;
+	void:distinctSubjects "7479714"^^xsd:integer ;
+	void:distinctObjects "35799392"^^xsd:integer ;
+	void:propertyPartition [
+		void:property geonames:alternateName ;
+		void:triples "4966839"^^xsd:integer ;
+		void:distinctSubjects "2148868"^^xsd:integer ;
+		void:distinctObjects "3934852"^^xsd:integer
+	] , [
+		void:property geonames:childrenFeatures ;
+		void:triples "224573"^^xsd:integer ;
+		void:distinctSubjects "224573"^^xsd:integer ;
+		void:distinctObjects "224573"^^xsd:integer
+	] , [
+		void:property geonames:countryCode ;
+		void:triples "7474323"^^xsd:integer ;
+		void:distinctSubjects "7474323"^^xsd:integer ;
+		void:distinctObjects "247"^^xsd:integer
+	] , [
+		void:property geonames:featureClass ;
+		void:triples "7479714"^^xsd:integer ;
+		void:distinctSubjects "7479714"^^xsd:integer ;
+		void:distinctObjects "10"^^xsd:integer
+	] , [
+		void:property geonames:featureCode ;
+		void:triples "7389099"^^xsd:integer ;
+		void:distinctSubjects "7389099"^^xsd:integer ;
+		void:distinctObjects "655"^^xsd:integer
+	] , [
+		void:property geonames:locationMap ;
+		void:triples "7479714"^^xsd:integer ;
+		void:distinctSubjects "7479714"^^xsd:integer ;
+		void:distinctObjects "7479714"^^xsd:integer
+	] , [
+		void:property geonames:name ;
+		void:triples "7479714"^^xsd:integer ;
+		void:distinctSubjects "7479714"^^xsd:integer ;
+		void:distinctObjects "4826442"^^xsd:integer
+	] , [
+		void:property geonames:nearbyFeatures ;
+		void:triples "7255141"^^xsd:integer ;
+		void:distinctSubjects "7255141"^^xsd:integer ;
+		void:distinctObjects "7255141"^^xsd:integer
+	] , [
+		void:property geonames:neighbouringFeatures ;
+		void:triples "242"^^xsd:integer ;
+		void:distinctSubjects "242"^^xsd:integer ;
+		void:distinctObjects "242"^^xsd:integer
+	] , [
+		void:property geonames:officialName ;
+		void:triples "97981"^^xsd:integer ;
+		void:distinctSubjects "89245"^^xsd:integer ;
+		void:distinctObjects "73058"^^xsd:integer
+	] , [
+		void:property geonames:parentADM1 ;
+		void:triples "6812897"^^xsd:integer ;
+		void:distinctSubjects "6812897"^^xsd:integer ;
+		void:distinctObjects "3714"^^xsd:integer
+	] , [
+		void:property geonames:parentADM2 ;
+		void:triples "2499820"^^xsd:integer ;
+		void:distinctSubjects "2499819"^^xsd:integer ;
+		void:distinctObjects "24815"^^xsd:integer
+	] , [
+		void:property geonames:parentADM3 ;
+		void:triples "227326"^^xsd:integer ;
+		void:distinctSubjects "227185"^^xsd:integer ;
+		void:distinctObjects "42323"^^xsd:integer
+	] , [
+		void:property geonames:parentADM4 ;
+		void:triples "121382"^^xsd:integer ;
+		void:distinctSubjects "121368"^^xsd:integer ;
+		void:distinctObjects "81425"^^xsd:integer
+	] , [
+		void:property geonames:parentCountry ;
+		void:triples "7474323"^^xsd:integer ;
+		void:distinctSubjects "7474323"^^xsd:integer ;
+		void:distinctObjects "247"^^xsd:integer
+	] , [
+		void:property geonames:parentFeature ;
+		void:triples "7479713"^^xsd:integer ;
+		void:distinctSubjects "7479713"^^xsd:integer ;
+		void:distinctObjects "104460"^^xsd:integer
+	] , [
+		void:property geonames:population ;
+		void:triples "235318"^^xsd:integer ;
+		void:distinctSubjects "235318"^^xsd:integer ;
+		void:distinctObjects "40987"^^xsd:integer
+	] , [
+		void:property geonames:postalCode ;
+		void:triples "119047"^^xsd:integer ;
+		void:distinctSubjects "91004"^^xsd:integer ;
+		void:distinctObjects "59388"^^xsd:integer
+	] , [
+		void:property geonames:wikipediaArticle ;
+		void:triples "939065"^^xsd:integer ;
+		void:distinctSubjects "158378"^^xsd:integer ;
+		void:distinctObjects "905093"^^xsd:integer
+	] , [
+		void:property rdf:type ;
+		void:triples "7479714"^^xsd:integer ;
+		void:distinctSubjects "7479714"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property rdfs:isDefinedBy ;
+		void:triples "7479714"^^xsd:integer ;
+		void:distinctSubjects "7479714"^^xsd:integer ;
+		void:distinctObjects "7479714"^^xsd:integer
+	] , [
+		void:property owl:sameAs ;
+		void:triples "117915"^^xsd:integer ;
+		void:distinctSubjects "117238"^^xsd:integer ;
+		void:distinctObjects "117839"^^xsd:integer
+	] , [
+		void:property geo:alt ;
+		void:triples "2158255"^^xsd:integer ;
+		void:distinctSubjects "2158255"^^xsd:integer ;
+		void:distinctObjects "5661"^^xsd:integer
+	] , [
+		void:property geo:lat ;
+		void:triples "7479714"^^xsd:integer ;
+		void:distinctSubjects "7479714"^^xsd:integer ;
+		void:distinctObjects "1996861"^^xsd:integer
+	] , [
+		void:property geo:long ;
+		void:triples "7479714"^^xsd:integer ;
+		void:distinctSubjects "7479714"^^xsd:integer ;
+		void:distinctObjects "2678128"^^xsd:integer
+	] , [
+		void:property foaf:page ;
+		void:triples "32581"^^xsd:integer ;
+		void:distinctSubjects "32581"^^xsd:integer ;
+		void:distinctObjects "32581"^^xsd:integer
+	] ;
+	void:classPartition [
+		void:class geonames:Feature ;
+		void:entities "7479714"^^xsd:integer
+	] .

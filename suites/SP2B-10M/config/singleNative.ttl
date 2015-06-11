@@ -1,0 +1,4 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://SP2B> fluid:store "SingleNative";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-Single".

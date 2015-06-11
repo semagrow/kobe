@@ -1,0 +1,49 @@
+SELECT ?predicate ?object WHERE {
+   { <http://dbpedia.org/resource/Barack_Obama> ?predicate ?object }
+   UNION    
+   { ?subject <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .
+     ?subject ?predicate ?object } 
+}
+
+SELECT ?party ?page  WHERE {
+   <http://dbpedia.org/resource/Barack_Obama> <http://dbpedia.org/ontology/party> ?party .
+   ?x <http://data.nytimes.com/elements/topicPage> ?page .
+   ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .
+}
+
+SELECT ?president ?party ?page WHERE {
+   ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .
+   ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .
+   ?president <http://dbpedia.org/ontology/party> ?party .
+   ?x <http://data.nytimes.com/elements/topicPage> ?page .
+   ?x <http://www.w3.org/2002/07/owl#sameAs> ?president .
+}
+
+SELECT ?actor ?news WHERE {
+   ?film <http://purl.org/dc/terms/title> 'Tarzan' .
+   ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .
+   ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x.
+   ?y <http://www.w3.org/2002/07/owl#sameAs> ?x .
+   ?y <http://data.nytimes.com/elements/topicPage> ?news
+}
+
+SELECT ?film ?director ?genre WHERE {
+   ?film <http://dbpedia.org/ontology/director>  ?director .
+   ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .
+   ?x <http://www.w3.org/2002/07/owl#sameAs> ?film .
+   ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre .
+}
+
+SELECT ?name ?location WHERE {
+   ?artist <http://xmlns.com/foaf/0.1/name> ?name .
+   ?artist <http://xmlns.com/foaf/0.1/based_near> ?location .
+   ?location <http://www.geonames.org/ontology#parentFeature> ?germany . 
+   ?germany <http://www.geonames.org/ontology#name> 'Federal Republic of Germany'
+}
+
+SELECT ?location ?news WHERE {
+   ?location <http://www.geonames.org/ontology#parentFeature> ?parent . 
+   ?parent <http://www.geonames.org/ontology#name> 'California' .
+   ?y <http://www.w3.org/2002/07/owl#sameAs> ?location .
+   ?y <http://data.nytimes.com/elements/topicPage> ?news 
+}

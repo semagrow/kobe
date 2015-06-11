@@ -1,0 +1,6 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://SP2B-10M-g> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\SP2B-10M\\native-storage.SP2B-10M-g";
+fluid:rdfFile "data\\rdf\\SP2B-10M\\inproceedings2.n3";
+fluid:context <http://SP2B-10M.org>.

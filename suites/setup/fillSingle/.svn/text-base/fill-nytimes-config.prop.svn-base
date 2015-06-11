@@ -1,0 +1,4 @@
+dataConfig = suites\\setup\\fillSingle\\fill-nytimes.ttl
+
+fill = true
+

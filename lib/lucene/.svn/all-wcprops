@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/5/trunk/EvalBenchmark/lib/lucene
+END
+lucene-core-3.0.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/5/trunk/EvalBenchmark/lib/lucene/lucene-core-3.0.0.jar
+END
+lucene.lic
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/5/trunk/EvalBenchmark/lib/lucene/lucene.lic
+END

@@ -1,0 +1,6 @@
+dataConfig = suites\\SP2B-10M\\setup\\fill-SP2B-e.ttl
+
+envConfig = suites\\SP2B-10M\\env.prop
+
+fill = true
+

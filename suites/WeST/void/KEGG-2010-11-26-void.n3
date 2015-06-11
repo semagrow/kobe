@@ -1,0 +1,136 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix bio: <http://bio2rdf.org/ns/bio2rdf#> .
+@prefix kegg: <http://bio2rdf.org/ns/kegg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+_:nodefn1jemx1 a void:Dataset ;
+	void:sparqlEndpoint <http://kegg.bio2rdf.org/sparql> ;
+	void:triples "1090830"^^xsd:integer ;
+	void:entities "34260"^^xsd:integer ;
+	void:properties "21"^^xsd:integer ;
+	void:distinctSubjects "34260"^^xsd:integer ;
+	void:distinctObjects "939258"^^xsd:integer ;
+	void:propertyPartition [
+		void:property bio:formula ;
+		void:triples "20108"^^xsd:integer ;
+		void:distinctSubjects "20108"^^xsd:integer ;
+		void:distinctObjects "12094"^^xsd:integer
+	] , [
+		void:property bio:isA ;
+		void:triples "13781"^^xsd:integer ;
+		void:distinctSubjects "4245"^^xsd:integer ;
+		void:distinctObjects "312"^^xsd:integer
+	] , [
+		void:property bio:mass ;
+		void:triples "18507"^^xsd:integer ;
+		void:distinctSubjects "18507"^^xsd:integer ;
+		void:distinctObjects "10953"^^xsd:integer
+	] , [
+		void:property bio:synonym ;
+		void:triples "43709"^^xsd:integer ;
+		void:distinctSubjects "19396"^^xsd:integer ;
+		void:distinctObjects "42229"^^xsd:integer
+	] , [
+		void:property bio:url ;
+		void:triples "34260"^^xsd:integer ;
+		void:distinctSubjects "34260"^^xsd:integer ;
+		void:distinctObjects "34260"^^xsd:integer
+	] , [
+		void:property bio:urlImage ;
+		void:triples "30015"^^xsd:integer ;
+		void:distinctSubjects "30015"^^xsd:integer ;
+		void:distinctObjects "30015"^^xsd:integer
+	] , [
+		void:property bio:xRef ;
+		void:triples "73196"^^xsd:integer ;
+		void:distinctSubjects "22122"^^xsd:integer ;
+		void:distinctObjects "60941"^^xsd:integer
+	] , [
+		void:property kegg:equation ;
+		void:triples "7827"^^xsd:integer ;
+		void:distinctSubjects "7827"^^xsd:integer ;
+		void:distinctObjects "7826"^^xsd:integer
+	] , [
+		void:property kegg:systematicName ;
+		void:triples "3721"^^xsd:integer ;
+		void:distinctSubjects "3721"^^xsd:integer ;
+		void:distinctObjects "3712"^^xsd:integer
+	] , [
+		void:property kegg:xCofactor ;
+		void:triples "895"^^xsd:integer ;
+		void:distinctSubjects "631"^^xsd:integer ;
+		void:distinctObjects "86"^^xsd:integer
+	] , [
+		void:property kegg:xEnzyme ;
+		void:triples "7226"^^xsd:integer ;
+		void:distinctSubjects "6523"^^xsd:integer ;
+		void:distinctObjects "3626"^^xsd:integer
+	] , [
+		void:property kegg:xGene ;
+		void:triples "609037"^^xsd:integer ;
+		void:distinctSubjects "2181"^^xsd:integer ;
+		void:distinctObjects "590010"^^xsd:integer
+	] , [
+		void:property kegg:xPathway ;
+		void:triples "6032"^^xsd:integer ;
+		void:distinctSubjects "5470"^^xsd:integer ;
+		void:distinctObjects "149"^^xsd:integer
+	] , [
+		void:property kegg:xProduct ;
+		void:triples "25635"^^xsd:integer ;
+		void:distinctSubjects "11460"^^xsd:integer ;
+		void:distinctObjects "8116"^^xsd:integer
+	] , [
+		void:property kegg:xSubstrate ;
+		void:triples "24575"^^xsd:integer ;
+		void:distinctSubjects "11450"^^xsd:integer ;
+		void:distinctObjects "7115"^^xsd:integer
+	] , [
+		void:property dc:identifier ;
+		void:triples "34260"^^xsd:integer ;
+		void:distinctSubjects "34260"^^xsd:integer ;
+		void:distinctObjects "34260"^^xsd:integer
+	] , [
+		void:property dc:title ;
+		void:triples "34146"^^xsd:integer ;
+		void:distinctSubjects "34146"^^xsd:integer ;
+		void:distinctObjects "34020"^^xsd:integer
+	] , [
+		void:property rdf:type ;
+		void:triples "34260"^^xsd:integer ;
+		void:distinctSubjects "34260"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property rdfs:comment ;
+		void:triples "5479"^^xsd:integer ;
+		void:distinctSubjects "5479"^^xsd:integer ;
+		void:distinctObjects "4464"^^xsd:integer
+	] , [
+		void:property rdfs:label ;
+		void:triples "34146"^^xsd:integer ;
+		void:distinctSubjects "34146"^^xsd:integer ;
+		void:distinctObjects "34146"^^xsd:integer
+	] , [
+		void:property owl:sameAs ;
+		void:triples "30015"^^xsd:integer ;
+		void:distinctSubjects "30015"^^xsd:integer ;
+		void:distinctObjects "30015"^^xsd:integer
+	] ;
+	void:classPartition [
+		void:class kegg:Compound ;
+		void:entities "14071"^^xsd:integer
+	] , [
+		void:class kegg:Drug ;
+		void:entities "8117"^^xsd:integer
+	] , [
+		void:class kegg:Enzyme ;
+		void:entities "4245"^^xsd:integer
+	] , [
+		void:class kegg:Reaction ;
+		void:entities "7827"^^xsd:integer
+	] .

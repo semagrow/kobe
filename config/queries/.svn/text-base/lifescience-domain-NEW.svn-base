@@ -1,0 +1,64 @@
+#LS1
+SELECT $drug $melt WHERE {
+    { $drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/meltingPoint> $melt. }
+    UNION
+    { $drug <http://dbpedia.org/ontology/Drug/meltingPoint> $melt . }
+}
+
+#LS2
+SELECT ?predicate ?object WHERE {
+    { <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> ?predicate ?object . }
+    UNION    
+    { <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> <http://www.w3.org/2002/07/owl#sameAs> ?caff .
+      ?caff ?predicate ?object . } 
+}
+
+#LS3
+SELECT ?Drug ?IntDrug ?IntEffect WHERE {
+    ?Drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Drug> .
+    ?Drug <http://www.w3.org/2002/07/owl#sameAs> ?y .
+    ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y .
+    ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug .
+    ?Int <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect . 
+}
+
+#LS4
+SELECT ?drugDesc ?cpd ?equation WHERE {
+   ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/cathartics> .
+   ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> ?cpd .
+   ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/description> ?drugDesc .
+   ?enzyme <http://bio2rdf.org/ns/kegg#xSubstrate> ?cpd .
+   ?enzyme <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/ns/kegg#Enzyme> .
+   ?reaction <http://bio2rdf.org/ns/kegg#xEnzyme> ?enzyme .
+   ?reaction <http://bio2rdf.org/ns/kegg#equation> ?equation . 
+}
+
+#LS5 
+SELECT $drug $keggUrl $chebiDefinition WHERE {
+ $drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugs> .
+ $drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/keggCompoundId> $keggDrug .
+ $keggDrug <http://bio2rdf.org/ns/bio2rdf#url> $keggUrl .
+ $drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/genericName> $drugBankName .
+ $chebiDrug <http://www.w3.org/2004/02/skos/core#altLabel> $drugBankName .
+ $chebiDrug <http://www.w3.org/2004/02/skos/core#definition> $chebiDefinition .
+}
+
+#LS6
+SELECT ?drug ?title WHERE { 
+	 ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/drugCategory> <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugcategory/micronutrient> .
+	 ?drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> ?id .
+	 ?keggDrug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bio2rdf.org/ns/kegg#Drug> .
+	 ?keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> ?id .
+	 ?keggDrug <http://purl.org/dc/elements/1.1/title> ?title .
+}
+
+#LS7
+SELECT $drug $transform $mass WHERE {  
+ 	{ $drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/affectedOrganism>  'Humans and other mammals'.
+ 	  $drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/casRegistryNumber> $cas .
+ 	  $keggDrug <http://bio2rdf.org/ns/bio2rdf#xRef> $cas .
+ 	  $keggDrug <http://bio2rdf.org/ns/bio2rdf#mass> $mass
+ 	      FILTER ( $mass > '5' )
+ 	} 
+ 	  OPTIONAL { $drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> $transform . } 
+}

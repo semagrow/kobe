@@ -1,0 +1,17 @@
+description = Endpoint Federation (AliBaba) Life Science Queries
+
+dataConfig = suites\\lifescience-domain\\config\\federated-sparql.ttl
+
+querySet = LIFESCIENCEDOMAIN
+
+evalRuns = 3
+
+timeout = 600000
+
+fill = false
+
+envConfig = suites\\lifescience-domain\\env.prop
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluation
+
+sparqlRequestReport = true

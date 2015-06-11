@@ -1,0 +1,26 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://NYTimes.Locations> fluid:store "Native";
+fluid:storeFile "data\\repositories\\native-storage.dbpedia351-nytimes";
+fluid:rdfFile "data\\rdf\\nytimes\\locations.rdf";
+fluid:context <http://nytimes.org>.
+
+<http://NYTimes.Organizations> fluid:store "Native";
+fluid:storeFile "data\\repositories\\native-storage.dbpedia351-nytimes";
+fluid:rdfFile "data\\rdf\\nytimes\\organizations.rdf";
+fluid:context <http://nytimes.org>.
+
+<http://NYTimes.People> fluid:store "Native";
+fluid:storeFile "data\\repositories\\native-storage.dbpedia351-nytimes";
+fluid:rdfFile "data\\rdf\\nytimes\\people.rdf";
+fluid:context <http://nytimes.org>.
+
+<http://DBpedia.Instance-Types> fluid:store "Native";
+fluid:storeFile "data\\repositories\\native-storage.dbpedia351-nytimes";
+fluid:rdfFile "data\\rdf\\dbpedia351\\instance_types_en.nt";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Properties> fluid:store "Native";
+fluid:storeFile "data\\repositories\\native-storage.dbpedia351-nytimes";
+fluid:rdfFile "data\\rdf\\dbpedia351\\mappingbase_properties_en.nt";
+fluid:context <http://DBpedia.org>.

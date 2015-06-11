@@ -1,0 +1,61 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://DBpedia.Ontology> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\dbpedia_3.5.1.owl";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Instance-Types> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\instance_types_en.nt";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Properties> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\mappingbased_properties_en_chunked_cleaned\\";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Labels> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\labels_en.nt";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Article-Categories> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\article_categories_en.nt";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Category-Labels> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\category_labels_en.nt";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Geo-Coordinates> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\geo_coordinates_en.nt";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Images> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\images_en.nt";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.SKOS-Categories> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\skos_categories_en.nt";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Persondata> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\persondata_en.nt";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Links-NYT> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\nyt_links.nt";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Links-LGD> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351";
+fluid:rdfFile "data\\rdf\\dbpedia351\\DBpedia-LGD.nt";
+fluid:context <http://DBpedia.org>.

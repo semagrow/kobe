@@ -1,0 +1,16 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://NYTimes.Locations> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.nytimes";
+fluid:rdfFile "data\\rdf\\nytimes\\locations.rdf";
+fluid:context <http://nytimes.org>.
+
+<http://NYTimes.Organizations> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.nytimes";
+fluid:rdfFile "data\\rdf\\nytimes\\organizations.rdf";
+fluid:context <http://nytimes.org>.
+
+<http://NYTimes.People> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.nytimes";
+fluid:rdfFile "data\\rdf\\nytimes\\people.rdf";
+fluid:context <http://nytimes.org>.

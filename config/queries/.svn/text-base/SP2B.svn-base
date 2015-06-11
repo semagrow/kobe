@@ -1,0 +1,161 @@
+SELECT ?yr
+WHERE {
+  ?journal <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost/vocabulary/bench/Journal> .
+  ?journal <http://purl.org/dc/elements/1.1/title> "Journal 1 (1940)"^^<http://www.w3.org/2001/XMLSchema#string> .
+  ?journal <http://purl.org/dc/terms/issued> ?yr 
+}
+
+SELECT ?inproc ?author ?booktitle ?title 
+       ?proc ?ee ?page ?url ?yr ?abstract
+WHERE {
+  ?inproc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost/vocabulary/bench/Inproceedings> .
+  ?inproc <http://purl.org/dc/elements/1.1/creator> ?author .
+  ?inproc <http://localhost/vocabulary/bench/booktitle> ?booktitle .
+  ?inproc <http://purl.org/dc/elements/1.1/title> ?title .
+  ?inproc <http://purl.org/dc/terms/partOf> ?proc .
+  ?inproc <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?ee .
+  ?inproc <http://swrc.ontoware.org/ontology#pages> ?page .
+  ?inproc <http://xmlns.com/foaf/0.1/homepage> ?url .
+  ?inproc <http://purl.org/dc/terms/issued> ?yr 
+  OPTIONAL {
+    ?inproc <http://localhost/vocabulary/bench/abstract> ?abstract
+  }
+}
+ORDER BY ?yr
+
+SELECT ?article
+WHERE {
+  ?article <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost/vocabulary/bench/Article> .
+  ?article ?property ?value 
+  FILTER (?property=<http://swrc.ontoware.org/ontology#pages>) 
+}
+
+SELECT ?article
+WHERE {
+  ?article <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost/vocabulary/bench/Article> .
+  ?article ?property ?value
+  FILTER (?property=<http://swrc.ontoware.org/ontology#month>)
+}
+
+SELECT ?article
+WHERE {
+  ?article <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost/vocabulary/bench/Article> .
+  ?article ?property ?value
+  FILTER (?property=<http://swrc.ontoware.org/ontology#isbn>)
+}
+
+SELECT DISTINCT ?name1 ?name2 
+WHERE {
+  ?article1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost/vocabulary/bench/Article> .
+  ?article2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost/vocabulary/bench/Article> .
+  ?article1 <http://purl.org/dc/elements/1.1/creator> ?author1 .
+  ?author1 <http://xmlns.com/foaf/0.1/name> ?name1 .
+  ?article2 <http://purl.org/dc/elements/1.1/creator> ?author2 .
+  ?author2 <http://xmlns.com/foaf/0.1/name> ?name2 .
+  ?article1 <http://swrc.ontoware.org/ontology#journal> ?journal .
+  ?article2 <http://swrc.ontoware.org/ontology#journal> ?journal
+  FILTER (?name1<?name2)
+}
+
+SELECT DISTINCT ?person ?name
+WHERE {
+  ?article <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost/vocabulary/bench/Article> .
+  ?article <http://purl.org/dc/elements/1.1/creator> ?person .
+  ?inproc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost/vocabulary/bench/Inproceedings> .
+  ?inproc <http://purl.org/dc/elements/1.1/creator> ?person2 .
+  ?person <http://xmlns.com/foaf/0.1/name> ?name .
+  ?person2 <http://xmlns.com/foaf/0.1/name> ?name2
+  FILTER (?name=?name2)
+}
+
+SELECT DISTINCT ?person ?name
+WHERE {
+  ?article <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost/vocabulary/bench/Article> .
+  ?article <http://purl.org/dc/elements/1.1/creator> ?person .
+  ?inproc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost/vocabulary/bench/Inproceedings> .
+  ?inproc <http://purl.org/dc/elements/1.1/creator> ?person .
+  ?person <http://xmlns.com/foaf/0.1/name> ?name
+}
+
+SELECT ?yr ?name ?document
+WHERE {
+  ?class <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> .
+  ?document <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?class .
+  ?document <http://purl.org/dc/terms/issued> ?yr .
+  ?document <http://purl.org/dc/elements/1.1/creator> ?author .
+  ?author <http://xmlns.com/foaf/0.1/name> ?name
+  OPTIONAL {
+    ?class2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> .
+    ?document2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?class2 .
+    ?document2 <http://purl.org/dc/terms/issued> ?yr2 .
+    ?document2 <http://purl.org/dc/elements/1.1/creator> ?author2 
+    FILTER (?author=?author2 && ?yr2<?yr)
+  } FILTER (!bound(?author2))
+}
+
+SELECT DISTINCT ?title
+WHERE {
+  ?class <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> .
+  ?doc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?class .
+  ?doc <http://purl.org/dc/elements/1.1/title> ?title .
+  ?bag2 ?member2 ?doc .
+  ?doc2 <http://purl.org/dc/terms/references> ?bag2
+  OPTIONAL {
+    ?class3 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> .
+    ?doc3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?class3 .
+    ?doc3 <http://purl.org/dc/terms/references> ?bag3 .
+    ?bag3 ?member3 ?doc
+    OPTIONAL {
+      ?class4 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> .
+      ?doc4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?class4 .
+      ?doc4 <http://purl.org/dc/terms/references> ?bag4 .
+      ?bag4 ?member4 ?doc3
+    } FILTER (!bound(?doc4))
+  } FILTER (!bound(?doc3))
+}
+
+SELECT DISTINCT ?name
+WHERE {
+  ?erdoes <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+  ?erdoes <http://xmlns.com/foaf/0.1/name> "Paul Erdoes"^^<http://www.w3.org/2001/XMLSchema#string> .
+  {
+    ?document <http://purl.org/dc/elements/1.1/creator> ?erdoes .
+    ?document <http://purl.org/dc/elements/1.1/creator> ?author .
+    ?document2 <http://purl.org/dc/elements/1.1/creator> ?author .
+    ?document2 <http://purl.org/dc/elements/1.1/creator> ?author2 .
+    ?author2 <http://xmlns.com/foaf/0.1/name> ?name
+    FILTER (?author!=?erdoes &&
+            ?document2!=?document &&
+            ?author2!=?erdoes &&
+            ?author2!=?author)
+  } UNION {
+    ?document <http://purl.org/dc/elements/1.1/creator> ?erdoes.
+    ?document <http://purl.org/dc/elements/1.1/creator> ?author.
+    ?author <http://xmlns.com/foaf/0.1/name> ?name
+    FILTER (?author!=?erdoes)
+  }
+}
+
+SELECT DISTINCT ?predicate
+WHERE {
+  {
+    ?person <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+    ?subject ?predicate ?person
+  } UNION {
+    ?person <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+    ?person ?predicate ?object
+  }
+}
+
+SELECT ?subject ?predicate
+WHERE {
+  ?subject ?predicate <http://localhost/persons/Paul_Erdoes>
+}
+
+SELECT ?ee
+WHERE {
+  ?publication <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?ee
+}
+ORDER BY ?ee 
+LIMIT 10
+OFFSET 50

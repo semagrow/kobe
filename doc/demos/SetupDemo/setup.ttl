@@ -1,0 +1,81 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://NYTimes.People> fluid:localSource "D:\\Test\\people.rdf";
+fluid:webSource "http://data.nytimes.com/people.rdf";
+fluid:destPath "data\\rdf\\nytimes\\people.rdf";
+fluid:classMediator "NULL" .
+
+<http://NYTimes.Locations> fluid:localSource "D:\\Test\\locations.rdf";
+fluid:webSource "http://data.nytimes.com/locations.rdf";
+fluid:destPath "data\\rdf\\nytimes\\locations.rdf";
+fluid:classMediator "NULL" .
+
+<http://NYTimes.Organizations> fluid:localSource "D:\\Test\\organizations.rdf";
+fluid:webSource "http://data.nytimes.com/organizations.rdf";
+fluid:destPath "data\\rdf\\nytimes\\organizations.rdf";
+fluid:classMediator "NULL" .
+
+<http://DBpedia.Instance-Types> fluid:localSource "D:\\Test\\instance_types_en.nt.bz2";
+fluid:webSource "http://downloads.dbpedia.org/3.5.1/en/instance_types_en.nt.bz2";
+fluid:destPath "data\\rdf\\dbpedia351\\instance_types_en.nt";
+fluid:classMediator "org.semanticweb.fbench.setup.BZipClassMediator" .
+
+<http://DBpedia.Properties> fluid:localSource "D:\\Test\\mappingbased_properties_en.nt.bz2";
+fluid:webSource "http://downloads.dbpedia.org/3.5.1/en/mappingbased_properties_en.nt.bz2";
+fluid:destPath "data\\rdf\\dbpedia351\\mappingbased_properties_en.nt";
+fluid:classMediator "org.semanticweb.fbench.setup.BZipClassMediator" .
+
+<http://DBpedia.Labels> fluid:localSource "D:\\Test\\labels_en.nt.bz2";
+fluid:webSource "http://downloads.dbpedia.org/3.5.1/en/labels_en.nt.bz2";
+fluid:destPath "data\\rdf\\dbpedia351\\labels_en.nt";
+fluid:classMediator "org.semanticweb.fbench.setup.BZipClassMediator" .
+
+<http://DBpedia.Category-Labels> fluid:localSource "D:\\Test\\category_labels_en.nt.bz2";
+fluid:webSource "http://downloads.dbpedia.org/3.5.1/en/category_labels_en.nt.bz2";
+fluid:destPath "data\\rdf\\dbpedia351\\category_labels_en.nt";
+fluid:classMediator "org.semanticweb.fbench.setup.BZipClassMediator" .
+
+<http://DBpedia.Ontology> fluid:localSource "D:\\Test\\dbpedia_3.5.1.owl.bz2";
+fluid:webSource "http://downloads.dbpedia.org/3.5.1/dbpedia_3.5.1.owl.bz2";
+fluid:destPath "data\\rdf\\dbpedia351\\dbpedia_3.5.1.owl";
+fluid:classMediator "org.semanticweb.fbench.setup.BZipClassMediator" .
+
+<http://DBpedia.Article-Categories> fluid:localSource "D:\\Test\\article_categories_en.nt.bz2";
+fluid:webSource "http://downloads.dbpedia.org/3.5.1/en/article_categories_en.nt.bz2";
+fluid:destPath "data\\rdf\\dbpedia351\\article_categories_en.nt";
+fluid:classMediator "org.semanticweb.fbench.setup.BZipClassMediator" .
+
+<http://DBpedia.Geo-Coordinates> fluid:localSource "D:\\Test\\geo_coordinates_en.nt.bz2";
+fluid:webSource "http://downloads.dbpedia.org/3.5.1/en/geo_coordinates_en.nt.bz2";
+fluid:destPath "data\\rdf\\dbpedia351\\geo_coordinates_en.nt";
+fluid:classMediator "org.semanticweb.fbench.setup.BZipClassMediator" .
+
+<http://DBpedia.Images> fluid:localSource "D:\\Test\\images_en.nt.bz2";
+fluid:webSource "http://downloads.dbpedia.org/3.5.1/en/images_en.nt.bz2";
+fluid:destPath "data\\rdf\\dbpedia351\\images_en.nt";
+fluid:classMediator "org.semanticweb.fbench.setup.BZipClassMediator" .
+
+<http://DBpedia.YAGO-Classes> fluid:localSource "D:\\Test\\yagoclasses_links.nt.bz2";
+fluid:webSource "http://downloads.dbpedia.org/3.5.1/links/yagoclasses_links.nt.bz2";
+fluid:destPath "data\\rdf\\dbpedia351\\yagoclasses_links.nt";
+fluid:classMediator "org.semanticweb.fbench.setup.BZipClassMediator" .
+
+<http://DBpedia.SKOS-Categories> fluid:localSource "D:\\Test\\skos_categories_en.nt.bz2";
+fluid:webSource "http://downloads.dbpedia.org/3.5.1/en/skos_categories_en.nt.bz2";
+fluid:destPath "data\\rdf\\dbpedia351\\skos_categories_en.nt";
+fluid:classMediator "org.semanticweb.fbench.setup.BZipClassMediator" .
+
+<http://Geonames> fluid:localSource "D:\\Test\\all-geonames-rdf.zip";
+fluid:webSource "http://download.geonames.org/all-geonames-rdf.zip";
+fluid:destPath "data\\rdf\\geonames\\all-geonames-rdf.txt";
+fluid:classMediator "org.semanticweb.fbench.setup.ZipClassMediator" .
+
+<http://LinkedMDB> fluid:localSource "D:\\Test\\linkedmdb-latest-dump.zip";
+fluid:webSource "http://queens.db.toronto.edu/~oktie/linkedmdb/linkedmdb-latest-dump.zip";
+fluid:destPath "data\\rdf\\linkedmdb\\linkedmdb-latest-dump.nt";
+fluid:classMediator "org.semanticweb.fbench.setup.ZipClassMediator" .
+
+<http://Jamendo> fluid:localSource "D:\\Test\\jamendo-rdf.tar.gz";
+fluid:webSource "http://moustaki.org/resources/jamendo-rdf.tar.gz";
+fluid:destPath "data\\rdf\\jamendo.file";
+fluid:classMediator "org.semanticweb.fbench.setup.TarGZipClassMediator" .

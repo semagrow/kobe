@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/5/trunk/EvalBenchmark/lib/log4j
+END
+log4j.lic
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/5/trunk/EvalBenchmark/lib/log4j/log4j.lic
+END
+log4j-1.2.16.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/5/trunk/EvalBenchmark/lib/log4j/log4j-1.2.16.jar
+END

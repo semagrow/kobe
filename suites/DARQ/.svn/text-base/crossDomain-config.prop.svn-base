@@ -1,0 +1,15 @@
+description = DARQ - Cross Domain Queries
+
+dataConfig = suites/DARQ/crossDomain.ttl
+
+querySet = CROSSDOMAIN
+
+evalRuns = 10
+
+timeout = 120000
+
+fill = false
+
+envConfig = suites/DARQ/env.prop
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluation

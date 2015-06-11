@@ -1,0 +1,13 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://DBpedia> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\native-storage.dbpedia351".
+
+<http://KEGG> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\native-storage.KEGG".
+
+<http://chEBI> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\native-storage.chEBI".
+
+<http://Drugbank> fluid:store "NativeStore";
+fluid:RepositoryLocation "data\\repositories\\native-storage.drugbank".

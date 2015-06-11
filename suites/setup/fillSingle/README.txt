@@ -1,0 +1,1 @@
+This folder contains the configurations to fill a native sesame store with the dataset of the particular config.

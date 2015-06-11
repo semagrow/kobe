@@ -1,0 +1,26 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://DBpedia.Instance-Types> fluid:store "BigOWLim";
+fluid:rdfFile "data\\rdf\\dbpedia351\\instance_types_en.nt";
+fluid:RepositoryLocation "data\\repositories\\owlim-storage.dbpedia351-nytimes";
+fluid:context <http://DBpedia.org>.
+
+<http://DBpedia.Properties> fluid:store "BigOWLim";
+fluid:rdfFile "data\\rdf\\dbpedia351\\mappingbase_properties_en.nt";
+fluid:RepositoryLocation "data\\repositories\\owlim-storage.dbpedia351-nytimes";
+fluid:context <http://DBpedia.org>.
+
+<http://NYTimes.Locations> fluid:store "BigOWLim";
+fluid:rdfFile "data\\rdf\\nytimes\\locations.rdf";
+fluid:RepositoryLocation "data\\repositories\\owlim-storage.dbpedia351-nytimes";
+fluid:context <http://nytimes.org>.
+
+<http://NYTimes.Organizations> fluid:store "BigOWLim";
+fluid:rdfFile "data\\rdf\\nytimes\\organizations.rdf";
+fluid:RepositoryLocation "data\\repositories\\owlim-storage.dbpedia351-nytimes";
+fluid:context <http://nytimes.org>.
+
+<http://NYTimes.People> fluid:store "BigOWLim";
+fluid:rdfFile "data\\rdf\\nytimes\\people.rdf";
+fluid:RepositoryLocation "data\\repositories\\owlim-storage.dbpedia351-nytimes";
+fluid:context <http://nytimes.org>.

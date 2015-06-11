@@ -1,0 +1,456 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dbpo: <http://dbpedia.org/ontology/> .
+@prefix dbpp: <http://dbpedia.org/property/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix swrc: <http://swrc.ontoware.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix gml: <http://www.opengis.net/gml/> .
+@prefix georss: <http://www.georss.org/georss/> .
+@prefix geonames: <http://www.geonames.org/ontology#> .
+@prefix nyt: <http://data.nytimes.com/elements/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix bio: <http://bio2rdf.org/ns/bio2rdf#> .
+@prefix kegg: <http://bio2rdf.org/ns/kegg#> .
+@prefix drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/> .
+@prefix lmdb: <http://data.linkedmdb.org/resource/movie/> .
+@prefix lmdblink: <http://data.linkedmdb.org/resource/oddlinker/> .
+@prefix chebi: <http://bio2rdf.org/ns/chebi#> .
+
+_:nodecej98ax1 a void:Dataset ;
+	void:sparqlEndpoint <http://chebi.bio2rdf.org/sparql> ;
+	void:triples "10000457"^^xsd:integer ;
+	void:entities "1730241"^^xsd:integer ;
+	void:properties "77"^^xsd:integer ;
+	void:distinctSubjects "1730250"^^xsd:integer ;
+	void:distinctObjects "5353495"^^xsd:integer ;
+	void:propertyPartition [
+		void:property <http://localhost/vocabulary/bench/abstract> ;
+		void:triples "8974"^^xsd:integer ;
+		void:distinctSubjects "8974"^^xsd:integer ;
+		void:distinctObjects "8968"^^xsd:integer
+	] , [
+		void:property <http://localhost/vocabulary/bench/booktitle> ;
+		void:triples "568027"^^xsd:integer ;
+		void:distinctSubjects "568027"^^xsd:integer ;
+		void:distinctObjects "568027"^^xsd:integer
+	] , [
+		void:property <http://localhost/vocabulary/bench/cdrom> ;
+		void:triples "13063"^^xsd:integer ;
+		void:distinctSubjects "13063"^^xsd:integer ;
+		void:distinctObjects "13063"^^xsd:integer
+	] , [
+		void:property dc:creator ;
+		void:triples "1984302"^^xsd:integer ;
+		void:distinctSubjects "909878"^^xsd:integer ;
+		void:distinctObjects "1432922"^^xsd:integer
+	] , [
+		void:property dc:publisher ;
+		void:triples "11414"^^xsd:integer ;
+		void:distinctSubjects "11403"^^xsd:integer ;
+		void:distinctObjects "522"^^xsd:integer
+	] , [
+		void:property dc:title ;
+		void:triples "926685"^^xsd:integer ;
+		void:distinctSubjects "926685"^^xsd:integer ;
+		void:distinctObjects "926685"^^xsd:integer
+	] , [
+		void:property dcterms:issued ;
+		void:triples "577079"^^xsd:integer ;
+		void:distinctSubjects "577079"^^xsd:integer ;
+		void:distinctObjects "68"^^xsd:integer
+	] , [
+		void:property dcterms:partOf ;
+		void:triples "445456"^^xsd:integer ;
+		void:distinctSubjects "445456"^^xsd:integer ;
+		void:distinctObjects "9632"^^xsd:integer
+	] , [
+		void:property dcterms:references ;
+		void:triples "7396"^^xsd:integer ;
+		void:distinctSubjects "7396"^^xsd:integer ;
+		void:distinctObjects "7396"^^xsd:integer
+	] , [
+		void:property swrc:address ;
+		void:triples "3"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property swrc:chapter ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property swrc:editor ;
+		void:triples "29876"^^xsd:integer ;
+		void:distinctSubjects "12831"^^xsd:integer ;
+		void:distinctObjects "26071"^^xsd:integer
+	] , [
+		void:property swrc:isbn ;
+		void:triples "9551"^^xsd:integer ;
+		void:distinctSubjects "9551"^^xsd:integer ;
+		void:distinctObjects "9550"^^xsd:integer
+	] , [
+		void:property swrc:journal ;
+		void:triples "349481"^^xsd:integer ;
+		void:distinctSubjects "349481"^^xsd:integer ;
+		void:distinctObjects "7018"^^xsd:integer
+	] , [
+		void:property swrc:month ;
+		void:triples "2218"^^xsd:integer ;
+		void:distinctSubjects "2218"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property swrc:note ;
+		void:triples "10477"^^xsd:integer ;
+		void:distinctSubjects "10477"^^xsd:integer ;
+		void:distinctObjects "10297"^^xsd:integer
+	] , [
+		void:property swrc:number ;
+		void:triples "6648"^^xsd:integer ;
+		void:distinctSubjects "6648"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property swrc:pages ;
+		void:triples "852781"^^xsd:integer ;
+		void:distinctSubjects "852781"^^xsd:integer ;
+		void:distinctObjects "200"^^xsd:integer
+	] , [
+		void:property swrc:series ;
+		void:triples "6405"^^xsd:integer ;
+		void:distinctSubjects "6405"^^xsd:integer ;
+		void:distinctObjects "999"^^xsd:integer
+	] , [
+		void:property swrc:volume ;
+		void:triples "13274"^^xsd:integer ;
+		void:distinctSubjects "13274"^^xsd:integer ;
+		void:distinctObjects "68"^^xsd:integer
+	] , [
+		void:property rdf:_1 ;
+		void:triples "7396"^^xsd:integer ;
+		void:distinctSubjects "7396"^^xsd:integer ;
+		void:distinctObjects "2875"^^xsd:integer
+	] , [
+		void:property rdf:_10 ;
+		void:triples "6011"^^xsd:integer ;
+		void:distinctSubjects "6011"^^xsd:integer ;
+		void:distinctObjects "2668"^^xsd:integer
+	] , [
+		void:property rdf:_11 ;
+		void:triples "5745"^^xsd:integer ;
+		void:distinctSubjects "5745"^^xsd:integer ;
+		void:distinctObjects "2585"^^xsd:integer
+	] , [
+		void:property rdf:_12 ;
+		void:triples "5462"^^xsd:integer ;
+		void:distinctSubjects "5462"^^xsd:integer ;
+		void:distinctObjects "2481"^^xsd:integer
+	] , [
+		void:property rdf:_13 ;
+		void:triples "5169"^^xsd:integer ;
+		void:distinctSubjects "5169"^^xsd:integer ;
+		void:distinctObjects "2360"^^xsd:integer
+	] , [
+		void:property rdf:_14 ;
+		void:triples "4873"^^xsd:integer ;
+		void:distinctSubjects "4873"^^xsd:integer ;
+		void:distinctObjects "2248"^^xsd:integer
+	] , [
+		void:property rdf:_15 ;
+		void:triples "4558"^^xsd:integer ;
+		void:distinctSubjects "4558"^^xsd:integer ;
+		void:distinctObjects "2132"^^xsd:integer
+	] , [
+		void:property rdf:_16 ;
+		void:triples "4270"^^xsd:integer ;
+		void:distinctSubjects "4270"^^xsd:integer ;
+		void:distinctObjects "1996"^^xsd:integer
+	] , [
+		void:property rdf:_17 ;
+		void:triples "3956"^^xsd:integer ;
+		void:distinctSubjects "3956"^^xsd:integer ;
+		void:distinctObjects "1871"^^xsd:integer
+	] , [
+		void:property rdf:_18 ;
+		void:triples "3672"^^xsd:integer ;
+		void:distinctSubjects "3672"^^xsd:integer ;
+		void:distinctObjects "1743"^^xsd:integer
+	] , [
+		void:property rdf:_19 ;
+		void:triples "3357"^^xsd:integer ;
+		void:distinctSubjects "3357"^^xsd:integer ;
+		void:distinctObjects "1604"^^xsd:integer
+	] , [
+		void:property rdf:_2 ;
+		void:triples "7311"^^xsd:integer ;
+		void:distinctSubjects "7311"^^xsd:integer ;
+		void:distinctObjects "2938"^^xsd:integer
+	] , [
+		void:property rdf:_20 ;
+		void:triples "3051"^^xsd:integer ;
+		void:distinctSubjects "3051"^^xsd:integer ;
+		void:distinctObjects "1466"^^xsd:integer
+	] , [
+		void:property rdf:_21 ;
+		void:triples "2760"^^xsd:integer ;
+		void:distinctSubjects "2760"^^xsd:integer ;
+		void:distinctObjects "1338"^^xsd:integer
+	] , [
+		void:property rdf:_22 ;
+		void:triples "2485"^^xsd:integer ;
+		void:distinctSubjects "2485"^^xsd:integer ;
+		void:distinctObjects "1199"^^xsd:integer
+	] , [
+		void:property rdf:_23 ;
+		void:triples "2235"^^xsd:integer ;
+		void:distinctSubjects "2235"^^xsd:integer ;
+		void:distinctObjects "1103"^^xsd:integer
+	] , [
+		void:property rdf:_24 ;
+		void:triples "1981"^^xsd:integer ;
+		void:distinctSubjects "1981"^^xsd:integer ;
+		void:distinctObjects "982"^^xsd:integer
+	] , [
+		void:property rdf:_25 ;
+		void:triples "1756"^^xsd:integer ;
+		void:distinctSubjects "1756"^^xsd:integer ;
+		void:distinctObjects "880"^^xsd:integer
+	] , [
+		void:property rdf:_26 ;
+		void:triples "1541"^^xsd:integer ;
+		void:distinctSubjects "1541"^^xsd:integer ;
+		void:distinctObjects "763"^^xsd:integer
+	] , [
+		void:property rdf:_27 ;
+		void:triples "1326"^^xsd:integer ;
+		void:distinctSubjects "1326"^^xsd:integer ;
+		void:distinctObjects "653"^^xsd:integer
+	] , [
+		void:property rdf:_28 ;
+		void:triples "1138"^^xsd:integer ;
+		void:distinctSubjects "1138"^^xsd:integer ;
+		void:distinctObjects "545"^^xsd:integer
+	] , [
+		void:property rdf:_29 ;
+		void:triples "970"^^xsd:integer ;
+		void:distinctSubjects "970"^^xsd:integer ;
+		void:distinctObjects "480"^^xsd:integer
+	] , [
+		void:property rdf:_3 ;
+		void:triples "7208"^^xsd:integer ;
+		void:distinctSubjects "7208"^^xsd:integer ;
+		void:distinctObjects "2945"^^xsd:integer
+	] , [
+		void:property rdf:_30 ;
+		void:triples "830"^^xsd:integer ;
+		void:distinctSubjects "830"^^xsd:integer ;
+		void:distinctObjects "412"^^xsd:integer
+	] , [
+		void:property rdf:_31 ;
+		void:triples "681"^^xsd:integer ;
+		void:distinctSubjects "681"^^xsd:integer ;
+		void:distinctObjects "336"^^xsd:integer
+	] , [
+		void:property rdf:_32 ;
+		void:triples "567"^^xsd:integer ;
+		void:distinctSubjects "567"^^xsd:integer ;
+		void:distinctObjects "282"^^xsd:integer
+	] , [
+		void:property rdf:_33 ;
+		void:triples "468"^^xsd:integer ;
+		void:distinctSubjects "468"^^xsd:integer ;
+		void:distinctObjects "241"^^xsd:integer
+	] , [
+		void:property rdf:_34 ;
+		void:triples "393"^^xsd:integer ;
+		void:distinctSubjects "393"^^xsd:integer ;
+		void:distinctObjects "199"^^xsd:integer
+	] , [
+		void:property rdf:_35 ;
+		void:triples "318"^^xsd:integer ;
+		void:distinctSubjects "318"^^xsd:integer ;
+		void:distinctObjects "166"^^xsd:integer
+	] , [
+		void:property rdf:_36 ;
+		void:triples "250"^^xsd:integer ;
+		void:distinctSubjects "250"^^xsd:integer ;
+		void:distinctObjects "132"^^xsd:integer
+	] , [
+		void:property rdf:_37 ;
+		void:triples "204"^^xsd:integer ;
+		void:distinctSubjects "204"^^xsd:integer ;
+		void:distinctObjects "103"^^xsd:integer
+	] , [
+		void:property rdf:_38 ;
+		void:triples "158"^^xsd:integer ;
+		void:distinctSubjects "158"^^xsd:integer ;
+		void:distinctObjects "79"^^xsd:integer
+	] , [
+		void:property rdf:_39 ;
+		void:triples "131"^^xsd:integer ;
+		void:distinctSubjects "131"^^xsd:integer ;
+		void:distinctObjects "67"^^xsd:integer
+	] , [
+		void:property rdf:_4 ;
+		void:triples "7103"^^xsd:integer ;
+		void:distinctSubjects "7103"^^xsd:integer ;
+		void:distinctObjects "2944"^^xsd:integer
+	] , [
+		void:property rdf:_40 ;
+		void:triples "102"^^xsd:integer ;
+		void:distinctSubjects "102"^^xsd:integer ;
+		void:distinctObjects "57"^^xsd:integer
+	] , [
+		void:property rdf:_41 ;
+		void:triples "77"^^xsd:integer ;
+		void:distinctSubjects "77"^^xsd:integer ;
+		void:distinctObjects "43"^^xsd:integer
+	] , [
+		void:property rdf:_42 ;
+		void:triples "62"^^xsd:integer ;
+		void:distinctSubjects "62"^^xsd:integer ;
+		void:distinctObjects "32"^^xsd:integer
+	] , [
+		void:property rdf:_43 ;
+		void:triples "46"^^xsd:integer ;
+		void:distinctSubjects "46"^^xsd:integer ;
+		void:distinctObjects "20"^^xsd:integer
+	] , [
+		void:property rdf:_44 ;
+		void:triples "35"^^xsd:integer ;
+		void:distinctSubjects "35"^^xsd:integer ;
+		void:distinctObjects "17"^^xsd:integer
+	] , [
+		void:property rdf:_45 ;
+		void:triples "26"^^xsd:integer ;
+		void:distinctSubjects "26"^^xsd:integer ;
+		void:distinctObjects "15"^^xsd:integer
+	] , [
+		void:property rdf:_46 ;
+		void:triples "20"^^xsd:integer ;
+		void:distinctSubjects "20"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property rdf:_47 ;
+		void:triples "18"^^xsd:integer ;
+		void:distinctSubjects "18"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property rdf:_48 ;
+		void:triples "14"^^xsd:integer ;
+		void:distinctSubjects "14"^^xsd:integer ;
+		void:distinctObjects "9"^^xsd:integer
+	] , [
+		void:property rdf:_49 ;
+		void:triples "8"^^xsd:integer ;
+		void:distinctSubjects "8"^^xsd:integer ;
+		void:distinctObjects "7"^^xsd:integer
+	] , [
+		void:property rdf:_5 ;
+		void:triples "6979"^^xsd:integer ;
+		void:distinctSubjects "6979"^^xsd:integer ;
+		void:distinctObjects "2929"^^xsd:integer
+	] , [
+		void:property rdf:_50 ;
+		void:triples "4"^^xsd:integer ;
+		void:distinctSubjects "4"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property rdf:_51 ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property rdf:_52 ;
+		void:triples "1"^^xsd:integer ;
+		void:distinctSubjects "1"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property rdf:_6 ;
+		void:triples "6826"^^xsd:integer ;
+		void:distinctSubjects "6826"^^xsd:integer ;
+		void:distinctObjects "2938"^^xsd:integer
+	] , [
+		void:property rdf:_7 ;
+		void:triples "6648"^^xsd:integer ;
+		void:distinctSubjects "6648"^^xsd:integer ;
+		void:distinctObjects "2882"^^xsd:integer
+	] , [
+		void:property rdf:_8 ;
+		void:triples "6462"^^xsd:integer ;
+		void:distinctSubjects "6462"^^xsd:integer ;
+		void:distinctObjects "2837"^^xsd:integer
+	] , [
+		void:property rdf:_9 ;
+		void:triples "6244"^^xsd:integer ;
+		void:distinctSubjects "6244"^^xsd:integer ;
+		void:distinctObjects "2760"^^xsd:integer
+	] , [
+		void:property rdf:type ;
+		void:triples "1730241"^^xsd:integer ;
+		void:distinctSubjects "1730241"^^xsd:integer ;
+		void:distinctObjects "12"^^xsd:integer
+	] , [
+		void:property rdfs:seeAlso ;
+		void:triples "600388"^^xsd:integer ;
+		void:distinctSubjects "600388"^^xsd:integer ;
+		void:distinctObjects "600388"^^xsd:integer
+	] , [
+		void:property rdfs:subClassOf ;
+		void:triples "9"^^xsd:integer ;
+		void:distinctSubjects "9"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property foaf:homepage ;
+		void:triples "917642"^^xsd:integer ;
+		void:distinctSubjects "917642"^^xsd:integer ;
+		void:distinctObjects "917642"^^xsd:integer
+	] , [
+		void:property foaf:name ;
+		void:triples "796159"^^xsd:integer ;
+		void:distinctSubjects "796159"^^xsd:integer ;
+		void:distinctObjects "796159"^^xsd:integer
+	] ;
+	void:classPartition [
+		void:class <http://localhost/vocabulary/bench/Article> ;
+		void:entities "349481"^^xsd:integer
+	] , [
+		void:class <http://localhost/vocabulary/bench/Book> ;
+		void:entities "1291"^^xsd:integer
+	] , [
+		void:class <http://localhost/vocabulary/bench/Incollection> ;
+		void:entities "2214"^^xsd:integer
+	] , [
+		void:class <http://localhost/vocabulary/bench/Inproceedings> ;
+		void:entities "556355"^^xsd:integer
+	] , [
+		void:class <http://localhost/vocabulary/bench/Journal> ;
+		void:entities "7086"^^xsd:integer
+	] , [
+		void:class <http://localhost/vocabulary/bench/MastersThesis> ;
+		void:entities "123"^^xsd:integer
+	] , [
+		void:class <http://localhost/vocabulary/bench/PhDThesis> ;
+		void:entities "289"^^xsd:integer
+	] , [
+		void:class <http://localhost/vocabulary/bench/Proceedings> ;
+		void:entities "9721"^^xsd:integer
+	] , [
+		void:class <http://localhost/vocabulary/bench/Www> ;
+		void:entities "125"^^xsd:integer
+	] , [
+		void:class rdf:Bag ;
+		void:entities "7396"^^xsd:integer
+	] , [
+		void:class foaf:Document ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class foaf:Person ;
+		void:entities "796159"^^xsd:integer
+	] .

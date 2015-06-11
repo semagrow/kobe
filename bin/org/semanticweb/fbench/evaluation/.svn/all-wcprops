@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/evaluation
+END
+Evaluation.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/evaluation/Evaluation.java
+END
+SesameSparqlEvaluation.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/evaluation/SesameSparqlEvaluation.java
+END
+EvaluationThread.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/120/trunk/EvalBenchmark/src/org/semanticweb/fbench/evaluation/EvaluationThread.java
+END
+SesameRepositoryLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/131/trunk/EvalBenchmark/src/org/semanticweb/fbench/evaluation/SesameRepositoryLoader.java
+END
+SesameEvaluation.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/evaluation/SesameEvaluation.java
+END

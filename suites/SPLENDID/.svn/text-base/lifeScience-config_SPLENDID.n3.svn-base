@@ -1,0 +1,67 @@
+################################################################################
+# Sesame configuration for the RDF federator.
+#
+# ATTENTION: the Sail implementing the sail:sailType must be published
+#            in META-INF/services/org.openrdf.sail.SailFactory
+################################################################################
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix rep:  <http://www.openrdf.org/config/repository#>.
+@prefix sr:   <http://www.openrdf.org/config/repository/sail#>.
+@prefix sail: <http://www.openrdf.org/config/sail#>.
+@prefix fed:  <http://west.uni-koblenz.de/config/federation/sail#>.
+
+[] a rep:Repository ;
+   rep:repositoryTitle "RDF Federator" ;
+   rep:repositoryID "RDFFederator" ;
+   rep:repositoryImpl [
+      rep:repositoryType "openrdf:SailRepository" ;
+      sr:sailImpl [
+         sail:sailType "west:FederationSail" ;
+
+         # source selection {ASK, INDEX, INDEX_ASK}
+         fed:sourceSelection [
+            fed:selectorType "INDEX_ASK";
+            fed:useTypeStats true ;  # deprecated
+         ] ;
+
+         # optimizer settings {DYNAMIC_PROGRAMMING, PATTERN_HEURISTIC}
+         fed:queryOptimization [
+            fed:optimizerType "DYNAMIC_PROGRAMMING" ;
+
+            # cardinality estimation setting {VOID, VOID_PLUS, TRUE_CARD}            
+            fed:cardEstimator "VOID_PLUS" ;
+            
+            # sub query grouping
+            fed:groupBySource true ;
+            fed:groupBySameAs true ;
+            
+            # join operator implementation
+            fed:useBindJoin true ;
+            fed:useHashJoin true ;
+         ] ;
+
+         # sparql endpoints
+         # 1. dbpedia
+         # 2. kegg
+         # 3. chebi
+         # 4. drugbank
+         fed:member [
+            rep:repositoryType "west:VoidRepository" ;
+            fed:voidDescription <void/dbpedia3.5.1_subset-void.n3> ;
+            void:sparqlEndpoint <http://localhost:10000/sparql>
+         ], [
+            rep:repositoryType "west:VoidRepository" ;
+            fed:voidDescription <void/KEGG-2010-11-26-void.n3> ;
+            void:sparqlEndpoint <http://localhost:10001/sparql>
+         ], [
+            rep:repositoryType "west:VoidRepository" ;
+            fed:voidDescription <void/chebi-2010-11-26-void.n3> ;
+            void:sparqlEndpoint <http://localhost:10002/sparql>
+         ], [
+            rep:repositoryType "west:VoidRepository" ;
+            fed:voidDescription <void/drugbank_dump_cleaned-2010-11.26-void.n3> ;
+            void:sparqlEndpoint <http://localhost:10003/sparql>
+         ]
+         
+      ]
+   ] .

@@ -1,0 +1,43 @@
+10
+
+dir
+144
+http://fbench.googlecode.com/svn/trunk/EvalBenchmark/doc/demos
+http://fbench.googlecode.com/svn
+
+
+
+2011-01-06T15:15:02.468713Z
+96
+aschwarte10@googlemail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+448d59bb-d1c0-2985-a03c-9d90f50fb865
+
+FillNativeSingleNytimesDbpedia
+dir
+
+QueryNativeNytimes
+dir
+
+SetupDemo
+dir
+
+FederatedSparql
+dir
+
+FillNativeNytimes
+dir
+

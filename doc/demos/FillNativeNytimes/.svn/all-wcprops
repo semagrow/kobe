@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/96/trunk/EvalBenchmark/doc/demos/FillNativeNytimes
+END
+fillNativeStore-nytimes.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/21/trunk/EvalBenchmark/doc/demos/FillNativeNytimes/fillNativeStore-nytimes.ttl
+END
+config.prop
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/96/trunk/EvalBenchmark/doc/demos/FillNativeNytimes/config.prop
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/8/trunk/EvalBenchmark/doc/demos/FillNativeNytimes/README.txt
+END
+runDemo.bat
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/8/trunk/EvalBenchmark/doc/demos/FillNativeNytimes/runDemo.bat
+END

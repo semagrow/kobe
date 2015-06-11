@@ -1,0 +1,65 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://SP2B-a> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10000/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-a".
+
+<http://SP2B-b> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10001/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-b".
+
+<http://SP2B-c> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10002/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-c".
+
+<http://SP2B-d> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10003/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-d".
+
+<http://SP2B-e> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10004/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-e".
+
+<http://SP2B-f> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10005/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-f".
+
+<http://SP2B-g> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10006/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-g".
+
+<http://SP2B-h> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10007/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-h".
+
+<http://SP2B-i> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10008/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-i".
+
+<http://SP2B-j> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10009/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-j".
+
+<http://SP2B-k> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10010/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-k".
+
+<http://SP2B-l> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10011/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-l".
+
+<http://SP2B-m> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10012/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-m".
+
+<http://SP2B-n> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10013/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-n".
+
+<http://SP2B-o> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10014/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-o".
+
+<http://SP2B-p> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10015/sparql";
+fluid:localRepoLoc "data/repositories/SP2B-10M/native-storage.SP2B-10M-p".

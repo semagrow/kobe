@@ -1,0 +1,22 @@
+description = SemaGrow - Life Science Queries
+
+dataConfig = suites/semagrow/lifeScience/lifeScience.ttl
+
+querySet = LIFESCIENCEDOMAIN
+
+evalRuns = 1
+
+timeout = 20000000
+
+fill = false
+
+#envConfig = suites/semagrow/lifeScience/env.prop
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluation
+
+baseDir = /root/workspace/EvalBenchmark/suites/semagrow/lifeScience/
+
+debugMode = false
+showResults = false
+
+

@@ -1,0 +1,21 @@
+dataConfig = suites\\fedx\\CrossDomain-FedX-SPARQL.ttl
+
+querySet = CROSSDOMAIN
+#querySet = CUSTOM1
+
+evalRuns = 1
+
+timeout = 600000
+
+fill = false
+
+envConfig = suites\\fedx\\env.prop
+
+evaluationClass = org.semanticweb.fbench.evaluation.FedXSparqlEvaluation
+
+reportStream = org.semanticweb.fbench.report.CsvReportStream2
+
+sparqlRequestReport = true
+
+fedxConfig = suites\\fedx\\fedxConfig.prop
+

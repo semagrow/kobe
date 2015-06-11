@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/123/trunk/EvalBenchmark/suites/SPLENDID
+END
+crossDomain-config_SPLENDID.n3
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/118/trunk/EvalBenchmark/suites/SPLENDID/crossDomain-config_SPLENDID.n3
+END
+env.prop
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/118/trunk/EvalBenchmark/suites/SPLENDID/env.prop
+END
+runLifeScience.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/118/trunk/EvalBenchmark/suites/SPLENDID/runLifeScience.sh
+END
+runCross.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/118/trunk/EvalBenchmark/suites/SPLENDID/runCross.sh
+END
+lifeScience-config.prop
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/118/trunk/EvalBenchmark/suites/SPLENDID/lifeScience-config.prop
+END
+lifeScience.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/123/trunk/EvalBenchmark/suites/SPLENDID/lifeScience.ttl
+END
+lifeScience-config_SPLENDID.n3
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/118/trunk/EvalBenchmark/suites/SPLENDID/lifeScience-config_SPLENDID.n3
+END
+crossDomain-config.prop
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/118/trunk/EvalBenchmark/suites/SPLENDID/crossDomain-config.prop
+END
+crossDomain.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/123/trunk/EvalBenchmark/suites/SPLENDID/crossDomain.ttl
+END
+runCross.bat
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/118/trunk/EvalBenchmark/suites/SPLENDID/runCross.bat
+END
+runLifeScience.bat
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/118/trunk/EvalBenchmark/suites/SPLENDID/runLifeScience.bat
+END

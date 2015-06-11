@@ -1,0 +1,17 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://DBpedia> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:8891/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://KEGG> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:8895/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.KEGG" .
+
+<http://chEBI> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:8890/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.chEBI" .
+
+<http://Drugbank> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:8892/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.drugbank" .

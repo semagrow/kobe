@@ -1,0 +1,6 @@
+dataConfig = suites\\setup\\fillSingle\\fill-chEBI.ttl
+
+envConfig = suites\\setup\\env.prop
+
+fill = true
+

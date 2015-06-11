@@ -1,0 +1,739 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dbpo: <http://dbpedia.org/ontology/> .
+
+_:node-bkhilpx1 a void:Dataset ;
+	void:sparqlEndpoint <http://dbpedia.org/sparql> ;
+	void:triples "5495590"^^xsd:integer ;
+	void:entities "1477796"^^xsd:integer ;
+	void:properties "1"^^xsd:integer ;
+	void:distinctSubjects "1477796"^^xsd:integer ;
+	void:distinctObjects "240"^^xsd:integer ;
+	void:propertyPartition [
+		void:property rdf:type ;
+		void:triples "5495590"^^xsd:integer ;
+		void:distinctSubjects "1477796"^^xsd:integer ;
+		void:distinctObjects "240"^^xsd:integer
+	] ;
+	void:classPartition [
+		void:class dbpo:Activity ;
+		void:entities "1234"^^xsd:integer
+	] , [
+		void:class dbpo:Actor ;
+		void:entities "37898"^^xsd:integer
+	] , [
+		void:class dbpo:AdministrativeRegion ;
+		void:entities "67005"^^xsd:integer
+	] , [
+		void:class dbpo:AdultActor ;
+		void:entities "1621"^^xsd:integer
+	] , [
+		void:class dbpo:Aircraft ;
+		void:entities "6187"^^xsd:integer
+	] , [
+		void:class dbpo:Airline ;
+		void:entities "2457"^^xsd:integer
+	] , [
+		void:class dbpo:Airport ;
+		void:entities "9520"^^xsd:integer
+	] , [
+		void:class dbpo:Album ;
+		void:entities "94033"^^xsd:integer
+	] , [
+		void:class dbpo:Ambassador ;
+		void:entities "254"^^xsd:integer
+	] , [
+		void:class dbpo:AmericanFootballLeague ;
+		void:entities "69"^^xsd:integer
+	] , [
+		void:class dbpo:AmericanFootballPlayer ;
+		void:entities "8963"^^xsd:integer
+	] , [
+		void:class dbpo:AmericanFootballTeam ;
+		void:entities "32"^^xsd:integer
+	] , [
+		void:class dbpo:Amphibian ;
+		void:entities "6841"^^xsd:integer
+	] , [
+		void:class dbpo:AnatomicalStructure ;
+		void:entities "3851"^^xsd:integer
+	] , [
+		void:class dbpo:Animal ;
+		void:entities "96534"^^xsd:integer
+	] , [
+		void:class dbpo:Arachnid ;
+		void:entities "1846"^^xsd:integer
+	] , [
+		void:class dbpo:Archaea ;
+		void:entities "164"^^xsd:integer
+	] , [
+		void:class dbpo:Architect ;
+		void:entities "652"^^xsd:integer
+	] , [
+		void:class dbpo:Artery ;
+		void:entities "364"^^xsd:integer
+	] , [
+		void:class dbpo:Artist ;
+		void:entities "78829"^^xsd:integer
+	] , [
+		void:class dbpo:Astronaut ;
+		void:entities "602"^^xsd:integer
+	] , [
+		void:class dbpo:Athlete ;
+		void:entities "114848"^^xsd:integer
+	] , [
+		void:class dbpo:AustralianFootballLeague ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class dbpo:AutoRacingLeague ;
+		void:entities "15"^^xsd:integer
+	] , [
+		void:class dbpo:Automobile ;
+		void:entities "6517"^^xsd:integer
+	] , [
+		void:class dbpo:AutomobileEngine ;
+		void:entities "15957"^^xsd:integer
+	] , [
+		void:class dbpo:Award ;
+		void:entities "561"^^xsd:integer
+	] , [
+		void:class dbpo:Bacteria ;
+		void:entities "163"^^xsd:integer
+	] , [
+		void:class dbpo:BadmintonPlayer ;
+		void:entities "352"^^xsd:integer
+	] , [
+		void:class dbpo:Band ;
+		void:entities "21862"^^xsd:integer
+	] , [
+		void:class dbpo:BaseballLeague ;
+		void:entities "133"^^xsd:integer
+	] , [
+		void:class dbpo:BaseballPlayer ;
+		void:entities "11256"^^xsd:integer
+	] , [
+		void:class dbpo:BasketballLeague ;
+		void:entities "177"^^xsd:integer
+	] , [
+		void:class dbpo:BasketballPlayer ;
+		void:entities "1352"^^xsd:integer
+	] , [
+		void:class dbpo:Beverage ;
+		void:entities "488"^^xsd:integer
+	] , [
+		void:class dbpo:Bird ;
+		void:entities "12334"^^xsd:integer
+	] , [
+		void:class dbpo:BodyOfWater ;
+		void:entities "26717"^^xsd:integer
+	] , [
+		void:class dbpo:Bone ;
+		void:entities "414"^^xsd:integer
+	] , [
+		void:class dbpo:Book ;
+		void:entities "20490"^^xsd:integer
+	] , [
+		void:class dbpo:Boxer ;
+		void:entities "1181"^^xsd:integer
+	] , [
+		void:class dbpo:Brain ;
+		void:entities "513"^^xsd:integer
+	] , [
+		void:class dbpo:Bridge ;
+		void:entities "2175"^^xsd:integer
+	] , [
+		void:class dbpo:BritishRoyalty ;
+		void:entities "4094"^^xsd:integer
+	] , [
+		void:class dbpo:Broadcast ;
+		void:entities "6775"^^xsd:integer
+	] , [
+		void:class dbpo:Building ;
+		void:entities "32780"^^xsd:integer
+	] , [
+		void:class dbpo:CanadianFootballLeague ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class dbpo:CanadianFootballTeam ;
+		void:entities "20"^^xsd:integer
+	] , [
+		void:class dbpo:Canal ;
+		void:entities "96"^^xsd:integer
+	] , [
+		void:class dbpo:Cardinal ;
+		void:entities "609"^^xsd:integer
+	] , [
+		void:class dbpo:Cave ;
+		void:entities "144"^^xsd:integer
+	] , [
+		void:class dbpo:Chancellor ;
+		void:entities "85"^^xsd:integer
+	] , [
+		void:class dbpo:ChemicalCompound ;
+		void:entities "6273"^^xsd:integer
+	] , [
+		void:class dbpo:ChristianBishop ;
+		void:entities "2207"^^xsd:integer
+	] , [
+		void:class dbpo:City ;
+		void:entities "12702"^^xsd:integer
+	] , [
+		void:class dbpo:Cleric ;
+		void:entities "5423"^^xsd:integer
+	] , [
+		void:class dbpo:ClubMoss ;
+		void:entities "64"^^xsd:integer
+	] , [
+		void:class dbpo:College ;
+		void:entities "78"^^xsd:integer
+	] , [
+		void:class dbpo:CollegeCoach ;
+		void:entities "3520"^^xsd:integer
+	] , [
+		void:class dbpo:Colour ;
+		void:entities "657"^^xsd:integer
+	] , [
+		void:class dbpo:Comedian ;
+		void:entities "622"^^xsd:integer
+	] , [
+		void:class dbpo:ComicsCharacter ;
+		void:entities "5161"^^xsd:integer
+	] , [
+		void:class dbpo:ComicsCreator ;
+		void:entities "1895"^^xsd:integer
+	] , [
+		void:class dbpo:Company ;
+		void:entities "31251"^^xsd:integer
+	] , [
+		void:class dbpo:Congressman ;
+		void:entities "1922"^^xsd:integer
+	] , [
+		void:class dbpo:Conifer ;
+		void:entities "702"^^xsd:integer
+	] , [
+		void:class dbpo:Continent ;
+		void:entities "8"^^xsd:integer
+	] , [
+		void:class dbpo:Convention ;
+		void:entities "335"^^xsd:integer
+	] , [
+		void:class dbpo:Country ;
+		void:entities "2505"^^xsd:integer
+	] , [
+		void:class dbpo:CricketLeague ;
+		void:entities "7"^^xsd:integer
+	] , [
+		void:class dbpo:Cricketer ;
+		void:entities "6117"^^xsd:integer
+	] , [
+		void:class dbpo:Criminal ;
+		void:entities "997"^^xsd:integer
+	] , [
+		void:class dbpo:Crustacean ;
+		void:entities "1506"^^xsd:integer
+	] , [
+		void:class dbpo:Currency ;
+		void:entities "313"^^xsd:integer
+	] , [
+		void:class dbpo:Cycad ;
+		void:entities "165"^^xsd:integer
+	] , [
+		void:class dbpo:Cyclist ;
+		void:entities "2648"^^xsd:integer
+	] , [
+		void:class dbpo:Device ;
+		void:entities "19626"^^xsd:integer
+	] , [
+		void:class dbpo:Disease ;
+		void:entities "4647"^^xsd:integer
+	] , [
+		void:class dbpo:Drug ;
+		void:entities "4348"^^xsd:integer
+	] , [
+		void:class dbpo:EducationalInstitution ;
+		void:entities "31297"^^xsd:integer
+	] , [
+		void:class dbpo:Embryology ;
+		void:entities "160"^^xsd:integer
+	] , [
+		void:class dbpo:EthnicGroup ;
+		void:entities "2534"^^xsd:integer
+	] , [
+		void:class dbpo:Eukaryote ;
+		void:entities "143504"^^xsd:integer
+	] , [
+		void:class dbpo:EurovisionSongContestEntry ;
+		void:entities "1077"^^xsd:integer
+	] , [
+		void:class dbpo:Event ;
+		void:entities "12244"^^xsd:integer
+	] , [
+		void:class dbpo:Fern ;
+		void:entities "570"^^xsd:integer
+	] , [
+		void:class dbpo:FictionalCharacter ;
+		void:entities "8635"^^xsd:integer
+	] , [
+		void:class dbpo:FieldHockeyLeague ;
+		void:entities "14"^^xsd:integer
+	] , [
+		void:class dbpo:FigureSkater ;
+		void:entities "1662"^^xsd:integer
+	] , [
+		void:class dbpo:Film ;
+		void:entities "49184"^^xsd:integer
+	] , [
+		void:class dbpo:FilmFestival ;
+		void:entities "165"^^xsd:integer
+	] , [
+		void:class dbpo:Fish ;
+		void:entities "11134"^^xsd:integer
+	] , [
+		void:class dbpo:FloweringPlant ;
+		void:entities "9775"^^xsd:integer
+	] , [
+		void:class dbpo:FormulaOneRacer ;
+		void:entities "707"^^xsd:integer
+	] , [
+		void:class dbpo:Fungus ;
+		void:entities "6960"^^xsd:integer
+	] , [
+		void:class dbpo:GaelicGamesPlayer ;
+		void:entities "1537"^^xsd:integer
+	] , [
+		void:class dbpo:Game ;
+		void:entities "1136"^^xsd:integer
+	] , [
+		void:class dbpo:Ginkgo ;
+		void:entities "4"^^xsd:integer
+	] , [
+		void:class dbpo:Gnetophytes ;
+		void:entities "27"^^xsd:integer
+	] , [
+		void:class dbpo:Governor ;
+		void:entities "2145"^^xsd:integer
+	] , [
+		void:class dbpo:GrandPrix ;
+		void:entities "721"^^xsd:integer
+	] , [
+		void:class dbpo:Grape ;
+		void:entities "241"^^xsd:integer
+	] , [
+		void:class dbpo:GreenAlga ;
+		void:entities "341"^^xsd:integer
+	] , [
+		void:class dbpo:GridironFootballPlayer ;
+		void:entities "15284"^^xsd:integer
+	] , [
+		void:class dbpo:HandballLeague ;
+		void:entities "6"^^xsd:integer
+	] , [
+		void:class dbpo:HistoricPlace ;
+		void:entities "23297"^^xsd:integer
+	] , [
+		void:class dbpo:HockeyTeam ;
+		void:entities "60"^^xsd:integer
+	] , [
+		void:class dbpo:Hospital ;
+		void:entities "1327"^^xsd:integer
+	] , [
+		void:class dbpo:IceHockeyLeague ;
+		void:entities "127"^^xsd:integer
+	] , [
+		void:class dbpo:IceHockeyPlayer ;
+		void:entities "6304"^^xsd:integer
+	] , [
+		void:class dbpo:Infrastructure ;
+		void:entities "8914"^^xsd:integer
+	] , [
+		void:class dbpo:InlineHockeyLeague ;
+		void:entities "13"^^xsd:integer
+	] , [
+		void:class dbpo:Insect ;
+		void:entities "36245"^^xsd:integer
+	] , [
+		void:class dbpo:Island ;
+		void:entities "1822"^^xsd:integer
+	] , [
+		void:class dbpo:Journalist ;
+		void:entities "1352"^^xsd:integer
+	] , [
+		void:class dbpo:Judge ;
+		void:entities "911"^^xsd:integer
+	] , [
+		void:class dbpo:LacrosseLeague ;
+		void:entities "13"^^xsd:integer
+	] , [
+		void:class dbpo:Lake ;
+		void:entities "8174"^^xsd:integer
+	] , [
+		void:class dbpo:Language ;
+		void:entities "3059"^^xsd:integer
+	] , [
+		void:class dbpo:LaunchPad ;
+		void:entities "63"^^xsd:integer
+	] , [
+		void:class dbpo:Legislature ;
+		void:entities "380"^^xsd:integer
+	] , [
+		void:class dbpo:Lighthouse ;
+		void:entities "991"^^xsd:integer
+	] , [
+		void:class dbpo:LunarCrater ;
+		void:entities "1449"^^xsd:integer
+	] , [
+		void:class dbpo:Lymph ;
+		void:entities "81"^^xsd:integer
+	] , [
+		void:class dbpo:Magazine ;
+		void:entities "2182"^^xsd:integer
+	] , [
+		void:class dbpo:Mammal ;
+		void:entities "8274"^^xsd:integer
+	] , [
+		void:class dbpo:Mayor ;
+		void:entities "799"^^xsd:integer
+	] , [
+		void:class dbpo:MeanOfTransportation ;
+		void:entities "32712"^^xsd:integer
+	] , [
+		void:class dbpo:MemberOfParliament ;
+		void:entities "3951"^^xsd:integer
+	] , [
+		void:class dbpo:MilitaryConflict ;
+		void:entities "8053"^^xsd:integer
+	] , [
+		void:class dbpo:MilitaryPerson ;
+		void:entities "13494"^^xsd:integer
+	] , [
+		void:class dbpo:MilitaryUnit ;
+		void:entities "9393"^^xsd:integer
+	] , [
+		void:class dbpo:MixedMartialArtsEvent ;
+		void:entities "719"^^xsd:integer
+	] , [
+		void:class dbpo:MixedMartialArtsLeague ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class dbpo:Model ;
+		void:entities "836"^^xsd:integer
+	] , [
+		void:class dbpo:Mollusca ;
+		void:entities "8677"^^xsd:integer
+	] , [
+		void:class dbpo:Monarch ;
+		void:entities "1517"^^xsd:integer
+	] , [
+		void:class dbpo:Monument ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class dbpo:Moss ;
+		void:entities "331"^^xsd:integer
+	] , [
+		void:class dbpo:MotorcycleRacingLeague ;
+		void:entities "15"^^xsd:integer
+	] , [
+		void:class dbpo:Mountain ;
+		void:entities "8479"^^xsd:integer
+	] , [
+		void:class dbpo:MountainRange ;
+		void:entities "1473"^^xsd:integer
+	] , [
+		void:class dbpo:Muscle ;
+		void:entities "276"^^xsd:integer
+	] , [
+		void:class dbpo:MusicFestival ;
+		void:entities "604"^^xsd:integer
+	] , [
+		void:class dbpo:MusicGenre ;
+		void:entities "586"^^xsd:integer
+	] , [
+		void:class dbpo:Musical ;
+		void:entities "1010"^^xsd:integer
+	] , [
+		void:class dbpo:MusicalArtist ;
+		void:entities "25630"^^xsd:integer
+	] , [
+		void:class dbpo:MusicalWork ;
+		void:entities "131036"^^xsd:integer
+	] , [
+		void:class dbpo:NascarDriver ;
+		void:entities "555"^^xsd:integer
+	] , [
+		void:class dbpo:NationalCollegiateAthleticAssociationAthlete ;
+		void:entities "420"^^xsd:integer
+	] , [
+		void:class dbpo:Nerve ;
+		void:entities "335"^^xsd:integer
+	] , [
+		void:class dbpo:Newspaper ;
+		void:entities "3337"^^xsd:integer
+	] , [
+		void:class dbpo:Non-ProfitOrganisation ;
+		void:entities "1443"^^xsd:integer
+	] , [
+		void:class dbpo:OfficeHolder ;
+		void:entities "16526"^^xsd:integer
+	] , [
+		void:class dbpo:OlympicResult ;
+		void:entities "711"^^xsd:integer
+	] , [
+		void:class dbpo:Olympics ;
+		void:entities "52"^^xsd:integer
+	] , [
+		void:class dbpo:Organisation ;
+		void:entities "134972"^^xsd:integer
+	] , [
+		void:class dbpo:Park ;
+		void:entities "847"^^xsd:integer
+	] , [
+		void:class dbpo:Person ;
+		void:entities "317015"^^xsd:integer
+	] , [
+		void:class dbpo:PersonFunction ;
+		void:entities "22377"^^xsd:integer
+	] , [
+		void:class dbpo:Philosopher ;
+		void:entities "946"^^xsd:integer
+	] , [
+		void:class dbpo:Place ;
+		void:entities "413404"^^xsd:integer
+	] , [
+		void:class dbpo:Planet ;
+		void:entities "12348"^^xsd:integer
+	] , [
+		void:class dbpo:Plant ;
+		void:entities "39528"^^xsd:integer
+	] , [
+		void:class dbpo:PlayboyPlaymate ;
+		void:entities "652"^^xsd:integer
+	] , [
+		void:class dbpo:PokerPlayer ;
+		void:entities "541"^^xsd:integer
+	] , [
+		void:class dbpo:Politician ;
+		void:entities "19285"^^xsd:integer
+	] , [
+		void:class dbpo:PoloLeague ;
+		void:entities "3"^^xsd:integer
+	] , [
+		void:class dbpo:Pope ;
+		void:entities "263"^^xsd:integer
+	] , [
+		void:class dbpo:PopulatedPlace ;
+		void:entities "310970"^^xsd:integer
+	] , [
+		void:class dbpo:President ;
+		void:entities "2105"^^xsd:integer
+	] , [
+		void:class dbpo:PrimeMinister ;
+		void:entities "1581"^^xsd:integer
+	] , [
+		void:class dbpo:ProtectedArea ;
+		void:entities "4521"^^xsd:integer
+	] , [
+		void:class dbpo:Protein ;
+		void:entities "1689"^^xsd:integer
+	] , [
+		void:class dbpo:Race ;
+		void:entities "321"^^xsd:integer
+	] , [
+		void:class dbpo:RadioStation ;
+		void:entities "15703"^^xsd:integer
+	] , [
+		void:class dbpo:RecordLabel ;
+		void:entities "1703"^^xsd:integer
+	] , [
+		void:class dbpo:Reptile ;
+		void:entities "5737"^^xsd:integer
+	] , [
+		void:class dbpo:River ;
+		void:entities "18412"^^xsd:integer
+	] , [
+		void:class dbpo:Road ;
+		void:entities "8914"^^xsd:integer
+	] , [
+		void:class dbpo:Rocket ;
+		void:entities "206"^^xsd:integer
+	] , [
+		void:class dbpo:RugbyLeague ;
+		void:entities "96"^^xsd:integer
+	] , [
+		void:class dbpo:RugbyPlayer ;
+		void:entities "3025"^^xsd:integer
+	] , [
+		void:class dbpo:Saint ;
+		void:entities "2344"^^xsd:integer
+	] , [
+		void:class dbpo:Sales ;
+		void:entities "3472"^^xsd:integer
+	] , [
+		void:class dbpo:School ;
+		void:entities "20471"^^xsd:integer
+	] , [
+		void:class dbpo:Scientist ;
+		void:entities "8475"^^xsd:integer
+	] , [
+		void:class dbpo:Senator ;
+		void:entities "901"^^xsd:integer
+	] , [
+		void:class dbpo:Settlement ;
+		void:entities "239630"^^xsd:integer
+	] , [
+		void:class dbpo:Ship ;
+		void:entities "19698"^^xsd:integer
+	] , [
+		void:class dbpo:ShoppingMall ;
+		void:entities "1730"^^xsd:integer
+	] , [
+		void:class dbpo:Single ;
+		void:entities "32937"^^xsd:integer
+	] , [
+		void:class dbpo:SiteOfSpecialScientificInterest ;
+		void:entities "395"^^xsd:integer
+	] , [
+		void:class dbpo:SkiArea ;
+		void:entities "432"^^xsd:integer
+	] , [
+		void:class dbpo:Skyscraper ;
+		void:entities "2707"^^xsd:integer
+	] , [
+		void:class dbpo:SoccerClub ;
+		void:entities "11593"^^xsd:integer
+	] , [
+		void:class dbpo:SoccerLeague ;
+		void:entities "168"^^xsd:integer
+	] , [
+		void:class dbpo:SoccerManager ;
+		void:entities "8490"^^xsd:integer
+	] , [
+		void:class dbpo:SoccerPlayer ;
+		void:entities "58926"^^xsd:integer
+	] , [
+		void:class dbpo:SoftballLeague ;
+		void:entities "1"^^xsd:integer
+	] , [
+		void:class dbpo:Software ;
+		void:entities "22633"^^xsd:integer
+	] , [
+		void:class dbpo:Song ;
+		void:entities "4066"^^xsd:integer
+	] , [
+		void:class dbpo:SpaceMission ;
+		void:entities "377"^^xsd:integer
+	] , [
+		void:class dbpo:SpaceShuttle ;
+		void:entities "20"^^xsd:integer
+	] , [
+		void:class dbpo:SpaceStation ;
+		void:entities "22"^^xsd:integer
+	] , [
+		void:class dbpo:Spacecraft ;
+		void:entities "62"^^xsd:integer
+	] , [
+		void:class dbpo:Species ;
+		void:entities "146082"^^xsd:integer
+	] , [
+		void:class dbpo:SpeedwayLeague ;
+		void:entities "7"^^xsd:integer
+	] , [
+		void:class dbpo:Sport ;
+		void:entities "98"^^xsd:integer
+	] , [
+		void:class dbpo:SportsEvent ;
+		void:entities "2656"^^xsd:integer
+	] , [
+		void:class dbpo:SportsLeague ;
+		void:entities "1020"^^xsd:integer
+	] , [
+		void:class dbpo:SportsTeam ;
+		void:entities "11705"^^xsd:integer
+	] , [
+		void:class dbpo:Stadium ;
+		void:entities "4809"^^xsd:integer
+	] , [
+		void:class dbpo:Station ;
+		void:entities "7128"^^xsd:integer
+	] , [
+		void:class dbpo:Stream ;
+		void:entities "18537"^^xsd:integer
+	] , [
+		void:class dbpo:SupremeCourtOfTheUnitedStatesCase ;
+		void:entities "1779"^^xsd:integer
+	] , [
+		void:class dbpo:TelevisionEpisode ;
+		void:entities "74399"^^xsd:integer
+	] , [
+		void:class dbpo:TelevisionShow ;
+		void:entities "15779"^^xsd:integer
+	] , [
+		void:class dbpo:TennisLeague ;
+		void:entities "5"^^xsd:integer
+	] , [
+		void:class dbpo:TennisPlayer ;
+		void:entities "1347"^^xsd:integer
+	] , [
+		void:class dbpo:Town ;
+		void:entities "32476"^^xsd:integer
+	] , [
+		void:class dbpo:TradeUnion ;
+		void:entities "1209"^^xsd:integer
+	] , [
+		void:class dbpo:University ;
+		void:entities "10748"^^xsd:integer
+	] , [
+		void:class dbpo:Valley ;
+		void:entities "38"^^xsd:integer
+	] , [
+		void:class dbpo:Vein ;
+		void:entities "230"^^xsd:integer
+	] , [
+		void:class dbpo:VideoGame ;
+		void:entities "15502"^^xsd:integer
+	] , [
+		void:class dbpo:VideogamesLeague ;
+		void:entities "4"^^xsd:integer
+	] , [
+		void:class dbpo:Village ;
+		void:entities "60399"^^xsd:integer
+	] , [
+		void:class dbpo:VoiceActor ;
+		void:entities "452"^^xsd:integer
+	] , [
+		void:class dbpo:VolleyballLeague ;
+		void:entities "27"^^xsd:integer
+	] , [
+		void:class dbpo:Weapon ;
+		void:entities "3669"^^xsd:integer
+	] , [
+		void:class dbpo:Website ;
+		void:entities "1852"^^xsd:integer
+	] , [
+		void:class dbpo:WineRegion ;
+		void:entities "285"^^xsd:integer
+	] , [
+		void:class dbpo:WomensTennisAssociationTournament ;
+		void:entities "51"^^xsd:integer
+	] , [
+		void:class dbpo:Work ;
+		void:entities "320050"^^xsd:integer
+	] , [
+		void:class dbpo:WorldHeritageSite ;
+		void:entities "1118"^^xsd:integer
+	] , [
+		void:class dbpo:Wrestler ;
+		void:entities "2175"^^xsd:integer
+	] , [
+		void:class dbpo:WrestlingEvent ;
+		void:entities "792"^^xsd:integer
+	] , [
+		void:class dbpo:Writer ;
+		void:entities "8751"^^xsd:integer
+	] , [
+		void:class dbpo:YearInSpaceflight ;
+		void:entities "54"^^xsd:integer
+	] , [
+		void:class <http://www.w3.org/2002/07/owl#Thing> ;
+		void:entities "1477798"^^xsd:integer
+	] .

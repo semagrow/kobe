@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<project name="fedbench" default="auto" basedir=".">
+	
+	
+		<!-- build properties -->
+	<property name="global.module" value="FedBench" />
+	<property name="global.version" value="3.0" />
+	<property name="global.jar-name" value="fedbench.jar" />
+	<property name="global.buildID" value="144" />	<!-- e.g. the svn revision used -->
+	<property name="root" location=".." />
+
+	
+	<!-- fedx required libs and classes -->
+	<path id="base.classpath">
+		<fileset dir="${root}/lib/">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement location="${root}/bin/" />
+	</path>
+	
+	
+	<!-- tasks -->
+	
+	<!-- clean: delete bin folder -->
+	<target name="clean">
+		
+		<delete dir="${root}/release" failonerror="true" />
+		<mkdir dir="${root}/release" />
+		<mkdir dir="${root}/release/tmpbin" />
+		<mkdir dir="${root}/release/javadoc" />
+		
+	</target>
+	
+		
+	<!-- compile the source code -->
+	<target name="compile" depends="clean">
+		<javac srcdir="${root}/src" 
+			destdir="${root}/release/tmpbin" 
+			classpathref="base.classpath" 
+			debug="on" 
+			optimize="on" 
+			fork="false" 
+			verbose="false" 
+			listfiles="false" 
+			includes="**/*.java"
+			target="1.6" 
+			source="1.6">
+				<compilerarg value="-Xlint" />
+		</javac>
+	</target>
+	
+
+	<!-- generate the jar file including manifest information to release/fedx.jar -->
+	<target name="jar" depends="compile">
+		<tstamp/>
+		<jar destfile="${root}/release/${global.jar-name}" duplicate="fail" compress="true">
+			<fileset dir="${root}/release/tmpbin" includes="**/*.class" />
+			<manifest>
+				<attribute name="built-by" value="FedBench Project" />
+				<attribute name="project" value="FedBench" />
+				<attribute name="version" value="${global.version} (build ${global.buildID})" />
+				<attribute name="date" value="${TODAY}" />
+				<attribute name="build" value="${global.buildID}" />
+				<attribute name="ProductName" value="FedBench" />
+				<attribute name="ProductLongName" value="FedBench" />
+				<attribute name="ProductVersion" value="${global.version}" />
+				<attribute name="ProductContact" value="info@fluidops.com" />
+			</manifest>
+		</jar>
+	</target>
+	
+	
+	<!-- release bundles -->
+	<target name="bundle" depends="jar">
+		
+		<!-- misc files -->
+		<mkdir dir="${root}/release/tmp" />
+		<mkdir dir="${root}/release/tmp/data" />
+		<mkdir dir="${root}/release/tmp/data/repositories" />
+		<mkdir dir="${root}/release/tmp/data/rdf" />
+		<mkdir dir="${root}/release/tmp/result" />
+		<copy file="${root}/runEval.bat" todir="${root}/release/tmp" />
+		<copy file="${root}/runEval.sh" todir="${root}/release/tmp" />
+		<copy file="${root}/runEval-setup.bat" todir="${root}/release/tmp" />		
+		<copy file="${root}/startProxy.bat" todir="${root}/release/tmp" />
+		<copy file="${root}/startProxy.sh" todir="${root}/release/tmp" />
+		<copy file="${root}/startSparqlEndpoint.bat" todir="${root}/release/tmp" />
+		
+		<!-- create the bundle -->
+		<zip destfile="${root}/release/FedBench ${global.version}.zip">
+			<zipfileset dir="${root}/release" prefix="lib" includes="*.jar" />
+			<zipfileset dir="${root}/lib" prefix="lib" includes="**/*" excludes="**/.svn/*" />
+			<zipfileset dir="${root}/suites" prefix="suites" includes="**/*" excludes="**/.svn/*" />
+			<zipfileset dir="${root}/config" prefix="config" includes="**/*" excludes="**/.svn/*" />
+			<zipfileset dir="${root}/doc" prefix="doc" includes="**/*.*" excludes="**/.svn/*" />
+			<zipfileset dir="${root}/build" includes="license" />
+			<zipfileset dir="${root}/release/tmp" includes="**/*" />
+		</zip>
+
+		<delete dir="${root}/release/tmp" failonerror="true" />
+	</target>
+	
+	
+	<target name="auto" depends="clean, compile, jar, bundle" />
+	
+</project>

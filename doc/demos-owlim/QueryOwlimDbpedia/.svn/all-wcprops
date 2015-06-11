@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/14/trunk/EvalBenchmark/doc/demos-owlim/QueryOwlimDbpedia
+END
+demoSingleOwlimRepo.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/8/trunk/EvalBenchmark/doc/demos-owlim/QueryOwlimDbpedia/demoSingleOwlimRepo.ttl
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/8/trunk/EvalBenchmark/doc/demos-owlim/QueryOwlimDbpedia/README.txt
+END
+runDemo.bat
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/14/trunk/EvalBenchmark/doc/demos-owlim/QueryOwlimDbpedia/runDemo.bat
+END
+config.prop
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/14/trunk/EvalBenchmark/doc/demos-owlim/QueryOwlimDbpedia/config.prop
+END

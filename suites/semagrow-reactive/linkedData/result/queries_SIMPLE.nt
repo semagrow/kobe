@@ -1,0 +1,6 @@
+<http://semanticweb.org/fbench/q/simple_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticweb.org/fbench/Query> .
+<http://semanticweb.org/fbench/q/simple_1> <http://semanticweb.org/fbench/id> "simple_1" .
+<http://semanticweb.org/fbench/q/simple_1> <http://semanticweb.org/fbench/sparql> "SELECT ?predicate ?object WHERE {\n   { <http://dbpedia.org/resource/Barack_Obama> ?predicate ?object }\n   UNION    \n   { ?subject <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .\n     ?subject ?predicate ?object } \n}\n" .
+<http://semanticweb.org/fbench/q/simple_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticweb.org/fbench/Query> .
+<http://semanticweb.org/fbench/q/simple_2> <http://semanticweb.org/fbench/id> "simple_2" .
+<http://semanticweb.org/fbench/q/simple_2> <http://semanticweb.org/fbench/sparql> "SELECT ?predicate ?object WHERE {\n\t ?subject <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Angela_Merkel> .\n     ?subject ?predicate ?object\n}\n" .

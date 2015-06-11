@@ -1,0 +1,16 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://NYTimes.Locations> fluid:store "BigOWLim";
+fluid:rdfFile "data\\rdf\\nytimes\\locations.rdf";
+fluid:RepositoryLocation "data\\repositories\\owlim-storage.nytimes";
+fluid:context <http://nytimes.org>.
+
+<http://NYTimes.Organizations> fluid:store "BigOWLim";
+fluid:rdfFile "data\\rdf\\nytimes\\organizations.rdf";
+fluid:RepositoryLocation "data\\repositories\\owlim-storage.nytimes";
+fluid:context <http://nytimes.org>.
+
+<http://NYTimes.People> fluid:store "BigOWLim";
+fluid:rdfFile "data\\rdf\\nytimes\\people.rdf";
+fluid:RepositoryLocation "data\\repositories\\owlim-storage.nytimes";
+fluid:context <http://nytimes.org>.

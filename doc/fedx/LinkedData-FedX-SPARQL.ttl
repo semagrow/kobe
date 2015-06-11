@@ -1,0 +1,31 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://DBpedia> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8891/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://KEGG> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8895/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.KEGG" .
+
+<http://chEBI> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8890/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.chEBI" .
+
+<http://Drugbank> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8892/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.drugbank" .
+
+<http://NYtimes> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8897/sparql".
+#fluid:localRepoLoc "data/repositories/native-storage.nytimes" .
+
+<http://LinkedMDB> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8896/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.linkedmdb" .
+
+<http://SWDF> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8899/sparql" .
+#fluid:localRepoLoc "data/repositories/native-storage.linkedmdb" .
+
+

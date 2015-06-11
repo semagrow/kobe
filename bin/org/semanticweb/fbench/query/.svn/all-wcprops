@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/query
+END
+QueryUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/query/QueryUtil.java
+END
+Query.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/query/Query.java
+END
+QueryType.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/85/trunk/EvalBenchmark/src/org/semanticweb/fbench/query/QueryType.java
+END
+QueryManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/138/trunk/EvalBenchmark/src/org/semanticweb/fbench/query/QueryManager.java
+END

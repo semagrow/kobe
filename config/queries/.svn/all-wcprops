@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/140/trunk/EvalBenchmark/config/queries
+END
+lifescience-domain-NEW
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/140/trunk/EvalBenchmark/config/queries/lifescience-domain-NEW
+END
+SP2B
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/56/trunk/EvalBenchmark/config/queries/SP2B
+END
+simple
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/7/trunk/EvalBenchmark/config/queries/simple
+END
+custom1
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/56/trunk/EvalBenchmark/config/queries/custom1
+END
+linked-data
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/86/trunk/EvalBenchmark/config/queries/linked-data
+END
+lifescience-domain
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/56/trunk/EvalBenchmark/config/queries/lifescience-domain
+END
+cross-domain
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/125/trunk/EvalBenchmark/config/queries/cross-domain
+END

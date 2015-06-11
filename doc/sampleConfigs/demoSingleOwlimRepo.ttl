@@ -1,0 +1,4 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://CrossStore> fluid:store "BigOWLimRepo";
+fluid:RepositoryLocation "owlim-storage.SingleStore.Cross".

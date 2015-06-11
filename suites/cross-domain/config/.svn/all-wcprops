@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/110/trunk/EvalBenchmark/suites/cross-domain/config
+END
+federated-config.prop
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/98/trunk/EvalBenchmark/suites/cross-domain/config/federated-config.prop
+END
+federated-sparql.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/50/trunk/EvalBenchmark/suites/cross-domain/config/federated-sparql.ttl
+END
+federated-sparql-config.prop
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/110/trunk/EvalBenchmark/suites/cross-domain/config/federated-sparql-config.prop
+END
+federated.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/110/trunk/EvalBenchmark/suites/cross-domain/config/federated.ttl
+END
+singleNative.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/50/trunk/EvalBenchmark/suites/cross-domain/config/singleNative.ttl
+END
+singleNative-config.prop
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/98/trunk/EvalBenchmark/suites/cross-domain/config/singleNative-config.prop
+END

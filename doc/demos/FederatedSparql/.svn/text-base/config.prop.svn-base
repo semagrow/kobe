@@ -1,0 +1,104 @@
+##############################################################
+# Generic configuration file for federation benchmark
+#
+##############################################################
+
+
+###
+# baseDir
+#	the base directory for the execution, i.e. the base path for any
+#   location that is specified relatively
+#
+#   default: the current directory (=execution dir)
+#    
+#baseDir = D:\\Programming\\workspace\\fluidops\\EvalBenchmark\\
+
+
+###
+# querySet
+#   the querySet for this evaluation, i.e. 
+#   ALL -> all datasets
+#   SIMPLE -> queries/simple
+#   CUSTOM -> queries/custom
+#
+#	query sets can be combinated using comma as separator
+#	default: ALL
+#
+querySet = SIMPLE
+
+###
+# dataConfig
+#   the data configuration file, location rel. to baseDir
+#   
+#   see doc/sampleConfig for some configuration possibilities
+#
+dataConfig = doc\\demos\\FederatedSparql\\demoFederatedSparql.ttl
+
+###
+# showResults
+#   true/false - flag to print the results to stdout
+#
+#   debugMode must be enabled
+showResults = false
+
+
+###
+# debugMode
+#   true/false - flag to enable debug mode
+#
+#   in the debug mode the query is evaluated only once, optionally
+#   results can be printed (see showResults)
+debugMode = false
+
+
+###
+# evalRuns
+#
+#   integer value representing the number of runs to perform
+#   in each run all selected queries are executed
+evalRuns = 2
+
+
+###
+# fill
+#   true/false - flag to enable fill mode
+#
+#   in the fill mode no queries are evaluated
+#   fill mode must be enabled if you want to fill a local native repository
+#   fill mode can also be enabled using the program argument "-fill"
+fill = false
+
+
+###
+# timeout
+#   integer value representing the number of ms until a timeout occurs
+#   0 means that timeouts are disabled (=default)
+#
+#   debugMode must be turned off
+timeout = 0
+
+
+###
+# reportStream
+#   fully qualified class name of the ReportStream to be used
+#
+#   available default implementations (pckg: org.semanticweb.fbench.report)
+#     - SimplePrintStream -> print to stdout
+#     - CvsReportStream -> print result and load times into csv files
+#     - CombinedReportStream -> combination of the above Streams
+#
+#   Default values:
+#     - in debug mode: SimplePrintStream
+#     - otherwise: CvsReportStream
+reportStream = org.semanticweb.fbench.report.CombinedReportStream
+
+
+###
+# evaluationClass
+#   the fully qualified class name of the Evaluation to be used
+#
+#   Evaluation is an abstract class, custom implementations can be
+#   used to extend functionality or to customize
+#
+#   Currently an implementation for Sesame is available (=default)
+evaluationClass = org.semanticweb.fbench.evaluation.SesameEvaluation

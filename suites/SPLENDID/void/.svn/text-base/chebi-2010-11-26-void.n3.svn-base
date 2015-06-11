@@ -1,0 +1,160 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix bio: <http://bio2rdf.org/ns/bio2rdf#> .
+@prefix chebi: <http://bio2rdf.org/ns/chebi#> .
+
+_:node19l0p8bx1 a void:Dataset ;
+	void:sparqlEndpoint <http://chebi.bio2rdf.org/sparql> ;
+	void:triples "7325744"^^xsd:integer ;
+	void:entities "50477"^^xsd:integer ;
+	void:properties "28"^^xsd:integer ;
+	void:distinctSubjects "50477"^^xsd:integer ;
+	void:distinctObjects "772138"^^xsd:integer ;
+	void:propertyPartition [
+		void:property bio:formula ;
+		void:triples "39555"^^xsd:integer ;
+		void:distinctSubjects "17044"^^xsd:integer ;
+		void:distinctObjects "13664"^^xsd:integer
+	] , [
+		void:property bio:image ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "34055"^^xsd:integer
+	] , [
+		void:property bio:inchi ;
+		void:triples "11736"^^xsd:integer ;
+		void:distinctSubjects "11736"^^xsd:integer ;
+		void:distinctObjects "11677"^^xsd:integer
+	] , [
+		void:property bio:smiles ;
+		void:triples "11948"^^xsd:integer ;
+		void:distinctSubjects "11948"^^xsd:integer ;
+		void:distinctObjects "11838"^^xsd:integer
+	] , [
+		void:property bio:synonym ;
+		void:triples "34762"^^xsd:integer ;
+		void:distinctSubjects "13952"^^xsd:integer ;
+		void:distinctObjects "34372"^^xsd:integer
+	] , [
+		void:property bio:url ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "34055"^^xsd:integer
+	] , [
+		void:property bio:xRef ;
+		void:triples "31962"^^xsd:integer ;
+		void:distinctSubjects "16444"^^xsd:integer ;
+		void:distinctObjects "25965"^^xsd:integer
+	] , [
+		void:property chebi:Status ;
+		void:triples "50477"^^xsd:integer ;
+		void:distinctSubjects "50477"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property chebi:has_functional_parent ;
+		void:triples "3760"^^xsd:integer ;
+		void:distinctSubjects "3552"^^xsd:integer ;
+		void:distinctObjects "1663"^^xsd:integer
+	] , [
+		void:property chebi:has_parent_hydride ;
+		void:triples "584"^^xsd:integer ;
+		void:distinctSubjects "582"^^xsd:integer ;
+		void:distinctObjects "269"^^xsd:integer
+	] , [
+		void:property chebi:has_part ;
+		void:triples "668"^^xsd:integer ;
+		void:distinctSubjects "621"^^xsd:integer ;
+		void:distinctObjects "610"^^xsd:integer
+	] , [
+		void:property chebi:has_role ;
+		void:triples "2262"^^xsd:integer ;
+		void:distinctSubjects "1460"^^xsd:integer ;
+		void:distinctObjects "377"^^xsd:integer
+	] , [
+		void:property chebi:is_a ;
+		void:triples "40566"^^xsd:integer ;
+		void:distinctSubjects "33450"^^xsd:integer ;
+		void:distinctObjects "6456"^^xsd:integer
+	] , [
+		void:property chebi:is_conjugate_acid_of ;
+		void:triples "1236"^^xsd:integer ;
+		void:distinctSubjects "1229"^^xsd:integer ;
+		void:distinctObjects "1219"^^xsd:integer
+	] , [
+		void:property chebi:is_conjugate_base_of ;
+		void:triples "1236"^^xsd:integer ;
+		void:distinctSubjects "1219"^^xsd:integer ;
+		void:distinctObjects "1229"^^xsd:integer
+	] , [
+		void:property chebi:is_enantiomer_of ;
+		void:triples "1142"^^xsd:integer ;
+		void:distinctSubjects "1142"^^xsd:integer ;
+		void:distinctObjects "1142"^^xsd:integer
+	] , [
+		void:property chebi:is_substituent_group_from ;
+		void:triples "704"^^xsd:integer ;
+		void:distinctSubjects "699"^^xsd:integer ;
+		void:distinctObjects "424"^^xsd:integer
+	] , [
+		void:property chebi:is_tautomer_of ;
+		void:triples "388"^^xsd:integer ;
+		void:distinctSubjects "262"^^xsd:integer ;
+		void:distinctObjects "262"^^xsd:integer
+	] , [
+		void:property chebi:iupacName ;
+		void:triples "15458"^^xsd:integer ;
+		void:distinctSubjects "13249"^^xsd:integer ;
+		void:distinctObjects "15423"^^xsd:integer
+	] , [
+		void:property chebi:xReferencedBy ;
+		void:triples "6755315"^^xsd:integer ;
+		void:distinctSubjects "14095"^^xsd:integer ;
+		void:distinctObjects "462352"^^xsd:integer
+	] , [
+		void:property chebi:xSource ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dc:identifier ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "34055"^^xsd:integer
+	] , [
+		void:property dc:modified ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "172"^^xsd:integer
+	] , [
+		void:property dc:title ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "33922"^^xsd:integer
+	] , [
+		void:property rdf:type ;
+		void:triples "50477"^^xsd:integer ;
+		void:distinctSubjects "50477"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property rdfs:comment ;
+		void:triples "279"^^xsd:integer ;
+		void:distinctSubjects "260"^^xsd:integer ;
+		void:distinctObjects "204"^^xsd:integer
+	] , [
+		void:property rdfs:label ;
+		void:triples "50477"^^xsd:integer ;
+		void:distinctSubjects "50477"^^xsd:integer ;
+		void:distinctObjects "50477"^^xsd:integer
+	] , [
+		void:property rdfs:seeAlso ;
+		void:triples "16422"^^xsd:integer ;
+		void:distinctSubjects "16422"^^xsd:integer ;
+		void:distinctObjects "6169"^^xsd:integer
+	] ;
+	void:classPartition [
+		void:class chebi:Compound ;
+		void:entities "50477"^^xsd:integer
+	] .

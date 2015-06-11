@@ -1,0 +1,11 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://Jamendo> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.jamendo";
+fluid:rdfFile "data\\rdf\\jamendo-rdf\\jamendo.rdf";
+fluid:context <http://Jamendo.org>.
+
+<http://Jamendo.MBZ> fluid:store "Native";
+fluid:RepositoryLocation "data\\repositories\\native-storage.jamendo";
+fluid:rdfFile "data\\rdf\\jamendo-rdf\\mbz_jamendo.rdf";
+fluid:context <http://Jamendo.org>.
