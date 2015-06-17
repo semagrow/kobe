@@ -1,5 +1,5 @@
 @prefix ds:<http://aksw.org/fedsum/>.
-#---------------------http://localhost:8890/sparql Summaries-------------------------------
+#---------------------http://localhost:8890/sparql Summaries-------------------------------Chebi
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8890/sparql> ;
      ds:capability
@@ -159,9 +159,9 @@
            ds:objAuthority <http://bio2rdf.org> ; 
          ] ;
              .
-#---------------------http://localhost:8891/sparql Summaries-------------------------------
+#---------------------http://localhost:8892/sparql Summaries-------------------------------DrugBank
 [] a ds:Service ;
-     ds:url   <http://143.233.226.25:8891/sparql> ;
+     ds:url   <http://143.233.226.25:8892/sparql> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
@@ -792,9 +792,9 @@
            ds:objAuthority <http://www4.wiwiss.fu-berlin.de> ; 
          ] ;
              .
-#---------------------http://localhost:8892/sparql Summaries-------------------------------
+#---------------------http://localhost:8894/sparql Summaries-------------------------------Jamendo
 [] a ds:Service ;
-     ds:url   <http://143.233.226.25:8892/sparql> ;
+     ds:url   <http://143.233.226.25:8894/sparql> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
@@ -943,9 +943,9 @@
            ds:sbjAuthority <http://www.jamendo.com> ; 
          ] ;
              .
-#---------------------http://localhost:8893/sparql Summaries-------------------------------
+#---------------------http://localhost:8895/sparql Summaries-------------------------------KEGG
 [] a ds:Service ;
-     ds:url   <http://143.233.226.25:8893/sparql> ;
+     ds:url   <http://143.233.226.25:8895/sparql> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
@@ -1062,9 +1062,9 @@
            ds:objAuthority <http://bio2rdf.org> ; 
          ] ;
              .
-#---------------------http://localhost:8894/sparql Summaries-------------------------------
+#---------------------http://localhost:8897/sparql Summaries-------------------------------NYT
 [] a ds:Service ;
-     ds:url   <http://143.233.226.25:8894/sparql> ;
+     ds:url   <http://143.233.226.25:8897/sparql> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
@@ -1263,9 +1263,9 @@
            ds:objAuthority <http://topics.nytimes.com> ; 
          ] ;
              .
-#---------------------http://localhost:8895/sparql Summaries-------------------------------
+#---------------------http://localhost:8896/sparql Summaries-------------------------------LinkedMDB
 [] a ds:Service ;
-     ds:url   <http://143.233.226.25:8895/sparql> ;
+     ds:url   <http://143.233.226.25:8896/sparql> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
@@ -2447,9 +2447,9 @@
            ds:objAuthority <http://www.lingvoj.org> ; 
          ] ;
              .
-#---------------------http://localhost:8896/sparql Summaries-------------------------------
+#---------------------http://localhost:8899/sparql Summaries-------------------------------SWDF
 [] a ds:Service ;
-     ds:url   <http://143.233.226.25:8896/sparql> ;
+     ds:url   <http://143.233.226.25:8899/sparql> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
@@ -3101,9 +3101,9 @@
            ds:sbjAuthority <http://sdow2008.semanticweb.org> ; 
          ] ;
              .
-#---------------------http://localhost:8898/sparql Summaries-------------------------------
+#---------------------http://localhost:8893/sparql Summaries-------------------------------GeoNames
 [] a ds:Service ;
-     ds:url   <http://143.233.226.25:8898/sparql> ;
+     ds:url   <http://143.233.226.25:8893/sparql> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
@@ -3251,9 +3251,9 @@
            ds:objAuthority <http://rdf.insee.fr>, <http://www.ordnancesurvey.co.uk> ; 
          ] ;
              .
-#---------------------http://localhost:8899/sparql Summaries-------------------------------
+#---------------------http://localhost:8891/sparql Summaries-------------------------------Dbpedia
 [] a ds:Service ;
-     ds:url   <http://143.233.226.25:8899/sparql> ;
+     ds:url   <http://143.233.226.25:8891/sparql> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
