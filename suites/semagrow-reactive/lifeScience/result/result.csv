@@ -1,0 +1,8 @@
+Query;run1;run2;run3;avg;numResults;minRes;maxRes;
+lifescience-domain_1;732;216;171;374;1159;1159;1159;
+lifescience-domain_2;1745;1197;868;1271;333;333;333;
+lifescience-domain_3;13506;7584;10829;10640;9054;9054;9054;
+lifescience-domain_4;26;21;31;27;3;3;3;
+lifescience-domain_5;3218;2986;3060;3089;393;393;393;
+lifescience-domain_6;-2;-2;-2;-1;-1;-1;-1;
+lifescience-domain_7;2472;2252;2371;2366;0;0;0;
