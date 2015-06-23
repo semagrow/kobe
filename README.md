@@ -32,8 +32,6 @@ If you want to use your own endpoints, you should rename the endpoints inside th
 * for __SPLENDID__:
     * ./suites/SPLENDID/lifeScience-config_SPLENDID.n3 
     * ./suites/SPLENDID/crossDomain-config_SPLENDID.n3 
-    * ./suites/semagrow-reactive/lifeScience/lifeScience.void.n3 
-    * ./suites/semagrow-reactive/crossDomain/crossDomain.void.n3
 * for __FedX__:
     * ./doc/fedx/LifeScience-FedX-SPARQL.ttl
     * ./doc/fedx/CrossDomain-FedX-SPARQL.ttl
@@ -58,4 +56,3 @@ The ".prop" files are the entry points for the configuration for each experiment
 ### Viewing the results ###
 
 In order to view the results (total query processing time and number of results for each query), you should open the result/result.csv file in the directory of the .prop file. In order to view the optimization time you should check the .log files or the prints during the evaluation of the experiment.
-
