@@ -1,0 +1,8 @@
+Query;run1;run2;run3;run4;run5;run6;avg;numResults;minRes;maxRes;
+lifescience-domain_1;402;79;72;69;66;74;128;1159;1159;1159;
+lifescience-domain_2;1015;59;49;38;42;48;209;333;333;333;
+lifescience-domain_3;4425;3675;3779;3428;3649;3520;3747;9054;9054;9054;
+lifescience-domain_4;191;96;93;75;97;92;108;3;3;3;
+lifescience-domain_5;1548;1328;1250;1237;1223;1283;1312;393;393;393;
+lifescience-domain_6;189;132;111;112;111;115;129;28;28;28;
+lifescience-domain_7;1419;1345;1359;1362;1365;1327;1363;0;0;0;

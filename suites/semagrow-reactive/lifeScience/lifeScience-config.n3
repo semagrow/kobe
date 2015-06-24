@@ -17,7 +17,7 @@
       rep:repositoryType "semagrow:SemagrowRepository" ;
       sr:sailImpl [
          sail:sailType "semagrow:SemagrowSail" ;
-         semagrow:metadataInit "suites/semagrow-reactive/lifeScience/lifeScience.void.n3" ;
+         semagrow:metadataInit "suites/semagrow-reactive/biglifeScience/lifeScience.void.n3" ;
 	 semagrow:executorBatchSize "8"
       ]
    ] .

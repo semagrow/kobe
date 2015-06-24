@@ -1,0 +1,16 @@
+description = SemaGrow - Cross Domain Queries
+
+dataConfig = suites/semagrow-tbss/crossDomain/crossDomain.ttl
+
+querySet = CROSSDOMAIN
+
+evalRuns = 6
+
+timeout = 520000
+
+fill = false
+
+#envConfig = suites/semagrow-tbss/crossDomain/env.prop
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluationReactive
+
