@@ -64,6 +64,7 @@ The ".prop" files are the entry points for the configuration for each experiment
 * ./doc/fedx/LifeScience-FedX-SPARQL.prop
 
 In order to switch between the three versions of SemaGrow you have to point the semagrow symbolic link to the corresponding semagrow directory.
+
 * For Semagrow with default source selection, the semagrow symlink should point to semagrow-reactive directory.
 * For Semagrow with HiBiSCUS source selection, the semagrow symlink should point to semagrow-hibiscus directory.
 * For Semagrow with TBSS source selection, the semagrow symlink should point to semagrow-tbss directory.
