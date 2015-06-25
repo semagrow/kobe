@@ -29,6 +29,12 @@ If you want to use your own endpoints, you should rename the endpoints inside th
 * for __SemaGrow__: 
     * ./suites/semagrow-reactive/lifeScience/lifeScience.void.n3 
     * ./suites/semagrow-reactive/crossDomain/crossDomain.void.n3
+* for __SemaGrow-HiBISCuS__: 
+    * ./suites/semagrow-hibiscus/lifeScience/lifeScience.void.n3 
+    * ./suites/semagrow-hibiscus/crossDomain/crossDomain.void.n3
+* for __SemaGrow-TBSS__: 
+    * ./suites/semagrow-tbss/lifeScience/lifeScience.void.n3 
+    * ./suites/semagrow-tbss/crossDomain/crossDomain.void.n3
 * for __SPLENDID__:
     * ./suites/SPLENDID/lifeScience-config_SPLENDID.n3 
     * ./suites/SPLENDID/crossDomain-config_SPLENDID.n3 
@@ -48,6 +54,10 @@ The ".prop" files are the entry points for the configuration for each experiment
 
 * ./suites/semagrow-reactive/crossDomain/crossDomain-config.prop
 * ./suites/semagrow-reactive/lifeScience/lifeScience-config.prop
+* ./suites/semagrow-hibiscus/crossDomain/crossDomain-config.prop
+* ./suites/semagrow-hibiscus/lifeScience/lifeScience-config.prop
+* ./suites/semagrow-tbss/crossDomain/crossDomain-config.prop
+* ./suites/semagrow-tbss/lifeScience/lifeScience-config.prop
 * ./suites/SPLENDID/crossDomain-config.prop
 * ./suites/SPLENDID/lifeScience-config.prop
 * ./doc/fedx/CrossDomain-FedX-SPARQL.prop
