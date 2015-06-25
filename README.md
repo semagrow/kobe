@@ -5,7 +5,7 @@ FedBench experiments for SemaGrow stack, FedX and SPLENDID. To run the experimen
 ### Datasets ###
 
 In order to run the experiments you will need the following datasets. 
-For each dataset you could use either the public endpoints, or you can set up your own (by using the pre populated virtuoso databases or the rdf dump TODO)
+For each dataset you could use either the public endpoints, or you can set up your own (by using the pre populated virtuoso databases)
 
 | Dataset   | Endpoint                          |  
 |-----------|-----------------------------------| 
@@ -62,6 +62,11 @@ The ".prop" files are the entry points for the configuration for each experiment
 * ./suites/SPLENDID/lifeScience-config.prop
 * ./doc/fedx/CrossDomain-FedX-SPARQL.prop
 * ./doc/fedx/LifeScience-FedX-SPARQL.prop
+
+In order to switch between the three versions of SemaGrow you have to point the semagrow symbolic link to the corresponding semagrow directory.
+* For Semagrow with default source selection, the semagrow symlink should point to semagrow-reactive directory.
+* For Semagrow with HiBiSCUS source selection, the semagrow symlink should point to semagrow-hibiscus directory.
+* For Semagrow with TBSS source selection, the semagrow symlink should point to semagrow-tbss directory.
 
 ### Viewing the results ###
 
