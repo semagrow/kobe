@@ -3,21 +3,21 @@ PREFIX drugtype: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugtype/>
 PREFIX kegg: <http://bio2rdf.org/ns/kegg#>
 PREFIX chebi: <http://bio2rdf.org/ns/bio2rdf#>
 PREFIX purl: <http://purl.org/dc/elements/1.1/>
-SELECT distinct ?drug	?drugDesc ?molecularWeightAverage 	?compound   ?ReactionTitle    ?ChemicalEquation 
+SELECT distinct ?drug ?drugDesc ?molecularWeightAverage ?compound ?ReactionTitle ?ChemicalEquation 
 WHERE
 {
-?drug 			drugbank:description 	 ?drugDesc .
-?drug 			drugbank:drugType 	 drugtype:smallMolecule .
-?drug 	     drugbank:keggCompoundId ?compound. 
-?enzyme 		kegg:xSubstrate 	?compound .
-?Chemicalreaction 	kegg:xEnzyme 		?enzyme .
-?Chemicalreaction	kegg:equation 		?ChemicalEquation .
-?Chemicalreaction 	purl:title 		?ReactionTitle
-OPTIONAL 
-{ 
-?drug drugbank:molecularWeightAverage ?molecularWeightAverage.
-FILTER (?molecularWeightAverage > 114) 
-}
+  ?drug drugbank:description ?drugDesc .
+  ?drug drugbank:drugType drugtype:smallMolecule .
+  ?drug drugbank:keggCompoundId ?compound. 
+  ?enzyme kegg:xSubstrate ?compound .
+  ?Chemicalreaction kegg:xEnzyme ?enzyme .
+  ?Chemicalreaction kegg:equation ?ChemicalEquation .
+  ?Chemicalreaction purl:title ?ReactionTitle
+  OPTIONAL 
+  { 
+    ?drug drugbank:molecularWeightAverage ?molecularWeightAverage.
+    FILTER (?molecularWeightAverage > 114) 
+  }
 }
 Limit 1000
 
@@ -32,38 +32,40 @@ PREFIX bio2RDF: <http://bio2rdf.org/ns/bio2rdf#>
 SELECT ?drug ?keggmass ?chebiIupacName 
 WHERE 
 {
-?drug rdf:type drugbank:drugs .
-?drug drugbank:keggCompoundId ?keggDrug .
-?keggDrug bio2RDF:mass ?keggmass .
-?drug drugbank:genericName ?drugBankName .
-?chebiDrug purl:title ?drugBankName .
-?chebiDrug chebi:iupacName ?chebiIupacName .
-OPTIONAL { 
-            ?drug drugbank:inchiIdentifier ?drugbankInchi .
-			?chebiDrug bio2RDF:inchi ?chebiInchi .
-			FILTER (?drugbankInchi = ?chebiInchi) 
-		}
+  ?drug rdf:type drugbank:drugs .
+  ?drug drugbank:keggCompoundId ?keggDrug .
+  ?keggDrug bio2RDF:mass ?keggmass .
+  ?drug drugbank:genericName ?drugBankName .
+  ?chebiDrug purl:title ?drugBankName .
+  ?chebiDrug chebi:iupacName ?chebiIupacName .
+  OPTIONAL 
+  { 
+    ?drug drugbank:inchiIdentifier ?drugbankInchi .
+    ?chebiDrug bio2RDF:inchi ?chebiInchi .
+    FILTER (?drugbankInchi = ?chebiInchi) 
+  }
 }
 
 
-PREFIX foaf: 		<http://xmlns.com/foaf/0.1/>
-PREFIX geonames: 	<http://www.geonames.org/ontology#>
-PREFIX mo:   		<http://purl.org/ontology/mo/>
-PREFIX nytimes:         <http://data.nytimes.com/elements/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX mo: <http://purl.org/ontology/mo/>
+PREFIX nytimes: <http://data.nytimes.com/elements/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 SELECT DISTINCT ?artist ?name ?location ?anylocation
-WHERE {
-	     ?artist a mo:MusicArtist ;
-         foaf:name ?name ;
-		 foaf:based_near ?location .
-         ?location geonames:parentFeature ?locationName .
-         ?locationName geonames:name ?anylocation .
-         ?nytLocation owl:sameAs ?location.
-         ?nytLocation nytimes:topicPage ?news 
-OPTIONAL 
+WHERE 
 {
-         ?locationName geonames:name 'Islamic Republic of Afghanistan' .
-}
+  ?artist a mo:MusicArtist ;
+          foaf:name ?name ;
+          foaf:based_near ?location .
+  ?location geonames:parentFeature ?locationName .
+  ?locationName geonames:name ?anylocation .
+  ?nytLocation owl:sameAs ?location.
+  ?nytLocation nytimes:topicPage ?news 
+  OPTIONAL 
+  {
+    ?locationName geonames:name 'Islamic Republic of Afghanistan' .
+  }
 }
 
 
@@ -73,21 +75,21 @@ prefix owl: <http://www.w3.org/2002/07/owl#>
 Prefix dbpedia: <http://dbpedia.org/ontology/>
 SELECT DISTINCT ?countryName ?countryCode ?locationMap ?population ?longitude ?latitude ?nationalAnthem ?foundingDate ?largestCity ?ethnicGroup ?motto
 {
-?NYTplace geonames:name ?countryName;
-geonames:countryCode ?countryCode;
-geonames:population  ?population;
-geo:long   ?longitude;
-geo:lat     ?latitude;
-owl:sameAs   ?geonameplace.
-OPTIONAL
-{
-?geonameplace dbpedia:capital ?capital;
-dbpedia:anthem ?nationalAnthem;
-dbpedia:foundingDate ?foundingDate;
-dbpedia:largestCity ?largestCity;
-dbpedia:ethnicGroup ?ethnicGroup;
-dbpedia:motto ?motto.
-}
+  ?NYTplace geonames:name ?countryName;
+  geonames:countryCode ?countryCode;
+  geonames:population ?population;
+  geo:long ?longitude;
+  geo:lat ?latitude;
+  owl:sameAs ?geonameplace.
+  OPTIONAL
+  {
+    ?geonameplace dbpedia:capital ?capital;
+                  dbpedia:anthem ?nationalAnthem;
+                  dbpedia:foundingDate ?foundingDate;
+                  dbpedia:largestCity ?largestCity;
+                  dbpedia:ethnicGroup ?ethnicGroup;
+                  dbpedia:motto ?motto.
+  }
 }
 LIMIT 50
 
@@ -98,16 +100,15 @@ PREFIX dbpedia: <http://dbpedia.org/ontology/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?actor ?movie ?movieTitle ?movieDate ?birthDate ?spouseName
 {
-        ?actor rdfs:label ?actor_name_en;
-               dbpedia:birthDate ?birthDate ;
-               dbpedia:spouse ?spouseURI .
-        ?spouseURI rdfs:label ?spouseName .
-
- 	?imdbactor linkedmdb:actor_name ?actor_name.
-      ?movie linkedmdb:actor ?imdbactor ;
-             dcterms:title ?movieTitle ;
-             dcterms:date ?movieDate
-      FILTER(STR(?actor_name_en )= STR(?actor_name))
+  ?actor rdfs:label ?actor_name_en;
+         dbpedia:birthDate ?birthDate ;
+         dbpedia:spouse ?spouseURI .
+  ?spouseURI rdfs:label ?spouseName .
+  ?imdbactor linkedmdb:actor_name ?actor_name.
+  ?movie linkedmdb:actor ?imdbactor ;
+         dcterms:title ?movieTitle ;
+         dcterms:date ?movieDate
+  FILTER(STR(?actor_name_en )= STR(?actor_name))
 } LIMIT 500
 
 
@@ -119,15 +120,15 @@ PREFIX nytimes: <http://data.nytimes.com/elements/>
 SELECT ?actor ?filmTitle ?news ?variants ?articleCount ?first_use ?latest_use
 WHERE 
 {
-?film purl:title 			?filmTitle .
-?film linkedmdb:actor 			?actor .
-?actor owl:sameAs 			?dbpediaURI.
-?nytURI owl:sameAs 			?dbpediaURI .
-?nytURI nytimes:topicPage 		?news ;
-	nytimes:number_of_variants 	?variants;
-	nytimes:associated_article_count ?articleCount;
-	nytimes:first_use 		?first_use;
-	nytimes:latest_use 		?latest_use
+  ?film purl:title ?filmTitle .
+  ?film linkedmdb:actor ?actor .
+  ?actor owl:sameAs ?dbpediaURI.
+  ?nytURI owl:sameAs ?dbpediaURI .
+  ?nytURI nytimes:topicPage ?news ;
+	  nytimes:number_of_variants ?variants;
+	  nytimes:associated_article_count ?articleCount;
+	  nytimes:first_use ?first_use;
+	  nytimes:latest_use ?latest_use
 }
 ORDER BY (?actor)
 
@@ -140,18 +141,18 @@ prefix dbpedia: <http://dbpedia.org/ontology/>
 prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 SELECT DISTINCT ?author ?role ?paper ?place ?capital ?latitude ?longitude  ?proceedings WHERE 
 {
-?role swc:isRoleAt  eswc:2010.
-?role swc:heldBy ?author .
-?proceedings swc:relatedToEvent eswc:2010.
-?paper swrc:author ?author .
-?author foaf:based_near ?place.
-?paper swc:isPartOf ?proceedings . 
-OPTIONAL
-{
-?place dbpedia:capital ?capital;
-	geo:lat ?latitude;	
-	geo:long ?longitude.
-}
+  ?role swc:isRoleAt  eswc:2010.
+  ?role swc:heldBy ?author .
+  ?proceedings swc:relatedToEvent eswc:2010.
+  ?paper swrc:author ?author .
+  ?author foaf:based_near ?place.
+  ?paper swc:isPartOf ?proceedings . 
+  OPTIONAL
+  {
+    ?place dbpedia:capital ?capital;
+           geo:lat ?latitude;	
+           geo:long ?longitude.
+  }
 }
 
 
@@ -165,20 +166,20 @@ PREFIX dbpedia: <http://dbpedia.org/ontology/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT DISTINCT * WHERE 
 {
-?paper swc:isPartOf iswc:proceedings .
-iswc:proceedings swrc:address ?proceedingAddress.
-?paper swrc:author ?author .
-?author swrc:affiliation ?affiliation ;
- rdfs:label ?fullnames ;
- foaf:based_near ?place.
-OPTIONAL
-{
-?place dbpedia:capital ?capital;
-       dbpedia:populationDensity  ?populationDensity;
-       dbpedia:governmentType   ?governmentType;
-       dbpedia:language  ?language ;
-       dbpedia:leaderTitle ?leaderTitle.
-}
+  ?paper swc:isPartOf iswc:proceedings .
+  iswc:proceedings swrc:address ?proceedingAddress.
+  ?paper swrc:author ?author .
+  ?author swrc:affiliation ?affiliation ;
+	  rdfs:label ?fullnames ;
+	  foaf:based_near ?place.
+  OPTIONAL
+  {
+    ?place dbpedia:capital ?capital;
+	   dbpedia:populationDensity ?populationDensity;
+	   dbpedia:governmentType ?governmentType;
+	   dbpedia:language ?language ;
+	   dbpedia:leaderTitle ?leaderTitle.
+  }
 }
 
 
@@ -188,18 +189,18 @@ Prefix owl: <http://www.w3.org/2002/07/owl#>
 Prefix drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/>
 SELECT * WHERE 
 {
-?Drug rdf:type dbpedia:Drug .
-?drugbankDrug owl:sameAs ?Drug .
-?InteractionName drugbank:interactionDrug1 ?drugbankDrug .
-?InteractionName drugbank:interactionDrug2 ?drugbankDrug2 .
-?InteractionName drugbank:text ?IntEffect 
-OPTIONAL
-{
-?drugbankDrug  drugbank:affectedOrganism 'Humans and other mammals';
-drugbank:description ?description ;
-drugbank:structure ?structure ;
-drugbank:casRegistryNumber ?casRegistryNumber
-}
+  ?Drug rdf:type dbpedia:Drug .
+  ?drugbankDrug owl:sameAs ?Drug .
+  ?InteractionName drugbank:interactionDrug1 ?drugbankDrug .
+  ?InteractionName drugbank:interactionDrug2 ?drugbankDrug2 .
+  ?InteractionName drugbank:text             ?IntEffect 
+  OPTIONAL
+  {
+    ?drugbankDrug drugbank:affectedOrganism 'Humans and other mammals';
+                  drugbank:description       ?description ;
+                  drugbank:structure         ?structure ;
+                  drugbank:casRegistryNumber ?casRegistryNumber
+  }
 }
 ORDER BY (?drugbankDrug)
 LIMIT 100

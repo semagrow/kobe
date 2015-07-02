@@ -1,71 +1,71 @@
 PREFIX tcga: <http://tcga.deri.ie/schema/> 
-SELECT  ?expValue 
+SELECT ?expValue 
 WHERE
 {
   {
-   ?s	tcga:bcr_patient_barcode	<http://tcga.deri.ie/TCGA-37-3789>.  
-   <http://tcga.deri.ie/TCGA-37-3789>	tcga:result	?results. 
-   ?results  tcga:RPKM ?expValue.
+    ?s tcga:bcr_patient_barcode <http://tcga.deri.ie/TCGA-37-3789>.  
+    <http://tcga.deri.ie/TCGA-37-3789> tcga:result ?results. 
+    ?results tcga:RPKM ?expValue.
   }
-UNION
+  UNION
   {
-   ?uri	tcga:bcr_patient_barcode	<http://tcga.deri.ie/TCGA-37-3789>.  
-   <http://tcga.deri.ie/TCGA-37-3789>	tcga:result	?geneResults. 
-   ?geneResults  tcga:scaled_estimate ?expValue.
+    ?uri tcga:bcr_patient_barcode <http://tcga.deri.ie/TCGA-37-3789>.  
+    <http://tcga.deri.ie/TCGA-37-3789> tcga:result ?geneResults. 
+    ?geneResults tcga:scaled_estimate ?expValue.
   }
 }
 
 
 PREFIX tcga: <http://tcga.deri.ie/schema/> 
-SELECT   DISTINCT ?patient ?tumorType ?exonValue
+SELECT DISTINCT ?patient ?tumorType ?exonValue
 WHERE
 {
-?s tcga:bcr_patient_barcode ?patient.
-?patient tcga:disease_acronym <http://tcga.deri.ie/lusc>.
-?patient tcga:tumor_weight ?weight.
-?patient tcga:tumor_type ?tumorType. 
-?patient tcga:result ?results.
-?results tcga:RPKM  ?exonValue.
-FILTER(?weight <= 55)
+  ?s tcga:bcr_patient_barcode ?patient.
+  ?patient tcga:disease_acronym <http://tcga.deri.ie/lusc>.
+  ?patient tcga:tumor_weight ?weight.
+  ?patient tcga:tumor_type ?tumorType. 
+  ?patient tcga:result ?results.
+  ?results tcga:RPKM  ?exonValue.
+  FILTER(?weight <= 55)
 }
 
 
 PREFIX tcga: <http://tcga.deri.ie/schema/> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-SELECT  ?patient ?methylationValue
+SELECT ?patient ?methylationValue
 WHERE
 {
-?s tcga:bcr_patient_barcode ?patient.
-?patient <http://tcga.deri.ie/schema/vital_status> "Dead".
-?patient tcga:bcr_drug_barcode ?drug.
-?drug tcga:drug_name "Tarceva".
-?patient <http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis> ?age.
-?patient tcga:result ?results.
-?results  tcga:beta_value ?methylationValue.
-FILTER(?age <= 51)
+  ?s tcga:bcr_patient_barcode ?patient.
+  ?patient <http://tcga.deri.ie/schema/vital_status> "Dead".
+  ?patient tcga:bcr_drug_barcode ?drug.
+  ?drug tcga:drug_name "Tarceva".
+  ?patient <http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis> ?age.
+  ?patient tcga:result ?results.
+  ?results  tcga:beta_value ?methylationValue.
+  FILTER(?age <= 51)
 }
 ORDER BY (?patient)
 
 
 PREFIX tcga: <http://tcga.deri.ie/schema/> 
 PREFIX dbpedia: <http://dbpedia.org/ontology/>
-SELECT    ?expressionValues
+SELECT ?expressionValues
 WHERE
 {
- {
-  ?uri tcga:bcr_patient_barcode ?patient.
-  ?patient dbpedia:country ?country.
-  ?patient tcga:result ?results.
-  ?results  tcga:reads_per_million_miRNA_mapped ?expressionValues.
- }
-UNION
- {
-  ?s tcga:bcr_patient_barcode ?patient.
-  ?patient dbpedia:country ?country.
-  ?patient tcga:result ?exonResults.
-  ?exonResults tcga:RPKM ?expressionValues.
- }
-FILTER REGEX(?country,"Brazil|Argentina", "i")
+  {
+    ?uri tcga:bcr_patient_barcode ?patient.
+    ?patient dbpedia:country ?country.
+    ?patient tcga:result ?results.
+    ?results tcga:reads_per_million_miRNA_mapped ?expressionValues.
+  }
+  UNION
+  {
+    ?s tcga:bcr_patient_barcode ?patient.
+    ?patient dbpedia:country ?country.
+    ?patient tcga:result ?exonResults.
+    ?exonResults tcga:RPKM ?expressionValues.
+  }
+  FILTER REGEX(?country,"Brazil|Argentina", "i")
 }
 
 
@@ -75,18 +75,18 @@ PREFIX affymetrix: <http://bio2rdf.org/affymetrix_vocabulary:>
 SELECT  ?methylationCNTNAP2   
 WHERE 
 {
- ?s affymetrix:x-symbol <http://bio2rdf.org/symbol:CNTNAP2>.
- ?s affymetrix:x-geneid ?geneId.
- ?geneId rdf:type tcga:expression_gene_lookup.
- ?geneId tcga:chromosome ?lookupChromosome. 
- ?geneId tcga:start ?start.
- ?geneId tcga:stop  ?stop. 
- ?uri tcga:bcr_patient_barcode ?patient .
- ?patient tcga:result ?recordNo .
- ?recordNo tcga:chromosome   ?chromosome.
- ?recordNo tcga:position     ?position.
- ?recordNo tcga:beta_value  ?methylationCNTNAP2.
- FILTER (?position >= ?start && ?position <= ?stop && str(?chromosome) = str(?lookupChromosome) )
+  ?s affymetrix:x-symbol <http://bio2rdf.org/symbol:CNTNAP2>.
+  ?s affymetrix:x-geneid ?geneId.
+  ?geneId rdf:type tcga:expression_gene_lookup.
+  ?geneId tcga:chromosome ?lookupChromosome. 
+  ?geneId tcga:start ?start.
+  ?geneId tcga:stop  ?stop. 
+  ?uri tcga:bcr_patient_barcode ?patient .
+  ?patient tcga:result ?recordNo .
+  ?recordNo tcga:chromosome   ?chromosome.
+  ?recordNo tcga:position     ?position.
+  ?recordNo tcga:beta_value  ?methylationCNTNAP2.
+  FILTER (?position >= ?start && ?position <= ?stop && str(?chromosome) = str(?lookupChromosome) )
 }
 
 
@@ -94,22 +94,21 @@ PREFIX tcga: <http://tcga.deri.ie/schema/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX affymetrix: <http://bio2rdf.org/affymetrix_vocabulary:>
-SELECT  DISTINCT ?patient ?start ?stop ?geneExpVal 
+SELECT DISTINCT ?patient ?start ?stop ?geneExpVal 
 WHERE 
 {
-	?s affymetrix:x-symbol <http://bio2rdf.org/symbol:KRAS>.
-	?s affymetrix:x-geneid ?geneId.
-	?geneId rdf:type tcga:expression_gene_lookup.
-	?geneId tcga:chromosome ?lookupChromosome.
-	?uri tcga:bcr_patient_barcode ?patient .
-	?patient tcga:result ?recordNo .
-	?recordNo tcga:chromosome   ?chromosome.
-	?recordNo tcga:start ?start.
-	?recordNo tcga:stop ?stop.
-	?recordNo tcga:scaled_estimate ?geneExpVal
-	FILTER (str(?lookupChromosome)= str(?chromosome))
+  ?s affymetrix:x-symbol <http://bio2rdf.org/symbol:KRAS>.
+  ?s affymetrix:x-geneid ?geneId.
+  ?geneId rdf:type tcga:expression_gene_lookup.
+  ?geneId tcga:chromosome ?lookupChromosome.
+  ?uri tcga:bcr_patient_barcode ?patient .
+  ?patient tcga:result ?recordNo .
+  ?recordNo tcga:chromosome   ?chromosome.
+  ?recordNo tcga:start ?start.
+  ?recordNo tcga:stop ?stop.
+  ?recordNo tcga:scaled_estimate ?geneExpVal
+  FILTER (str(?lookupChromosome)= str(?chromosome))
 }
-
 
 
 PREFIX tcga: <http://tcga.deri.ie/schema/>
@@ -117,14 +116,13 @@ PREFIX dbpedia: <http://dbpedia.org/ontology/>
 SELECT DISTINCT ?patient ?p ?o
 WHERE
 {
-?uri tcga:bcr_patient_barcode ?patient .
-?patient dbpedia:country ?country.
-?country dbpedia:populationDensity ?popDensity.
-?patient tcga:bcr_aliquot_barcode ?aliquot.
-?aliquot ?p ?o.
-FILTER(?popDensity >= 32)
+  ?uri tcga:bcr_patient_barcode ?patient .
+  ?patient dbpedia:country ?country.
+  ?country dbpedia:populationDensity ?popDensity.
+  ?patient tcga:bcr_aliquot_barcode ?aliquot.
+  ?aliquot ?p ?o.
+  FILTER(?popDensity >= 32)
 }
-
 
 
 PREFIX tcga: <http://tcga.deri.ie/schema/>
@@ -132,19 +130,19 @@ PREFIX dbpedia: <http://dbpedia.org/ontology/>
 SELECT  ?chromosome ?expressionValue
 WHERE
 {
-{
-?uri tcga:bcr_patient_barcode <http://tcga.deri.ie/TCGA-D9-A1X3> .
-<http://tcga.deri.ie/TCGA-D9-A1X3> tcga:result ?recordNo .
-?recordNo tcga:chromosome   ?chromosome.
-?recordNo tcga:protein_expression_value ?expressionValue.
-}
-UNION
-{
-?s tcga:bcr_patient_barcode <http://tcga.deri.ie/TCGA-D9-A1X3> .
-<http://tcga.deri.ie/TCGA-D9-A1X3> tcga:result ?results .
-?results tcga:chromosome   ?chromosome.
-?results tcga:beta_value ?expressionValue.
-}
-FILTER (?expressionValue > 0.05)
+  {
+    ?uri tcga:bcr_patient_barcode <http://tcga.deri.ie/TCGA-D9-A1X3> .
+    <http://tcga.deri.ie/TCGA-D9-A1X3> tcga:result ?recordNo .
+    ?recordNo tcga:chromosome   ?chromosome.
+    ?recordNo tcga:protein_expression_value ?expressionValue.
+  }
+  UNION
+  {
+    ?s tcga:bcr_patient_barcode <http://tcga.deri.ie/TCGA-D9-A1X3> .
+    <http://tcga.deri.ie/TCGA-D9-A1X3> tcga:result ?results .
+    ?results tcga:chromosome   ?chromosome.
+    ?results tcga:beta_value ?expressionValue.
+  }
+  FILTER (?expressionValue > 0.05)
 }
 
