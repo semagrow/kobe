@@ -108,7 +108,6 @@ SELECT ?actor ?movie ?movieTitle ?movieDate ?birthDate ?spouseName
              dcterms:title ?movieTitle ;
              dcterms:date ?movieDate
       FILTER(STR(?actor_name_en )= STR(?actor_name))
-
 } LIMIT 500
 
 
