@@ -20,6 +20,8 @@ FILTER (?molecularWeightAverage > 114)
 }
 }
 Limit 1000
+
+
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/>
@@ -42,6 +44,8 @@ OPTIONAL {
 			FILTER (?drugbankInchi = ?chebiInchi) 
 		}
 }
+
+
 PREFIX foaf: 		<http://xmlns.com/foaf/0.1/>
 PREFIX geonames: 	<http://www.geonames.org/ontology#>
 PREFIX mo:   		<http://purl.org/ontology/mo/>
@@ -60,7 +64,10 @@ OPTIONAL
 {
          ?locationName geonames:name 'Islamic Republic of Afghanistan' .
 }
-}prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+}
+
+
+prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 prefix geonames: <http://www.geonames.org/ontology#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 Prefix dbpedia: <http://dbpedia.org/ontology/>
@@ -82,7 +89,10 @@ dbpedia:ethnicGroup ?ethnicGroup;
 dbpedia:motto ?motto.
 }
 }
-LIMIT 50PREFIX linkedmdb: <http://data.linkedmdb.org/resource/movie/>
+LIMIT 50
+
+
+PREFIX linkedmdb: <http://data.linkedmdb.org/resource/movie/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX dbpedia: <http://dbpedia.org/ontology/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -99,7 +109,10 @@ SELECT ?actor ?movie ?movieTitle ?movieDate ?birthDate ?spouseName
              dcterms:date ?movieDate
       FILTER(STR(?actor_name_en )= STR(?actor_name))
 
-} LIMIT 500PREFIX linkedmdb: <http://data.linkedmdb.org/resource/movie/>
+} LIMIT 500
+
+
+PREFIX linkedmdb: <http://data.linkedmdb.org/resource/movie/>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX purl: <http://purl.org/dc/terms/>
@@ -117,7 +130,10 @@ WHERE
 	nytimes:first_use 		?first_use;
 	nytimes:latest_use 		?latest_use
 }
-ORDER BY (?actor)prefix swc: <http://data.semanticweb.org/ns/swc/ontology#>
+ORDER BY (?actor)
+
+
+prefix swc: <http://data.semanticweb.org/ns/swc/ontology#>
 prefix swrc: <http://swrc.ontoware.org/ontology#>
 prefix eswc: <http://data.semanticweb.org/conference/eswc/>
 prefix foaf: <http://xmlns.com/foaf/0.1/>
@@ -137,7 +153,10 @@ OPTIONAL
 	geo:lat ?latitude;	
 	geo:long ?longitude.
 }
-}prefix swc: <http://data.semanticweb.org/ns/swc/ontology#>
+}
+
+
+prefix swc: <http://data.semanticweb.org/ns/swc/ontology#>
 prefix swrc: <http://swrc.ontoware.org/ontology#>
 prefix eswc: <http://data.semanticweb.org/conference/eswc/>
 prefix iswc:  <http://data.semanticweb.org/conference/iswc/2009/>
@@ -161,7 +180,10 @@ OPTIONAL
        dbpedia:language  ?language ;
        dbpedia:leaderTitle ?leaderTitle.
 }
-}Prefix dbpedia: <http://dbpedia.org/ontology/>
+}
+
+
+Prefix dbpedia: <http://dbpedia.org/ontology/>
 Prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix owl: <http://www.w3.org/2002/07/owl#>
 Prefix drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/>

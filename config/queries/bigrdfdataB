@@ -44,9 +44,10 @@ WHERE
 ?results  tcga:beta_value ?methylationValue.
 FILTER(?age <= 51)
 }
-ORDER BY (?patient)PREFIX tcga: <http://tcga.deri.ie/schema/> 
+ORDER BY (?patient)
 
 
+PREFIX tcga: <http://tcga.deri.ie/schema/> 
 PREFIX dbpedia: <http://dbpedia.org/ontology/>
 SELECT    ?expressionValues
 WHERE

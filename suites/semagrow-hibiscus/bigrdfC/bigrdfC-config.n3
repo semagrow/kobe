@@ -18,10 +18,12 @@
       rep:repositoryType "semagrow:SemagrowRepository" ;
       sr:sailImpl [
          sail:sailType "semagrow:SemagrowSail" ;
-         semagrow:metadataInit "suites/semagrow-tbss/lifeScience/lifeScience.void.n3" ;
+         semagrow:metadataInit "suites/semagrow-hibiscus/bigrdfC/bigrdfC.void.n3" ;
 	 semagrow:executorBatchSize "8" ;
-	 semagrow:sourceSelector "aksw:tbss" ;
-         hibiscus:hibiscusMode "Index_dominant" ;
-         hibiscus:summariesFile "suites/semagrow-tbss/lifeScience/summaries/lifeScience.n3";
+	 semagrow:sourceSelector "aksw:hibiscus" ;
+         hibiscus:hibiscusMode "ASK_dominant" ;
+         hibiscus:summariesFile "suites/semagrow-hibiscus/bigrdfC/summaries/BigRDFBench.n3";
+	 hibiscus:commonPredThreshold "1" 
       ]
    ] .
+

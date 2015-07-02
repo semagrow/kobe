@@ -1,0 +1,16 @@
+description = SemaGrow - BigRdfDataC
+
+dataConfig = suites/semagrow-hibiscus/bigrdfC/bigrdfC.ttl
+
+querySet = bigrdfdataC
+
+evalRuns = 1
+
+timeout = 520000
+
+fill = false
+
+#envConfig = suites/semagrow-hibiscus/bigrdfC/env.prop
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluationReactive
+
