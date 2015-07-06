@@ -6,7 +6,7 @@ querySet = bigrdfdataB
 
 evalRuns = 1
 
-timeout = 520000
+timeout = 1200000
 
 fill = false
 

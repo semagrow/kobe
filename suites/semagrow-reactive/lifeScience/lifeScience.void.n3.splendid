@@ -9268,1795 +9268,913 @@ _:node-1cpji4tx1 a void:Dataset ;
 	] , [
 		void:class foaf:Person ;
 		void:entities "48708"^^xsd:integer
-	] .@prefix owl: <http://www.w3.org/2002/07/owl#> .
+	] .@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-_:node-25mk2vx1 a void:Dataset ;
-	void:sparqlEndpoint <http://143.233.226.25:8897/sparql> ;
-	void:triples "335198"^^xsd:integer ;
-	void:entities "11723"^^xsd:integer ;
-	void:properties "36"^^xsd:integer ;
-	void:distinctSubjects "21666"^^xsd:integer ;
-	void:distinctObjects "191537"^^xsd:integer ;
+_:nodefn1jemx1 a void:Dataset ;
+	void:sparqlEndpoint <http://143.233.226.25:8895/sparql> ;
+	void:triples "1090830"^^xsd:integer ;
+	void:entities "34260"^^xsd:integer ;
+	void:properties "21"^^xsd:integer ;
+	void:distinctSubjects "34260"^^xsd:integer ;
+	void:distinctObjects "939258"^^xsd:integer ;
 	void:propertyPartition [
-		void:property cc:attributionName ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property cc:attributionURL ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "9943"^^xsd:integer
-	] , [
-		void:property cc:license ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property nyt:associated_article_count ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "420"^^xsd:integer
-	] , [
-		void:property nyt:first_use ;
-		void:triples "7189"^^xsd:integer ;
-		void:distinctSubjects "7189"^^xsd:integer ;
-		void:distinctObjects "1640"^^xsd:integer
-	] , [
-		void:property nyt:latest_use ;
-		void:triples "7189"^^xsd:integer ;
-		void:distinctSubjects "7189"^^xsd:integer ;
-		void:distinctObjects "1434"^^xsd:integer
-	] , [
-		void:property nyt:mapping_strategy ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "2"^^xsd:integer
-	] , [
-		void:property nyt:number_of_variants ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "36"^^xsd:integer
-	] , [
-		void:property nyt:search_api_query ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "9942"^^xsd:integer
-	] , [
-		void:property nyt:topicPage ;
-		void:triples "7432"^^xsd:integer ;
-		void:distinctSubjects "7432"^^xsd:integer ;
-		void:distinctObjects "7354"^^xsd:integer
-	] , [
-		void:property dc:creator ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property dcterms:created ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "75"^^xsd:integer
-	] , [
-		void:property dcterms:modified ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property dcterms:rightsHolder ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property geonames:alternateName ;
-		void:triples "58075"^^xsd:integer ;
-		void:distinctSubjects "1583"^^xsd:integer ;
-		void:distinctObjects "57360"^^xsd:integer
-	] , [
-		void:property geonames:childrenFeatures ;
-		void:triples "406"^^xsd:integer ;
-		void:distinctSubjects "406"^^xsd:integer ;
-		void:distinctObjects "406"^^xsd:integer
-	] , [
-		void:property geonames:countryCode ;
-		void:triples "1761"^^xsd:integer ;
-		void:distinctSubjects "1761"^^xsd:integer ;
-		void:distinctObjects "235"^^xsd:integer
-	] , [
-		void:property geonames:featureClass ;
-		void:triples "1780"^^xsd:integer ;
-		void:distinctSubjects "1780"^^xsd:integer ;
-		void:distinctObjects "8"^^xsd:integer
-	] , [
-		void:property geonames:featureCode ;
-		void:triples "1777"^^xsd:integer ;
-		void:distinctSubjects "1777"^^xsd:integer ;
-		void:distinctObjects "74"^^xsd:integer
-	] , [
-		void:property geonames:inCountry ;
-		void:triples "1761"^^xsd:integer ;
-		void:distinctSubjects "1761"^^xsd:integer ;
-		void:distinctObjects "235"^^xsd:integer
-	] , [
-		void:property geonames:locationMap ;
-		void:triples "1780"^^xsd:integer ;
-		void:distinctSubjects "1780"^^xsd:integer ;
-		void:distinctObjects "1780"^^xsd:integer
-	] , [
-		void:property geonames:name ;
-		void:triples "1780"^^xsd:integer ;
-		void:distinctSubjects "1780"^^xsd:integer ;
-		void:distinctObjects "1739"^^xsd:integer
-	] , [
-		void:property geonames:nearbyFeatures ;
-		void:triples "1374"^^xsd:integer ;
-		void:distinctSubjects "1374"^^xsd:integer ;
-		void:distinctObjects "1374"^^xsd:integer
-	] , [
-		void:property geonames:neighbouringFeatures ;
-		void:triples "185"^^xsd:integer ;
-		void:distinctSubjects "185"^^xsd:integer ;
-		void:distinctObjects "185"^^xsd:integer
-	] , [
-		void:property geonames:parentFeature ;
-		void:triples "1780"^^xsd:integer ;
-		void:distinctSubjects "1780"^^xsd:integer ;
-		void:distinctObjects "932"^^xsd:integer
-	] , [
-		void:property geonames:population ;
-		void:triples "1283"^^xsd:integer ;
-		void:distinctSubjects "1283"^^xsd:integer ;
-		void:distinctObjects "1279"^^xsd:integer
-	] , [
-		void:property geonames:postalCode ;
-		void:triples "501"^^xsd:integer ;
-		void:distinctSubjects "501"^^xsd:integer ;
-		void:distinctObjects "500"^^xsd:integer
-	] , [
-		void:property geonames:wikipediaArticle ;
-		void:triples "48271"^^xsd:integer ;
-		void:distinctSubjects "1205"^^xsd:integer ;
-		void:distinctObjects "48263"^^xsd:integer
-	] , [
-		void:property rdf:type ;
-		void:triples "11723"^^xsd:integer ;
-		void:distinctSubjects "11723"^^xsd:integer ;
-		void:distinctObjects "2"^^xsd:integer
-	] , [
-		void:property owl:sameAs ;
-		void:triples "31673"^^xsd:integer ;
-		void:distinctSubjects "11133"^^xsd:integer ;
-		void:distinctObjects "30614"^^xsd:integer
-	] , [
-		void:property geo:lat ;
-		void:triples "3567"^^xsd:integer ;
-		void:distinctSubjects "3567"^^xsd:integer ;
-		void:distinctObjects "3241"^^xsd:integer
-	] , [
-		void:property geo:long ;
-		void:triples "3567"^^xsd:integer ;
-		void:distinctSubjects "3567"^^xsd:integer ;
-		void:distinctObjects "3337"^^xsd:integer
-	] , [
-		void:property skos:definition ;
-		void:triples "1142"^^xsd:integer ;
-		void:distinctSubjects "1142"^^xsd:integer ;
-		void:distinctObjects "1112"^^xsd:integer
-	] , [
-		void:property skos:inScheme ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "3"^^xsd:integer
-	] , [
-		void:property skos:prefLabel ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "9943"^^xsd:integer
-	] , [
-		void:property foaf:primaryTopic ;
-		void:triples "9943"^^xsd:integer ;
-		void:distinctSubjects "9943"^^xsd:integer ;
-		void:distinctObjects "9943"^^xsd:integer
-	] ;
-	void:classPartition [
-		void:class geonames:Feature ;
-		void:entities "1780"^^xsd:integer
-	] , [
-		void:class skos:Concept ;
-		void:entities "9943"^^xsd:integer
-	] .
-
-_:node-ejq21dx1 a void:Dataset ;
-	void:sparqlEndpoint <http://143.233.226.25:8896/sparql> ;
-	void:triples "6148121"^^xsd:integer ;
-	void:entities "665441"^^xsd:integer ;
-	void:properties "222"^^xsd:integer ;
-	void:distinctSubjects "694400"^^xsd:integer ;
-	void:distinctObjects "2052959"^^xsd:integer ;
-	void:propertyPartition [
-		void:property lmdb:actor ;
-		void:triples "194649"^^xsd:integer ;
-		void:distinctSubjects "53474"^^xsd:integer ;
-		void:distinctObjects "43559"^^xsd:integer
-	] , [
-		void:property lmdb:actor_actorid ;
-		void:triples "50603"^^xsd:integer ;
-		void:distinctSubjects "50603"^^xsd:integer ;
-		void:distinctObjects "50603"^^xsd:integer
-	] , [
-		void:property lmdb:actor_name ;
-		void:triples "50603"^^xsd:integer ;
-		void:distinctSubjects "50603"^^xsd:integer ;
-		void:distinctObjects "48737"^^xsd:integer
-	] , [
-		void:property lmdb:actor_netflix_id ;
-		void:triples "38844"^^xsd:integer ;
-		void:distinctSubjects "38844"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property lmdb:actor_nytimes_id ;
-		void:triples "38844"^^xsd:integer ;
-		void:distinctSubjects "38844"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property lmdb:cinematographer ;
-		void:triples "1955"^^xsd:integer ;
-		void:distinctSubjects "1770"^^xsd:integer ;
-		void:distinctObjects "953"^^xsd:integer
-	] , [
-		void:property lmdb:cinematographer_cinematographerid ;
-		void:triples "3263"^^xsd:integer ;
-		void:distinctSubjects "3263"^^xsd:integer ;
-		void:distinctObjects "3263"^^xsd:integer
-	] , [
-		void:property lmdb:cinematographer_name ;
-		void:triples "3263"^^xsd:integer ;
-		void:distinctSubjects "3263"^^xsd:integer ;
-		void:distinctObjects "3105"^^xsd:integer
-	] , [
-		void:property lmdb:content_rating_content_ratingid ;
-		void:triples "107"^^xsd:integer ;
-		void:distinctSubjects "107"^^xsd:integer ;
-		void:distinctObjects "107"^^xsd:integer
-	] , [
-		void:property lmdb:content_rating_country ;
-		void:triples "107"^^xsd:integer ;
-		void:distinctSubjects "107"^^xsd:integer ;
-		void:distinctObjects "19"^^xsd:integer
-	] , [
-		void:property lmdb:content_rating_film_rating_system ;
-		void:triples "107"^^xsd:integer ;
-		void:distinctSubjects "107"^^xsd:integer ;
-		void:distinctObjects "20"^^xsd:integer
-	] , [
-		void:property lmdb:content_rating_minimum_unaccompanied_age ;
-		void:triples "62"^^xsd:integer ;
-		void:distinctSubjects "62"^^xsd:integer ;
-		void:distinctObjects "11"^^xsd:integer
-	] , [
-		void:property lmdb:content_rating_name ;
-		void:triples "107"^^xsd:integer ;
-		void:distinctSubjects "107"^^xsd:integer ;
-		void:distinctObjects "80"^^xsd:integer
-	] , [
-		void:property lmdb:content_rating_system ;
-		void:triples "99"^^xsd:integer ;
-		void:distinctSubjects "99"^^xsd:integer ;
-		void:distinctObjects "19"^^xsd:integer
-	] , [
-		void:property lmdb:content_rating_system_content_rating_systemid ;
-		void:triples "46"^^xsd:integer ;
-		void:distinctSubjects "46"^^xsd:integer ;
-		void:distinctObjects "46"^^xsd:integer
-	] , [
-		void:property lmdb:content_rating_system_jurisdiction ;
-		void:triples "46"^^xsd:integer ;
-		void:distinctSubjects "46"^^xsd:integer ;
-		void:distinctObjects "36"^^xsd:integer
-	] , [
-		void:property lmdb:content_rating_system_name ;
-		void:triples "46"^^xsd:integer ;
-		void:distinctSubjects "46"^^xsd:integer ;
-		void:distinctObjects "45"^^xsd:integer
-	] , [
-		void:property lmdb:costume_designer ;
-		void:triples "16"^^xsd:integer ;
-		void:distinctSubjects "15"^^xsd:integer ;
-		void:distinctObjects "16"^^xsd:integer
-	] , [
-		void:property lmdb:country ;
-		void:triples "16587"^^xsd:integer ;
-		void:distinctSubjects "14882"^^xsd:integer ;
-		void:distinctObjects "129"^^xsd:integer
-	] , [
-		void:property lmdb:country_areaInSqKm ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "241"^^xsd:integer
-	] , [
-		void:property lmdb:country_capital ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "242"^^xsd:integer
-	] , [
-		void:property lmdb:country_continent ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "8"^^xsd:integer
-	] , [
-		void:property lmdb:country_currency ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "163"^^xsd:integer
-	] , [
-		void:property lmdb:country_fips_code ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "246"^^xsd:integer
-	] , [
-		void:property lmdb:country_id ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "247"^^xsd:integer
-	] , [
-		void:property lmdb:country_iso_alpha2 ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "247"^^xsd:integer
-	] , [
-		void:property lmdb:country_iso_alpha3 ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "247"^^xsd:integer
-	] , [
-		void:property lmdb:country_iso_numeric ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "247"^^xsd:integer
-	] , [
-		void:property lmdb:country_languages ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "243"^^xsd:integer
-	] , [
-		void:property lmdb:country_name ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "247"^^xsd:integer
-	] , [
-		void:property lmdb:country_population ;
-		void:triples "247"^^xsd:integer ;
-		void:distinctSubjects "247"^^xsd:integer ;
-		void:distinctObjects "241"^^xsd:integer
-	] , [
-		void:property lmdb:director ;
-		void:triples "53180"^^xsd:integer ;
-		void:distinctSubjects "48998"^^xsd:integer ;
-		void:distinctObjects "14520"^^xsd:integer
-	] , [
-		void:property lmdb:director_directorid ;
-		void:triples "17156"^^xsd:integer ;
-		void:distinctSubjects "17156"^^xsd:integer ;
-		void:distinctObjects "17156"^^xsd:integer
-	] , [
-		void:property lmdb:director_name ;
-		void:triples "17156"^^xsd:integer ;
-		void:distinctSubjects "17156"^^xsd:integer ;
-		void:distinctObjects "16411"^^xsd:integer
-	] , [
-		void:property lmdb:dubbing_performance ;
-		void:triples "115"^^xsd:integer ;
-		void:distinctSubjects "60"^^xsd:integer ;
-		void:distinctObjects "115"^^xsd:integer
-	] , [
-		void:property lmdb:dubbing_performance_actor ;
-		void:triples "118"^^xsd:integer ;
-		void:distinctSubjects "118"^^xsd:integer ;
-		void:distinctObjects "107"^^xsd:integer
-	] , [
-		void:property lmdb:dubbing_performance_character ;
-		void:triples "118"^^xsd:integer ;
-		void:distinctSubjects "118"^^xsd:integer ;
-		void:distinctObjects "20"^^xsd:integer
-	] , [
-		void:property lmdb:dubbing_performance_dubbing_performanceid ;
-		void:triples "118"^^xsd:integer ;
-		void:distinctSubjects "118"^^xsd:integer ;
-		void:distinctObjects "118"^^xsd:integer
-	] , [
-		void:property lmdb:dubbing_performance_film ;
-		void:triples "118"^^xsd:integer ;
-		void:distinctSubjects "118"^^xsd:integer ;
-		void:distinctObjects "63"^^xsd:integer
-	] , [
-		void:property lmdb:dubbing_performance_language ;
-		void:triples "118"^^xsd:integer ;
-		void:distinctSubjects "118"^^xsd:integer ;
-		void:distinctObjects "7"^^xsd:integer
-	] , [
-		void:property lmdb:dubbing_performance_name ;
-		void:triples "118"^^xsd:integer ;
-		void:distinctSubjects "118"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property lmdb:editor ;
-		void:triples "9245"^^xsd:integer ;
-		void:distinctSubjects "7851"^^xsd:integer ;
-		void:distinctObjects "3210"^^xsd:integer
-	] , [
-		void:property lmdb:editor_editorid ;
-		void:triples "3290"^^xsd:integer ;
-		void:distinctSubjects "3290"^^xsd:integer ;
-		void:distinctObjects "3290"^^xsd:integer
-	] , [
-		void:property lmdb:editor_name ;
-		void:triples "3290"^^xsd:integer ;
-		void:distinctSubjects "3290"^^xsd:integer ;
-		void:distinctObjects "3158"^^xsd:integer
-	] , [
-		void:property lmdb:executive_producer ;
-		void:triples "954"^^xsd:integer ;
-		void:distinctSubjects "375"^^xsd:integer ;
-		void:distinctObjects "779"^^xsd:integer
-	] , [
-		void:property lmdb:featured_film_location ;
-		void:triples "4870"^^xsd:integer ;
-		void:distinctSubjects "3291"^^xsd:integer ;
-		void:distinctObjects "1290"^^xsd:integer
-	] , [
-		void:property lmdb:film_art_director ;
-		void:triples "2625"^^xsd:integer ;
-		void:distinctSubjects "2410"^^xsd:integer ;
-		void:distinctObjects "363"^^xsd:integer
-	] , [
-		void:property lmdb:film_art_director_id ;
-		void:triples "365"^^xsd:integer ;
-		void:distinctSubjects "365"^^xsd:integer ;
-		void:distinctObjects "365"^^xsd:integer
-	] , [
-		void:property lmdb:film_art_director_name ;
-		void:triples "365"^^xsd:integer ;
-		void:distinctSubjects "365"^^xsd:integer ;
-		void:distinctObjects "363"^^xsd:integer
-	] , [
-		void:property lmdb:film_awards_ceremony_film_awards_ceremonyid ;
-		void:triples "127"^^xsd:integer ;
-		void:distinctSubjects "127"^^xsd:integer ;
-		void:distinctObjects "127"^^xsd:integer
-	] , [
-		void:property lmdb:film_awards_ceremony_id ;
-		void:triples "127"^^xsd:integer ;
-		void:distinctSubjects "127"^^xsd:integer ;
-		void:distinctObjects "127"^^xsd:integer
-	] , [
-		void:property lmdb:film_awards_ceremony_name ;
-		void:triples "127"^^xsd:integer ;
-		void:distinctSubjects "127"^^xsd:integer ;
-		void:distinctObjects "127"^^xsd:integer
-	] , [
-		void:property lmdb:film_casting_director ;
-		void:triples "542"^^xsd:integer ;
-		void:distinctSubjects "342"^^xsd:integer ;
-		void:distinctObjects "267"^^xsd:integer
-	] , [
-		void:property lmdb:film_casting_director_film_casting_director_id ;
-		void:triples "273"^^xsd:integer ;
-		void:distinctSubjects "273"^^xsd:integer ;
-		void:distinctObjects "273"^^xsd:integer
-	] , [
-		void:property lmdb:film_casting_director_freebase_url ;
-		void:triples "273"^^xsd:integer ;
-		void:distinctSubjects "273"^^xsd:integer ;
-		void:distinctObjects "273"^^xsd:integer
-	] , [
-		void:property lmdb:film_casting_director_name ;
-		void:triples "273"^^xsd:integer ;
-		void:distinctSubjects "273"^^xsd:integer ;
-		void:distinctObjects "254"^^xsd:integer
-	] , [
-		void:property lmdb:film_character ;
-		void:triples "17822"^^xsd:integer ;
-		void:distinctSubjects "17822"^^xsd:integer ;
-		void:distinctObjects "15314"^^xsd:integer
-	] , [
-		void:property lmdb:film_character_film_characterid ;
-		void:triples "15752"^^xsd:integer ;
-		void:distinctSubjects "15752"^^xsd:integer ;
-		void:distinctObjects "15752"^^xsd:integer
-	] , [
-		void:property lmdb:film_character_name ;
-		void:triples "15752"^^xsd:integer ;
-		void:distinctSubjects "15752"^^xsd:integer ;
-		void:distinctObjects "13607"^^xsd:integer
-	] , [
-		void:property lmdb:film_collection ;
-		void:triples "17"^^xsd:integer ;
-		void:distinctSubjects "17"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property lmdb:film_collection_film_collectionid ;
-		void:triples "1"^^xsd:integer ;
-		void:distinctSubjects "1"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property lmdb:film_collection_name ;
-		void:triples "1"^^xsd:integer ;
-		void:distinctSubjects "1"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property lmdb:film_company ;
-		void:triples "1"^^xsd:integer ;
-		void:distinctSubjects "1"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property lmdb:film_company_film_companyid ;
-		void:triples "338"^^xsd:integer ;
-		void:distinctSubjects "338"^^xsd:integer ;
-		void:distinctObjects "338"^^xsd:integer
-	] , [
-		void:property lmdb:film_company_name ;
-		void:triples "338"^^xsd:integer ;
-		void:distinctSubjects "338"^^xsd:integer ;
-		void:distinctObjects "338"^^xsd:integer
-	] , [
-		void:property lmdb:film_costume_designer_film_costume_designerid ;
-		void:triples "353"^^xsd:integer ;
-		void:distinctSubjects "353"^^xsd:integer ;
-		void:distinctObjects "353"^^xsd:integer
-	] , [
-		void:property lmdb:film_costume_designer_name ;
-		void:triples "353"^^xsd:integer ;
-		void:distinctSubjects "353"^^xsd:integer ;
-		void:distinctObjects "352"^^xsd:integer
-	] , [
-		void:property lmdb:film_crew_gig_film ;
-		void:triples "17081"^^xsd:integer ;
-		void:distinctSubjects "17081"^^xsd:integer ;
-		void:distinctObjects "389"^^xsd:integer
-	] , [
-		void:property lmdb:film_crew_gig_film_crew_gigid ;
-		void:triples "17237"^^xsd:integer ;
-		void:distinctSubjects "17237"^^xsd:integer ;
-		void:distinctObjects "17237"^^xsd:integer
-	] , [
-		void:property lmdb:film_crew_gig_film_job ;
-		void:triples "17074"^^xsd:integer ;
-		void:distinctSubjects "17074"^^xsd:integer ;
-		void:distinctObjects "3595"^^xsd:integer
-	] , [
-		void:property lmdb:film_crew_gig_id ;
-		void:triples "17237"^^xsd:integer ;
-		void:distinctSubjects "17237"^^xsd:integer ;
-		void:distinctObjects "17237"^^xsd:integer
-	] , [
-		void:property lmdb:film_crew_gig_name ;
-		void:triples "17237"^^xsd:integer ;
-		void:distinctSubjects "17237"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property lmdb:film_crew_role ;
-		void:triples "17237"^^xsd:integer ;
-		void:distinctSubjects "17237"^^xsd:integer ;
-		void:distinctObjects "3613"^^xsd:integer
-	] , [
-		void:property lmdb:film_crewmember ;
-		void:triples "24"^^xsd:integer ;
-		void:distinctSubjects "24"^^xsd:integer ;
-		void:distinctObjects "24"^^xsd:integer
-	] , [
-		void:property lmdb:film_crewmember_film_crewmemberid ;
-		void:triples "25"^^xsd:integer ;
-		void:distinctSubjects "25"^^xsd:integer ;
-		void:distinctObjects "25"^^xsd:integer
-	] , [
-		void:property lmdb:film_crewmember_name ;
-		void:triples "25"^^xsd:integer ;
-		void:distinctSubjects "25"^^xsd:integer ;
-		void:distinctObjects "25"^^xsd:integer
-	] , [
-		void:property lmdb:film_critic_film_criticid ;
-		void:triples "152"^^xsd:integer ;
-		void:distinctSubjects "152"^^xsd:integer ;
-		void:distinctObjects "152"^^xsd:integer
-	] , [
-		void:property lmdb:film_critic_name ;
-		void:triples "152"^^xsd:integer ;
-		void:distinctSubjects "152"^^xsd:integer ;
-		void:distinctObjects "152"^^xsd:integer
-	] , [
-		void:property lmdb:film_cut ;
-		void:triples "11888"^^xsd:integer ;
-		void:distinctSubjects "11628"^^xsd:integer ;
-		void:distinctObjects "11888"^^xsd:integer
-	] , [
-		void:property lmdb:film_cut_film_cutid ;
-		void:triples "45259"^^xsd:integer ;
-		void:distinctSubjects "45259"^^xsd:integer ;
-		void:distinctObjects "45259"^^xsd:integer
-	] , [
-		void:property lmdb:film_cut_note ;
-		void:triples "25516"^^xsd:integer ;
-		void:distinctSubjects "25516"^^xsd:integer ;
-		void:distinctObjects "195"^^xsd:integer
-	] , [
-		void:property lmdb:film_distribution_medium ;
-		void:triples "96"^^xsd:integer ;
-		void:distinctSubjects "96"^^xsd:integer ;
-		void:distinctObjects "7"^^xsd:integer
-	] , [
-		void:property lmdb:film_distribution_medium_film_distribution_mediumid ;
-		void:triples "10"^^xsd:integer ;
-		void:distinctSubjects "10"^^xsd:integer ;
-		void:distinctObjects "10"^^xsd:integer
-	] , [
-		void:property lmdb:film_distribution_medium_name ;
-		void:triples "10"^^xsd:integer ;
-		void:distinctSubjects "10"^^xsd:integer ;
-		void:distinctObjects "10"^^xsd:integer
-	] , [
-		void:property lmdb:film_distributor ;
-		void:triples "15248"^^xsd:integer ;
-		void:distinctSubjects "15248"^^xsd:integer ;
-		void:distinctObjects "166"^^xsd:integer
-	] , [
-		void:property lmdb:film_distributor_film_distributorid ;
-		void:triples "169"^^xsd:integer ;
-		void:distinctSubjects "169"^^xsd:integer ;
-		void:distinctObjects "169"^^xsd:integer
-	] , [
-		void:property lmdb:film_distributor_freebase_url ;
-		void:triples "169"^^xsd:integer ;
-		void:distinctSubjects "169"^^xsd:integer ;
-		void:distinctObjects "169"^^xsd:integer
-	] , [
-		void:property lmdb:film_distributor_name ;
-		void:triples "169"^^xsd:integer ;
-		void:distinctSubjects "169"^^xsd:integer ;
-		void:distinctObjects "168"^^xsd:integer
-	] , [
-		void:property lmdb:film_featured_song ;
-		void:triples "71"^^xsd:integer ;
-		void:distinctSubjects "66"^^xsd:integer ;
-		void:distinctObjects "70"^^xsd:integer
-	] , [
-		void:property lmdb:film_featured_song_film_featured_song_id ;
-		void:triples "72"^^xsd:integer ;
-		void:distinctSubjects "72"^^xsd:integer ;
-		void:distinctObjects "72"^^xsd:integer
-	] , [
-		void:property lmdb:film_featured_song_freebase_url ;
-		void:triples "72"^^xsd:integer ;
-		void:distinctSubjects "72"^^xsd:integer ;
-		void:distinctObjects "72"^^xsd:integer
-	] , [
-		void:property lmdb:film_featured_song_name ;
-		void:triples "72"^^xsd:integer ;
-		void:distinctSubjects "72"^^xsd:integer ;
-		void:distinctObjects "72"^^xsd:integer
-	] , [
-		void:property lmdb:film_featured_song_performed_by ;
-		void:triples "72"^^xsd:integer ;
-		void:distinctSubjects "72"^^xsd:integer ;
-		void:distinctObjects "46"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_event ;
-		void:triples "535"^^xsd:integer ;
-		void:distinctSubjects "170"^^xsd:integer ;
-		void:distinctObjects "535"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_event_closing_date ;
-		void:triples "685"^^xsd:integer ;
-		void:distinctSubjects "685"^^xsd:integer ;
-		void:distinctObjects "2"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_event_film_festival_event_id ;
-		void:triples "685"^^xsd:integer ;
-		void:distinctSubjects "685"^^xsd:integer ;
-		void:distinctObjects "685"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_event_freebase_url ;
-		void:triples "685"^^xsd:integer ;
-		void:distinctSubjects "685"^^xsd:integer ;
-		void:distinctObjects "685"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_event_name ;
-		void:triples "685"^^xsd:integer ;
-		void:distinctSubjects "685"^^xsd:integer ;
-		void:distinctObjects "621"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_event_opening_date ;
-		void:triples "685"^^xsd:integer ;
-		void:distinctSubjects "685"^^xsd:integer ;
-		void:distinctObjects "7"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_film_festivalid ;
-		void:triples "566"^^xsd:integer ;
-		void:distinctSubjects "566"^^xsd:integer ;
-		void:distinctObjects "566"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_focus_film_festival_focus_id ;
-		void:triples "13"^^xsd:integer ;
-		void:distinctSubjects "13"^^xsd:integer ;
-		void:distinctObjects "13"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_focus_freebase_url ;
-		void:triples "13"^^xsd:integer ;
-		void:distinctSubjects "13"^^xsd:integer ;
-		void:distinctObjects "13"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_focus_name ;
-		void:triples "13"^^xsd:integer ;
-		void:distinctSubjects "13"^^xsd:integer ;
-		void:distinctObjects "13"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_name ;
-		void:triples "566"^^xsd:integer ;
-		void:distinctSubjects "566"^^xsd:integer ;
-		void:distinctObjects "565"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_sponsor_film_festival_sponsor_id ;
-		void:triples "70"^^xsd:integer ;
-		void:distinctSubjects "70"^^xsd:integer ;
-		void:distinctObjects "70"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_sponsor_freebase_url ;
-		void:triples "70"^^xsd:integer ;
-		void:distinctSubjects "70"^^xsd:integer ;
-		void:distinctObjects "70"^^xsd:integer
-	] , [
-		void:property lmdb:film_festival_sponsor_name ;
-		void:triples "70"^^xsd:integer ;
-		void:distinctSubjects "70"^^xsd:integer ;
-		void:distinctObjects "69"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_company_relationship ;
-		void:triples "36"^^xsd:integer ;
-		void:distinctSubjects "22"^^xsd:integer ;
-		void:distinctObjects "36"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_company_relationship_film_film_company_relationshipid ;
-		void:triples "36"^^xsd:integer ;
-		void:distinctSubjects "36"^^xsd:integer ;
-		void:distinctObjects "36"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_company_relationship_freebase_url ;
-		void:triples "36"^^xsd:integer ;
-		void:distinctSubjects "36"^^xsd:integer ;
-		void:distinctObjects "36"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_company_relationship_name ;
-		void:triples "36"^^xsd:integer ;
-		void:distinctSubjects "36"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_company_relationship_role_service ;
-		void:triples "36"^^xsd:integer ;
-		void:distinctSubjects "36"^^xsd:integer ;
-		void:distinctObjects "11"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_distributor_relationship_distributor ;
-		void:triples "15256"^^xsd:integer ;
-		void:distinctSubjects "15256"^^xsd:integer ;
-		void:distinctObjects "166"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_distributor_relationship_film_cut ;
-		void:triples "15256"^^xsd:integer ;
-		void:distinctSubjects "15256"^^xsd:integer ;
-		void:distinctObjects "5"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_distributor_relationship_film_distribution_medium ;
-		void:triples "15256"^^xsd:integer ;
-		void:distinctSubjects "15256"^^xsd:integer ;
-		void:distinctObjects "8"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_distributor_relationship_film_film_distributor_relationshipid ;
-		void:triples "15256"^^xsd:integer ;
-		void:distinctSubjects "15256"^^xsd:integer ;
-		void:distinctObjects "15256"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_distributor_relationship_freebase_url ;
-		void:triples "15256"^^xsd:integer ;
-		void:distinctSubjects "15256"^^xsd:integer ;
-		void:distinctObjects "15256"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_distributor_relationship_name ;
-		void:triples "15256"^^xsd:integer ;
-		void:distinctSubjects "15256"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_distributor_relationship_region ;
-		void:triples "15256"^^xsd:integer ;
-		void:distinctSubjects "15256"^^xsd:integer ;
-		void:distinctObjects "25"^^xsd:integer
-	] , [
-		void:property lmdb:film_film_distributor_relationship_year ;
-		void:triples "15256"^^xsd:integer ;
-		void:distinctSubjects "15256"^^xsd:integer ;
-		void:distinctObjects "23"^^xsd:integer
-	] , [
-		void:property lmdb:film_format ;
-		void:triples "1006"^^xsd:integer ;
-		void:distinctSubjects "990"^^xsd:integer ;
-		void:distinctObjects "28"^^xsd:integer
-	] , [
-		void:property lmdb:film_format_film_formatid ;
-		void:triples "57"^^xsd:integer ;
-		void:distinctSubjects "57"^^xsd:integer ;
-		void:distinctObjects "57"^^xsd:integer
-	] , [
-		void:property lmdb:film_format_name ;
-		void:triples "57"^^xsd:integer ;
-		void:distinctSubjects "57"^^xsd:integer ;
-		void:distinctObjects "52"^^xsd:integer
-	] , [
-		void:property lmdb:film_genre_film_genreid ;
-		void:triples "409"^^xsd:integer ;
-		void:distinctSubjects "409"^^xsd:integer ;
-		void:distinctObjects "409"^^xsd:integer
-	] , [
-		void:property lmdb:film_genre_name ;
-		void:triples "409"^^xsd:integer ;
-		void:distinctSubjects "409"^^xsd:integer ;
-		void:distinctObjects "403"^^xsd:integer
-	] , [
-		void:property lmdb:film_job_film_jobid ;
-		void:triples "4004"^^xsd:integer ;
-		void:distinctSubjects "4004"^^xsd:integer ;
-		void:distinctObjects "4004"^^xsd:integer
-	] , [
-		void:property lmdb:film_job_name ;
-		void:triples "4004"^^xsd:integer ;
-		void:distinctSubjects "4004"^^xsd:integer ;
-		void:distinctObjects "3785"^^xsd:integer
-	] , [
-		void:property lmdb:film_location_film_locationid ;
-		void:triples "1315"^^xsd:integer ;
-		void:distinctSubjects "1315"^^xsd:integer ;
-		void:distinctObjects "1315"^^xsd:integer
-	] , [
-		void:property lmdb:film_location_name ;
-		void:triples "1315"^^xsd:integer ;
-		void:distinctSubjects "1315"^^xsd:integer ;
-		void:distinctObjects "1299"^^xsd:integer
-	] , [
-		void:property lmdb:film_of_distributor ;
-		void:triples "15220"^^xsd:integer ;
-		void:distinctSubjects "15220"^^xsd:integer ;
-		void:distinctObjects "13861"^^xsd:integer
-	] , [
-		void:property lmdb:film_production_designer ;
-		void:triples "581"^^xsd:integer ;
-		void:distinctSubjects "559"^^xsd:integer ;
-		void:distinctObjects "273"^^xsd:integer
-	] , [
-		void:property lmdb:film_production_designer_film_production_designer_id ;
-		void:triples "293"^^xsd:integer ;
-		void:distinctSubjects "293"^^xsd:integer ;
-		void:distinctObjects "293"^^xsd:integer
-	] , [
-		void:property lmdb:film_production_designer_freebase_url ;
-		void:triples "293"^^xsd:integer ;
-		void:distinctSubjects "293"^^xsd:integer ;
-		void:distinctObjects "293"^^xsd:integer
-	] , [
-		void:property lmdb:film_production_designer_name ;
-		void:triples "293"^^xsd:integer ;
-		void:distinctSubjects "293"^^xsd:integer ;
-		void:distinctObjects "266"^^xsd:integer
-	] , [
-		void:property lmdb:film_regional_release_date ;
-		void:triples "413"^^xsd:integer ;
-		void:distinctSubjects "224"^^xsd:integer ;
-		void:distinctObjects "413"^^xsd:integer
-	] , [
-		void:property lmdb:film_regional_release_date_film_regional_debut_venue ;
-		void:triples "418"^^xsd:integer ;
-		void:distinctSubjects "418"^^xsd:integer ;
-		void:distinctObjects "25"^^xsd:integer
-	] , [
-		void:property lmdb:film_regional_release_date_film_regional_release_id ;
-		void:triples "418"^^xsd:integer ;
-		void:distinctSubjects "418"^^xsd:integer ;
-		void:distinctObjects "418"^^xsd:integer
-	] , [
-		void:property lmdb:film_regional_release_date_film_release_distribution_medium ;
-		void:triples "418"^^xsd:integer ;
-		void:distinctSubjects "418"^^xsd:integer ;
-		void:distinctObjects "10"^^xsd:integer
-	] , [
-		void:property lmdb:film_regional_release_date_film_release_region ;
-		void:triples "418"^^xsd:integer ;
-		void:distinctSubjects "418"^^xsd:integer ;
-		void:distinctObjects "65"^^xsd:integer
-	] , [
-		void:property lmdb:film_regional_release_date_freebase_url ;
-		void:triples "418"^^xsd:integer ;
-		void:distinctSubjects "418"^^xsd:integer ;
-		void:distinctObjects "418"^^xsd:integer
-	] , [
-		void:property lmdb:film_regional_release_date_name ;
-		void:triples "418"^^xsd:integer ;
-		void:distinctSubjects "418"^^xsd:integer ;
-		void:distinctObjects "2"^^xsd:integer
-	] , [
-		void:property lmdb:film_regional_release_date_release_date ;
-		void:triples "418"^^xsd:integer ;
-		void:distinctSubjects "418"^^xsd:integer ;
-		void:distinctObjects "334"^^xsd:integer
-	] , [
-		void:property lmdb:film_release_region ;
-		void:triples "25151"^^xsd:integer ;
-		void:distinctSubjects "25151"^^xsd:integer ;
-		void:distinctObjects "17"^^xsd:integer
-	] , [
-		void:property lmdb:film_screening_venue_film_screening_venue_id ;
-		void:triples "23"^^xsd:integer ;
-		void:distinctSubjects "23"^^xsd:integer ;
-		void:distinctObjects "23"^^xsd:integer
-	] , [
-		void:property lmdb:film_screening_venue_freebase_url ;
-		void:triples "23"^^xsd:integer ;
-		void:distinctSubjects "23"^^xsd:integer ;
-		void:distinctObjects "23"^^xsd:integer
-	] , [
-		void:property lmdb:film_screening_venue_name ;
-		void:triples "23"^^xsd:integer ;
-		void:distinctSubjects "23"^^xsd:integer ;
-		void:distinctObjects "23"^^xsd:integer
-	] , [
-		void:property lmdb:film_series ;
-		void:triples "60"^^xsd:integer ;
-		void:distinctSubjects "60"^^xsd:integer ;
-		void:distinctObjects "17"^^xsd:integer
-	] , [
-		void:property lmdb:film_series_film_seriesid ;
-		void:triples "205"^^xsd:integer ;
-		void:distinctSubjects "205"^^xsd:integer ;
-		void:distinctObjects "205"^^xsd:integer
-	] , [
-		void:property lmdb:film_series_name ;
-		void:triples "205"^^xsd:integer ;
-		void:distinctSubjects "205"^^xsd:integer ;
-		void:distinctObjects "204"^^xsd:integer
-	] , [
-		void:property lmdb:film_set_designer ;
-		void:triples "461"^^xsd:integer ;
-		void:distinctSubjects "440"^^xsd:integer ;
-		void:distinctObjects "204"^^xsd:integer
-	] , [
-		void:property lmdb:film_set_designer_film_set_designer_id ;
-		void:triples "206"^^xsd:integer ;
-		void:distinctSubjects "206"^^xsd:integer ;
-		void:distinctObjects "206"^^xsd:integer
-	] , [
-		void:property lmdb:film_set_designer_freebase_url ;
-		void:triples "206"^^xsd:integer ;
-		void:distinctSubjects "206"^^xsd:integer ;
-		void:distinctObjects "206"^^xsd:integer
-	] , [
-		void:property lmdb:film_set_designer_name ;
-		void:triples "206"^^xsd:integer ;
-		void:distinctSubjects "206"^^xsd:integer ;
-		void:distinctObjects "204"^^xsd:integer
-	] , [
-		void:property lmdb:film_story_contributor ;
-		void:triples "1262"^^xsd:integer ;
-		void:distinctSubjects "1120"^^xsd:integer ;
-		void:distinctObjects "725"^^xsd:integer
-	] , [
-		void:property lmdb:film_story_contributor_film_story_contributorid ;
-		void:triples "740"^^xsd:integer ;
-		void:distinctSubjects "740"^^xsd:integer ;
-		void:distinctObjects "740"^^xsd:integer
-	] , [
-		void:property lmdb:film_story_contributor_name ;
-		void:triples "740"^^xsd:integer ;
-		void:distinctSubjects "740"^^xsd:integer ;
-		void:distinctObjects "738"^^xsd:integer
-	] , [
-		void:property lmdb:film_subject ;
-		void:triples "6412"^^xsd:integer ;
-		void:distinctSubjects "5162"^^xsd:integer ;
-		void:distinctObjects "1218"^^xsd:integer
-	] , [
-		void:property lmdb:film_subject_film_subjectid ;
-		void:triples "1249"^^xsd:integer ;
-		void:distinctSubjects "1249"^^xsd:integer ;
-		void:distinctObjects "1249"^^xsd:integer
-	] , [
-		void:property lmdb:film_subject_name ;
-		void:triples "1249"^^xsd:integer ;
-		void:distinctSubjects "1249"^^xsd:integer ;
-		void:distinctObjects "1247"^^xsd:integer
-	] , [
-		void:property lmdb:film_theorist_film_theoristid ;
-		void:triples "28"^^xsd:integer ;
-		void:distinctSubjects "28"^^xsd:integer ;
-		void:distinctObjects "28"^^xsd:integer
-	] , [
-		void:property lmdb:film_theorist_name ;
-		void:triples "28"^^xsd:integer ;
-		void:distinctSubjects "28"^^xsd:integer ;
-		void:distinctObjects "28"^^xsd:integer
-	] , [
-		void:property lmdb:filmid ;
-		void:triples "85620"^^xsd:integer ;
-		void:distinctSubjects "85620"^^xsd:integer ;
-		void:distinctObjects "85620"^^xsd:integer
-	] , [
-		void:property lmdb:genre ;
-		void:triples "13018"^^xsd:integer ;
-		void:distinctSubjects "10074"^^xsd:integer ;
-		void:distinctObjects "36"^^xsd:integer
-	] , [
-		void:property lmdb:initial_release_date ;
-		void:triples "74111"^^xsd:integer ;
-		void:distinctSubjects "74111"^^xsd:integer ;
-		void:distinctObjects "12504"^^xsd:integer
-	] , [
-		void:property lmdb:language ;
-		void:triples "28253"^^xsd:integer ;
-		void:distinctSubjects "25961"^^xsd:integer ;
-		void:distinctObjects "82"^^xsd:integer
-	] , [
-		void:property lmdb:linkid ;
-		void:triples "162199"^^xsd:integer ;
-		void:distinctSubjects "162199"^^xsd:integer ;
-		void:distinctObjects "162199"^^xsd:integer
-	] , [
-		void:property lmdb:location ;
-		void:triples "122"^^xsd:integer ;
-		void:distinctSubjects "102"^^xsd:integer ;
-		void:distinctObjects "55"^^xsd:integer
-	] , [
-		void:property lmdb:music_contributor ;
-		void:triples "19643"^^xsd:integer ;
-		void:distinctSubjects "16258"^^xsd:integer ;
-		void:distinctObjects "4437"^^xsd:integer
-	] , [
-		void:property lmdb:music_contributor_music_contributorid ;
-		void:triples "4529"^^xsd:integer ;
-		void:distinctSubjects "4529"^^xsd:integer ;
-		void:distinctObjects "4529"^^xsd:integer
-	] , [
-		void:property lmdb:music_contributor_name ;
-		void:triples "4529"^^xsd:integer ;
-		void:distinctSubjects "4529"^^xsd:integer ;
-		void:distinctObjects "4437"^^xsd:integer
-	] , [
-		void:property lmdb:performance ;
-		void:triples "390322"^^xsd:integer ;
-		void:distinctSubjects "98451"^^xsd:integer ;
-		void:distinctObjects "196998"^^xsd:integer
-	] , [
-		void:property lmdb:performance_actor ;
-		void:triples "197271"^^xsd:integer ;
-		void:distinctSubjects "197271"^^xsd:integer ;
-		void:distinctObjects "42848"^^xsd:integer
-	] , [
-		void:property lmdb:performance_character ;
-		void:triples "197271"^^xsd:integer ;
-		void:distinctSubjects "197271"^^xsd:integer ;
-		void:distinctObjects "10228"^^xsd:integer
-	] , [
-		void:property lmdb:performance_film ;
-		void:triples "197271"^^xsd:integer ;
-		void:distinctSubjects "197271"^^xsd:integer ;
-		void:distinctObjects "51155"^^xsd:integer
-	] , [
-		void:property lmdb:performance_name ;
-		void:triples "197271"^^xsd:integer ;
-		void:distinctSubjects "197271"^^xsd:integer ;
-		void:distinctObjects "3"^^xsd:integer
-	] , [
-		void:property lmdb:performance_note ;
-		void:triples "197271"^^xsd:integer ;
-		void:distinctSubjects "197271"^^xsd:integer ;
-		void:distinctObjects "84"^^xsd:integer
-	] , [
-		void:property lmdb:performance_performanceid ;
-		void:triples "197271"^^xsd:integer ;
-		void:distinctSubjects "197271"^^xsd:integer ;
-		void:distinctObjects "197271"^^xsd:integer
-	] , [
-		void:property lmdb:performance_special_performance_type ;
-		void:triples "5896"^^xsd:integer ;
-		void:distinctSubjects "527"^^xsd:integer ;
-		void:distinctObjects "11"^^xsd:integer
-	] , [
-		void:property lmdb:personal_film_appearance ;
-		void:triples "1118"^^xsd:integer ;
-		void:distinctSubjects "328"^^xsd:integer ;
-		void:distinctObjects "1118"^^xsd:integer
-	] , [
-		void:property lmdb:personal_film_appearance_name ;
-		void:triples "1120"^^xsd:integer ;
-		void:distinctSubjects "1120"^^xsd:integer ;
-		void:distinctObjects "1"^^xsd:integer
-	] , [
-		void:property lmdb:personal_film_appearance_person ;
-		void:triples "1120"^^xsd:integer ;
-		void:distinctSubjects "1120"^^xsd:integer ;
-		void:distinctObjects "1050"^^xsd:integer
-	] , [
-		void:property lmdb:personal_film_appearance_personal_film_appearanceid ;
-		void:triples "1120"^^xsd:integer ;
-		void:distinctSubjects "1120"^^xsd:integer ;
-		void:distinctObjects "1120"^^xsd:integer
-	] , [
-		void:property lmdb:personal_film_appearance_type ;
-		void:triples "275"^^xsd:integer ;
-		void:distinctSubjects "275"^^xsd:integer ;
-		void:distinctObjects "5"^^xsd:integer
-	] , [
-		void:property lmdb:personal_film_appearance_type_name ;
-		void:triples "5"^^xsd:integer ;
-		void:distinctSubjects "5"^^xsd:integer ;
-		void:distinctObjects "5"^^xsd:integer
-	] , [
-		void:property lmdb:personal_film_appearance_type_of_appearance ;
-		void:triples "1120"^^xsd:integer ;
-		void:distinctSubjects "1120"^^xsd:integer ;
-		void:distinctObjects "6"^^xsd:integer
-	] , [
-		void:property lmdb:personal_film_appearance_type_personal_film_appearance_typeid ;
-		void:triples "5"^^xsd:integer ;
-		void:distinctSubjects "5"^^xsd:integer ;
-		void:distinctObjects "5"^^xsd:integer
-	] , [
-		void:property lmdb:prequel ;
-		void:triples "3989"^^xsd:integer ;
-		void:distinctSubjects "3689"^^xsd:integer ;
-		void:distinctObjects "3657"^^xsd:integer
-	] , [
-		void:property lmdb:producer ;
-		void:triples "35388"^^xsd:integer ;
-		void:distinctSubjects "22133"^^xsd:integer ;
-		void:distinctObjects "13336"^^xsd:integer
-	] , [
-		void:property lmdb:producer_name ;
-		void:triples "14882"^^xsd:integer ;
-		void:distinctSubjects "14882"^^xsd:integer ;
-		void:distinctObjects "14438"^^xsd:integer
-	] , [
-		void:property lmdb:producer_producerid ;
-		void:triples "14882"^^xsd:integer ;
-		void:distinctSubjects "14882"^^xsd:integer ;
-		void:distinctObjects "14882"^^xsd:integer
-	] , [
-		void:property lmdb:production_company ;
-		void:triples "10920"^^xsd:integer ;
-		void:distinctSubjects "10214"^^xsd:integer ;
-		void:distinctObjects "1736"^^xsd:integer
-	] , [
-		void:property lmdb:production_company_name ;
-		void:triples "1926"^^xsd:integer ;
-		void:distinctSubjects "1926"^^xsd:integer ;
-		void:distinctObjects "1787"^^xsd:integer
-	] , [
-		void:property lmdb:production_company_production_companyid ;
-		void:triples "1926"^^xsd:integer ;
-		void:distinctSubjects "1926"^^xsd:integer ;
-		void:distinctObjects "1926"^^xsd:integer
-	] , [
-		void:property lmdb:rating ;
-		void:triples "124"^^xsd:integer ;
-		void:distinctSubjects "116"^^xsd:integer ;
-		void:distinctObjects "11"^^xsd:integer
-	] , [
-		void:property lmdb:relatedBook ;
-		void:triples "700"^^xsd:integer ;
-		void:distinctSubjects "700"^^xsd:integer ;
-		void:distinctObjects "531"^^xsd:integer
-	] , [
-		void:property lmdb:runtime ;
-		void:triples "57147"^^xsd:integer ;
-		void:distinctSubjects "56887"^^xsd:integer ;
-		void:distinctObjects "813"^^xsd:integer
-	] , [
-		void:property lmdb:sequel ;
-		void:triples "3989"^^xsd:integer ;
-		void:distinctSubjects "3657"^^xsd:integer ;
-		void:distinctObjects "3689"^^xsd:integer
-	] , [
-		void:property lmdb:special_film_performance_type_name ;
-		void:triples "11"^^xsd:integer ;
-		void:distinctSubjects "11"^^xsd:integer ;
-		void:distinctObjects "11"^^xsd:integer
-	] , [
-		void:property lmdb:special_film_performance_type_special_film_performance_typeid ;
-		void:triples "11"^^xsd:integer ;
-		void:distinctSubjects "11"^^xsd:integer ;
-		void:distinctObjects "11"^^xsd:integer
-	] , [
-		void:property lmdb:story_contributor ;
-		void:triples "1262"^^xsd:integer ;
-		void:distinctSubjects "1120"^^xsd:integer ;
-		void:distinctObjects "725"^^xsd:integer
-	] , [
-		void:property lmdb:type_of_film_cut ;
-		void:triples "25172"^^xsd:integer ;
-		void:distinctSubjects "25172"^^xsd:integer ;
-		void:distinctObjects "10"^^xsd:integer
-	] , [
-		void:property lmdb:writer ;
-		void:triples "28549"^^xsd:integer ;
-		void:distinctSubjects "17035"^^xsd:integer ;
-		void:distinctObjects "14938"^^xsd:integer
-	] , [
-		void:property lmdb:writer_name ;
-		void:triples "17335"^^xsd:integer ;
-		void:distinctSubjects "17335"^^xsd:integer ;
-		void:distinctObjects "16605"^^xsd:integer
-	] , [
-		void:property lmdb:writer_writerid ;
-		void:triples "17335"^^xsd:integer ;
-		void:distinctSubjects "17335"^^xsd:integer ;
-		void:distinctObjects "17335"^^xsd:integer
-	] , [
-		void:property lmdblink:link_source ;
-		void:triples "162199"^^xsd:integer ;
-		void:distinctSubjects "162199"^^xsd:integer ;
-		void:distinctObjects "59376"^^xsd:integer
-	] , [
-		void:property lmdblink:link_target ;
-		void:triples "162199"^^xsd:integer ;
-		void:distinctSubjects "162199"^^xsd:integer ;
-		void:distinctObjects "101669"^^xsd:integer
-	] , [
-		void:property lmdblink:link_type ;
-		void:triples "162199"^^xsd:integer ;
-		void:distinctSubjects "162199"^^xsd:integer ;
-		void:distinctObjects "6"^^xsd:integer
-	] , [
-		void:property lmdblink:linkage_date ;
-		void:triples "7"^^xsd:integer ;
-		void:distinctSubjects "7"^^xsd:integer ;
-		void:distinctObjects "3"^^xsd:integer
-	] , [
-		void:property lmdblink:linkage_method ;
-		void:triples "7"^^xsd:integer ;
-		void:distinctSubjects "7"^^xsd:integer ;
-		void:distinctObjects "2"^^xsd:integer
-	] , [
-		void:property lmdblink:linkage_run ;
-		void:triples "162199"^^xsd:integer ;
-		void:distinctSubjects "162199"^^xsd:integer ;
-		void:distinctObjects "7"^^xsd:integer
-	] , [
-		void:property lmdblink:linkage_score ;
-		void:triples "55599"^^xsd:integer ;
-		void:distinctSubjects "55599"^^xsd:integer ;
-		void:distinctObjects "4539"^^xsd:integer
-	] , [
-		void:property dbpp:hasPhotoCollection ;
-		void:triples "30354"^^xsd:integer ;
-		void:distinctSubjects "30306"^^xsd:integer ;
-		void:distinctObjects "28736"^^xsd:integer
-	] , [
-		void:property dcterms:date ;
-		void:triples "74111"^^xsd:integer ;
-		void:distinctSubjects "74111"^^xsd:integer ;
-		void:distinctObjects "12504"^^xsd:integer
-	] , [
-		void:property dcterms:title ;
-		void:triples "85620"^^xsd:integer ;
-		void:distinctSubjects "85620"^^xsd:integer ;
-		void:distinctObjects "78174"^^xsd:integer
-	] , [
-		void:property rdf:type ;
-		void:triples "740469"^^xsd:integer ;
-		void:distinctSubjects "665441"^^xsd:integer ;
-		void:distinctObjects "53"^^xsd:integer
-	] , [
-		void:property rdfs:SeeAlso ;
-		void:triples "12990"^^xsd:integer ;
-		void:distinctSubjects "12990"^^xsd:integer ;
-		void:distinctObjects "12468"^^xsd:integer
-	] , [
-		void:property rdfs:label ;
-		void:triples "665434"^^xsd:integer ;
-		void:distinctSubjects "665434"^^xsd:integer ;
-		void:distinctObjects "651058"^^xsd:integer
-	] , [
-		void:property owl:sameAs ;
-		void:triples "63162"^^xsd:integer ;
-		void:distinctSubjects "32760"^^xsd:integer ;
-		void:distinctObjects "59852"^^xsd:integer
-	] , [
-		void:property skos:subject ;
-		void:triples "6438"^^xsd:integer ;
-		void:distinctSubjects "5162"^^xsd:integer ;
-		void:distinctObjects "1218"^^xsd:integer
-	] , [
-		void:property foaf:based_near ;
-		void:triples "16587"^^xsd:integer ;
-		void:distinctSubjects "14882"^^xsd:integer ;
-		void:distinctObjects "129"^^xsd:integer
-	] , [
-		void:property foaf:made ;
-		void:triples "53180"^^xsd:integer ;
-		void:distinctSubjects "14520"^^xsd:integer ;
-		void:distinctObjects "48998"^^xsd:integer
-	] , [
-		void:property foaf:page ;
-		void:triples "512946"^^xsd:integer ;
-		void:distinctSubjects "495119"^^xsd:integer ;
-		void:distinctObjects "495112"^^xsd:integer
-	] ;
-	void:classPartition [
-		void:class lmdb:actor ;
-		void:entities "50603"^^xsd:integer
-	] , [
-		void:class lmdb:cinematographer ;
-		void:entities "3263"^^xsd:integer
-	] , [
-		void:class lmdb:content_rating ;
-		void:entities "107"^^xsd:integer
-	] , [
-		void:class lmdb:content_rating_system ;
-		void:entities "46"^^xsd:integer
-	] , [
-		void:class lmdb:country ;
-		void:entities "247"^^xsd:integer
-	] , [
-		void:class lmdb:director ;
-		void:entities "17156"^^xsd:integer
-	] , [
-		void:class lmdb:dubbing_performance ;
-		void:entities "118"^^xsd:integer
-	] , [
-		void:class lmdb:editor ;
-		void:entities "3290"^^xsd:integer
-	] , [
-		void:class lmdb:film ;
-		void:entities "85620"^^xsd:integer
-	] , [
-		void:class lmdb:film_art_director ;
-		void:entities "365"^^xsd:integer
-	] , [
-		void:class lmdb:film_awards_ceremony ;
-		void:entities "127"^^xsd:integer
-	] , [
-		void:class lmdb:film_casting_director ;
-		void:entities "273"^^xsd:integer
-	] , [
-		void:class lmdb:film_character ;
-		void:entities "15752"^^xsd:integer
-	] , [
-		void:class lmdb:film_collection ;
-		void:entities "1"^^xsd:integer
-	] , [
-		void:class lmdb:film_company ;
-		void:entities "338"^^xsd:integer
-	] , [
-		void:class lmdb:film_costume_designer ;
-		void:entities "353"^^xsd:integer
-	] , [
-		void:class lmdb:film_crew_gig ;
-		void:entities "17237"^^xsd:integer
-	] , [
-		void:class lmdb:film_crewmember ;
-		void:entities "25"^^xsd:integer
-	] , [
-		void:class lmdb:film_critic ;
-		void:entities "152"^^xsd:integer
-	] , [
-		void:class lmdb:film_cut ;
-		void:entities "45259"^^xsd:integer
-	] , [
-		void:class lmdb:film_distribution_medium ;
-		void:entities "10"^^xsd:integer
-	] , [
-		void:class lmdb:film_distributor ;
-		void:entities "169"^^xsd:integer
-	] , [
-		void:class lmdb:film_featured_song ;
-		void:entities "72"^^xsd:integer
-	] , [
-		void:class lmdb:film_festival ;
-		void:entities "566"^^xsd:integer
-	] , [
-		void:class lmdb:film_festival_event ;
-		void:entities "685"^^xsd:integer
-	] , [
-		void:class lmdb:film_festival_focus ;
-		void:entities "13"^^xsd:integer
-	] , [
-		void:class lmdb:film_festival_sponsor ;
-		void:entities "70"^^xsd:integer
-	] , [
-		void:class lmdb:film_film_company_relationship ;
-		void:entities "36"^^xsd:integer
-	] , [
-		void:class lmdb:film_film_distributor_relationship ;
-		void:entities "15256"^^xsd:integer
-	] , [
-		void:class lmdb:film_format ;
-		void:entities "57"^^xsd:integer
-	] , [
-		void:class lmdb:film_genre ;
-		void:entities "409"^^xsd:integer
-	] , [
-		void:class lmdb:film_job ;
-		void:entities "4004"^^xsd:integer
-	] , [
-		void:class lmdb:film_location ;
-		void:entities "1315"^^xsd:integer
-	] , [
-		void:class lmdb:film_production_designer ;
-		void:entities "293"^^xsd:integer
-	] , [
-		void:class lmdb:film_regional_release_date ;
-		void:entities "418"^^xsd:integer
-	] , [
-		void:class lmdb:film_screening_venue ;
-		void:entities "23"^^xsd:integer
-	] , [
-		void:class lmdb:film_series ;
-		void:entities "205"^^xsd:integer
-	] , [
-		void:class lmdb:film_set_designer ;
-		void:entities "206"^^xsd:integer
-	] , [
-		void:class lmdb:film_story_contributor ;
-		void:entities "740"^^xsd:integer
-	] , [
-		void:class lmdb:film_subject ;
-		void:entities "1249"^^xsd:integer
-	] , [
-		void:class lmdb:film_theorist ;
-		void:entities "28"^^xsd:integer
-	] , [
-		void:class lmdb:music_contributor ;
-		void:entities "4529"^^xsd:integer
-	] , [
-		void:class lmdb:performance ;
-		void:entities "197271"^^xsd:integer
-	] , [
-		void:class lmdb:personal_film_appearance ;
-		void:entities "1120"^^xsd:integer
-	] , [
-		void:class lmdb:personal_film_appearance_type ;
-		void:entities "5"^^xsd:integer
-	] , [
-		void:class lmdb:producer ;
-		void:entities "14882"^^xsd:integer
-	] , [
-		void:class lmdb:production_company ;
-		void:entities "1926"^^xsd:integer
-	] , [
-		void:class lmdb:special_film_performance_type ;
-		void:entities "11"^^xsd:integer
-	] , [
-		void:class lmdb:writer ;
-		void:entities "17335"^^xsd:integer
-	] , [
-		void:class lmdblink:interlink ;
-		void:entities "162199"^^xsd:integer
-	] , [
-		void:class lmdblink:linkage_run ;
-		void:entities "7"^^xsd:integer
-	] , [
-		void:class foaf:Agent ;
-		void:entities "691"^^xsd:integer
-	] , [
-		void:class foaf:Person ;
-		void:entities "74337"^^xsd:integer
-	] .
-
-_:node-1a2ssjux1 a void:Dataset ;
-	void:sparqlEndpoint <http://143.233.226.25:8894/sparql> ;
-	void:triples "1049639"^^xsd:integer ;
-	void:entities "290291"^^xsd:integer ;
-	void:properties "26"^^xsd:integer ;
-	void:distinctSubjects "335925"^^xsd:integer ;
-	void:distinctObjects "440603"^^xsd:integer ;
-	void:propertyPartition [
-		void:property <http://purl.org/NET/c4dm/event.owl#factor> ;
-		void:triples "8823"^^xsd:integer ;
-		void:distinctSubjects "8823"^^xsd:integer ;
-		void:distinctObjects "8823"^^xsd:integer
-	] , [
-		void:property <http://purl.org/NET/c4dm/timeline.owl#onTimeLine> ;
-		void:triples "45634"^^xsd:integer ;
-		void:distinctSubjects "45634"^^xsd:integer ;
-		void:distinctObjects "45634"^^xsd:integer
-	] , [
-		void:property dc:date ;
-		void:triples "5786"^^xsd:integer ;
-		void:distinctSubjects "5786"^^xsd:integer ;
-		void:distinctObjects "5518"^^xsd:integer
-	] , [
-		void:property dc:description ;
-		void:triples "880"^^xsd:integer ;
-		void:distinctSubjects "880"^^xsd:integer ;
-		void:distinctObjects "879"^^xsd:integer
-	] , [
-		void:property dc:format ;
-		void:triples "125948"^^xsd:integer ;
-		void:distinctSubjects "125948"^^xsd:integer ;
-		void:distinctObjects "4"^^xsd:integer
+		void:property bio:formula ;
+		void:triples "20108"^^xsd:integer ;
+		void:distinctSubjects "20108"^^xsd:integer ;
+		void:distinctObjects "12094"^^xsd:integer
+	] , [
+		void:property bio:isA ;
+		void:triples "13781"^^xsd:integer ;
+		void:distinctSubjects "4245"^^xsd:integer ;
+		void:distinctObjects "312"^^xsd:integer
+	] , [
+		void:property bio:mass ;
+		void:triples "18507"^^xsd:integer ;
+		void:distinctSubjects "18507"^^xsd:integer ;
+		void:distinctObjects "10953"^^xsd:integer
+	] , [
+		void:property bio:synonym ;
+		void:triples "43709"^^xsd:integer ;
+		void:distinctSubjects "19396"^^xsd:integer ;
+		void:distinctObjects "42229"^^xsd:integer
+	] , [
+		void:property bio:url ;
+		void:triples "34260"^^xsd:integer ;
+		void:distinctSubjects "34260"^^xsd:integer ;
+		void:distinctObjects "34260"^^xsd:integer
+	] , [
+		void:property bio:urlImage ;
+		void:triples "30015"^^xsd:integer ;
+		void:distinctSubjects "30015"^^xsd:integer ;
+		void:distinctObjects "30015"^^xsd:integer
+	] , [
+		void:property bio:xRef ;
+		void:triples "73196"^^xsd:integer ;
+		void:distinctSubjects "22122"^^xsd:integer ;
+		void:distinctObjects "60941"^^xsd:integer
+	] , [
+		void:property kegg:equation ;
+		void:triples "7827"^^xsd:integer ;
+		void:distinctSubjects "7827"^^xsd:integer ;
+		void:distinctObjects "7826"^^xsd:integer
+	] , [
+		void:property kegg:systematicName ;
+		void:triples "3721"^^xsd:integer ;
+		void:distinctSubjects "3721"^^xsd:integer ;
+		void:distinctObjects "3712"^^xsd:integer
+	] , [
+		void:property kegg:xCofactor ;
+		void:triples "895"^^xsd:integer ;
+		void:distinctSubjects "631"^^xsd:integer ;
+		void:distinctObjects "86"^^xsd:integer
+	] , [
+		void:property kegg:xEnzyme ;
+		void:triples "7226"^^xsd:integer ;
+		void:distinctSubjects "6523"^^xsd:integer ;
+		void:distinctObjects "3626"^^xsd:integer
+	] , [
+		void:property kegg:xGene ;
+		void:triples "609037"^^xsd:integer ;
+		void:distinctSubjects "2181"^^xsd:integer ;
+		void:distinctObjects "590010"^^xsd:integer
+	] , [
+		void:property kegg:xPathway ;
+		void:triples "6032"^^xsd:integer ;
+		void:distinctSubjects "5470"^^xsd:integer ;
+		void:distinctObjects "149"^^xsd:integer
+	] , [
+		void:property kegg:xProduct ;
+		void:triples "25635"^^xsd:integer ;
+		void:distinctSubjects "11460"^^xsd:integer ;
+		void:distinctObjects "8116"^^xsd:integer
+	] , [
+		void:property kegg:xSubstrate ;
+		void:triples "24575"^^xsd:integer ;
+		void:distinctSubjects "11450"^^xsd:integer ;
+		void:distinctObjects "7115"^^xsd:integer
+	] , [
+		void:property dc:identifier ;
+		void:triples "34260"^^xsd:integer ;
+		void:distinctSubjects "34260"^^xsd:integer ;
+		void:distinctObjects "34260"^^xsd:integer
 	] , [
 		void:property dc:title ;
-		void:triples "51394"^^xsd:integer ;
-		void:distinctSubjects "51394"^^xsd:integer ;
-		void:distinctObjects "47129"^^xsd:integer
-	] , [
-		void:property <http://purl.org/ontology/mo/available_as> ;
-		void:triples "125948"^^xsd:integer ;
-		void:distinctSubjects "51420"^^xsd:integer ;
-		void:distinctObjects "125948"^^xsd:integer
-	] , [
-		void:property <http://purl.org/ontology/mo/biography> ;
-		void:triples "485"^^xsd:integer ;
-		void:distinctSubjects "485"^^xsd:integer ;
-		void:distinctObjects "484"^^xsd:integer
-	] , [
-		void:property <http://purl.org/ontology/mo/image> ;
-		void:triples "23144"^^xsd:integer ;
-		void:distinctSubjects "5786"^^xsd:integer ;
-		void:distinctObjects "23144"^^xsd:integer
-	] , [
-		void:property <http://purl.org/ontology/mo/license> ;
-		void:triples "45634"^^xsd:integer ;
-		void:distinctSubjects "45634"^^xsd:integer ;
-		void:distinctObjects "92"^^xsd:integer
-	] , [
-		void:property <http://purl.org/ontology/mo/published_as> ;
-		void:triples "45634"^^xsd:integer ;
-		void:distinctSubjects "45634"^^xsd:integer ;
-		void:distinctObjects "45634"^^xsd:integer
-	] , [
-		void:property <http://purl.org/ontology/mo/recorded_as> ;
-		void:triples "45634"^^xsd:integer ;
-		void:distinctSubjects "45634"^^xsd:integer ;
-		void:distinctObjects "45634"^^xsd:integer
-	] , [
-		void:property <http://purl.org/ontology/mo/text> ;
-		void:triples "8823"^^xsd:integer ;
-		void:distinctSubjects "8823"^^xsd:integer ;
-		void:distinctObjects "7633"^^xsd:integer
-	] , [
-		void:property <http://purl.org/ontology/mo/time> ;
-		void:triples "45634"^^xsd:integer ;
-		void:distinctSubjects "45634"^^xsd:integer ;
-		void:distinctObjects "45634"^^xsd:integer
-	] , [
-		void:property <http://purl.org/ontology/mo/track> ;
-		void:triples "45634"^^xsd:integer ;
-		void:distinctSubjects "5785"^^xsd:integer ;
-		void:distinctObjects "45634"^^xsd:integer
-	] , [
-		void:property <http://purl.org/ontology/mo/track_number> ;
-		void:triples "45634"^^xsd:integer ;
-		void:distinctSubjects "45634"^^xsd:integer ;
-		void:distinctObjects "95"^^xsd:integer
-	] , [
-		void:property <http://www.holygoat.co.uk/owl/redwood/0.1/tags/tagName> ;
-		void:triples "9235"^^xsd:integer ;
-		void:distinctSubjects "9235"^^xsd:integer ;
-		void:distinctObjects "9235"^^xsd:integer
-	] , [
-		void:property <http://www.holygoat.co.uk/owl/redwood/0.1/tags/taggedWithTag> ;
-		void:triples "53438"^^xsd:integer ;
-		void:distinctSubjects "5341"^^xsd:integer ;
-		void:distinctObjects "9235"^^xsd:integer
+		void:triples "34146"^^xsd:integer ;
+		void:distinctSubjects "34146"^^xsd:integer ;
+		void:distinctObjects "34020"^^xsd:integer
 	] , [
 		void:property rdf:type ;
-		void:triples "290291"^^xsd:integer ;
-		void:distinctSubjects "290291"^^xsd:integer ;
-		void:distinctObjects "11"^^xsd:integer
+		void:triples "34260"^^xsd:integer ;
+		void:distinctSubjects "34260"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property rdfs:comment ;
+		void:triples "5479"^^xsd:integer ;
+		void:distinctSubjects "5479"^^xsd:integer ;
+		void:distinctObjects "4464"^^xsd:integer
+	] , [
+		void:property rdfs:label ;
+		void:triples "34146"^^xsd:integer ;
+		void:distinctSubjects "34146"^^xsd:integer ;
+		void:distinctObjects "34146"^^xsd:integer
 	] , [
 		void:property owl:sameAs ;
-		void:triples "1697"^^xsd:integer ;
-		void:distinctSubjects "1636"^^xsd:integer ;
-		void:distinctObjects "1672"^^xsd:integer
-	] , [
-		void:property foaf:based_near ;
-		void:triples "3244"^^xsd:integer ;
-		void:distinctSubjects "3244"^^xsd:integer ;
-		void:distinctObjects "289"^^xsd:integer
-	] , [
-		void:property foaf:homepage ;
-		void:triples "3006"^^xsd:integer ;
-		void:distinctSubjects "3006"^^xsd:integer ;
-		void:distinctObjects "2919"^^xsd:integer
-	] , [
-		void:property foaf:img ;
-		void:triples "2982"^^xsd:integer ;
-		void:distinctSubjects "2982"^^xsd:integer ;
-		void:distinctObjects "2982"^^xsd:integer
-	] , [
-		void:property foaf:made ;
-		void:triples "5786"^^xsd:integer ;
-		void:distinctSubjects "3505"^^xsd:integer ;
-		void:distinctObjects "5786"^^xsd:integer
-	] , [
-		void:property foaf:maker ;
-		void:triples "5786"^^xsd:integer ;
-		void:distinctSubjects "5786"^^xsd:integer ;
-		void:distinctObjects "3505"^^xsd:integer
-	] , [
-		void:property foaf:name ;
-		void:triples "3505"^^xsd:integer ;
-		void:distinctSubjects "3505"^^xsd:integer ;
-		void:distinctObjects "3489"^^xsd:integer
+		void:triples "30015"^^xsd:integer ;
+		void:distinctSubjects "30015"^^xsd:integer ;
+		void:distinctObjects "30015"^^xsd:integer
 	] ;
 	void:classPartition [
-		void:class <http://purl.org/ontology/mo/ED2K> ;
-		void:entities "11572"^^xsd:integer
+		void:class kegg:Compound ;
+		void:entities "14071"^^xsd:integer
 	] , [
-		void:class <http://purl.org/ontology/mo/Lyrics> ;
-		void:entities "8823"^^xsd:integer
+		void:class kegg:Drug ;
+		void:entities "8117"^^xsd:integer
 	] , [
-		void:class <http://purl.org/ontology/mo/MusicArtist> ;
-		void:entities "3505"^^xsd:integer
+		void:class kegg:Enzyme ;
+		void:entities "4245"^^xsd:integer
 	] , [
-		void:class <http://purl.org/ontology/mo/Playlist> ;
-		void:entities "102804"^^xsd:integer
-	] , [
-		void:class <http://purl.org/ontology/mo/Record> ;
-		void:entities "5786"^^xsd:integer
-	] , [
-		void:class <http://purl.org/ontology/mo/Signal> ;
-		void:entities "45634"^^xsd:integer
-	] , [
-		void:class <http://purl.org/ontology/mo/Torrent> ;
-		void:entities "11572"^^xsd:integer
-	] , [
-		void:class <http://purl.org/ontology/mo/Track> ;
-		void:entities "45634"^^xsd:integer
-	] , [
-		void:class <http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag> ;
-		void:entities "9235"^^xsd:integer
-	] , [
-		void:class <http://www.w3.org/2006/time#Interval> ;
-		void:entities "45634"^^xsd:integer
-	] , [
-		void:class foaf:Document ;
-		void:entities "92"^^xsd:integer
+		void:class kegg:Reaction ;
+		void:entities "7827"^^xsd:integer
 	] .
 
-_:node-9p69d9x1 a void:Dataset ;
-	void:sparqlEndpoint <http://143.233.226.25:8893/sparql> ;
-	void:triples "107983838"^^xsd:integer ;
-	void:entities "7479714"^^xsd:integer ;
-	void:properties "26"^^xsd:integer ;
-	void:distinctSubjects "7479714"^^xsd:integer ;
-	void:distinctObjects "35799392"^^xsd:integer ;
+_:node19l0p8bx1 a void:Dataset ;
+	void:sparqlEndpoint <http://143.233.226.25:8890/sparql> ;
+	void:triples "7325744"^^xsd:integer ;
+	void:entities "50477"^^xsd:integer ;
+	void:properties "28"^^xsd:integer ;
+	void:distinctSubjects "50477"^^xsd:integer ;
+	void:distinctObjects "772138"^^xsd:integer ;
 	void:propertyPartition [
-		void:property geonames:alternateName ;
-		void:triples "4966839"^^xsd:integer ;
-		void:distinctSubjects "2148868"^^xsd:integer ;
-		void:distinctObjects "3934852"^^xsd:integer
+		void:property bio:formula ;
+		void:triples "39555"^^xsd:integer ;
+		void:distinctSubjects "17044"^^xsd:integer ;
+		void:distinctObjects "13664"^^xsd:integer
 	] , [
-		void:property geonames:childrenFeatures ;
-		void:triples "224573"^^xsd:integer ;
-		void:distinctSubjects "224573"^^xsd:integer ;
-		void:distinctObjects "224573"^^xsd:integer
+		void:property bio:image ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "34055"^^xsd:integer
 	] , [
-		void:property geonames:countryCode ;
-		void:triples "7474323"^^xsd:integer ;
-		void:distinctSubjects "7474323"^^xsd:integer ;
-		void:distinctObjects "247"^^xsd:integer
+		void:property bio:inchi ;
+		void:triples "11736"^^xsd:integer ;
+		void:distinctSubjects "11736"^^xsd:integer ;
+		void:distinctObjects "11677"^^xsd:integer
 	] , [
-		void:property geonames:featureClass ;
-		void:triples "7479714"^^xsd:integer ;
-		void:distinctSubjects "7479714"^^xsd:integer ;
-		void:distinctObjects "10"^^xsd:integer
+		void:property bio:smiles ;
+		void:triples "11948"^^xsd:integer ;
+		void:distinctSubjects "11948"^^xsd:integer ;
+		void:distinctObjects "11838"^^xsd:integer
 	] , [
-		void:property geonames:featureCode ;
-		void:triples "7389099"^^xsd:integer ;
-		void:distinctSubjects "7389099"^^xsd:integer ;
-		void:distinctObjects "655"^^xsd:integer
+		void:property bio:synonym ;
+		void:triples "34762"^^xsd:integer ;
+		void:distinctSubjects "13952"^^xsd:integer ;
+		void:distinctObjects "34372"^^xsd:integer
 	] , [
-		void:property geonames:locationMap ;
-		void:triples "7479714"^^xsd:integer ;
-		void:distinctSubjects "7479714"^^xsd:integer ;
-		void:distinctObjects "7479714"^^xsd:integer
+		void:property bio:url ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "34055"^^xsd:integer
 	] , [
-		void:property geonames:name ;
-		void:triples "7479714"^^xsd:integer ;
-		void:distinctSubjects "7479714"^^xsd:integer ;
-		void:distinctObjects "4826442"^^xsd:integer
+		void:property bio:xRef ;
+		void:triples "31962"^^xsd:integer ;
+		void:distinctSubjects "16444"^^xsd:integer ;
+		void:distinctObjects "25965"^^xsd:integer
 	] , [
-		void:property geonames:nearbyFeatures ;
-		void:triples "7255141"^^xsd:integer ;
-		void:distinctSubjects "7255141"^^xsd:integer ;
-		void:distinctObjects "7255141"^^xsd:integer
+		void:property chebi:Status ;
+		void:triples "50477"^^xsd:integer ;
+		void:distinctSubjects "50477"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
 	] , [
-		void:property geonames:neighbouringFeatures ;
-		void:triples "242"^^xsd:integer ;
-		void:distinctSubjects "242"^^xsd:integer ;
-		void:distinctObjects "242"^^xsd:integer
+		void:property chebi:has_functional_parent ;
+		void:triples "3760"^^xsd:integer ;
+		void:distinctSubjects "3552"^^xsd:integer ;
+		void:distinctObjects "1663"^^xsd:integer
 	] , [
-		void:property geonames:officialName ;
-		void:triples "97981"^^xsd:integer ;
-		void:distinctSubjects "89245"^^xsd:integer ;
-		void:distinctObjects "73058"^^xsd:integer
+		void:property chebi:has_parent_hydride ;
+		void:triples "584"^^xsd:integer ;
+		void:distinctSubjects "582"^^xsd:integer ;
+		void:distinctObjects "269"^^xsd:integer
 	] , [
-		void:property geonames:parentADM1 ;
-		void:triples "6812897"^^xsd:integer ;
-		void:distinctSubjects "6812897"^^xsd:integer ;
-		void:distinctObjects "3714"^^xsd:integer
+		void:property chebi:has_part ;
+		void:triples "668"^^xsd:integer ;
+		void:distinctSubjects "621"^^xsd:integer ;
+		void:distinctObjects "610"^^xsd:integer
 	] , [
-		void:property geonames:parentADM2 ;
-		void:triples "2499820"^^xsd:integer ;
-		void:distinctSubjects "2499819"^^xsd:integer ;
-		void:distinctObjects "24815"^^xsd:integer
+		void:property chebi:has_role ;
+		void:triples "2262"^^xsd:integer ;
+		void:distinctSubjects "1460"^^xsd:integer ;
+		void:distinctObjects "377"^^xsd:integer
 	] , [
-		void:property geonames:parentADM3 ;
-		void:triples "227326"^^xsd:integer ;
-		void:distinctSubjects "227185"^^xsd:integer ;
-		void:distinctObjects "42323"^^xsd:integer
+		void:property chebi:is_a ;
+		void:triples "40566"^^xsd:integer ;
+		void:distinctSubjects "33450"^^xsd:integer ;
+		void:distinctObjects "6456"^^xsd:integer
 	] , [
-		void:property geonames:parentADM4 ;
-		void:triples "121382"^^xsd:integer ;
-		void:distinctSubjects "121368"^^xsd:integer ;
-		void:distinctObjects "81425"^^xsd:integer
+		void:property chebi:is_conjugate_acid_of ;
+		void:triples "1236"^^xsd:integer ;
+		void:distinctSubjects "1229"^^xsd:integer ;
+		void:distinctObjects "1219"^^xsd:integer
 	] , [
-		void:property geonames:parentCountry ;
-		void:triples "7474323"^^xsd:integer ;
-		void:distinctSubjects "7474323"^^xsd:integer ;
-		void:distinctObjects "247"^^xsd:integer
+		void:property chebi:is_conjugate_base_of ;
+		void:triples "1236"^^xsd:integer ;
+		void:distinctSubjects "1219"^^xsd:integer ;
+		void:distinctObjects "1229"^^xsd:integer
 	] , [
-		void:property geonames:parentFeature ;
-		void:triples "7479713"^^xsd:integer ;
-		void:distinctSubjects "7479713"^^xsd:integer ;
-		void:distinctObjects "104460"^^xsd:integer
+		void:property chebi:is_enantiomer_of ;
+		void:triples "1142"^^xsd:integer ;
+		void:distinctSubjects "1142"^^xsd:integer ;
+		void:distinctObjects "1142"^^xsd:integer
 	] , [
-		void:property geonames:population ;
-		void:triples "235318"^^xsd:integer ;
-		void:distinctSubjects "235318"^^xsd:integer ;
-		void:distinctObjects "40987"^^xsd:integer
+		void:property chebi:is_substituent_group_from ;
+		void:triples "704"^^xsd:integer ;
+		void:distinctSubjects "699"^^xsd:integer ;
+		void:distinctObjects "424"^^xsd:integer
 	] , [
-		void:property geonames:postalCode ;
-		void:triples "119047"^^xsd:integer ;
-		void:distinctSubjects "91004"^^xsd:integer ;
-		void:distinctObjects "59388"^^xsd:integer
+		void:property chebi:is_tautomer_of ;
+		void:triples "388"^^xsd:integer ;
+		void:distinctSubjects "262"^^xsd:integer ;
+		void:distinctObjects "262"^^xsd:integer
 	] , [
-		void:property geonames:wikipediaArticle ;
-		void:triples "939065"^^xsd:integer ;
-		void:distinctSubjects "158378"^^xsd:integer ;
-		void:distinctObjects "905093"^^xsd:integer
+		void:property chebi:iupacName ;
+		void:triples "15458"^^xsd:integer ;
+		void:distinctSubjects "13249"^^xsd:integer ;
+		void:distinctObjects "15423"^^xsd:integer
+	] , [
+		void:property chebi:xReferencedBy ;
+		void:triples "6755315"^^xsd:integer ;
+		void:distinctSubjects "14095"^^xsd:integer ;
+		void:distinctObjects "462352"^^xsd:integer
+	] , [
+		void:property chebi:xSource ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property dc:identifier ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "34055"^^xsd:integer
+	] , [
+		void:property dc:modified ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "172"^^xsd:integer
+	] , [
+		void:property dc:title ;
+		void:triples "34055"^^xsd:integer ;
+		void:distinctSubjects "34055"^^xsd:integer ;
+		void:distinctObjects "33922"^^xsd:integer
 	] , [
 		void:property rdf:type ;
-		void:triples "7479714"^^xsd:integer ;
-		void:distinctSubjects "7479714"^^xsd:integer ;
+		void:triples "50477"^^xsd:integer ;
+		void:distinctSubjects "50477"^^xsd:integer ;
 		void:distinctObjects "1"^^xsd:integer
 	] , [
-		void:property rdfs:isDefinedBy ;
-		void:triples "7479714"^^xsd:integer ;
-		void:distinctSubjects "7479714"^^xsd:integer ;
-		void:distinctObjects "7479714"^^xsd:integer
+		void:property rdfs:comment ;
+		void:triples "279"^^xsd:integer ;
+		void:distinctSubjects "260"^^xsd:integer ;
+		void:distinctObjects "204"^^xsd:integer
 	] , [
-		void:property owl:sameAs ;
-		void:triples "117915"^^xsd:integer ;
-		void:distinctSubjects "117238"^^xsd:integer ;
-		void:distinctObjects "117839"^^xsd:integer
+		void:property rdfs:label ;
+		void:triples "50477"^^xsd:integer ;
+		void:distinctSubjects "50477"^^xsd:integer ;
+		void:distinctObjects "50477"^^xsd:integer
 	] , [
-		void:property geo:alt ;
-		void:triples "2158255"^^xsd:integer ;
-		void:distinctSubjects "2158255"^^xsd:integer ;
-		void:distinctObjects "5661"^^xsd:integer
-	] , [
-		void:property geo:lat ;
-		void:triples "7479714"^^xsd:integer ;
-		void:distinctSubjects "7479714"^^xsd:integer ;
-		void:distinctObjects "1996861"^^xsd:integer
-	] , [
-		void:property geo:long ;
-		void:triples "7479714"^^xsd:integer ;
-		void:distinctSubjects "7479714"^^xsd:integer ;
-		void:distinctObjects "2678128"^^xsd:integer
-	] , [
-		void:property foaf:page ;
-		void:triples "32581"^^xsd:integer ;
-		void:distinctSubjects "32581"^^xsd:integer ;
-		void:distinctObjects "32581"^^xsd:integer
+		void:property rdfs:seeAlso ;
+		void:triples "16422"^^xsd:integer ;
+		void:distinctSubjects "16422"^^xsd:integer ;
+		void:distinctObjects "6169"^^xsd:integer
 	] ;
 	void:classPartition [
-		void:class geonames:Feature ;
-		void:entities "7479714"^^xsd:integer
+		void:class chebi:Compound ;
+		void:entities "50477"^^xsd:integer
+	] .
+
+_:node-16vledbx1 a void:Dataset ;
+	void:sparqlEndpoint <http://143.233.226.25:8892/sparql> ;
+	void:triples "766920"^^xsd:integer ;
+	void:entities "19693"^^xsd:integer ;
+	void:properties "119"^^xsd:integer ;
+	void:distinctSubjects "19693"^^xsd:integer ;
+	void:distinctObjects "276142"^^xsd:integer ;
+	void:propertyPartition [
+		void:property rdf:type ;
+		void:triples "24522"^^xsd:integer ;
+		void:distinctSubjects "19693"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property rdfs:label ;
+		void:triples "19627"^^xsd:integer ;
+		void:distinctSubjects "19570"^^xsd:integer ;
+		void:distinctObjects "18780"^^xsd:integer
+	] , [
+		void:property owl:equivalentClass ;
+		void:triples "4"^^xsd:integer ;
+		void:distinctSubjects "2"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property owl:equivalentProperty ;
+		void:triples "4"^^xsd:integer ;
+		void:distinctSubjects "3"^^xsd:integer ;
+		void:distinctObjects "4"^^xsd:integer
+	] , [
+		void:property owl:sameAs ;
+		void:triples "9521"^^xsd:integer ;
+		void:distinctSubjects "2209"^^xsd:integer ;
+		void:distinctObjects "9486"^^xsd:integer
+	] , [
+		void:property drugbank:absorption ;
+		void:triples "975"^^xsd:integer ;
+		void:distinctSubjects "975"^^xsd:integer ;
+		void:distinctObjects "868"^^xsd:integer
+	] , [
+		void:property drugbank:affectedOrganism ;
+		void:triples "1531"^^xsd:integer ;
+		void:distinctSubjects "1513"^^xsd:integer ;
+		void:distinctObjects "48"^^xsd:integer
+	] , [
+		void:property drugbank:ahfsCode ;
+		void:triples "1015"^^xsd:integer ;
+		void:distinctSubjects "826"^^xsd:integer ;
+		void:distinctObjects "253"^^xsd:integer
+	] , [
+		void:property drugbank:atcCode ;
+		void:triples "1900"^^xsd:integer ;
+		void:distinctSubjects "1218"^^xsd:integer ;
+		void:distinctObjects "1752"^^xsd:integer
+	] , [
+		void:property drugbank:bio2rdfSymbol ;
+		void:triples "1533"^^xsd:integer ;
+		void:distinctSubjects "1533"^^xsd:integer ;
+		void:distinctObjects "1499"^^xsd:integer
+	] , [
+		void:property drugbank:biotransformation ;
+		void:triples "993"^^xsd:integer ;
+		void:distinctSubjects "993"^^xsd:integer ;
+		void:distinctObjects "715"^^xsd:integer
+	] , [
+		void:property drugbank:brandMixture ;
+		void:triples "3968"^^xsd:integer ;
+		void:distinctSubjects "250"^^xsd:integer ;
+		void:distinctObjects "3470"^^xsd:integer
+	] , [
+		void:property drugbank:brandName ;
+		void:triples "18166"^^xsd:integer ;
+		void:distinctSubjects "1470"^^xsd:integer ;
+		void:distinctObjects "18104"^^xsd:integer
+	] , [
+		void:property drugbank:brandedDrug ;
+		void:triples "1593"^^xsd:integer ;
+		void:distinctSubjects "524"^^xsd:integer ;
+		void:distinctObjects "1593"^^xsd:integer
+	] , [
+		void:property drugbank:casRegistryNumber ;
+		void:triples "2240"^^xsd:integer ;
+		void:distinctSubjects "2240"^^xsd:integer ;
+		void:distinctObjects "2218"^^xsd:integer
+	] , [
+		void:property drugbank:cellularLocation ;
+		void:triples "26258"^^xsd:integer ;
+		void:distinctSubjects "2997"^^xsd:integer ;
+		void:distinctObjects "453"^^xsd:integer
+	] , [
+		void:property drugbank:chebiId ;
+		void:triples "736"^^xsd:integer ;
+		void:distinctSubjects "736"^^xsd:integer ;
+		void:distinctObjects "721"^^xsd:integer
+	] , [
+		void:property drugbank:chemicalFormula ;
+		void:triples "4721"^^xsd:integer ;
+		void:distinctSubjects "4721"^^xsd:integer ;
+		void:distinctObjects "3906"^^xsd:integer
+	] , [
+		void:property drugbank:chemicalIupacName ;
+		void:triples "4592"^^xsd:integer ;
+		void:distinctSubjects "4592"^^xsd:integer ;
+		void:distinctObjects "4480"^^xsd:integer
+	] , [
+		void:property drugbank:chemicalStructure ;
+		void:triples "94"^^xsd:integer ;
+		void:distinctSubjects "94"^^xsd:integer ;
+		void:distinctObjects "90"^^xsd:integer
+	] , [
+		void:property drugbank:chromosomeLocation ;
+		void:triples "1614"^^xsd:integer ;
+		void:distinctSubjects "1614"^^xsd:integer ;
+		void:distinctObjects "23"^^xsd:integer
+	] , [
+		void:property drugbank:contraindicationInsert ;
+		void:triples "1112"^^xsd:integer ;
+		void:distinctSubjects "1112"^^xsd:integer ;
+		void:distinctObjects "1112"^^xsd:integer
+	] , [
+		void:property drugbank:creationDate ;
+		void:triples "4772"^^xsd:integer ;
+		void:distinctSubjects "4772"^^xsd:integer ;
+		void:distinctObjects "393"^^xsd:integer
+	] , [
+		void:property drugbank:description ;
+		void:triples "1861"^^xsd:integer ;
+		void:distinctSubjects "1861"^^xsd:integer ;
+		void:distinctObjects "1813"^^xsd:integer
+	] , [
+		void:property drugbank:dosageForm ;
+		void:triples "2482"^^xsd:integer ;
+		void:distinctSubjects "1209"^^xsd:integer ;
+		void:distinctObjects "215"^^xsd:integer
+	] , [
+		void:property drugbank:dpdDrugIdNumber ;
+		void:triples "993"^^xsd:integer ;
+		void:distinctSubjects "993"^^xsd:integer ;
+		void:distinctObjects "979"^^xsd:integer
+	] , [
+		void:property drugbank:drugCategory ;
+		void:triples "4602"^^xsd:integer ;
+		void:distinctSubjects "1879"^^xsd:integer ;
+		void:distinctObjects "584"^^xsd:integer
+	] , [
+		void:property drugbank:drugReference ;
+		void:triples "23782"^^xsd:integer ;
+		void:distinctSubjects "3055"^^xsd:integer ;
+		void:distinctObjects "7714"^^xsd:integer
+	] , [
+		void:property drugbank:drugType ;
+		void:triples "10195"^^xsd:integer ;
+		void:distinctSubjects "4772"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property drugbank:enzyme ;
+		void:triples "812"^^xsd:integer ;
+		void:distinctSubjects "640"^^xsd:integer ;
+		void:distinctObjects "8"^^xsd:integer
+	] , [
+		void:property drugbank:essentiality ;
+		void:triples "4543"^^xsd:integer ;
+		void:distinctSubjects "4543"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property drugbank:experimentalCaco2Permeability ;
+		void:triples "82"^^xsd:integer ;
+		void:distinctSubjects "82"^^xsd:integer ;
+		void:distinctObjects "69"^^xsd:integer
+	] , [
+		void:property drugbank:experimentalLogpHydrophobicity ;
+		void:triples "1370"^^xsd:integer ;
+		void:distinctSubjects "1370"^^xsd:integer ;
+		void:distinctObjects "427"^^xsd:integer
+	] , [
+		void:property drugbank:experimentalLogs ;
+		void:triples "193"^^xsd:integer ;
+		void:distinctSubjects "193"^^xsd:integer ;
+		void:distinctObjects "161"^^xsd:integer
+	] , [
+		void:property drugbank:experimentalWaterSolubility ;
+		void:triples "1009"^^xsd:integer ;
+		void:distinctSubjects "1009"^^xsd:integer ;
+		void:distinctObjects "805"^^xsd:integer
+	] , [
+		void:property drugbank:fdaLabelFiles ;
+		void:triples "675"^^xsd:integer ;
+		void:distinctSubjects "675"^^xsd:integer ;
+		void:distinctObjects "675"^^xsd:integer
+	] , [
+		void:property drugbank:foodInteraction ;
+		void:triples "996"^^xsd:integer ;
+		void:distinctSubjects "525"^^xsd:integer ;
+		void:distinctObjects "289"^^xsd:integer
+	] , [
+		void:property drugbank:genatlasId ;
+		void:triples "1665"^^xsd:integer ;
+		void:distinctSubjects "1665"^^xsd:integer ;
+		void:distinctObjects "1626"^^xsd:integer
+	] , [
+		void:property drugbank:genbankId ;
+		void:triples "71"^^xsd:integer ;
+		void:distinctSubjects "71"^^xsd:integer ;
+		void:distinctObjects "45"^^xsd:integer
+	] , [
+		void:property drugbank:genbankIdGene ;
+		void:triples "4310"^^xsd:integer ;
+		void:distinctSubjects "4310"^^xsd:integer ;
+		void:distinctObjects "3864"^^xsd:integer
+	] , [
+		void:property drugbank:genbankIdGenePage ;
+		void:triples "4310"^^xsd:integer ;
+		void:distinctSubjects "4310"^^xsd:integer ;
+		void:distinctObjects "3864"^^xsd:integer
+	] , [
+		void:property drugbank:genbankIdProtein ;
+		void:triples "2859"^^xsd:integer ;
+		void:distinctSubjects "2859"^^xsd:integer ;
+		void:distinctObjects "2859"^^xsd:integer
+	] , [
+		void:property drugbank:genbankIdProteinPage ;
+		void:triples "2859"^^xsd:integer ;
+		void:distinctSubjects "2859"^^xsd:integer ;
+		void:distinctObjects "2859"^^xsd:integer
+	] , [
+		void:property drugbank:geneName ;
+		void:triples "3923"^^xsd:integer ;
+		void:distinctSubjects "3923"^^xsd:integer ;
+		void:distinctObjects "3459"^^xsd:integer
+	] , [
+		void:property drugbank:geneSequence ;
+		void:triples "4231"^^xsd:integer ;
+		void:distinctSubjects "4231"^^xsd:integer ;
+		void:distinctObjects "4226"^^xsd:integer
+	] , [
+		void:property drugbank:genecardId ;
+		void:triples "1533"^^xsd:integer ;
+		void:distinctSubjects "1533"^^xsd:integer ;
+		void:distinctObjects "1499"^^xsd:integer
+	] , [
+		void:property drugbank:generalFunction ;
+		void:triples "4103"^^xsd:integer ;
+		void:distinctSubjects "4103"^^xsd:integer ;
+		void:distinctObjects "598"^^xsd:integer
+	] , [
+		void:property drugbank:generalReference ;
+		void:triples "72359"^^xsd:integer ;
+		void:distinctSubjects "4256"^^xsd:integer ;
+		void:distinctObjects "16118"^^xsd:integer
+	] , [
+		void:property drugbank:genericName ;
+		void:triples "4772"^^xsd:integer ;
+		void:distinctSubjects "4772"^^xsd:integer ;
+		void:distinctObjects "4772"^^xsd:integer
+	] , [
+		void:property drugbank:goClassificationComponent ;
+		void:triples "14208"^^xsd:integer ;
+		void:distinctSubjects "1326"^^xsd:integer ;
+		void:distinctObjects "153"^^xsd:integer
+	] , [
+		void:property drugbank:goClassificationFunction ;
+		void:triples "72232"^^xsd:integer ;
+		void:distinctSubjects "3790"^^xsd:integer ;
+		void:distinctObjects "1166"^^xsd:integer
+	] , [
+		void:property drugbank:goClassificationProcess ;
+		void:triples "63520"^^xsd:integer ;
+		void:distinctSubjects "3478"^^xsd:integer ;
+		void:distinctObjects "793"^^xsd:integer
+	] , [
+		void:property drugbank:halfLife ;
+		void:triples "1038"^^xsd:integer ;
+		void:distinctSubjects "1038"^^xsd:integer ;
+		void:distinctObjects "808"^^xsd:integer
+	] , [
+		void:property drugbank:hetId ;
+		void:triples "3312"^^xsd:integer ;
+		void:distinctSubjects "3312"^^xsd:integer ;
+		void:distinctObjects "3297"^^xsd:integer
+	] , [
+		void:property drugbank:hgncId ;
+		void:triples "1675"^^xsd:integer ;
+		void:distinctSubjects "1675"^^xsd:integer ;
+		void:distinctObjects "1618"^^xsd:integer
+	] , [
+		void:property drugbank:hgncIdPage ;
+		void:triples "1675"^^xsd:integer ;
+		void:distinctSubjects "1675"^^xsd:integer ;
+		void:distinctObjects "1618"^^xsd:integer
+	] , [
+		void:property drugbank:hprdId ;
+		void:triples "1241"^^xsd:integer ;
+		void:distinctSubjects "1241"^^xsd:integer ;
+		void:distinctObjects "1227"^^xsd:integer
+	] , [
+		void:property drugbank:inchiIdentifier ;
+		void:triples "4392"^^xsd:integer ;
+		void:distinctSubjects "4392"^^xsd:integer ;
+		void:distinctObjects "4218"^^xsd:integer
+	] , [
+		void:property drugbank:inchiKey ;
+		void:triples "4392"^^xsd:integer ;
+		void:distinctSubjects "4392"^^xsd:integer ;
+		void:distinctObjects "4218"^^xsd:integer
+	] , [
+		void:property drugbank:indication ;
+		void:triples "1463"^^xsd:integer ;
+		void:distinctSubjects "1463"^^xsd:integer ;
+		void:distinctObjects "1368"^^xsd:integer
+	] , [
+		void:property drugbank:interactionDrug1 ;
+		void:triples "10153"^^xsd:integer ;
+		void:distinctSubjects "10096"^^xsd:integer ;
+		void:distinctObjects "472"^^xsd:integer
+	] , [
+		void:property drugbank:interactionDrug2 ;
+		void:triples "10153"^^xsd:integer ;
+		void:distinctSubjects "10096"^^xsd:integer ;
+		void:distinctObjects "843"^^xsd:integer
+	] , [
+		void:property drugbank:interactionInsert ;
+		void:triples "1036"^^xsd:integer ;
+		void:distinctSubjects "1036"^^xsd:integer ;
+		void:distinctObjects "1036"^^xsd:integer
+	] , [
+		void:property drugbank:keggCompoundId ;
+		void:triples "1331"^^xsd:integer ;
+		void:distinctSubjects "1331"^^xsd:integer ;
+		void:distinctObjects "1316"^^xsd:integer
+	] , [
+		void:property drugbank:keggDrugId ;
+		void:triples "913"^^xsd:integer ;
+		void:distinctSubjects "913"^^xsd:integer ;
+		void:distinctObjects "910"^^xsd:integer
+	] , [
+		void:property drugbank:limsDrugId ;
+		void:triples "4772"^^xsd:integer ;
+		void:distinctSubjects "4772"^^xsd:integer ;
+		void:distinctObjects "4772"^^xsd:integer
+	] , [
+		void:property drugbank:locus ;
+		void:triples "1619"^^xsd:integer ;
+		void:distinctSubjects "1619"^^xsd:integer ;
+		void:distinctObjects "905"^^xsd:integer
+	] , [
+		void:property drugbank:massSpecFile ;
+		void:triples "4772"^^xsd:integer ;
+		void:distinctSubjects "4772"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property drugbank:mechanismOfAction ;
+		void:triples "1475"^^xsd:integer ;
+		void:distinctSubjects "1475"^^xsd:integer ;
+		void:distinctObjects "1444"^^xsd:integer
+	] , [
+		void:property drugbank:meltingPoint ;
+		void:triples "1159"^^xsd:integer ;
+		void:distinctSubjects "1159"^^xsd:integer ;
+		void:distinctObjects "834"^^xsd:integer
+	] , [
+		void:property drugbank:molecularWeight ;
+		void:triples "4537"^^xsd:integer ;
+		void:distinctSubjects "4537"^^xsd:integer ;
+		void:distinctObjects "4383"^^xsd:integer
+	] , [
+		void:property drugbank:molecularWeightAverage ;
+		void:triples "4727"^^xsd:integer ;
+		void:distinctSubjects "4727"^^xsd:integer ;
+		void:distinctObjects "3914"^^xsd:integer
+	] , [
+		void:property drugbank:molecularWeightMono ;
+		void:triples "4620"^^xsd:integer ;
+		void:distinctSubjects "4620"^^xsd:integer ;
+		void:distinctObjects "3824"^^xsd:integer
+	] , [
+		void:property drugbank:msdsFiles ;
+		void:triples "829"^^xsd:integer ;
+		void:distinctSubjects "829"^^xsd:integer ;
+		void:distinctObjects "829"^^xsd:integer
+	] , [
+		void:property drugbank:name ;
+		void:triples "4606"^^xsd:integer ;
+		void:distinctSubjects "4606"^^xsd:integer ;
+		void:distinctObjects "3819"^^xsd:integer
+	] , [
+		void:property drugbank:numberOfResidues ;
+		void:triples "4553"^^xsd:integer ;
+		void:distinctSubjects "4553"^^xsd:integer ;
+		void:distinctObjects "1075"^^xsd:integer
+	] , [
+		void:property drugbank:pathway ;
+		void:triples "1321"^^xsd:integer ;
+		void:distinctSubjects "1321"^^xsd:integer ;
+		void:distinctObjects "234"^^xsd:integer
+	] , [
+		void:property drugbank:patientInformationInsert ;
+		void:triples "762"^^xsd:integer ;
+		void:distinctSubjects "762"^^xsd:integer ;
+		void:distinctObjects "762"^^xsd:integer
+	] , [
+		void:property drugbank:pdbExperimentalId ;
+		void:triples "3113"^^xsd:integer ;
+		void:distinctSubjects "3113"^^xsd:integer ;
+		void:distinctObjects "2853"^^xsd:integer
+	] , [
+		void:property drugbank:pdbHomologyId ;
+		void:triples "30"^^xsd:integer ;
+		void:distinctSubjects "30"^^xsd:integer ;
+		void:distinctObjects "14"^^xsd:integer
+	] , [
+		void:property drugbank:pdbId ;
+		void:triples "3379"^^xsd:integer ;
+		void:distinctSubjects "3379"^^xsd:integer ;
+		void:distinctObjects "3204"^^xsd:integer
+	] , [
+		void:property drugbank:pdbIdPage ;
+		void:triples "3379"^^xsd:integer ;
+		void:distinctSubjects "3379"^^xsd:integer ;
+		void:distinctObjects "3204"^^xsd:integer
+	] , [
+		void:property drugbank:pdrhealthLink ;
+		void:triples "280"^^xsd:integer ;
+		void:distinctSubjects "280"^^xsd:integer ;
+		void:distinctObjects "273"^^xsd:integer
+	] , [
+		void:property drugbank:pfamDomainFunction ;
+		void:triples "19028"^^xsd:integer ;
+		void:distinctSubjects "4365"^^xsd:integer ;
+		void:distinctObjects "1954"^^xsd:integer
+	] , [
+		void:property drugbank:pfamDomainFunctionPage ;
+		void:triples "19028"^^xsd:integer ;
+		void:distinctSubjects "4365"^^xsd:integer ;
+		void:distinctObjects "1954"^^xsd:integer
+	] , [
+		void:property drugbank:pharmacology ;
+		void:triples "1443"^^xsd:integer ;
+		void:distinctSubjects "1443"^^xsd:integer ;
+		void:distinctObjects "1435"^^xsd:integer
+	] , [
+		void:property drugbank:pharmgkbId ;
+		void:triples "1156"^^xsd:integer ;
+		void:distinctSubjects "1156"^^xsd:integer ;
+		void:distinctObjects "1156"^^xsd:integer
+	] , [
+		void:property drugbank:pkaIsoelectricPoint ;
+		void:triples "307"^^xsd:integer ;
+		void:distinctSubjects "307"^^xsd:integer ;
+		void:distinctObjects "221"^^xsd:integer
+	] , [
+		void:property drugbank:possibleDiseaseTarget ;
+		void:triples "8201"^^xsd:integer ;
+		void:distinctSubjects "1362"^^xsd:integer ;
+		void:distinctObjects "1456"^^xsd:integer
+	] , [
+		void:property drugbank:predictedLogpHydrophobicity ;
+		void:triples "4506"^^xsd:integer ;
+		void:distinctSubjects "4506"^^xsd:integer ;
+		void:distinctObjects "1010"^^xsd:integer
+	] , [
+		void:property drugbank:predictedLogs ;
+		void:triples "4506"^^xsd:integer ;
+		void:distinctSubjects "4506"^^xsd:integer ;
+		void:distinctObjects "814"^^xsd:integer
+	] , [
+		void:property drugbank:predictedWaterSolubility ;
+		void:triples "4506"^^xsd:integer ;
+		void:distinctSubjects "4506"^^xsd:integer ;
+		void:distinctObjects "2686"^^xsd:integer
+	] , [
+		void:property drugbank:primaryAccessionNo ;
+		void:triples "4772"^^xsd:integer ;
+		void:distinctSubjects "4772"^^xsd:integer ;
+		void:distinctObjects "4772"^^xsd:integer
+	] , [
+		void:property drugbank:proteinBinding ;
+		void:triples "802"^^xsd:integer ;
+		void:distinctSubjects "802"^^xsd:integer ;
+		void:distinctObjects "546"^^xsd:integer
+	] , [
+		void:property drugbank:proteinSequence ;
+		void:triples "4587"^^xsd:integer ;
+		void:distinctSubjects "4587"^^xsd:integer ;
+		void:distinctObjects "4574"^^xsd:integer
+	] , [
+		void:property drugbank:pubchemCompoundId ;
+		void:triples "4433"^^xsd:integer ;
+		void:distinctSubjects "4433"^^xsd:integer ;
+		void:distinctObjects "4341"^^xsd:integer
+	] , [
+		void:property drugbank:pubchemSubstanceId ;
+		void:triples "4400"^^xsd:integer ;
+		void:distinctSubjects "4400"^^xsd:integer ;
+		void:distinctObjects "4389"^^xsd:integer
+	] , [
+		void:property drugbank:reaction ;
+		void:triples "1762"^^xsd:integer ;
+		void:distinctSubjects "1762"^^xsd:integer ;
+		void:distinctObjects "863"^^xsd:integer
+	] , [
+		void:property drugbank:reference ;
+		void:triples "2362"^^xsd:integer ;
+		void:distinctSubjects "1029"^^xsd:integer ;
+		void:distinctObjects "1"^^xsd:integer
+	] , [
+		void:property drugbank:rxlistLink ;
+		void:triples "998"^^xsd:integer ;
+		void:distinctSubjects "998"^^xsd:integer ;
+		void:distinctObjects "994"^^xsd:integer
+	] , [
+		void:property drugbank:secondaryAccessionNumber ;
+		void:triples "4364"^^xsd:integer ;
+		void:distinctSubjects "4147"^^xsd:integer ;
+		void:distinctObjects "4364"^^xsd:integer
+	] , [
+		void:property drugbank:signal ;
+		void:triples "2890"^^xsd:integer ;
+		void:distinctSubjects "918"^^xsd:integer ;
+		void:distinctObjects "48"^^xsd:integer
+	] , [
+		void:property drugbank:smilesStringCanonical ;
+		void:triples "4600"^^xsd:integer ;
+		void:distinctSubjects "4600"^^xsd:integer ;
+		void:distinctObjects "4364"^^xsd:integer
+	] , [
+		void:property drugbank:smilesStringIsomeric ;
+		void:triples "4600"^^xsd:integer ;
+		void:distinctSubjects "4600"^^xsd:integer ;
+		void:distinctObjects "4413"^^xsd:integer
+	] , [
+		void:property drugbank:specificFunction ;
+		void:triples "3686"^^xsd:integer ;
+		void:distinctSubjects "3686"^^xsd:integer ;
+		void:distinctObjects "2855"^^xsd:integer
+	] , [
+		void:property drugbank:state ;
+		void:triples "4772"^^xsd:integer ;
+		void:distinctSubjects "4772"^^xsd:integer ;
+		void:distinctObjects "3"^^xsd:integer
+	] , [
+		void:property drugbank:structure ;
+		void:triples "4772"^^xsd:integer ;
+		void:distinctSubjects "4772"^^xsd:integer ;
+		void:distinctObjects "2"^^xsd:integer
+	] , [
+		void:property drugbank:swissprotId ;
+		void:triples "4660"^^xsd:integer ;
+		void:distinctSubjects "4660"^^xsd:integer ;
+		void:distinctObjects "4582"^^xsd:integer
+	] , [
+		void:property drugbank:swissprotName ;
+		void:triples "4607"^^xsd:integer ;
+		void:distinctSubjects "4607"^^xsd:integer ;
+		void:distinctObjects "4559"^^xsd:integer
+	] , [
+		void:property drugbank:swissprotPage ;
+		void:triples "4660"^^xsd:integer ;
+		void:distinctSubjects "4660"^^xsd:integer ;
+		void:distinctObjects "4582"^^xsd:integer
+	] , [
+		void:property drugbank:synonym ;
+		void:triples "44949"^^xsd:integer ;
+		void:distinctSubjects "5251"^^xsd:integer ;
+		void:distinctObjects "16957"^^xsd:integer
+	] , [
+		void:property drugbank:synthesisReference ;
+		void:triples "308"^^xsd:integer ;
+		void:distinctSubjects "308"^^xsd:integer ;
+		void:distinctObjects "305"^^xsd:integer
+	] , [
+		void:property drugbank:target ;
+		void:triples "12045"^^xsd:integer ;
+		void:distinctSubjects "4408"^^xsd:integer ;
+		void:distinctObjects "4553"^^xsd:integer
+	] , [
+		void:property drugbank:text ;
+		void:triples "10153"^^xsd:integer ;
+		void:distinctSubjects "10096"^^xsd:integer ;
+		void:distinctObjects "1688"^^xsd:integer
+	] , [
+		void:property drugbank:theoreticalPi ;
+		void:triples "4532"^^xsd:integer ;
+		void:distinctSubjects "4532"^^xsd:integer ;
+		void:distinctObjects "688"^^xsd:integer
+	] , [
+		void:property drugbank:toxicity ;
+		void:triples "978"^^xsd:integer ;
+		void:distinctSubjects "978"^^xsd:integer ;
+		void:distinctObjects "948"^^xsd:integer
+	] , [
+		void:property drugbank:transmembraneRegions ;
+		void:triples "16115"^^xsd:integer ;
+		void:distinctSubjects "716"^^xsd:integer ;
+		void:distinctObjects "2429"^^xsd:integer
+	] , [
+		void:property drugbank:updateDate ;
+		void:triples "4772"^^xsd:integer ;
+		void:distinctSubjects "4772"^^xsd:integer ;
+		void:distinctObjects "4728"^^xsd:integer
+	] , [
+		void:property foaf:page ;
+		void:triples "7912"^^xsd:integer ;
+		void:distinctSubjects "4868"^^xsd:integer ;
+		void:distinctObjects "7908"^^xsd:integer
+	] ;
+	void:classPartition [
+		void:class rdf:Property ;
+		void:entities "117"^^xsd:integer
+	] , [
+		void:class rdfs:Class ;
+		void:entities "6"^^xsd:integer
+	] , [
+		void:class drugbank:drug_interactions ;
+		void:entities "10153"^^xsd:integer
+	] , [
+		void:class drugbank:drugs ;
+		void:entities "4772"^^xsd:integer
+	] , [
+		void:class drugbank:enzymes ;
+		void:entities "53"^^xsd:integer
+	] , [
+		void:class drugbank:references ;
+		void:entities "96"^^xsd:integer
+	] , [
+		void:class drugbank:targets ;
+		void:entities "4553"^^xsd:integer
+	] , [
+		void:class <http://www4.wiwiss.fu-berlin.de/drugbank/vocab/resource/class/Offer> ;
+		void:entities "4772"^^xsd:integer
 	] .

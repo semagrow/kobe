@@ -1,0 +1,38 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://ChEBI> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://143.233.226.25:8890/sparql" .
+
+<http://DBpedia> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://143.233.226.25:8891/sparql" .
+
+<http://DrugBank> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://143.233.226.25:8892/sparql" .
+
+<http://NYtimes> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://143.233.226.25:8897/sparql".
+
+<http://LinkedMDB> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://143.233.226.25:8896/sparql" .
+
+<http://Jamendo> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://143.233.226.25:8894/sparql" .
+
+<http://Geonames> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://143.233.226.25:8893/sparql" .
+
+<http://KEGG> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://143.233.226.25:8895/sparql" .
+
+<http://LTCGA-M> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8887/sparql" .
+
+<http://LTCGA-E> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8888/sparql" .
+
+<http://LTCGA-A> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8889/sparql" .
+
+<http://LTCGA-M> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://10.0.100.57:8899/sparql" .
+

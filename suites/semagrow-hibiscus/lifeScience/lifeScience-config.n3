@@ -21,7 +21,7 @@
          semagrow:metadataInit "suites/semagrow-hibiscus/lifeScience/lifeScience.void.n3" ;
 	 semagrow:executorBatchSize "8" ;
 	 semagrow:sourceSelector "aksw:hibiscus" ;
-         hibiscus:hibiscusMode "ASK_dominant" ;
+         hibiscus:hibiscusMode "Index_dominant" ;
          hibiscus:summariesFile "suites/semagrow-hibiscus/lifeScience/summaries/lifeScience.n3";
       ]
    ] .
