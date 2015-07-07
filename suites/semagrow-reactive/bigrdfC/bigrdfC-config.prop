@@ -4,7 +4,7 @@ dataConfig = suites/semagrow-reactive/bigrdfC/bigrdfC.ttl
 
 querySet = bigrdfdataC
 
-evalRuns = 1
+evalRuns = 3
 
 timeout = 1200000
 

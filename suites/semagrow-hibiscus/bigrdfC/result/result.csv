@@ -1,10 +1,9 @@
 Query;run1;run2;run3;avg;numResults;minRes;maxRes;
-bigrdfdataC_1;4220;3020;-2;2413;999;-1;1001;
-bigrdfdataC_2;1558;1128;-2;895;4;-1;4;
-bigrdfdataC_3;1853;1617;-2;1157;9;-1;9;
-bigrdfdataC_4;26100;11456;-2;12519;50;-1;50;
-bigrdfdataC_5;47106;34241;-2;27116;500;-1;500;
-bigrdfdataC_6;16282;13632;-2;9971;148;-1;148;
+bigrdfdataC_1;3219;-2;-2;1072;997;-1;997;
+bigrdfdataC_2;1425;-2;-2;474;4;-1;4;
+bigrdfdataC_3;1776;-2;-2;591;9;-1;9;
+bigrdfdataC_4;-2;-2;-2;-1;-1;-1;-1;
+bigrdfdataC_5;78772;-2;-2;26257;500;-1;500;
+bigrdfdataC_6;17943;-2;-2;5980;148;-1;148;
 bigrdfdataC_7;-2;-2;-2;-1;-1;-1;-1;
 bigrdfdataC_8;-2;-2;-2;-1;-1;-1;-1;
-bigrdfdataC_9;8812;-2;-2;2937;100;-1;100;
