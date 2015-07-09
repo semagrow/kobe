@@ -1,4 +1,4 @@
-PREFIX tcga: <http://tcga.deri.ie/schema/> 
+//PREFIX tcga: <http://tcga.deri.ie/schema/> 
 SELECT ?expValue 
 WHERE
 {
@@ -16,7 +16,7 @@ WHERE
 }
 
 
-PREFIX tcga: <http://tcga.deri.ie/schema/> 
+//PREFIX tcga: <http://tcga.deri.ie/schema/> 
 SELECT DISTINCT ?patient ?tumorType ?exonValue
 WHERE
 {
@@ -30,7 +30,7 @@ WHERE
 }
 
 
-PREFIX tcga: <http://tcga.deri.ie/schema/> 
+//PREFIX tcga: <http://tcga.deri.ie/schema/> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?patient ?methylationValue
 WHERE

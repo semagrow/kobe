@@ -1,5 +1,5 @@
 @prefix ds:<http://aksw.org/fedsum/>.
-#---------------------http://143.233.226.25:8890/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8890/sparql Summaries-------------------------------ChEBI
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8890/sparql> ;
      ds:capability
@@ -159,7 +159,7 @@
            ds:objAuthority <http://bio2rdf.org> ; 
          ] ;
              .
-#---------------------http://143.233.226.25:8891/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8891/sparql Summaries-------------------------------Dbpedia
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8891/sparql> ;
      ds:capability
@@ -6033,7 +6033,7 @@
            ds:sbjAuthority <http://dbpedia.org> ; 
          ] ;
              .
-#---------------------http://143.233.226.25:8892/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8892/sparql Summaries-------------------------------Drugbank
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8892/sparql> ;
      ds:capability
@@ -6666,7 +6666,7 @@
            ds:sbjAuthority <http://www4.wiwiss.fu-berlin.de> ; 
          ] ;
              .
-#---------------------http://143.233.226.25:8893/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8893/sparql Summaries-------------------------------Geonames
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8893/sparql> ;
      ds:capability
@@ -6816,7 +6816,7 @@
            ds:objAuthority <http://sws.geonames.org> ; 
          ] ;
              .
-#---------------------http://143.233.226.25:8894/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8894/sparql Summaries-------------------------------Jamendo
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8894/sparql> ;
      ds:capability
@@ -6967,7 +6967,7 @@
            ds:sbjAuthority <http://www.jamendo.com> ; 
          ] ;
              .
-#---------------------http://143.233.226.25:8895/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8895/sparql Summaries-------------------------------KEGG
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8895/sparql> ;
      ds:capability
@@ -7086,7 +7086,7 @@
            ds:objAuthority <http://bio2rdf.org> ; 
          ] ;
              .
-#---------------------http://143.233.226.25:8896/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8896/sparql Summaries-------------------------------LinkedMDB
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8896/sparql> ;
      ds:capability
@@ -8270,7 +8270,7 @@
            ds:sbjAuthority <http://data.linkedmdb.org> ; 
          ] ;
              .
-#---------------------http://143.233.226.25:8897/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8897/sparql Summaries-------------------------------NYT
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8897/sparql> ;
      ds:capability
@@ -8471,9 +8471,9 @@
            ds:sbjAuthority <http://data.nytimes.com> ; 
          ] ;
              .
-#---------------------http://143.233.226.25:8898/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8899/sparql Summaries-------------------------------SWDF
 [] a ds:Service ;
-     ds:url   <http://143.233.226.25:8898/sparql> ;
+     ds:url   <http://143.233.226.25:8899/sparql> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
@@ -9141,7 +9141,7 @@
            ds:objAuthority <http://sdow2008.semanticweb.org> ; 
          ] ;
              .
-#---------------------http://10.0.100.57:8889/sparql Summaries-------------------------------
+#---------------------http://10.0.100.57:8889/sparql Summaries-------------------------------LTCGA-A
 [] a ds:Service ;
      ds:url   <http://10.0.100.57:8889/sparql> ;
      ds:capability
@@ -11079,7 +11079,7 @@
            ds:sbjAuthority <http://tcga.deri.ie> ; 
          ] ;
              .
-#---------------------http://10.0.100.57:8888/sparql Summaries-------------------------------
+#---------------------http://10.0.100.57:8888/sparql Summaries-------------------------------LTCGA-E
 [] a ds:Service ;
      ds:url   <http://10.0.100.57:8888/sparql> ;
      ds:capability
@@ -11121,7 +11121,7 @@
            ds:sbjAuthority <http://tcga.deri.ie> ; 
          ] ;
              .
-#---------------------http://10.0.100.57:8887/sparql Summaries-------------------------------
+#---------------------http://10.0.100.57:8887/sparql Summaries-------------------------------LTCGA-M
 [] a ds:Service ;
      ds:url   <http://10.0.100.57:8887/sparql> ;
      ds:capability
@@ -11158,7 +11158,7 @@
            ds:objAuthority <http://tcga.deri.ie> ; 
          ] ;
              .
-#---------------------http://10.0.100.57:8899/sparql Summaries-------------------------------
+#---------------------http://10.0.100.57:8899/sparql Summaries-------------------------------Affymetrix
 [] a ds:Service ;
      ds:url   <http://10.0.100.57:8899/sparql> ;
      ds:capability

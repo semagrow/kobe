@@ -1,0 +1,21 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://DBpedia> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10000/sparql";
+fluid:localRepoLoc "data/repositories/native-storage.dbpedia351".
+
+<http://NYtimes> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10001/sparql";
+fluid:localRepoLoc "data/repositories/native-storage.nytimes" .
+
+<http://LinkedMDB> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10002/sparql";
+fluid:localRepoLoc "data/repositories/native-storage.linkedmdb" .
+
+<http://Jamendo> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10003/sparql";
+fluid:localRepoLoc "data/repositories/native-storage.jamendo" .
+
+<http://Geonames> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://localhost:10004/sparql";
+fluid:localRepoLoc "data/repositories/native-storage.geonames" .

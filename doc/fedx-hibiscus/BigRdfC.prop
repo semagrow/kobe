@@ -1,0 +1,25 @@
+dataConfig = doc/fedx-hibiscus/BigRdfC.ttl
+
+querySet = bigrdfdataC
+
+evalRuns = 3
+
+timeout = 1200000
+
+#breakAfterQuery = 10000
+
+fill = false
+
+#envConfig = doc/fedx/env.prop
+
+evaluationClass = org.semanticweb.fbench.evaluation.FedXHibiscusSparqlEvaluation
+
+reportStream = org.semanticweb.fbench.report.CsvReportStream2
+
+sparqlRequestReport = true
+
+#fedxConfig = suites/fedx/fedxConfig.prop
+
+hibiscusMode = ASK_dominant
+summariesFile = doc/fedx-hibiscus/summaries/BigRDFBench.n3
+commonPredThreshold = 1

@@ -1,0 +1,13 @@
+<project default="compile">
+  <path id="class.path">
+    <pathelement path="bin/" />
+    <fileset dir="lib">
+      <include name="**/*.jar" />
+    </fileset>
+  </path>
+  <target name="compile">
+    <mkdir dir="mybin" />
+    <echo>${toString:class.path}</echo>
+    <javac srcdir="fedx-bridge" destdir="mybin" classpathref="class.path" />
+  </target>
+</project>

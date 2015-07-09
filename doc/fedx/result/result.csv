@@ -1,8 +1,2 @@
-Query;run1;run2;avg;numResults;minRes;maxRes;
-lifescience-domain_1;107;32;70;1159;1159;1159;
-lifescience-domain_2;51;33;43;333;333;333;
-lifescience-domain_3;3871;3854;3863;9054;9054;9054;
-lifescience-domain_4;39;36;38;3;3;3;
-lifescience-domain_5;2266;2320;2294;393;393;393;
-lifescience-domain_6;95522;96469;95996;12;12;12;
-lifescience-domain_7;1691;1676;1684;144;144;144;
+Query;run1;run2;run3;avg;numResults;minRes;maxRes;
+bigrdfdataC_1;3091;1019;963;1692;102;102;102;
