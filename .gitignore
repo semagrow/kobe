@@ -1,2 +1,6 @@
 logs/
+.svn
+.classpath
+.project
+.settings
 
