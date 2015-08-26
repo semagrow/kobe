@@ -22,7 +22,6 @@
          semagrow:executorBatchSize "8" ;
          semagrow:sourceSelector "aksw:hibiscus" ;
          hibiscus:hibiscusMode "ASK_dominant" ;
-         hibiscus:summariesFile "suites/semagrow-hibiscus/crossDomain/summaries/crossDomain.n3";
 	 hibiscus:commonPredThreshold "1" ;
       ]
    ] .

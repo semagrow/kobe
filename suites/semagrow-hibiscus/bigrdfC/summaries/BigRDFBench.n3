@@ -1,5 +1,5 @@
 @prefix ds:<http://aksw.org/fedsum/>.
-#---------------------http://localhost:8890/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8890/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8890/sparql> ;
      ds:capability
@@ -159,7 +159,7 @@
            ds:objAuthority <http://bio2rdf.org> ; 
          ] ;
              .
-#---------------------http://localhost:8891/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8891/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8891/sparql> ;
      ds:capability
@@ -6033,7 +6033,7 @@
            ds:sbjAuthority <http://dbpedia.org> ; 
          ] ;
              .
-#---------------------http://localhost:8892/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8892/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8892/sparql> ;
      ds:capability
@@ -6666,7 +6666,7 @@
            ds:sbjAuthority <http://www4.wiwiss.fu-berlin.de> ; 
          ] ;
              .
-#---------------------http://localhost:8893/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8893/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8893/sparql> ;
      ds:capability
@@ -6785,7 +6785,7 @@
          [
            ds:predicate  <http://www.geonames.org/ontology#wikipediaArticle> ;
            ds:sbjAuthority <http://sws.geonames.org> ; 
-           ds:objAuthority <http://en.wikipedia.org>, <http://sv.wikipedia.org>, <http://als.wikipedia.org>, <http://an.wikipedia.org>, <http://ar.wikipedia.org>, <http://bar.wikipedia.org>, <http://bg.wikipedia.org>, <http://br.wikipedia.org>, <http://bs.wikipedia.org>, <http://ca.wikipedia.org>, <http://cs.wikipedia.org>, <http://da.wikipedia.org>, <http://de.wikipedia.org>, <http://el.wikipedia.org>, <http://eo.wikipedia.org>, <http://es.wikipedia.org>, <http://et.wikipedia.org>, <http://fa.wikipedia.org>, <http://fi.wikipedia.org>, <http://fr.wikipedia.org>, <http://fur.wikipedia.org>, <http://gl.wikipedia.org>, <http://he.wikipedia.org>, <http://hr.wikipedia.org>, <http://hu.wikipedia.org>, <http://id.wikipedia.org>, <http://is.wikipedia.org>, <http://it.wikipedia.org>, <http://ja.wikipedia.org>, <http://ka.wikipedia.org>, <http://kw.wikipedia.org>, <http://la.wikipedia.org>, <http://lb.wikipedia.org>, <http://li.wikipedia.org>, <http://lt.wikipedia.org>, <http://lv.wikipedia.org>, <http://mt.wikipedia.org>, <http://nl.wikipedia.org>, <http://nn.wikipedia.org>, <http://no.wikipedia.org>, <http://oc.wikipedia.org>, <http://pl.wikipedia.org>, <http://pt.wikipedia.org>, <http://ro.wikipedia.org>, <http://ru.wikipedia.org>, <http://sh.wikipedia.org>, <http://sk.wikipedia.org>, <http://sl.wikipedia.org>, <http://sq.wikipedia.org>, <http://sr.wikipedia.org>, <http://tg.wikipedia.org>, <http://tr.wikipedia.org>, <http://uk.wikipedia.org>, <http://vec.wikipedia.org>, <http://vi.wikipedia.org>, <http://vo.wikipedia.org>, <http://zh.wikipedia.org>, <http://af.wikipedia.org>, <http://am.wikipedia.org>, <http://be.wikipedia.org>, <http://bn.wikipedia.org>, <http://cv.wikipedia.org>, <http://cy.wikipedia.org>, <http://eu.wikipedia.org>, <http://frp.wikipedia.org>, <http://ga.wikipedia.org>, <http://gd.wikipedia.org>, <http://hi.wikipedia.org>, <http://ht.wikipedia.org>, <http://hy.wikipedia.org>, <http://io.wikipedia.org>, <http://ko.wikipedia.org>, <http://ku.wikipedia.org>, <http://lij.wikipedia.org>, <http://mr.wikipedia.org>, <http://ms.wikipedia.org>, <http://pam.wikipedia.org>, <http://scn.wikipedia.org>, <http://sco.wikipedia.org>, <http://sw.wikipedia.org>, <http://ta.wikipedia.org>, <http://tet.wikipedia.org>, <http://th.wikipedia.org>, <http://ug.wikipedia.org>, <http://yi.wikipedia.org>, <http://wuu.wikipedia.org>, <http://pih.wikipedia.org>, <http://ty.wikipedia.org>, <http://ast.wikipedia.org>, <http://ceb.wikipedia.org>, <http://nds.wikipedia.org>, <http://wa.wikipedia.org>, <http://ksh.wikipedia.org>, <http://nap.wikipedia.org>, <http://vls.wikipedia.org>, <http://nov.wikipedia.org>, <http://pms.wikipedia.org>, <http://ang.wikipedia.org>, <http://arc.wikipedia.org>, <http://az.wikipedia.org>, <http://bpy.wikipedia.org>, <http://ce.wikipedia.org>, <http://crh.wikipedia.org>, <http://diq.wikipedia.org>, <http://dsb.wikipedia.org>, <http://dv.wikipedia.org>, <http://dz.wikipedia.org>, <http://fo.wikipedia.org>, <http://fy.wikipedia.org>, <http://gv.wikipedia.org>, <http://hsb.wikipedia.org>, <http://ia.wikipedia.org>, <http://ie.wikipedia.org>, <http://ilo.wikipedia.org>, <http://jv.wikipedia.org>, <http://kk.wikipedia.org>, <http://kn.wikipedia.org>, <http://ln.wikipedia.org>, <http://mk.wikipedia.org>, <http://ml.wikipedia.org>, <http://mn.wikipedia.org>, <http://na.wikipedia.org>, <http://nah.wikipedia.org>, <http://ne.wikipedia.org>, <http://os.wikipedia.org>, <http://ps.wikipedia.org>, <http://qu.wikipedia.org>, <http://sa.wikipedia.org>, <http://se.wikipedia.org>, <http://te.wikipedia.org>, <http://tk.wikipedia.org>, <http://tl.wikipedia.org>, <http://tpi.wikipedia.org>, <http://udm.wikipedia.org>, <http://ur.wikipedia.org>, <http://uz.wikipedia.org>, <http://war.wikipedia.org>, <http://wo.wikipedia.org>, <http://yo.wikipedia.org>, <http://bo.wikipedia.org>, <http://csb.wikipedia.org>, <http://co.wikipedia.org>, <http://gn.wikipedia.org>, <http://ky.wikipedia.org>, <http://rmy.wikipedia.org>, <http://cu.wikipedia.org>, <http://hak.wikipedia.org>, <http://nrm.wikipedia.org>, <http://ks.wikipedia.org>, <http://cr.wikipedia.org>, <http://pdc.wikipedia.org>, <http://my.wikipedia.org>, <http://bcl.wikipedia.org>, <http://jbo.wikipedia.org>, <http://sc.wikipedia.org>, <http://tt.wikipedia.org>, <http://xal.wikipedia.org>, <http://new.wikipedia.org>, <http://gu.wikipedia.org>, <http://su.wikipedia.org>, <http://chr.wikipedia.org>, <http://kg.wikipedia.org>, <http://ts.wikipedia.org>, <http://sm.wikipedia.org>, <http://cdo.wikipedia.org>, <http://pa.wikipedia.org>, <http://kv.wikipedia.org>, <http://or.wikipedia.org>, <http://so.wikipedia.org>, <http://za.wikipedia.org>, <http://rm.wikipedia.org>, <http://lmo.wikipedia.org>, <http://aa.wikipedia.org>, <http://bh.wikipedia.org>, <http://bug.wikipedia.org>, <http://ki.wikipedia.org>, <http://sn.wikipedia.org>, <http://tum.wikipedia.org>, <http://tw.wikipedia.org>, <http://km.wikipedia.org>, <http://pag.wikipedia.org>, <http://av.wikipedia.org>, <http://lad.wikipedia.org>, <http://mg.wikipedia.org>, <http://haw.wikipedia.org>, <http://pap.wikipedia.org>, <http://ay.wikipedia.org>, <http://ba.wikipedia.org>, <http://ig.wikipedia.org>, <http://mi.wikipedia.org>, <http://om.wikipedia.org>, <http://rw.wikipedia.org>, <http://zu.wikipedia.org>, <http://pi.wikipedia.org>, <http://bm.wikipedia.org>, <http://ee.wikipedia.org>, <http://rn.wikipedia.org>, <http://ab.wikipedia.org>, <http://kl.wikipedia.org>, <http://to.wikipedia.org>, <http://tn.wikipedia.org>, <http://ve.wikipedia.org>, <http://sg.wikipedia.org>, <http://ff.wikipedia.org>, <http://bi.wikipedia.org>, <http://lg.wikipedia.org>, <http://mzn.wikipedia.org>, <http://si.wikipedia.org>, <http://ss.wikipedia.org>, <http://st.wikipedia.org>, <http://xh.wikipedia.org>, <http://ti.wikipedia.org>, <http://chy.wikipedia.org>, <http://fj.wikipedia.org>, <http://hz.wikipedia.org>, <http://nv.wikipedia.org>, <http://sp.wikipedia.org>, <http://as.wikipedia.org>, <http://mo.wikipedia.org>, <http://glk.wikipedia.org>, <http://wb.wikipedia.org>, <http://eml.wikipedia.org>, <http://kab.wikipedia.org>, <http://sd.wikipedia.org>, <http://zea.wikipedia.org>, <http://lo.wikipedia.org>, <http://krj.wikipedia.org>, <http://stq.wikipedia.org>, <http://nan.wikipedia.org>, <http://nb.wikipedia.org>, <http://iu.wikipedia.org>, <http://dk.wikipedia.org>, <http://n2.wikipedia.org>, <http://cz.wikipedia.org>, <http://ua.wikipedia.org>, <http://ch.wikipedia.org>, <http://ng.wikipedia.org>, <http://ik.wikipedia.org>, <http://em.wikipedia.org>, <http://ge.wikipedia.org>, <http://óó.wikipedia.org>, <http://ci.wikipedia.org>, <http://bxr.wikipedia.org>, <http://lbe.wikipedia.org>, <http://mh.wikipedia.org>, <http://ha.wikipedia.org>, <http://biz.wikipedia.org>, <http://ak.wikipedia.org>, <http://ny.wikipedia.org>, <http://ftp.wikipedia.org>, <http://ii.wikipedia.org>, <http://23.wikipedia.org>, <http://w.wikipedia.org>, <http://16.wikipedia.org>, <http://91.wikipedia.org> ; 
+           ds:objAuthority <http://en.wikipedia.org>, <http://sv.wikipedia.org>, <http://als.wikipedia.org>, <http://an.wikipedia.org>, <http://ar.wikipedia.org>, <http://bar.wikipedia.org>, <http://bg.wikipedia.org>, <http://br.wikipedia.org>, <http://bs.wikipedia.org>, <http://ca.wikipedia.org>, <http://cs.wikipedia.org>, <http://da.wikipedia.org>, <http://de.wikipedia.org>, <http://el.wikipedia.org>, <http://eo.wikipedia.org>, <http://es.wikipedia.org>, <http://et.wikipedia.org>, <http://fa.wikipedia.org>, <http://fi.wikipedia.org>, <http://fr.wikipedia.org>, <http://fur.wikipedia.org>, <http://gl.wikipedia.org>, <http://he.wikipedia.org>, <http://hr.wikipedia.org>, <http://hu.wikipedia.org>, <http://id.wikipedia.org>, <http://is.wikipedia.org>, <http://it.wikipedia.org>, <http://ja.wikipedia.org>, <http://ka.wikipedia.org>, <http://kw.wikipedia.org>, <http://la.wikipedia.org>, <http://lb.wikipedia.org>, <http://li.wikipedia.org>, <http://lt.wikipedia.org>, <http://lv.wikipedia.org>, <http://mt.wikipedia.org>, <http://nl.wikipedia.org>, <http://nn.wikipedia.org>, <http://no.wikipedia.org>, <http://oc.wikipedia.org>, <http://pl.wikipedia.org>, <http://pt.wikipedia.org>, <http://ro.wikipedia.org>, <http://ru.wikipedia.org>, <http://sh.wikipedia.org>, <http://sk.wikipedia.org>, <http://sl.wikipedia.org>, <http://sq.wikipedia.org>, <http://sr.wikipedia.org>, <http://tg.wikipedia.org>, <http://tr.wikipedia.org>, <http://uk.wikipedia.org>, <http://vec.wikipedia.org>, <http://vi.wikipedia.org>, <http://vo.wikipedia.org>, <http://zh.wikipedia.org>, <http://af.wikipedia.org>, <http://am.wikipedia.org>, <http://be.wikipedia.org>, <http://bn.wikipedia.org>, <http://cv.wikipedia.org>, <http://cy.wikipedia.org>, <http://eu.wikipedia.org>, <http://frp.wikipedia.org>, <http://ga.wikipedia.org>, <http://gd.wikipedia.org>, <http://hi.wikipedia.org>, <http://ht.wikipedia.org>, <http://hy.wikipedia.org>, <http://io.wikipedia.org>, <http://ko.wikipedia.org>, <http://ku.wikipedia.org>, <http://lij.wikipedia.org>, <http://mr.wikipedia.org>, <http://ms.wikipedia.org>, <http://pam.wikipedia.org>, <http://scn.wikipedia.org>, <http://sco.wikipedia.org>, <http://sw.wikipedia.org>, <http://ta.wikipedia.org>, <http://tet.wikipedia.org>, <http://th.wikipedia.org>, <http://ug.wikipedia.org>, <http://yi.wikipedia.org>, <http://wuu.wikipedia.org>, <http://pih.wikipedia.org>, <http://ty.wikipedia.org>, <http://ast.wikipedia.org>, <http://ceb.wikipedia.org>, <http://nds.wikipedia.org>, <http://wa.wikipedia.org>, <http://ksh.wikipedia.org>, <http://nap.wikipedia.org>, <http://vls.wikipedia.org>, <http://nov.wikipedia.org>, <http://pms.wikipedia.org>, <http://ang.wikipedia.org>, <http://arc.wikipedia.org>, <http://az.wikipedia.org>, <http://bpy.wikipedia.org>, <http://ce.wikipedia.org>, <http://crh.wikipedia.org>, <http://diq.wikipedia.org>, <http://dsb.wikipedia.org>, <http://dv.wikipedia.org>, <http://dz.wikipedia.org>, <http://fo.wikipedia.org>, <http://fy.wikipedia.org>, <http://gv.wikipedia.org>, <http://hsb.wikipedia.org>, <http://ia.wikipedia.org>, <http://ie.wikipedia.org>, <http://ilo.wikipedia.org>, <http://jv.wikipedia.org>, <http://kk.wikipedia.org>, <http://kn.wikipedia.org>, <http://ln.wikipedia.org>, <http://mk.wikipedia.org>, <http://ml.wikipedia.org>, <http://mn.wikipedia.org>, <http://na.wikipedia.org>, <http://nah.wikipedia.org>, <http://ne.wikipedia.org>, <http://os.wikipedia.org>, <http://ps.wikipedia.org>, <http://qu.wikipedia.org>, <http://sa.wikipedia.org>, <http://se.wikipedia.org>, <http://te.wikipedia.org>, <http://tk.wikipedia.org>, <http://tl.wikipedia.org>, <http://tpi.wikipedia.org>, <http://udm.wikipedia.org>, <http://ur.wikipedia.org>, <http://uz.wikipedia.org>, <http://war.wikipedia.org>, <http://wo.wikipedia.org>, <http://yo.wikipedia.org>, <http://bo.wikipedia.org>, <http://csb.wikipedia.org>, <http://co.wikipedia.org>, <http://gn.wikipedia.org>, <http://ky.wikipedia.org>, <http://rmy.wikipedia.org>, <http://cu.wikipedia.org>, <http://hak.wikipedia.org>, <http://nrm.wikipedia.org>, <http://ks.wikipedia.org>, <http://cr.wikipedia.org>, <http://pdc.wikipedia.org>, <http://my.wikipedia.org>, <http://bcl.wikipedia.org>, <http://jbo.wikipedia.org>, <http://sc.wikipedia.org>, <http://tt.wikipedia.org>, <http://xal.wikipedia.org>, <http://new.wikipedia.org>, <http://gu.wikipedia.org>, <http://su.wikipedia.org>, <http://chr.wikipedia.org>, <http://kg.wikipedia.org>, <http://ts.wikipedia.org>, <http://sm.wikipedia.org>, <http://cdo.wikipedia.org>, <http://pa.wikipedia.org>, <http://kv.wikipedia.org>, <http://or.wikipedia.org>, <http://so.wikipedia.org>, <http://za.wikipedia.org>, <http://rm.wikipedia.org>, <http://lmo.wikipedia.org>, <http://aa.wikipedia.org>, <http://bh.wikipedia.org>, <http://bug.wikipedia.org>, <http://ki.wikipedia.org>, <http://sn.wikipedia.org>, <http://tum.wikipedia.org>, <http://tw.wikipedia.org>, <http://km.wikipedia.org>, <http://pag.wikipedia.org>, <http://av.wikipedia.org>, <http://lad.wikipedia.org>, <http://mg.wikipedia.org>, <http://haw.wikipedia.org>, <http://pap.wikipedia.org>, <http://ay.wikipedia.org>, <http://ba.wikipedia.org>, <http://ig.wikipedia.org>, <http://mi.wikipedia.org>, <http://om.wikipedia.org>, <http://rw.wikipedia.org>, <http://zu.wikipedia.org>, <http://pi.wikipedia.org>, <http://bm.wikipedia.org>, <http://ee.wikipedia.org>, <http://rn.wikipedia.org>, <http://ab.wikipedia.org>, <http://kl.wikipedia.org>, <http://to.wikipedia.org>, <http://tn.wikipedia.org>, <http://ve.wikipedia.org>, <http://sg.wikipedia.org>, <http://ff.wikipedia.org>, <http://bi.wikipedia.org>, <http://lg.wikipedia.org>, <http://mzn.wikipedia.org>, <http://si.wikipedia.org>, <http://ss.wikipedia.org>, <http://st.wikipedia.org>, <http://xh.wikipedia.org>, <http://ti.wikipedia.org>, <http://chy.wikipedia.org>, <http://fj.wikipedia.org>, <http://hz.wikipedia.org>, <http://nv.wikipedia.org>, <http://sp.wikipedia.org>, <http://as.wikipedia.org>, <http://mo.wikipedia.org>, <http://glk.wikipedia.org>, <http://wb.wikipedia.org>, <http://eml.wikipedia.org>, <http://kab.wikipedia.org>, <http://sd.wikipedia.org>, <http://zea.wikipedia.org>, <http://lo.wikipedia.org>, <http://krj.wikipedia.org>, <http://stq.wikipedia.org>, <http://nan.wikipedia.org>, <http://nb.wikipedia.org>, <http://iu.wikipedia.org>, <http://dk.wikipedia.org>, <http://n2.wikipedia.org>, <http://cz.wikipedia.org>, <http://ua.wikipedia.org>, <http://ch.wikipedia.org>, <http://ng.wikipedia.org>, <http://ik.wikipedia.org>, <http://em.wikipedia.org>, <http://ge.wikipedia.org>, <http://ó³®·ikipedia.org>, <http://ci.wikipedia.org>, <http://bxr.wikipedia.org>, <http://lbe.wikipedia.org>, <http://mh.wikipedia.org>, <http://ha.wikipedia.org>, <http://biz.wikipedia.org>, <http://ak.wikipedia.org>, <http://ny.wikipedia.org>, <http://ftp.wikipedia.org>, <http://ii.wikipedia.org>, <http://23.wikipedia.org>, <http://w.wikipedia.org>, <http://16.wikipedia.org>, <http://91.wikipedia.org> ; 
          ] ;
      ds:capability
          [
@@ -6816,7 +6816,7 @@
            ds:objAuthority <http://sws.geonames.org> ; 
          ] ;
              .
-#---------------------http://localhost:8894/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8894/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8894/sparql> ;
      ds:capability
@@ -6967,7 +6967,7 @@
            ds:sbjAuthority <http://www.jamendo.com> ; 
          ] ;
              .
-#---------------------http://localhost:8895/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8895/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8895/sparql> ;
      ds:capability
@@ -7086,7 +7086,7 @@
            ds:objAuthority <http://bio2rdf.org> ; 
          ] ;
              .
-#---------------------http://localhost:8896/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8896/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8896/sparql> ;
      ds:capability
@@ -8270,7 +8270,7 @@
            ds:sbjAuthority <http://data.linkedmdb.org> ; 
          ] ;
              .
-#---------------------http://localhost:8897/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8897/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8897/sparql> ;
      ds:capability
@@ -8471,7 +8471,7 @@
            ds:sbjAuthority <http://data.nytimes.com> ; 
          ] ;
              .
-#---------------------http://localhost:8899/sparql Summaries-------------------------------
+#---------------------http://143.233.226.25:8898/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://143.233.226.25:8899/sparql> ;
      ds:capability
@@ -9141,7 +9141,7 @@
            ds:objAuthority <http://sdow2008.semanticweb.org> ; 
          ] ;
              .
-#---------------------http://10.0.4.105:8889/sparql Summaries-------------------------------
+#---------------------http://10.0.100.57:8889/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://10.0.100.57:8889/sparql> ;
      ds:capability
@@ -11079,7 +11079,7 @@
            ds:sbjAuthority <http://tcga.deri.ie> ; 
          ] ;
              .
-#---------------------http://10.0.4.105:8888/sparql Summaries-------------------------------
+#---------------------http://10.0.100.57:8888/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://10.0.100.57:8888/sparql> ;
      ds:capability
@@ -11121,7 +11121,7 @@
            ds:sbjAuthority <http://tcga.deri.ie> ; 
          ] ;
              .
-#---------------------http://10.0.4.105:8887/sparql Summaries-------------------------------
+#---------------------http://10.0.100.57:8887/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://10.0.100.57:8887/sparql> ;
      ds:capability
@@ -11158,7 +11158,7 @@
            ds:objAuthority <http://tcga.deri.ie> ; 
          ] ;
              .
-#---------------------http://localhost:8899/sparql Summaries-------------------------------
+#---------------------http://10.0.100.57:8899/sparql Summaries-------------------------------
 [] a ds:Service ;
      ds:url   <http://10.0.100.57:8899/sparql> ;
      ds:capability

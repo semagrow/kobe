@@ -1,10 +1,2 @@
-Query;run1;run2;run3;avg;numResults;minRes;maxRes;
-bigrdfdataC_1;34234;33646;33510;33797;0;0;0;
-bigrdfdataC_2;-2;-2;-2;-1;-1;-1;-1;
-bigrdfdataC_3;39602;37548;35491;37548;8;8;9;
-bigrdfdataC_4;56252;34410;21994;37553;50;50;50;
-bigrdfdataC_5;-2;-2;-2;-1;-1;-1;-1;
-bigrdfdataC_6;18110;11258;11451;13607;0;0;0;
-bigrdfdataC_7;509;142;154;269;111;110;112;
-bigrdfdataC_8;16767;13388;12039;14065;2960;2960;2960;
-bigrdfdataC_9;19531;8614;7342;11830;100;100;100;
+Query;run1;run2;run3;run4;run5;avg;numResults;minRes;maxRes;
+bigrdfdataC_1;94193;59530;51935;48799;41047;59101;500;500;500;
