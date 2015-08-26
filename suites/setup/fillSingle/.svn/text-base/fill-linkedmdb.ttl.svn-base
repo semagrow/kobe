@@ -1,6 +1,0 @@
-@prefix fluid: <http://fluidops.org/config#>.
-
-<http://LinkedMDB> fluid:store "Native";
-fluid:RepositoryLocation "data\\repositories\\native-storage.linkedmdb";
-fluid:rdfFile "data\\rdf\\linkedmdb\\linkedmdb-latest-dump.nt";
-fluid:context <http://LinkedMDB.org>.

@@ -1,80 +1,0 @@
-10
-
-dir
-144
-http://fbench.googlecode.com/svn/trunk/EvalBenchmark/doc/demos-owlim
-http://fbench.googlecode.com/svn
-
-
-
-2010-10-15T21:54:07.811346Z
-16
-aschwarte10@googlemail.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-448d59bb-d1c0-2985-a03c-9d90f50fb865
-
-README.txt
-file
-
-
-
-
-2014-10-30T14:42:28.274296Z
-1ef872b6d03a7ef7456c810a756a65cd
-2010-10-15T21:54:07.811346Z
-16
-aschwarte10@googlemail.com
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-307
-
-FederatedOwlimNytimesDbpedia
-dir
-
-FillOwlimSingleNytimesDbpedia
-dir
-
-QueryOwlimNytimes
-dir
-
-QueryOwlimDbpedia
-dir
-
-FillOwlimDbpedia
-dir
-
-FillOwlimNytimes
-dir
-

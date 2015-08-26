@@ -1,6 +1,0 @@
-dataConfig = suites\\setup\\fillSingle\\fill-drugbank.ttl
-
-envConfig = suites\\setup\\env.prop
-
-fill = true
-
