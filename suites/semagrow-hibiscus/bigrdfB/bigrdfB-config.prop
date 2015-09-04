@@ -4,9 +4,9 @@ dataConfig = suites/semagrow-hibiscus/bigrdfB/bigrdfB.ttl
 
 querySet = bigrdfdataB
 
-evalRuns = 3
+evalRuns = 1
 
-timeout = 600000
+timeout = 1200000
 
 fill = false
 
