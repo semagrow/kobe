@@ -1,6 +1,6 @@
 description = SemaGrow - Life Science Queries
 
-dataConfig = suites/semagrow-reactive/biglifeScience/lifeScience.ttl
+dataConfig = suites/semagrow-reactive/lifeScience/lifeScience.ttl
 
 querySet = LIFESCIENCEDOMAIN
 
@@ -8,6 +8,7 @@ evalRuns = 6
 
 #timeout = 1000000
 timeout = 1000000000000
+#breakAfterQuery = 10000
 
 fill = false
 
