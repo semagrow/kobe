@@ -10,6 +10,7 @@
 @prefix sail: <http://www.openrdf.org/config/sail#>.
 @prefix semagrow: <http://schema.semagrow.eu/>.
 @prefix hibiscus: <http://schema.hibiscus.aksw.org/>.
+@prefix quetsal: <http://quetsal.aksw.org/>.
 
 [] a rep:Repository ;
    rep:repositoryTitle "SemaGrow Repository" ;
@@ -17,13 +18,17 @@
    rep:repositoryImpl [
       rep:repositoryType "semagrow:SemagrowRepository" ;
       sr:sailImpl [
-         sail:sailType "semagrow:SemagrowSail" ;
-         semagrow:metadataInit "suites/semagrow-hibiscus/bigrdfB/bigrdfB.void.n3" ;
-	 semagrow:executorBatchSize "8" ;
-	 semagrow:sourceSelector "aksw:hibiscus" ;
-         hibiscus:hibiscusMode "ASK_dominant" ;
-#        hibiscus:summariesFile "suites/semagrow-hibiscus/bigrdfB/summaries/BigRDFBench.n3";
-	 hibiscus:commonPredThreshold "1" 
+        sail:sailType "semagrow:SemagrowSail" ;
+        semagrow:metadataInit "suites/semagrow-hibiscus/bigrdfB/bigrdfB.void.n3" ;
+	semagrow:executorBatchSize "8" ;
+	semagrow:sourceSelector "aksw:hibiscus" ;
+	quetsal:hibiscusMode "Index_dominant" ;
+        quetsal:summariesFile "suites/semagrow-hibiscus/bigrdfB/summaries/BigRDFBench.n3";
+	quetsal:commonPredThreshold "1" ;
+	#semagrow:queryTransformDB "jdbc:postgresql://localhost:5432/alignmentDB"  ;
+        #semagrow:queryTransformUser "postgres" ;
+        #semagrow:queryTransformPass "postgres"
+
       ]
    ] .
 
