@@ -64,7 +64,7 @@ public class SesameSparqlEvaluationReactive extends SesameEvaluationReactive {
 			sparqlReport = new SparqlQueryRequestReport();
 			//sparqlReport.init(repoInformation);
 		}
-		reinitializeSystem();
+		//reinitializeSystem();
 	}
 
 	@Override

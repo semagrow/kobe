@@ -7,6 +7,11 @@ import org.semanticweb.fbench.query.QueryManager;
 import org.semanticweb.fbench.report.EarlyResultsMonitor;
 import org.semanticweb.fbench.report.ReportStream;
 
+import org.openrdf.query.resultio.BooleanQueryResultParserRegistry;
+import org.openrdf.query.resultio.TupleQueryResultFormat;
+import org.openrdf.query.resultio.BooleanQueryResultFormat;
+import org.openrdf.query.resultio.TupleQueryResultParserRegistry;
+
 
 
 /**
@@ -26,7 +31,16 @@ public abstract class Evaluation {
 	protected EarlyResultsMonitor earlyResults;
 	
 	public Evaluation() {
-		
+		TupleQueryResultParserRegistry registry = TupleQueryResultParserRegistry.getInstance();
+
+		registry.remove(registry.get(TupleQueryResultFormat.CSV));
+		registry.remove(registry.get(TupleQueryResultFormat.TSV));
+		if (registry.get(TupleQueryResultFormat.JSON) != null) {
+		    registry.remove(registry.get(TupleQueryResultFormat.JSON));
+		}
+
+		BooleanQueryResultParserRegistry booleanRegistry = BooleanQueryResultParserRegistry.getInstance();
+		booleanRegistry.remove(booleanRegistry.get(BooleanQueryResultFormat.JSON));
 	}
 	
 		
