@@ -17,4 +17,3 @@ WHERE
   ?recordNo tcga:beta_value  ?methylationCNTNAP2.
   FILTER (?position >= ?start && ?position <= ?stop && str(?chromosome) = str(?lookupChromosome) )
 }
-

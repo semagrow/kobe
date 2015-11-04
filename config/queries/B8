@@ -18,4 +18,3 @@ WHERE
   }
   FILTER (?expressionValue > 0.05)
 }
-

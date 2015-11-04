@@ -17,4 +17,3 @@ WHERE
   ?recordNo tcga:scaled_estimate ?geneExpVal
   FILTER (str(?lookupChromosome)= str(?chromosome))
 }
-

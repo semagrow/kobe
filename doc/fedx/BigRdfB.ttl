@@ -28,13 +28,16 @@ fluid:SPARQLEndpoint "http://143.233.226.25:8895/sparql" .
 fluid:SPARQLEndpoint "http://143.233.226.25:8899/sparql" .
 
 <http://LTCGA-M> fluid:store "SPARQLEndpoint";
-fluid:SPARQLEndpoint "http://10.0.100.57:8887/sparql" .
+#fluid:SPARQLEndpoint "http://10.0.100.57:8887/sparql" .
+fluid:SPARQLEndpoint "http://4store.ipb.ac.rs:8008/sparql/" .
 
 <http://LTCGA-E> fluid:store "SPARQLEndpoint";
-fluid:SPARQLEndpoint "http://10.0.100.57:8888/sparql" .
+#fluid:SPARQLEndpoint "http://10.0.100.57:8888/sparql" .
+fluid:SPARQLEndpoint "http://4store.ipb.ac.rs:8007/sparql/" .
 
 <http://LTCGA-A> fluid:store "SPARQLEndpoint";
-fluid:SPARQLEndpoint "http://10.0.100.57:8889/sparql" .
+#fluid:SPARQLEndpoint "http://10.0.100.57:8889/sparql" .
+fluid:SPARQLEndpoint "http://4store.ipb.ac.rs:8006/sparql/" .
 
 <http://Affymetrix> fluid:store "SPARQLEndpoint";
 fluid:SPARQLEndpoint "http://10.0.100.57:8899/sparql" .

@@ -15,5 +15,5 @@ sleep 10
 ./runEval.sh suites/semagrow-reactive/bigrdfB/bigrdfB-config.prop | tee run-SG-B$i.txt
 sleep 10
 
-./runEval.sh suites/semagrow-hibiscus/bigrdfB/bigrdfB-config.prop | tee run-SG-hibiscus-B$i.txt
-sleep 10
+#./runEval.sh suites/semagrow-hibiscus/bigrdfB/bigrdfB-config.prop | tee run-SG-hibiscus-B$i.txt
+#sleep 10

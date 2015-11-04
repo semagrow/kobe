@@ -9143,7 +9143,7 @@
              .
 #---------------------http://10.0.100.57:8889/sparql Summaries-------------------------------LTCGA-A
 [] a ds:Service ;
-     ds:url   <http://10.0.100.57:8889/sparql> ;
+     ds:url   <http://4store.ipb.ac.rs:8006/sparql/> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
@@ -11081,7 +11081,7 @@
              .
 #---------------------http://10.0.100.57:8888/sparql Summaries-------------------------------LTCGA-E
 [] a ds:Service ;
-     ds:url   <http://10.0.100.57:8888/sparql> ;
+     ds:url   <http://4store.ipb.ac.rs:8007/sparql/> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
@@ -11123,7 +11123,7 @@
              .
 #---------------------http://10.0.100.57:8887/sparql Summaries-------------------------------LTCGA-M
 [] a ds:Service ;
-     ds:url   <http://10.0.100.57:8887/sparql> ;
+     ds:url   <http://4store.ipb.ac.rs:8008/sparql/> ;
      ds:capability
          [
            ds:predicate  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;

@@ -2,7 +2,7 @@ dataConfig = doc/fedx/BigRdfB.ttl
 
 querySet = bigrdfdataB
 
-evalRuns = 5
+evalRuns = 1
 
 timeout = 6000000
 

@@ -13,4 +13,3 @@ WHERE
   FILTER(?age <= 51)
 }
 ORDER BY (?patient)
-

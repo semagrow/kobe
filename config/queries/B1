@@ -14,4 +14,3 @@ WHERE
     ?geneResults tcga:scaled_estimate ?expValue.
   }
 }
-

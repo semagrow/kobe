@@ -19,11 +19,11 @@
       rep:repositoryType "semagrow:SemagrowRepository" ;
       sr:sailImpl [
         sail:sailType "semagrow:SemagrowSail" ;
-        semagrow:metadataInit "suites/semagrow-hibiscus/bigrdfB/bigrdfB.void.n3" ;
+        semagrow:metadataInit "/home/antonis/workspace/semagrow-fedbench/suites/semagrow-hibiscus/bigrdfB/bigrdfB.void.n3" ;
 	semagrow:executorBatchSize "8" ;
 	semagrow:sourceSelector "aksw:hibiscus" ;
 	quetsal:hibiscusMode "Index_dominant" ;
-        quetsal:summariesFile "suites/semagrow-hibiscus/bigrdfB/summaries/BigRDFBench.n3";
+        quetsal:summariesFile "/home/antonis/workspace/semagrow-fedbench/suites/semagrow-hibiscus/bigrdfB/summaries/BigRDFBench.n3";
 	quetsal:commonPredThreshold "1" ;
 	#semagrow:queryTransformDB "jdbc:postgresql://localhost:5432/alignmentDB"  ;
         #semagrow:queryTransformUser "postgres" ;
@@ -31,4 +31,3 @@
 
       ]
    ] .
-
