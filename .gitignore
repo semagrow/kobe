@@ -3,4 +3,7 @@ logs/
 .classpath
 .project
 .settings
+.idea/
+EvalBenchmark.iml
+cache.db
 

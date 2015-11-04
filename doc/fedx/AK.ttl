@@ -1,0 +1,21 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://IFPRI> 
+   fluid:store "SPARQLEndpoint";
+   fluid:SPARQLEndpoint "http://data.ifpri.org/sparql" .
+
+<http://AGRISdates> 
+   fluid:store "SPARQLEndpoint";
+   fluid:SPARQLEndpoint "http://143.233.226.43:2222/agris_dates/sparql" .
+
+<http://AGROVOC> 
+   fluid:store "SPARQLEndpoint";
+   fluid:SPARQLEndpoint "http://202.45.139.84:10035/catalogs/fao/repositories/agrovoc" .
+
+<http://NaturalEurope> 
+   fluid:store "SPARQLEndpoint";
+   fluid:SPARQLEndpoint "http://other.collections.natural-europe.eu:8890/sparql" .
+
+<http://AGRIS> 
+   fluid:store "SPARQLEndpoint";
+   fluid:SPARQLEndpoint "http://202.45.139.84:10035/catalogs/fao/repositories/agris" .

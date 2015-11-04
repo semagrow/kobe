@@ -1,0 +1,14 @@
+description = SemaGrow - AgroKnow Queries
+
+dataConfig = suites/semagrow/ak/ak.ttl
+
+querySet = AK
+
+evalRuns = 5
+
+timeout = 520000
+
+fill = false
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluationReactive
+

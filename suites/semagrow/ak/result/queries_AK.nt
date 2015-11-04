@@ -1,0 +1,3 @@
+<http://semanticweb.org/fbench/q/AK_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticweb.org/fbench/Query> .
+<http://semanticweb.org/fbench/q/AK_1> <http://semanticweb.org/fbench/id> "AK_1" .
+<http://semanticweb.org/fbench/q/AK_1> <http://semanticweb.org/fbench/sparql> "SELECT ?s ?a\nWHERE {\n  ?s <http://www.semagrow.eu/rdf/year> ?a .\n  ?s <http://purl.org/dc/terms/type> \"Image\" .\n  FILTER (?a < \"2015\"^^<http://www.w3.org/2001/XMLSchema#integer>) .\n  FILTER (?a > \"1926\"^^<http://www.w3.org/2001/XMLSchema#integer>) .\n}\nLIMIT 10\n" .

@@ -1,0 +1,10 @@
+SELECT ?s ?a 
+WHERE {
+  ?s <http://www.semagrow.eu/rdf/year> ?a .
+  ?s <http://purl.org/dc/terms/type> "Image" .
+  FILTER (?a < "2015"^^<http://www.w3.org/2001/XMLSchema#integer>) .
+  FILTER (?a > "1926"^^<http://www.w3.org/2001/XMLSchema#integer>) .
+}
+LIMIT 10
+
+

@@ -1,0 +1,5 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://RDFFederator> fluid:store "org.semanticweb.fbench.provider.SPLENDIDProvider";
+                      fluid:rdfFile "suites/semagrow/ak/ak-repository.n3".
+
