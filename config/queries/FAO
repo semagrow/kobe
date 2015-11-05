@@ -1,0 +1,35 @@
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT distinct ?s (COUNT(?o) as ?NELEMENTS) WHERE {
+  <http://agris.fao.org/aos/records/CN2012002999> dct:subject ?o .
+  ?s dct:subject ?o .
+  ?s rdf:type <http://semagrow.eu/rdf#CrawledDocument> .
+}
+GROUP BY ?s
+ORDER BY DESC(?NELEMENTS)
+LIMIT 20
+
+
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT distinct ?s (COUNT(?o) as ?NELEMENTS) WHERE {
+  <http://agris.fao.org/aos/records/PH2011000084> dct:subject ?o .
+  ?s dct:subject ?o .
+  ?s rdf:type <http://semagrow.eu/rdf#CrawledDocument> .
+}
+GROUP BY ?s
+ORDER BY DESC(?NELEMENTS)
+LIMIT 20
+
+
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT distinct ?s (COUNT(?o) as ?NELEMENTS) WHERE {
+  <http://agris.fao.org/aos/records/CZ7500079> dct:subject ?o .
+  ?s dct:subject ?o .
+  ?s rdf:type <http://semagrow.eu/rdf#CrawledDocument> .
+}
+GROUP BY ?s
+ORDER BY DESC(?NELEMENTS)
+LIMIT 20
+

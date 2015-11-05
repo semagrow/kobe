@@ -1,0 +1,21 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://4store1> 
+   fluid:store "SPARQLEndpoint";
+   fluid:SPARQLEndpoint "http://4store.ipb.ac.rs:8001/sparql/" .
+
+<http://4store3> 
+   fluid:store "SPARQLEndpoint";
+   fluid:SPARQLEndpoint "http://4store.ipb.ac.rs:8003/sparql/" .
+   
+<http://LH90> 
+   fluid:store "SPARQLEndpoint";
+   fluid:SPARQLEndpoint "http://143.233.226.52:8890/sparql" .
+
+<http://LH91> 
+   fluid:store "SPARQLEndpoint";
+   fluid:SPARQLEndpoint "http://143.233.226.52:8891/sparql" .
+
+<http://Strabon> 
+   fluid:store "SPARQLEndpoint";
+   fluid:SPARQLEndpoint "http://143.233.226.52:8080/strabon-endpoint-3.3.2-SNAPSHOT/Query" .

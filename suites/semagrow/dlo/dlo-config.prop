@@ -1,0 +1,14 @@
+description = SemaGrow - DLO Queries
+
+dataConfig = suites/semagrow/dlo/dlo.ttl
+
+querySet = DLO
+
+evalRuns = 5
+
+timeout = 520000
+
+fill = false
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluationReactive
+

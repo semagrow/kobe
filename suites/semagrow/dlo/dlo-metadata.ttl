@@ -1,0 +1,2081 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix svd: <http://rdf.iit.demokritos.gr/2013/sevod#> .
+
+<urn:uuid:4fd438d0-fb1e-490c-9822-62baec65679c>
+        <http://purl.org/dc/terms/title>
+                "?s http://rdf.iit.demokritos.gr/2014/cfconventions#yield ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#subjectRegexPattern>
+                "http://semagrow.eu/rdf/data/epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099_yield_obs_*"^^xsd:string ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "936043"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "24105600"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://rdf.iit.demokritos.gr/2014/cfconventions#yield> ;
+        <http://rdfs.org/ns/void#triples>
+                "24105600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:33482878-ee56-4e58-856a-918371c79e89>
+        <http://purl.org/dc/terms/title>
+                "?s http://rdf.iit.demokritos.gr/2014/cfconventions#longitude ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#subjectRegexPattern>
+                "http://semagrow.eu/rdf/data/epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099_yield_obs_*"^^xsd:string ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "720"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "24105600"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://rdf.iit.demokritos.gr/2014/cfconventions#longitude> ;
+        <http://rdfs.org/ns/void#triples>
+                "24105600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:19d764d2-6d31-4abe-9aaa-ab9431638e27>
+        <http://purl.org/dc/terms/title>
+                "?s http://purl.org/dc/terms/title ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "5"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "2478"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://purl.org/dc/terms/title> ;
+        <http://rdfs.org/ns/void#triples>
+                "2478"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:1638ff36-77f9-40d6-bdef-5065c00c3d0f>
+        <http://purl.org/dc/terms/title>
+                "?s http://purl.org/linked-data/cube#structure ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "4956"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "4956"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://purl.org/linked-data/cube#structure> ;
+        <http://rdfs.org/ns/void#triples>
+                "4956"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:5e8ec40b-a294-40c4-82a6-390a71c47f46>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/data/jsonHeader ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "2478"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "2478"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/data/jsonHeader> ;
+        <http://rdfs.org/ns/void#triples>
+                "2478"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:56fadf8f-e5a4-4a4c-8846-d217fc3e2f64>
+        <http://purl.org/dc/terms/creator>
+                "dlo"^^xsd:string ;
+        <http://purl.org/dc/terms/description>
+                "tasmax"^^xsd:string ;
+        <http://purl.org/dc/terms/title>
+                "tasmax_bced_1960_1999_hadgem2-es_rcp2p6_2011-2020"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#patternFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "92352960"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "92352960"^^xsd:int ;
+        <http://rdfs.org/ns/void#sparqlEndpoint>
+                <http://4store.ipb.ac.rs:8001/sparql/> ;
+        <http://rdfs.org/ns/void#triples>
+                "923529600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:5bebc5f8-899a-41f0-b74f-ad8b66ef94e3>
+        <http://purl.org/dc/terms/title>
+                "?s http://rdf.iit.demokritos.gr/2014/cfconventions#longitude ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#subjectRegexPattern>
+                "http://semagrow.eu/rdf/data/tasmax_bced_1960_1999_hadgem2-es_rcp2p6_2011-2020_tasmaxAdjust_obs_*"^^xsd:string ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "720"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "923529600"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://rdf.iit.demokritos.gr/2014/cfconventions#longitude> ;
+        <http://rdfs.org/ns/void#triples>
+                "923529600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:70b32beb-fa6b-4394-a281-e4761d50e828>
+        <http://purl.org/dc/terms/title>
+                "epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#patternFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "939489"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "24107108"^^xsd:int ;
+        <http://rdfs.org/ns/void#sparqlEndpoint>
+                <http://4store.ipb.ac.rs:8003/sparql/> ;
+        <http://rdfs.org/ns/void#triples>
+                "120533901"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:5e5faba1-314d-433e-b964-6959ceb95920>
+        <http://purl.org/dc/terms/title>
+                "?s http://rdf.iit.demokritos.gr/2014/cfconventions#time ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#subjectRegexPattern>
+                "http://semagrow.eu/rdf/data/tasmax_bced_1960_1999_hadgem2-es_rcp2p6_2011-2020_tasmaxAdjust_obs_*"^^xsd:string ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "3653"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "923529600"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://rdf.iit.demokritos.gr/2014/cfconventions#time> ;
+        <http://rdfs.org/ns/void#triples>
+                "923529600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:f2a5626a-186f-46b9-83d0-2dd5787a851f>
+        <http://purl.org/dc/terms/creator>
+                "dlo"^^xsd:string ;
+        <http://purl.org/dc/terms/description>
+                "tasmax"^^xsd:string ;
+        <http://purl.org/dc/terms/title>
+                "tasmax_bced_1960_1999_hadgem2-es_rcp2p6_2011-2020"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "92352960"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "92352960"^^xsd:int ;
+        <http://rdfs.org/ns/void#sparqlEndpoint>
+                <http://4store.ipb.ac.rs:8001/sparql/> ;
+        <http://rdfs.org/ns/void#subset>
+                <urn:uuid:99f086ea-91f6-4e7c-8292-a0b7c3f928ae> , <urn:uuid:5e5faba1-314d-433e-b964-6959ceb95920> , <urn:uuid:5bebc5f8-899a-41f0-b74f-ad8b66ef94e3> , <urn:uuid:25fc984e-85ab-48e4-8839-0b246f1646c9> , <urn:uuid:a0e582cc-4c41-44b9-b369-177afbd44dd5> ;
+        <http://rdfs.org/ns/void#triples>
+                "923529600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:e1e6e337-d103-4664-8c2f-2473288ae7a6>
+        <http://purl.org/dc/terms/title>
+                "?s http://purl.org/linked-data/cube#codeList ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "7434"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "7434"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://purl.org/linked-data/cube#codeList> ;
+        <http://rdfs.org/ns/void#triples>
+                "7434"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:16b90059-0615-484c-ad46-b7ca788136ea>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/struct/index ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "3653"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "5597493"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/struct/index> ;
+        <http://rdfs.org/ns/void#triples>
+                "5597493"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:75f1d8fb-b38c-4a72-8a94-ff925b119f45>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/struct/attrValue ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "246"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "97505"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/struct/attrValue> ;
+        <http://rdfs.org/ns/void#triples>
+                "102461"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:25fc984e-85ab-48e4-8839-0b246f1646c9>
+        <http://purl.org/dc/terms/title>
+                "?s http://purl.org/linked-data/cube#dataSet ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#objectRegexPattern>
+                "http://semagrow.eu/rdf/data/tasmax_bced_1960_1999_hadgem2-es_rcp2p6_2011-2020_tasmaxAdjust"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#subjectRegexPattern>
+                "http://semagrow.eu/rdf/data/tasmax_bced_1960_1999_hadgem2-es_rcp2p6_2011-2020_tasmaxAdjust_obs_*"^^xsd:string ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "1"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "923529600"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://purl.org/linked-data/cube#dataSet> ;
+        <http://rdfs.org/ns/void#triples>
+                "923529600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:a0e582cc-4c41-44b9-b369-177afbd44dd5>
+        <http://purl.org/dc/terms/title>
+                "?s http://rdf.iit.demokritos.gr/2014/cfconventions#air_temperature ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#subjectRegexPattern>
+                "http://semagrow.eu/rdf/data/tasmax_bced_1960_1999_hadgem2-es_rcp2p6_2011-2020_tasmaxAdjust_obs_*"^^xsd:string ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "3653"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "923529600"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://rdf.iit.demokritos.gr/2014/cfconventions#air_temperature> ;
+        <http://rdfs.org/ns/void#triples>
+                "923529600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:b162c45f-4277-4a4d-be1e-140c0b2dd43a>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/data/description ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "7"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "2478"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/data/description> ;
+        <http://rdfs.org/ns/void#triples>
+                "2478"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:6bbb44f0-7a5e-4832-9708-9908ff05f942>
+        <http://purl.org/dc/terms/title>
+                "?s http://rdf.iit.demokritos.gr/2014/cfconventions#latitude ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#subjectRegexPattern>
+                "http://semagrow.eu/rdf/data/epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099_yield_obs_*"^^xsd:string ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "360"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "24105600"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://rdf.iit.demokritos.gr/2014/cfconventions#latitude> ;
+        <http://rdfs.org/ns/void#triples>
+                "24105600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:07d4afee-1e37-4344-ba2f-dc48ba3701a7>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/struct/dataType ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "2"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "9912"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/struct/dataType> ;
+        <http://rdfs.org/ns/void#triples>
+                "9912"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<http://eleon.iit.demokritos.gr/user#NCSRD>
+        <http://purl.org/dc/terms/identifier>
+                "NCSRD" .
+
+<urn:uuid:510cfb59-702c-43ca-a46c-12a3b562395c>
+        <http://purl.org/dc/terms/title>
+                "?s http://rdf.iit.demokritos.gr/2014/cfconventions#time ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#subjectRegexPattern>
+                "http://semagrow.eu/rdf/data/epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099_yield_obs_*"^^xsd:string ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "93"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "24105600"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://rdf.iit.demokritos.gr/2014/cfconventions#time> ;
+        <http://rdfs.org/ns/void#triples>
+                "24105600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:b4140bbf-c258-4566-ae96-24fc46a94d20>
+        <http://purl.org/dc/terms/title>
+                "?s http://purl.org/linked-data/cube#hierarchyRoot ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "5597493"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "7434"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://purl.org/linked-data/cube#hierarchyRoot> ;
+        <http://rdfs.org/ns/void#triples>
+                "5597493"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:07d42c6a-9f58-45dd-b7a0-5bb499bee747>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/data/units ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "23"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "9912"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/data/units> ;
+        <http://rdfs.org/ns/void#triples>
+                "9912"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:ebebdf3c-97c4-4b50-aab0-b74c498e4201>
+        <http://purl.org/dc/terms/creator>
+                "dlo"^^xsd:string ;
+        <http://purl.org/dc/terms/description>
+                "isimip"^^xsd:string ;
+        <http://purl.org/dc/terms/title>
+                "metadata"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "5789725"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "5723151"^^xsd:int ;
+        <http://rdfs.org/ns/void#sparqlEndpoint>
+                <http://143.233.226.52:8890/sparql> ;
+        <http://rdfs.org/ns/void#subset>
+                <urn:uuid:da44a402-a4d9-4010-bd9e-4b2cf229b3c6> , <urn:uuid:8af8538e-f751-4b62-914c-58f275f2fe2c> , <urn:uuid:e1426af3-d481-4850-9b19-ad00826cc3d8> , <urn:uuid:5e8ec40b-a294-40c4-82a6-390a71c47f46> , <urn:uuid:b162c45f-4277-4a4d-be1e-140c0b2dd43a> , <urn:uuid:0d59f8f0-3bb6-4f89-a69c-b68c271818d4> , <urn:uuid:8211c70a-7940-4dec-b4bb-120f70920480> , <urn:uuid:d1670de2-d761-4363-9ff3-f3c90aa0c441> , <urn:uuid:7fa8f653-53d8-480b-9af3-99962aef7189> , <urn:uuid:5e5b5c74-2ae5-49ec-b0c6-71ca87ebb8b4> , <urn:uuid:043a1da1-ebad-4fa0-96c2-1c9323831f41> , <urn:uuid:94b6f61f-9dda-4481-b9e7-da497237f17b> , <urn:uuid:94fa2806-41e0-496f-8ed0-424230824e3b> , <urn:uuid:1638ff36-77f9-40d6-bdef-5065c00c3d0f> , <urn:uuid:75f1d8fb-b38c-4a72-8a94-ff925b119f45> , <urn:uuid:24f4020b-bd21-4d5a-a419-8254c118b201> , <urn:uuid:19d764d2-6d31-4abe-9aaa-ab9431638e27> , <urn:uuid:07d4afee-1e37-4344-ba2f-dc48ba3701a7> , <urn:uuid:fbeaaf61-5e2d-45dc-8197-607e2a3ffb6f> , <urn:uuid:e1e6e337-d103-4664-8c2f-2473288ae7a6> , <urn:uuid:142c7559-f056-4699-8351-44c4334cc859> , <urn:uuid:07d42c6a-9f58-45dd-b7a0-5bb499bee747> , <urn:uuid:16b90059-0615-484c-ad46-b7ca788136ea> , <urn:uuid:fecf30db-cf60-493f-b056-1b51f4b4a3ab> , <urn:uuid:b4140bbf-c258-4566-ae96-24fc46a94d20> ;
+        <http://rdfs.org/ns/void#triples>
+                "17598914"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:da44a402-a4d9-4010-bd9e-4b2cf229b3c6>
+        <http://purl.org/dc/terms/title>
+                "?s http://purl.org/linked-data/cube#component ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "107417"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "14868"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://purl.org/linked-data/cube#component> ;
+        <http://rdfs.org/ns/void#triples>
+                "117329"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:fb313950-6280-416b-9ee7-436d2b53613d>
+        <http://purl.org/dc/terms/creator>
+                "dlo"^^xsd:string ;
+        <http://purl.org/dc/terms/description>
+                "yield"^^xsd:string ;
+        <http://purl.org/dc/terms/title>
+                "epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "939489"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "24107108"^^xsd:int ;
+        <http://rdfs.org/ns/void#sparqlEndpoint>
+                <http://4store.ipb.ac.rs:8003/sparql/> ;
+        <http://rdfs.org/ns/void#subset>
+                <urn:uuid:510cfb59-702c-43ca-a46c-12a3b562395c> , <urn:uuid:4fd438d0-fb1e-490c-9822-62baec65679c> , <urn:uuid:6bbb44f0-7a5e-4832-9708-9908ff05f942> , <urn:uuid:33482878-ee56-4e58-856a-918371c79e89> , <urn:uuid:cee9d1a7-8749-4df6-b2ff-26f55429bf27> ;
+        <http://rdfs.org/ns/void#triples>
+                "120533901"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:cee9d1a7-8749-4df6-b2ff-26f55429bf27>
+        <http://purl.org/dc/terms/title>
+                "?s http://purl.org/linked-data/cube#dataSet ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#objectRegexPattern>
+                "http://semagrow.eu/rdf/data/epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099_yield"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#subjectRegexPattern>
+                "http://semagrow.eu/rdf/data/epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099_yield_obs_*"^^xsd:string ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "1"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "24105600"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://purl.org/linked-data/cube#dataSet> ;
+        <http://rdfs.org/ns/void#triples>
+                "24105600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:7fa8f653-53d8-480b-9af3-99962aef7189>
+        <http://purl.org/dc/terms/title>
+                "?s  http://rdf.iit.demokritos.gr/2014/netcdf#fromFile ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "2478"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "2478"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://rdf.iit.demokritos.gr/2014/netcdf#fromFile> ;
+        <http://rdfs.org/ns/void#triples>
+                "2478"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:e2f529ab-fb49-47c6-b4de-512c3468514b>
+        <http://purl.org/dc/terms/title>
+                "metadata"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#patternFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "5789725"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "5723151"^^xsd:int ;
+        <http://rdfs.org/ns/void#sparqlEndpoint>
+                <http://143.233.226.52:8890/sparql> ;
+        <http://rdfs.org/ns/void#subset>
+                <urn:uuid:c85f6e86-f3f0-49ee-af71-a4a38471d0c5> ;
+        <http://rdfs.org/ns/void#triples>
+                "17598914"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:99f086ea-91f6-4e7c-8292-a0b7c3f928ae>
+        <http://purl.org/dc/terms/title>
+                "?s http://rdf.iit.demokritos.gr/2014/cfconventions#latitude ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#subjectRegexPattern>
+                "http://semagrow.eu/rdf/data/tasmax_bced_1960_1999_hadgem2-es_rcp2p6_2011-2020_tasmaxAdjust_obs_*"^^xsd:string ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "360"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "923529600"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://rdf.iit.demokritos.gr/2014/cfconventions#latitude> ;
+        <http://rdfs.org/ns/void#triples>
+                "923529600"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:142c7559-f056-4699-8351-44c4334cc859>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/struct/shortName ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "82"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "107417"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/struct/shortName> ;
+        <http://rdfs.org/ns/void#triples>
+                "107417"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:94fa2806-41e0-496f-8ed0-424230824e3b>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/data/minTimeValue ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "252"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "2478"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/data/minTimeValue> ;
+        <http://rdfs.org/ns/void#triples>
+                "2478"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:043a1da1-ebad-4fa0-96c2-1c9323831f41>
+        <http://purl.org/dc/terms/title>
+                "?s http://purl.org/linked-data/cube#componentAttachment ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "1"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "9912"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://purl.org/linked-data/cube#componentAttachment> ;
+        <http://rdfs.org/ns/void#triples>
+                "9912"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:5e5b5c74-2ae5-49ec-b0c6-71ca87ebb8b4>
+        <http://purl.org/dc/terms/title>
+                "?s http://purl.org/linked-data/cube#order ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "4"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "9912"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://purl.org/linked-data/cube#order> ;
+        <http://rdfs.org/ns/void#triples>
+                "9912"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:c85f6e86-f3f0-49ee-af71-a4a38471d0c5>
+        <http://purl.org/dc/terms/title>
+                "http://semagrow.eu* ?p ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#patternFacet> ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#subjectRegexPattern>
+                "http://semagrow.eu*"^^xsd:string ;
+        <http://rdfs.org/ns/void#triples>
+                "17403940"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:e1426af3-d481-4850-9b19-ad00826cc3d8>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/struct/dimensionSize ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "20"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "7434"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/struct/dimensionSize> ;
+        <http://rdfs.org/ns/void#triples>
+                "7434"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:0d59f8f0-3bb6-4f89-a69c-b68c271818d4>
+        <http://purl.org/dc/terms/title>
+                "?s http://www.w3.org/1999/02/22-rdf-syntax-ns#type ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "19"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "117633"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                rdf:type ;
+        <http://rdfs.org/ns/void#triples>
+                "117633"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:24f4020b-bd21-4d5a-a419-8254c118b201>
+        <http://purl.org/dc/terms/title>
+                "?s http://www.w3.org/1999/02/22-rdf-syntax-ns#value ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "67774"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "5597494"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                rdf:value ;
+        <http://rdfs.org/ns/void#triples>
+                "5599971"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:d1670de2-d761-4363-9ff3-f3c90aa0c441>
+        <http://purl.org/dc/terms/title>
+                "?s http://purl.org/linked-data/cube#componentRequired ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "1"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "9912"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://purl.org/linked-data/cube#componentRequired> ;
+        <http://rdfs.org/ns/void#triples>
+                "9912"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<http://rdf.iit.demokritos.gr/2013/sevod#datasetTop>
+        <http://purl.org/dc/terms/title>
+                "root"^^xsd:string , "root" ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#patternFacet> , <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#subset>
+                <urn:uuid:e2f529ab-fb49-47c6-b4de-512c3468514b> , <urn:uuid:70b32beb-fa6b-4394-a281-e4761d50e828> , <urn:uuid:f2a5626a-186f-46b9-83d0-2dd5787a851f> , <urn:uuid:ebebdf3c-97c4-4b50-aab0-b74c498e4201> , <urn:uuid:56fadf8f-e5a4-4a4c-8846-d217fc3e2f64> , <urn:uuid:fb313950-6280-416b-9ee7-436d2b53613d> .
+
+<urn:uuid:8af8538e-f751-4b62-914c-58f275f2fe2c>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/data/maxTimeValue ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "234"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "2478"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/data/maxTimeValue> ;
+        <http://rdfs.org/ns/void#triples>
+                "2478"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:fecf30db-cf60-493f-b056-1b51f4b4a3ab>
+        <http://purl.org/dc/terms/title>
+                "?s http://purl.org/linked-data/cube#componentProperty ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "75"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "107417"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://purl.org/linked-data/cube#componentProperty> ;
+        <http://rdfs.org/ns/void#triples>
+                "107417"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:94b6f61f-9dda-4481-b9e7-da497237f17b>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/data/standard_name ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "38"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "9912"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/data/standard_name> ;
+        <http://rdfs.org/ns/void#triples>
+                "9912"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:8211c70a-7940-4dec-b4bb-120f70920480>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/struct/shortName ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "82"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "107417"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/struct/shortName> ;
+        <http://rdfs.org/ns/void#triples>
+                "107417"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+<urn:uuid:fbeaaf61-5e2d-45dc-8197-607e2a3ffb6f>
+        <http://purl.org/dc/terms/title>
+                "?s http://semagrow.eu/rdf/data/header ?o"^^xsd:string ;
+        <http://rdf.iit.demokritos.gr/2013/sevod#facet>
+                <http://rdf.iit.demokritos.gr/2013/sevod#propertyFacet> ;
+        <http://rdfs.org/ns/void#distinctObjects>
+                "2478"^^xsd:int ;
+        <http://rdfs.org/ns/void#distinctSubjects>
+                "2478"^^xsd:int ;
+        <http://rdfs.org/ns/void#property>
+                <http://semagrow.eu/rdf/data/header> ;
+        <http://rdfs.org/ns/void#triples>
+                "2478"^^xsd:int ;
+        <http://www.w3.org/2007/05/powder-s#issuedby>
+                <http://eleon.iit.demokritos.gr/user#NCSRD> .
+
+_:node1a2shvj2hx1 a void:Dataset ;
+	void:propertyPartition [
+		void:property <http://semagrow.eu/agmip/event/chacd> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/chamt> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/chcd> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/chdep> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/ch_targets> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/crid> ;
+		void:triples "15"^^xsd:long ;
+		void:distinctSubjects "15"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/cul_id> ;
+		void:triples "15"^^xsd:long ;
+		void:distinctSubjects "15"^^xsd:int ;
+		void:distinctObjects "8"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/cul_name> ;
+		void:triples "15"^^xsd:long ;
+		void:distinctSubjects "15"^^xsd:int ;
+		void:distinctObjects "7"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/date> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/dssat_cul_id> ;
+		void:triples "15"^^xsd:long ;
+		void:distinctSubjects "15"^^xsd:int ;
+		void:distinctObjects "8"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/event> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/event_date> ;
+		void:triples "488"^^xsd:long ;
+		void:distinctSubjects "48"^^xsd:int ;
+		void:distinctObjects "136"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/event> ;
+		void:triples "486"^^xsd:long ;
+		void:distinctSubjects "46"^^xsd:int ;
+		void:distinctObjects "4"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/feacd> ;
+		void:triples "10"^^xsd:long ;
+		void:distinctSubjects "8"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/feamc> ;
+		void:triples "10"^^xsd:long ;
+		void:distinctSubjects "8"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/feamk> ;
+		void:triples "10"^^xsd:long ;
+		void:distinctSubjects "8"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/feamn> ;
+		void:triples "292"^^xsd:long ;
+		void:distinctSubjects "13"^^xsd:int ;
+		void:distinctObjects "9"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/feamo> ;
+		void:triples "10"^^xsd:long ;
+		void:distinctSubjects "8"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/feamp> ;
+		void:triples "10"^^xsd:long ;
+		void:distinctSubjects "8"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/fecd> ;
+		void:triples "292"^^xsd:long ;
+		void:distinctSubjects "13"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/fedep> ;
+		void:triples "292"^^xsd:long ;
+		void:distinctSubjects "13"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/hacom> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/hap%25> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/hasiz> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/hastg> ;
+		void:triples "12"^^xsd:long ;
+		void:distinctSubjects "12"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/iamt> ;
+		void:triples "152"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/ireff> ;
+		void:triples "167"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/irop> ;
+		void:triples "167"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/irval> ;
+		void:triples "167"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "18"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/pldp> ;
+		void:triples "15"^^xsd:long ;
+		void:distinctSubjects "15"^^xsd:int ;
+		void:distinctObjects "4"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/plds> ;
+		void:triples "15"^^xsd:long ;
+		void:distinctSubjects "15"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/plma> ;
+		void:triples "15"^^xsd:long ;
+		void:distinctSubjects "15"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/plmwt> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/plpoe> ;
+		void:triples "15"^^xsd:long ;
+		void:distinctSubjects "15"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/plpop> ;
+		void:triples "15"^^xsd:long ;
+		void:distinctSubjects "15"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/plrd> ;
+		void:triples "15"^^xsd:long ;
+		void:distinctSubjects "15"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/plrs> ;
+		void:triples "15"^^xsd:long ;
+		void:distinctSubjects "15"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/plspl> ;
+		void:triples "13"^^xsd:long ;
+		void:distinctSubjects "13"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/event/seqid> ;
+		void:triples "488"^^xsd:long ;
+		void:distinctSubjects "48"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/caout> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/chem> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/chout> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/co> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/co2> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/data> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/diout> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/dises> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/dssat_environment_modification> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/dssat_sequence> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/dssat_simulation_control> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/dssat_wst_id> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "15"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/eid> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "25"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/em> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/em_data> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/endat> ;
+		void:triples "12"^^xsd:long ;
+		void:distinctSubjects "12"^^xsd:int ;
+		void:distinctObjects "11"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ends> ;
+		void:triples "12"^^xsd:long ;
+		void:distinctSubjects "12"^^xsd:int ;
+		void:distinctObjects "11"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/evapo> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/exname> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "25"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/farea> ;
+		void:triples "8"^^xsd:long ;
+		void:distinctSubjects "8"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ferti> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/fldrd> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/fl_drntype> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/fldrs> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/flele> ;
+		void:triples "8"^^xsd:long ;
+		void:distinctSubjects "8"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/fl_lat> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/fl_long> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/fllwr> ;
+		void:triples "8"^^xsd:long ;
+		void:distinctSubjects "8"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/flob> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/flsl> ;
+		void:triples "7"^^xsd:long ;
+		void:distinctSubjects "7"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/flsla> ;
+		void:triples "8"^^xsd:long ;
+		void:distinctSubjects "8"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/flst> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/fname> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/fropt> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/general> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/grout> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/harvests> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/harvs> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/hasEvent> ;
+		void:triples "488"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "48"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+		svd:objectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/hasSoil> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "6"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+		svd:objectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/hasWeatherStation> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+		svd:objectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/hfrst> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/hlday> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/hlyer> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "12"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/hpcnp> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/hpcnr> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/hydro> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/id_field> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "14"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/imdep> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/imeth> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/in> ;
+		void:triples "4"^^xsd:long ;
+		void:distinctSubjects "4"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/incon> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/infil> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/in> ;
+		void:triples "21"^^xsd:long ;
+		void:distinctSubjects "21"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/institution> ;
+		void:triples "20"^^xsd:long ;
+		void:distinctSubjects "20"^^xsd:int ;
+		void:distinctObjects "4"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/iramt> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ireff> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/iroff> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/irrigation> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/irrig> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ithrl> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ithru> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/json> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/light> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/local_name> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "6"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/management> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/maxTimeValue> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/mesev> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/mesol> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/mesom> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/methods> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/minTimeValue> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/miout> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/namnt> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/naoff> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ncode> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/niout> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/nitrogen> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/nitro> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/nmdep> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/nmthr> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/nreps> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/nswit> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/nyers> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/op> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/opout> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/options> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/outputs> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ovvew> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/person_notes> ;
+		void:triples "20"^^xsd:long ;
+		void:distinctSubjects "20"^^xsd:int ;
+		void:distinctObjects "4"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/pfday> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/pfyer> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "6"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ph2od> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ph2ol> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ph2ou> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/phosp> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/photo> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/planting> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/plant> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/plday> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/plyer> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "6"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/potas> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/pstmn> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/pstmx> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/resid> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/residues> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ridep> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/ripcn> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/rseed> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/rtime> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/sdday> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "9"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/sdyer> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "13"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/seqid> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/sid> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "6"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/site_name> ;
+		void:triples "20"^^xsd:long ;
+		void:distinctSubjects "20"^^xsd:int ;
+		void:distinctObjects "4"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/sm> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "10"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/sname> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "11"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/soil_id> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "6"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/sq> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/start> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/sumry> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/symbi> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/till> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/tr_notes> ;
+		void:triples "18"^^xsd:long ;
+		void:distinctSubjects "18"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/trt_name> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "25"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/vbose> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/waout> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/water> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/wid> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/wst_id> ;
+		void:triples "25"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/wther> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/hasRecord> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+		svd:objectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/record/ar+rad> ;
+		void:triples "4"^^xsd:long ;
+		void:distinctSubjects "4"^^xsd:int ;
+		void:distinctObjects "4"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/record_date> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/record/iation> ;
+		void:triples "4"^^xsd:long ;
+		void:distinctSubjects "4"^^xsd:int ;
+		void:distinctObjects "4"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/record/pard> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/record/rain> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/experiment/json> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/record/rain> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/record/srad> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/record/tmax> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/record/tmin> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/record/w_date> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/record/wind> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/classification> ;
+		void:triples "5"^^xsd:long ;
+		void:distinctSubjects "5"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/salb> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/sid> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "6"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/sldp> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "6"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/sldr> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/sl_loc_1> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/sl_loc_3> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/slnf> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/sl_notes> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/slpf> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/slro> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "4"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/sl_source> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/slu1> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/smhb> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/smke> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/smpx> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/soil_id> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "6"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/soil_lat> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/soil_long> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/soil/soil_name> ;
+		void:triples "6"^^xsd:long ;
+		void:distinctSubjects "6"^^xsd:int ;
+		void:distinctObjects "6"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/clim_id> ;
+		void:triples "5"^^xsd:long ;
+		void:distinctSubjects "5"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/dssat_insi> ;
+		void:triples "5"^^xsd:long ;
+		void:distinctSubjects "5"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/recorder_year> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/refht> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/tamp> ;
+		void:triples "3"^^xsd:long ;
+		void:distinctSubjects "3"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/tav> ;
+		void:triples "3"^^xsd:long ;
+		void:distinctSubjects "3"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/wid> ;
+		void:triples "5"^^xsd:long ;
+		void:distinctSubjects "5"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/wndht> ;
+		void:triples "2"^^xsd:long ;
+		void:distinctSubjects "2"^^xsd:int ;
+		void:distinctObjects "2"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/wst_elev> ;
+		void:triples "3"^^xsd:long ;
+		void:distinctSubjects "3"^^xsd:int ;
+		void:distinctObjects "3"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/wst_id> ;
+		void:triples "5"^^xsd:long ;
+		void:distinctSubjects "5"^^xsd:int ;
+		void:distinctObjects "5"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/wst_lat> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/wst_long> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/wst_name> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/wst_notes> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://semagrow.eu/agmip/weather_station/wst_source> ;
+		void:triples "1"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://semagrow.eu/> ;
+	] , [
+		void:property <http://www.w3.org/2003/01/geo/wgs84_pos#geometry> ;
+		void:triples "0"^^xsd:long ;
+		void:distinctSubjects "1"^^xsd:int ;
+		void:distinctObjects "1"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+	] ;
+	void:sparqlEndpoint <http://143.233.226.52:8080/strabon-endpoint-3.3.2-SNAPSHOT/Query> ;
+	void:triples "0"^^xsd:long ;
+	void:properties "215"^^xsd:int ;
+	void:classes "0"^^xsd:int ;
+	void:entities "0"^^xsd:long ;
+	void:distinctSubjects "1"^^xsd:int ;
+	void:distinctObjects "1"^^xsd:int .
+
+	
+	
+_:node1a2shlig4x1 a void:Dataset ;
+	void:propertyPartition [
+		void:property <http://purl.org/dc/terms/subject> ;
+		void:triples "95"^^xsd:long ;
+		void:distinctSubjects "25"^^xsd:int ;
+		void:distinctObjects "7"^^xsd:int ;
+		svd:subjectVocabulary <http://www.semagrow.eu/> ;
+		svd:objectVocabulary <http://aims.fao.org/> ;
+	] ;
+	void:sparqlEndpoint <http://143.233.226.52:8891/sparql> ;
+	void:triples "95"^^xsd:long ;
+	void:properties "1"^^xsd:int ;
+	void:classes "0"^^xsd:int ;
+	void:entities "0"^^xsd:long ;
+	void:distinctSubjects "25"^^xsd:int ;
+	void:distinctObjects "7"^^xsd:int .

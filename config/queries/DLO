@@ -1,0 +1,19 @@
+PREFIX  strdf: <http://strdf.di.uoa.gr/ontology#>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?dataset ?p ?json
+WHERE
+{ ?dataset <http://semagrow.eu/agmip/experiment/fl_lat> ?fl_lat .
+  ?dataset <http://semagrow.eu/agmip/experiment/fl_long> ?fl_long .
+  ?dataset <http://www.w3.org/2003/01/geo/wgs84_pos#geometry> ?exp_point .
+  ?dataset <http://semagrow.eu/agmip/experiment/json> ?json .
+  ?dataset <http://semagrow.eu/agmip/experiment/minTimeValue> ?min_value .
+  ?dataset <http://semagrow.eu/agmip/experiment/maxTimeValue> ?max_value .
+  ?dataset ?p ?header
+  FILTER regex(str(?header), "moranda", "i")
+  FILTER ( ( ( 
+  ( ( ?min_value >= "1799-12-31T22:00:00Z"^^xsd:dateTime ) && ( ?max_value <= "2999-12-31T22:00:00Z"^^xsd:dateTime ) ) || 
+  ( ( ?min_value >= "1799-12-31T22:00:00Z"^^xsd:dateTime ) && ( ?min_value <= "2999-12-31T22:00:00Z"^^xsd:dateTime ) ) ) || 
+  ( ( ?max_value >= "1799-12-31T22:00:00Z"^^xsd:dateTime ) && ( ?max_value <= "2999-12-31T22:00:00Z"^^xsd:dateTime ) ) ) || 
+  ( ( ?min_value <= "1799-12-31T22:00:00Z"^^xsd:dateTime ) && ( ?max_value >= "2999-12-31T22:00:00Z"^^xsd:dateTime ) ) )
+  FILTER strdf:within(?exp_point, "POLYGON((180.0 180.0, -180.0 180.0, -180.0 -180.0, 180.0 -180.0, 180.0 180.0))"^^strdf:WKT)
+}
