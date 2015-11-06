@@ -17,3 +17,44 @@ WHERE
   ( ( ?min_value <= "1799-12-31T22:00:00Z"^^xsd:dateTime ) && ( ?max_value >= "2999-12-31T22:00:00Z"^^xsd:dateTime ) ) )
   FILTER strdf:within(?exp_point, "POLYGON((180.0 180.0, -180.0 180.0, -180.0 -180.0, 180.0 -180.0, 180.0 180.0))"^^strdf:WKT)
 }
+
+PREFIX  qb:   <http://purl.org/linked-data/cube#>
+SELECT DISTINCT  ?dataset_struct
+WHERE  
+{ <http://semagrow.eu/rdf/data/epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> qb:DataSet .
+  <http://semagrow.eu/rdf/data/epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099> qb:structure ?dataset_struct .
+  ?dataset_struct <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> qb:DataStructureDefinition
+}
+
+PREFIX  qb:   <http://purl.org/linked-data/cube#>
+SELECT DISTINCT  ?attr_spec
+WHERE
+{ <http://semagrow.eu/rdf/struct/epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099_struct> qb:component ?attr_spec .
+  ?attr_spec <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> qb:ComponentSpecification .
+  ?attr_spec qb:componentProperty ?p .
+  ?p <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> qb:AttributeProperty
+}
+
+PREFIX  qb:   <http://purl.org/linked-data/cube#>
+SELECT DISTINCT  ?property ?codeList ?var_struct ?shortName ?dimensionSize ?dataType
+WHERE
+{ <http://semagrow.eu/rdf/data/epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099_yield> qb:structure ?dstruct .
+  ?dstruct qb:component ?var_struct .
+  ?var_struct <http://semagrow.eu/rdf/struct/shortName> ?shortName .
+  ?var_struct <http://semagrow.eu/rdf/struct/dimensionSize> ?dimensionSize .
+  ?var_struct <http://semagrow.eu/rdf/struct/dataType> ?dataType .
+  ?var_struct qb:componentProperty ?property .
+  ?var_struct qb:codeList ?codeList .
+  ?property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> qb:DimensionProperty
+}
+
+PREFIX  qb:   <http://purl.org/linked-data/cube#>
+PREFIX  sgstruct: <http://semagrow.eu/rdf/struct/>
+SELECT DISTINCT  ?attr_name ?attr_val
+WHERE
+{ sgstruct:epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099_struct_impact_model_id_spec qb:componentProperty ?p .
+  ?p <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> qb:AttributeProperty .
+  <http://semagrow.eu/rdf/data/epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099> ?p ?attr_val .
+  sgstruct:epic_hadgem2-es_rcp2p6_ssp2_co2_firr_yield_whe_annual_2005_2099_struct_impact_model_id_spec sgstruct:shortName ?attr_name
+}
+

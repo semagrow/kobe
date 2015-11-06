@@ -4,7 +4,7 @@ dataConfig = suites/semagrow/dlo/dlo.ttl
 
 querySet = DLO
 
-evalRuns = 5
+evalRuns = 1
 
 timeout = 520000
 
