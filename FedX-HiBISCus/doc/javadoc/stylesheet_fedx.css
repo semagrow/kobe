@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFFFF;
+    color: #000000
+}
+
+/* Headings */
+h1,h2,h3 {
+    color: #444444;
+}
+
+h1 {
+    font-size: 145%;
+}
+
+/* Links */
+a:link {
+    line-height: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #444444;
+}
+
+a:visited {
+    line-height: 14px;
+    color: #777777;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    border-bottom: 2px solid #666666;
+}
+
+/* Horizontal line */
+hr {
+	color: #666666;
+	background-color: #666666;
+	text-align: left;
+	border: 0;
+	text-align: left; /*this will align it for IE*/
+	margin-left: 0; /*this will align it left for Mozilla*/
+}
+
+/* Table colors */
+.TableHeadingColor {
+    background-image: url("images/javadoc.jpg");
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+}
+
+.TableHeadingColor a:link,.TableHeadingColor a:visited {
+    color: #bbbbbb;
+}
+
+.TableHeadingColor a:hover {
+    border: none;
+    background-color: #666666;
+}
+
+.TableSubHeadingColor {
+    background-image: url("images/javadoc.jpg");
+    background-repeat: repeat-x;
+    color: #FEFEFE
+}
+
+.TableRowColor {
+    color: #000000
+}
+
+/* Font used in left-hand frame lists */
+.FrameTitleFont {
+    font-size: 100%;
+    color: #000000
+}
+
+.FrameHeadingFont {
+    font-size: 90%;
+    color: #000000
+}
+
+.FrameItemFont {
+    font-size: 90%;
+    color: #000000
+}
+
+/* Navigation bar fonts and colors */
+.NavBarCell1 {
+    background-image: url("images/javadoc.jpg");
+}
+
+.NavBarCell1 a:hover {
+    border: none;
+    background-color: #666666;
+}
+
+.NavBarCell1Rev {
+    background-color: #666666;
+    color: #FFFFFF
+}
+
+.NavBarCell2 {
+    color: #000000
+}
+
+.NavBarCell3 {
+    color: #000000
+}
+
+.NavBarFont1 {
+    color: #FFFFFF;
+}
+
+.NavBarFont1Rev {
+    color: #FFFFFF;
+}

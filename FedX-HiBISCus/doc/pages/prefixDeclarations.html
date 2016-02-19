@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>FedX Documentation</title>
+</head>
+
+<body>
+<div id="content" style="width:800px">
+
+<h2>Prefix Declarations</h2>
+
+<a href="../Index.html">back</a>
+
+<p>FedX allows to (optionally) define commonly used prefixes (e.g. rdf, foaf, etc.) in a 
+configuration file. These configured prefixes are then automatically inserted into a query,
+meaning that the user does not have to specify full URIs nor the PREFIX declaration in the 
+query.</p>
+
+<p>The prefixes can be either specified in a configuration file as key-value pairs or directly
+configured via Java code (see examples below). When using a configuration file, this can be 
+configured via the <i>prefixDeclarations</i> property.</p>
+
+<h3>Example: Prefix configuration via configuration file</h3>
+
+<pre>
+# this file contains a set of prefix declarations
+=http://example.org/
+foaf=http://xmlns.com/foaf/0.1/
+rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#
+dbpedia=http://dbpedia.org/ontology/
+</pre>
+
+
+<h3>Example: Setting prefixes at runtime</h3>
+
+The QueryManager can be used to define additional prefixes at runtime.
+
+<pre>
+QueryManager qm = FederationManager.getInstance().getQueryManager();
+qm.addPrefixDeclaration("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+qm.addPrefixDeclaration("dbpedia", "http://dbpedia.org/ontology/");
+</pre>
+
+</div>
+</body>
+</html>

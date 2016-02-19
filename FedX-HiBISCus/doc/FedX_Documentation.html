@@ -1,0 +1,245 @@
+<html>
+<head>
+	<title>FedX Documentation</title>
+</head>
+
+<body>
+<div id="content" style="width:800px">
+
+<h2>FedX Short Documentation</h2>
+
+<p>FedX is a practical framework for transparent access to Linked Data sources through a federation. 
+It incorporates new sophisticated optimization techniques combined with effective variants of existing
+techniques and is thus a highly scalable solution for practical federated query processing.</p>
+
+
+<h3>Core Features</h3>
+
+<ul>
+	<li><i>Virtual Integration</i> of heterogeneous Linked Data sources (e.g. as SPARQL endpoints)</li>
+	<li>Transparent access to data sources through a federation</li>
+	<li>Efficient query processing in federated environments</li>
+	<li>On-demand federation setup at query time</li>
+	<li>Fast and effective query execution due to new optimization techniques for federated setups</li>
+	<li>Practical applicability & easy integration as a Sesame SAIL</li>
+	<li>Comprehensive CLI for federated query processing from the command line</li>
+</ul>
+
+
+<h3>Getting Started</h3>
+
+<p>As simple as that, FedX provides a comprehensive command line interface to get started without any
+prerequisites. Just start the CLI (cli.bat/cli.sh) and access real SPARQL endpoints from the Linked Open
+Data cloud.</p>
+
+<p><b>Example:</b> Evaluate the SPARQL query q1 (to be found in examples\q1.txt) at the live DBpedia and NYTimes endpoints,
+and collect those US presidents that have studied in Harvard and their associated news pages.</p>
+
+<pre>
+> cli -d examples\DBpediaNYTimes.ttl @q examples\q1.txt
+</pre>
+
+<p>Note that depending on the load of the SPARQL endpoints, sometimes query execution may take a few seconds.</p>
+
+<p>Further examples and usage scenarios (e.g. Output-format, federation setup, programmatic usage, etc.) can be found below.</p>
+
+
+<h3>System overview</h3>
+
+<p>FedX is built on top of Sesame and constitutes a practical federation layer as a Sesame SAIL 
+implementation. It allows to virtually integrate Linked Data sources using any Sesame SAIL mediator 
+(e.g. as SPARQL endpoint or NativeStore) and the (virtually) combined RDF graph of those sources can 
+be used or federated query processing. In contrast to the SPARQL 1.1 Federation Extensions our system 
+allows for transparent integration of data sources, meaning that sources do not have to be stated 
+explicitly in the query. FedX incorporates the following optimization techniques to allow for efficient 
+query processing in a distributed setting:</p>
+
+<ul>
+	<li><b>Statement sources:</b> Examine relevant statement sources using SPARQL ASK queries</li>
+	<li><b>Join order:</b> Join reordering using variable counting technique & heuristics</li>
+	<li><b>Bound joins:</b> Compute joins as block nested loop</li>
+	<li><b>Exclusive groups:</b> Group statements with same relevant source </li>	
+</ul>
+
+<p>Details to the optimization techniques can be found in our publications listed on our Website 
+(<a href="http://www.fluidops.com/FedX">http://www.fluidops.com/FedX</a>). All of our optimization
+techniques use SPARQL 1.0 Features only, making our solution suitable in contemporary environments. Still the
+SPARQL 1.1 language features are supported. Note that our system does not need any
+preprocessed metadata such as statistics or indices making it suitable for on-demand query processing. In particular, FedX
+is designed to work as an out-of-the box system.</p>
+
+<h3>Usage scenario (Java)</h3>
+
+<p>FedX is implemented as a Sesame SAIL. The following Java code snippet illustrates how it can be used in an
+application. For further usage examples see <a href="pages/java.html">Java documentation</a></p>
+
+<pre>
+Config.initialize();
+SailRepository repo = FedXFactory.initializeSparqlFederation(Arrays.asList(
+		"http://dbpedia.org/sparql",
+		"http://api.talis.com/stores/nytimes/services/sparql"));
+
+String q = "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\n"
+	+ "PREFIX dbpedia-owl: &lt;http://dbpedia.org/ontology/&gt;\n"
+	+ "SELECT ?President ?Party WHERE {\n"
+	+ "?President rdf:type dbpedia-owl:President .\n"
+	+ "?President dbpedia-owl:party ?Party . }";
+
+TupleQuery query = repo.getConnection().prepareTupleQuery(QueryLanguage.SPARQL, q);
+TupleQueryResult res = query.evaluate();
+
+while (res.hasNext()) {
+	System.out.println(res.next());
+}
+
+FederationManager.getInstance().shutDown();
+System.out.println("Done.");
+System.exit(0);
+</pre>
+
+
+<h3>Data Config</h3>
+
+<p>The federation members can be specified using a simple data config format.</p>
+
+<p>SPARQL Federation:</p>
+
+<pre>
+@prefix fluid: &lt;http://fluidops.org/config#>.
+
+&lt;http://DBpedia> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://dbpedia.org/sparql".
+
+&lt;http://NYtimes> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://api.talis.com/stores/nytimes/services/sparql".
+
+&lt;http://LinkedMDB> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://data.linkedmdb.org/sparql".
+</pre>
+
+<p>SPARQL Federation using Sesame Remote Repositories</p>
+
+<pre>
+&lt;http://dbpedia&gt; fluid:store "RemoteRepository";
+fluid:repositoryServer "http://&lt;host&gt;/openrdf-sesame" ;
+fluid:repositoryName "&lt;repoName&gt;" .
+</pre>
+
+<p>Local Federation (NativeStore):</p>
+
+<pre>
+@prefix fluid: &lt;http://fluidops.org/config#>.
+
+&lt;http://DBpedia> fluid:store "NativeStore";
+fluid:RepositoryLocation "repositories\\native-storage.dbpedia36".
+
+&lt;http://NYTimes> fluid:store "NativeStore";
+fluid:RepositoryLocation "repositories\\native-storage.nytimes".
+</pre>
+
+
+<h3>FedX CLI</h3>
+
+<p>FedX brings a comprehensive CLI to evaluate queries on a set of specified data sources.</p>
+
+<pre>
+Usage:
+> FedX [Configuration] [Federation Setup] [Output] [Queries]
+> FedX -{help|version}
+
+WHERE
+[Configuration] (optional)
+Optionally specify the configuration to be used
+        -c path/to/fedxConfig
+        -verbose {0|1|2|3}
+        -logtofile
+
+[Federation Setup] (optional)
+Specify one or more federation members
+        -s urlToSparqlEndpoint
+        -l path/to/NativeStore
+        -d path/to/dataconfig.ttl
+
+[Output] (optional)
+Specify the output options, default stdout. Files are created per query to 
+results/%outputFolder%/q_%id%.{json|xml}, where the outputFolder is the 
+current timestamp, if not specified otherwise.
+        -f {STDOUT,JSON,XML}
+        -folder outputFolder
+
+[Queries]
+Specify one or more queries, in file: separation of queries by empty line
+        -q sparqlquery
+        @q path/to/queryfile
+
+Notes:
+The federation members can be specified explicitely (-s,-l,-d) or implicitely 
+as 'dataConfig' via the fedx configuration (-f)
+</pre>
+
+<p>In the <i>examples</i> folder we provide many sample use cases. Here is 
+a list of sample commands:<p>
+
+<pre>
+Evaluate query 1 at DBPedia and NYTimes 
+> cli -d examples\DBPediaNYTimes.ttl @q examples\q1.txt
+
+Evaluate query 1 at DBPedia and NYTimes using JSON as output format
+> cli -d examples\DBPediaNYTimes.ttl -f JSON @q examples\q1.txt
+
+Evaluate query 1 at DBPedia and NYTimes using XML as output format, with folder "test"
+> cli -d examples\DBPediaNYTimes.ttl -f JSON -folder test @q examples\q1.txt
+
+Evaluate query 3 at DBPedia and Drugbank
+> cli -s http://dbpedia.org/sparql -s http://www4.wiwiss.fu-berlin.de/drugbank/sparql @q examples\q2.txt
+
+Evaluate query 1 at DBPedia and NYTimes, verbose log messages to stdout at highest level (TRACE)
+> cli -verbose 2 -d examples\DBPediaNYTimes.ttl @q examples\q1.txt
+
+Evaluate query 1 at DBPedia and NYTimes, verbose log messages to file at level 1 (INFO)
+> cli -verbose 1 -logtofile -d examples\DBPediaNYTimes.ttl @q examples\q1.txt
+
+Evaluate a set of queries at DBPedia, NYTimes, LinkedMDB
+> cli -d examples\DBPediaNYTimesLinkedMDB.ttl @q examples\queries.txt
+
+Evaluate query 1 and query 5 at DBPedia, NYTimes, LinkedMDB
+> cli -d examples\DBPediaNYTimesLinkedMDB.ttl @q examples\q1.txt @q examples\CD5.txt
+
+Evaluate the specified query at DBPedia
+> cli -s http://dbpedia.org/sparql -q "SELECT ?President WHERE {
+	?President &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> 
+	&lt;http://dbpedia.org/class/yago/PresidentsOfTheUnitedStates> . }"
+
+Evaluate query 1 at DBPedia and NYTimes, and apply the specified fedx configuration (prints query plan)
+> cli -c examples\fedxConfig.prop -d examples\DBPediaNYTimes.ttl @q examples\q1.txt
+
+Evaluate query 1 at DBPedia and NYTimes. Data sources specified implicetly using dataConfig 
+setting in fedx configuration and apply the specified fedx configuration (prints query plan)
+> cli -c examples\fedxConfig-dataCfg.prop @q examples\q1.txt
+
+Evaluate query 1 at the specified local Sesame NativeStores of DBPedia and NYTimes
+> cli -c examples\fedxConfig.prop -d examples\DBPediaNYTimes-local.ttl @q examples\q1.txt
+</pre>
+
+
+<h3>License Information</h3>
+
+<p>FedX is licensed under the GNU Affero General Public License (AGPL) for use in open source applications.
+For proprietary, closed source applications, and other commercial applications, we offer alternative 
+license terms upon request.</p>
+
+
+<h3>Contact</h3>
+
+<p>If you have any questions, concerns or if you find any bugs, please do not hesitate to send an email to
+our mailing list iwb-discussion (at) googlegroups.com
+</p>
+
+
+<p>(c) 2011-2012 fluid Operations AG <br \>
+<a href="http://www.fluidops.com">http://www.fluidops.com</a><br \>
+Last updated: 4.07.2012
+</div>
+</body>
+
+</html>

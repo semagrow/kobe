@@ -1,0 +1,8 @@
+SELECT DISTINCT $Drug ?Thumb ?Indication WHERE {
+ ?Drug <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Drug> .
+ ?Drug <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Alcohols> .
+ ?Drug <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Beta_blockers> .
+ ?Drug <http://dbpedia.org/ontology/thumbnail> ?Thumb .
+ ?y <http://www.w3.org/2002/07/owl#sameAs> ?Drug . 
+ ?y <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/indication> ?Indication .
+}

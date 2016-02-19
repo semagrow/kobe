@@ -1,0 +1,7 @@
+This is a list of some available SPARQL endpoints:
+
+DBpedia: http://dbpedia.org/sparql
+NYTimes: http://api.talis.com/stores/nytimes/services/sparql
+LinkedMDB: http://data.linkedmdb.org/sparql
+Drugbank: http://www4.wiwiss.fu-berlin.de/drugbank/sparql
+KEGG (Drug): http://kegg.bio2rdf.org/sparql

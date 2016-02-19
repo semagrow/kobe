@@ -1,0 +1,114 @@
+@prefix ds:<http://aksw.org/fedsum/>.
+#---------------------http://localhost:8890/sparql Summaries-------------------------------
+[] a ds:Service ;
+     ds:url   <http://localhost:8890/sparql> ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p1> ;
+           ds:sbjAuthority <http://auth13> ; 
+           ds:objAuthority <http://auth13> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p3> ;
+           ds:sbjAuthority <http://auth1> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p4> ;
+           ds:sbjAuthority <http://auth12> ; 
+           ds:objAuthority <http://common> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p5> ;
+           ds:sbjAuthority <http://auth12> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p2> ;
+           ds:sbjAuthority <http://auth2> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p6> ;
+           ds:sbjAuthority <http://auth1> ; 
+           ds:objAuthority <http://common> ; 
+         ] ;
+             .
+#---------------------http://localhost:8891/sparql Summaries-------------------------------
+[] a ds:Service ;
+     ds:url   <http://localhost:8891/sparql> ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p1> ;
+           ds:sbjAuthority <http://auth12> ; 
+           ds:objAuthority <http://auth2> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p3> ;
+           ds:sbjAuthority <http://auth12> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p0> ;
+           ds:sbjAuthority <http://auth13>, <http://auth12> ; 
+           ds:objAuthority <http://auth2>, <http://auth13> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p5> ;
+           ds:sbjAuthority <http://auth2> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p6> ;
+           ds:sbjAuthority <http://common> ; 
+           ds:objAuthority <http://common> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p9> ;
+           ds:sbjAuthority <http://auth3> ; 
+           ds:objAuthority <http://auth3> ; 
+         ] ;
+             .
+#---------------------http://localhost:8892/sparql Summaries-------------------------------
+[] a ds:Service ;
+     ds:url   <http://localhost:8892/sparql> ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p3> ;
+           ds:sbjAuthority <http://auth3>, <http://auth2> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p9> ;
+           ds:sbjAuthority <http://auth3> ; 
+           ds:objAuthority <http://auth13> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p2> ;
+           ds:sbjAuthority <http://auth13> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p4> ;
+           ds:sbjAuthority <http://auth3> ; 
+           ds:objAuthority <http://common> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p5> ;
+           ds:sbjAuthority <http://auth13> ; 
+         ] ;
+     ds:capability
+         [
+           ds:predicate  <http://common/schema/p0> ;
+           ds:sbjAuthority <http://auth3> ; 
+           ds:objAuthority <http://auth2> ; 
+         ] ;
+             .
+#---------End---------

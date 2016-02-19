@@ -1,0 +1,266 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    /*<a name="line.1"></a>
+<FONT color="green">002</FONT>     * Copyright (C) 2008-2012, fluid Operations AG<a name="line.2"></a>
+<FONT color="green">003</FONT>     *<a name="line.3"></a>
+<FONT color="green">004</FONT>     * FedX is free software: you can redistribute it and/or modify<a name="line.4"></a>
+<FONT color="green">005</FONT>     * it under the terms of the GNU Affero General Public License as<a name="line.5"></a>
+<FONT color="green">006</FONT>     * published by the Free Software Foundation, either version 3 of the<a name="line.6"></a>
+<FONT color="green">007</FONT>     * License, or (at your option) any later version.<a name="line.7"></a>
+<FONT color="green">008</FONT>     * <a name="line.8"></a>
+<FONT color="green">009</FONT>     * This program is distributed in the hope that it will be useful,<a name="line.9"></a>
+<FONT color="green">010</FONT>     * but WITHOUT ANY WARRANTY; without even the implied warranty of<a name="line.10"></a>
+<FONT color="green">011</FONT>     * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<a name="line.11"></a>
+<FONT color="green">012</FONT>     * GNU Affero General Public License for more details.<a name="line.12"></a>
+<FONT color="green">013</FONT>     * <a name="line.13"></a>
+<FONT color="green">014</FONT>     * You should have received a copy of the GNU Affero General Public License<a name="line.14"></a>
+<FONT color="green">015</FONT>     * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.<a name="line.15"></a>
+<FONT color="green">016</FONT>     */<a name="line.16"></a>
+<FONT color="green">017</FONT>    <a name="line.17"></a>
+<FONT color="green">018</FONT>    package com.fluidops.fedx.evaluation;<a name="line.18"></a>
+<FONT color="green">019</FONT>    <a name="line.19"></a>
+<FONT color="green">020</FONT>    import info.aduna.iteration.CloseableIteration;<a name="line.20"></a>
+<FONT color="green">021</FONT>    <a name="line.21"></a>
+<FONT color="green">022</FONT>    import org.openrdf.model.Resource;<a name="line.22"></a>
+<FONT color="green">023</FONT>    import org.openrdf.model.Statement;<a name="line.23"></a>
+<FONT color="green">024</FONT>    import org.openrdf.model.URI;<a name="line.24"></a>
+<FONT color="green">025</FONT>    import org.openrdf.model.Value;<a name="line.25"></a>
+<FONT color="green">026</FONT>    import org.openrdf.query.BindingSet;<a name="line.26"></a>
+<FONT color="green">027</FONT>    import org.openrdf.query.MalformedQueryException;<a name="line.27"></a>
+<FONT color="green">028</FONT>    import org.openrdf.query.QueryEvaluationException;<a name="line.28"></a>
+<FONT color="green">029</FONT>    import org.openrdf.query.algebra.StatementPattern;<a name="line.29"></a>
+<FONT color="green">030</FONT>    import org.openrdf.query.algebra.TupleExpr;<a name="line.30"></a>
+<FONT color="green">031</FONT>    import org.openrdf.query.impl.EmptyBindingSet;<a name="line.31"></a>
+<FONT color="green">032</FONT>    import org.openrdf.repository.RepositoryConnection;<a name="line.32"></a>
+<FONT color="green">033</FONT>    import org.openrdf.repository.RepositoryException;<a name="line.33"></a>
+<FONT color="green">034</FONT>    <a name="line.34"></a>
+<FONT color="green">035</FONT>    import com.fluidops.fedx.algebra.FilterValueExpr;<a name="line.35"></a>
+<FONT color="green">036</FONT>    import com.fluidops.fedx.structures.QueryType;<a name="line.36"></a>
+<FONT color="green">037</FONT>    <a name="line.37"></a>
+<FONT color="green">038</FONT>    <a name="line.38"></a>
+<FONT color="green">039</FONT>    /**<a name="line.39"></a>
+<FONT color="green">040</FONT>     * Interface for implementations of triple sources. Particular implementations define<a name="line.40"></a>
+<FONT color="green">041</FONT>     * how to evaluate the expression on the endpoint. Different implementations might<a name="line.41"></a>
+<FONT color="green">042</FONT>     * be necessary depending on the underlying repository.<a name="line.42"></a>
+<FONT color="green">043</FONT>     * <a name="line.43"></a>
+<FONT color="green">044</FONT>     * @author Andreas Schwarte<a name="line.44"></a>
+<FONT color="green">045</FONT>     *<a name="line.45"></a>
+<FONT color="green">046</FONT>     * @see SparqlTripleSource<a name="line.46"></a>
+<FONT color="green">047</FONT>     * @see RepositoryTripleSource<a name="line.47"></a>
+<FONT color="green">048</FONT>     */<a name="line.48"></a>
+<FONT color="green">049</FONT>    public interface TripleSource {<a name="line.49"></a>
+<FONT color="green">050</FONT>    <a name="line.50"></a>
+<FONT color="green">051</FONT>            <a name="line.51"></a>
+<FONT color="green">052</FONT>            /**<a name="line.52"></a>
+<FONT color="green">053</FONT>             * Evaluate the prepared query in its internal representation on the provided endpoint.<a name="line.53"></a>
+<FONT color="green">054</FONT>             * <a name="line.54"></a>
+<FONT color="green">055</FONT>             * @param preparedQuery<a name="line.55"></a>
+<FONT color="green">056</FONT>             *                      a prepared query to evaluate<a name="line.56"></a>
+<FONT color="green">057</FONT>             * @param conn<a name="line.57"></a>
+<FONT color="green">058</FONT>             *                      the connection to the endpoint<a name="line.58"></a>
+<FONT color="green">059</FONT>             * @param bindings<a name="line.59"></a>
+<FONT color="green">060</FONT>             *                      the bindings to use<a name="line.60"></a>
+<FONT color="green">061</FONT>             * @param filterExpr<a name="line.61"></a>
+<FONT color="green">062</FONT>             *                      the filter expression to apply or null if there is no filter or if it is evaluated already<a name="line.62"></a>
+<FONT color="green">063</FONT>             * <a name="line.63"></a>
+<FONT color="green">064</FONT>             * @return<a name="line.64"></a>
+<FONT color="green">065</FONT>             *              the resulting iteration<a name="line.65"></a>
+<FONT color="green">066</FONT>             *  <a name="line.66"></a>
+<FONT color="green">067</FONT>             * @throws RepositoryException<a name="line.67"></a>
+<FONT color="green">068</FONT>             * @throws MalformedQueryException<a name="line.68"></a>
+<FONT color="green">069</FONT>             * @throws QueryEvaluationException<a name="line.69"></a>
+<FONT color="green">070</FONT>             */<a name="line.70"></a>
+<FONT color="green">071</FONT>            public CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; getStatements(TupleExpr preparedQuery, RepositoryConnection conn, final BindingSet bindings, FilterValueExpr filterExpr) throws RepositoryException, MalformedQueryException, QueryEvaluationException;<a name="line.71"></a>
+<FONT color="green">072</FONT>    <a name="line.72"></a>
+<FONT color="green">073</FONT>            <a name="line.73"></a>
+<FONT color="green">074</FONT>            /**<a name="line.74"></a>
+<FONT color="green">075</FONT>             * Evaluate the prepared query (SPARQL query as String) on the provided endpoint.<a name="line.75"></a>
+<FONT color="green">076</FONT>             * <a name="line.76"></a>
+<FONT color="green">077</FONT>             * @param preparedQuery<a name="line.77"></a>
+<FONT color="green">078</FONT>             *                      a prepared query to evaluate (SPARQL query as String)<a name="line.78"></a>
+<FONT color="green">079</FONT>             * @param conn<a name="line.79"></a>
+<FONT color="green">080</FONT>             *                      the connection to the endpoint<a name="line.80"></a>
+<FONT color="green">081</FONT>             * @param bindings<a name="line.81"></a>
+<FONT color="green">082</FONT>             *                      the bindings to use<a name="line.82"></a>
+<FONT color="green">083</FONT>             * @param filterExpr<a name="line.83"></a>
+<FONT color="green">084</FONT>             *                      the filter expression to apply or null if there is no filter or if it is evaluated already<a name="line.84"></a>
+<FONT color="green">085</FONT>             * <a name="line.85"></a>
+<FONT color="green">086</FONT>             * @return<a name="line.86"></a>
+<FONT color="green">087</FONT>             *              the resulting iteration<a name="line.87"></a>
+<FONT color="green">088</FONT>             *  <a name="line.88"></a>
+<FONT color="green">089</FONT>             * @throws RepositoryException<a name="line.89"></a>
+<FONT color="green">090</FONT>             * @throws MalformedQueryException<a name="line.90"></a>
+<FONT color="green">091</FONT>             * @throws QueryEvaluationException<a name="line.91"></a>
+<FONT color="green">092</FONT>             */<a name="line.92"></a>
+<FONT color="green">093</FONT>            public CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; getStatements(String preparedQuery, RepositoryConnection conn, final BindingSet bindings, FilterValueExpr filterExpr) throws RepositoryException, MalformedQueryException, QueryEvaluationException;<a name="line.93"></a>
+<FONT color="green">094</FONT>    <a name="line.94"></a>
+<FONT color="green">095</FONT>            /**<a name="line.95"></a>
+<FONT color="green">096</FONT>             * Evaluate a given SPARQL query of the provided query type at the given source.<a name="line.96"></a>
+<FONT color="green">097</FONT>             * <a name="line.97"></a>
+<FONT color="green">098</FONT>             * @param preparedQuery<a name="line.98"></a>
+<FONT color="green">099</FONT>             * @param conn<a name="line.99"></a>
+<FONT color="green">100</FONT>             * @param queryType<a name="line.100"></a>
+<FONT color="green">101</FONT>             * @return<a name="line.101"></a>
+<FONT color="green">102</FONT>             * @throws RepositoryException<a name="line.102"></a>
+<FONT color="green">103</FONT>             * @throws MalformedQueryException<a name="line.103"></a>
+<FONT color="green">104</FONT>             * @throws QueryEvaluationException<a name="line.104"></a>
+<FONT color="green">105</FONT>             */<a name="line.105"></a>
+<FONT color="green">106</FONT>            public CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; getStatements(String preparedQuery, RepositoryConnection conn, QueryType queryType) throws RepositoryException, MalformedQueryException, QueryEvaluationException;<a name="line.106"></a>
+<FONT color="green">107</FONT>            <a name="line.107"></a>
+<FONT color="green">108</FONT>            /**<a name="line.108"></a>
+<FONT color="green">109</FONT>             * Evaluate the query expression on the provided endpoint.<a name="line.109"></a>
+<FONT color="green">110</FONT>             * <a name="line.110"></a>
+<FONT color="green">111</FONT>             * @param stmt<a name="line.111"></a>
+<FONT color="green">112</FONT>             *                      the stmt expression to evaluate<a name="line.112"></a>
+<FONT color="green">113</FONT>             * @param conn<a name="line.113"></a>
+<FONT color="green">114</FONT>             *                      the connection to the endpoint<a name="line.114"></a>
+<FONT color="green">115</FONT>             * @param bindings<a name="line.115"></a>
+<FONT color="green">116</FONT>             *                      the bindings to use<a name="line.116"></a>
+<FONT color="green">117</FONT>             * @param filterExpr<a name="line.117"></a>
+<FONT color="green">118</FONT>             *                      the filter expression to apply or null if there is no filter or if it is evaluated already<a name="line.118"></a>
+<FONT color="green">119</FONT>             * <a name="line.119"></a>
+<FONT color="green">120</FONT>             * @return<a name="line.120"></a>
+<FONT color="green">121</FONT>             *              the resulting iteration<a name="line.121"></a>
+<FONT color="green">122</FONT>             *      <a name="line.122"></a>
+<FONT color="green">123</FONT>             * @throws RepositoryException<a name="line.123"></a>
+<FONT color="green">124</FONT>             * @throws MalformedQueryException<a name="line.124"></a>
+<FONT color="green">125</FONT>             * @throws QueryEvaluationException<a name="line.125"></a>
+<FONT color="green">126</FONT>             */<a name="line.126"></a>
+<FONT color="green">127</FONT>            public CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; getStatements(StatementPattern stmt, RepositoryConnection conn, final BindingSet bindings, FilterValueExpr filterExpr) throws RepositoryException, MalformedQueryException, QueryEvaluationException;<a name="line.127"></a>
+<FONT color="green">128</FONT>    <a name="line.128"></a>
+<FONT color="green">129</FONT>            <a name="line.129"></a>
+<FONT color="green">130</FONT>            /**<a name="line.130"></a>
+<FONT color="green">131</FONT>             * Return the statements matching the given pattern as a {@link Statement} iteration.<a name="line.131"></a>
+<FONT color="green">132</FONT>             * <a name="line.132"></a>
+<FONT color="green">133</FONT>             * @param stmt<a name="line.133"></a>
+<FONT color="green">134</FONT>             *                      the stmt expression to evaluate<a name="line.134"></a>
+<FONT color="green">135</FONT>             * @param conn<a name="line.135"></a>
+<FONT color="green">136</FONT>             *                      the connection to the endpoint<a name="line.136"></a>
+<FONT color="green">137</FONT>             * <a name="line.137"></a>
+<FONT color="green">138</FONT>             * @return<a name="line.138"></a>
+<FONT color="green">139</FONT>             *                      the resulting itereation<a name="line.139"></a>
+<FONT color="green">140</FONT>             * <a name="line.140"></a>
+<FONT color="green">141</FONT>             * @throws RepositoryException<a name="line.141"></a>
+<FONT color="green">142</FONT>             * @throws MalformedQueryException<a name="line.142"></a>
+<FONT color="green">143</FONT>             * @throws QueryEvaluationException<a name="line.143"></a>
+<FONT color="green">144</FONT>             */<a name="line.144"></a>
+<FONT color="green">145</FONT>            public CloseableIteration&lt;Statement, QueryEvaluationException&gt; getStatements(RepositoryConnection conn, Resource subj, URI pred, Value obj, Resource... contexts) throws RepositoryException, MalformedQueryException, QueryEvaluationException;<a name="line.145"></a>
+<FONT color="green">146</FONT>            <a name="line.146"></a>
+<FONT color="green">147</FONT>            <a name="line.147"></a>
+<FONT color="green">148</FONT>            /**<a name="line.148"></a>
+<FONT color="green">149</FONT>             * Check if the provided statement can return results.<a name="line.149"></a>
+<FONT color="green">150</FONT>             * <a name="line.150"></a>
+<FONT color="green">151</FONT>             * @param stmt<a name="line.151"></a>
+<FONT color="green">152</FONT>             * @param conn<a name="line.152"></a>
+<FONT color="green">153</FONT>             * @param bindings<a name="line.153"></a>
+<FONT color="green">154</FONT>             *                      a binding set. in case no bindings are present, an {@link EmptyBindingSet} can be used (i.e. never null)<a name="line.154"></a>
+<FONT color="green">155</FONT>             * <a name="line.155"></a>
+<FONT color="green">156</FONT>             * @return<a name="line.156"></a>
+<FONT color="green">157</FONT>             * @throws RepositoryException<a name="line.157"></a>
+<FONT color="green">158</FONT>             * @throws MalformedQueryException<a name="line.158"></a>
+<FONT color="green">159</FONT>             * @throws QueryEvaluationException<a name="line.159"></a>
+<FONT color="green">160</FONT>             */<a name="line.160"></a>
+<FONT color="green">161</FONT>            public boolean hasStatements(StatementPattern stmt, RepositoryConnection conn, BindingSet bindings) throws RepositoryException, MalformedQueryException, QueryEvaluationException;<a name="line.161"></a>
+<FONT color="green">162</FONT>            <a name="line.162"></a>
+<FONT color="green">163</FONT>            /**<a name="line.163"></a>
+<FONT color="green">164</FONT>             * Check if the repository can return results for the given triple pattern represented<a name="line.164"></a>
+<FONT color="green">165</FONT>             * by subj, pred and obj<a name="line.165"></a>
+<FONT color="green">166</FONT>             * <a name="line.166"></a>
+<FONT color="green">167</FONT>             * @param conn<a name="line.167"></a>
+<FONT color="green">168</FONT>             * @param subj<a name="line.168"></a>
+<FONT color="green">169</FONT>             * @param pred<a name="line.169"></a>
+<FONT color="green">170</FONT>             * @param obj<a name="line.170"></a>
+<FONT color="green">171</FONT>             * @param contexts<a name="line.171"></a>
+<FONT color="green">172</FONT>             * @return<a name="line.172"></a>
+<FONT color="green">173</FONT>             * @throws RepositoryException<a name="line.173"></a>
+<FONT color="green">174</FONT>             */<a name="line.174"></a>
+<FONT color="green">175</FONT>            public boolean hasStatements(RepositoryConnection conn, Resource subj, URI pred, Value obj, Resource...contexts) throws RepositoryException;<a name="line.175"></a>
+<FONT color="green">176</FONT>            <a name="line.176"></a>
+<FONT color="green">177</FONT>            /**<a name="line.177"></a>
+<FONT color="green">178</FONT>             * Check if the repository can return results for the given prepared<a name="line.178"></a>
+<FONT color="green">179</FONT>             * ASK query<a name="line.179"></a>
+<FONT color="green">180</FONT>             * <a name="line.180"></a>
+<FONT color="green">181</FONT>             * @param conn<a name="line.181"></a>
+<FONT color="green">182</FONT>             * @param subj<a name="line.182"></a>
+<FONT color="green">183</FONT>             * @param pred<a name="line.183"></a>
+<FONT color="green">184</FONT>             * @param obj<a name="line.184"></a>
+<FONT color="green">185</FONT>             * @param contexts<a name="line.185"></a>
+<FONT color="green">186</FONT>             * @return<a name="line.186"></a>
+<FONT color="green">187</FONT>             * @throws RepositoryException<a name="line.187"></a>
+<FONT color="green">188</FONT>             */<a name="line.188"></a>
+<FONT color="green">189</FONT>            public boolean hasStatements(String preparedAskQuery, RepositoryConnection conn, BindingSet bindings) throws RepositoryException, MalformedQueryException, QueryEvaluationException;<a name="line.189"></a>
+<FONT color="green">190</FONT>            <a name="line.190"></a>
+<FONT color="green">191</FONT>            <a name="line.191"></a>
+<FONT color="green">192</FONT>            /**<a name="line.192"></a>
+<FONT color="green">193</FONT>             * <a name="line.193"></a>
+<FONT color="green">194</FONT>             * @return<a name="line.194"></a>
+<FONT color="green">195</FONT>             *              true if a prepared query is to be used preferrably, false otherwise<a name="line.195"></a>
+<FONT color="green">196</FONT>             */<a name="line.196"></a>
+<FONT color="green">197</FONT>            public boolean usePreparedQuery();<a name="line.197"></a>
+<FONT color="green">198</FONT>            <a name="line.198"></a>
+<FONT color="green">199</FONT>            <a name="line.199"></a>
+<FONT color="green">200</FONT>    }<a name="line.200"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

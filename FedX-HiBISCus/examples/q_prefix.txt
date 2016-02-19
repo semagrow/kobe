@@ -1,0 +1,4 @@
+SELECT ?President ?Party WHERE {
+	?President rdf:type <http://dbpedia.org/class/yago/PresidentsOfTheUnitedStates> .
+	?President dbpedia:party <http://dbpedia.org/resource/Democratic_Party_%28United_States%29> . 
+}

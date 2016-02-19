@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>FedX Documentation</title>
+</head>
+
+<body>
+<div id="content" style="width:800px">
+
+<h2>Endpoint Management</h2>
+
+<a href="../Index.html">back</a>
+
+<p>In FedX any federation member is mapped to an <i>Endpoint</i>. The endpoint maintains all
+relevant information for a particular endpoint, e.g. how triples can be retrieved from the 
+endpoint. Endpoints can be added to the federation at initialization time or at runtime.</p>
+
+<p>In FedX we provide support methods to create <i>Endpoints</i> for SPARQL endpoints and 
+Sesame <i>NativeStore</i>s. The methods can be used to create endpoints easily.</p>
+
+<h3>Example: Using the endpoint Manager to create endpoints</h3>
+
+<pre>
+Config.initialize();
+List&lt;Endpoint&gt; endpoints = new ArrayList&lt;Endpoint&gt;();
+
+// initializing a SPARQL endpoint (with explicit name)
+endpoints.add( EndpointFactory.loadSPARQLEndpoint("dbpedia", "http://dbpedia.org/sparql"));
+
+// another SPARQL endpoint (name is constructed from url)
+endpoints.add( EndpointFactory.loadSPARQLEndpoint("http://api.talis.com/stores/nytimes/services/sparql"));
+
+// load a Sesame NativeStore (path either absolute or relative to Config#getBaseDir)
+endpoints.add( EndpointFactory.loadNativeEndpoint("mystory", "path/to/myNativeStore"));
+
+FedXFactory.initializeFederation(endpoints);
+</pre>
+
+For details about the methods please refer to the javadoc help of the class<i>EndpointFactory</i>
+
+
+<p><b>Note:</b> With the Endpoint mechanism it is basically possible to support any kind of SAIL implementation as federation member. 
+For documentation consider the javadoc, in particular <i>EndpointFactory</i> and  <i>EndpointProvider</i>.</p>
+
+</div>
+</body>
+</html>

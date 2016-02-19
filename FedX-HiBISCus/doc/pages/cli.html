@@ -1,0 +1,106 @@
+<html>
+<head>
+	<title>FedX Documentation</title>
+</head>
+
+<body>
+<div id="content" style="width:800px">
+
+<h2>FedX CLI</h2>
+
+<a href="../Index.html">back</a>
+
+<p>FedX brings a comprehensive CLI to evaluate queries on a set of specified data sources.</p>
+
+<pre>
+Usage:
+> FedX [Configuration] [Federation Setup] [Output] [Queries]
+> FedX -{help|version}
+
+WHERE
+[Configuration] (optional)
+Optionally specify the configuration to be used
+        -c path/to/fedxConfig
+        -verbose {0|1|2|3}
+        -logtofile
+        -p path/to/prefixDeclarations
+
+[Federation Setup] (optional)
+Specify one or more federation members
+        -s urlToSparqlEndpoint
+        -l path/to/NativeStore
+        -d path/to/dataconfig.ttl
+
+[Output] (optional)
+Specify the output options, default stdout. Files are created per query to 
+results/%outputFolder%/q_%id%.{json|xml}, where the outputFolder is the 
+current timestamp, if not specified otherwise.
+        -f {STDOUT,JSON,XML}
+        -folder outputFolder
+
+[Queries]
+Specify one or more queries, in file: separation of queries by empty line
+        -q sparqlquery
+        @q path/to/queryfile
+
+Notes:
+The federation members can be specified explicitely (-s,-l,-d) or implicitely 
+as 'dataConfig' via the fedx configuration (-f)
+
+If no PREFIX declarations are specified in the configurations, the CLI provides
+some common PREFIXES, currently rdf, rdfs and foaf. 
+</pre>
+
+
+<p>In the <i>examples</i> folder we provide many sample use cases. Here is 
+a list of sample commands:<p>
+
+<pre>
+Evaluate query 1 at DBPedia and NYTimes 
+> cli -d examples\DBPediaNYTimes.ttl @q examples\q1.txt
+
+Evaluate query 1 at DBPedia and NYTimes using JSON as output format
+> cli -d examples\DBPediaNYTimes.ttl -f JSON @q examples\q1.txt
+
+Evaluate query 1 at DBPedia and NYTimes using XML as output format, with folder "test"
+> cli -d examples\DBPediaNYTimes.ttl -f JSON -folder test @q examples\q1.txt
+
+Evaluate query 3 at DBPedia and Drugbank
+> cli -s http://dbpedia.org/sparql -s http://www4.wiwiss.fu-berlin.de/drugbank/sparql @q examples\q2.txt
+
+Evaluate query 1 at DBPedia and NYTimes, verbose log messages to stdout at highest level (TRACE)
+> cli -verbose 2 -d examples\DBPediaNYTimes.ttl @q examples\q1.txt
+
+Evaluate query 1 at DBPedia and NYTimes, verbose log messages to file at level 1 (INFO)
+> cli -verbose 1 -logtofile -d examples\DBPediaNYTimes.ttl @q examples\q1.txt
+
+Evaluate a set of queries at DBPedia, NYTimes, LinkedMDB
+> cli -d examples\DBPediaNYTimesLinkedMDB.ttl @q examples\queries.txt
+
+Evaluate query 1 and query 5 at DBPedia, NYTimes, LinkedMDB
+> cli -d examples\DBPediaNYTimesLinkedMDB.ttl @q examples\q1.txt @q examples\CD5.txt
+
+Evaluate the specified query at DBPedia
+> cli -s http://dbpedia.org/sparql -q "SELECT ?President WHERE {
+	?President &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> 
+	&lt;http://dbpedia.org/class/yago/PresidentsOfTheUnitedStates> . }"
+
+Evaluate query 1 at DBPedia and NYTimes, and apply the specified fedx configuration (prints query plan)
+> cli -c examples\fedxConfig.prop -d examples\DBPediaNYTimes.ttl @q examples\q1.txt
+
+Evaluate query 1 at DBPedia and NYTimes. Data sources specified implicetly using dataConfig 
+setting in fedx configuration and apply the specified fedx configuration (prints query plan)
+> cli -c examples\fedxConfig-dataCfg.prop @q examples\q1.txt
+
+Evaluate query 1 at the specified local Sesame NativeStores of DBPedia and NYTimes
+> cli -c examples\fedxConfig.prop -d examples\DBPediaNYTimes-local.ttl @q examples\q1.txt
+
+Use custom prefix declarations in the query
+> cli -p examples\prefixDeclarations.prop -d examples\DBpediaNYTimes.ttl @q examples\q_prefix.txt
+</pre>
+
+
+
+</div>
+</body>
+</html>

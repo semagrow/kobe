@@ -1,0 +1,177 @@
+<html>
+<head>
+	<title>FedX Documentation</title>
+</head>
+
+<body>
+<div id="content" style="width:800px">
+
+<h2>FedX in Java</h2>
+
+<a href="../Index.html">back</a>
+
+<p>FedX is implemented as a Sesame SAIL. To initialize FedX and the underlying federation SAIL, we 
+provide the FedXFactory class, which provides various methods for intuitive configuration. In the 
+following, we present various Java code snippets that illustrate how FedX can be used in an application.<p>
+
+<p>Basically, FedX can be used and accessed using the SAIL architecture (see 
+<a href="http://www.openrdf.org/doc/sesame2/system/ch05.html" target="_blank">Sesame SAIL documentation</a> for details.). 
+The (initialized) SailRepository can be obtained from any FedXFactory initialization method, the SAIL optionally can be
+obtained via the FederationManager. Besides using the Repository interface for creating queries, 
+we also provide a <i>QueryManager</i> class to conveniently create queries. The advantage of the <i>QueryManager</i> over 
+using the <i>SailRepositoryConnection</i> to create queries, is that preconfigured PREFIX declarations are added automatically
+to the query, i.e. the user can use common prefixes (such as rdf, foaf, etc.) without the need to specify them in the prologue
+of the query. See <a href="prefixDeclarations.html">PREFIX Declarations</a> for a detailed documentation</p>
+
+<h3>Example 1: Using a simple SPARQL Federation as a SailRepository</h3>
+
+<p>In the following example, we configure a federation with the publicly available DBpedia and NYTimes SPARQL endpoints. Note that
+in the beginning the configuration is initialized with the default properties. Please refer to <a href="configuration.html">Configuring FedX</a>
+for details.</p>
+
+<pre>
+Config.initialize();
+SailRepository repo = FedXFactory.initializeSparqlFederation(Arrays.asList(
+		"http://dbpedia.org/sparql",
+		"http://api.talis.com/stores/nytimes/services/sparql"));
+
+String q = "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\n"
+	+ "PREFIX dbpedia-owl: &lt;http://dbpedia.org/ontology/&gt;\n"
+	+ "SELECT ?President ?Party WHERE {\n"
+	+ "?President rdf:type dbpedia-owl:President .\n"
+	+ "?President dbpedia-owl:party ?Party . }";
+
+TupleQuery query = repo.getConnection().prepareTupleQuery(QueryLanguage.SPARQL, q);
+TupleQueryResult res = query.evaluate();
+
+while (res.hasNext()) {
+	System.out.println(res.next());
+}
+
+FederationManager.getInstance().shutDown();
+System.out.println("Done.");
+System.exit(0);
+</pre>
+
+
+<h3>Example 2: Setting up a simple SPARQL federation (With QueryManager)</h3>
+
+<p>Similarly to example 1, we use a federation of DBpedia and NYTimes. However, this time we use the QueryManager to prepare
+the query.</p>
+
+<pre>
+Config.initialize();
+FedXFactory.initializeSparqlFederation(Arrays.asList(
+		"http://dbpedia.org/sparql",
+		"http://api.talis.com/stores/nytimes/services/sparql"));
+
+String q = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
+		+ "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>\n"
+		+ "SELECT ?President ?Party WHERE {\n"
+		+ "?President rdf:type dbpedia-owl:President .\n"
+		+ "?President dbpedia-owl:party ?Party . }";
+
+TupleQuery query = QueryManager.prepareTupleQuery(q);
+TupleQueryResult res = query.evaluate();
+
+while (res.hasNext()) {
+	System.out.println(res.next());
+}
+
+FederationManager.getInstance().shutDown();
+System.out.println("Done.");
+System.exit(0);
+</pre>
+
+
+<h3>Example 3: Using a data configuration file</h3>
+
+<p>In this example we use a <a href="dataConfig.html">data configuration</a> file to set up the federation members.
+Note that in this example we use an initialized Repository to create the query, as well as the connection. Typically,
+in FedX the runtime type if this Repository is a <i>SAILRepository</i>. By using the repository connection to
+create the query, we lose FedX' options to automatically insert common <a href="prefixDeclarations.html">PREFIX Declarations</a>.</p>
+
+<pre>
+String dataConfig = "local/dataSourceConfig.ttl";
+Config.initialize();
+Repository repo = FedXFactory.initializeFederation(dataConfig);
+
+String q = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
+	+ "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>\n"
+	+ "SELECT ?President ?Party WHERE {\n"
+	+ "?President rdf:type dbpedia-owl:President .\n"
+	+ "?President dbpedia-owl:party ?Party . }";
+
+TupleQuery query = repo.getConnection().prepareTupleQuery(QueryLanguage.SPARQL, q);
+TupleQueryResult res = query.evaluate();
+
+while (res.hasNext()) {
+	System.out.println(res.next());
+}
+
+FederationManager.getInstance().shutDown();
+System.out.println("Done.");
+System.exit(0);
+</pre>
+
+
+<h3>Example 4: Using a FedX configuration file (with may implicitly define the federation members)</h3>
+
+<p>This example uses a <a href="configuration.html">FedX configuration file</a>, which defines the <a href="dataConfig.html">data configuration</a>
+via the dataConfig property. Note that also <a href="prefixDeclarations.html">PREFIX declarations</a> are defined.</p>
+
+<pre>
+// the FedX config implicitly defines a dataConfig
+String fedxConfig = "examples/fedxConfig-withPrefixDecl.prop";
+FedXFactory.initializeFederation(fedxConfig, Collections.&lt;Endpoint&gt;emptyList());
+
+String q = "SELECT ?President ?Party WHERE {\n"
+	+ "?President rdf:type dbpedia:President .\n"
+	+ "?President dbpedia:party ?Party . }";
+
+TupleQuery query = QueryManager.prepareTupleQuery(q);
+TupleQueryResult res = query.evaluate();
+
+while (res.hasNext()) {
+	System.out.println(res.next());
+}
+
+FederationManager.getInstance().shutDown();
+System.out.println("Done.");
+System.exit(0);
+</pre>
+
+
+<h3>Example 5: Setting up FedX using the Endpoint utilities</h3>
+
+<p>This example shows how to setup FedX using a mechanism to include dynamic endpoints. The endpoint mechanism is explained
+in detail <a href="endpointManager.html">here</a>.
+
+<pre>
+Config.initialize();
+List&lt;Endpoint&gt; endpoints = new ArrayList&lt;Endpoint&gt;();
+endpoints.add( EndpointFactory.loadSPARQLEndpoint("dbpedia", "http://dbpedia.org/sparql"));
+endpoints.add( EndpointFactory.loadSPARQLEndpoint("nytimes", "http://api.talis.com/stores/nytimes/services/sparql"));
+
+String q = "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\n"
+	+ "PREFIX dbpedia-owl: &lt;http://dbpedia.org/ontology/&gt;\n"
+	+ "SELECT ?President ?Party WHERE {\n"
+	+ "?President rdf:type dbpedia-owl:President .\n"
+	+ "?President dbpedia-owl:party ?Party . }";
+
+TupleQuery query = QueryManager.prepareTupleQuery(q);
+TupleQueryResult res = query.evaluate();
+
+while (res.hasNext()) {
+	System.out.println(res.next());
+}
+
+FederationManager.getInstance().shutDown();
+System.out.println("Done.");
+System.exit(0);
+</pre>
+
+
+</div>
+</body>
+</html>

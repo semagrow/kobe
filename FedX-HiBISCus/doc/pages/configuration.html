@@ -1,0 +1,108 @@
+<html>
+<head>
+	<title>FedX Documentation</title>
+	
+	<style type="text/css">
+<!--
+
+td, th {
+	border: 1px solid black;
+	border-collapse:collapse;
+	padding:1px 5px;
+	vertical-align: top;
+}
+
+-->
+</style>
+
+	
+</head>
+
+<body>
+<div id="content" style="width:800px">
+
+<h2>Configuring FedX</h2>
+
+<a href="../Index.html">back</a>
+
+<p>FedX provides various means for configuration. Configuration settings can be defined in a simple property file as
+key value pairs. The property file can then be used to initialize the FedX config via <i>Config.initialize("path/to/fedxConfig.prop")</i></p>
+
+<h3>Example property file:</h3>
+
+<pre>
+# FedX Configuration
+
+boundJoinBlockSize = 15
+debugQueryPlan = true
+dataConfig = examples/DBpediaNYTimes.ttl
+prefixDeclarations = examples/prefixDeclarations.prop
+</pre>
+
+
+<h3>Available Properties</h3>
+
+<table style="border:solid black 1px; border-collapse:collapse;width: 600px">
+	<tr>
+		<th><b>Property</b>
+		<th><b>Description</b>
+	<tr>
+		<td>dataConfig</td>
+		<td>Location of the data configuration, relative to execution directory</td>
+	</tr>
+	<tr>
+		<td>prefixDeclarations</td>
+		<td>Path to prefix declarations file, see <a href="prefixDeclarations.html">PREFIX Declarations</a></td>
+	</tr>
+	<tr>
+		<td>cacheLocation</td>
+		<td>Location where the memory cache gets persisted at shutdown, default <i>cache.db</i></td>
+	</tr>
+	<tr>
+		<td>joinWorkerThreads</td>
+		<td>The number of join worker threads for parallelization, default <i>20</i></td>
+	</tr>
+	<tr>
+		<td>unionWorkerThreads</td>
+		<td>The number of union worker threads for parallelization, default <i>20</i></td>
+	</tr>
+	<tr>
+		<td>boundJoinBlockSize</td>
+		<td>Block size for bound joins, default <i>15</i></td>
+	</tr>
+	<tr>
+		<td>enforceMaxQueryTime</td>
+		<td>Max query time in seconds, 0 to disable, default <i>30</i></td>
+	</tr>
+	<tr>
+		<td>baseDir</td>
+		<td>The base directory used for loading repositories, default <i>current working dir</i></td>
+	</tr>
+	<tr>
+		<td>debugQueryPlan</td>
+		<td>Print the optimized query execution plan, default <i>false</i></td>
+	</tr>
+	<tr>
+		<td>debugWorkerScheduler</td>
+		<td>Print debug information in the worker scheduler, default <i>false</i></td>
+	</tr>
+	<tr>
+		<td>enableMonitoring</td>
+		<td>Flag to enable/disable monitoring features, default <i>false</i></td>
+	</tr>
+	<tr>
+		<td>monitoring.logQueryPlan</td>
+		<td>Flag to enable/disable query plan logging via Java class <i>QueryPlanLog</i>, default <i>false</i>.
+	 	The <i>QueryPlanLog</i> facility allows to retrieve the query execution plan from a variable local to 
+	 	the executing thread.</td>	
+	</tr>
+	<tr>
+		<td>monitoring.logQueries</td>
+		<td>Flag to enable/disable query logging via <i>QueryLog</i>, default <i>false</i>. 
+	 		The {@link QueryLog} facility allows to log all queries to a file.</td>
+	</tr>		
+</table>
+
+</div>
+</body>
+</html>

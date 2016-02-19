@@ -1,0 +1,21 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?President ?Party WHERE {
+	?President rdf:type <http://dbpedia.org/class/yago/PresidentsOfTheUnitedStates> .
+	?President dbpedia-owl:party <http://dbpedia.org/resource/Democratic_Party_%28United_States%29> . 
+}
+
+SELECT ?film ?director ?genre WHERE {
+   ?film <http://dbpedia.org/ontology/director>  ?director .
+   ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .
+   ?x <http://www.w3.org/2002/07/owl#sameAs> ?film .
+   ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre .
+}
+
+SELECT ?president ?party ?page WHERE {
+   ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .
+   ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .
+   ?president <http://dbpedia.org/ontology/party> ?party .
+   ?x <http://data.nytimes.com/elements/topicPage> ?page .
+   ?x <http://www.w3.org/2002/07/owl#sameAs> ?president .
+}

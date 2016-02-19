@@ -1,0 +1,10 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+<http://DBpedia> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://dbpedia.org/sparql".
+
+<http://NYtimes> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://api.talis.com/stores/nytimes/services/sparql".
+
+
+

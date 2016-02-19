@@ -1,0 +1,523 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    /*<a name="line.1"></a>
+<FONT color="green">002</FONT>     * Copyright (C) 2008-2012, fluid Operations AG<a name="line.2"></a>
+<FONT color="green">003</FONT>     *<a name="line.3"></a>
+<FONT color="green">004</FONT>     * FedX is free software: you can redistribute it and/or modify<a name="line.4"></a>
+<FONT color="green">005</FONT>     * it under the terms of the GNU Affero General Public License as<a name="line.5"></a>
+<FONT color="green">006</FONT>     * published by the Free Software Foundation, either version 3 of the<a name="line.6"></a>
+<FONT color="green">007</FONT>     * License, or (at your option) any later version.<a name="line.7"></a>
+<FONT color="green">008</FONT>     * <a name="line.8"></a>
+<FONT color="green">009</FONT>     * This program is distributed in the hope that it will be useful,<a name="line.9"></a>
+<FONT color="green">010</FONT>     * but WITHOUT ANY WARRANTY; without even the implied warranty of<a name="line.10"></a>
+<FONT color="green">011</FONT>     * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<a name="line.11"></a>
+<FONT color="green">012</FONT>     * GNU Affero General Public License for more details.<a name="line.12"></a>
+<FONT color="green">013</FONT>     * <a name="line.13"></a>
+<FONT color="green">014</FONT>     * You should have received a copy of the GNU Affero General Public License<a name="line.14"></a>
+<FONT color="green">015</FONT>     * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.<a name="line.15"></a>
+<FONT color="green">016</FONT>     */<a name="line.16"></a>
+<FONT color="green">017</FONT>    <a name="line.17"></a>
+<FONT color="green">018</FONT>    package com.fluidops.fedx.evaluation;<a name="line.18"></a>
+<FONT color="green">019</FONT>    <a name="line.19"></a>
+<FONT color="green">020</FONT>    import info.aduna.iteration.CloseableIteration;<a name="line.20"></a>
+<FONT color="green">021</FONT>    import info.aduna.iteration.EmptyIteration;<a name="line.21"></a>
+<FONT color="green">022</FONT>    import info.aduna.iteration.SingletonIteration;<a name="line.22"></a>
+<FONT color="green">023</FONT>    <a name="line.23"></a>
+<FONT color="green">024</FONT>    import java.util.List;<a name="line.24"></a>
+<FONT color="green">025</FONT>    import java.util.concurrent.Executor;<a name="line.25"></a>
+<FONT color="green">026</FONT>    <a name="line.26"></a>
+<FONT color="green">027</FONT>    import org.apache.log4j.Logger;<a name="line.27"></a>
+<FONT color="green">028</FONT>    import org.openrdf.model.Resource;<a name="line.28"></a>
+<FONT color="green">029</FONT>    import org.openrdf.model.Statement;<a name="line.29"></a>
+<FONT color="green">030</FONT>    import org.openrdf.model.URI;<a name="line.30"></a>
+<FONT color="green">031</FONT>    import org.openrdf.model.Value;<a name="line.31"></a>
+<FONT color="green">032</FONT>    import org.openrdf.model.ValueFactory;<a name="line.32"></a>
+<FONT color="green">033</FONT>    import org.openrdf.model.impl.BooleanLiteralImpl;<a name="line.33"></a>
+<FONT color="green">034</FONT>    import org.openrdf.model.impl.StatementImpl;<a name="line.34"></a>
+<FONT color="green">035</FONT>    import org.openrdf.model.impl.ValueFactoryImpl;<a name="line.35"></a>
+<FONT color="green">036</FONT>    import org.openrdf.query.BindingSet;<a name="line.36"></a>
+<FONT color="green">037</FONT>    import org.openrdf.query.MalformedQueryException;<a name="line.37"></a>
+<FONT color="green">038</FONT>    import org.openrdf.query.QueryEvaluationException;<a name="line.38"></a>
+<FONT color="green">039</FONT>    import org.openrdf.query.algebra.TupleExpr;<a name="line.39"></a>
+<FONT color="green">040</FONT>    import org.openrdf.query.algebra.ValueExpr;<a name="line.40"></a>
+<FONT color="green">041</FONT>    import org.openrdf.query.algebra.evaluation.ValueExprEvaluationException;<a name="line.41"></a>
+<FONT color="green">042</FONT>    import org.openrdf.query.algebra.evaluation.impl.EvaluationStrategyImpl;<a name="line.42"></a>
+<FONT color="green">043</FONT>    import org.openrdf.query.algebra.evaluation.util.QueryEvaluationUtil;<a name="line.43"></a>
+<FONT color="green">044</FONT>    import org.openrdf.query.impl.EmptyBindingSet;<a name="line.44"></a>
+<FONT color="green">045</FONT>    import org.openrdf.repository.RepositoryConnection;<a name="line.45"></a>
+<FONT color="green">046</FONT>    import org.openrdf.repository.RepositoryException;<a name="line.46"></a>
+<FONT color="green">047</FONT>    <a name="line.47"></a>
+<FONT color="green">048</FONT>    import com.fluidops.fedx.EndpointManager;<a name="line.48"></a>
+<FONT color="green">049</FONT>    import com.fluidops.fedx.FederationManager;<a name="line.49"></a>
+<FONT color="green">050</FONT>    import com.fluidops.fedx.algebra.CheckStatementPattern;<a name="line.50"></a>
+<FONT color="green">051</FONT>    import com.fluidops.fedx.algebra.ConjunctiveFilterExpr;<a name="line.51"></a>
+<FONT color="green">052</FONT>    import com.fluidops.fedx.algebra.EmptyResult;<a name="line.52"></a>
+<FONT color="green">053</FONT>    import com.fluidops.fedx.algebra.ExclusiveGroup;<a name="line.53"></a>
+<FONT color="green">054</FONT>    import com.fluidops.fedx.algebra.FedXService;<a name="line.54"></a>
+<FONT color="green">055</FONT>    import com.fluidops.fedx.algebra.FilterExpr;<a name="line.55"></a>
+<FONT color="green">056</FONT>    import com.fluidops.fedx.algebra.IndependentJoinGroup;<a name="line.56"></a>
+<FONT color="green">057</FONT>    import com.fluidops.fedx.algebra.NJoin;<a name="line.57"></a>
+<FONT color="green">058</FONT>    import com.fluidops.fedx.algebra.NUnion;<a name="line.58"></a>
+<FONT color="green">059</FONT>    import com.fluidops.fedx.algebra.SingleSourceQuery;<a name="line.59"></a>
+<FONT color="green">060</FONT>    import com.fluidops.fedx.algebra.StatementSource;<a name="line.60"></a>
+<FONT color="green">061</FONT>    import com.fluidops.fedx.algebra.StatementTupleExpr;<a name="line.61"></a>
+<FONT color="green">062</FONT>    import com.fluidops.fedx.cache.Cache;<a name="line.62"></a>
+<FONT color="green">063</FONT>    import com.fluidops.fedx.cache.CacheUtils;<a name="line.63"></a>
+<FONT color="green">064</FONT>    import com.fluidops.fedx.evaluation.concurrent.ControlledWorkerScheduler;<a name="line.64"></a>
+<FONT color="green">065</FONT>    import com.fluidops.fedx.evaluation.concurrent.ParallelServiceExecutor;<a name="line.65"></a>
+<FONT color="green">066</FONT>    import com.fluidops.fedx.evaluation.join.ControlledWorkerBoundJoin;<a name="line.66"></a>
+<FONT color="green">067</FONT>    import com.fluidops.fedx.evaluation.join.ControlledWorkerJoin;<a name="line.67"></a>
+<FONT color="green">068</FONT>    import com.fluidops.fedx.evaluation.join.SynchronousBoundJoin;<a name="line.68"></a>
+<FONT color="green">069</FONT>    import com.fluidops.fedx.evaluation.join.SynchronousJoin;<a name="line.69"></a>
+<FONT color="green">070</FONT>    import com.fluidops.fedx.evaluation.union.ControlledWorkerUnion;<a name="line.70"></a>
+<FONT color="green">071</FONT>    import com.fluidops.fedx.evaluation.union.ParallelGetStatementsTask;<a name="line.71"></a>
+<FONT color="green">072</FONT>    import com.fluidops.fedx.evaluation.union.ParallelPreparedAlgebraUnionTask;<a name="line.72"></a>
+<FONT color="green">073</FONT>    import com.fluidops.fedx.evaluation.union.ParallelPreparedUnionTask;<a name="line.73"></a>
+<FONT color="green">074</FONT>    import com.fluidops.fedx.evaluation.union.ParallelUnionOperatorTask;<a name="line.74"></a>
+<FONT color="green">075</FONT>    import com.fluidops.fedx.evaluation.union.SynchronousWorkerUnion;<a name="line.75"></a>
+<FONT color="green">076</FONT>    import com.fluidops.fedx.evaluation.union.WorkerUnionBase;<a name="line.76"></a>
+<FONT color="green">077</FONT>    import com.fluidops.fedx.exception.FedXRuntimeException;<a name="line.77"></a>
+<FONT color="green">078</FONT>    import com.fluidops.fedx.statistics.Statistics;<a name="line.78"></a>
+<FONT color="green">079</FONT>    import com.fluidops.fedx.structures.Endpoint;<a name="line.79"></a>
+<FONT color="green">080</FONT>    import com.fluidops.fedx.structures.QueryInfo;<a name="line.80"></a>
+<FONT color="green">081</FONT>    <a name="line.81"></a>
+<FONT color="green">082</FONT>    <a name="line.82"></a>
+<FONT color="green">083</FONT>    /**<a name="line.83"></a>
+<FONT color="green">084</FONT>     * Base class for the Evaluation strategies.<a name="line.84"></a>
+<FONT color="green">085</FONT>     * <a name="line.85"></a>
+<FONT color="green">086</FONT>     * @author Andreas Schwarte<a name="line.86"></a>
+<FONT color="green">087</FONT>     * <a name="line.87"></a>
+<FONT color="green">088</FONT>     * @see RepositoryFederationEvalStrategy<a name="line.88"></a>
+<FONT color="green">089</FONT>     * @see SparqlFederationEvalStrategy<a name="line.89"></a>
+<FONT color="green">090</FONT>     *<a name="line.90"></a>
+<FONT color="green">091</FONT>     */<a name="line.91"></a>
+<FONT color="green">092</FONT>    public abstract class FederationEvalStrategy extends EvaluationStrategyImpl {<a name="line.92"></a>
+<FONT color="green">093</FONT>            <a name="line.93"></a>
+<FONT color="green">094</FONT>            public static Logger log = Logger.getLogger(FederationEvalStrategy.class);<a name="line.94"></a>
+<FONT color="green">095</FONT>            <a name="line.95"></a>
+<FONT color="green">096</FONT>            <a name="line.96"></a>
+<FONT color="green">097</FONT>            protected Executor executor;<a name="line.97"></a>
+<FONT color="green">098</FONT>            protected Cache cache;<a name="line.98"></a>
+<FONT color="green">099</FONT>            protected Statistics statistics;<a name="line.99"></a>
+<FONT color="green">100</FONT>            <a name="line.100"></a>
+<FONT color="green">101</FONT>            public FederationEvalStrategy() {<a name="line.101"></a>
+<FONT color="green">102</FONT>                    super(new org.openrdf.query.algebra.evaluation.TripleSource() {<a name="line.102"></a>
+<FONT color="green">103</FONT>    <a name="line.103"></a>
+<FONT color="green">104</FONT>                            @Override<a name="line.104"></a>
+<FONT color="green">105</FONT>                            public CloseableIteration&lt;? extends Statement, QueryEvaluationException&gt; getStatements(<a name="line.105"></a>
+<FONT color="green">106</FONT>                                            Resource subj, URI pred, Value obj, Resource... contexts)<a name="line.106"></a>
+<FONT color="green">107</FONT>                                            throws QueryEvaluationException {<a name="line.107"></a>
+<FONT color="green">108</FONT>                                    throw new FedXRuntimeException(<a name="line.108"></a>
+<FONT color="green">109</FONT>                                                    "Federation Strategy does not support org.openrdf.query.algebra.evaluation.TripleSource#getStatements." +<a name="line.109"></a>
+<FONT color="green">110</FONT>                                                    " If you encounter this exception, please report it.");<a name="line.110"></a>
+<FONT color="green">111</FONT>                            }<a name="line.111"></a>
+<FONT color="green">112</FONT>    <a name="line.112"></a>
+<FONT color="green">113</FONT>                            @Override<a name="line.113"></a>
+<FONT color="green">114</FONT>                            public ValueFactory getValueFactory() {<a name="line.114"></a>
+<FONT color="green">115</FONT>                                    return ValueFactoryImpl.getInstance();<a name="line.115"></a>
+<FONT color="green">116</FONT>                            }});    <a name="line.116"></a>
+<FONT color="green">117</FONT>                    this.executor = FederationManager.getInstance().getExecutor();<a name="line.117"></a>
+<FONT color="green">118</FONT>                    this.cache = FederationManager.getInstance().getCache();<a name="line.118"></a>
+<FONT color="green">119</FONT>                    this.statistics = FederationManager.getInstance().getStatistics();<a name="line.119"></a>
+<FONT color="green">120</FONT>            }<a name="line.120"></a>
+<FONT color="green">121</FONT>    <a name="line.121"></a>
+<FONT color="green">122</FONT>            <a name="line.122"></a>
+<FONT color="green">123</FONT>            @Override<a name="line.123"></a>
+<FONT color="green">124</FONT>            public CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluate(<a name="line.124"></a>
+<FONT color="green">125</FONT>                            TupleExpr expr, BindingSet bindings)<a name="line.125"></a>
+<FONT color="green">126</FONT>                            throws QueryEvaluationException {<a name="line.126"></a>
+<FONT color="green">127</FONT>                    <a name="line.127"></a>
+<FONT color="green">128</FONT>                    if (expr instanceof StatementTupleExpr) {<a name="line.128"></a>
+<FONT color="green">129</FONT>                            return ((StatementTupleExpr)expr).evaluate(bindings);<a name="line.129"></a>
+<FONT color="green">130</FONT>                    }<a name="line.130"></a>
+<FONT color="green">131</FONT>                                    <a name="line.131"></a>
+<FONT color="green">132</FONT>                    if (expr instanceof NJoin) {<a name="line.132"></a>
+<FONT color="green">133</FONT>                            return evaluateNJoin((NJoin)expr, bindings);<a name="line.133"></a>
+<FONT color="green">134</FONT>                    } <a name="line.134"></a>
+<FONT color="green">135</FONT>                    <a name="line.135"></a>
+<FONT color="green">136</FONT>                    if (expr instanceof NUnion) {<a name="line.136"></a>
+<FONT color="green">137</FONT>                            return evaluateNaryUnion((NUnion)expr, bindings);<a name="line.137"></a>
+<FONT color="green">138</FONT>                    }<a name="line.138"></a>
+<FONT color="green">139</FONT>                    <a name="line.139"></a>
+<FONT color="green">140</FONT>                    if (expr instanceof ExclusiveGroup) {<a name="line.140"></a>
+<FONT color="green">141</FONT>                            return ((ExclusiveGroup)expr).evaluate(bindings);<a name="line.141"></a>
+<FONT color="green">142</FONT>                    }<a name="line.142"></a>
+<FONT color="green">143</FONT>                    <a name="line.143"></a>
+<FONT color="green">144</FONT>                    if (expr instanceof SingleSourceQuery)<a name="line.144"></a>
+<FONT color="green">145</FONT>                            return evaluateSingleSourceQuery((SingleSourceQuery)expr, bindings);<a name="line.145"></a>
+<FONT color="green">146</FONT>                            <a name="line.146"></a>
+<FONT color="green">147</FONT>                    if (expr instanceof FedXService) {<a name="line.147"></a>
+<FONT color="green">148</FONT>                            return evaluateService((FedXService)expr, bindings);<a name="line.148"></a>
+<FONT color="green">149</FONT>                    }<a name="line.149"></a>
+<FONT color="green">150</FONT>                    <a name="line.150"></a>
+<FONT color="green">151</FONT>                    if (expr instanceof IndependentJoinGroup) {<a name="line.151"></a>
+<FONT color="green">152</FONT>                            return evaluateIndependentJoinGroup((IndependentJoinGroup)expr, bindings);      // XXX<a name="line.152"></a>
+<FONT color="green">153</FONT>                    }<a name="line.153"></a>
+<FONT color="green">154</FONT>                    <a name="line.154"></a>
+<FONT color="green">155</FONT>                    if(expr instanceof EmptyResult)<a name="line.155"></a>
+<FONT color="green">156</FONT>                            return new EmptyIteration&lt;BindingSet, QueryEvaluationException&gt;();<a name="line.156"></a>
+<FONT color="green">157</FONT>                    <a name="line.157"></a>
+<FONT color="green">158</FONT>                    return super.evaluate(expr, bindings);<a name="line.158"></a>
+<FONT color="green">159</FONT>            }<a name="line.159"></a>
+<FONT color="green">160</FONT>            <a name="line.160"></a>
+<FONT color="green">161</FONT>            <a name="line.161"></a>
+<FONT color="green">162</FONT>            <a name="line.162"></a>
+<FONT color="green">163</FONT>            <a name="line.163"></a>
+<FONT color="green">164</FONT>            /**<a name="line.164"></a>
+<FONT color="green">165</FONT>             * Retrieve the statements matching the provided subject, predicate and object value from the <a name="line.165"></a>
+<FONT color="green">166</FONT>             * federation members.&lt;p&gt;<a name="line.166"></a>
+<FONT color="green">167</FONT>             * <a name="line.167"></a>
+<FONT color="green">168</FONT>             * For a bound statement, i.e. a statement with no free variables, the statement itself is <a name="line.168"></a>
+<FONT color="green">169</FONT>             * returned if some member has this statement, an empty iteration otherwise.&lt;p&gt;<a name="line.169"></a>
+<FONT color="green">170</FONT>             * <a name="line.170"></a>
+<FONT color="green">171</FONT>             * If the statement has free variables, i.e. one of the provided arguments in &lt;code&gt;null&lt;/code&gt;,<a name="line.171"></a>
+<FONT color="green">172</FONT>             * the union of results from relevant statement sources is constructed.<a name="line.172"></a>
+<FONT color="green">173</FONT>             * <a name="line.173"></a>
+<FONT color="green">174</FONT>             * @param subj<a name="line.174"></a>
+<FONT color="green">175</FONT>             * @param pred<a name="line.175"></a>
+<FONT color="green">176</FONT>             * @param obj<a name="line.176"></a>
+<FONT color="green">177</FONT>             * @param contexts<a name="line.177"></a>
+<FONT color="green">178</FONT>             * @return<a name="line.178"></a>
+<FONT color="green">179</FONT>             * <a name="line.179"></a>
+<FONT color="green">180</FONT>             * @throws RepositoryException<a name="line.180"></a>
+<FONT color="green">181</FONT>             * @throws MalformedQueryException<a name="line.181"></a>
+<FONT color="green">182</FONT>             * @throws QueryEvaluationException<a name="line.182"></a>
+<FONT color="green">183</FONT>             */<a name="line.183"></a>
+<FONT color="green">184</FONT>            public CloseableIteration&lt;Statement, QueryEvaluationException&gt; getStatements(QueryInfo queryInfo, Resource subj, URI pred, Value obj, Resource... contexts) throws RepositoryException, MalformedQueryException, QueryEvaluationException {<a name="line.184"></a>
+<FONT color="green">185</FONT>    <a name="line.185"></a>
+<FONT color="green">186</FONT>                    if (contexts.length!=0)<a name="line.186"></a>
+<FONT color="green">187</FONT>                            log.warn("Context queries are not yet supported by FedX.");<a name="line.187"></a>
+<FONT color="green">188</FONT>                    <a name="line.188"></a>
+<FONT color="green">189</FONT>                    List&lt;Endpoint&gt; members = FederationManager.getInstance().getFederation().getMembers();<a name="line.189"></a>
+<FONT color="green">190</FONT>                    <a name="line.190"></a>
+<FONT color="green">191</FONT>                    <a name="line.191"></a>
+<FONT color="green">192</FONT>                    // a bound query: if at least one fed member provides results<a name="line.192"></a>
+<FONT color="green">193</FONT>                    // return the statement, otherwise empty result<a name="line.193"></a>
+<FONT color="green">194</FONT>                    if (subj!=null &amp;&amp; pred!=null &amp;&amp; obj!=null) {<a name="line.194"></a>
+<FONT color="green">195</FONT>                            if (CacheUtils.checkCacheUpdateCache(cache, members, subj, pred, obj)) {<a name="line.195"></a>
+<FONT color="green">196</FONT>                                    return new SingletonIteration&lt;Statement, QueryEvaluationException&gt;(new StatementImpl(subj, pred, obj));<a name="line.196"></a>
+<FONT color="green">197</FONT>                            }<a name="line.197"></a>
+<FONT color="green">198</FONT>                            return new EmptyIteration&lt;Statement, QueryEvaluationException&gt;();<a name="line.198"></a>
+<FONT color="green">199</FONT>                    }<a name="line.199"></a>
+<FONT color="green">200</FONT>                    <a name="line.200"></a>
+<FONT color="green">201</FONT>                    // form the union of results from relevant endpoints<a name="line.201"></a>
+<FONT color="green">202</FONT>                    List&lt;StatementSource&gt; sources = CacheUtils.checkCacheForStatementSourcesUpdateCache(cache, members, subj, pred, obj);<a name="line.202"></a>
+<FONT color="green">203</FONT>                    <a name="line.203"></a>
+<FONT color="green">204</FONT>                    if (sources.size()==0)<a name="line.204"></a>
+<FONT color="green">205</FONT>                            return new EmptyIteration&lt;Statement, QueryEvaluationException&gt;();<a name="line.205"></a>
+<FONT color="green">206</FONT>                    <a name="line.206"></a>
+<FONT color="green">207</FONT>                    if (sources.size()==1) {<a name="line.207"></a>
+<FONT color="green">208</FONT>                            Endpoint e = EndpointManager.getEndpointManager().getEndpoint(sources.get(0).getEndpointID());<a name="line.208"></a>
+<FONT color="green">209</FONT>                            return e.getTripleSource().getStatements(e.getConn(), subj, pred, obj, contexts);<a name="line.209"></a>
+<FONT color="green">210</FONT>                    }<a name="line.210"></a>
+<FONT color="green">211</FONT>                    <a name="line.211"></a>
+<FONT color="green">212</FONT>                    // TODO why not collect in parallel?<a name="line.212"></a>
+<FONT color="green">213</FONT>                    WorkerUnionBase&lt;Statement&gt; union = new SynchronousWorkerUnion&lt;Statement&gt;(queryInfo);                <a name="line.213"></a>
+<FONT color="green">214</FONT>                    <a name="line.214"></a>
+<FONT color="green">215</FONT>                    for (StatementSource source : sources) {<a name="line.215"></a>
+<FONT color="green">216</FONT>                            Endpoint e = EndpointManager.getEndpointManager().getEndpoint(source.getEndpointID());<a name="line.216"></a>
+<FONT color="green">217</FONT>                            ParallelGetStatementsTask task = new ParallelGetStatementsTask(union, e.getTripleSource(), e.getConn(), subj, pred, obj, contexts);<a name="line.217"></a>
+<FONT color="green">218</FONT>                            union.addTask(task);<a name="line.218"></a>
+<FONT color="green">219</FONT>                    }<a name="line.219"></a>
+<FONT color="green">220</FONT>                    <a name="line.220"></a>
+<FONT color="green">221</FONT>                    // run the union in a separate thread<a name="line.221"></a>
+<FONT color="green">222</FONT>                    executor.execute(union);<a name="line.222"></a>
+<FONT color="green">223</FONT>                    <a name="line.223"></a>
+<FONT color="green">224</FONT>                    // TODO distinct iteration ?<a name="line.224"></a>
+<FONT color="green">225</FONT>                    <a name="line.225"></a>
+<FONT color="green">226</FONT>                    return union;<a name="line.226"></a>
+<FONT color="green">227</FONT>            }<a name="line.227"></a>
+<FONT color="green">228</FONT>            <a name="line.228"></a>
+<FONT color="green">229</FONT>            <a name="line.229"></a>
+<FONT color="green">230</FONT>            public CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateService(FedXService service, BindingSet bindings) throws QueryEvaluationException {<a name="line.230"></a>
+<FONT color="green">231</FONT>                    <a name="line.231"></a>
+<FONT color="green">232</FONT>                    ParallelServiceExecutor pe = new ParallelServiceExecutor(service, this, bindings);<a name="line.232"></a>
+<FONT color="green">233</FONT>                    pe.run();               // non-blocking (blocking happens in the iterator)<a name="line.233"></a>
+<FONT color="green">234</FONT>                    return pe;<a name="line.234"></a>
+<FONT color="green">235</FONT>            }<a name="line.235"></a>
+<FONT color="green">236</FONT>            <a name="line.236"></a>
+<FONT color="green">237</FONT>            <a name="line.237"></a>
+<FONT color="green">238</FONT>            public CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateSingleSourceQuery(SingleSourceQuery query, BindingSet bindings) throws QueryEvaluationException {<a name="line.238"></a>
+<FONT color="green">239</FONT>                    <a name="line.239"></a>
+<FONT color="green">240</FONT>                    try<a name="line.240"></a>
+<FONT color="green">241</FONT>                    {<a name="line.241"></a>
+<FONT color="green">242</FONT>                            Endpoint source = query.getSource();            <a name="line.242"></a>
+<FONT color="green">243</FONT>                            return source.getTripleSource().getStatements(query.getQueryString(), source.getConn(), query.getQueryInfo().getQueryType());<a name="line.243"></a>
+<FONT color="green">244</FONT>                    } catch (RepositoryException e) {<a name="line.244"></a>
+<FONT color="green">245</FONT>                            throw new QueryEvaluationException(e);<a name="line.245"></a>
+<FONT color="green">246</FONT>                    } catch (MalformedQueryException e)     {<a name="line.246"></a>
+<FONT color="green">247</FONT>                            throw new QueryEvaluationException(e);<a name="line.247"></a>
+<FONT color="green">248</FONT>                    }<a name="line.248"></a>
+<FONT color="green">249</FONT>                    <a name="line.249"></a>
+<FONT color="green">250</FONT>            }<a name="line.250"></a>
+<FONT color="green">251</FONT>            <a name="line.251"></a>
+<FONT color="green">252</FONT>            public CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateNJoin(NJoin join, BindingSet bindings) throws QueryEvaluationException {<a name="line.252"></a>
+<FONT color="green">253</FONT>                    <a name="line.253"></a>
+<FONT color="green">254</FONT>                    CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; result = evaluate(join.getArg(0), bindings);<a name="line.254"></a>
+<FONT color="green">255</FONT>                    <a name="line.255"></a>
+<FONT color="green">256</FONT>                    ControlledWorkerScheduler&lt;BindingSet&gt; joinScheduler = FederationManager.getInstance().getJoinScheduler();<a name="line.256"></a>
+<FONT color="green">257</FONT>                    <a name="line.257"></a>
+<FONT color="green">258</FONT>                    for (int i = 1, n = join.getNumberOfArguments(); i &lt; n; i++) {<a name="line.258"></a>
+<FONT color="green">259</FONT>                            result = executeJoin(joinScheduler, result, join.getArg(i), bindings, join.getQueryInfo());<a name="line.259"></a>
+<FONT color="green">260</FONT>                    }<a name="line.260"></a>
+<FONT color="green">261</FONT>                    return result;<a name="line.261"></a>
+<FONT color="green">262</FONT>            }<a name="line.262"></a>
+<FONT color="green">263</FONT>            <a name="line.263"></a>
+<FONT color="green">264</FONT>            public CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateNaryUnion(NUnion union, BindingSet bindings) throws QueryEvaluationException {<a name="line.264"></a>
+<FONT color="green">265</FONT>                    <a name="line.265"></a>
+<FONT color="green">266</FONT>                    ControlledWorkerScheduler&lt;BindingSet&gt; unionScheduler = FederationManager.getInstance().getUnionScheduler();<a name="line.266"></a>
+<FONT color="green">267</FONT>                    ControlledWorkerUnion&lt;BindingSet&gt; unionRunnable = new ControlledWorkerUnion&lt;BindingSet&gt;(unionScheduler, union.getQueryInfo());<a name="line.267"></a>
+<FONT color="green">268</FONT>                    <a name="line.268"></a>
+<FONT color="green">269</FONT>                    for (int i=0; i&lt;union.getNumberOfArguments(); i++) {<a name="line.269"></a>
+<FONT color="green">270</FONT>                            unionRunnable.addTask(new ParallelUnionOperatorTask(unionRunnable, this, union.getArg(i), bindings));<a name="line.270"></a>
+<FONT color="green">271</FONT>                    }<a name="line.271"></a>
+<FONT color="green">272</FONT>                    <a name="line.272"></a>
+<FONT color="green">273</FONT>                    executor.execute(unionRunnable);<a name="line.273"></a>
+<FONT color="green">274</FONT>                    <a name="line.274"></a>
+<FONT color="green">275</FONT>                    return unionRunnable;<a name="line.275"></a>
+<FONT color="green">276</FONT>            }<a name="line.276"></a>
+<FONT color="green">277</FONT>    <a name="line.277"></a>
+<FONT color="green">278</FONT>            /**<a name="line.278"></a>
+<FONT color="green">279</FONT>             * Execute the join in a separate thread using some join executor. <a name="line.279"></a>
+<FONT color="green">280</FONT>             * <a name="line.280"></a>
+<FONT color="green">281</FONT>             * Join executors are for instance:<a name="line.281"></a>
+<FONT color="green">282</FONT>             *      - {@link SynchronousJoin}<a name="line.282"></a>
+<FONT color="green">283</FONT>             *  - {@link SynchronousBoundJoin}<a name="line.283"></a>
+<FONT color="green">284</FONT>             *  - {@link ControlledWorkerJoin}<a name="line.284"></a>
+<FONT color="green">285</FONT>             *  - {@link ControlledWorkerBoundJoin}<a name="line.285"></a>
+<FONT color="green">286</FONT>             *<a name="line.286"></a>
+<FONT color="green">287</FONT>             * For endpoint federation use controlled worker bound join, for local federation use<a name="line.287"></a>
+<FONT color="green">288</FONT>             * controlled worker join. The other operators are there for completeness.<a name="line.288"></a>
+<FONT color="green">289</FONT>             * <a name="line.289"></a>
+<FONT color="green">290</FONT>             * Use {@link FederationEvalStrategy#executor} to execute the join (it is a runnable).<a name="line.290"></a>
+<FONT color="green">291</FONT>             * <a name="line.291"></a>
+<FONT color="green">292</FONT>             * @param joinScheduler<a name="line.292"></a>
+<FONT color="green">293</FONT>             * @param leftIter<a name="line.293"></a>
+<FONT color="green">294</FONT>             * @param rightArg<a name="line.294"></a>
+<FONT color="green">295</FONT>             * @param bindings<a name="line.295"></a>
+<FONT color="green">296</FONT>             * @return<a name="line.296"></a>
+<FONT color="green">297</FONT>             * @throws QueryEvaluationException<a name="line.297"></a>
+<FONT color="green">298</FONT>             */<a name="line.298"></a>
+<FONT color="green">299</FONT>            protected abstract CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; executeJoin(ControlledWorkerScheduler&lt;BindingSet&gt; joinScheduler, CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; leftIter, TupleExpr rightArg, BindingSet bindings, QueryInfo queryInfo) throws QueryEvaluationException;<a name="line.299"></a>
+<FONT color="green">300</FONT>            <a name="line.300"></a>
+<FONT color="green">301</FONT>            <a name="line.301"></a>
+<FONT color="green">302</FONT>            <a name="line.302"></a>
+<FONT color="green">303</FONT>            public abstract CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateExclusiveGroup(ExclusiveGroup group, RepositoryConnection conn, TripleSource tripleSource, BindingSet bindings) throws RepositoryException, MalformedQueryException, QueryEvaluationException;<a name="line.303"></a>
+<FONT color="green">304</FONT>    <a name="line.304"></a>
+<FONT color="green">305</FONT>            <a name="line.305"></a>
+<FONT color="green">306</FONT>            <a name="line.306"></a>
+<FONT color="green">307</FONT>            /**<a name="line.307"></a>
+<FONT color="green">308</FONT>             * Evaluate a bound join at the relevant endpoint, i.e. i.e. for a group of bindings retrieve<a name="line.308"></a>
+<FONT color="green">309</FONT>             * results for the bound statement from the relevant endpoints<a name="line.309"></a>
+<FONT color="green">310</FONT>             * <a name="line.310"></a>
+<FONT color="green">311</FONT>             * @param stmt<a name="line.311"></a>
+<FONT color="green">312</FONT>             * @param bindings<a name="line.312"></a>
+<FONT color="green">313</FONT>             * @return<a name="line.313"></a>
+<FONT color="green">314</FONT>             * @throws QueryEvaluationException<a name="line.314"></a>
+<FONT color="green">315</FONT>             */<a name="line.315"></a>
+<FONT color="green">316</FONT>            public abstract CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateBoundJoinStatementPattern(StatementTupleExpr stmt, final List&lt;BindingSet&gt; bindings) throws QueryEvaluationException;<a name="line.316"></a>
+<FONT color="green">317</FONT>            <a name="line.317"></a>
+<FONT color="green">318</FONT>            /**<a name="line.318"></a>
+<FONT color="green">319</FONT>             * Perform a grouped check at the relevant endpoints, i.e. for a group of bindings keep only <a name="line.319"></a>
+<FONT color="green">320</FONT>             * those for which at least one endpoint provides a result to the bound statement.<a name="line.320"></a>
+<FONT color="green">321</FONT>             * <a name="line.321"></a>
+<FONT color="green">322</FONT>             * @param stmt<a name="line.322"></a>
+<FONT color="green">323</FONT>             * @param bindings<a name="line.323"></a>
+<FONT color="green">324</FONT>             * @return<a name="line.324"></a>
+<FONT color="green">325</FONT>             * @throws QueryEvaluationException<a name="line.325"></a>
+<FONT color="green">326</FONT>             */<a name="line.326"></a>
+<FONT color="green">327</FONT>            public abstract CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateGroupedCheck(CheckStatementPattern stmt, final List&lt;BindingSet&gt; bindings) throws QueryEvaluationException;<a name="line.327"></a>
+<FONT color="green">328</FONT>            <a name="line.328"></a>
+<FONT color="green">329</FONT>            <a name="line.329"></a>
+<FONT color="green">330</FONT>            <a name="line.330"></a>
+<FONT color="green">331</FONT>            public abstract CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateIndependentJoinGroup(IndependentJoinGroup joinGroup, final BindingSet bindings) throws QueryEvaluationException; <a name="line.331"></a>
+<FONT color="green">332</FONT>            <a name="line.332"></a>
+<FONT color="green">333</FONT>            public abstract CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateIndependentJoinGroup(IndependentJoinGroup joinGroup, final List&lt;BindingSet&gt; bindings) throws QueryEvaluationException;<a name="line.333"></a>
+<FONT color="green">334</FONT>                    <a name="line.334"></a>
+<FONT color="green">335</FONT>            <a name="line.335"></a>
+<FONT color="green">336</FONT>            <a name="line.336"></a>
+<FONT color="green">337</FONT>            public Value evaluate(ValueExpr expr, BindingSet bindings) throws ValueExprEvaluationException, QueryEvaluationException {<a name="line.337"></a>
+<FONT color="green">338</FONT>                    <a name="line.338"></a>
+<FONT color="green">339</FONT>                    if (expr instanceof FilterExpr)<a name="line.339"></a>
+<FONT color="green">340</FONT>                            return evaluate((FilterExpr)expr, bindings);<a name="line.340"></a>
+<FONT color="green">341</FONT>                    if (expr instanceof ConjunctiveFilterExpr)<a name="line.341"></a>
+<FONT color="green">342</FONT>                            return evaluate((ConjunctiveFilterExpr)expr, bindings);<a name="line.342"></a>
+<FONT color="green">343</FONT>                    <a name="line.343"></a>
+<FONT color="green">344</FONT>                    return super.evaluate(expr, bindings);<a name="line.344"></a>
+<FONT color="green">345</FONT>            }<a name="line.345"></a>
+<FONT color="green">346</FONT>            <a name="line.346"></a>
+<FONT color="green">347</FONT>            public Value evaluate(FilterExpr node, BindingSet bindings) throws ValueExprEvaluationException, QueryEvaluationException {<a name="line.347"></a>
+<FONT color="green">348</FONT>                    <a name="line.348"></a>
+<FONT color="green">349</FONT>                    Value v = evaluate(node.getExpression(), bindings);<a name="line.349"></a>
+<FONT color="green">350</FONT>                    return BooleanLiteralImpl.valueOf(QueryEvaluationUtil.getEffectiveBooleanValue(v));<a name="line.350"></a>
+<FONT color="green">351</FONT>            }<a name="line.351"></a>
+<FONT color="green">352</FONT>            <a name="line.352"></a>
+<FONT color="green">353</FONT>            <a name="line.353"></a>
+<FONT color="green">354</FONT>            public Value evaluate(ConjunctiveFilterExpr node, BindingSet bindings) throws ValueExprEvaluationException, QueryEvaluationException {<a name="line.354"></a>
+<FONT color="green">355</FONT>                    <a name="line.355"></a>
+<FONT color="green">356</FONT>                    ValueExprEvaluationException error = null;<a name="line.356"></a>
+<FONT color="green">357</FONT>                    <a name="line.357"></a>
+<FONT color="green">358</FONT>                    for (FilterExpr expr : node.getExpressions()) {<a name="line.358"></a>
+<FONT color="green">359</FONT>                            <a name="line.359"></a>
+<FONT color="green">360</FONT>                            try {<a name="line.360"></a>
+<FONT color="green">361</FONT>                                    Value v = evaluate(expr.getExpression(), bindings);<a name="line.361"></a>
+<FONT color="green">362</FONT>                                    if (QueryEvaluationUtil.getEffectiveBooleanValue(v) == false) {<a name="line.362"></a>
+<FONT color="green">363</FONT>                                            return BooleanLiteralImpl.FALSE;<a name="line.363"></a>
+<FONT color="green">364</FONT>                                    }<a name="line.364"></a>
+<FONT color="green">365</FONT>                            } catch (ValueExprEvaluationException e) {<a name="line.365"></a>
+<FONT color="green">366</FONT>                                    error = e;<a name="line.366"></a>
+<FONT color="green">367</FONT>                            }<a name="line.367"></a>
+<FONT color="green">368</FONT>                    }<a name="line.368"></a>
+<FONT color="green">369</FONT>                    <a name="line.369"></a>
+<FONT color="green">370</FONT>                    if (error!=null)<a name="line.370"></a>
+<FONT color="green">371</FONT>                            throw error;<a name="line.371"></a>
+<FONT color="green">372</FONT>                    <a name="line.372"></a>
+<FONT color="green">373</FONT>                    return BooleanLiteralImpl.TRUE;<a name="line.373"></a>
+<FONT color="green">374</FONT>            }<a name="line.374"></a>
+<FONT color="green">375</FONT>            <a name="line.375"></a>
+<FONT color="green">376</FONT>            <a name="line.376"></a>
+<FONT color="green">377</FONT>            <a name="line.377"></a>
+<FONT color="green">378</FONT>            protected CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateAtStatementSources(Object preparedQuery, List&lt;StatementSource&gt; statementSources, QueryInfo queryInfo) throws QueryEvaluationException {<a name="line.378"></a>
+<FONT color="green">379</FONT>                    if (preparedQuery instanceof String)<a name="line.379"></a>
+<FONT color="green">380</FONT>                            return evaluateAtStatementSources((String)preparedQuery, statementSources, queryInfo);<a name="line.380"></a>
+<FONT color="green">381</FONT>                    if (preparedQuery instanceof TupleExpr)<a name="line.381"></a>
+<FONT color="green">382</FONT>                            return evaluateAtStatementSources((TupleExpr)preparedQuery, statementSources, queryInfo);<a name="line.382"></a>
+<FONT color="green">383</FONT>                    throw new RuntimeException("Unsupported type for prepared query: " + preparedQuery.getClass().getCanonicalName());<a name="line.383"></a>
+<FONT color="green">384</FONT>            }<a name="line.384"></a>
+<FONT color="green">385</FONT>            <a name="line.385"></a>
+<FONT color="green">386</FONT>            protected CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateAtStatementSources(String preparedQuery, List&lt;StatementSource&gt; statementSources, QueryInfo queryInfo) throws QueryEvaluationException {<a name="line.386"></a>
+<FONT color="green">387</FONT>                    <a name="line.387"></a>
+<FONT color="green">388</FONT>                    try {<a name="line.388"></a>
+<FONT color="green">389</FONT>                            CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; result;<a name="line.389"></a>
+<FONT color="green">390</FONT>                            <a name="line.390"></a>
+<FONT color="green">391</FONT>                            if (statementSources.size()==1) {                               <a name="line.391"></a>
+<FONT color="green">392</FONT>                                    Endpoint ownedEndpoint = EndpointManager.getEndpointManager().getEndpoint(statementSources.get(0).getEndpointID());<a name="line.392"></a>
+<FONT color="green">393</FONT>                                    RepositoryConnection conn = ownedEndpoint.getConn();<a name="line.393"></a>
+<FONT color="green">394</FONT>                                    com.fluidops.fedx.evaluation.TripleSource t = ownedEndpoint.getTripleSource();<a name="line.394"></a>
+<FONT color="green">395</FONT>                                    result = t.getStatements(preparedQuery, conn, EmptyBindingSet.getInstance(), null);<a name="line.395"></a>
+<FONT color="green">396</FONT>                            } <a name="line.396"></a>
+<FONT color="green">397</FONT>                             <a name="line.397"></a>
+<FONT color="green">398</FONT>                            else {                  <a name="line.398"></a>
+<FONT color="green">399</FONT>                                    WorkerUnionBase&lt;BindingSet&gt; union = FederationManager.getInstance().createWorkerUnion(queryInfo);<a name="line.399"></a>
+<FONT color="green">400</FONT>                                    <a name="line.400"></a>
+<FONT color="green">401</FONT>                                    for (StatementSource source : statementSources) {                                       <a name="line.401"></a>
+<FONT color="green">402</FONT>                                            Endpoint ownedEndpoint = EndpointManager.getEndpointManager().getEndpoint(source.getEndpointID());<a name="line.402"></a>
+<FONT color="green">403</FONT>                                            RepositoryConnection conn = ownedEndpoint.getConn();<a name="line.403"></a>
+<FONT color="green">404</FONT>                                            com.fluidops.fedx.evaluation.TripleSource t = ownedEndpoint.getTripleSource();<a name="line.404"></a>
+<FONT color="green">405</FONT>                                            union.addTask(new ParallelPreparedUnionTask(union, preparedQuery, t, conn, EmptyBindingSet.getInstance(), null));<a name="line.405"></a>
+<FONT color="green">406</FONT>                                    }<a name="line.406"></a>
+<FONT color="green">407</FONT>                                    <a name="line.407"></a>
+<FONT color="green">408</FONT>                                    union.run();                            <a name="line.408"></a>
+<FONT color="green">409</FONT>                                    result = union;<a name="line.409"></a>
+<FONT color="green">410</FONT>                                    <a name="line.410"></a>
+<FONT color="green">411</FONT>                                    // TODO we should add some DISTINCT here to have SET semantics<a name="line.411"></a>
+<FONT color="green">412</FONT>                            }<a name="line.412"></a>
+<FONT color="green">413</FONT>                    <a name="line.413"></a>
+<FONT color="green">414</FONT>                            return result;<a name="line.414"></a>
+<FONT color="green">415</FONT>                            <a name="line.415"></a>
+<FONT color="green">416</FONT>                    } catch (Exception e) {<a name="line.416"></a>
+<FONT color="green">417</FONT>                            throw new QueryEvaluationException(e);<a name="line.417"></a>
+<FONT color="green">418</FONT>                    }<a name="line.418"></a>
+<FONT color="green">419</FONT>            }<a name="line.419"></a>
+<FONT color="green">420</FONT>            <a name="line.420"></a>
+<FONT color="green">421</FONT>            <a name="line.421"></a>
+<FONT color="green">422</FONT>            protected CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; evaluateAtStatementSources(TupleExpr preparedQuery, List&lt;StatementSource&gt; statementSources, QueryInfo queryInfo) throws QueryEvaluationException {<a name="line.422"></a>
+<FONT color="green">423</FONT>                    <a name="line.423"></a>
+<FONT color="green">424</FONT>                    try {<a name="line.424"></a>
+<FONT color="green">425</FONT>                            CloseableIteration&lt;BindingSet, QueryEvaluationException&gt; result;<a name="line.425"></a>
+<FONT color="green">426</FONT>                            <a name="line.426"></a>
+<FONT color="green">427</FONT>                            if (statementSources.size()==1) {                               <a name="line.427"></a>
+<FONT color="green">428</FONT>                                    Endpoint ownedEndpoint = EndpointManager.getEndpointManager().getEndpoint(statementSources.get(0).getEndpointID());<a name="line.428"></a>
+<FONT color="green">429</FONT>                                    RepositoryConnection conn = ownedEndpoint.getConn();<a name="line.429"></a>
+<FONT color="green">430</FONT>                                    com.fluidops.fedx.evaluation.TripleSource t = ownedEndpoint.getTripleSource();<a name="line.430"></a>
+<FONT color="green">431</FONT>                                    result = t.getStatements(preparedQuery, conn, EmptyBindingSet.getInstance(), null);<a name="line.431"></a>
+<FONT color="green">432</FONT>                            } <a name="line.432"></a>
+<FONT color="green">433</FONT>                             <a name="line.433"></a>
+<FONT color="green">434</FONT>                            else {                  <a name="line.434"></a>
+<FONT color="green">435</FONT>                                    WorkerUnionBase&lt;BindingSet&gt; union = FederationManager.getInstance().createWorkerUnion(queryInfo);<a name="line.435"></a>
+<FONT color="green">436</FONT>                                    <a name="line.436"></a>
+<FONT color="green">437</FONT>                                    for (StatementSource source : statementSources) {                                       <a name="line.437"></a>
+<FONT color="green">438</FONT>                                            Endpoint ownedEndpoint = EndpointManager.getEndpointManager().getEndpoint(source.getEndpointID());<a name="line.438"></a>
+<FONT color="green">439</FONT>                                            RepositoryConnection conn = ownedEndpoint.getConn();<a name="line.439"></a>
+<FONT color="green">440</FONT>                                            com.fluidops.fedx.evaluation.TripleSource t = ownedEndpoint.getTripleSource();<a name="line.440"></a>
+<FONT color="green">441</FONT>                                            union.addTask(new ParallelPreparedAlgebraUnionTask(union, preparedQuery, t, conn, EmptyBindingSet.getInstance(), null));                                        <a name="line.441"></a>
+<FONT color="green">442</FONT>                                    }<a name="line.442"></a>
+<FONT color="green">443</FONT>                                    <a name="line.443"></a>
+<FONT color="green">444</FONT>                                    union.run();                            <a name="line.444"></a>
+<FONT color="green">445</FONT>                                    result = union;<a name="line.445"></a>
+<FONT color="green">446</FONT>                                    <a name="line.446"></a>
+<FONT color="green">447</FONT>                                    // TODO we should add some DISTINCT here to have SET semantics<a name="line.447"></a>
+<FONT color="green">448</FONT>                            }<a name="line.448"></a>
+<FONT color="green">449</FONT>                    <a name="line.449"></a>
+<FONT color="green">450</FONT>                            return result;<a name="line.450"></a>
+<FONT color="green">451</FONT>                            <a name="line.451"></a>
+<FONT color="green">452</FONT>                    } catch (Exception e) {<a name="line.452"></a>
+<FONT color="green">453</FONT>                            throw new QueryEvaluationException(e);<a name="line.453"></a>
+<FONT color="green">454</FONT>                    }<a name="line.454"></a>
+<FONT color="green">455</FONT>            }<a name="line.455"></a>
+<FONT color="green">456</FONT>    <a name="line.456"></a>
+<FONT color="green">457</FONT>    }<a name="line.457"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>FedX Documentation</title>
+</head>
+
+<body>
+<div id="content" style="width:800px">
+
+<h2>Data configuration</h2>
+
+<a href="../Index.html">back</a>
+
+<p>Federation members can be added to a federation either directly as a list of endpoints, or using a data configuration
+file via the <i>dataConfig</i> property (see <a href="java.html">Java examples</a>). In a data configuration the federation
+members are specified in a turtle syntax.</p>
+
+
+<h3>Example 1: SPARQL Federation:</h3>
+
+<pre>
+@prefix fluid: &lt;http://fluidops.org/config#>.
+
+&lt;http://DBpedia> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://dbpedia.org/sparql".
+
+&lt;http://NYtimes> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://api.talis.com/stores/nytimes/services/sparql".
+
+&lt;http://LinkedMDB> fluid:store "SPARQLEndpoint";
+fluid:SPARQLEndpoint "http://data.linkedmdb.org/sparql".
+</pre>
+
+<h3>Example 2: SPARQL Federation with Sesame remote repositories</h3>
+
+<pre>
+&lt;http://dbpedia&gt; fluid:store "RemoteRepository";
+fluid:repositoryServer "http://&lt;host&gt;/openrdf-sesame" ;
+fluid:repositoryName "&lt;repoName&gt;" .
+</pre>
+
+<h3>Example 3: Local Federation (NativeStore):</h3>
+
+<pre>
+@prefix fluid: &lt;http://fluidops.org/config#>.
+
+&lt;http://DBpedia> fluid:store "NativeStore";
+fluid:RepositoryLocation "repositories\\native-storage.dbpedia36".
+
+&lt;http://NYTimes> fluid:store "NativeStore";
+fluid:RepositoryLocation "repositories\\native-storage.nytimes".
+</pre>
+
+Note that also hybrid combinations are possible.
+
+</div>
+</body>
+</html>

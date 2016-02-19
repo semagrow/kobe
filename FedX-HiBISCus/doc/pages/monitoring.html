@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>FedX Monitoring</title>
+</head>
+
+<body>
+<div id="content" style="width:800px">
+
+<h2>FedX Monitoring</h2>
+
+<a href="../Index.html">back</a>
+
+<p>FedX brings certain facilities to monitor the application state. These facilities are described in the following.</p>
+
+<p>Note: for the following features <i>enableMonitoring</i> must be set in the FedX configuration.</p>
+
+<h3>Logging queries</h3>
+
+<p>By setting <i>monitoring.logQueryPlan=true</i> in the FedX configuration, all incoming queries are traced
+to <i>logs/queryLog.log</i>. For logging the <i>QueryLog</i> service is used, which internally applies
+log4j features.</p>
+
+<h3>Logging the query plan</h3>
+
+<p>There are two ways of seeing the optimized query plan:</p>
+
+<p>a) by setting <i>debugQueryPlan=true</i>, the query plan is printed to stdout (which is handy in the CLI or for debugging)<p>
+<p>b) by setting <i>monitoring.logQueryPlan=true</i> the optimized query plan is written to a variable local to the executing thread.
+ The optimized query plan can be retrieved via the <i>QueryPlanLog</i> service, as illustrated in the following abstract snippet.</p>
+ 
+<pre>
+Config.initialize();
+Config.getConfig().set("enableMonitoring", "true");
+Config.getConfig().set("monitoring.logQueryPlan", "true");
+SailRepository repo = FedXFactory.initializeFederation("local/dataSourceConfig.ttl");
+
+TupleQuery query = repo.getConnection().prepareTupleQuery(QueryLanguage.SPARQL, &lt;SOME_QUERY&gt;);
+.. evaluate query ..
+
+System.out.println("# Optimized Query Plan:");
+System.out.println(QueryPlanLog.getQueryPlan());
+</pre>
+
+<h3>Monitoring the number of requests</h3>
+
+<p>If monitoring is enabled, the number of requests sent to each individual federation member are monitored. All
+available information can be retrieved by the <i>MonitoringService</i>, which can be retrieved via 
+
+<pre>MonitoringUtil.getMonitoringService()</pre>
+
+The following snippet illustrates a monitoring utility that prints all monitoring information to stdout.
+
+<pre>
+Config.initialize();
+Config.getConfig().set("enableMonitoring", "true");
+Config.getConfig().set("monitoring.logQueryPlan", "true");
+SailRepository repo = FedXFactory.initializeFederation("local/dataSourceConfig.ttl");
+
+TupleQuery query = ...
+
+.. evaluate queries ..
+
+MonitoringUtil.printMonitoringInformation();
+</pre>
+
+</div>
+</body>
+</html>
