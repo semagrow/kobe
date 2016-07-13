@@ -1,0 +1,30 @@
+PREFIX chembl:<http://rdf.ebi.ac.uk/terms/chembl#>
+SELECT ?item ?pChembl ?activity_type ?activity_value
+WHERE {
+  VALUES ?uri {
+    <http://www.conceptwiki.org/concept/index/ee7e6001-0279-4670-ac05-34bbb050b6e2>
+  }
+  VALUES ?target_type {
+    chembl:ProteinComplex
+    chembl:ProteinComplexGroup
+    chembl:ProteinFamily
+    chembl:ProteinProteinInteraction
+    chembl:SingleProtein
+  }
+  GRAPH <http://www.ebi.ac.uk/chembl>  {
+       SELECT DISTINCT ?item
+       WHERE {
+          ?uri chembl:hasMolecule ?item .
+          ?uri chembl:pChembl ?pChembl . FILTER (?pChembl > 5).
+       }
+      ?item a chembl:Activity.
+      ?item chembl:hasAssay ?assay_uri .
+      ?assay_uri chembl:hasTarget ?target_uri .
+      ?target_uri a ?target_type .
+      ?item chembl:standardType ?activity_type .
+      ?item chembl:standardRelation ?activity_relation .
+      ?item chembl:pChembl ?pChembl . FILTER(?pChembl >= 0).
+      ?item chembl:standardValue ?standard_value .
+	    BIND (xsd:decimal(?standard_value) AS ?activity_value) .
+  }
+}

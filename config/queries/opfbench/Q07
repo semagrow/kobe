@@ -1,0 +1,33 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX cheminf: <http://semanticscience.org/resource/>
+SELECT *
+WHERE {
+  VALUES ?cw_item {
+     <http://www.conceptwiki.org/concept/index/ee7e6001-0279-4670-ac05-34bbb050b6e2>
+  }
+  GRAPH <http://IMS> {
+    ?cw_item skos:exactMatch ?item .
+  }
+  GRAPH <http://www.ebi.ac.uk/chembl> {
+    ?item chembl:pChembl ?pChembl . FILTER(?pChembl > 5).
+    ?item chembl:standardType ?activity_type .
+    ?item chembl:standardRelation ?activity_relation .
+    ?item chembl:standardValue ?standard_value .
+    BIND (xsd:decimal(?standard_value) AS ?activity_value).
+    ?item chembl:standardUnits ?activity_unit.
+    ?item chembl:hasMolecule ?chembl_compound .
+    ?assay_uri chembl:hasActivity ?item .
+    ?assay_uri chembl:hasTarget ?target_uri .
+    ?assay_uri dcterms:description ?assay_description .
+    ?assay_uri chembl:hasTarget ?target_uri .
+    ?assay_uri chembl:organismName ?assay_organism .
+  }
+  GRAPH <http://IMS> {
+    ?chembl_compound skos:exactMatch ?ims_ocrs_compound_uri .
+  }
+  GRAPH <http://ops.rsc.org> {
+    ?ims_ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
+  }
+}

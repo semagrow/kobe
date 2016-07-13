@@ -1,0 +1,12 @@
+dataConfig = doc/fedx/CrossDomain-FedX-SPARQL.ttl
+
+querySet = crossDomain
+
+evalRuns = 6
+
+timeout = 600000
+
+fill = false
+
+evaluationClass = org.semanticweb.fbench.evaluation.FedXSparqlEvaluation
+

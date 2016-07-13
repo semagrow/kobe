@@ -1,6 +1,0 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
-SELECT ?President ?Party WHERE {
-	?President rdf:type <http://dbpedia.org/class/yago/PresidentsOfTheUnitedStates> .
-	?President dbpedia-owl:party <http://dbpedia.org/resource/Democratic_Party_%28United_States%29> . 
-}

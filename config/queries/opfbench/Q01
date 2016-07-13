@@ -1,0 +1,18 @@
+PREFIX chembl:<http://rdf.ebi.ac.uk/terms/chembl#>
+SELECT ?target ?compound
+WHERE {
+  GRAPH <http://www.ebi.ac.uk/chembl> {
+    ?item a chembl:Activity.
+    ?item chembl:hasMolecule ?compound .
+    ?item chembl:pChembl ?pChembl .
+    FILTER (?pChembl > 7).
+    ?item chembl:hasAssay ?assay_uri.
+    ?assay_uri chembl:hasTarget ?target .
+    ?target a ?target_type .
+    { ?target chembl:organismName "Homo sapiens" }
+    UNION
+    { ?target chembl:organismName "Mus musculus" } .
+  }
+}
+
+# 331600

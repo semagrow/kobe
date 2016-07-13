@@ -1,0 +1,18 @@
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT *
+WHERE {
+  VALUES ?target_type { chembl:ProteinProteinInteraction }.
+  GRAPH <http://www.ebi.ac.uk/chembl> {
+    ?target_uri a ?target_type.
+    ?assay_uri  chembl:hasTarget ?target_uri .
+    ?assay_uri  chembl:hasActivity ?uri .
+    ?target_uri dcterms:title ?target_title .
+    ?assay_uri  dcterms:description ?assay_description .
+    ?ufri chembl:pChembl ?pChembl. FILTER(?pChembl > 5).
+  }
+  GRAPH <http://www.conceptwiki.org> {
+      ?cw_target skos:exactMatch ?protein .
+      ?cw_target skos:prefLabel ?protein_name .
+  }
+}

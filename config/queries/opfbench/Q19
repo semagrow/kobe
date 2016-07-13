@@ -1,0 +1,39 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX cheminf: <http://semanticscience.org/resource/>
+SELECT ?smiles (COUNT(distinct ?chembl_target_uri) as ?count)
+WHERE {
+  VALUES ?uri { <http://www.wikipathways.org/index.php/Pathway:WP382> }.
+  GRAPH <http://www.wikipathways.org> {
+  	?rev dc:identifier ?pw_uri .
+  	?rev dc:title ?title .
+  	?gene_product_internal dcterms:isPartOf ?rev ;
+  	?gene_product_internal a ?type ;
+  	?gene_product_internal dc:identifier ?gene_product .
+  	FILTER ( ?type = wp:GeneProduct || ?type = wp:Protein ).
+	FILTER (NOT REGEX("*/DataNode/noIdentifier", ?gene_product)).
+  }
+  GRAPH <http://IMS> {
+    ?gene_product skos:exactMatch ?item.
+  }
+  GRAPH <http://www.ebi.ac.uk/chembl> {
+    ?assay_uri chembl:hasActivity ?item .
+    ?assay_uri chembl:hasTarget ?chembl_target_uri .
+    ?chembl_target_uri dcterms:title ?target_name_chembl .
+    ?chembl_target_uri chembl:organismName ?target_organism .
+    ?item chembl:hasMolecule ?chembl_compound .
+    ?item chembl:pChembl ?pChembl. FILTER (?pChembl > 5).
+
+  }
+  GRAPH <http://IMS> {
+       ?chembl_compound skos:exactMatch ?ims_ocrs_compound_uri .
+  }
+  GRAPH <http://ops.rsc.org> {
+        ?ims_ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
+  }
+}
+GROUP BY ?smiles.
+HAVING COUNT(distinct ?chembl_target_uri) > 1

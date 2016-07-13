@@ -3,13 +3,13 @@
 mainclass=org.semanticweb.fbench.FederationEval
 
 # set current dir and bin/ as classpath
-classpath=.:bin/
+classpath=.
 
 # add all jars to classpath
-for jar in `ls lib/*.jar lib/*/*.jar`; do classpath=$classpath:$jar; done
+for jar in `find . -name *.jar`; do classpath=$classpath:$jar; done
 
 # set logging options
-logging="-Dlog4j.configuration=file:config/log4j.properties"
+#logging="-Dlog4j.configuration=file:config/log4j.properties"
 
 java -Xmx1560m $logging -cp $classpath $mainclass $*
 

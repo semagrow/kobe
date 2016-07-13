@@ -1,0 +1,29 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?chebi_label (SUM(?chebi_label) AS ?count)
+WHERE {
+  VALUES ?protein { <http://purl.uniprot.org/uniprot/P00918> }.
+  GRAPH <http://IMS> {
+     ?protein skos:exactMatch ?chembl_target_uri.
+  }
+  GRAPH <http://www.ebi.ac.uk/chembl> {
+    ?assay chembl:hasTarget ?chembl_target_uri.
+    ?activity chembl:hasAssay ?assay.
+    ?activity chembl:hasMolecule ?molecule .
+    ?molecule skos:exactMatch ?chebi_compound .
+    FILTER (?activity > 5).
+  }
+  GRAPH <http://www.ebi.ac.uk/chebi> {
+    { ?chebi_compound rdfs:subClassOf ?chebi_class .
+      ?chebi_class rdfs:label ?chebi_label .
+    }
+    UNION
+    { ?chebi_compound rdfs:subClassOf ?class .
+      ?class owl:someValuesFrom ?chebi_class .
+      ?chebi_class rdfs:label ?chebi_label .
+    }
+  }
+}
+GROUP BY ?chebi_label

@@ -1,0 +1,14 @@
+description = SPLENDID - Cross Domain Queries
+
+dataConfig = config/suites/crossDomain/splendid/splendid.ttl
+
+querySet = crossDomain
+
+evalRuns = 6
+
+timeout = 120000
+
+fill = false
+
+evaluationClass = org.semanticweb.fbench.evaluation.SesameSparqlEvaluation
+
