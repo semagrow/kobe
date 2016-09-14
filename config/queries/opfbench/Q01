@@ -14,5 +14,3 @@ WHERE {
     { ?target chembl:organismName "Mus musculus" } .
   }
 }
-
-# 331600

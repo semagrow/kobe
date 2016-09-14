@@ -1,0 +1,2 @@
+id;name;location;type;duration;
+sparql_Semagrow;http://Semagrow;http://192.168.2.63:9999/SemaGrow/sparql;SPARQLEndpoint;1;

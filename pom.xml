@@ -10,7 +10,7 @@
        <module>eval</module>
        <module>setup</module>
        <module>proxy</module>
-       <module>bridge</module>
+       <!--<module>bridge</module>-->
     </modules>
 
     <dependencies>

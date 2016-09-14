@@ -55,12 +55,14 @@ public class QueryUtil {
 		File[] listOfFiles = directory.listFiles();
 		Arrays.sort(listOfFiles);
 
+		int nQuery=0;
+		
 		for (File file : listOfFiles) {
 			FileReader fin = new FileReader(file);
 			BufferedReader in = new BufferedReader(fin);
 			String tmp;
 			String tmpQuery = "";
-			int nQuery=0;
+
 			while ((tmp = in.readLine()) != null){
 				if (tmp.equals("")){
 					if (!tmpQuery.equals(""))

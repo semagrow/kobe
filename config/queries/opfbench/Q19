@@ -26,7 +26,6 @@ WHERE {
     ?chembl_target_uri chembl:organismName ?target_organism .
     ?item chembl:hasMolecule ?chembl_compound .
     ?item chembl:pChembl ?pChembl. FILTER (?pChembl > 5).
-
   }
   GRAPH <http://IMS> {
        ?chembl_compound skos:exactMatch ?ims_ocrs_compound_uri .
