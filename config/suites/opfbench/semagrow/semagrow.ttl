@@ -1,4 +1,4 @@
 @prefix fluid: <http://fluidops.org/config#>.
 
 <http://Semagrow> fluid:store "SPARQLEndpoint" ;
-                  fluid:SPARQLEndpoint "http://192.168.2.63:9999/SemaGrow/sparql" .
+                  fluid:SPARQLEndpoint "http://semagrow-bench:8080/SemaGrow/sparql" .
