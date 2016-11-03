@@ -33,7 +33,12 @@ public class QueryUtil {
 	 * 		the location of the query configuration for the specified type
 	 */
 	public static String getQueryDirectory(String querySet) {
-		return "config/queries/" + querySet;
+		if (querySet == null) {
+			return "/etc/queryset";
+		}
+		else {
+			return "config/queries/" + querySet;
+		}
 	}
 	
 	
@@ -66,7 +71,7 @@ public class QueryUtil {
 			while ((tmp = in.readLine()) != null){
 				if (tmp.equals("")){
 					if (!tmpQuery.equals(""))
-						res.add(new Query(tmpQuery, queryFile, ++nQuery));
+						res.add(new Query(tmpQuery, file.getName(), -1));
 					tmpQuery = "";
 				}
 				else {
@@ -74,7 +79,7 @@ public class QueryUtil {
 				}
 			}
 			if (!tmpQuery.equals(""))
-				res.add(new Query(tmpQuery, queryFile, ++nQuery));
+				res.add(new Query(tmpQuery, file.getName(), -1));
 		}
 
 		return res;

@@ -118,10 +118,10 @@ public class Config {
 		
 		List<String> res = new ArrayList<String>();
 		
-		if (completeQuerySet()) {
+		/*if (completeQuerySet()) {
 			for (QueryType qt : QueryType.values())
 				res.add(qt.getFileName());
-		}
+		}*/
 
 		String q = props.getProperty("querySet");
 
