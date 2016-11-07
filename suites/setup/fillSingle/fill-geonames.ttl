@@ -1,6 +1,0 @@
-@prefix fluid: <http://fluidops.org/config#>.
-
-<http://Geonames> fluid:store "Native";
-fluid:RepositoryLocation "data\\repositories\\native-storage.geonames";
-fluid:rdfFile "data\\rdf\\geonames\\all-geonames-2010-11-28_cleaned.n3";
-fluid:context <http://Geonames.org>.

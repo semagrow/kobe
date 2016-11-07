@@ -1,2 +1,0 @@
-@Echo off
-java -Xmx2048m -Dlog4j.configuration=file:config\log4j.properties -cp lib\fedbench.jar;lib\*;lib\fedx\*;lib\splendid\*;lib\slf4j\*;lib\log4j\*;lib\sesame\*;lib\bridge\*;lib\commons\*;lib\lucene\* org.semanticweb.fbench.FederationEval %*

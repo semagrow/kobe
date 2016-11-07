@@ -1,10 +1,11 @@
 package org.semanticweb.fbench;
 
 
+import org.semanticweb.fbench.evaluation.Evaluation;
+import org.semanticweb.fbench.evaluation.SesameSparqlEvaluationReactive;
+import org.semanticweb.fbench.query.QueryManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.semanticweb.fbench.evaluation.Evaluation;
-import org.semanticweb.fbench.query.QueryManager;
 
 
 /**
@@ -58,7 +59,8 @@ public class FederationEval {
 		
 		// Determine the Evaluation class to be used and run the evaluation
 		try {
-			Evaluation eval = (Evaluation)Class.forName(Config.getConfig().getEvaluationClass()).newInstance();
+			//Evaluation eval = (Evaluation)Class.forName("org.semanticweb.fbench.evaluation.SesameSparqlEvaluationReactive").newInstance();
+			Evaluation eval = new SesameSparqlEvaluationReactive();
 			eval.run();
 		} catch (Exception e) {
 			log.error("Error while performing evaluation (" + e.getClass().getSimpleName() + "): " + e.getMessage());

@@ -1,0 +1,38 @@
+##############################################################
+# Simple configuration file for evaluation benchmark
+##############################################################
+
+###
+# querySet:
+#   path to a directory that contains text files, one file per query.
+#   default: /etc/querySet/
+#
+# querySet = ../queries/resources/opfbench/
+
+
+###
+# dataConfig:
+#   the data configuration file.
+#   Run the script ./scripts/dataConfig.sh to generate it.
+#   default: dataConfig.ttl
+#
+# dataConfig = dataConfig.ttl
+
+
+###
+# evalRuns:
+#   integer value representing the number of runs to perform
+#   in each run all selected queries are executed.
+#   default: 5
+#
+# evalRuns = 3
+
+
+###
+# timeout:
+#   integer value representing the number of ms until a timeout occurs
+#   0 means that timeouts are disabled (=default)
+#
+# timeout = 520000
+
+

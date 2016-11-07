@@ -1,6 +1,0 @@
-dataConfig = suites\\setup\\fillSingle\\fill-semanticwebdog.ttl
-
-envConfig = suites\\setup\\env.prop
-
-fill = true
-

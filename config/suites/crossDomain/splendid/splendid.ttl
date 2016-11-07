@@ -1,4 +1,0 @@
-@prefix fluid: <http://fluidops.org/config#>.
-
-<http://RDFFederator> fluid:store "org.semanticweb.fbench.provider.SPLENDIDProvider";
-                      fluid:rdfFile "config/suites/crossDomain/splendid/conf/crossDomain-config_SPLENDID.n3".

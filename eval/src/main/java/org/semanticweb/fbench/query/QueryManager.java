@@ -37,15 +37,12 @@ public class QueryManager {
 	}
 	
 	/**
-	 * initialize and load the queries as specified by {@link Config#getQuerySet()}.
-	 * 
-	 * @throws FileNotFoundException
+	 * initialize and load the queries as specified by {@link Config#getQuerySetPath()}.
+	 *
 	 * @throws IOException
 	 */
-	private void init() throws FileNotFoundException, IOException{
-		for (String queryFile : Config.getConfig().getQuerySet()) {
-			queries.addAll( QueryUtil.loadQueries(queryFile) );
-		}
+	private void init() throws IOException {
+		queries.addAll( QueryUtil.loadQueries(Config.getConfig().getQuerySetPath()) );
 	}
 	
 	/**
