@@ -33,7 +33,12 @@ public class Query {
 	}
 	
 	public String getIdentifier() {
-		return queryFile + "_" + number;
+		if (number == -1) {
+			return queryFile;
+		}
+		else {
+			return queryFile + "_" + number;
+		}
 	}
 	
 	@Override

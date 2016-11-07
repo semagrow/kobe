@@ -1,0 +1,3 @@
+default_data_image=semagrow/virtuoso:bench-7.1
+default_semagrow_image=semagrow/semagrow
+default_fedx_image=semagrow/fedx-server

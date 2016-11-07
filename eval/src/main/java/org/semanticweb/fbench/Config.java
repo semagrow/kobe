@@ -1,9 +1,8 @@
 package org.semanticweb.fbench;
 
-import org.semanticweb.fbench.evaluation.SesameEvaluation;
+import org.semanticweb.fbench.evaluation.SesameSparqlEvaluationReactive;
 import org.semanticweb.fbench.misc.ArgumentParser;
 import org.semanticweb.fbench.provider.SPARQLProvider;
-import org.semanticweb.fbench.query.QueryType;
 import org.semanticweb.fbench.report.*;
 
 import java.io.FileInputStream;
@@ -60,9 +59,7 @@ public class Config {
 		for (Property p : ArgumentParser.parseArguments(args))
 			instance.setProperty(p.key, p.value);
 		
-		//instance.init(instance.getProperty("configFile", "config/config.prop"));
-		instance.init(instance.getProperty("configFile", "config/suites/crossDomain/semagrow/semagrow.prop"));
-		
+		instance.init(instance.getProperty("configFile"));
 	}
 	
 	
@@ -77,10 +74,12 @@ public class Config {
 		props.setProperty(prop, value);
 	}
 	
-	private void init(String configFile) throws FileNotFoundException, IOException{
-		FileInputStream in = new FileInputStream(configFile);
-		props.load( in );
-		in.close();
+	private void init(String configFile) throws IOException {
+        if (configFile != null) {
+            FileInputStream in = new FileInputStream(configFile);
+            props.load(in);
+            in.close();
+        }
 	}
 	
 	
@@ -91,53 +90,23 @@ public class Config {
 	public String getProperty(String propertyName, String def) {
 		return props.getProperty(propertyName, def);
 	}
+
 	
 	/**
 	 * @return
-	 * 		true, if the complete queryset is to be used, i.e. querySet=ALL or querySet not specified
+	 * 		a directory that contains a list of text files, and each text file is a query.
+     * 	    if none specified, then /etc/querySet/ directory is used
 	 */
-	public boolean completeQuerySet() {
-		String querySet = props.getProperty("querySet");
-		return querySet==null || querySet.toLowerCase().equals("all");
+	public String getQuerySetPath() throws IllegalArgumentException {
+        return props.getProperty("querySet", "/etc/querySet/");
 	}
-	
-	
-	/**
-	 * expects property querySet to be of format: SIMPLE,CUSTOM,...,TYPE3
-	 *	i.e. a comma separated list of QueryType values
-	 *
-	 * Note: if querySet is empty or ALL, a complete list is returned.
-	 * 
-	 * @return
-	 * 		a list of query types that is to be integrated into the evaluation
-	 * 
-	 * @throws IllegalArgumentException
-	 * 			if any of the provided query types cannot be returned by QueryType.valueOf()
-	 */
-	public List<String> getQuerySet() throws IllegalArgumentException {
-		
-		List<String> res = new ArrayList<String>();
-		
-		if (completeQuerySet()) {
-			for (QueryType qt : QueryType.values())
-				res.add(qt.getFileName());
-		}
 
-		String q = props.getProperty("querySet");
+    public List<String> getQuerySet() {
+        List<String> l = new ArrayList<>();
+        l.add(Config.getConfig().getQuerySetPath());
+        return l;
+    }
 
-		try {
-			QueryType qt = QueryType.valueOf(q);
-			res.add(qt.getFileName());
-		} catch (Exception e) {
-			res.add(q);
-		}
-
-		
-		return res;
-	}
-	
-	
-	
 	/**
 	 * @return
 	 * 		the base directory for the evaluation benchmark or the empty string if none specified
@@ -154,7 +123,7 @@ public class Config {
 	public boolean isFill() {
 		return Boolean.parseBoolean( props.getProperty("fill", "false"));
 	}
-	
+
 	/**
 	 * 
 	 * @return
@@ -163,7 +132,7 @@ public class Config {
 	public boolean isSetup() {
 		return Boolean.parseBoolean( props.getProperty("setup", "false"));
 	}
-	
+
 	/**
 	 * @return
 	 * 		true, if property showResults is set
@@ -171,7 +140,7 @@ public class Config {
 	public boolean isShowResults() {
 		return Boolean.parseBoolean( props.getProperty("showResults", "false"));
 	}
-	
+
 	/**
 	 * @return
 	 * 		true, if property debugMode is set
@@ -179,24 +148,22 @@ public class Config {
 	public boolean isDebugMode() {
 		return Boolean.parseBoolean( props.getProperty("debugMode", "false"));
 	}
-	
-	
+
 	/**
 	 * Return the report stream implementation to be used
 	 * 
 	 * default: 
 	 * 	 a) com.fluidops.iwb.benchmark.report.SimpleReportStream (if debug mode is on)
-	 *   b) com.fluidops.iwb.benchmark.report.CsvRdfReportStream (otherwise)
+	 *   b) com.fluidops.iwb.benchmark.report.CsvReportStream (otherwise)
 	 * 
 	 * @return
 	 * 		the reportStream setting, i.e. the fully qualified class that shall be used for reporting
 	 */
 	public String getReportStream() {
-		String def = isDebugMode() ? SimpleReportStream.class.getCanonicalName() : CsvRdfReportStream.class.getCanonicalName();	// TODO
+		String def = isDebugMode() ? SimpleReportStream.class.getCanonicalName() : CsvReportStream2.class.getCanonicalName();
 		return props.getProperty("reportStream", def);
 	}
-	
-	
+
 	/**
 	 * @return
 	 * 		the timeout setting in ms, default is 0ms (=OFF)
@@ -216,23 +183,22 @@ public class Config {
 	
 	/**
 	 * @return
-	 * 	 	the data configuration or null if not specified
+	 * 	 	the data configuration or baseDir/dataconfig.ttl if not specified
 	 */
 	public String getDataConfig() {
-		return props.getProperty("dataConfig");
+		return props.getProperty("dataConfig", getBaseDir() + "dataConfig.ttl");
 	}
 	
 	/**
 	 * 
 	 * @return
 	 * 		the evaluationClass setting, i.e. the fully qualified class that shall be used for evaluation
-	 * 		default: org.semanticweb.fbench.evaluation.SesameEvaluation, see {@link SesameEvaluation}
+	 * 		default: org.semanticweb.fbench.evaluation.SesameSparqlEvaluationReactive
 	 */
 	public String getEvaluationClass() {
-		return props.getProperty("evaluationClass", SesameEvaluation.class.getCanonicalName());
+		return props.getProperty("evaluationClass", SesameSparqlEvaluationReactive.class.getCanonicalName());
 	}
-	
-	
+
 	/**
 	 * 
 	 * @return
@@ -247,10 +213,10 @@ public class Config {
 	 * 
 	 * @return
 	 * 		the envConfig setting, i.e. the location of the environment properties that are used in {@link RdfReportStream}
-	 * 		default: config/env.prop
+	 * 		default: null
 	 */
 	public String getEnvConfig()  {
-		return props.getProperty("envConfig", "config/env.prop");
+		return props.getProperty("envConfig");
 	}
 	
 	/**
@@ -282,8 +248,7 @@ public class Config {
 	public String getProxyUrl() {
 		return props.getProperty("proxyUrl");
 	}
-	
-	
+
 	/**
 	 * 
 	 * @return
@@ -294,11 +259,17 @@ public class Config {
 	public int getSparqlRequestDelay() {
 		return Integer.parseInt(props.getProperty("sparqlRequestDelay", "-1"));
 	}
-	
+
+    /**
+     *
+     * @return
+     * 		time break after query in ms. Default is 1000ms
+     */
 	public long getBreakAfterQuery() {
 		return Long.parseLong(props.getProperty("breakAfterQuery", "1000"));
 	}
-	/**
+
+    /**
 	 * 
 	 * @return
 	 * 		the sparqlRequestReport setting, i.e. if the number of requests sent to the endpoint
