@@ -1,16 +1,17 @@
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX sio: <http://semanticscience.org/resource/>
-PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sio: <http://semanticscience.org/resource/>
 SELECT ?disease_uri ?description ?primarySource ?diseaseName ?gene_uri
 WHERE {
-  VALUES ?item { <http://linkedlifedata.com/resource/umls/id/C0004238> }.
-  GRAPH <http://rdf.imim.es> {
-    ?item sio:SIO_000628 ?disease_uri.
-    ?item sio:SIO_000253 ?primarySource.
-    ?item dcterms:description ?description.
-    ?disease_uri foaf:name ?diseaseName.
-    ?item sio:SIO_000628 ?gene_uri .
-    ?gene_uri a ncit:C16612 .
-  }
+    VALUES ?item { <http://linkedlifedata.com/resource/umls/id/C0004238> } .
+    GRAPH <http://rdf.imim.es> {
+        ?item sio:SIO_000628 ?disease_uri .
+        ?item sio:SIO_000253 ?primarySource .
+        ?item dcterms:description ?description .
+        ?disease_uri foaf:name ?diseaseName .
+        ?item sio:SIO_000628 ?gene_uri .
+        ?gene_uri rdf:type ncit:C16612 .
+    }
 }

@@ -1,30 +1,34 @@
 PREFIX chembl:<http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?item ?pChembl ?activity_type ?activity_value
 WHERE {
-  VALUES ?uri {
-    <http://www.conceptwiki.org/concept/index/ee7e6001-0279-4670-ac05-34bbb050b6e2>
-  }
-  VALUES ?target_type {
-    chembl:ProteinComplex
-    chembl:ProteinComplexGroup
-    chembl:ProteinFamily
-    chembl:ProteinProteinInteraction
-    chembl:SingleProtein
-  }
-  GRAPH <http://www.ebi.ac.uk/chembl>  {
-       SELECT DISTINCT ?item
-       WHERE {
-          ?uri chembl:hasMolecule ?item .
-          ?uri chembl:pChembl ?pChembl . FILTER (?pChembl > 5).
-       }
-      ?item a chembl:Activity.
-      ?item chembl:hasAssay ?assay_uri .
-      ?assay_uri chembl:hasTarget ?target_uri .
-      ?target_uri a ?target_type .
-      ?item chembl:standardType ?activity_type .
-      ?item chembl:standardRelation ?activity_relation .
-      ?item chembl:pChembl ?pChembl . FILTER(?pChembl >= 0).
-      ?item chembl:standardValue ?standard_value .
-	    BIND (xsd:decimal(?standard_value) AS ?activity_value) .
-  }
+    VALUES ?uri {
+        <http://www.conceptwiki.org/concept/index/ee7e6001-0279-4670-ac05-34bbb050b6e2>
+    }
+    VALUES ?target_type {
+        chembl:ProteinComplex
+        chembl:ProteinComplexGroup
+        chembl:ProteinFamily
+        chembl:ProteinProteinInteraction
+        chembl:SingleProtein
+    }
+    GRAPH <http://www.ebi.ac.uk/chembl>  {
+        {   SELECT DISTINCT ?item
+            WHERE {
+                ?uri chembl:hasMolecule ?item .
+                ?uri chembl:pChembl ?pChembl .
+                FILTER (?pChembl > 5) .
+            } } .
+        ?item rdf:type chembl:Activity .
+        ?item chembl:hasAssay ?assay_uri .
+        ?assay_uri chembl:hasTarget ?target_uri .
+        ?target_uri rdf:type ?target_type .
+        ?item chembl:standardType ?activity_type .
+        ?item chembl:standardRelation ?activity_relation .
+        ?item chembl:pChembl ?pChembl .
+        FILTER (?pChembl >= 0) .
+        ?item chembl:standardValue ?standard_value .
+        BIND (xsd:decimal(?standard_value) AS ?activity_value) .
+    }
 }

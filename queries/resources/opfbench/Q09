@@ -1,42 +1,47 @@
 PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cheminf: <http://semanticscience.org/resource/>
+PREFIX math: <http://semagrow.eu/math>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT *
 WHERE {
-  VALUES ?compound {
-    <http://ops.rsc.org/Compounds/Get/980348>
-  }
-  VALUES ?activity_type {
-    "IC50"
-    "EC50"
-    "AC50"
-    "Ki"
-    "Kd"
-    "Potency"
-  }
-  GRAPH <http://IMS> {
-    ?compound skos:exactMatch ?item .
-  }
-  GRAPH <http://www.ebi.ac.uk/chembl> {
-      ?item a chembl:Activity .
-      ?item chembl:hasMolecule ?chembl_compound_uri .
-      ?item chembl:hasAssay ?assay_uri .
-      ?assay_uri chembl:hasTarget ?target_uri .
-      ?target_uri a ?target_type .
-      ?target_uri chembl:organismName ?target_organism .
-      ?item chembl:hasMolecule ?chembl_compound_uri .
-  	  ?item chembl:standardType ?activity_type .
-      ?item chembl:standardRelation ?activity_relation .
-      ?item chembl:standardValue ?standard_value .
-      BIND (xsd:decimal(?standard_value) as ?activity_value) .
-      FILTER (?activity_value >= 1.0e8) .
-      ?item chembl:pChembl ?pChembl .
-  }
-  BIND(?pValue AS (ROUND(-LOG(?activity_value*POW(10,9))), 4))
-  GRAPH <http://IMS> {
-    ?chembl_compound_uri skos:exactMatch ?ocrs_compound_uri .
-  }
-  GRAPH <http://ops.rsc.org> {
-       ?ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
-  }
+    VALUES ?compound {
+        <http://ops.rsc.org/Compounds/Get/980348>
+    }
+    VALUES ?activity_type {
+        "IC50"
+        "EC50"
+        "AC50"
+        "Ki"
+        "Kd"
+        "Potency"
+    }
+    GRAPH <http://IMS> {
+        ?compound skos:exactMatch ?item .
+    }
+    GRAPH <http://www.ebi.ac.uk/chembl> {
+        ?item rdf:type chembl:Activity .
+        ?item chembl:hasMolecule ?chembl_compound_uri .
+        ?item chembl:hasAssay ?assay_uri .
+        ?assay_uri chembl:hasTarget ?target_uri .
+        ?target_uri rdf:type ?target_type .
+        ?target_uri chembl:organismName ?target_organism .
+        ?item chembl:hasMolecule ?chembl_compound_uri .
+        ?item chembl:standardType ?activity_type .
+        ?item chembl:standardRelation ?activity_relation .
+        ?item chembl:standardValue ?standard_value .
+        BIND (xsd:decimal(?standard_value) as ?activity_value) .
+        FILTER (?activity_value >= 1.0e8) .
+        ?item chembl:pChembl ?pChembl .
+    }
+    {   SELECT (ROUND(-math:LOG(?activity_value*math:POW(10,9))) AS ?pValue)
+        WHERE { }
+    } .
+    GRAPH <http://IMS> {
+        ?chembl_compound_uri skos:exactMatch ?ocrs_compound_uri .
+    }
+    GRAPH <http://ops.rsc.org> {
+        ?ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
+    }
 }
