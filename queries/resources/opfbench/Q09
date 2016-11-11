@@ -35,9 +35,7 @@ WHERE {
         FILTER (?activity_value >= 1.0e8) .
         ?item chembl:pChembl ?pChembl .
     }
-    {   SELECT (ROUND(-math:LOG(?activity_value*math:POW(10,9))) AS ?pValue)
-        WHERE { }
-    } .
+    BIND (ROUND(-math:LOG(?activity_value*math:POW(10,9))) AS ?pValue)
     GRAPH <http://IMS> {
         ?chembl_compound_uri skos:exactMatch ?ocrs_compound_uri .
     }
