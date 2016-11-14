@@ -175,10 +175,10 @@ public class Config {
 	
 	/**
 	 * @return
-	 * 		the number of evaluation runs, default is 5
+	 * 		the number of evaluation runs, default is 1
 	 */
 	public int getEvalRuns() {
-		return Integer.parseInt(props.getProperty("evalRuns", "5"));
+		return Integer.parseInt(props.getProperty("evalRuns", "1"));
 	}
 	
 	/**

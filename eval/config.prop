@@ -23,7 +23,7 @@
 # evalRuns:
 #   integer value representing the number of runs to perform
 #   in each run all selected queries are executed.
-#   default: 5
+#   default: 1
 #
 # evalRuns = 3
 
