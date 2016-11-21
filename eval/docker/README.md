@@ -1,6 +1,6 @@
 To build this go to the root directory of this repository and issue:
 
-    docker build -t kove-evaluator .
+    docker build -t kove-evaluator -f Dockerfile-evaluator .
 
 To run the container issue:
 
