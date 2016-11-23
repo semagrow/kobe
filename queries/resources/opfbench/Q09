@@ -17,9 +17,7 @@ WHERE {
         "Kd"
         "Potency"
     }
-    GRAPH <http://IMS> {
-        ?compound skos:exactMatch ?item .
-    }
+    ?compound skos:exactMatch ?item .
     GRAPH <http://www.ebi.ac.uk/chembl> {
         ?item rdf:type chembl:Activity .
         ?item chembl:hasMolecule ?chembl_compound_uri .
@@ -36,9 +34,7 @@ WHERE {
         ?item chembl:pChembl ?pChembl .
     }
     BIND (ROUND(-math:LOG(?activity_value*math:POW(10,9))) AS ?pValue)
-    GRAPH <http://IMS> {
-        ?chembl_compound_uri skos:exactMatch ?ocrs_compound_uri .
-    }
+    ?chembl_compound_uri skos:exactMatch ?ocrs_compound_uri .
     GRAPH <http://ops.rsc.org> {
         ?ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
     }

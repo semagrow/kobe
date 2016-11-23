@@ -8,9 +8,7 @@ WHERE {
     VALUES ?cw_item {
         <http://www.conceptwiki.org/concept/index/ee7e6001-0279-4670-ac05-34bbb050b6e2>
     }
-    GRAPH <http://IMS> {
-        ?cw_item skos:exactMatch ?item .
-    }
+    ?cw_item skos:exactMatch ?item .
     GRAPH <http://www.ebi.ac.uk/chembl> {
         ?item chembl:pChembl ?pChembl .
         FILTER (?pChembl > 5) .
@@ -26,9 +24,7 @@ WHERE {
         ?assay_uri chembl:hasTarget ?target_uri .
         ?assay_uri chembl:organismName ?assay_organism .
     }
-    GRAPH <http://IMS> {
-        ?chembl_compound skos:exactMatch ?ims_ocrs_compound_uri .
-    }
+    ?chembl_compound skos:exactMatch ?ims_ocrs_compound_uri .
     GRAPH <http://ops.rsc.org> {
         ?ims_ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
     }

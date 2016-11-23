@@ -18,9 +18,7 @@ WHERE {
         ?gene_product_internal dc:identifier ?gene_product .
         FILTER ( ?type = wp:GeneProduct || ?type = wp:Protein ) .
     }
-    GRAPH <http://IMS> {
-        ?gene_product skos:exactMatch ?item .
-    }
+    ?gene_product skos:exactMatch ?item .
     GRAPH <http://www.ebi.ac.uk/chembl> {
         ?assay_uri chembl:hasTarget ?chembl_target_uri .
         ?assay_uri chembl:hasActivity ?item .

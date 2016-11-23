@@ -17,9 +17,7 @@ WHERE {
         ?umls_disease_uri foaf:name ?diseaseName .
         ?gene_disease_assoc sio:SIO_000628 ?umls_disease_uri .
     }
-    GRAPH <http://IMS> {
-        ?umls_disease_uri skos:exactMatch ?item .
-    }
+    ?umls_disease_uri skos:exactMatch ?item .
     GRAPH <http://www.ebi.ac.uk/chembl> {
         ?assay_uri chembl:hasActivity ?item .
         ?assay_uri chembl:hasTarget ?chembl_target_uri .

@@ -5,9 +5,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 SELECT ?chebi_label (SUM(?chebi_label) AS ?count)
 WHERE {
     VALUES ?protein { <http://purl.uniprot.org/uniprot/P00918> } .
-    GRAPH <http://IMS> {
-        ?protein skos:exactMatch ?chembl_target_uri .
-    }
+    ?protein skos:exactMatch ?chembl_target_uri .
     GRAPH <http://www.ebi.ac.uk/chembl> {
     ?assay chembl:hasTarget ?chembl_target_uri .
         ?activity chembl:hasAssay ?assay .
