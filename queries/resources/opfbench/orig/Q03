@@ -1,0 +1,43 @@
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?molecule ?pChembl ?activity_type ?activity_value
+WHERE {
+  VALUES ?target_type {
+    chembl:ProteinComplex
+    chembl:ProteinComplexGroup
+    chembl:ProteinFamily
+    chembl:ProteinProteinInteraction
+    chembl:SingleProtein
+  }
+  GRAPH <http://www.conceptwiki.org> {
+    <http://www.conceptwiki.org/concept/ee7e6001-0279-4670-ac05-34bbb050b6e2> skos:exactMatch ?ims_uri .
+  }
+  GRAPH <http://ims.openphacts.org/> {
+    ?target_uri skos:relatedMatch ?ims_uri .
+  }
+  GRAPH <http://www.ebi.ac.uk/chembl>  {
+    {
+      SELECT DISTINCT ?molecule_uri
+      WHERE {
+	?assay_uri chembl:hasTarget ?target_uri .
+	?uri chembl:hasAssay ?assay_uri .
+	?uri chembl:hasMolecule ?molecule .
+	?uri chembl:pChembl ?pChembl . 
+	FILTER (?pChembl > 5) .
+      }
+    }
+    ?act rdf:type chembl:Activity.
+    ?act chembl:hasMolecule ?molecule_uri .
+    ?act chembl:hasAssay ?assay_uri .
+    ?assay_uri chembl:hasTarget ?target_uri .
+    ?target_uri rdf:type ?target_type .
+    ?act chembl:standardType ?activity_type .
+    ?act chembl:standardRelation ?activity_relation .
+    ?act chembl:pChembl ?pChembl . 
+    FILTER(?pChembl >= 0) .
+    ?act chembl:standardValue ?standard_value .
+    BIND (xsd:decimal(?standard_value) AS ?activity_value) .
+  }
+}
