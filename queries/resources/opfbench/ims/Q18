@@ -1,0 +1,34 @@
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?title ?target_organism ?activity_value ?doc_uri ?pmid
+WHERE {
+  GRAPH <http://www.wikipathways.org> {
+    ?rev dc:identifier <http://identifiers.org/wikipathways/WP179> .
+    ?rev dc:title ?title .
+    ?gene_product_internal dcterms:isPartOf ?rev .
+    ?gene_product_internal a ?type .
+    ?gene_product_internal dc:identifier ?gene_product .
+    FILTER( ?type = wp:GeneProduct || ?type = wp:Protein ).
+  }
+  ?item skos:relatedMatch ?gene_product.
+  GRAPH <http://www.ebi.ac.uk/chembl> {
+    ?ss chembl:targetCmptXref ?item .
+    ?target_uri chembl:hasTargetComponent ?ss .
+    ?assay_uri chembl:hasTarget ?chembl_target_uri .
+    ?chembl_target_uri dcterms:title ?target_name_chembl .
+    ?chembl_target_uri chembl:organismName ?target_organism .
+    ?assay_uri chembl:hasActivity ?act .
+    ?act chembl:standardUnits "nM".
+    ?act chembl:standardType "Potency" .
+    ?act chembl:standardValue ?standard_value .
+    BIND (xsd:decimal(?standard_value) AS ?activity_value).
+    FILTER (?activity_value <= 1000).
+    OPTIONAL { ?act chembl:hasDocument ?doc_uri .
+               ?doc_uri bibo:pmid ?pmid . }
+  }
+}
