@@ -7,12 +7,12 @@ SELECT ?assay_uri ?assay_description ?compound_uri ?compound_name ?smiles
 WHERE {
   GRAPH <http://www.ebi.ac.uk/chembl> {
     ?target_uri chembl:hasProteinClassification <http://rdf.ebi.ac.uk/resource/chembl/protclass/CHEMBL_PC_206> .
-    ?target_uri chembl:hasTargetComponent ?protein .
-    ?target_uri dcterms:title ?target_title .
-    ?assay_uri chembl:hasTarget ?target_uri .
+    ?target_uri  chembl:hasTargetComponent ?protein .
+    ?target_uri  dcterms:title ?target_title .
+    ?assay_uri   chembl:hasTarget ?target_uri .
     OPTIONAL { ?assay_uri   dcterms:description ?assay_description . }
-    ?uri chembl:hasAssay ?assay_uri .
-    ?uri chembl:hasMolecule ?compound_uri .
+    ?uri  chembl:hasAssay ?assay_uri .
+    ?uri  chembl:hasMolecule ?compound_uri .
   }
   GRAPH <http://ims.openphacts.org/> {
     ?cw_compound skos:exactMatch ?compound_uri .
@@ -21,7 +21,7 @@ WHERE {
     ?cw_compound skos:prefLabel ?compound_name .
   }
   GRAPH <http://ims.openphacts.org/> {
-    ?ims_ocrs_compound_uri skos:exactMatch ?compound_uri .
+    ?ims_ocrs_compound_uri skos:exactMatch ?compound_uri.
   }
   GRAPH <http://ops.rsc.org> {
     ?ims_ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .

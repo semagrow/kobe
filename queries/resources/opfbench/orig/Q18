@@ -13,7 +13,7 @@ WHERE {
     ?gene_product_internal dcterms:isPartOf ?rev .
     ?gene_product_internal a ?type .
     ?gene_product_internal dc:identifier ?gene_product .
-    FILTER( ?type = wp:GeneProduct || ?type = wp:Protein ) .
+    FILTER( ?type = wp:GeneProduct || ?type = wp:Protein ).
   }
   GRAPH <http://ims.openphacts.org/> {
     ?item skos:relatedMatch ?gene_product.
@@ -28,11 +28,9 @@ WHERE {
     ?act chembl:standardUnits "nM".
     ?act chembl:standardType "Potency" .
     ?act chembl:standardValue ?standard_value .
-    BIND (xsd:decimal(?standard_value) AS ?activity_value) .
-    FILTER (?activity_value <= 1000) .
-    OPTIONAL { 
-      ?act chembl:hasDocument ?doc_uri .
-      ?doc_uri bibo:pmid ?pmid . 
-    }
+    BIND (xsd:decimal(?standard_value) AS ?activity_value).
+    FILTER (?activity_value <= 1000).
+    OPTIONAL { ?act chembl:hasDocument ?doc_uri .
+               ?doc_uri bibo:pmid ?pmid . }
   }
 }
