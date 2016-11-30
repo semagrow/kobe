@@ -1,0 +1,15 @@
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?target ?compound
+WHERE {
+  ?item rdf:type chembl:Activity .
+  ?item chembl:hasMolecule ?compound .
+  ?item chembl:pChembl ?pChembl . 
+  FILTER (?pChembl > 7) .
+  ?item chembl:hasAssay ?assay_uri .
+  ?assay_uri chembl:hasTarget ?target .
+  ?target rdf:type ?target_type .
+  { ?target chembl:organismName "Homo sapiens" }
+  UNION
+  { ?target chembl:organismName "Mus musculus" } .
+}

@@ -1,0 +1,30 @@
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX cheminf: <http://semanticscience.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT *
+WHERE {
+  VALUES ?activity_type {
+    "IC50"
+    "EC50"
+    "AC50"
+    "Ki"
+    "Kd"
+    "Potency"
+  }
+  <http://ops.rsc.org/OPS980348> skos:exactMatch ?chembl_compound_uri .
+  ?item chembl:hasMolecule ?chembl_compound_uri .
+  ?item chembl:hasAssay ?assay_uri .
+  ?assay_uri chembl:hasTarget ?target_uri .
+  ?target_uri rdf:type ?target_type .
+  ?target_uri chembl:organismName ?target_organism .
+  ?item chembl:standardType ?activity_type .
+  ?item chembl:standardRelation ?activity_relation .
+  ?item chembl:standardValue ?standard_value .
+  BIND (xsd:decimal(?standard_value) as ?activity_value) .
+  FILTER (?activity_value <= 1.0e8) .
+  ?item chembl:pChembl ?pChembl .
+  ?ocrs_compound_uri skos:exactMatch ?chembl_compound_uri .
+  ?ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
+}

@@ -1,0 +1,19 @@
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX cheminf: <http://semanticscience.org/resource/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?assay_uri ?assay_description ?compound_uri ?compound_name ?smiles
+WHERE {
+  ?target_uri chembl:hasProteinClassification <http://rdf.ebi.ac.uk/resource/chembl/protclass/CHEMBL_PC_206> .
+  ?target_uri  chembl:hasTargetComponent ?protein .
+  ?target_uri  dcterms:title ?target_title .
+  ?assay_uri   chembl:hasTarget ?target_uri .
+  OPTIONAL { ?assay_uri   dcterms:description ?assay_description . }
+  ?uri  chembl:hasAssay ?assay_uri .
+  ?uri  chembl:hasMolecule ?compound_uri .
+  ?cw_compound skos:exactMatch ?compound_uri .
+  ?cw_compound skos:prefLabel ?compound_name .
+  ?ims_ocrs_compound_uri skos:exactMatch ?compound_uri.
+  ?ims_ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
+}

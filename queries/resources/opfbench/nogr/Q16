@@ -1,0 +1,25 @@
+PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?target_uri ?chembl_compound
+WHERE {
+  VALUES ?umls_disease_uri {
+    <http://linkedlifedata.com/resource/umls/id/C0002395>
+    <http://linkedlifedata.com/resource/umls/id/C0030567>
+  }
+  ?gene_disease_assoc sio:SIO_000628 ?disease_uri .
+  ?disease_uri a ncit:C16612 .
+  ?umls_disease_uri foaf:name ?diseaseName .
+  ?gene_disease_assoc sio:SIO_000628 ?umls_disease_uri .
+  ?s skos:relatedMatch ?disease_uri .
+  ?ss chembl:targetCmptXref ?s .
+  ?target_uri chembl:hasTargetComponent ?ss .
+  ?assay_uri chembl:hasActivity ?item .
+  ?assay_uri chembl:hasTarget ?target_uri .
+  ?item chembl:pChembl ?pChembl. 
+  FILTER (?pChembl > 5) .
+  ?item chembl:hasMolecule ?chembl_compound .
+}
