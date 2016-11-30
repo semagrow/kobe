@@ -20,7 +20,7 @@ WHERE {
   }
   GRAPH <http://www.ebi.ac.uk/chembl> {
     ?ss chembl:targetCmptXref ?item .
-    ?target_uri chembl:hasTargetComponent ?ss .
+    ?chembl_target_uri chembl:hasTargetComponent ?ss .
     ?assay_uri chembl:hasTarget ?chembl_target_uri .
     ?chembl_target_uri dcterms:title ?target_name_chembl .
     ?chembl_target_uri chembl:organismName ?target_organism .
