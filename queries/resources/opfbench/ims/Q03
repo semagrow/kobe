@@ -20,7 +20,7 @@ WHERE {
   ?target_uri skos:relatedMatch ?ims_uri.
   GRAPH <http://www.ebi.ac.uk/chembl>  {
     {
-      SELECT DISTINCT ?molecule_uri
+      SELECT DISTINCT ?molecule
       WHERE {
           ?assay_uri chembl:hasTarget ?target_uri .
           ?uri chembl:hasAssay ?assay_uri .
@@ -31,7 +31,7 @@ WHERE {
   }
   GRAPH <http://www.ebi.ac.uk/chembl>  {
     ?act rdf:type chembl:Activity.
-    ?act chembl:hasMolecule ?molecule_uri .
+    ?act chembl:hasMolecule ?molecule .
     ?act chembl:hasAssay ?assay_uri .
     ?assay_uri chembl:hasTarget ?target_uri .
     ?target_uri rdf:type ?target_type .
