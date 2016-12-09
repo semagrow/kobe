@@ -45,90 +45,73 @@
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/aers.void.n3> ;
             void:sparqlEndpoint <http://aers:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/bao.void.n3> ;
             void:sparqlEndpoint <http://bao:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/caloha.void.n3> ;
             void:sparqlEndpoint <http://caloha:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/chebi.void.n3> ;
             void:sparqlEndpoint <http://opf-chebi:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/chembl.void.n3> ;
             void:sparqlEndpoint <http://chembl:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/conceptwiki.void.n3> ;
             void:sparqlEndpoint <http://conceptwiki:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/disgenet.void.n3> ;
             void:sparqlEndpoint <http://disgenet:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
-            fed:voidDescription <void/doid.void.n3 > ;
+            fed:voidDescription <void/doid.void.n3> ;
             void:sparqlEndpoint <http://doid:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/drugbank.void.n3> ;
             void:sparqlEndpoint <http://opf-drugbank:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/enzyme.void.n3> ;
             void:sparqlEndpoint <http://enzyme:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/goa.void.n3> ;
             void:sparqlEndpoint <http://goa:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
             fed:voidDescription <void/go.void.n3> ;
             void:sparqlEndpoint <http://go:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
-            fed:voidDescription <void/ims.void.n3 > ;
+            fed:voidDescription <void/ims.void.n3> ;
             void:sparqlEndpoint <http://ims:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
-            fed:voidDescription <void/ncats.void.n3   > ;
+            fed:voidDescription <void/ncats.void.n3> ;
             void:sparqlEndpoint <http://ncats:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
-            fed:voidDescription <void/nextprot.void.n3 > ;
+            fed:voidDescription <void/nextprot.void.n3> ;
             void:sparqlEndpoint <http://nextprot:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
-            fed:voidDescription <void/ocrs.void.n3  > ;
+            fed:voidDescription <void/ocrs.void.n3> ;
             void:sparqlEndpoint <http://ocrs:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
-            fed:voidDescription <void/uniprot.void.n3  > ;
+            fed:voidDescription <void/uniprot.void.n3> ;
             void:sparqlEndpoint <http://uniprot:8890/sparql>
-         ], 
-         fed:member [
+         ], [
             rep:repositoryType "west:VoidRepository" ;
-            fed:voidDescription <void/wikipathways.void.n3 > ;
+            fed:voidDescription <void/wikipathways.void.n3> ;
             void:sparqlEndpoint <http://wikipathways:8890/sparql>
          ]
       ]

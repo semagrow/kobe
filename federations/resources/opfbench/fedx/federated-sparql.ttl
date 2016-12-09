@@ -1,4 +1,4 @@
-@prefix fluid: "http://fluidops.org/config#> .
+@prefix fluid: <http://fluidops.org/config#> .
 
 <http://aers>           fluid:store "SPARQLEndpoint";
                         fluid:SPARQLEndpoint "http://aers:8890/sparql" .
