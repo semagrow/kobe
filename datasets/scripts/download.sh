@@ -14,7 +14,7 @@ case $EXT in
     7z x *.7z
   ;;
   zip)
-    unzip .zip
+    unzip *.zip
   ;;
 esac
 
