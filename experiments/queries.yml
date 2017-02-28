@@ -1,0 +1,75 @@
+version: '2'
+
+services:
+
+    opf:
+      image: busybox
+      depends_on:
+        - aers
+        - bao
+        - caloha
+        - chebi
+        - chembl
+        - conceptwiki
+        - disgenet
+        - doid
+        - drugbank
+        - enzyme
+        - go
+        - goa
+        - ims
+        - ncats
+        - nextprot
+        - ocrs
+        - uniprot
+        - wikipathways
+        
+
+    semagrow-opf:
+        image: semagrow
+        container_name: semagrow-opf
+        ports:
+            - 8008:8080
+            - 8009:8000
+        volumes:
+            - /home/iitadmin/kobe/federations/resources/opfbench/semagrow:/etc/default/semagrow
+        environment:
+            - "constraint:node==slave3"
+
+    semagrow-opf-old:
+        image: semagrow/semagrow
+        container_name: semagrow-opf-old
+        ports:
+            - 8010:8080
+        volumes:
+            - /home/iitadmin/kobe/federations/resources/opfbench/semagrow:/etc/default/semagrow
+        environment:
+            - "constraint:node==slave3"
+
+    fedx-opf:
+        image: semagrow/fedx-server
+        container_name: fedx-opf
+        volumes:
+            - /home/iitadmin/kobe/federations/resources/opfbench/fedx:/etc/fedx
+        environment:
+            - "constraint:node==slave3"
+
+    virtuoso-opf:
+       image: semagrow/virtuoso:bench-7.1
+       container_name: virtuoso-opf
+       volumes_from:
+         - virtuoso-opf-data
+       ports:
+         - 8011:8890
+       environment:
+         - "constraint:node==slave4"
+       volumes:
+         - /srv/opfbench-virtuoso:/data/toLoad
+    virtuoso-opf-data:
+       image: busybox
+       environment:
+         - "constraint:node==slave4"
+       volumes:
+         - /data
+
+

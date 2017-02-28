@@ -1,0 +1,257 @@
+version: '2'
+
+services:
+
+    aers:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: aers
+        ports:
+            - 9080:8890
+        volumes_from:
+            - aers-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/aers.tar
+    aers-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave1"
+
+    bao:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: bao
+        ports:
+            - 9081:8890
+        volumes_from:
+            - bao-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/bao.tar
+    bao-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave2"
+
+    caloha:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: caloha
+        ports:
+            - 9082:8890
+        volumes_from:
+            - caloha-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/caloha.tar
+    caloha-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave3"
+
+    chebi:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: opf-chebi
+        ports:
+            - 9083:8890
+        volumes_from:
+            - chebi-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/chebi.tar
+    chebi-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave4"
+
+    chembl:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: chembl
+        ports:
+            - 9084:8890
+        volumes_from:
+            - chembl-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/chembl.tar
+    chembl-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave1"
+
+    conceptwiki:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: conceptwiki
+        ports:
+            - 9085:8890
+        volumes_from:
+            - conceptwiki-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/conceptwiki.tar
+    conceptwiki-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave2"
+
+    disgenet:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: disgenet
+        ports:
+            - 9086:8890
+        volumes_from:
+            - disgenet-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/disgenet.tar
+    disgenet-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave3"
+
+    doid:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: doid
+        ports:
+            - 9087:8890
+        volumes_from:
+            - doid-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/doid.tar
+    doid-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave4"
+
+    drugbank:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: opf-drugbank
+        ports:
+            - 9088:8890
+        volumes_from:
+            - drugbank-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/drugbank.tar
+    drugbank-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave1"
+
+    enzyme:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: enzyme
+        ports:
+            - 9089:8890
+        volumes_from:
+            - enzyme-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/enzyme.tar
+    enzyme-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave2"
+
+    go:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: go
+        ports:
+            - 9090:8890
+        volumes_from:
+            - go-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/go.tar
+    go-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave3"
+
+    goa:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: goa
+        ports:
+            - 9091:8890
+        volumes_from:
+            - goa-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/goa.tar
+    goa-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave4"
+
+    ncats:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: ncats
+        ports:
+            - 9092:8890
+        volumes_from:
+            - ncats-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/ncats.tar
+    ncats-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave1"
+
+    nextprot:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: nextprot
+        ports:
+            - 9093:8890
+        volumes_from:
+            - nextprot-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/nextprot.tar
+    nextprot-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave2"
+
+    ocrs:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: ocrs
+        ports:
+            - 9094:8890
+        volumes_from:
+            - ocrs-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/ocrs.tar
+    ocrs-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave3"
+
+    uniprot:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: uniprot
+        ports:
+            - 9095:8890
+        volumes_from:
+            - uniprot-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/uniprot.tar
+    uniprot-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave4"
+
+    wikipathways:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: wikipathways
+        ports:
+            - 9096:8890
+        volumes_from:
+            - wikipathways-data
+        environment:
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/rdf/wikipathways.tar
+    wikipathways-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave1"
+
+    ims:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: ims
+        ports:
+            - 9097:8890
+        volumes_from:
+            - ims-data
+        environment:
+            - DEFAULT_GRAPH=http://ims.openphacts.org/
+            - DOWNLOAD_URL=https://data.openphacts.org/free/2.0/ims/ims-linksets-2.0.tar.gz
+    ims-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave2"
+

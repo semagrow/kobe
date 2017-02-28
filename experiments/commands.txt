@@ -1,0 +1,51 @@
+Slave 4
+-------
+mkdir /srv/openphacts-virtuoso/
+cd /srv/openphacts-virtuoso/
+cp {$project-dir}/opfvirtuosoinit.sh .
+./opfvirtuosoinit.sh
+
+Slave 3
+-------
+git clone https://github.com/semagrow/kobe.git
+git checkout devel-bde
+
+Master
+------
+mkdir ~/semagrow/opf/
+cd ~/semagrow/opf/
+cp {$project-dir}/*.yml .
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d opf
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d virtuoso-opf
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d semagrow-opf
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d fedx-opf
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d splendid-opf
+
+Experiments:
+------------
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d virtuoso-opf-orig-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  virtuoso-opf-orig-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d virtuoso-opf-nogr-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  virtuoso-opf-nogr-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d semagrow-opf-orig-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  semagrow-opf-orig-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d semagrow-opf-nogr-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  semagrow-opf-nogr-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d fedx-opf-orig-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  fedx-opf-orig-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d fedx-opf-nogr-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  fedx-opf-nogr-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d splendid-opf-orig-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  splendid-opf-orig-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d splendid-opf-nogr-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  splendid-opf-nogr-eval
+
+
