@@ -27,7 +27,6 @@ services:
         environment:
             - "constraint:node==slave3"
                        
-
     fedx-bigrdfbench:
         image: semagrow/fedx-server
         container_name: fedx-bigrdfbench

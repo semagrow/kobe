@@ -137,7 +137,7 @@ services:
         environment:
             - "constraint:node==slave1"
         volumes:
-         - /srv/affymetrix:/data/toLoad
+         - /srv/bigrdfbench/Affymetrix:/data/toLoad
     affymetrix-data:
         image: busybox
         volumes:
@@ -153,7 +153,7 @@ services:
         environment:
             - "constraint:node==slave2"
         volumes:
-         - /srv/linkedtga-m:/data/toLoad
+         - /srv/bigrdfbench/LinkedTCGA-M:/data/toLoad
     linkedtga-m-data:
         image: busybox
         volumes:
@@ -169,7 +169,7 @@ services:
         environment:
             - "constraint:node==slave3"
         volumes:
-         - /srv/linkedtga-e:/data/toLoad
+         - /srv/bigrdfbench/LinkedTCGA-E:/data/toLoad
     linkedtga-e-data:
         image: busybox
         volumes:
@@ -185,7 +185,7 @@ services:
         environment:
             - "constraint:node==slave4"
         volumes:
-         - /srv/linkedtga-a:/data/toLoad
+         - /srv/bigrdfbench/LinkedTCGA-A:/data/toLoad
     linkedtga-a-data:
         image: busybox
         volumes:

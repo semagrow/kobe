@@ -16,7 +16,7 @@ nextprot,https://data.openphacts.org/free/2.0/rdf/nextprot.tar,/srv/opfbench-vir
 ocrs,https://data.openphacts.org/free/2.0/rdf/ocrs.tar,/srv/opfbench-virtuoso
 uniprot,https://data.openphacts.org/free/2.0/rdf/uniprot.tar,/srv/opfbench-virtuoso
 wikipathways,https://data.openphacts.org/free/2.0/rdf/wikipathways.tar,/srv/opfbench-virtuoso
-linkedtga-m,http://users.iit.demokritos.gr/~antru/bigrdfbench/LinkedTCGA-M.7z,/srv/bigrdfbench
-linkedtga-e,http://users.iit.demokritos.gr/~antru/bigrdfbench/LinkedTCGA-E.7z,/srv/bigrdfbench
-linkedtga-a,http://users.iit.demokritos.gr/~antru/bigrdfbench/LinkedTCGA-A.7z,/srv/bigrdfbench
-affymetrix,http://users.iit.demokritos.gr/~antru/bigrdfbench/Affymetrix.zip,/srv/bigrdfbench
+linkedtga-m,http://users.iit.demokritos.gr/~antru/bigrdfbench/LinkedTCGA-M.7z,/srv/bigrdfbench/LinkedTCGA-M
+linkedtga-e,http://users.iit.demokritos.gr/~antru/bigrdfbench/LinkedTCGA-E.7z,/srv/bigrdfbench/LinkedTCGA-E
+linkedtga-a,http://users.iit.demokritos.gr/~antru/bigrdfbench/LinkedTCGA-A.7z,/srv/bigrdfbench/LinkedTCGA-A
+affymetrix,http://users.iit.demokritos.gr/~antru/bigrdfbench/Affymetrix.zip,/srv/bigrdfbench/Affymetrix
