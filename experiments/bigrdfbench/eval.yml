@@ -1,0 +1,67 @@
+
+version: '2'
+
+services:
+
+    bigrdfbench-federators:
+      image: busybox
+      depends_on:
+        - semagrow-bigrdfbench
+        - splendid-bigrdfbench
+        - fedx-bigrdfbench
+
+    semagrow-bigrdfbench-bigdata-eval:
+        image: semagrow/kobe-evaluator
+        container_name: semagrow-bigrdfbench-bigdata-eval
+        volumes:
+            - /home/iitadmin/kobe/queries/resources/bigrfbench/bigdata:/etc/querySet
+        environment:
+            - TIMEOUT=1000000
+            - ENDPOINT=http://semagrow-bigrdfbench:8080/SemaGrow/sparql
+
+    semagrow-bigrdfbench-complex-eval:
+        image: semagrow/kobe-evaluator
+        container_name: semagrow-bigrdfbench-complex-eval
+        volumes:
+            - /home/iitadmin/kobe/queries/resources/bigrfbench/complex:/etc/querySet
+        environment:
+            - TIMEOUT=1000000
+            - ENDPOINT=http://semagrow-bigrdfbench:8080/SemaGrow/sparql
+
+    fedx-bigrdfbench-bigdata-eval:
+        image: semagrow/kobe-evaluator
+        container_name: fedx-bigrdfbench-bigdata-eval
+        volumes:
+            - /home/iitadmin/kobe/queries/resources/bigrfbench/bigdata:/etc/querySet
+        environment:
+            - TIMEOUT=1000000
+            - ENDPOINT=http://fedx-bigrdfbench:8080/fedx-3.1/repositories/sparql
+            
+    fedx-bigrdfbench-complex-eval:
+        image: semagrow/kobe-evaluator
+        container_name: fedx-bigrdfbench-complex-eval
+        volumes:
+            - /home/iitadmin/kobe/queries/resources/bigrfbench/complex:/etc/querySet
+        environment:
+            - TIMEOUT=1000000
+            - ENDPOINT=http://fedx-bigrdfbench:8080/fedx-3.1/repositories/sparql
+
+    splendid-bigrdfbench-bigdata-eval:
+        image: semagrow/kobe-evaluator
+        container_name: splendid-bigrdfbench-bigdata-eval
+        volumes:
+            - /home/iitadmin/kobe/queries/resources/bigrfbench/bigdata:/etc/querySet
+        environment:
+            - TIMEOUT=1000000
+            - ENDPOINT=http://splendid-bigrdfbench:8080/splendid-1.0/repositories/sparql
+            
+    splendid-bigrdfbench-complex-eval:
+        image: semagrow/kobe-evaluator
+        container_name: splendid-bigrdfbench-complex-eval
+        volumes:
+            - /home/iitadmin/kobe/queries/resources/bigrfbench/complex:/etc/querySet
+        environment:
+            - TIMEOUT=1000000
+            - ENDPOINT=http://splendid-bigrdfbench:8080/splendid-1.0/repositories/sparql
+
+

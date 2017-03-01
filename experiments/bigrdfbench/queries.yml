@@ -1,0 +1,46 @@
+version: '2'
+
+services:
+
+    bigrdf:
+      image: busybox
+      depends_on:
+        - dbpedia-subset
+        - jamendo
+        - nyt
+        - geonames
+        - lmdb
+        - swdfood
+        - drugbank
+        - kegg
+        - chebi
+        - affymetrix
+        - linkedtga-m
+        - linkedtga-e
+        - linkedtga-a
+
+    semagrow-bigrdfbench:
+        image: semagrow/semagrow
+        container_name: semagrow-bigrdfbench
+        volumes:
+            - /home/iitadmin/opfbench/kobe/federations/resources/bigrdfbench/semagrow:/etc/default/semagrow
+        environment:
+            - "constraint:node==slave3"
+                       
+
+    fedx-bigrdfbench:
+        image: semagrow/fedx-server
+        container_name: fedx-bigrdfbench
+        volumes:
+            - /home/iitadmin/opfbench/kobe/federations/resources/bigrdfbench/fedx:/etc/fedx
+        environment:
+            - "constraint:node==slave3"
+            
+    splendid-bigrdfbench:
+        image: semagrow/splendid-server
+        container_name: splendid-bigrdfbench
+        volumes:
+            - /home/iitadmin/opfbench/kobe/federations/resources/bigrdfbench/splendid:/etc/splendid
+        environment:
+            - "constraint:node==slave3"
+
