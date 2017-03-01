@@ -1,0 +1,50 @@
+@prefix fluid: <http://fluidops.org/config#>.
+
+
+<http://Chebi>     fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://chebi:8890/sparql".
+                   
+<http://DBpedia>   fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://dbpedia-subset:8890/sparql" .
+                   
+<http://Drugbank>  fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://drugbank:8890/sparql" .
+
+<http://Geonames>  fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://geonames:8890/sparql" .
+                   
+<http://Jamendo>   fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://jamendo:8890/sparql" .
+                   
+<http://KEGG>      fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://kegg:8890/sparql" .
+                   
+<http://LinkedMDB> fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://lmdb:8890/sparql" .
+                   
+<http://NYtimes>   fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://nyt:8890/sparql".
+                   
+<http://SWDFood>   fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://swdfood:8890/sparql" .
+
+              
+<http://Affymetrx> fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://affymetrix:8890/sparql" .
+                                      
+<http://LTGAM>     fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://linkedtga-m:8890/sparql" .
+
+<http://LTGAE>     fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://linkedtga-e:8890/sparql" .
+                                      
+<http://LTGAA>     fluid:store "SPARQLEndpoint";
+                   fluid:SPARQLEndpoint "http://linkedtga-a:8890/sparql" .
+
+
+
+
+
+
+
+                   
