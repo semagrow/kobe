@@ -6444,7 +6444,7 @@ _:node19p5s3fglx1 a void:Dataset ;
 		void:class <http://xmlns.com/foaf/0.1/Person> ;
 		void:entities "48689"^^xsd:long ;
 	] ;
-	void:sparqlEndpoint <http://dbpedia:8890/sparql/> ;
+	void:sparqlEndpoint <http://dbpedia-subset:8890/sparql/> ;
 	void:triples "42852838"^^xsd:long ;
 	void:properties "1080"^^xsd:int ;
 	void:classes "253"^^xsd:int ;
