@@ -1,0 +1,133 @@
+version: '2'
+
+services:
+
+    dbpedia-subset:
+        container_name: dbpedia-subset
+        image: semagrow/virtuoso:bench-7.1
+        volumes_from:
+            - dbpedia-subset-data
+        ports:
+            - 9438:8890
+        environment:
+            - DOWNLOAD_URL=http://users.iit.demokritos.gr/~gmouchakis/dumps/DBPedia-Subset.tar.gz
+
+    dbpedia-subset-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave1"
+        volumes:
+            - /data
+    nyt:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: nyt
+        volumes_from:
+            - nyt-data
+        environment:
+            - DOWNLOAD_URL=http://users.iit.demokritos.gr/~gmouchakis/dumps/NYT.tar.gz
+
+    nyt-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave2"
+        volumes:
+            - /data
+
+    lmdb:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: lmdb
+        volumes_from:
+            - lmdb-data
+        environment:
+            - DOWNLOAD_URL=http://users.iit.demokritos.gr/~gmouchakis/dumps/LMDB.tar.gz
+    lmdb-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave3"
+        volumes:
+            - /data
+
+    jamendo:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: jamendo
+        volumes_from:
+            - jamendo-data
+        environment:
+            - DOWNLOAD_URL=http://users.iit.demokritos.gr/~gmouchakis/dumps/Jamendo.tar.gz
+    jamendo-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave4"
+        volumes:
+            - /data
+
+    geonames:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: geonames
+        volumes_from:
+            - geonames-data
+        environment:
+            - DOWNLOAD_URL=http://users.iit.demokritos.gr/~gmouchakis/dumps/GeoNames.tar.gz
+    geonames-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave2"
+        volumes:
+            - /data
+
+    swdfood:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: swdfood
+        volumes_from:
+            - swdfood-data
+        environment:
+            - DOWNLOAD_URL=http://users.iit.demokritos.gr/~gmouchakis/dumps/SWDFood.tar.gz
+    swdfood-data:
+        image: busybox
+        environment:
+            - "constraint:node==slave1"
+        volumes:
+            - /data
+
+    kegg:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: kegg
+        volumes_from:
+            - kegg-data
+        environment:
+            - DOWNLOAD_URL=http://users.iit.demokritos.gr/~gmouchakis/dumps/KEGG.tar.gz
+    kegg-data:
+        image: busybox
+        volumes:
+            - /data
+        environment:
+            - "constraint:node==slave2"
+
+    drugbank:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: drugbank
+        volumes_from:
+            - drugbank-data
+        environment:
+            - DOWNLOAD_URL=http://users.iit.demokritos.gr/~gmouchakis/dumps/DrugBank.tar.gz
+    drugbank-data:
+        image: busybox
+        volumes:
+            - /data
+        environment:
+            - "constraint:node==slave3" 
+
+    chebi:
+        image: semagrow/virtuoso:bench-7.1
+        container_name: chebi
+        volumes_from:
+            - chebi-data
+        environment:
+            - DOWNLOAD_URL=http://users.iit.demokritos.gr/~gmouchakis/dumps/ChEBI.tar.gz
+    chebi-data:
+        image: busybox
+        volumes:
+            - /data
+        environment:
+            - "constraint:node==slave4"
+
