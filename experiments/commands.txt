@@ -1,0 +1,27 @@
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d bigrdf
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d semagrow-bigrdfbench
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d fedx-bigrdfbench
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d splendid-bigrdfbench
+
+Experiments:
+------------
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d semagrow-bigrdfbench-complex-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  semagrow-bigrdfbench-complex-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d semagrow-bigrdfbench-bigdata-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  semagrow-bigrdfbench-bigdata-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d fedx-bigrdfbench-complex-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  fedx-bigrdfbench-complex-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d fedx-bigrdfbench-bigdata-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  fedx-bigrdfbench-bigdata-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d splendid-bigrdfbench-complex-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  splendid-bigrdfbench-complex-eval
+
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml up -d splendid-bigrdfbench-bigdata-eval
+docker-compose -H tcp://master:4000 -f datasets.yml -f queries.yml -f eval.yml logs  splendid-bigrdfbench-bigdata-eval
+
+
