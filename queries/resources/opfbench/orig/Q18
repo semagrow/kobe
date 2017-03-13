@@ -16,7 +16,10 @@ WHERE {
     FILTER( ?type = wp:GeneProduct || ?type = wp:Protein ).
   }
   GRAPH <http://ims.openphacts.org/> {
-    ?item skos:relatedMatch ?gene_product.
+    ?gene_product skos:closeMatch ?s .
+  }
+  GRAPH <http://rdf.imim.es> {
+    ?s skos:exactMatch ?item .
   }
   GRAPH <http://www.ebi.ac.uk/chembl> {
     ?ss chembl:targetCmptXref ?item .
