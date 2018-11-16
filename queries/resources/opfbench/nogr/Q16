@@ -14,7 +14,8 @@ WHERE {
   ?disease_uri a ncit:C16612 .
   ?umls_disease_uri foaf:name ?diseaseName .
   ?gene_disease_assoc sio:SIO_000628 ?umls_disease_uri .
-  ?s skos:relatedMatch ?disease_uri .
+  ?disease_uri skos:closeMatch ?b .
+  ?b skos:exactMatch ?s .
   ?ss chembl:targetCmptXref ?s .
   ?target_uri chembl:hasTargetComponent ?ss .
   ?assay_uri chembl:hasActivity ?item .

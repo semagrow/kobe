@@ -13,7 +13,8 @@ WHERE {
   ?gene_product_internal a ?type .
   ?gene_product_internal dc:identifier ?gene_product .
   FILTER( ?type = wp:GeneProduct || ?type = wp:Protein ).
-  ?item skos:relatedMatch ?gene_product.
+  ?gene_product skos:closeMatch ?s .
+  ?s skos:exactMatch ?item .
   ?ss chembl:targetCmptXref ?item .
   ?chembl_target_uri chembl:hasTargetComponent ?ss .
   ?assay_uri chembl:hasTarget ?chembl_target_uri .

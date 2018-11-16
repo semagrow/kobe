@@ -17,7 +17,10 @@ WHERE {
     ?gene_disease_assoc sio:SIO_000628 ?umls_disease_uri .
   }
   GRAPH <http://ims.openphacts.org/> {
-    ?s skos:relatedMatch ?disease_uri .
+    ?disease_uri skos:closeMatch ?b .
+  }
+  GRAPH <http://rdf.imim.es> {
+    ?b skos:exactMatch ?s .
   }
   GRAPH <http://www.ebi.ac.uk/chembl> {
     ?ss chembl:targetCmptXref ?s .
