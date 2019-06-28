@@ -1,0 +1,16 @@
+apiVersion: kobedataset.kobe.com/v1alpha1
+kind: KobeDataset
+metadata:
+  name: kobehaha
+spec:
+  # Add fields here
+  image: nginx
+  downloadFrom: "hellourl"
+  imagePullPolicy: Always
+  count: 1
+  group: kobe
+  port: 80
+
+---
+
+

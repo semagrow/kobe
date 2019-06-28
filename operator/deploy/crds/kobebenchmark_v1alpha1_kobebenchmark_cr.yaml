@@ -1,0 +1,19 @@
+apiVersion: kobebenchmark.kobe.com/v1alpha1
+kind: KobeBenchmark
+metadata:
+  name: kobebenchmark
+spec:
+  datasets:
+    - name: kobehaha
+      image: nginx
+      downloadFrom: ""
+    - name: kobhaha
+      image: nginx
+      downloadFrom: ""
+    - name: kobhahai
+      image: nginx
+      downloadFrom: ""
+    - name: kobhehe
+      image: nginx
+      downloadFrom: ""
+

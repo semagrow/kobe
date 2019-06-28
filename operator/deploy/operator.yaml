@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kobe-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: kobe-operator
+  template:
+    metadata:
+      labels:
+        name: kobe-operator
+    spec:
+      serviceAccountName: kobe-operator
+      containers:
+        - name: kobe-operator
+          # Replace this with the built image name
+          image: kostbabis/kobe-operator
+          command:
+          - kobe-operator
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "kobe-operator"
