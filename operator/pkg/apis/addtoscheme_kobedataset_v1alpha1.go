@@ -1,7 +1,7 @@
 package apis
 
 import (
-	"github.com/kobe/kobe-operator/pkg/apis/kobedataset/v1alpha1"
+	"github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1"
 )
 
 func init() {

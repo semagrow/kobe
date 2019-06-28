@@ -11,9 +11,9 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/kobe/kobe-operator/pkg/apis/kobedataset/v1alpha1.KobeDataset":       schema_pkg_apis_kobedataset_v1alpha1_KobeDataset(ref),
-		"github.com/kobe/kobe-operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetSpec":   schema_pkg_apis_kobedataset_v1alpha1_KobeDatasetSpec(ref),
-		"github.com/kobe/kobe-operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetStatus": schema_pkg_apis_kobedataset_v1alpha1_KobeDatasetStatus(ref),
+		"github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1.KobeDataset":       schema_pkg_apis_kobedataset_v1alpha1_KobeDataset(ref),
+		"github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetSpec":   schema_pkg_apis_kobedataset_v1alpha1_KobeDatasetSpec(ref),
+		"github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetStatus": schema_pkg_apis_kobedataset_v1alpha1_KobeDatasetStatus(ref),
 	}
 }
 
@@ -44,19 +44,19 @@ func schema_pkg_apis_kobedataset_v1alpha1_KobeDataset(ref common.ReferenceCallba
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/kobe/kobe-operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetSpec"),
+							Ref: ref("github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/kobe/kobe-operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetStatus"),
+							Ref: ref("github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/kobe/kobe-operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetSpec", "github.com/kobe/kobe-operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetSpec", "github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1.KobeDatasetStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 

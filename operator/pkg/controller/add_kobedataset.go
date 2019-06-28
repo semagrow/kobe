@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/kobe/kobe-operator/pkg/controller/kobedataset"
+	"github.com/semagrow/kobe/operator/pkg/controller/kobedataset"
 )
 
 func init() {

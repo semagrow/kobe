@@ -3,8 +3,8 @@ package kobebenchmark
 import (
 	"context"
 
-	kobebenchmarkv1alpha1 "github.com/kobe/kobe-operator/pkg/apis/kobebenchmark/v1alpha1"
-	kobedatasetv1alpha1 "github.com/kobe/kobe-operator/pkg/apis/kobedataset/v1alpha1"
+	kobebenchmarkv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1"
+	kobedatasetv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

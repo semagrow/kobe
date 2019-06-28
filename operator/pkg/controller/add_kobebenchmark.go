@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/kobe/kobe-operator/pkg/controller/kobebenchmark"
+	"github.com/semagrow/kobe/operator/pkg/controller/kobebenchmark"
 )
 
 func init() {

@@ -11,8 +11,8 @@ import (
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
 	"k8s.io/client-go/rest"
 
-	"github.com/kobe/kobe-operator/pkg/apis"
-	"github.com/kobe/kobe-operator/pkg/controller"
+	"github.com/semagrow/kobe/operator/pkg/apis"
+	"github.com/semagrow/kobe/operator/pkg/controller"
 
 	"github.com/operator-framework/operator-sdk/pkg/k8sutil"
 	kubemetrics "github.com/operator-framework/operator-sdk/pkg/kube-metrics"

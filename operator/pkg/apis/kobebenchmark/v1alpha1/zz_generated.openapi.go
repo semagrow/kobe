@@ -11,9 +11,9 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/kobe/kobe-operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmark":       schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmark(ref),
-		"github.com/kobe/kobe-operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkSpec":   schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmarkSpec(ref),
-		"github.com/kobe/kobe-operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkStatus": schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmarkStatus(ref),
+		"github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmark":       schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmark(ref),
+		"github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkSpec":   schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmarkSpec(ref),
+		"github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkStatus": schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmarkStatus(ref),
 	}
 }
 
@@ -44,19 +44,19 @@ func schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmark(ref common.ReferenceCa
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/kobe/kobe-operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkSpec"),
+							Ref: ref("github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/kobe/kobe-operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkStatus"),
+							Ref: ref("github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/kobe/kobe-operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkSpec", "github.com/kobe/kobe-operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkSpec", "github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
