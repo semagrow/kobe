@@ -129,6 +129,7 @@ func (r *ReconcileKobeBenchmark) Reconcile(request reconcile.Request) (reconcile
 		} else if err != nil {
 			reqLogger.Info("Failed to get KobeDataset with the same name in same namespace: %v\n", err)
 			return reconcile.Result{}, err
+
 		}
 
 	}

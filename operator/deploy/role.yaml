@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   creationTimestamp: null
-  name: kobe-operator
+  name: operator
 rules:
 - apiGroups:
   - ""
@@ -35,7 +35,7 @@ rules:
 - apiGroups:
   - apps
   resourceNames:
-  - kobe-operator
+  - operator
   resources:
   - deployments/finalizers
   verbs:
@@ -60,6 +60,12 @@ rules:
   - '*'
 - apiGroups:
   - kobebenchmark.kobe.com
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - kobefederator.kobe.com
   resources:
   - '*'
   verbs:

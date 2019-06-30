@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    kobeoperator_cr: kobehah
+  ports:
+  - protocol: TCP
+    port: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: linux
+  namespace: default
+spec:
+  containers:
+  - name: linuxcontainer
+    image: ubuntu:latest
+    command:
+      - sleep
+      - "3600"
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+  namespace: default
+spec:
+  containers:
+  - name: busybox
+    image: busybox:1.28
+    command:
+      - sleep
+      - "3600"
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always

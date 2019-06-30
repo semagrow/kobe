@@ -1,11 +1,11 @@
 FROM registry.access.redhat.com/ubi7/ubi-minimal:latest
 
-ENV OPERATOR=/usr/local/bin/kobe-operator \
+ENV OPERATOR=/usr/local/bin/operator \
     USER_UID=1001 \
-    USER_NAME=kobe-operator
+    USER_NAME=operator
 
 # install operator binary
-COPY build/_output/bin/kobe-operator ${OPERATOR}
+COPY build/_output/bin/operator ${OPERATOR}
 
 COPY build/bin /usr/local/bin
 RUN  /usr/local/bin/user_setup

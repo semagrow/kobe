@@ -1,11 +1,11 @@
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: kobe-operator
+  name: operator
 subjects:
 - kind: ServiceAccount
-  name: kobe-operator
+  name: operator
 roleRef:
   kind: Role
-  name: kobe-operator
+  name: operator
   apiGroup: rbac.authorization.k8s.io

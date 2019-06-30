@@ -1,4 +1,4 @@
-module github.com/kobe/kobe-operator
+module github.com/semagrow/kobe/operator
 
 require (
 	contrib.go.opencensus.io/exporter/ocagent v0.4.9 // indirect
@@ -18,7 +18,7 @@ require (
 	github.com/gregjones/httpcache v0.0.0-20180305231024-9cad4c3443a7 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.8.5 // indirect
 	github.com/imdario/mergo v0.3.6 // indirect
-	github.com/operator-framework/operator-sdk v0.8.1-0.20190627031207-3cf985d4cbc5
+	github.com/operator-framework/operator-sdk v0.8.1-0.20190628232659-4d7b8537b2b5
 	github.com/pborman/uuid v0.0.0-20180906182336-adf5a7427709 // indirect
 	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
 	github.com/spf13/pflag v1.0.3
@@ -27,6 +27,7 @@ require (
 	go.uber.org/multierr v1.1.0 // indirect
 	go.uber.org/zap v1.9.1 // indirect
 	golang.org/x/time v0.0.0-20180412165947-fbb02b2291d2 // indirect
+	golang.org/x/tools/gopls v0.1.1 // indirect
 	k8s.io/api v0.0.0-20190313235455-40a48860b5ab
 	k8s.io/apimachinery v0.0.0-20190313205120-d7deff9243b1
 	k8s.io/client-go v2.0.0-alpha.0.0.20190313235726-6ee68ca5fd83+incompatible
