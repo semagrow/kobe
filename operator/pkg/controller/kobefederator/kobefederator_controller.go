@@ -133,8 +133,8 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 	} else if err != nil {
 		return reconcile.Result{}, err
 	}
-
-	affinity := instance.Spec.Affinity
+	//fix this shit sometime ..it needs to check for null pointer
+	/*affinity := instance.Spec.Affinity
 	if *found.Spec.Template.Spec.Affinity != affinity {
 		found.Spec.Template.Spec.Affinity = &affinity
 		err = r.client.Update(context.TODO(), found)
@@ -146,7 +146,7 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 		return reconcile.Result{Requeue: true}, nil
 
 	}
-
+	*/
 	foundService := &corev1.Service{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
 	if err != nil && errors.IsNotFound(err) {
@@ -191,6 +191,7 @@ func (r *ReconcileKobeFederator) newDeploymentForCR(m *kobefederatorv1alpha1.Kob
 					Labels: labels,
 				},
 				Spec: corev1.PodSpec{
+					InitContainers: m.Spec.InitContainers,
 					Containers: []corev1.Container{{
 						Image:           m.Spec.Image,
 						Name:            m.Name,
@@ -200,8 +201,6 @@ func (r *ReconcileKobeFederator) newDeploymentForCR(m *kobefederatorv1alpha1.Kob
 							Name:          m.Name,
 						}},
 					}},
-					InitContainers: m.Spec.InitContainers,
-					Affinity:       &m.Spec.Affinity,
 				},
 			},
 		},

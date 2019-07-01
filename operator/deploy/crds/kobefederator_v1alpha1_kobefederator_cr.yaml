@@ -4,25 +4,11 @@ metadata:
   name: kobefederator1
 spec:
   # Add fields here
-  required: true
-  initImage: busybox
   image: nginx
-  imagePullPolicy: Always
+  imagePullPolicy: IfNotPresent
   port: 80
-  nodeAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-        nodeSelectorTerms:
-        - matchExpressions:
-          - key: kubernetes.io/e2e-az-name
-            operator: In
-            values:
-            - e2e-az1
-            - e2e-az2
-      preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 1
-        preference:
-          matchExpressions:
-          - key: another-node-label-key
-            operator: In
-            values:
-            - another-node-label-value
+  initContainer:
+  - name: container
+    image: ubuntu
+    imagePullPolicy: IfNotPresent
+    command: ['sh', '-c', 'sleep 30']
