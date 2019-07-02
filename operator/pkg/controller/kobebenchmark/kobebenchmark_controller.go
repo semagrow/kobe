@@ -109,12 +109,11 @@ func (r *ReconcileKobeBenchmark) Reconcile(request reconcile.Request) (reconcile
 		return reconcile.Result{}, err
 	}
 
-	// Define a new Pod object
-	//pod := newPodForCR(instance)
-	found := &kobedatasetv1alpha1.KobeDataset{}
+	//check if the datasets exist else create a very basic version of those that dont
+	foundDataset := &kobedatasetv1alpha1.KobeDataset{}
 	for _, dataset := range instance.Spec.Datasets {
 
-		err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Name, Namespace: instance.Namespace}, found)
+		err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Name, Namespace: instance.Namespace}, foundDataset)
 		if err != nil && errors.IsNotFound(err) {
 			// Define a new deployment
 			kobedataset := r.newKobeDataset(&dataset, instance)
@@ -124,7 +123,7 @@ func (r *ReconcileKobeBenchmark) Reconcile(request reconcile.Request) (reconcile
 				reqLogger.Info("Failed to create new Kobedataset: %v\n", err)
 				return reconcile.Result{}, err
 			}
-			// Deployment created successfully - return and requeue
+			// Kobedataset created successfully - return and requeue
 			return reconcile.Result{Requeue: true}, nil
 		} else if err != nil {
 			reqLogger.Info("Failed to get KobeDataset with the same name in same namespace: %v\n", err)
@@ -133,13 +132,51 @@ func (r *ReconcileKobeBenchmark) Reconcile(request reconcile.Request) (reconcile
 		}
 
 	}
-	// Set KobeBenchmark instance as the owner and controller
+
+	//check if config map exists else create it
+	//config map contains the queries assosciated with this benchmark setup in seperate files .
+	foundConfig := &corev1.ConfigMap{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundConfig)
+	if err != nil && errors.IsNotFound(err) {
+		if instance.Spec.Queries == nil {
+			return reconcile.Result{}, err
+		}
+		//create a new config map from the queries that are defined in the yaml of this benchmark
+		querymap := map[string]string{}
+		for _, query := range instance.Spec.Queries {
+			querymap[query.Name] = query.QueryString
+		}
+		configMap := r.newConfigMapForQueries(instance, querymap)
+		err := r.client.Create(context.TODO(), configMap)
+		if err != nil {
+			reqLogger.Info("FAILED to create the configmap for this set of queries for the benchmark")
+			return reconcile.Result{}, err
+		}
+		return reconcile.Result{Requeue: true}, nil
+	}
+
 	return reconcile.Result{}, err
 }
 func labelsForKobeBenchmark(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
+func (r *ReconcileKobeBenchmark) newConfigMapForQueries(m *kobebenchmarkv1alpha1.KobeBenchmark, querymap map[string]string) *corev1.ConfigMap {
+	configmap := &corev1.ConfigMap{
+		TypeMeta: metav1.TypeMeta{
+			Kind:       "ConfigMap",
+			APIVersion: "v1",
+		},
 
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      m.Name,
+			Namespace: m.Namespace,
+		},
+
+		Data: querymap,
+	}
+	controllerutil.SetControllerReference(m, configmap, r.scheme)
+	return configmap
+}
 func (r *ReconcileKobeBenchmark) newKobeDataset(dataset *kobebenchmarkv1alpha1.Dataset, m *kobebenchmarkv1alpha1.KobeBenchmark) *kobedatasetv1alpha1.KobeDataset {
 
 	data := &kobedatasetv1alpha1.KobeDataset{

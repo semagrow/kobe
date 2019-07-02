@@ -58,6 +58,9 @@ rules:
   - '*'
   verbs:
   - '*'
+- apiGroups: ["", "extensions", "apps", "batch"]
+  resources: ["*"]
+  verbs: ["*"]
 - apiGroups:
   - kobebenchmark.kobe.com
   resources:

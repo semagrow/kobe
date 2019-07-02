@@ -7,18 +7,27 @@ import (
 // EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
 // NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
 
-// KobeBenchmarkSpec defines the desired state of KobeBenchmark
-// +k8s:openapi-gen=true
+// Dataset contains the dataset info
 type Dataset struct {
 	Name         string `json:"name"`
 	Image        string `json:"image"`
 	DownloadFrom string `json:"downloadFrom"`
 }
+
+//Query contains the query info
+type Query struct {
+	Name        string `json:"name"`
+	Language    string `json:"language"`
+	QueryString string `json:"queryString"`
+}
+
+//KobeBenchmarkSpec defines the components for this benchmark setup
 type KobeBenchmarkSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
 	Datasets []Dataset `json:"datasets"`
+	Queries  []Query   `json:"queries"`
 }
 
 // KobeBenchmarkStatus defines the observed state of KobeBenchmark

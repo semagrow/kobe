@@ -1,7 +1,9 @@
 apiVersion: kobeexperiment.kobe.com/v1alpha1
 kind: KobeExperiment
 metadata:
-  name: example-kobeexperiment
+  name: kobeexp1
 spec:
-  # Add fields here
-  size: 3
+  benchmark: kobebenchmark1
+  federator: kobefederator1
+  runFlag: true
+  clientImage: someevalprogram

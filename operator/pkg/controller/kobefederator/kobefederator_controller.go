@@ -130,23 +130,26 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 			reqLogger.Info("Failed to create new Deployment: %v\n", err)
 			return reconcile.Result{}, err
 		}
+		return reconcile.Result{Requeue: true}, nil
 	} else if err != nil {
 		return reconcile.Result{}, err
 	}
-	//fix this shit sometime ..it needs to check for null pointer
-	/*affinity := instance.Spec.Affinity
-	if *found.Spec.Template.Spec.Affinity != affinity {
-		found.Spec.Template.Spec.Affinity = &affinity
-		err = r.client.Update(context.TODO(), found)
-		if err != nil {
-			reqLogger.Info("Failed to update Deployment: %v\n", err)
-			return reconcile.Result{}, err
-		}
-		// Spec updated return and reque .Affinity fixed possible other fixes like this here later
-		return reconcile.Result{Requeue: true}, nil
+	//check if someone changed the affinity of the kobefederator and update it
+	if instance.Spec.Affinity.NodeAffinity != nil || instance.Spec.Affinity.PodAffinity != nil || instance.Spec.Affinity.PodAntiAffinity != nil {
+		affinity := instance.Spec.Affinity
+		if *found.Spec.Template.Spec.Affinity != affinity {
+			found.Spec.Template.Spec.Affinity = &affinity
+			err = r.client.Update(context.TODO(), found)
+			if err != nil {
+				reqLogger.Info("Failed to update Deployment: %v\n", err)
+				return reconcile.Result{}, err
+			}
+			// Spec updated return and reque .Affinity fixed possible other fixes like this here later
+			return reconcile.Result{Requeue: true}, nil
 
+		}
 	}
-	*/
+
 	foundService := &corev1.Service{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
 	if err != nil && errors.IsNotFound(err) {

@@ -7,6 +7,17 @@ spec:
     - name: kobehaha
       image: nginx
       downloadFrom: "something changed"
+  queries:
+    - name: q1
+      language: sparql
+      queryString: "this is supposed to be q1"
+    - name: q2
+      language: sparql
+      queryString: "this is supposed to be q2"
+    - name: q3
+      language: sparql
+      queryString: "this is supposed to be q3"
+
     
 
 ---
@@ -20,13 +31,24 @@ spec:
     - name: kobehah
       image: nginx
       downloadFrom: "something changed again"
+  queries:
+    - name: q1
+      language: sparql
+      queryString: "these are all queries"
+    - name: q2
+      language: sparql
+      queryString: "these are all queries"
+    - name: q3
+      language: sparql
+      queryString: "these are all queries"
+
 
 ---
 
 apiVersion: kobebenchmark.kobe.com/v1alpha1
 kind: KobeBenchmark
 metadata:
-  name: kobebenchmar3
+  name: kobebenchmark3
 spec:
   datasets:
     - name: kobeha
