@@ -1,8 +1,8 @@
 package v1alpha1
 
 import (
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/api/core/v1"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 // EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
@@ -15,6 +15,8 @@ type KobeDatasetSpec struct {
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
 	Image           string           `json:"image"`
+	ToDownload      bool             `json:"toDownload"`
+	DumpDirectory   string           `json:"dumbDirectory"`
 	DownloadFrom    string           `json:"downloadFrom"`
 	ImagePullPolicy types.PullPolicy `json:"imagePullPolicy"`
 	Count           int32            `json:"count"`

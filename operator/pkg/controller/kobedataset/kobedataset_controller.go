@@ -8,6 +8,7 @@ import (
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
+	"k8s.io/apimachinery/pkg/api/resource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -118,13 +119,68 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 		// Error reading the object - requeue the request.
 		return reconcile.Result{}, err
 	}
+
+	//why are these here  in this controller????????????????
+	//------------------------------------------------checking for nfs server health---------------------------------------------------
+	nfsServiceFound := &corev1.Service{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: instance.Namespace}, nfsServiceFound)
+	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Setting up the nfs service and server\n") //used by the dataset pods to store the db file and regain it if that dataset is restarteds
+		serv := r.newServiceForNfs(instance)
+		err = r.client.Create(context.TODO(), serv)
+		if err != nil {
+			reqLogger.Info("Failed to create the kobe nfs Service: %v\n", err)
+			return reconcile.Result{}, err
+		}
+		return reconcile.Result{Requeue: true}, nil
+
+	}
+	nfsPodFound := &corev1.Pod{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: instance.Namespace}, nfsPodFound)
+	if err != nil && errors.IsNotFound(err) {
+		pod := r.newPodForNfs(instance)
+		err = r.client.Create(context.TODO(), pod)
+		if err != nil {
+			reqLogger.Info("Failed to create the kobe nfs Pod: %v\n", err)
+			return reconcile.Result{}, err
+		}
+		return reconcile.Result{Requeue: true}, nil
+
+	}
+	//------------Persistent volume health check
+	pvFound := &corev1.PersistentVolume{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobepv", Namespace: instance.Namespace}, pvFound)
+	if err != nil && errors.IsNotFound(err) {
+		pv := r.newPvForKobe(instance)
+		err = r.client.Create(context.TODO(), pv)
+		if err != nil {
+			reqLogger.Info("Failed to create the persistent volume that the datasets will use to retain their data if they shutdown and restarted")
+			return reconcile.Result{}, err
+		}
+		return reconcile.Result{Requeue: true}, nil
+
+	}
+	//-------------Persistent volume claim  check if its defined
+	pvcFound := &corev1.PersistentVolumeClaim{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobepvs", Namespace: instance.Namespace}, pvcFound)
+	if err != nil && errors.IsNotFound(err) {
+		pvc := r.newPvcForKobe(instance)
+		err := r.client.Create(context.TODO(), pvc)
+		if err != nil {
+			reqLogger.Info("Failed to create the single persistent volume claim that all the datasets gonna use to mount their data directories to nfs")
+			return reconcile.Result{}, err
+		}
+		return reconcile.Result{Requeue: true}, nil
+	}
+
+	//--------------From here do the actual work to set up the deployment and service for the dataset
 	// deployment health check for dataset
 	found := &appsv1.Deployment{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, found)
 	reqLogger.Info("HEY THERE")
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Making a new deployment for kobedataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		dep := r.newDeploymentForDataset(instance)
+		dep := r.newDeploymentForKobeDataset(instance)
 		reqLogger.Info("Creating a new Deployment %s/%s\n", dep.Namespace, dep.Name)
 		err = r.client.Create(context.TODO(), dep)
 		if err != nil {
@@ -146,7 +202,6 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 			reqLogger.Info("Failed to update Deployment: %v\n", err)
 			return reconcile.Result{}, err
 		}
-		// Spec updated - return and requeue
 		return reconcile.Result{Requeue: true}, nil
 	}
 	podList := &corev1.PodList{}
@@ -196,38 +251,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 		return reconcile.Result{}, err
 	}
 
-	//why are these here????????????????
-	//------------------------------------------------checking for nfs server health---------------------------------------------------
-	nfsService := &corev1.Service{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "KobeNFS", Namespace: instance.Namespace}, nfsService)
-	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Setting up the nfs service and server\n") //used by the dataset pods to store the db file and regain it if that dataset is rescheduled in cluster
-		serv := r.newServiceForNfs(instance)
-		err = r.client.Create(context.TODO(), serv)
-		if err != nil {
-			reqLogger.Info("Failed to create the kobe nfs Service: %v\n", err)
-			return reconcile.Result{}, err
-		}
-	}
-	nfsPod := &corev1.Pod{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "KobeNfsPod", Namespace: instance.Namespace}, nfsPod)
-	if err != nil && errors.IsNotFound(err) {
-		pod := r.newPodForNfs(instance)
-		err = r.client.Create(context.TODO(), pod)
-		if err != nil {
-			reqLogger.Info("Failed to create the kobe nfs Pod: %v\n", err)
-			return reconcile.Result{}, err
-		}
-	}
-	//------------Persistent volume health check
-	pV := &corev1.PersistentVolume{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "KobePV", Namespace: instance.Namespace}, pV)
-	if err != nil && errors.IsNotFound(err) {
-		pv := r.newPvforKobe(instance)
-
-	}
-
-	// finishingline
+	// finishingline everything should be fine here
 	reqLogger.Info("Loop for a kobedataset went through the end for reconciling kobedataset\n")
 	return reconcile.Result{}, err
 
@@ -247,7 +271,9 @@ func labelsForKobeDataset(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
 
-func (r *ReconcileKobeDataset) newDeploymentForDataset(m *kobedatasetv1alpha1.KobeDataset) *appsv1.Deployment {
+//------------------Functions that define native kubernetes object to create that are all controlled by the kobedataset custom resource-----------------------
+
+func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha1.KobeDataset) *appsv1.Deployment {
 	labels := labelsForKobeDataset(m.Name)
 	replicas := m.Spec.Count
 	dep := &appsv1.Deployment{
@@ -319,8 +345,10 @@ func (r *ReconcileKobeDataset) newServiceForDataset(m *kobedatasetv1alpha1.KobeD
 
 }
 
-//--------------------------------------------------------------------------------------------------------------
-//xreiazomai enan nfs server (service kai actual pod)
+//-------------------functions that create native kubernetes objects thatare checked when there is a kobedataset change by this controller -----------------------
+//-------------------they are not tied to a kobedataset resource ----------------
+
+//NFS SERVICE
 func (r *ReconcileKobeDataset) newServiceForNfs(m *kobedatasetv1alpha1.KobeDataset) *corev1.Service {
 	service := &corev1.Service{
 		TypeMeta: metav1.TypeMeta{
@@ -329,13 +357,13 @@ func (r *ReconcileKobeDataset) newServiceForNfs(m *kobedatasetv1alpha1.KobeDatas
 		},
 
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      "KobeNFS",
+			Name:      "kobenfs",
 			Namespace: m.Namespace,
 		},
 
 		Spec: corev1.ServiceSpec{
 			Selector: map[string]string{
-				"role": "kobeNFS",
+				"role": "kobe-nfs-pod",
 			},
 			Ports: []corev1.ServicePort{
 				{
@@ -356,6 +384,7 @@ func (r *ReconcileKobeDataset) newServiceForNfs(m *kobedatasetv1alpha1.KobeDatas
 	return service
 }
 
+//NFS POD
 func (r *ReconcileKobeDataset) newPodForNfs(m *kobedatasetv1alpha1.KobeDataset) *corev1.Pod {
 	var priv bool
 	priv = true
@@ -366,16 +395,22 @@ func (r *ReconcileKobeDataset) newPodForNfs(m *kobedatasetv1alpha1.KobeDataset) 
 		},
 
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      "KobeNFS",
+			Name:      "kobenfs",
 			Namespace: m.Namespace,
+			Labels:    map[string]string{"role": "kobe-nfs-pod"},
 		},
 		Spec: corev1.PodSpec{
+
 			Containers: []corev1.Container{{
 				Image:           "cpuguy83/nfs-server",
 				Name:            "nfs-server-container",
 				ImagePullPolicy: corev1.PullIfNotPresent,
 				SecurityContext: &corev1.SecurityContext{
 					Privileged: &priv,
+				},
+				Ports: []corev1.ContainerPort{
+					{Name: "tcp-2049", ContainerPort: int32(2049), Protocol: "TCP"},
+					{Name: "udp-111", ContainerPort: int32(111), Protocol: "UDP"},
 				},
 				Args: []string{"/exports"},
 			},
@@ -386,8 +421,58 @@ func (r *ReconcileKobeDataset) newPodForNfs(m *kobedatasetv1alpha1.KobeDataset) 
 	return pod
 }
 
-//reiazomai ena pv to opoio trabaei apo ton nfs server kai pou tha kanoyn claim ta kobe datasets
+//Persistent volume definition
+func (r *ReconcileKobeDataset) newPvForKobe(m *kobedatasetv1alpha1.KobeDataset) *corev1.PersistentVolume {
+	//POSO MALAKAS EIMAI POU PREPEI NA PSAKSW TA API DEFINITIONS GIA AYTO...
 
-func (r *ReconcileKobeDataset) newPvforKobe(m *kobedatasetv1alpha1.KobeDataset) *corev1.PersistentVolume {
+	capacity := resource.MustParse("5Gi")
+	rmap := corev1.ResourceList{}
+	rmap["storage"] = capacity
 
+	accessmodes := []corev1.PersistentVolumeAccessMode{"ReadWriteMany"}
+
+	nfs := &corev1.NFSVolumeSource{Server: "kobenfs" + m.Namespace + ".svc.cluster.local", Path: "/dumps" + m.Name, ReadOnly: false}
+
+	pv := &corev1.PersistentVolume{
+		TypeMeta: metav1.TypeMeta{
+			Kind:       "PersistentVolume",
+			APIVersion: "v1",
+		},
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "kobepv",
+			Namespace: m.Namespace,
+		},
+		Spec: corev1.PersistentVolumeSpec{
+			Capacity:               rmap,
+			AccessModes:            accessmodes,
+			PersistentVolumeSource: corev1.PersistentVolumeSource{NFS: nfs},
+		},
+	}
+	controllerutil.SetControllerReference(m, pv, r.scheme)
+	return pv
+}
+
+//Persistent claim definition
+func (r *ReconcileKobeDataset) newPvcForKobe(m *kobedatasetv1alpha1.KobeDataset) *corev1.PersistentVolumeClaim {
+	accessmodes := []corev1.PersistentVolumeAccessMode{"ReadWriteMany"}
+	capacity := resource.MustParse("5Gi")
+	rmap := corev1.ResourceList{}
+	rmap["storage"] = capacity
+	pvc := &corev1.PersistentVolumeClaim{
+		TypeMeta: metav1.TypeMeta{
+			Kind:       "PersistentVolumeClaim",
+			APIVersion: "v1",
+		},
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "kobepvc",
+			Namespace: m.Namespace,
+		},
+		Spec: corev1.PersistentVolumeClaimSpec{
+			AccessModes: accessmodes,
+			Resources:   corev1.ResourceRequirements{Requests: rmap},
+		},
+	}
+
+	controllerutil.SetControllerReference(m, pvc, r.scheme)
+	return pvc
 }
