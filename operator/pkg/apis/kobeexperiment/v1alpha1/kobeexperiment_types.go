@@ -1,6 +1,7 @@
 package v1alpha1
 
 import (
+	kobefederatorv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederator/v1alpha1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -13,10 +14,11 @@ type KobeExperimentSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
-	Benchmark   string   `json:"benchmark"`
-	Federators  []string `json:"federators"`
-	RunFlag     bool     `json:"runFlag"`
-	ClientImage string   `json:"clientImage"`
+	Benchmark     string                                `json:"benchmark"`
+	Federators    []kobefederatorv1alpha1.KobeFederator `json:"federators"`
+	RunFlag       bool                                  `json:"runFlag"`
+	ClientImage   string                                `json:"clientImage"`
+	ClientCommand []string                              `json:"clientCommands"`
 }
 
 // KobeExperimentStatus defines the observed state of KobeExperiment

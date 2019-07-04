@@ -100,6 +100,7 @@ type ReconcileKobeDataset struct {
 // Note:
 // The Controller will requeue the Request to be processed again if the returned error is non-nil or
 // Result.Requeue is true, otherwise upon completion it will remove the work from the queue.
+//-----------------------------------------reconciling-----------------------------------------
 func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.Result, error) {
 	reqLogger := log.WithValues("Request.Namespace", request.Namespace, "Request.Name", request.Name)
 	reqLogger.Info("Reconciling KobeDataset")
@@ -117,23 +118,13 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 		// Error reading the object - requeue the request.
 		return reconcile.Result{}, err
 	}
-
-	/*// Define a new Pod object
-	pod := newPodForCR(instance)
-
-	// Set KobeDataset instance as the owner and controller
-	if err := controllerutil.SetControllerReference(instance, pod, r.scheme); err != nil {
-		return reconcile.Result{}, err
-	}
-	*/
-	// Check if this Pod already exists
-	//found := &corev1.Pod{}
+	// deployment health check for dataset
 	found := &appsv1.Deployment{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, found)
 	reqLogger.Info("HEY THERE")
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Making a new deployment for kobedataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		dep := r.newDeploymentForCR(instance)
+		dep := r.newDeploymentForDataset(instance)
 		reqLogger.Info("Creating a new Deployment %s/%s\n", dep.Namespace, dep.Name)
 		err = r.client.Create(context.TODO(), dep)
 		if err != nil {
@@ -187,12 +178,12 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 			return reconcile.Result{}, err
 		}
 	}
-	//Check if the service for this dataset is up and running.If not create it
+	//Service health check for the dataset
 	foundService := &corev1.Service{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Making a new service for kobedataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		service := r.newServiceForCR(instance)
+		service := r.newServiceForDataset(instance)
 		reqLogger.Info("Creating a new Service %s/%s\n", service.Namespace, service.Name)
 		err = r.client.Create(context.TODO(), service)
 		if err != nil {
@@ -204,34 +195,45 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 	} else if err != nil {
 		return reconcile.Result{}, err
 	}
+
+	//why are these here????????????????
+	//------------------------------------------------checking for nfs server health---------------------------------------------------
+	nfsService := &corev1.Service{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "KobeNFS", Namespace: instance.Namespace}, nfsService)
+	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Setting up the nfs service and server\n") //used by the dataset pods to store the db file and regain it if that dataset is rescheduled in cluster
+		serv := r.newServiceForNfs(instance)
+		err = r.client.Create(context.TODO(), serv)
+		if err != nil {
+			reqLogger.Info("Failed to create the kobe nfs Service: %v\n", err)
+			return reconcile.Result{}, err
+		}
+	}
+	nfsPod := &corev1.Pod{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "KobeNfsPod", Namespace: instance.Namespace}, nfsPod)
+	if err != nil && errors.IsNotFound(err) {
+		pod := r.newPodForNfs(instance)
+		err = r.client.Create(context.TODO(), pod)
+		if err != nil {
+			reqLogger.Info("Failed to create the kobe nfs Pod: %v\n", err)
+			return reconcile.Result{}, err
+		}
+	}
+	//------------Persistent volume health check
+	pV := &corev1.PersistentVolume{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "KobePV", Namespace: instance.Namespace}, pV)
+	if err != nil && errors.IsNotFound(err) {
+		pv := r.newPvforKobe(instance)
+
+	}
+
 	// finishingline
-	reqLogger.Info("Loop went through the end for reconciling kobedataset")
+	reqLogger.Info("Loop for a kobedataset went through the end for reconciling kobedataset\n")
 	return reconcile.Result{}, err
+
 }
 
-// newPodForCR returns a busybox pod with the same name/namespace as the cr
-func newPodForCR(cr *kobedatasetv1alpha1.KobeDataset) *corev1.Pod {
-	labels := map[string]string{
-		"app": cr.Name,
-	}
-	return &corev1.Pod{
-		ObjectMeta: metav1.ObjectMeta{
-			Name:      cr.Name + "-pod",
-			Namespace: cr.Namespace,
-			Labels:    labels,
-		},
-		Spec: corev1.PodSpec{
-			Containers: []corev1.Container{
-				{
-					Name:    "busybox",
-					Image:   "busybox",
-					Command: []string{"sleep", "3600"},
-				},
-			},
-		},
-	}
-}
-
+//------------------status update and retrieval to check actual pods besides deployment.Can be used to delay experiment for kobeexperiment
 func getPodNames(pods []corev1.Pod) []string {
 	var podNames []string
 	for _, pod := range pods {
@@ -245,7 +247,7 @@ func labelsForKobeDataset(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
 
-func (r *ReconcileKobeDataset) newDeploymentForCR(m *kobedatasetv1alpha1.KobeDataset) *appsv1.Deployment {
+func (r *ReconcileKobeDataset) newDeploymentForDataset(m *kobedatasetv1alpha1.KobeDataset) *appsv1.Deployment {
 	labels := labelsForKobeDataset(m.Name)
 	replicas := m.Spec.Count
 	dep := &appsv1.Deployment{
@@ -286,7 +288,7 @@ func (r *ReconcileKobeDataset) newDeploymentForCR(m *kobedatasetv1alpha1.KobeDat
 
 }
 
-func (r *ReconcileKobeDataset) newServiceForCR(m *kobedatasetv1alpha1.KobeDataset) *corev1.Service {
+func (r *ReconcileKobeDataset) newServiceForDataset(m *kobedatasetv1alpha1.KobeDataset) *corev1.Service {
 	service := &corev1.Service{
 		TypeMeta: metav1.TypeMeta{
 			Kind:       "Service",
@@ -314,5 +316,78 @@ func (r *ReconcileKobeDataset) newServiceForCR(m *kobedatasetv1alpha1.KobeDatase
 	}
 	controllerutil.SetControllerReference(m, service, r.scheme)
 	return service
+
+}
+
+//--------------------------------------------------------------------------------------------------------------
+//xreiazomai enan nfs server (service kai actual pod)
+func (r *ReconcileKobeDataset) newServiceForNfs(m *kobedatasetv1alpha1.KobeDataset) *corev1.Service {
+	service := &corev1.Service{
+		TypeMeta: metav1.TypeMeta{
+			Kind:       "Service",
+			APIVersion: "v1",
+		},
+
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "KobeNFS",
+			Namespace: m.Namespace,
+		},
+
+		Spec: corev1.ServiceSpec{
+			Selector: map[string]string{
+				"role": "kobeNFS",
+			},
+			Ports: []corev1.ServicePort{
+				{
+					Name:     "tcp-2049",
+					Port:     int32(2049),
+					Protocol: "TCP",
+				},
+				{
+					Name:     "udp-111",
+					Port:     int32(111),
+					Protocol: "UDP",
+				},
+			},
+		},
+	}
+
+	controllerutil.SetControllerReference(m, service, r.scheme)
+	return service
+}
+
+func (r *ReconcileKobeDataset) newPodForNfs(m *kobedatasetv1alpha1.KobeDataset) *corev1.Pod {
+	var priv bool
+	priv = true
+	pod := &corev1.Pod{
+		TypeMeta: metav1.TypeMeta{
+			Kind:       "Pod",
+			APIVersion: "v1",
+		},
+
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "KobeNFS",
+			Namespace: m.Namespace,
+		},
+		Spec: corev1.PodSpec{
+			Containers: []corev1.Container{{
+				Image:           "cpuguy83/nfs-server",
+				Name:            "nfs-server-container",
+				ImagePullPolicy: corev1.PullIfNotPresent,
+				SecurityContext: &corev1.SecurityContext{
+					Privileged: &priv,
+				},
+				Args: []string{"/exports"},
+			},
+			},
+		},
+	}
+	controllerutil.SetControllerReference(m, pod, r.scheme)
+	return pod
+}
+
+//reiazomai ena pv to opoio trabaei apo ton nfs server kai pou tha kanoyn claim ta kobe datasets
+
+func (r *ReconcileKobeDataset) newPvforKobe(m *kobedatasetv1alpha1.KobeDataset) *corev1.PersistentVolume {
 
 }

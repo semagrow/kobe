@@ -6,4 +6,5 @@ spec:
   benchmark: kobebenchmark1
   federator: kobefederator1
   runFlag: true
-  clientImage: someevalprogram
+  clientImage: perl
+  clientCommand: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]

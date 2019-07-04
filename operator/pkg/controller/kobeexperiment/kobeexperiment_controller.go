@@ -2,11 +2,11 @@ package kobeexperiment
 
 import (
 	"context"
+	"strconv"
 
 	kobebenchmarkv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1"
 	kobedatasetv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1"
 	kobeexperimentv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobeexperiment/v1alpha1"
-	kobefederatorv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederator/v1alpha1"
 
 	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
@@ -25,6 +25,7 @@ import (
 )
 
 var log = logf.Log.WithName("controller_kobeexperiment")
+var identifier = 0
 
 // Add creates a new KobeExperiment Controller and adds it to the Manager. The Manager will set fields on the Controller
 // and Start it when the Manager is Started.
@@ -103,7 +104,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Spec.Benchmark, Namespace: instance.Namespace}, foundBenchmark)
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Did not found a kobebenchmark resource with this name please define that first")
-		return reconcile.Result{}, err
+		return reconcile.Result{RequeueAfter: 5}, err
 	}
 	//check if every kobedataset of the benchmark possible obsolete of this experiment is up and running
 	for _, datasetInfo := range foundBenchmark.Spec.Datasets {
@@ -111,19 +112,31 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: foundBenchmark.Namespace, Name: datasetInfo.Name}, dataset)
 		if err != nil {
 			reqLogger.Info("Failed to find a specific dataset from the list of datasets of this benchmark")
-			return reconcile.Result{}, err
+			return reconcile.Result{RequeueAfter: 5}, err
 		}
 	}
 
+	//new plan : create the federator and initialize it with the experiment so that it makes the appropriate config file with the initcontainer
+	for _, kobeFed := range instance.Spec.Federators {
+		controllerutil.SetControllerReference(instance, &kobeFed, r.scheme)
+		err := r.client.Create(context.TODO(), &kobeFed)
+		if err != nil {
+			reqLogger.Info("Failed to create the federator %s to run the experiment ", kobeFed.Name)
+			return reconcile.Result{RequeueAfter: 5}, err
+		}
+
+	}
+
 	//check if every federator is up and running
-	for _, federatorInfo := range instance.Spec.Federators {
+	/*for _, federatorInfo := range instance.Spec.Federators {
 		foundFederator := &kobefederatorv1alpha1.KobeFederator{}
 		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: federatorInfo}, foundFederator)
 		if err != nil {
 			reqLogger.Info("Failed to find a specific federator from the list of federators of this experiment")
-			return reconcile.Result{}, err
+			return reconcile.Result{RequeueAfter: 5}, err
 		}
 	}
+	*/
 	//Create more stuff here that are necessary to init the federators and the queries
 	//get the queries and mount them so the job can find them
 	//Everything is running and ready for the experiment
@@ -132,14 +145,15 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	}
 	//Create the new job that will run for this experiment
 	foundJob := &batchv1.Job{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: "kobejob"}, foundJob)
-	if err != nil && errors.IsNotFound(err) {
+	err = r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: instance.Name + "-" + strconv.Itoa(identifier)}, foundJob)
+	if err == nil {
 		//to fix this .. do something else here cause there should be multiple jobs and there should be no problem
-		reqLogger.Info("WHY AM I EVEN HERE !!!!?????? /n")
-		reqLogger.Info("There is still a job\n ")
-		return reconcile.Result{}, err
+		reqLogger.Info("There are more jobs running or jave finished for this experiment\n ")
+		identifier++
+		//return reconcile.Result{}, err
 	}
-	experimentJob := r.newJobForExperiment(instance)
+	reqLogger.Info("HEY THERE YOU \n")
+	experimentJob := r.newJobForExperiment(instance, identifier)
 	reqLogger.Info("Creating a new job to run the experiment for this setup")
 	err = r.client.Create(context.TODO(), experimentJob)
 	if err != nil {
@@ -151,40 +165,36 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	return reconcile.Result{}, err
 }
 
-func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.KobeExperiment) *batchv1.Job {
+func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.KobeExperiment, i int) *batchv1.Job {
 	times := int32(1)
 	parallelism := int32(1)
+	//labels := map[string]string{"name": m.Name}
 	job := &batchv1.Job{
 		TypeMeta: metav1.TypeMeta{
 			Kind:       "Job",
 			APIVersion: "v1",
 		},
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      "kobejob",
+			Name:      m.Name + "-" + strconv.Itoa(i),
 			Namespace: m.Namespace,
 		},
 		Spec: batchv1.JobSpec{
 			Parallelism: &parallelism,
 			Completions: &times,
-			Selector: &metav1.LabelSelector{
-				MatchLabels: map[string]string{"name": "kobeJobPod"},
-			},
 			Template: corev1.PodTemplateSpec{
-				metav1.ObjectMeta{
-					Name:      "kobeJobPod",
-					Namespace: m.Namespace,
-					Labels:    map[string]string{"name": "kobeJobPod"},
-				},
-				corev1.PodSpec{ //should these be hardfixed??
+				metav1.ObjectMeta{},
+				corev1.PodSpec{
 					Containers: []corev1.Container{{
-						Image:           "busybox", //this is gonna be the image of client program
-						Name:            "client name not important",
-						ImagePullPolicy: "Never",
+						Image:           m.Spec.ClientImage, //this is gonna be the image of client program
+						Name:            "job" + "-" + strconv.Itoa(i),
+						ImagePullPolicy: corev1.PullIfNotPresent,
 						Ports: []corev1.ContainerPort{{
-							ContainerPort: int32(8990),
-							Name:          "port of the client ",
+							ContainerPort: int32(8990), //client endpoint
+							Name:          "client",
 						}},
+						Command: m.Spec.ClientCommand,
 					}},
+					RestartPolicy: corev1.RestartPolicyOnFailure,
 				},
 			},
 		},

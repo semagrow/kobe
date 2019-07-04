@@ -5,6 +5,7 @@
 package v1alpha1
 
 import (
+	kobefederatorv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederator/v1alpha1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )
 
@@ -74,6 +75,13 @@ func (in *KobeExperimentSpec) DeepCopyInto(out *KobeExperimentSpec) {
 	*out = *in
 	if in.Federators != nil {
 		in, out := &in.Federators, &out.Federators
+		*out = make([]kobefederatorv1alpha1.KobeFederator, len(*in))
+		for i := range *in {
+			(*in)[i].DeepCopyInto(&(*out)[i])
+		}
+	}
+	if in.ClientCommand != nil {
+		in, out := &in.ClientCommand, &out.ClientCommand
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
