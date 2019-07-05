@@ -5,6 +5,9 @@ metadata:
 spec:
   # Add fields here
   image: nginx
+  toDownload: true
+  dumbDirectory: /data/
+  downloadFrom: this is a download link
   imagePullPolicy: Always
   count: 1
   group: kobe
