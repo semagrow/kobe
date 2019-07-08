@@ -81,6 +81,11 @@ func (in *KobeFederatorSpec) DeepCopyInto(out *KobeFederatorSpec) {
 		}
 	}
 	in.Affinity.DeepCopyInto(&out.Affinity)
+	if in.Endpoints != nil {
+		in, out := &in.Endpoints, &out.Endpoints
+		*out = make([]string, len(*in))
+		copy(*out, *in)
+	}
 	return
 }
 

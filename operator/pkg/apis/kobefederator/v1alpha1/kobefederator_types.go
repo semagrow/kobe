@@ -21,6 +21,7 @@ type KobeFederatorSpec struct {
 	ImagePullPolicy types.PullPolicy   `json:"imagePullPolicy"`
 	Affinity        types.Affinity     `json:"affinity"`
 	Port            int32              `json:"port"`
+	Endpoints       []string           `json:"endpoints"`
 }
 
 // KobeFederatorStatus defines the observed state of KobeFederator

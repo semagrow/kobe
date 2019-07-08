@@ -14,7 +14,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 //import org.eclipse.rdf4j.model.Model;
 //import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.repository.sparql.*;
-import org.apache.logging.log4j.*;
+//import org.eclipse.rdf4j.repository.sparql.SPARQLConnection;
+//import org.apache.log4j.LogManager;
+//import org.apache.log4j.*;
 import org.eclipse.rdf4j.query.*;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 
@@ -28,7 +30,7 @@ import org.eclipse.rdf4j.repository.RepositoryConnection;
 public class SemagrowSummariesGenerator {
 	//static Logger log = Logger.getLogger(SemagrowSummariesGenerator.class);
 	//static Logger log = Logger.getLogger(SemagrowSummariesGenerator.class);
-	private static final Logger log = LogManager.getLogger(SemagrowSummariesGenerator.class);
+	//private static final Logger log = Logger.getLogger(SemagrowSummariesGenerator.class);
 	public BufferedWriter bw;
 	
 	/**
@@ -53,7 +55,8 @@ public class SemagrowSummariesGenerator {
 		//String host = "ws24348.avicomp.com";
 		String host = "192.168.0.145";
 		List<String> endpoints = Arrays.asList(
-			 "http://" + host + ":8890/sparql"
+				"http://172.17.0.2:8890/sparql"
+			 //"http://" + host + ":8890/sparql"
 //			 , "http://" + host + ":8891/sparql"
 //			 , "http://" + host + ":8892/sparql"
 //			 , "http://" + host + ":8893/sparql"
@@ -69,7 +72,6 @@ public class SemagrowSummariesGenerator {
 //			 , "http://" + host + ":8899/sparql"
 		);
 
-
 		String outputFile = "resources/repository_8890.ttl";
 	//	String namedGraph = "http://aksw.org/fedbench/";  //can be null. in that case all graph will be considered 
 
@@ -77,8 +79,8 @@ public class SemagrowSummariesGenerator {
 		long startTime = System.currentTimeMillis();
 
 		generator.generateSummaries(endpoints);
-		log.info("Data Summaries Generation Time (min): "+ (double)(System.currentTimeMillis() - startTime) / (1000 * 60));
-		log.info("Data Summaries are secessfully stored at "+ outputFile);
+		//log.info("Data Summaries Generation Time (min): "+ (double)(System.currentTimeMillis() - startTime) / (1000 * 60));
+		//log.info("Data Summaries are secessfully stored at "+ outputFile);
 	}
 	
 	ExecutorService executorService;
@@ -95,10 +97,20 @@ public class SemagrowSummariesGenerator {
 		
 		List<Future<?>> flist = new ArrayList<Future<?>>();
 		AtomicInteger dsnum = new AtomicInteger(0);
+
+
 		for (String endpoint : endpoints)
 		{
+			
+			/*SPARQLRepository repo = new SPARQLRepository(endpoint);
+			System.out.println("hi there");
+
+			repo.initialize();
+			RepositoryConnection conn = repo.getConnection();
+			*/
 			Future<?> future = executorService.submit(new Runnable() {
 			    public void run() {
+					
 			    	try {
 				    	String sum = generateSummary(endpoint, dsnum.incrementAndGet());
 				    	
@@ -107,11 +119,11 @@ public class SemagrowSummariesGenerator {
 				    			bw.append(sum);
 				    			bw.flush();
 				    		} catch (Exception e) {
-				    			log.error(e);
+				    			//log.error(e);
 				    		}
 				    	}
 			    	} catch (Exception e) {
-			    		log.error(e);
+			    		//log.error(e);
 			    	}
 			    }
 			});
@@ -122,7 +134,7 @@ public class SemagrowSummariesGenerator {
 			try {
 				f.get();
 			} catch (Exception e) {
-    			log.error(e);
+    			//log.error(e);
 			}
 		}
 		executorService.shutdown();
@@ -134,17 +146,21 @@ public class SemagrowSummariesGenerator {
 		StringBuilder sb = new StringBuilder();
 		
 		long totalTrpl = 0;
+		
+
 		List<String> lstPred = getPredicates(endpoint, null);
-		log.info("total distinct predicates: "+ lstPred.size() + " for endpoint: " + endpoint);
+
+		//log.info("total distinct predicates: "+ lstPred.size() + " for endpoint: " + endpoint);
 			
 		sb.append("_:Dataset").append(dsnum).append("\n");
 		sb.append("  rdf:type void:Dataset ;").append("\n");
 		sb.append("  void:sparqlEndpoint <" + endpoint + "> ;").append("\n");
 		sb.append("  void:properties " + lstPred.size() + " ;").append("\n");
-			
+		System.out.print("hello");
 		for (int i = 0; i < lstPred.size(); i++)
 		{
-			log.info((i+1)+" in progress: " + lstPred.get(i) + ", endpoint: " + endpoint);
+			//log.info((i+1)+" in progress: " + lstPred.get(i) + ", endpoint: " + endpoint);
+			System.out.print((i+1)+" in progress: " + lstPred.get(i) + ", endpoint: " + endpoint);
 			sb.append("  void:propertyPartition [ ").append("\n");
 			sb.append("    void:property  <" + lstPred.get(i) + "> ;").append("\n");
 			
@@ -341,7 +357,11 @@ public class SemagrowSummariesGenerator {
 	{
 		List<String>  predLst = new ArrayList<String>();
 		String strQuery = getPredQuery(graph);
+		System.out.println(endPointUrl);
+
 		SPARQLRepository repo = new SPARQLRepository(endPointUrl);
+		System.out.println("hi there");
+
 		repo.initialize();
 		RepositoryConnection conn = repo.getConnection();
 		try {

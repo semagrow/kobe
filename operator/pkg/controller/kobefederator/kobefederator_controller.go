@@ -119,11 +119,14 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 	}
 	found := &appsv1.Deployment{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, found)
-	reqLogger.Info("HEY THERE")
-	// Define a new Pod object
+
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Creating a new deployment for kobefederator", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		dep := r.newDeploymentForCR(instance)
+		for _, initcontainer := range instance.Spec.InitContainers {
+			initcontainer.Args = instance.Spec.Endpoints
+			// put them also as environment variables initcontainer.Env
+		}
+		dep := r.newDeploymentForFederator(instance)
 		reqLogger.Info("Creating a new Deployment %s/%s\n", dep.Namespace, dep.Name)
 		err = r.client.Create(context.TODO(), dep)
 		if err != nil {
@@ -134,6 +137,7 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 	} else if err != nil {
 		return reconcile.Result{}, err
 	}
+
 	//check if someone changed the affinity of the kobefederator and update it
 	if instance.Spec.Affinity.NodeAffinity != nil || instance.Spec.Affinity.PodAffinity != nil || instance.Spec.Affinity.PodAntiAffinity != nil {
 		affinity := instance.Spec.Affinity
@@ -174,7 +178,7 @@ func labelsForKobeFederator(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
 
-func (r *ReconcileKobeFederator) newDeploymentForCR(m *kobefederatorv1alpha1.KobeFederator) *appsv1.Deployment {
+func (r *ReconcileKobeFederator) newDeploymentForFederator(m *kobefederatorv1alpha1.KobeFederator) *appsv1.Deployment {
 	labels := labelsForKobeFederator(m.Name)
 	dep := &appsv1.Deployment{
 		TypeMeta: metav1.TypeMeta{

@@ -8,7 +8,7 @@
     <artifactId>examples</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <dependencyManagement>
+<!-- <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.eclipse.rdf4j</groupId>
@@ -19,15 +19,28 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+-->
     <dependencies>
         <dependency>
             <groupId>org.eclipse.rdf4j</groupId>
             <artifactId>rdf4j-runtime</artifactId>
+            <version>2.1.4</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.rdf4j</groupId>
             <artifactId>rdf4j-queryresultio-text</artifactId>
+            <version>2.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.4</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.6.4</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -36,15 +49,10 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.12.0</version>
-          </dependency>
-          <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.12.0</version>
-          </dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -54,8 +62,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.6.0</version>
                 <configuration>
-                    <source>1.11</source>
-                    <target>1.11</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>utf8</encoding>
                 </configuration>
             </plugin>

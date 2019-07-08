@@ -100,6 +100,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	}
 	//normally i have to check for finishing initialization not just if they exist.Federator for example could be initiliazing with its init container
 	//check if there exist a benchmark with this name
+	endpoints := []string{}
 	foundBenchmark := &kobebenchmarkv1alpha1.KobeBenchmark{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Spec.Benchmark, Namespace: instance.Namespace}, foundBenchmark)
 	if err != nil && errors.IsNotFound(err) {
@@ -114,10 +115,14 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 			reqLogger.Info("Failed to find a specific dataset from the list of datasets of this benchmark")
 			return reconcile.Result{RequeueAfter: 5}, err
 		}
+		//create a list of the sparql endpoints
+		endpoints = append(endpoints, dataset.Name+"."+dataset.Namespace+".svc.cluster-domain.example")
 	}
+	reqLogger.Info("these are the endpoints ", endpoints)
 
 	//new plan : create the federator and initialize it with the experiment so that it makes the appropriate config file with the initcontainer
 	for _, kobeFed := range instance.Spec.Federators {
+		kobeFed.Spec.Endpoints = endpoints
 		controllerutil.SetControllerReference(instance, &kobeFed, r.scheme)
 		err := r.client.Create(context.TODO(), &kobeFed)
 		if err != nil {

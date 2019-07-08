@@ -293,6 +293,12 @@ func labelsForKobeDataset(name string) map[string]string {
 func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha1.KobeDataset) *appsv1.Deployment {
 	labels := labelsForKobeDataset(m.Name)
 	replicas := m.Spec.Count
+	var env corev1.EnvVar
+	if m.Spec.ToDownload == true {
+		env = corev1.EnvVar{Name: "DOWNLOAD_URL", Value: m.Spec.DownloadFrom}
+	}
+	envs := []corev1.EnvVar{}
+	envs = append(envs, env)
 
 	volume := corev1.Volume{Name: "nfs", VolumeSource: corev1.VolumeSource{PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
 	volumes := []corev1.Volume{}
@@ -329,6 +335,7 @@ func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha
 							ContainerPort: m.Spec.Port,
 							Name:          m.Name,
 						}},
+						Env:          envs,
 						VolumeMounts: volumemounts,
 					}},
 					Volumes: volumes,

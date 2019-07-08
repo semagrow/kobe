@@ -4,14 +4,14 @@ metadata:
   name: nodownload
 spec:
   # Add fields here
-  image: nginx
+  image: kostbabis/virtuoso
   toDownload: true
   dumbDirectory: /data/
-  downloadFrom: this is a download link
+  downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/SWDFood.tar.gz
   imagePullPolicy: Always
   count: 1
   group: kobe
-  port: 80
+  port: 8890
 
 ---
 
@@ -21,29 +21,12 @@ metadata:
   name: nodownload1
 spec:
   # Add fields here
-  image: nginx
+  image: kostbabis/virtuoso
   toDownload: true
   dumbDirectory: /data/
-  downloadFrom: this is a download link
+  downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/NYT.tar.gz
   imagePullPolicy: Always
   count: 1
   group: kobe
-  port: 80
+  port: 8890
 
-
----
-
-apiVersion: kobedataset.kobe.com/v1alpha1
-kind: KobeDataset
-metadata:
-  name: nodownload2
-spec:
-  # Add fields here
-  image: nginx
-  toDownload: true
-  dumbDirectory: /data/
-  downloadFrom: this is a download link
-  imagePullPolicy: Always
-  count: 1
-  group: kobe
-  port: 80
