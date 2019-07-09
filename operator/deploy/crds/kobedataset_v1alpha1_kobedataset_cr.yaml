@@ -14,7 +14,7 @@ spec:
   port: 8890
 
 ---
-
+ # Add fields here http://users.iit.demokritos.gr/~gmouchakis/dumps/NYT.tar.gz
 apiVersion: kobedataset.kobe.com/v1alpha1
 kind: KobeDataset
 metadata:

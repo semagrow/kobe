@@ -153,12 +153,12 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 
 		}
 	}
-
+	//check if there is a service for the federator
 	foundService := &corev1.Service{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Making a new service for kobedataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		service := r.newServiceForCR(instance)
+		service := r.newServiceForFederator(instance)
 		reqLogger.Info("Creating a new Service %s/%s\n", service.Namespace, service.Name)
 		err = r.client.Create(context.TODO(), service)
 		if err != nil {
@@ -217,7 +217,7 @@ func (r *ReconcileKobeFederator) newDeploymentForFederator(m *kobefederatorv1alp
 
 }
 
-func (r *ReconcileKobeFederator) newServiceForCR(m *kobefederatorv1alpha1.KobeFederator) *corev1.Service {
+func (r *ReconcileKobeFederator) newServiceForFederator(m *kobefederatorv1alpha1.KobeFederator) *corev1.Service {
 	service := &corev1.Service{
 		TypeMeta: metav1.TypeMeta{
 			Kind:       "Service",

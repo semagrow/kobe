@@ -4,7 +4,7 @@ cd /data
 
 mkdir -p dumps
 
-if [ ! -f "/data/.data_loaded" ];
+if  [ "$DATASET_NAME" ] &&[ ! -f "/kobe/dataset/$DATASET_NAME/.data_loaded" ]  ;
 then
 
     if [ "$DOWNLOAD_URL" ]; then
@@ -41,12 +41,23 @@ then
     
     isql-v -U dba -P "$pwd" -K
 
+    #save the dump and the database file in the nfs directory
     touch /data/.data_loaded
-    
-    
-    #if [ "$DOWNLOAD_URL" ]; then
-    #rm -rf /data/toLoad/*
-    #fi
+
+    if [ "$DATASET_NAME" ]; then
+	cd /kobe/dataset/
+    	mkdir -p $DATASET_NAME
+    	cd $DATASET_NAME
+    	mkdir -p database
+    	mkdir -p dump
+    	cp -r /data/toLoad dump/
+    	cp /var/lib/virtuoso/db/virtuoso.db database/
+    	touch /kobe/dataset/$DATASET_NAME/.data_loaded
+    fi   
+	 
+    if [ "$DOWNLOAD_URL" ]; then
+	rm -rf /data/toLoad/*
+    fi
     
     echo "finished loading"
     
@@ -56,8 +67,10 @@ then
       sleep 10
     done
 
+else 
+    cp  /kobe/dataset/$DATASET_NAME/database/virtuoso.db /var/lib/virtuoso/db/virtuoso.db
+ 
 fi
-
 
 virtuoso-t +wait +foreground +configfile /virtuoso.ini
 

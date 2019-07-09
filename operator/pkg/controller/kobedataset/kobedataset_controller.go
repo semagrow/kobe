@@ -122,7 +122,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 
 	//why are these here  in this controller????????????????
 
-	//-------------------------------------------------checking if nfs config map health----------------------------------
+	//-------------------------------------------------checking for nfs config map health----------------------------------
 	nfsconfigFound := &corev1.ConfigMap{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "nfsconfig", Namespace: instance.Namespace}, nfsconfigFound)
 	if err != nil && errors.IsNotFound(err) {
@@ -158,7 +158,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 			reqLogger.Info("Failed to create the kobe nfs Pod: %v\n", err)
 			return reconcile.Result{}, err
 		}
-		return reconcile.Result{RequeueAfter: 5}, nil
+		return reconcile.Result{Requeue: true}, nil
 
 	}
 	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes
@@ -173,7 +173,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 			reqLogger.Info("Failed to create the persistent volume that the datasets will use to retain their data if they shutdown and restarted")
 			return reconcile.Result{}, err
 		}
-		return reconcile.Result{Requeue: true}, nil
+		return reconcile.Result{RequeueAfter: 5}, nil
 
 	}
 	//--------------------------------------------Persistent volume claim  health check---------------------------------------------
@@ -186,16 +186,23 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 			reqLogger.Info("Failed to create the single persistent volume claim that all the datasets gonna use to mount their data directories to nfs")
 			return reconcile.Result{}, err
 		}
-		return reconcile.Result{RequeueAfter: 1}, nil
+		return reconcile.Result{RequeueAfter: 5}, nil
 	}
 
 	//----------------------------From here do the actual work to set up the deployment and service for the dataset--------------
+	//make sure nfs pod status is running, to take care of racing condition
+
+	if nfsPodFound.Status.Phase != "Running" {
+		return reconcile.Result{Requeue: true}, err
+	}
 
 	// deployment health check for dataset
-	found := &appsv1.Deployment{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, found)
+	foundDep := &appsv1.Deployment{}
+
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundDep)
 	reqLogger.Info("HEY THERE")
 	if err != nil && errors.IsNotFound(err) {
+
 		reqLogger.Info("Making a new deployment for kobedataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
 		dep := r.newDeploymentForKobeDataset(instance)
 		reqLogger.Info("Creating a new Deployment %s/%s\n", dep.Namespace, dep.Name)
@@ -211,10 +218,10 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 	}
 
 	count := instance.Spec.Count
-	if *found.Spec.Replicas != count {
-		found.Spec.Replicas = &count
+	if *foundDep.Spec.Replicas != count {
+		foundDep.Spec.Replicas = &count
 
-		err = r.client.Update(context.TODO(), found)
+		err = r.client.Update(context.TODO(), foundDep)
 		if err != nil {
 			reqLogger.Info("Failed to update Deployment: %v\n", err)
 			return reconcile.Result{}, err
@@ -293,12 +300,15 @@ func labelsForKobeDataset(name string) map[string]string {
 func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha1.KobeDataset) *appsv1.Deployment {
 	labels := labelsForKobeDataset(m.Name)
 	replicas := m.Spec.Count
-	var env corev1.EnvVar
-	if m.Spec.ToDownload == true {
-		env = corev1.EnvVar{Name: "DOWNLOAD_URL", Value: m.Spec.DownloadFrom}
-	}
+	var env1 corev1.EnvVar
+	var env2 corev1.EnvVar
 	envs := []corev1.EnvVar{}
-	envs = append(envs, env)
+	if m.Spec.ToDownload == true {
+		env1 = corev1.EnvVar{Name: "DOWNLOAD_URL", Value: m.Spec.DownloadFrom}
+		envs = append(envs, env1)
+	}
+	env2 = corev1.EnvVar{Name: "DATASET_NAME", Value: m.Name}
+	envs = append(envs, env2)
 
 	volume := corev1.Volume{Name: "nfs", VolumeSource: corev1.VolumeSource{PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
 	volumes := []corev1.Volume{}
