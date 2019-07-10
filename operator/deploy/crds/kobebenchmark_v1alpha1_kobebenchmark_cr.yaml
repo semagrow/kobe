@@ -4,7 +4,7 @@ metadata:
   name: kobebenchmark1
 spec:
   datasets:
-    - name: kobehaha
+    - name: nodownload
       image: nginx
       downloadFrom: "something changed"
   queries:
@@ -18,39 +18,4 @@ spec:
       language: sparql
       queryString: "this is supposed to be q3"
 
-    
 
----
-
-apiVersion: kobebenchmark.kobe.com/v1alpha1
-kind: KobeBenchmark
-metadata:
-  name: kobebenchmark2
-spec:
-  datasets:
-    - name: kobehah
-      image: nginx
-      downloadFrom: "something changed again"
-  queries:
-    - name: q1
-      language: sparql
-      queryString: "these are all queries"
-    - name: q2
-      language: sparql
-      queryString: "these are all queries"
-    - name: q3
-      language: sparql
-      queryString: "these are all queries"
-
-
----
-
-apiVersion: kobebenchmark.kobe.com/v1alpha1
-kind: KobeBenchmark
-metadata:
-  name: kobebenchmark3
-spec:
-  datasets:
-    - name: kobeha
-      image: nginx
-      downloadFrom: "something changed again"

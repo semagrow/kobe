@@ -1,12 +1,26 @@
 package v1alpha1
 
 import (
-	kobefederatorv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederator/v1alpha1"
+	types "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 // EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
 // NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
+
+// Federator is helper struct
+// +k8s:openapi-gen=true
+type Federator struct {
+	Name              string           `json:"name"`
+	Image             string           `json:"image"`
+	ImagePullPolicy   types.PullPolicy `json:"imagePullPolicy"`
+	Affinity          types.Affinity   `json:"affinity"` //choose which nodes the fed likes to run in
+	Port              int32            `json:"port"`
+	ConfFromFileImage string           `json:"confFromFileImage"` //image that makes init file from dump or endpoint
+	InputFileDir      string           `json:"inputFileDir"`      //where the above image expects the dump to be(if from dump)
+	OutputFileDir     string           `json:"outputFileDir"`     //where the above image will place its result config file
+	ConfImage         string           `json:"initImage"`
+}
 
 // KobeExperimentSpec defines the desired state of KobeExperiment
 // +k8s:openapi-gen=true
@@ -14,11 +28,11 @@ type KobeExperimentSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
-	Benchmark     string                                `json:"benchmark"`
-	Federators    []kobefederatorv1alpha1.KobeFederator `json:"federators"`
-	RunFlag       bool                                  `json:"runFlag"`
-	ClientImage   string                                `json:"clientImage"`
-	ClientCommand []string                              `json:"clientCommands"`
+	Benchmark     string      `json:"benchmark"`
+	Federators    []Federator `json:"federators"`
+	RunFlag       bool        `json:"runFlag"`
+	ClientImage   string      `json:"clientImage"`
+	ClientCommand []string    `json:"clientCommands"`
 }
 
 // KobeExperimentStatus defines the observed state of KobeExperiment

@@ -1,7 +1,6 @@
 package v1alpha1
 
 import (
-	corev1 "k8s.io/api/core/v1"
 	types "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
@@ -11,17 +10,21 @@ import (
 
 // KobeFederatorSpec defines the desired state of KobeFederator
 // +k8s:openapi-gen=true
-
 type KobeFederatorSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
-	InitContainers  []corev1.Container `json:"initContainer"`
-	Image           string             `json:"image"`
-	ImagePullPolicy types.PullPolicy   `json:"imagePullPolicy"`
-	Affinity        types.Affinity     `json:"affinity"`
-	Port            int32              `json:"port"`
-	Endpoints       []string           `json:"endpoints"`
+	//InitContainers    []corev1.Container `json:"initContainer"` //obsolete
+	Image             string           `json:"image"`
+	ImagePullPolicy   types.PullPolicy `json:"imagePullPolicy"`
+	Affinity          types.Affinity   `json:"affinity"` //choose which nodes the fed likes to run in
+	Port              int32            `json:"port"`
+	ConfFromFileImage string           `json:"confFromFileImage"` //image that makes init file from dump or endpoint
+	InputFileDir      string           `json:"inputFileDir"`      //where the above image expects the dump to be(if from dump)
+	OutputFileDir     string           `json:"outputFileDir"`     //where the above image will place its result config file
+	ConfImage         string           `json:"initImage"`         //image that makes one init file from multiple init files
+	Endpoints         []string         `json:"endpoints"`
+	DatasetNames      []string         `json:"datasetNames"`
 }
 
 // KobeFederatorStatus defines the observed state of KobeFederator

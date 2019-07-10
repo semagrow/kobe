@@ -2,6 +2,7 @@ package kobefederator
 
 import (
 	"context"
+	"strconv"
 
 	kobefederatorv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederator/v1alpha1"
 	appsv1 "k8s.io/api/apps/v1"
@@ -122,10 +123,29 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Creating a new deployment for kobefederator", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		for _, initcontainer := range instance.Spec.InitContainers {
-			initcontainer.Args = instance.Spec.Endpoints
-			// put them also as environment variables initcontainer.Env
-		}
+
+		/*
+			envs := []corev1.EnvVar{}
+			for i, endpoint := range instance.Spec.Endpoints {
+				env := corev1.EnvVar{Name: "endpoint" + strconv.Itoa(i), Value: endpoint}
+				envs = append(envs, env)
+				//env = corev1.EnvVar{Name: "dataset" + strconv.Itoa(i), Value: endpoint}
+			}
+			for i, datasetname := range instance.Spec.DatasetNames {
+				env := corev1.EnvVar{Name: "dataset" + strconv.Itoa(i), Value: datasetname}
+				envs = append(envs, env)
+			}
+
+			for _, initcontainer := range instance.Spec.InitContainers { //do it for all init containers.Possible only 2 will be needed
+
+				//put them as arguments to a command that the user can set for the init container if he wants
+				initcontainer.Args = instance.Spec.Endpoints
+
+				// put them also as environment variables to pass to init container .In the form endpoint1 ="endpointN1" endpoint2="endpointN2"
+				// put in environment also the raw names of each dataset ! MORE is MORE
+				initcontainer.Env = envs
+			}
+		*/
 		dep := r.newDeploymentForFederator(instance)
 		reqLogger.Info("Creating a new Deployment %s/%s\n", dep.Namespace, dep.Name)
 		err = r.client.Create(context.TODO(), dep)
@@ -153,7 +173,7 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 
 		}
 	}
-	//check if there is a service for the federator
+	//check the healthiness of the federators service
 	foundService := &corev1.Service{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
 	if err != nil && errors.IsNotFound(err) {
@@ -170,6 +190,8 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 	} else if err != nil {
 		return reconcile.Result{}, err
 	}
+
+	//all checks are completed successfully
 	reqLogger.Info("Loop went through the end for reconciling kobedataset")
 	return reconcile.Result{}, err
 }
@@ -178,8 +200,48 @@ func labelsForKobeFederator(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
 
+//---------------------------------functions that create native kubernetes objects that are owned by a federator -----------------------
 func (r *ReconcileKobeFederator) newDeploymentForFederator(m *kobefederatorv1alpha1.KobeFederator) *appsv1.Deployment {
 	labels := labelsForKobeFederator(m.Name)
+
+	//-------------------------------------------------------crap--------------------------------------------
+	nfsPodFound := &corev1.Pod{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
+	if err != nil && errors.IsNotFound(err) {
+		return nil
+	}
+	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes
+	//-------------------------------------------------------/crap------------------------------------
+
+	//create init containers definitions that make one config file for federator per dataset
+	initContainers := []corev1.Container{}
+	vmounts := []corev1.VolumeMount{}
+	volumes := []corev1.Volume{}
+	for i, datasetname := range m.Spec.DatasetNames {
+		//each init container is given DATASET_NAME and DATASET_ENDPOINT environment variables to work with)
+		//also inputfiledir and outputfiledir both point to exports/<datasetname>dumps and exports/dataset respectively to nfs server
+		envs := []corev1.EnvVar{}
+		env := corev1.EnvVar{Name: "DATASET_NAME", Value: datasetname}
+		envs = append(envs, env)
+		env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: m.Spec.Endpoints[i]}
+		envs = append(envs, env)
+
+		volume := corev1.Volume{Name: "nfs" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/dump"}}}
+		volumes = append(volumes, volume)
+
+		vmountin := corev1.VolumeMount{Name: "nfs" + datasetname, MountPath: m.Spec.InputFileDir}
+		vmountout := corev1.VolumeMount{Name: "nfs" + datasetname, MountPath: m.Spec.OutputFileDir}
+		vmounts = append(vmounts, vmountin, vmountout)
+
+		container := corev1.Container{
+			Image:        m.Spec.ConfFromFileImage,
+			Name:         "initcontainer" + strconv.Itoa(i),
+			Env:          envs,
+			VolumeMounts: vmounts,
+		}
+		initContainers = append(initContainers, container)
+	}
+
 	dep := &appsv1.Deployment{
 		TypeMeta: metav1.TypeMeta{
 			APIVersion: "apps/v1",
@@ -198,7 +260,7 @@ func (r *ReconcileKobeFederator) newDeploymentForFederator(m *kobefederatorv1alp
 					Labels: labels,
 				},
 				Spec: corev1.PodSpec{
-					InitContainers: m.Spec.InitContainers,
+					InitContainers: initContainers,
 					Containers: []corev1.Container{{
 						Image:           m.Spec.Image,
 						Name:            m.Name,
@@ -208,6 +270,7 @@ func (r *ReconcileKobeFederator) newDeploymentForFederator(m *kobefederatorv1alp
 							Name:          m.Name,
 						}},
 					}},
+					Volumes: volumes,
 				},
 			},
 		},

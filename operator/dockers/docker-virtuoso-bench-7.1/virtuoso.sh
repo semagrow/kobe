@@ -50,7 +50,7 @@ then
     	cd $DATASET_NAME
     	mkdir -p database
     	mkdir -p dump
-    	cp -r /data/toLoad dump/
+    	cp -r /data/toLoad/* dump/
     	cp /var/lib/virtuoso/db/virtuoso.db database/
     	touch /kobe/dataset/$DATASET_NAME/.data_loaded
     fi   

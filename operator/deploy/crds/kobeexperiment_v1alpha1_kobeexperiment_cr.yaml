@@ -4,7 +4,15 @@ metadata:
   name: kobeexp1
 spec:
   benchmark: kobebenchmark1
-  federator: kobefederator1
-  runFlag: true
+  federators: 
+    - name: notsemagrow
+      image: nginx
+      imagePullPolicy: Always
+      port: 80
+      confFromFileImage: kostbabis/testinit
+      inputFileDir: inputdirexample
+      outputFileDir: outdirexample
+      ConfImage: nginx
+  runFlag: false
   clientImage: perl
   clientCommand: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]

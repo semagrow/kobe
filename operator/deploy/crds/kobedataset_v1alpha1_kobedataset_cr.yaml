@@ -13,20 +13,5 @@ spec:
   group: kobe
   port: 8890
 
----
- # Add fields here http://users.iit.demokritos.gr/~gmouchakis/dumps/NYT.tar.gz
-apiVersion: kobedataset.kobe.com/v1alpha1
-kind: KobeDataset
-metadata:
-  name: nodownload1
-spec:
-  # Add fields here
-  image: kostbabis/virtuoso
-  toDownload: true
-  dumbDirectory: /data/
-  downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/NYT.tar.gz
-  imagePullPolicy: Always
-  count: 1
-  group: kobe
-  port: 8890
+
 

@@ -300,9 +300,11 @@ func labelsForKobeDataset(name string) map[string]string {
 func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha1.KobeDataset) *appsv1.Deployment {
 	labels := labelsForKobeDataset(m.Name)
 	replicas := m.Spec.Count
+
 	var env1 corev1.EnvVar
 	var env2 corev1.EnvVar
 	envs := []corev1.EnvVar{}
+
 	if m.Spec.ToDownload == true {
 		env1 = corev1.EnvVar{Name: "DOWNLOAD_URL", Value: m.Spec.DownloadFrom}
 		envs = append(envs, env1)
@@ -509,7 +511,6 @@ func (r *ReconcileKobeDataset) newPodForNfs(m *kobedatasetv1alpha1.KobeDataset) 
 
 //PERSISTENT VOLUME
 func (r *ReconcileKobeDataset) newPvForKobe(m *kobedatasetv1alpha1.KobeDataset, ip string) *corev1.PersistentVolume {
-	//POSO MALAKAS EIMAI POU PREPEI NA PSAKSW TA API DEFINITIONS GIA AYTO...
 
 	capacity := resource.MustParse("5Gi")
 	rmap := corev1.ResourceList{}
@@ -517,8 +518,6 @@ func (r *ReconcileKobeDataset) newPvForKobe(m *kobedatasetv1alpha1.KobeDataset, 
 
 	accessmodes := []corev1.PersistentVolumeAccessMode{"ReadWriteMany"}
 
-	//nfs := &corev1.NFSVolumeSource{Server: "kobenfs." + m.Namespace + ".svc.cluster.local", Path: "/" + m.Name}
-	//nfs := &corev1.NFSVolumeSource{Server: ip, Path: "/dumps/" + m.Name, ReadOnly: false}
 	nfs := &corev1.NFSVolumeSource{Server: ip, Path: "/"}
 
 	pv := &corev1.PersistentVolume{

@@ -7,7 +7,7 @@ import (
 	kobebenchmarkv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1"
 	kobedatasetv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1"
 	kobeexperimentv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobeexperiment/v1alpha1"
-
+	kobefederatorv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederator/v1alpha1"
 	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -78,9 +78,6 @@ type ReconcileKobeExperiment struct {
 
 // Reconcile reads that state of the cluster for a KobeExperiment object and makes changes based on the state read
 // and what is in the KobeExperiment.Spec
-// Note:
-// The Controller will requeue the Request to be processed again if the returned error is non-nil or
-// Result.Requeue is true, otherwise upon completion it will remove the work from the queue.
 func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcile.Result, error) {
 	reqLogger := log.WithValues("Request.Namespace", request.Namespace, "Request.Name", request.Name)
 	reqLogger.Info("Reconciling KobeExperiment")
@@ -98,16 +95,19 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		// Error reading the object - requeue the request.
 		return reconcile.Result{}, err
 	}
-	//normally i have to check for finishing initialization not just if they exist.Federator for example could be initiliazing with its init container
-	//check if there exist a benchmark with this name
-	endpoints := []string{}
+	//normally i have to check for finishing initialization not just if they exist.Federator for example could be initiliazing with its init container .very important
+
+	//check if there exist a kobe benchmark with this name in kubernetes.If not its an error .
 	foundBenchmark := &kobebenchmarkv1alpha1.KobeBenchmark{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Spec.Benchmark, Namespace: instance.Namespace}, foundBenchmark)
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Did not found a kobebenchmark resource with this name please define that first")
 		return reconcile.Result{RequeueAfter: 5}, err
 	}
-	//check if every kobedataset of the benchmark possible obsolete of this experiment is up and running
+	endpoints := []string{}
+	datasets := []string{}
+
+	//check if every kobedataset of the benchmark is healthy.Create a list of the endpoints and of the names of the datasets
 	for _, datasetInfo := range foundBenchmark.Spec.Datasets {
 		dataset := &kobedatasetv1alpha1.KobeDataset{}
 		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: foundBenchmark.Namespace, Name: datasetInfo.Name}, dataset)
@@ -117,38 +117,29 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		}
 		//create a list of the sparql endpoints
 		endpoints = append(endpoints, dataset.Name+"."+dataset.Namespace+".svc.cluster-domain.example")
+		datasets = append(datasets, dataset.Name)
 	}
-	reqLogger.Info("these are the endpoints ", endpoints)
 
-	//new plan : create the federator and initialize it with the experiment so that it makes the appropriate config file with the initcontainer
-	for _, kobeFed := range instance.Spec.Federators {
-		kobeFed.Spec.Endpoints = endpoints
-		controllerutil.SetControllerReference(instance, &kobeFed, r.scheme)
-		err := r.client.Create(context.TODO(), &kobeFed)
+	//create each federator from the spec defined in the kobeexperiment yaml.Also provide each of the feds with lists of endpoints and dataset names
+	for _, kobeFedSpec := range instance.Spec.Federators {
+		FedCR := r.newFederatorForExperiment(instance, kobeFedSpec, endpoints, datasets)
+		err := r.client.Create(context.TODO(), FedCR)
 		if err != nil {
-			reqLogger.Info("Failed to create the federator %s to run the experiment ", kobeFed.Name)
+			reqLogger.Info("Failed to create the federator %s to run the experiment ")
 			return reconcile.Result{RequeueAfter: 5}, err
 		}
 
 	}
 
-	//check if every federator is up and running
-	/*for _, federatorInfo := range instance.Spec.Federators {
-		foundFederator := &kobefederatorv1alpha1.KobeFederator{}
-		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: federatorInfo}, foundFederator)
-		if err != nil {
-			reqLogger.Info("Failed to find a specific federator from the list of federators of this experiment")
-			return reconcile.Result{RequeueAfter: 5}, err
-		}
-	}
-	*/
 	//Create more stuff here that are necessary to init the federators and the queries
 	//get the queries and mount them so the job can find them
-	//Everything is running and ready for the experiment
+
+	//Everything is healthy and ready for the experiment.
 	if instance.Spec.RunFlag == false { //dont run just yet just have it defined
 		return reconcile.Result{}, nil
 	}
-	//Create the new job that will run for this experiment
+
+	//Create the new job that will run the EVAL client for this experiment
 	foundJob := &batchv1.Job{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: instance.Name + "-" + strconv.Itoa(identifier)}, foundJob)
 	if err == nil {
@@ -170,6 +161,8 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	return reconcile.Result{}, err
 }
 
+//----------------------functions that create native kubernetes objects--------------------------------------
+//create the job that will run the evaluation program
 func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.KobeExperiment, i int) *batchv1.Job {
 	times := int32(1)
 	parallelism := int32(1)
@@ -207,4 +200,35 @@ func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.
 	controllerutil.SetControllerReference(m, job, r.scheme)
 	return job
 
+}
+
+//function that creates a new kobefederator custom resource from the federator spec in kobeexperiment.
+//The native objects that kobefederator needs are created by kobefederator controller .
+func (r *ReconcileKobeExperiment) newFederatorForExperiment(m *kobeexperimentv1alpha1.KobeExperiment,
+	fed kobeexperimentv1alpha1.Federator, endpoints []string, datasetnames []string) *kobefederatorv1alpha1.KobeFederator {
+
+	federator := &kobefederatorv1alpha1.KobeFederator{
+		TypeMeta: metav1.TypeMeta{
+			APIVersion: "kobefederator.kobe.com/v1alpha1",
+			Kind:       "KobeFederator",
+		},
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      fed.Name,
+			Namespace: m.Namespace,
+		},
+		Spec: kobefederatorv1alpha1.KobeFederatorSpec{
+			Image:             fed.Image,
+			ImagePullPolicy:   fed.ImagePullPolicy,
+			Affinity:          fed.Affinity,
+			Port:              fed.Port,
+			ConfFromFileImage: fed.ConfFromFileImage,
+			InputFileDir:      fed.InputFileDir,
+			OutputFileDir:     fed.OutputFileDir,
+			ConfImage:         fed.ConfImage,
+			Endpoints:         endpoints,
+			DatasetNames:      datasetnames,
+		},
+	}
+	controllerutil.SetControllerReference(m, federator, r.scheme)
+	return federator
 }

@@ -155,7 +155,7 @@ func (r *ReconcileKobeBenchmark) Reconcile(request reconcile.Request) (reconcile
 		return reconcile.Result{Requeue: true}, nil
 	}
 
-	return reconcile.Result{}, err
+	return reconcile.Result{}, nil
 }
 func labelsForKobeBenchmark(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
@@ -197,7 +197,7 @@ func (r *ReconcileKobeBenchmark) newKobeDataset(dataset *kobebenchmarkv1alpha1.D
 			Port:            80,
 		},
 	}
-	// Set Examplekind instance as the owner and controller
+	// Set kobe benchmark instance as the owner and controller
 	controllerutil.SetControllerReference(m, data, r.scheme)
 	return data
 
