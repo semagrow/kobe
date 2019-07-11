@@ -1,0 +1,3152 @@
+
+<!-- Processed by Id: cwm.py,v 1.193 2007/06/26 02:36:15 syosi Exp -->
+<!--     using base file:///Users/knud/Projekte/conference/owled2007data/-->
+
+
+<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+    xmlns:swrc="http://swrc.ontoware.org/ontology#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:ical="http://www.w3.org/2002/12/cal/ical#"
+    xmlns:swc="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:swrc_ext="http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#">
+
+    <owl:Ontology rdf:about="authors">
+        <dc:creator>Sean Bechhofer</dc:creator>
+        <owl:imports rdf:resource="http://data.semanticweb.org/ns/swc/ontology"/>
+    </owl:Ontology>
+
+    <owl:Ontology rdf:about="events">
+        <dc:creator>Sean Bechhofer</dc:creator>
+        <owl:imports rdf:resource="http://data.semanticweb.org/ns/swc/ontology"/>
+    </owl:Ontology>
+
+    <owl:Ontology rdf:about="locations">
+        <dc:creator>Sean Bechhofer</dc:creator>
+        <owl:imports rdf:resource="http://data.semanticweb.org/ns/swc/ontology"/>
+    </owl:Ontology>
+
+    <owl:Ontology rdf:about="papers">
+        <dc:creator>Sean Bechhofer</dc:creator>
+        <owl:imports rdf:resource="http://data.semanticweb.org/ns/swc/ontology"/>
+    </owl:Ontology>
+
+    <owl:Ontology rdf:about="pc">
+        <dc:creator>Sean Bechhofer</dc:creator>
+        <owl:imports rdf:resource="http://data.semanticweb.org/ns/swc/ontology"/>
+    </owl:Ontology>
+
+    <owl:Thing rdf:about="http://arep.med.harvard.edu/~jluciano">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://bio-imaging.liacs.nl/">
+    </owl:Thing>
+
+<!--
+<swrc_ext:authorList rdf:parseType="Resource">
+    <rdf:_1 rdf:resource="http://data.semanticweb.org/person/yang-song"/>
+    <rdf:_2 rdf:resource="http://data.semanticweb.org/person/li-wei-he"/>
+</swrc_ext:authorList>
+
+-->
+
+	    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/owled/2007">
+	        <swc:hasLocation rdf:resource="http://data.semanticweb.org/conference/owled/2007/location-congressinnsbruck"/>
+	        <rdfs:comment>The W3C OWL Web Ontology Language has been a W3C recommendation since 2004. Today OWL is playing an important role in an increasing number of applications and range of domains. Therefore, it is the right time to analyse feedback from users and to discuss how OWL can be applied, adapted and extended to fulfill current and future application demands.
+	The OWL: Experiences and Direction (OWLED) workshop series is a forum for practitioners in industry and academia, tool developers, and others interested in OWL to describe real and potential applications, to share experience, and to discuss requirements for language extensions/modifications. At OWLED 2006 it was agreed to move forward with a member submission of the OWL 1.1 proposal which extends OWL DL in ways that have been requested by users, that have effective reasoning algorithms, and that developers of OWL reasoning systems are willing to support. The OWL 1.1 specification has recently been accepted as a member submission, and is available on the W3C's website at http://www.w3.org/Submission/2006/SUBM-owl11-overview-20061219/.
+
+	The 3rd OWL: Experiences and Directions workshop (OWLED 2007) will again bring users, implementors and researchers together in order to measure the current state of need against the state of the art and to set an agenda for language evolutions that satisfy users. OWLED 2007 shall in particular present industrial efforts and experiences with OWL. It shall further the interaction between industry, theoreticians and tool builders, help consolidate OWL 1.1, clarify the relationships between OWL and rules and initiate the specification of OWL 2.0.
+
+	Building on the success of the 2005 OWLED and the 2006 OWLED workshops, the 2007 OWLED workshop will again be immediately after one of the main Semantic Web conferences, namely the ESWC conference, and is colocated with the First International Conference on Web Reasoning and Rule Systems, RR2007.</rdfs:comment>
+	        <rdfs:label>3rd OWL: Experiences and Directions Workshop</rdfs:label>
+	        <ical:dtend rdf:parseType="Resource">
+	            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	            <ical:dateTime>2007-06-07T23:59:59</ical:dateTime>
+	            <ical:tzid>Europe/Vienna</ical:tzid>
+	        </ical:dtend>
+	        <ical:dtstart rdf:parseType="Resource">
+	            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	            <ical:dateTime>2007-06-06T00:00:00</ical:dateTime>
+	            <ical:tzid>Europe/Vienna</ical:tzid>
+	        </ical:dtstart>
+	        <ical:summary>3rd OWL: Experiences and Directions Workshop</ical:summary>
+	        <ical:url rdf:resource="http://www.webont.org/owled/2007"/>
+			<swc:completeGraph rdf:resource="http://data.semanticweb.org/workshop/owled/2007/complete"/>
+			<swc:hasAcronym>OWLED2007</swc:hasAcronym>
+			<swc:hasLogo rdf:resource="http://data.semanticweb.org/images/owled_2007.png"/>
+			<swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/eswc/2007"/>
+	    </swc:WorkshopEvent>
+	
+    <swc:Place rdf:about="http://data.semanticweb.org/conference/owled/2007/location-congressinnsbruck">
+        <rdfs:label>Congress Innsbruck</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/page/Innsbruck"/>
+        <homepage rdf:resource="http://www.austriacongress.com/locations/701/"/>
+    </swc:Place>
+
+    <swc:Poster rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-1">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_1.pdf"/>
+        <swc:uuid>5008acce-0a4a-488e-8fad-8e545820ed0f</swc:uuid>
+        <dc:title>Lege Feliciter: Using Structured English to represent a Topographic Hydrology Ontology</dc:title>
+        <swrc:abstract>The mathematical nature of description logics has meant that domain experts find it
+        hard to understand. This forms a significant impediment to the creation and adoption of
+        ontologies. A number of approaches are being taken to attempt to mitigate this problem. The
+        two most common approaches are to provide an English like syntactic veneer to OWL, or to
+        provide a way to convert OWL statements to English to render them more readable. This paper
+        introduces a constrained English language called Rabbit that has been designed to better
+        enable domain experts to author ontologies in a way that is understandable to them. Rabbit
+        is intended to improve on existing methods through: greater clarity of expression due to the
+        involvement of the domain expert both in the development of Rabbit, its authoring and use;
+        the ability to hide certain modelling complexities and optimisations; and encouragement,
+        through its grammar, to produce short sentences that are more easily interpretable. We see
+        Rabbit as complementary to OWL, extending its reach to those who need to author and
+        understand domain ontologies but from whom descriptions logics are difficult to comprehend.</swrc:abstract>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/catherine-dolbear"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/john-goodwin"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/glen-hart"/>
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/glen-hart"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/catherine-dolbear"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/john-goodwin"/>
+		</swrc_ext:authorList>
+        <swrc:keywords>OWL</swrc:keywords>
+        <swrc:keywords>Semantics</swrc:keywords>
+        <swrc:keywords>Structured English</swrc:keywords>
+        <swrc:keywords>ontology</swrc:keywords>
+        <swrc:keywords>topography</swrc:keywords>
+        <rdfs:label>Lege Feliciter: Using Structured English to represent a Topographic Hydrology Ontology</rdfs:label>
+    </swc:Poster>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-10">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_10.pdf"/>
+        <swc:uuid>7bc44562-7503-440a-ba4e-3e56c2b3d0c0</swc:uuid>
+        <dc:title>IBSE: An OWL Interoperability Evaluation Infrastructure</dc:title>
+        <swrc:abstract>The technology that supports the Semantic Web presents a great diversity and, while
+        all these tools use different kinds of ontologies, not all share a common knowledge
+        representation model, which causes a problem when these tools try to interoperate. The
+        Knowledge Web European Network of Excellence is organizing the benchmarking of the
+        interoperability of ontology tools using OWL as interchange language with the goal of
+        assessing and improving tool interoperability. This paper shows how we have developed IBSE,
+        an evaluation infrastructure that allows to automatically execute the benchmarking
+        experiments and provides an easy way of analysing the results. Furthermore, including new
+        tools into the evaluation infrastructure is simple and straightforward.</swrc:abstract>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/raul-garcia-castro"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/asuncion-gomez-perez"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/jesus-prieto-gonzalez"/>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/raul-garcia-castro"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/asuncion-gomez-perez"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/jesus-prieto-gonzalez"/>
+		</swrc_ext:authorList>
+
+        <swrc:keywords>benchmarking</swrc:keywords>
+        <swrc:keywords>interoperability</swrc:keywords>
+        <swrc:keywords>owl</swrc:keywords>
+        <rdfs:label>IBSE: An OWL Interoperability Evaluation Infrastructure</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-11">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_11.pdf"/>
+        <swc:uuid>475b0150-97e0-43ff-bc15-b81e3bd537d0</swc:uuid>
+        <dc:title>DIG 2.0 Reference Middleware</dc:title>
+        <swrc:abstract>The DIG protocol, the de-facto standard for the communication with DL/OWL reasoners,
+        is currently being updated to align with OWL 1.1 and to add previously missing
+        functionality. This demo describes the DIG Reference Middleware which mediates between
+        different DIG protocol versions, routes requests to appropriate server components, and
+        provides retraction and told access functionality of DIG 2.0.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/timo-weithoener"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/thorsten-liebig"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/marko-luther"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/sebastian-boehm"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/thorsten-liebig"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/timo-weithoener"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/marko-luther"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/sebastian-boehm"/>
+        <swrc:keywords>DIG</swrc:keywords>
+        <swrc:keywords>infrastructure</swrc:keywords>
+        <rdfs:label>DIG 2.0 Reference Middleware</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-12">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_12.pdf"/>
+        <swc:uuid>16d9254a-0c9f-477e-8ecf-0259499abf64</swc:uuid>
+        <dc:title>Extending Fuzzy Description Logics for the Semantic Web</dc:title>
+        <swrc:abstract>Fuzzy Description Logics (Fuzzy DLs) and fuzzy OWL have been proposed as languages
+        able to represent and reason about imprecise and vague knowledge. Such extensions have
+        gained considerable attention the last couple of years since on the one hand they are
+        pivotal for applications that are inherently imprecise, like multimedia analysis and
+        retrieval, geospatial applications and more, while on the other hand they can be applied to
+        Semantic Web applications, like querying with preferences, modelling levels of trust and
+        proof and more. In the current paper we extend the current state-of-the-art on fuzzy
+        extensions to Semantic Web languages by presenting the syntax and semantics of the
+        fuzzy-\sroiq DL as well as the abstract, XML syntax and semantics of a fuzzy extension to
+        OWL 1.1. Moreover, we provide reasoning support for a fuzzy version of fuzzy-\sroiq by
+        extending well-known reduction techniques of fuzzy DLs to classical DLs for the additional
+        axioms and constructors of fuzzy-\sroiq.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/giorgos-stoilos"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/giorgos-stamou"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/giorgos-stamou"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/giorgos-stoilos"/>
+        <swrc:keywords>Fuzzy Description Logics</swrc:keywords>
+        <swrc:keywords>Fuzzy OWL 1.1</swrc:keywords>
+        <swrc:keywords>Fuzzy SROIQ</swrc:keywords>
+        <swrc:keywords>Reduction to Crisp DLs</swrc:keywords>
+        <swrc:keywords>Tractable fuzzy DLs</swrc:keywords>
+        <rdfs:label>Extending Fuzzy Description Logics for the Semantic Web</rdfs:label>
+    </swrc:InProceedings>
+
+    <swc:Poster rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-13">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_13.pdf"/>
+        <swc:uuid>7de36825-531b-4cc4-93e5-3650eae66ddd</swc:uuid>
+        <dc:title>OWL SAIQL - An OWL DL Query Language for Ontology Extraction</dc:title>
+        <swrc:abstract>Existing approaches for querying OWL DL do either only operate on syntactic
+        constructs without taking into account the semantics of OWL or do only have a restricted
+        access to the T-Box. We present SAIQL, the novel Schema And Instance Query Language for OWL
+        DL, that is well suited for ontology extraction. We describe its syntax and explain a basic
+        evaluation strategy. We illustrate the use of SAIQL with an example for ontology extraction
+        and re-use.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/alexander-kubias"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/simon-schenk"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/steffen-staab"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/jeff-z-pan"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/steffen-staab"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/simon-schenk"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/jeff-z-pan"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/alexander-kubias"/>
+        <swrc:keywords>OWL</swrc:keywords>
+        <swrc:keywords>Ontology Extraction</swrc:keywords>
+        <swrc:keywords>Query Language</swrc:keywords>
+        <swrc:keywords>Schema</swrc:keywords>
+        <rdfs:label>OWL SAIQL - An OWL DL Query Language for Ontology Extraction</rdfs:label>
+    </swc:Poster>
+
+    <swc:Poster rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-14">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_14.pdf"/>
+        <swc:uuid>22bba75e-797e-4c67-9f6d-53836e12d8c2</swc:uuid>
+        <dc:title>Ontological Context Visualization</dc:title>
+        <swrc:abstract>Ontologies contain information about concepts and their relations. Certain concepts
+        may occur in different ontologies at the same time and these concepts can be used as glue to
+        integrate information from related domains. In support of our efforts to represent
+        information on interesting concepts, we have developed a visualization engine
+        ''ContextVis''. This tool can at the same time, also be
+        used for a visual knowledge mining and inspection of ontology integration. In this paper we
+        present the Ontology Context Visualization with a case study on Alzheimer disease; a typical
+        example in which contextual information on concepts allows to integrate information from
+        different resources.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/julia-dmitrieva"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/yun-bei"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/fons-j-verbeek"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/julia-dmitrieva"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/yun-bei"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/fons-j-verbeek"/>
+        <swrc:keywords>Description Logic</swrc:keywords>
+        <swrc:keywords>OWL</swrc:keywords>
+        <swrc:keywords>Ontology</swrc:keywords>
+        <swrc:keywords>Ontology Visualization</swrc:keywords>
+        <rdfs:label>Ontological Context Visualization</rdfs:label>
+    </swc:Poster>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-15">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_15.pdf"/>
+        <swc:uuid>c8e76f14-bfef-4bad-93c8-f3d5d2c488c7</swc:uuid>
+        <dc:title>Reasoning with OWL-DL in Inductive Logic Programming</dc:title>
+        <swrc:abstract>The use of background knowledge and the adoption of Horn clausal logic as a
+        knowledge representation and reasoning framework are the distinguishing features of
+        Inductive Logic Programming (ILP) with respect to other approaches to concept learning. We
+        argue that ILP can not ignore the latest developments in Knowledge Engineering such as
+        ontologies and formalisms based on Description Logics. In this paper we present an
+        experience with OWL-DL reasoners in ILP within the application context of the Semantic Web.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/francesca-alessandra-lisi"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/francesca-alessandra-lisi"/>
+        <swrc:keywords>Description Logics</swrc:keywords>
+        <swrc:keywords>Inductive Logic Programming</swrc:keywords>
+        <swrc:keywords>Knowledge Representation and Reasoning</swrc:keywords>
+        <swrc:keywords>Ontologies</swrc:keywords>
+        <swrc:keywords>Rules</swrc:keywords>
+        <rdfs:label>Reasoning with OWL-DL in Inductive Logic Programming</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-16">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_16.pdf"/>
+        <swc:uuid>510b7098-9506-4d92-b098-a8bdee5e08a1</swc:uuid>
+        <dc:title>Mother, May I? OWL-based Policy Management at NASA</dc:title>
+        <swrc:abstract>Among the challenges of managing NASAs information systems is the management
+        (coordination, verification and validation, and enforcement) of many different role-based
+        access control policies and mechanisms. This paper describes an actual data federation use
+        case that demonstrates the inefficiencies created by this challenge and presents an approach
+        to reducing these inefficiencies using OWL. The focus is on the representation of XACML
+        policies in DL, but the approach generalizes to other policy languages.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/michael-smith"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/andrew-schain"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/kendall-clark"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/arlen-griffey"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/vladimir-kolovski"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/vladimir-kolovski"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/michael-smith"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/andrew-schain"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/kendall-clark"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/arlen-griffey"/>
+        <swrc:keywords>description logics</swrc:keywords>
+        <swrc:keywords>knowledge representation</swrc:keywords>
+        <swrc:keywords>policy analysis</swrc:keywords>
+        <swrc:keywords>policy language</swrc:keywords>
+        <swrc:keywords>policy management</swrc:keywords>
+        <rdfs:label>Mother, May I? OWL-based Policy Management at NASA</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-17">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_17.pdf"/>
+        <swc:uuid>6e7b7ce0-dcba-4951-b454-31abe8eed5a5</swc:uuid>
+        <dc:title>VIVO Development Roadmap: Enhancing an Ontology-Based University Research Portal with
+        OWL and Rules</dc:title>
+        <swrc:abstract>VIVO (vivo.cornell.edu), a Virtual Life Sciences Library, is a production Web portal
+        developed by Cornell University Library to pro- vide integrated discovery of life sciences
+        research activities taking place across Cornell's physical, administrative, and
+        disciplinary divisions. The system comprises a custom RDBMS-based knowledgebase store and a
+        Java Web application driving the public portal as well as a Web-based ontology editing
+        interface. The public site oers browsing and searching by instance type, hyperlinked
+        traversal of object relationships, and some simple inferences to aggregate data across
+        multiple object properties. A recent expansion in project scope to encompass scholarly
+        activities across the entire university has prompted an investigation of how more exten-
+        sive use of OWL and rule-based reasoning can leverage the structure of the knowledgebase to
+        serve more diverse query and display requirements.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/brian-lowe"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/brian-caruso"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/jon-corson-rikert"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/brian-lowe"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/brian-caruso"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/jon-corson-rikert"/>
+        <swrc:keywords>Web Ontology Language</swrc:keywords>
+        <swrc:keywords>Web portals</swrc:keywords>
+        <swrc:keywords>ontologies</swrc:keywords>
+        <rdfs:label>VIVO Development Roadmap: Enhancing an Ontology-Based University Research Portal with
+        OWL and Rules</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-18">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_18.pdf"/>
+        <swc:uuid>2f03f859-ea62-45c1-9173-436484040bcd</swc:uuid>
+        <dc:title>Structured Ontology Format</dc:title>
+        <swrc:abstract>This paper presents a simple data model for the representa- tion of OWL ontologies
+        (including the new features of OWL 1.1). The model is built from basic structures native to
+        all common programming environments, so it can be used directly as an API for ontology
+        analy- sis and manipulation. Furthermore, serialization of these structures us- ing the
+        widely-supported YAML standard yields a readable text format suitable for ontology authoring
+        by average users with text editors and code-management tools.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/rob-shearer"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/rob-shearer"/>
+        <swrc:keywords>OWL</swrc:keywords>
+        <swrc:keywords>language</swrc:keywords>
+        <swrc:keywords>syntax</swrc:keywords>
+        <rdfs:label>Structured Ontology Format</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-19">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/paper_19.pdf"/>
+        <swc:uuid>90922164-5f7f-4dde-b819-ee8799ef5e07</swc:uuid>
+        <dc:title>Can OWL model football leagues?</dc:title>
+        <swrc:abstract>Identity is one of the main principles in ontology engineering. Mechanisms to
+        identify objects by using attribute values or by their participation to relationships with
+        other objects are present in most conceptual modeling formalisms used in software
+        engineering and database or information system design. Identification mechanisms have also
+        been investigated in expressive Description Logics. However they are currently missing in
+        OWL. In this paper we argue for their usefulness, and we show how to extend DL-Lite_A, a
+        tractable fragment of OWL, with identification assertions without losing tractability of
+        reasoning.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/diego-calvanese"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/giuseppe-de-giacomo"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/domenico-lembo"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/maurizio-lenzerini"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/riccardo-rosati"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/diego-calvanese"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/domenico-lembo"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/maurizio-lenzerini"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/giuseppe-de-giacomo"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/riccardo-rosati"/>
+        <swrc:keywords>DL-Lite</swrc:keywords>
+        <swrc:keywords>Identification constraints</swrc:keywords>
+        <swrc:keywords>conceptual modeling</swrc:keywords>
+        <swrc:keywords>football</swrc:keywords>
+        <rdfs:label>Can OWL model football leagues?</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-2">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_2.pdf"/>
+        <swc:uuid>72d29f74-23c2-49f4-be0c-919971c8925f</swc:uuid>
+        <dc:title>Ontologies in OWL for Rapid Enterprise Integration</dc:title>
+        <swrc:abstract>Ontologies enable explicit expression of collective concepts and support
+        Machine-to-Machine (M2M) interactions at the semantic level. Ontologies expressed in a
+        standard language, such as the Web Ontology Language (OWL) and exposed on a network offer
+        the potential for unprecedented interoperability solutions since they are semantically rich,
+        computer understandable and inherently extensible. In this paper, we describe how we applied
+        ontologies in OWL for rapid enterprise integration of heterogeneous data sources. We found
+        that once a robust foundational domain ontology is established, it is easy and quick to
+        integrate new data sources and therefore rapidly provide new system capabilities.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/suzette-stoutenburg"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/leo-obrst"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/deborah-nichols"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/leo-obrst"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/suzette-stoutenburg"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/deborah-nichols"/>
+        <swrc:keywords>Agile systems</swrc:keywords>
+        <swrc:keywords>Enterprise integration</swrc:keywords>
+        <swrc:keywords>Ontology</swrc:keywords>
+        <swrc:keywords>Semantic Web</swrc:keywords>
+        <swrc:keywords>Service-oriented architecture</swrc:keywords>
+        <rdfs:label>Ontologies in OWL for Rapid Enterprise Integration</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-20">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_20.pdf"/>
+        <swc:uuid>fbb8b252-7f14-4bab-8360-150eb5343954</swc:uuid>
+        <dc:title>A survey of requirements for automated reasoning services for bio-ontologies in OWL</dc:title>
+        <swrc:abstract>There are few successful applications of automated reasoning over OWL-formalised
+        bio-ontologies, and requirements are often unclearly formulated. Of what is available, usage
+        and prospective scenarios of automated reasoning is often different from the straightforward
+        classification and satisfiability. We list nine types of scenarios and specify the
+        requirements in more detail. Several of these requirements are already possible in practice
+        or at least in theory, others are in need of further research, in particular regarding the
+        linking of the OWL ontology to data, reasoning over roles, and dynamically linking modular
+        ontologies.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/c-maria-keet"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/marco-roos"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/m-scott-marshall"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/c-maria-keet"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/marco-roos"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/m-scott-marshall"/>
+        <swrc:keywords>automated reasoning</swrc:keywords>
+        <swrc:keywords>bio-ontologies</swrc:keywords>
+        <swrc:keywords>requirements analysis</swrc:keywords>
+        <rdfs:label>A survey of requirements for automated reasoning services for bio-ontologies in OWL</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-22">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_22.pdf"/>
+        <swc:uuid>c7572711-1d58-48cd-b89e-12b29446f2ce</swc:uuid>
+        <dc:title>Verbalizing OWL in Attempto Controlled English</dc:title>
+        <swrc:abstract>We describe a verbalization of the logical content of OWL ontologies --- using OWL
+        1.1 without data-valued properties --- in Attempto Controlled English (ACE). Because ACE is
+        a subset of English, the verbalization makes OWL ontologies accessible to people with no
+        training in formal methods. We conclude that OWL can be verbalized in concise and
+        understandable English provided that a certain naming style is adopted for OWL individuals,
+        classes, and properties.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/kaarel-kaljurand"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/norbert-fuchs"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/norbert-fuchs"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/kaarel-kaljurand"/>
+        <swrc:keywords>Attempto Controlled English</swrc:keywords>
+        <swrc:keywords>OWL</swrc:keywords>
+        <swrc:keywords>controlled natural languages</swrc:keywords>
+        <swrc:keywords>ontologies</swrc:keywords>
+        <swrc:keywords>verbalization</swrc:keywords>
+        <rdfs:label>Verbalizing OWL in Attempto Controlled English</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-23">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_23.pdf"/>
+        <swc:uuid>da057e3f-4377-415f-bbc9-3344a5f53879</swc:uuid>
+        <dc:title>SPARQL-DL: SPARQL Query for OWL-DL</dc:title>
+        <swrc:abstract>There are many query languages (QLs) that can be used to query RDF and OWL
+        ontologies but neither type is satisfactory for querying OWL-DL ontologies. RDF-based QLs
+        (RDQL, SeRQL, SPARQL) are harder to give a semantics w.r.t. OWL-DL and are more powerful
+        than what OWL-DL reasoners can provide. DL-based QLs (DIG ask queries, nRQL) have clear
+        semantics but are not powerful enough in the general case. In this paper we describe
+        SPARQL-DL, a substantial subset of SPARQL for which we provide a clear OWL-DL based
+        semantics. SPARQL-DL is significantly more expressive than existing DL QLs (by allowing
+        mixed TBox/RBox/ABox queries) and can still be implemented without too much effort on top of
+        existing OWL-DL reasoners. We discuss design decisions and practical issues that arise for
+        defining SPARQL-DL and report about our preliminary prototype implemented on top of OWL-DL
+        reasoner Pellet.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/evren-sirin"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/bijan-parsia"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/bijan-parsia"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/evren-sirin"/>
+        <swrc:keywords>Query Languages</swrc:keywords>
+        <swrc:keywords>SPARQL</swrc:keywords>
+        <rdfs:label>SPARQL-DL: SPARQL Query for OWL-DL</rdfs:label>
+    </swrc:InProceedings>
+
+    <swc:Poster rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-24">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_24.pdf"/>
+        <swc:uuid>ccd1f071-12b3-477f-8795-65ec1af0b688</swc:uuid>
+        <dc:title>Sydney OWL Syntax - towards a Controlled Natural Language Syntax for OWL 1.1</dc:title>
+        <swrc:abstract>This paper describes a proposed new syntax that can be used to write and read OWL
+        ontologies in Controlled Natural Language (CNL): a well-defined subset of the English
+        language. Following the lead of Manchester OWL Syntax in making OWL more accessible for
+        non-logicians, and building on the previous success of Schwitters PENG (Processable
+        English), the proposed Sydney OWL Syntax enables two-way translation and generation of
+        grammatically correct full English sentences to and from OWL 1.1 Functional Syntax. Used in
+        conjunction with OWL tools, it is designed to facilitate ontology construction and editing
+        by enabling authors to write an OWL ontology in a defined subset of English. It also
+        improves readability and understanding of OWL statements or whole ontologies, by enabling
+        them to be read as English sentences. It is hoped that by providing the option of an
+        intuitive, easy to use English syntax which requires no specialized knowledge, the broader
+        community will be far more likely to develop and benefit from Semantic Web applications.
+        This paper is a discussion paper covering the scope, design, and examples of Sydney OWL
+        Syntax in use, and the authors invite feedback on all aspects of the proposal via email to
+        krr.sydneysyntax@cse.unsw.edu.au. Working drafts of the full specification are available at
+        http://www.ics.mq.edu.au/~rolfs/sos.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/anne-cregan"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/rolf-schwitter"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/thomas-meyer"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/thomas-meyer"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/anne-cregan"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/rolf-schwitter"/>
+        <swrc:keywords>Controlled Natural Language</swrc:keywords>
+        <swrc:keywords>OWL Syntax</swrc:keywords>
+        <swrc:keywords>Ontologies</swrc:keywords>
+        <swrc:keywords>Semantic Web</swrc:keywords>
+        <rdfs:label>Sydney OWL Syntax - towards a Controlled Natural Language Syntax for OWL 1.1</rdfs:label>
+    </swc:Poster>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-25">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_25.pdf"/>
+        <swc:uuid>20931d3d-17ac-4ac0-8b42-f456e6d5f2fa</swc:uuid>
+        <dc:title>Design Principles and Realization Techniques for User Friendly, Interactive, and
+        Scalable Ontology Browsing and Inspection Tools</dc:title>
+        <swrc:abstract>RacerPorter is the default GUI client of the RacerPro description logic system. This
+        paper presents the design principles of RacerPorter as well as the features of the newest
+        version of RacerPorter. RacerPorter has been revised extensively in order to enable it to
+        work with large ontologies (e.g., OpenCyc).</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/michael-wessel"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/ralf-moeller"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/ralf-moeller"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/michael-wessel"/>
+        <swrc:keywords>Description Logic Systems</swrc:keywords>
+        <swrc:keywords>OBIT</swrc:keywords>
+        <swrc:keywords>OWL tools</swrc:keywords>
+        <swrc:keywords>Ontology inspection</swrc:keywords>
+        <swrc:keywords>Ontology visualization</swrc:keywords>
+        <rdfs:label>Design Principles and Realization Techniques for User Friendly, Interactive, and
+        Scalable Ontology Browsing and Inspection Tools</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-26">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_26.pdf"/>
+        <swc:uuid>26f7a158-119d-423a-bbf8-118539b7c883</swc:uuid>
+        <dc:title>An Examination of OWL and the Requirements of a Large Health Care Terminology</dc:title>
+        <swrc:abstract>This paper presents a brief initial look at some of the possible benefits and
+        barriers to using OWL as the language for the development, dissemination and implementation
+        of terminological knowledge in the domain of health and health care. In particular, this
+        assessment is made from the perspective of the author's role in the development of
+        the Systematized Nomenclature of Medicine (SNOMED). To date, SNOMED has developed and
+        adopted its own special-purpose syntax and formats for terminology development, exchange and
+        distribution. Its representation language has limited expressivity yet is not expressible by
+        any dialect of OWL 1.0. With the evolution to OWL 1.1, the barriers to using OWL for
+        knowledge representation have been resolved. However, partly because of SNOMED's
+        very large size, there remain barriers to adoption of OWL XML/RDF for SNOMED development,
+        distribution or exchange purposes.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/kent-spackman"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/kent-spackman"/>
+        <swrc:keywords>SNOMED</swrc:keywords>
+        <swrc:keywords>health care</swrc:keywords>
+        <swrc:keywords>terminology standards</swrc:keywords>
+        <rdfs:label>An Examination of OWL and the Requirements of a Large Health Care Terminology</rdfs:label>
+    </swrc:InProceedings>
+
+    <swc:Poster rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-27">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_27.pdf"/>
+        <swc:uuid>ba4c96ea-bde8-4f09-ac10-82febc1835c7</swc:uuid>
+        <dc:title>On Querying Ontologies with Contextual Logic Programming</dc:title>
+        <swrc:abstract>We describe a system in which Contextual Logic Program- ming is used as a mediator
+        for knowledge modeled by ontologies. Our system provides the components required to behave
+        as a SPARQL query engine and, as a result of its Logic Programming heritage, it may also
+        recursively interrogate other ontologies or data repositories, providing a semantic
+        integration of multiple sources.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/claudio-fernandes"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/nuno-lopes"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/salvador-abreu"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/salvador-abreu"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/claudio-fernandes"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/nuno-lopes"/>
+        <swrc:keywords>Contextual Logic Programming</swrc:keywords>
+        <swrc:keywords>Semantic web</swrc:keywords>
+        <rdfs:label>On Querying Ontologies with Contextual Logic Programming</rdfs:label>
+    </swc:Poster>
+
+    <swc:Poster rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-28">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_28.pdf"/>
+        <swc:uuid>c5548857-3824-417b-bcff-a59c7770b887</swc:uuid>
+        <dc:title>Satisfiability Model Visualization Plugin for Deep Consistency Checking of OWL
+        Ontologies</dc:title>
+        <swrc:abstract>We present an original Protege plugin developed for the deep consistency checking of
+        OWL ontologies. The plugin constructs and visualizes a minimal satisfiability model of the
+        ontology, which is likely to uncover potential ontological errors: if the constructed model
+        contradicts the authors intentions, then the ontology itself is either wrong or incomplete.
+        A satisfiability model is generated using Mace4, a first-order logic (FOL) finite model
+        builder, from the FOL formulas corresponding to the OWL ontology definition. The constructed
+        satisfiability model is visualized using an original music score notation plugin of Protege.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/martins-barinskis"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/guntis-barzdins"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/martins-barinskis"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/guntis-barzdins"/>
+        <swrc:keywords>First-Order Logic</swrc:keywords>
+        <swrc:keywords>Minimal model</swrc:keywords>
+        <swrc:keywords>OWL</swrc:keywords>
+        <swrc:keywords>Protege</swrc:keywords>
+        <swrc:keywords>Satisfiability model</swrc:keywords>
+        <rdfs:label>Satisfiability Model Visualization Plugin for Deep Consistency Checking of OWL
+        Ontologies</rdfs:label>
+    </swc:Poster>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-29">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_29.pdf"/>
+        <swc:uuid>4b93ead1-2231-4b07-b159-c197866a0c8a</swc:uuid>
+        <dc:title>The OBO to OWL mapping, GO to OWL 1.1!</dc:title>
+        <swrc:abstract>A large library of biomedical ontologies has been developed in the OBO format,
+        including important ontologies such as the Gene Ontology (GO). These resources have the
+        potential to contribute to the Semantic Web in the life sciences domain. In particular, they
+        allow the annotation of distributed experimental data in using a controlled and shared
+        vocabulary. As theWeb Ontology Language OWL is theW3C recommended standard for ontologies,
+        converting OBO ontologies to OWL becomes an important need: it will facilitate the sharing
+        and reuse of this important resource and make the expanding range of OWL tools available for
+        use with OBO ontologies. In order to achieve this, we propose a formalisation of the OBO
+        syntax in terms of a BNF style grammar, and a formalisation of the semantics of (a large
+        part of) OBO in terms of a mapping to OWL 1.1. This demonstrates that the OWL 1.1 extension
+        of OWL allows nearly all of the OBO language to be captured.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/christine-golbreich"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/ian-horrocks"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/ian-horrocks"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/christine-golbreich"/>
+        <swrc:keywords>Gene Ontology</swrc:keywords>
+        <swrc:keywords>Mapping</swrc:keywords>
+        <swrc:keywords>OBO format</swrc:keywords>
+        <swrc:keywords>OWL OWL1.1 Web Ontology Language</swrc:keywords>
+        <swrc:keywords>Open Biomedical Ontologies</swrc:keywords>
+        <rdfs:label>The OBO to OWL mapping, GO to OWL 1.1!</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-3">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_3.pdf"/>
+        <swc:uuid>85580869-bd13-4879-bfc8-f186ee1cb93a</swc:uuid>
+        <dc:title>Ontology Engineering For Product Development</dc:title>
+        <swrc:abstract>This ontology analysis aims to provide a logical foundation for a product
+        development information system. The analysis is the direct result of six years of experience
+        in developing and implementing an information system for a large aerospace program. The
+        information system uses an ontology to organize and structure data. The ontology is
+        configured with a knowledge base to represent product specific information. The logical
+        foundation is to be used to extend the current system to provide deductive question
+        answering, validation of data products against specifications for the data, and validation
+        of chains of design evidence with respect to evidence construction rules. The ontology
+        analysis indicates need for the expressiveness found in OWL-DL, as well as additional
+        expressiveness for a logical equality and a functional calculus. An alternative to the
+        standard first order representation of OWL-DL is proposed.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/henson-graves"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/henson-graves"/>
+        <swrc:keywords>Formal Semantics</swrc:keywords>
+        <swrc:keywords>OWL DL</swrc:keywords>
+        <swrc:keywords>Ontology Engineering</swrc:keywords>
+        <swrc:keywords>Product Development</swrc:keywords>
+        <rdfs:label>Ontology Engineering For Product Development</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-30">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_30.pdf"/>
+        <swc:uuid>a61d91d2-cf86-4ace-9e4b-d82ba3c81f09</swc:uuid>
+        <dc:title>Semantic Web Technologies in Technical Automotive Documentation</dc:title>
+        <swrc:abstract>RDF is the format of choice to exchange data between software components of a
+        corporate system. Thats why we decided to use it in a recent work at Renault, in the field
+        of technical documentation. The prototype of a new repository for repair and diagnostic
+        information was modeled with OWL. REST web services using RDF as data format were built on
+        this repository, to provide access to improved repair and diagnostics methods. This report
+        describes how Semantic Web technologies were used. It is not about the "grand
+        vision" of the Semantic Web, but it could be of interest for those eager to promote
+        the use of these technologies in the enterprise.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/francois-paul-servant"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/francois-paul-servant"/>
+        <swrc:keywords>Automotive diagnostic</swrc:keywords>
+        <swrc:keywords>RDF based web services</swrc:keywords>
+        <swrc:keywords>RDF in the enterprise</swrc:keywords>
+        <rdfs:label>Semantic Web Technologies in Technical Automotive Documentation</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-31">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_31.pdf"/>
+        <swc:uuid>91149138-8daa-40de-9b22-f305b3b119a9</swc:uuid>
+        <dc:title>Towards a Scalable and Efficient Middleware for Instance Retrieval Inference Services</dc:title>
+        <swrc:abstract>We argue for the usefulness of convenient optimization criteria, when building
+        scalable and efficient instance retrieval inference services for ontology-based
+        applications. We discuss several optimization criteria, especially a dedicated load
+        balancing strategy, evaluate the approach with practical experiments on a particular
+        implementation and present results.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/atila-kaya"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/ralf-moeller"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/alissa-kaplunova"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/tobias-berger"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/ralf-moeller"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/atila-kaya"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/alissa-kaplunova"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/tobias-berger"/>
+        <swrc:keywords>Applications of OWL</swrc:keywords>
+        <swrc:keywords>Optimizations</swrc:keywords>
+        <swrc:keywords>Scalability</swrc:keywords>
+        <rdfs:label>Towards a Scalable and Efficient Middleware for Instance Retrieval Inference Services</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-32">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_32.pdf"/>
+        <swc:uuid>1c7a0513-eef3-430a-a8c5-af9178c3a1c2</swc:uuid>
+        <dc:title>Igniting the OWL 1.1 Touch Paper: The OWL API</dc:title>
+        <swrc:abstract>This paper describes the design and implementation of an OWL 1.1 API, herein
+        referred to as the OWL API . The API is designed to facilitate the manipulation of OWL 1.1
+        ontologies at a high level of abstraction for use by editors, reasoners and other tools. The
+        API is based on the OWL 1.1 specification and influenced by the experience of designing and
+        using the WonderWeb API and OWL-based applications. An overview of the basis for the design
+        of the API is discussed along with major API functionality. The API is available from Source
+        Forge: http://sourceforge.net/pro jects/owlapi</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/matthew-horridge"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/sean-bechhofer"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/olaf-noppens"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/sean-bechhofer"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/olaf-noppens"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/matthew-horridge"/>
+        <swrc:keywords>API</swrc:keywords>
+        <swrc:keywords>OWL 1.1</swrc:keywords>
+        <swrc:keywords>OWL Implementation</swrc:keywords>
+        <swrc:keywords>Parsing OWL</swrc:keywords>
+        <rdfs:label>Igniting the OWL 1.1 Touch Paper: The OWL API</rdfs:label>
+    </swrc:InProceedings>
+
+    <swc:Poster rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-33">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_33.pdf"/>
+        <swc:uuid>1588a97b-42f3-48d4-8c90-fcc29e4da726</swc:uuid>
+        <dc:title>Ontology-based data access with MASTRO</dc:title>
+        <swrc:abstract>In several IT application areas, clients need to access the services exported by the
+        system, thus requiring a representation of their application domain in terms of which they
+        can specify the access to the services exported by such systems. One of the most interesting
+        usages of such a shared conceptualization is ontology-based data access, where a conceptual
+        layer is exported to the client, abstracting away from how actual data is maintained.
+        Therefore, an ontology-based data access system has to adress the impedance
+        mismatch" issue, existing between data actually present at the sources, and objects
+        represented at the intensional level. In this demo, we present MASTRO, an ontology-based
+        data access system that provides provides tractable reasoning over an ontology, laying over
+        an autonomous relational DBMS managing the data layer.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/antonella-poggi"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/marco-ruzzi"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/antonella-poggi"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/marco-ruzzi"/>
+        <swrc:keywords>data integration</swrc:keywords>
+        <swrc:keywords>description logics</swrc:keywords>
+        <swrc:keywords>ontologies</swrc:keywords>
+        <swrc:keywords>ontology-based data access</swrc:keywords>
+        <rdfs:label>Ontology-based data access with MASTRO</rdfs:label>
+    </swc:Poster>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-34">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_34.pdf"/>
+        <swc:uuid>368067b9-fc0f-41d8-a607-3dcd0b8549a1</swc:uuid>
+        <dc:title>ONTOSEARCH2: Searching Ontologies Semantically</dc:title>
+        <swrc:abstract>While the Web makes an increasing number of ontologies widely available for
+        applications, how to discover ontologies becomes a more challenging issue. Existing
+        approaches are mainly based on keywords and metadata information of ontologies, rather than
+        semantic entailments of ontologies. In this paper, we present an ontology search engine,
+        called ONTOSEARCH2, which provide three approaches to searching ontologies semantically.
+        These approaches take the advantages of ONTOSEARCH2's efficient query answering
+        capability.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/edward-thomas"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/jeff-z-pan"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/derek-sleeman"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/jeff-z-pan"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/edward-thomas"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/derek-sleeman"/>
+        <swrc:keywords>Fuzzy query</swrc:keywords>
+        <swrc:keywords>Ontology</swrc:keywords>
+        <swrc:keywords>Search</swrc:keywords>
+        <swrc:keywords>Semantic Web</swrc:keywords>
+        <rdfs:label>ONTOSEARCH2: Searching Ontologies Semantically</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-35">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/paper_35.pdf"/>
+        <swc:uuid>8d1da827-a8a2-45f5-9977-b338bec8b46a</swc:uuid>
+        <dc:title>An Extension of DIG 2.0 for Handling Bulk Data</dc:title>
+        <swrc:abstract>The research community has noted the need to retrieve the instance level of an
+        ontology from bulk data stored in external data sources (e.g., a relational database), in
+        order to delegate to the external source all aspects of the actual management of the data.
+        To achieve this, several methodologies have been recently developed to represent and reason
+        about what we call here Ontologies with Linking Axioms. However, existing DL reasoners
+        cannot properly deal with such ontologies. Indeed, including the instance level in the
+        communication with a DL reasoner can cause a heavy communication overhead, and goes against
+        the requirement of delegating data management to the external source. To overcome these
+        problems, we present here an extension to the DIG 2.0 Interface that allows for the
+        specification and management of Ontologies with Linking Axioms. The extension is a general
+        framework which can accommodate any type of data source and linking axiom through specific
+        implementations. We also present an implementation aiming at representing axioms linking
+        data sources managed by an RDBMS to an ontology.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/diego-calvanese"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/mariano-rodriguez"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/diego-calvanese"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/mariano-rodriguez"/>
+        <swrc:keywords>data management</swrc:keywords>
+        <swrc:keywords>implementation issues</swrc:keywords>
+        <swrc:keywords>standardization efforts</swrc:keywords>
+        <rdfs:label>An Extension of DIG 2.0 for Handling Bulk Data</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-36">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_36.pdf"/>
+        <swc:uuid>acd4108c-82b5-4f13-b4c6-fd52b6e0c4dc</swc:uuid>
+        <dc:title>Describing chemical functional groups in OWL-DL for the classification of chemical
+        compounds</dc:title>
+        <swrc:abstract>Functional groups describe the semantics of chemical reactivity in terms of atoms
+        and their connectivity, which exhibit characteristic chemical behavior when present in a
+        compound. In this paper, we take a first step towards designing an ontology of functional
+        groups for the classification of chemical compounds. We highlight the capabilities and
+        limitations OWL 1.0 and the proposed OWL 1.1 in terms of our domain requirements. We also
+        illustrate how cyclic structures may be identified from SWRL rules and suggest OWL-DL
+        extensions for reasoners to achieve this objective. This work represents a preliminary step
+        towards describing, reasoning and querying about structure and function of molecules.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/natalia-villanueva-rosales"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/michel-dumontier"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/michel-dumontier"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/natalia-villanueva-rosales"/>
+        <swrc:keywords>OWL</swrc:keywords>
+        <swrc:keywords>chemistry</swrc:keywords>
+        <swrc:keywords>functional groups</swrc:keywords>
+        <swrc:keywords>knowledge discovery</swrc:keywords>
+        <swrc:keywords>ontology</swrc:keywords>
+        <rdfs:label>Describing chemical functional groups in OWL-DL for the classification of chemical
+        compounds</rdfs:label>
+    </swrc:InProceedings>
+
+    <swc:Poster rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-37">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_37.pdf"/>
+        <swc:uuid>a0fd27f4-1dd3-4fc8-b7b1-6b6798071967</swc:uuid>
+        <dc:title>Ontology-Based Management of the Telehealth Smart Home, Dedicated to Elderly in Loss of
+        Cognitive Autonomy</dc:title>
+        <swrc:abstract>Taking care of an elderly with loss of cognitive autonomy is a challenge for a
+        person. This task can be assisted by an artificial agent, such as the telehealth smart home
+        (TSH) system but the design of such a system is itself also a challenge. In this paper, we
+        present an ontology based model of the TSH, which is designed in a modularized approach and
+        implemented in OWL using Prot´eg´e2000. Our aim is to take advantage of the full potential
+        of these ontologies to describe the domain in order to support effectively the development,
+        the configuration and the carrying out of software applications. The instantiation of the
+        ontologies is, for example, needed to initialize the Bayesian networks whose task is to
+        recognize the activity the patient is probably performing. It is also involved in the
+        learning process of life habits, as well as in the maintenance the system.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/fatiha-latfi"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/bernard-lefebvre"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/celine-descheneaux"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/bernard-lefebvre"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/fatiha-latfi"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/celine-descheneaux"/>
+        <swrc:keywords>OWL</swrc:keywords>
+        <swrc:keywords>Ontologies</swrc:keywords>
+        <swrc:keywords>Protege2000</swrc:keywords>
+        <swrc:keywords>Telehealth Smart Home</swrc:keywords>
+        <rdfs:label>Ontology-Based Management of the Telehealth Smart Home, Dedicated to Elderly in Loss of
+        Cognitive Autonomy</rdfs:label>
+    </swc:Poster>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-38">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_38.pdf"/>
+        <swc:uuid>6fea46a6-5f78-49da-b022-167e3c7c434f</swc:uuid>
+        <dc:title>Use of OWL for describing Stream Processing Components to enable Automatic Composition</dc:title>
+        <swrc:abstract>Stream Processing Applications analyze large volumes of streaming data in real-time.
+        These applications, consist of data sources, which produce raw streams, and processing
+        elements, which operate on the streams to produce new derived streams. In this paper, we
+        describe an OWL-based model for describing these stream processing components. The streams
+        produced by data sources are described as RDF graphs, consisting of OWL ABox assertions. The
+        input requirements and output capabilities of PEs are described using RDF graph patterns.
+        The main use of this model is to allow automatic composition of applications that produce
+        certain desired results. Our model allows us to answer two key questions in automatic
+        composition: can a certain stream be given as input to a processing element, and what are
+        the new streams produced as a result. Based on this model, we outline a planning approach to
+        automatic application composition.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/zhen-liu"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/anand-ranganathan"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/anton-riabov"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/anand-ranganathan"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/zhen-liu"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/anton-riabov"/>
+        <swrc:keywords>Automatic Composition</swrc:keywords>
+        <swrc:keywords>Component Model</swrc:keywords>
+        <swrc:keywords>OWL</swrc:keywords>
+        <swrc:keywords>Stream Processing</swrc:keywords>
+        <rdfs:label>Use of OWL for describing Stream Processing Components to enable Automatic Composition</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-39">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_39.pdf"/>
+        <swc:uuid>40ea9c9f-958f-4b4d-b0cb-5e2c17cc7e63</swc:uuid>
+        <dc:title>Current and future uses of OWL for scientific data frameworks: successes and
+        limitations</dc:title>
+        <swrc:abstract>Based on almost three years of experience in developing and deploying scientific
+        data frameworks built using semantic technologies, we now have a production virtual
+        observatory in operation, serving two broad communities: solar physics and terrestrial upper
+        atmospheric physics. Within this application, a data framework provides online location,
+        retrieval, and analysis services to a variety of heterogeneous scientific data sources that
+        are often highly distributed over the internet. In this paper, we describe selected current
+        and planned uses of OWL-DL, related tools, and our deployment. We describe both successes
+        and limitations we have found to date using OWL-based technologies, especially tool support.
+        We also indicate the important components we require from a robust technical infrastructure
+        as we move forward with expanding the functionality of the frameworks. This expansion
+        includes additional semantic representation and reasoning/query services as well as
+        broadening the scope of our scientific disciplines.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/deborah-mcguinness"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/peter-fox"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/peter-fox"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/deborah-mcguinness"/>
+        <swrc:keywords>Scientific Data</swrc:keywords>
+        <swrc:keywords>Semantic Integration</swrc:keywords>
+        <swrc:keywords>Virtual Observatory</swrc:keywords>
+        <rdfs:label>Current and future uses of OWL for scientific data frameworks: successes and
+        limitations</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-4">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_4.pdf"/>
+        <swc:uuid>7a70b9e8-f254-4065-a4af-ec6c1dbc6f4a</swc:uuid>
+        <dc:title>Extracting Modules from Ontologies: A Logic-based Approach</dc:title>
+        <swrc:abstract>The ability to extract meaningful fragments from an ontology is essential for
+        ontology re-use. We propose a definition of a module that guarantees to completely capture
+        the meaning of a given set of terms, i.e., to include all axioms relevant to the meaning of
+        these terms, and study the problem of extracting minimal modules. We show that the problem
+        of determining whether a subset of an ontology is a module for a given vocabulary is
+        undecidable for OWL DL. Hence we propose sufficient conditions for an ontology to be a
+        module: if an ontology satisfies our conditions then we can guarantee that it is a module,
+        but not vice-versa. The conditions we present can be checked in polynomial time for OWL DL
+        ontologies. We present our experimental results on a set of real-world ontologies of varying
+        size and complexity. We show that the modules we obtain are much smaller than the ones
+        computed using existing techniques.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/bernardo-cuenca-grau"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/ian-horrocks"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/yevgeny-kazakov"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/ulrike-sattler"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/yevgeny-kazakov"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/bernardo-cuenca-grau"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/ian-horrocks"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/ulrike-sattler"/>
+        <swrc:keywords>Description Logics</swrc:keywords>
+        <swrc:keywords>Ontologies</swrc:keywords>
+        <swrc:keywords>Semantic Web</swrc:keywords>
+        <swrc:keywords>Web Ontology Language</swrc:keywords>
+        <rdfs:label>Extracting Modules from Ontologies: A Logic-based Approach</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-40">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/paper_40.pdf"/>
+        <swc:uuid>2db77342-840e-4e86-8af2-b6f83b81baae</swc:uuid>
+        <dc:title>Representing Phenotypes in OWL</dc:title>
+        <swrc:abstract>Accurate representation of phenotypes using ontologies is important in biology and
+        biomedicine. This paper describes the OWL translation of our methodology for representing
+        phenotypes using ontologies in the OBO Foundry.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/chris-mungall"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/chris-mungall"/>
+        <swrc:keywords>OBO</swrc:keywords>
+        <swrc:keywords>OWL</swrc:keywords>
+        <swrc:keywords>biology</swrc:keywords>
+        <swrc:keywords>phenotype</swrc:keywords>
+        <swrc:keywords>qualities</swrc:keywords>
+        <rdfs:label>Representing Phenotypes in OWL</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-41">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_41.pdf"/>
+        <swc:uuid>89285088-2089-4768-8f44-f22f9e0bf5b7</swc:uuid>
+        <dc:title>An Ontology-Driven Knowledge Environment For Subcellular Neuroanatomy</dc:title>
+        <swrc:abstract>The nervous system, perhaps more so than any other tissue, requires the fine spatial
+        resolution of high resolution microscopy to resolve the intricate structure of individual
+        nerve cells and supracellular domains. The analysis of such imaging data often involves the
+        extraction of cellular surfaces and cell components. The resulting geometries are used to
+        derive measurements or, when combined with additional information, as the basis of a
+        computational model. In an effort to streamline the process of model creation, we are
+        working to create a knowledge environment where researchers can access well-annotated
+        geometrical models of neuronal ultrastructure and a knowledge base of cell structure.
+        Underlying this system is a formal ontology that describes the subcellular anatomy of the
+        nervous system (SAO), covering nerve cells and their processes. In this report, we describe
+        the structure and content of the SAO along with SAO-based tools for annotation and query of
+        electron microscopic data.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/lisa-fong"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/stephen-larson"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/amarnath-gupta"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/christopher-condit"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/william-bug"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/li-chen"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/ruth-west"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/stephan-lamont"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/masako-terada"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/maryann-martone"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/amarnath-gupta"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/stephen-larson"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/maryann-martone"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/william-bug"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/lisa-fong"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/christopher-condit"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/li-chen"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/ruth-west"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/stephan-lamont"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/masako-terada"/>
+        <swrc:keywords>Data Integration</swrc:keywords>
+        <swrc:keywords>Database</swrc:keywords>
+        <swrc:keywords>Nervous System</swrc:keywords>
+        <swrc:keywords>Protege</swrc:keywords>
+        <swrc:keywords>Reasoning</swrc:keywords>
+        <rdfs:label>An Ontology-Driven Knowledge Environment For Subcellular Neuroanatomy</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-42">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_42.pdf"/>
+        <swc:uuid>95a9bc62-a9db-43a9-a25d-e6e0d1cb45af</swc:uuid>
+        <dc:title>Rule-Based Reasoning With A Multi-Scale Neuroanatomical Ontology</dc:title>
+        <swrc:abstract>We have demonstrated the use of OWL-based ontologies to infer novel facts from
+        existing knowledge. Using an ontology developed for subcellular anatomy of the nervous
+        system, the SAO, merged with a terminological resource for gross neuroanatomy (Brain
+        Architecture Management System; Bota and Swanson, 2005), we have inferred the existence of
+        axons from the existence of axon terminals and the existence of neurons from the existence
+        of axons. Additionally we have inferred connectivity at a large scale from the existence of
+        synapses at a micro scale. We conclude that OWL is an important technology for merging
+        disparate data and performing multi-scale reasoning.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/stephen-larson"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/maryann-martone"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/stephen-larson"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/maryann-martone"/>
+        <swrc:keywords>Algernon</swrc:keywords>
+        <swrc:keywords>Data integration</swrc:keywords>
+        <swrc:keywords>Multi-Scale</swrc:keywords>
+        <swrc:keywords>Protege</swrc:keywords>
+        <swrc:keywords>Reasoning</swrc:keywords>
+        <rdfs:label>Rule-Based Reasoning With A Multi-Scale Neuroanatomical Ontology</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-43">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/paper_43.pdf"/>
+        <swc:uuid>fe356aa0-b1ed-42c7-8499-9682d290eb56</swc:uuid>
+        <dc:title>A business case of the use of ontologies for knowledge capitalization and exploitation</dc:title>
+        <swrc:abstract>Arcelor is currently involved in the industrial trial of ontologies for its
+        necessities of knowledge management. In order to develop knowledge based systems that can be
+        maintained and rolled out, a knowledge modelling phase is rather indispensable. It is a
+        platitude to point out the knowledge acquisition (KA) bottleneck to perform these operations
+        and so the question is to maximise the reuse of the KA investment. Ontologies are naturally
+        the technology to model this knowledge and the topics that are currently addressed are the
+        following: how to use ontologies for knowledge capitalization? How to make them
+        user-friendly for the end-users ? How to use them for software integration? How can we be
+        able to develop large ontologies with the level of quality that can be achieved in the
+        development of large software? How can we represent dynamic knowledge? The current studies
+        aim to give operational answer that can be applied in industrial environments for industrial
+        needs. To that extent, OWL appears as a necessity  since it is standardised  more than a
+        choice for the basic ontological language</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/francois-marie-lesaffre"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/francois-marie-lesaffre"/>
+        <swrc:keywords>capitalization</swrc:keywords>
+        <swrc:keywords>integration</swrc:keywords>
+        <swrc:keywords>modelling</swrc:keywords>
+        <swrc:keywords>use of ontologies</swrc:keywords>
+        <rdfs:label>A business case of the use of ontologies for knowledge capitalization and exploitation</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-44">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_44.pdf"/>
+        <swc:uuid>798975ac-49e7-44e7-853b-a203a2f0da42</swc:uuid>
+        <dc:title>Querying multiple sources with OWL ontologies: an exploratory study in an automotive
+        company</dc:title>
+        <swrc:abstract>Large companies are storing information and knowledge in multiple information
+        systems using various models and formats. A main stake is to retrieve the relevant knowledge
+        for a specific concern. We present an exploratory study using OWL ontologies to solve this
+        problem for a large automotive company. A first mock-up has been built. We describe
+        different questions that arose: how to organize the ontologies? how to communicate with
+        knowledge-based applications? how to support the user for queries formulation? which
+        languages and techniques to use? This paper presents provisory solutions adopted and
+        possible alternatives.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/pierre-mariot"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/jean-pierre-cotton"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/christine-golbreich"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/alain-berger"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/francois-vexler"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/christine-golbreich"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/pierre-mariot"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/jean-pierre-cotton"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/alain-berger"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/francois-vexler"/>
+        <swrc:keywords>Knowledge retrieving</swrc:keywords>
+        <swrc:keywords>Manufacturing</swrc:keywords>
+        <swrc:keywords>OWL</swrc:keywords>
+        <swrc:keywords>Ontologies</swrc:keywords>
+        <swrc:keywords>SPARQL</swrc:keywords>
+        <rdfs:label>Querying multiple sources with OWL ontologies: an exploratory study in an automotive
+        company</rdfs:label>
+    </swrc:InProceedings>
+
+    <swc:Poster rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-45">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_45.pdf"/>
+        <swc:uuid>5b03d03b-0ca6-42f4-bb13-037533297418</swc:uuid>
+        <dc:title>Requirements for the treatment of multilinguality in ontologies within FAO</dc:title>
+        <swrc:abstract>International organizations like FAO are intrinsically multilingual. FAO is
+        currently experimenting with semantic-oriented technologies based on ontologies, with the
+        purpose of integrating data across various information systems and providing better services
+        to end users. However, in order for these technologies to be used in real-life scenarios,
+        models and tools for accommodating and managing multilingual data are needed. This paper
+        analyzes the requirements for the treatment of multilinguality as resulting from the
+        experience we gained at FAO.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/caterina-caracciolo"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/margherita-sini"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/margherita-sini"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/caterina-caracciolo"/>
+        <swrc:keywords>multilinguality</swrc:keywords>
+        <swrc:keywords>ontologies</swrc:keywords>
+        <rdfs:label>Requirements for the treatment of multilinguality in ontologies within FAO</rdfs:label>
+    </swc:Poster>
+
+    <swc:Poster rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-46">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_46.pdf"/>
+        <swc:uuid>85514414-6397-4ac5-a3a8-7ba4f43ebdf6</swc:uuid>
+        <dc:title>Hey! You Got Imperative in My Declarative, or A Mashup Made in Heaven: Making OWL
+        friendlier with Javascript.</dc:title>
+        <swrc:abstract>We propose that OWL 1.1 incorporate the use of Javascript. By choosing to make use
+        of Javascript within OWL, adoption and utility of OWL might be improved in two different
+        ways. First, it could be used in a facility that lets users specify Javascript code to
+        translate domain specific languages into OWL. Second, Javascript is well known to a large
+        number of web developers. By enabling OWL documents to have property values that are
+        computed by Javascript functions, we extend the language in a useful way, and encourage the
+        use of OWL in different applications than it might otherwise be used. OWL needs a method of
+        extending its syntax to enable concise expression of domain statements without compromising
+        its expressiveness. For example, a current debate over the whether to use OWL as the
+        "native" format for the OBO ontologies, is driven (away from using OWL) by
+        OWL's unappealing syntax and the relative ease of understanding OBO's
+        current format. We describe a model for how to use Javascript, included as part of an OWL
+        ontology, to parse domain specific languages into native OWL. Two levels of operation are
+        distinguished, the first a lexical translation into a language which extends the functional
+        syntax, and a second macro expansion which translates the extended functional syntax to
+        expressions that only use the defined OWL vocabulary. For an implementation of computed
+        property values, we propose that they have a status similar to annotation properties, in
+        that they are not reasoned over. Instead they can be computed in terms of non-annotation
+        property values. In this way, we allow for useful expressivity gains without complicating
+        the OWL reasoning or imposing a complicated evaluation model. We discuss what access to the
+        environment, such as the ability to query against the ontology, could profitably (and
+        safely) be had by these scripts. Use cases motivated from experience in validating BioPAX
+        and from other applications are provided. Javascript interpreters are available for use from
+        within the programming languages that the major reasoners are implemented in, and should
+        therefore not pose an excessive burden on reasoner developers.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/alan-ruttenberg"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/alan-ruttenberg"/>
+        <swrc:keywords>Active values</swrc:keywords>
+        <swrc:keywords>Computed properties</swrc:keywords>
+        <swrc:keywords>Domain specific languages</swrc:keywords>
+        <swrc:keywords>Javascript</swrc:keywords>
+        <rdfs:label>Hey! You Got Imperative in My Declarative, or A Mashup Made in Heaven: Making OWL
+        friendlier with Javascript.</rdfs:label>
+    </swc:Poster>
+
+    <swc:Poster rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-47">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_47.pdf"/>
+        <swc:uuid>c95ebdc4-d5a9-4dcc-bc43-0ed63ed0358b</swc:uuid>
+        <dc:title>Use case: ontology to support system verification process</dc:title>
+        <swrc:abstract>OWL has been a W3C recommendation since 2004. Despite the growing number of
+        reasonably mature technologies supporting this standard (ontology editors, database storage,
+        bridge with reasoning facilities, etc.), OWL based technology is far to be commonly used for
+        operational applications in industry. At least in our context where one important activity
+        is about complex system engineering, relative little work has been done in applying OWL
+        based technologies to the management of information. This is partly because the added value
+        of using languages of high expressivity such as OWL is not demonstrated to practitioners .
+        This article is about applying OWL in a use case in system engineering area. One nice
+        definition of system engineering is provided in [2]. System engineering is a robust
+        approach to the design, creation and operation of systems. It encompasses the identification
+        and quantification of the system goals, the creation of alternative system design concepts,
+        performance of design trades, selection and implementation of the best design, verification
+        that the design is properly built and integrated, and post-implementation assessment of how
+        well the system meets the goals. We are involved in a pilot that shall contribute at
+        defining complex systems validation and verification (V&#38;V) processes and at
+        specifying some supportive methods and tools for that. Complex system is a term to refer to
+        a system of systems, meaning that complex enough to be decomposed into sub-systems that
+        are systems on their own; and that the system safety cannot be shown solely by test and
+        whose logic is difficult to comprehend without the aid of analytical tools[1] . Due to
+        multi-disciplinarily and project size, sub-systems may be engineered separately, and
+        therefore a strong need exists to supervise, validate and verify that these sub-systems will
+        be appropriately integrated so that the higher system desired behaviours will definitely be
+        achieved. So far the used technologies are relational databases for information repository
+        building and some simulation facilities, for example for executing behaviour models such
+        functional flow block diagram. In this context, we are interesting to investigate for what
+        aspects and to which degree OWL based technologies can bring added value. The (paper /
+        presentation) is structured as follows. First we briefly explain a potential application of
+        OWL in our context in section 2. In section 3, we share a first experience in building a
+        (partial) system engineering ontology. In section 4, we discuss identified difficulties that
+        could lead to requirements for language extensions or modifications or technology
+        improvements to meet our needs.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/anne-monceaux"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/anne-monceaux"/>
+        <swrc:keywords>system engineering</swrc:keywords>
+        <swrc:keywords>validation and verification</swrc:keywords>
+        <rdfs:label>Use case: ontology to support system verification process</rdfs:label>
+    </swc:Poster>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-5">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_5.pdf"/>
+        <swc:uuid>7aee3290-7a54-494c-ae5b-f892c298b144</swc:uuid>
+        <dc:title>Completing Description Logic Knowledge Bases using Formal Concept Analysis</dc:title>
+        <swrc:abstract>We propose an approach for extending both the terminological and the assertional
+        part of a Description Logic knowledge base by using information provided by the knowledge
+        base and by a domain expert. The use of techniques from Formal Concept Analysis ensures
+        that, on the one hand, the interaction with the expert is kept to a minimum, and, on the
+        other hand, we can show that the extended knowledge base is complete in a certain,
+        well-defined sense.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/franz-baader"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/bernhard-ganter"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/ulrike-sattler"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/baris-sertkaya"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/baris-sertkaya"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/franz-baader"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/bernhard-ganter"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/ulrike-sattler"/>
+        <swrc:keywords>Description Logics</swrc:keywords>
+        <swrc:keywords>Knowledge Base completion</swrc:keywords>
+        <rdfs:label>Completing Description Logic Knowledge Bases using Formal Concept Analysis</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-6">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_6.pdf"/>
+        <swc:uuid>a62de15d-d69f-4b3f-8557-3bbf3d6ef16d</swc:uuid>
+        <dc:title>Implementing an RDF/OWL Ontology on Henry the III Fine Rolls</dc:title>
+        <swrc:abstract>This paper will describe the creation of an ontology for information contained in
+        historical documents. It will describe the desired outcomes from the use of an ontology, and
+        how those outcomes were achieved due to the characteristics of RDF/OWL ontologies, thereby
+        facilitating the analysis of implicit and hidden information/associations existing in the
+        historical sources.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/jose-vieira"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/arianna-ciula"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/jose-vieira"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/arianna-ciula"/>
+        <swrc:keywords>Authority lists</swrc:keywords>
+        <swrc:keywords>Henry the III</swrc:keywords>
+        <swrc:keywords>Indices, Search</swrc:keywords>
+        <swrc:keywords>Ontology</swrc:keywords>
+        <swrc:keywords>RDF/OWL</swrc:keywords>
+        <rdfs:label>Implementing an RDF/OWL Ontology on Henry the III Fine Rolls</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-7">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_7.pdf"/>
+        <swc:uuid>dae2aee2-e295-4ce7-9122-2d3974a5b8ed</swc:uuid>
+        <dc:title>Experiences in Modeling Clinical Examinations in Oral Medicine Using OWL</dc:title>
+        <swrc:abstract>This article describes the modeling of clinical examinations in oral medicine using
+        OWL. Based on experiences from our previous work and knowledge model, requirements for an
+        ontology for examinations in oral medicine are identified. OWL can be used to address most,
+        but not all, of the requirements. We found a lack of guidance for several design choices and
+        for development of OWL ontologies at different levels of sophistication. However, using OWL
+        gives us the ability to come back and refine the knowledge model after initial deployment.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/marie-gustafsson"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/goeran-falkman"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/marie-gustafsson"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/goeran-falkman"/>
+        <swrc:keywords>experience report</swrc:keywords>
+        <swrc:keywords>health care</swrc:keywords>
+        <rdfs:label>Experiences in Modeling Clinical Examinations in Oral Medicine Using OWL</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-8">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_8.pdf"/>
+        <swc:uuid>fd9801da-c689-420e-a673-0541e269966d</swc:uuid>
+        <dc:title>Combining OWL with RCC for Spatioterminological Reasoning on Environmental Data</dc:title>
+        <swrc:abstract>A new approach to spatioterminological reasoning is presented which is based on a
+        hybrid knowledge representation system architecture and on a representation of the RCC
+        family tree in OWL. The knowledge base into which the family tree is imported holds role
+        assertions in terms of RCC-8 relations between individual regions. It is a key component of
+        a semantic layer constructed on top of an environmental database which aims at facilitating
+        access to users by supporting a sophisticated while easy-to-use search engine. Issues of
+        world assumption and spatial extension to OWL are discussed.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/rolf-gruetter"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/bettina-bauer-messmer"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/rolf-gruetter"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/bettina-bauer-messmer"/>
+        <swrc:keywords>Environmental Data</swrc:keywords>
+        <swrc:keywords>Knowledge Representation System</swrc:keywords>
+        <swrc:keywords>Region Connection Calculus (RCC)</swrc:keywords>
+        <swrc:keywords>Spatioterminological Reasoning</swrc:keywords>
+        <swrc:keywords>Web Ontology Language (OWL)</swrc:keywords>
+        <rdfs:label>Combining OWL with RCC for Spatioterminological Reasoning on Environmental Data</rdfs:label>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/owled/2007/paper-9">
+        <swrc:url rdf:resource="http://www.webont.org/owled/2007/PapersPDF/submission_9.pdf"/>
+        <swc:uuid>b86ebb36-629e-48d3-a76c-7f69e622f94a</swc:uuid>
+        <dc:title>Adding Integrity Constraints to OWL</dc:title>
+        <swrc:abstract>Schema statements in OWL are interpreted quite differently from analogous statements
+        in relational databases. If these statements are meant to be interpreted as integrity
+        constraints (ICs), OWL's interpretation may seem confusing and/or inappropriate.
+        Therefore, we propose an extension of OWL with ICs that captures the intuition behind ICs in
+        relational databases. We show that, if the constraints are satisfied, we can disregard them
+        while answering a broad range of positive queries.</swrc:abstract>
+
+		<swrc_ext:authorList rdf:parseType="Resource">
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/boris-motik"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/ian-horrocks"/>
+	        <rdf:li rdf:resource="http://data.semanticweb.org/person/ulrike-sattler"/>
+		</swrc_ext:authorList>
+
+
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/ian-horrocks"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/ulrike-sattler"/>
+        <foaf:maker rdf:resource="http://data.semanticweb.org/person/boris-motik"/>
+        <swrc:keywords>integrity constraints</swrc:keywords>
+        <swrc:keywords>relational databases</swrc:keywords>
+        <rdfs:label>Adding Integrity Constraints to OWL</rdfs:label>
+    </swrc:InProceedings>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marie-gustafsson">
+        <swc:affiliation>School of Humanities and Informatics, University of Skövde</swc:affiliation>
+        <rdfs:label>Marie Gustafsson</rdfs:label>
+        <family_name>Gustafsson</family_name>
+        <firstName>Marie</firstName>
+        <homepage rdf:resource="http://www.his.se/templates/vanligwebbsida2.aspx?id=12900"/>
+        <mbox_sha1sum>2c22a57f36fe795c4134f6f0d7444744ca1f6d2a</mbox_sha1sum>
+        <name>Marie Gustafsson</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/leo-obrst">
+        <swc:affiliation>The MITRE Corporation</swc:affiliation>
+        <rdfs:label>Leo Obrst</rdfs:label>
+        <family_name>Obrst</family_name>
+        <firstName>Leo</firstName>
+        <mbox_sha1sum>206849f07b39136bc7948f40da94c22ddb105c67</mbox_sha1sum>
+        <name>Leo Obrst</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/bernard-lefebvre">
+        <swc:affiliation>University of Quebec at Montreal (UQAM)</swc:affiliation>
+        <rdfs:label>Bernard Lefebvre</rdfs:label>
+        <family_name>Lefebvre</family_name>
+        <firstName>Bernard</firstName>
+        <mbox_sha1sum>459b5a773d2745851b2d7d9e9f4db147d9937acc</mbox_sha1sum>
+        <name>Bernard Lefebvre</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/antonella-poggi">
+        <swc:affiliation>Universita' degli Studi di Roma "La
+          Sapienza"</swc:affiliation>
+        <rdfs:label>Antonella Poggi</rdfs:label>
+        <family_name>Poggi</family_name>
+        <firstName>Antonella</firstName>
+        <homepage rdf:resource="http://www.dis.uniroma1.it/~poggi"/>
+        <mbox_sha1sum>6a7b607397ea962689065d633030c71a30314e2b</mbox_sha1sum>
+        <name>Antonella Poggi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/vladimir-kolovski">
+        <swc:affiliation>University of Maryland - College Park</swc:affiliation>
+        <rdfs:label>Vladimir Kolovski</rdfs:label>
+        <family_name>Kolovski</family_name>
+        <firstName>Vladimir</firstName>
+        <mbox_sha1sum>234a00b926b22394951aaa1e2715d87f9fbff257</mbox_sha1sum>
+        <name>Vladimir Kolovski</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/c-maria-keet">
+        <swc:affiliation>Faculty of Computer Science, Free University of Bozen-Bolzano,
+          Italy</swc:affiliation>
+        <rdfs:label>C. Maria Keet</rdfs:label>
+        <family_name>Keet</family_name>
+        <firstName>C. Maria</firstName>
+        <homepage rdf:resource="http://www.meteck.org"/>
+        <mbox_sha1sum>f5be6e79d032b7cbaa641a6603703bd38875b879</mbox_sha1sum>
+        <name>C. Maria Keet</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/catherine-dolbear">
+        <swc:affiliation>Ordnance Survey of Great Britain</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Catherine Dolbear</rdfs:label>
+        <family_name>Dolbear</family_name>
+        <firstName>Catherine</firstName>
+        <homepage rdf:resource="http://www.ordnancesurvey.co.uk/research"/>
+        <mbox_sha1sum>5c2c07a1bb0a0ce4c63fd62714ea306794cc68d4</mbox_sha1sum>
+        <name>Catherine Dolbear</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/john-goodwin">
+        <swc:affiliation>Ordnance Survey</swc:affiliation>
+        <rdfs:label>John Goodwin</rdfs:label>
+        <family_name>Goodwin</family_name>
+        <firstName>John</firstName>
+        <mbox_sha1sum>4e6e5f3e9ee7afb2826133bbc3c6695d19674cc4</mbox_sha1sum>
+        <name>John Goodwin</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/glen-hart">
+        <swc:affiliation>Ordnance Survey</swc:affiliation>
+        <rdfs:label>Glen Hart</rdfs:label>
+        <family_name>Hart</family_name>
+        <firstName>Glen</firstName>
+        <mbox_sha1sum>20e382d981f723a765ea9f9541b24b22aad4ab64</mbox_sha1sum>
+        <name>Glen Hart</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/thomas-meyer">
+        <swc:affiliation>National ICT Australia</swc:affiliation>
+        <rdfs:label>Thomas Meyer</rdfs:label>
+        <family_name>Meyer</family_name>
+        <firstName>Thomas</firstName>
+        <homepage rdf:resource="http://www.cse.unsw.edu.au/~tmeyer"/>
+        <mbox_sha1sum>d8fa884aa5fccaa4899bc1a18d7445f62ce24f80</mbox_sha1sum>
+        <name>Thomas Meyer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/margherita-sini">
+        <swc:affiliation>FAO</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Margherita Sini</rdfs:label>
+        <family_name>Sini</family_name>
+        <firstName>Margherita</firstName>
+        <homepage rdf:resource="http://www.fao.org/aims"/>
+        <mbox_sha1sum>9b19208a0c22c7dd8109e1019c9a582e3a4f5ead</mbox_sha1sum>
+        <name>Margherita Sini</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/guus-schreiber">
+        <swc:affiliation>Free University Amsterdam</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Guus Schreiber</rdfs:label>
+        <family_name>Schreiber</family_name>
+        <firstName>Guus</firstName>
+        <homepage rdf:resource="http://www.cs.vu.nl/~schreiber"/>
+        <name>Guus Schreiber</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/gary-ng">
+        <swc:affiliation>webMethods Inc.</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Gary Ng</rdfs:label>
+        <family_name>Ng</family_name>
+        <firstName>Gary</firstName>
+        <name>Gary Ng</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/diego-calvanese">
+        <swc:affiliation>Free University of Bozen-Bolzano</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Diego Calvanese</rdfs:label>
+        <family_name>Calvanese</family_name>
+        <firstName>Diego</firstName>
+        <homepage rdf:resource="http://www.inf.unibz.it/~calvanese"/>
+        <mbox_sha1sum>9f41f6f9767c215c484e883dfa80e694c03aef54</mbox_sha1sum>
+        <name>Diego Calvanese</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dean-allemang">
+        <swc:affiliation>TopQuadrant Inc</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Dean Allemang</rdfs:label>
+        <family_name>Allemang</family_name>
+        <firstName>Dean</firstName>
+        <name>Dean Allemang</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peter-fox">
+        <swc:affiliation>HAO/ESSL/NCAR</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Peter Fox</rdfs:label>
+        <family_name>Fox</family_name>
+        <firstName>Peter</firstName>
+        <homepage rdf:resource="http://vsto.hao.ucar.edu"/>
+        <mbox_sha1sum>a676c9b5ce702813c809999ef64acc5d806ef5bb</mbox_sha1sum>
+        <name>Peter Fox</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/domenico-lembo">
+        <swc:affiliation>DIS, Univ. di Roma "La Sapienza"</swc:affiliation>
+        <rdfs:label>Domenico Lembo</rdfs:label>
+        <family_name>Lembo</family_name>
+        <firstName>Domenico</firstName>
+        <homepage rdf:resource="http://www.dis.uniroma1.it/~lembo/"/>
+        <mbox_sha1sum>e1887aa6209c4bbb6f9d85966c81cb2e75cf3f15</mbox_sha1sum>
+        <name>Domenico Lembo</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/salvador-abreu">
+        <swc:affiliation>Universidade de Evora</swc:affiliation>
+        <rdfs:label>Salvador Abreu</rdfs:label>
+        <family_name>Abreu</family_name>
+        <firstName>Salvador</firstName>
+        <homepage rdf:resource="http://www.di.uevora.pt/~spa/"/>
+        <mbox_sha1sum>c5e68b174f12a402749e83a64f4e66bb8deeab6a</mbox_sha1sum>
+        <name>Salvador Abreu</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peter-haase">
+        <swc:affiliation>University of Karlsruhe</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Peter Haase</rdfs:label>
+        <family_name>Haase</family_name>
+        <firstName>Peter</firstName>
+        <homepage rdf:resource="http://www.aifb.uni-karlsruhe.de/WBS/pha/"/>
+        <name>Peter Haase</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peter-patel-schneider">
+        <swc:affiliation>Bell Labs Research</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Peter Patel-Schneider</rdfs:label>
+        <family_name>Patel-Schneider</family_name>
+        <firstName>Peter</firstName>
+        <name>Peter Patel-Schneider</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/amarnath-gupta">
+        <swc:affiliation>University of California, San Diego</swc:affiliation>
+        <rdfs:label>Amarnath Gupta</rdfs:label>
+        <family_name>Gupta</family_name>
+        <firstName>Amarnath</firstName>
+        <mbox_sha1sum>194f6b728392c4d45fb219714c86840e4f1be4f6</mbox_sha1sum>
+        <name>Amarnath Gupta</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/maurizio-lenzerini">
+        <swc:affiliation>Dipartimento di Informatica e Sistemistica, University of Rome "La
+            Sapienza"</swc:affiliation>
+        <rdfs:label>Maurizio Lenzerini</rdfs:label>
+        <family_name>Lenzerini</family_name>
+        <firstName>Maurizio</firstName>
+        <homepage rdf:resource="http://www.dis.uniroma1.it/~lenzerin/"/>
+        <mbox_sha1sum>c0a685e338e5489db87d8ef8e2594ae39bc15d17</mbox_sha1sum>
+        <name>Maurizio Lenzerini</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sean-bechhofer">
+        <swc:affiliation>University of Manchester</swc:affiliation>
+        <rdfs:label>Sean Bechhofer</rdfs:label>
+        <family_name>Bechhofer</family_name>
+        <firstName>Sean</firstName>
+        <homepage rdf:resource="http://www.cs.manchester.ac.uk"/>
+        <mbox_sha1sum>cdc01cde5b33382c60bdc4c0a68ca5c1736ec313</mbox_sha1sum>
+        <name>Sean Bechhofer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/pascal-hitzler">
+        <swc:affiliation>AIFB, University of Karlsruhe</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Pascal Hitzler</rdfs:label>
+        <family_name>Hitzler</family_name>
+        <firstName>Pascal</firstName>
+        <homepage rdf:resource="http://www.pascal-hitzler.de"/>
+        <name>Pascal Hitzler</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/vipul-kashyap">
+        <swc:affiliation>Partners Healthcare System</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Vipul Kashyap</rdfs:label>
+        <family_name>Kashyap</family_name>
+        <firstName>Vipul</firstName>
+        <homepage rdf:resource="http://www.partners.org/cird/AboutUs.asp?cBox=Staff&#38;stAb=vik"/>
+        <name>Vipul Kashyap</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/massimo-paolucci">
+        <swc:affiliation>DoCoMo Euro labs</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Massimo Paoluccci</rdfs:label>
+        <family_name>Paoluccci</family_name>
+        <firstName>Massimo</firstName>
+        <name>Massimo Paoluccci</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/steffen-staab">
+        <swc:affiliation>University of Koblenz-Landau</swc:affiliation>
+        <rdfs:label>Steffen Staab</rdfs:label>
+        <family_name>Staab</family_name>
+        <firstName>Steffen</firstName>
+        <homepage rdf:resource="http://isweb.uni-koblenz.de"/>
+        <mbox_sha1sum>ae8f32f31b69df2872d4c5d2e3bf21cf09cadf90</mbox_sha1sum>
+        <name>Steffen Staab</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/giorgos-stamou">
+        <swc:affiliation>National and Technical University of Athens</swc:affiliation>
+        <rdfs:label>Giorgos Stamou</rdfs:label>
+        <family_name>Stamou</family_name>
+        <firstName>Giorgos</firstName>
+        <mbox_sha1sum>b7609f15dcad931e9aee7b4d0ce9ffdbf8eb1184</mbox_sha1sum>
+        <name>Giorgos Stamou</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/robert-stevens">
+        <swc:affiliation>University of Manchester</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Robert Stevens</rdfs:label>
+        <family_name>Stevens</family_name>
+        <firstName>Robert</firstName>
+        <homepage rdf:resource="http://www.cs.man.ac.uk/~stevensr"/>
+        <name>Robert Stevens</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/anne-cregan">
+        <swc:affiliation>NICTA, UNSW</swc:affiliation>
+        <rdfs:label>Anne Cregan</rdfs:label>
+        <family_name>Cregan</family_name>
+        <firstName>Anne</firstName>
+        <homepage rdf:resource="http://www.cse.unsw.edu.au/~annec"/>
+        <mbox_sha1sum>535ba58e6a590d2c2958ac58d9ba83a801daaf5e</mbox_sha1sum>
+        <name>Anne Cregan</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ralf-moeller">
+        <swc:affiliation>Hamburg University of Technology</swc:affiliation>
+        <rdfs:label>Ralf Moeller</rdfs:label>
+        <family_name>Moeller</family_name>
+        <firstName>Ralf</firstName>
+        <homepage rdf:resource="http://www.sts.tu-harburg.de/~r.f.moeller/"/>
+        <mbox_sha1sum>cc0a3a9abb1f512360e8dfb19faf85e54f172c06</mbox_sha1sum>
+        <name>Ralf Moeller</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/simon-schenk">
+        <swc:affiliation>University of Koblenz-Landau</swc:affiliation>
+        <rdfs:label>Simon Schenk</rdfs:label>
+        <family_name>Schenk</family_name>
+        <firstName>Simon</firstName>
+        <homepage rdf:resource="http://www.uni-koblenz.de/~sschenk"/>
+        <mbox_sha1sum>14c0da3c553cc8f7866a2d0ee7d5797ee90026a2</mbox_sha1sum>
+        <name>Simon Schenk</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/deborah-mcguinness">
+        <swc:affiliation>Stanford University</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Deborah McGuinness</rdfs:label>
+        <family_name>McGuinness</family_name>
+        <firstName>Deborah</firstName>
+        <homepage rdf:resource="http://www.ksl.stanford.edu/people/dlm/"/>
+        <mbox_sha1sum>71ff9c05d8111e6a4bfcbd452a5c5579b24c39dc</mbox_sha1sum>
+        <name>Deborah McGuinness</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yevgeny-kazakov">
+        <swc:affiliation>University of Manchester</swc:affiliation>
+        <rdfs:label>Yevgeny Kazakov</rdfs:label>
+        <family_name>Kazakov</family_name>
+        <firstName>Yevgeny</firstName>
+        <homepage rdf:resource="http://www.cs.man.ac.uk/~ykazakov/"/>
+        <mbox_sha1sum>a27cb9defa1e319cc0db6edf9ad95b4ab65e2d80</mbox_sha1sum>
+        <name>Yevgeny Kazakov</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/aditya-kalyanpur">
+        <swc:affiliation>IBM TJ Watson Research Center</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Aditya Kalyanpur</rdfs:label>
+        <family_name>Kalyanpur</family_name>
+        <firstName>Aditya</firstName>
+        <name>Aditya Kalyanpur</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/fatiha-latfi">
+        <swc:affiliation>University of Quebec at Montreal (UQAM)</swc:affiliation>
+        <rdfs:label>Fatiha Latfi</rdfs:label>
+        <family_name>Latfi</family_name>
+        <firstName>Fatiha</firstName>
+        <homepage rdf:resource="http://www.dic.dinfo.uqam.ca/author/latfi.fatiha"/>
+        <mbox_sha1sum>c9358c300b51d1bee684a442b5694e7432affcab</mbox_sha1sum>
+        <name>Fatiha Latfi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/carsten-lutz">
+        <swc:affiliation>TU Dresden</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Carsten Lutz</rdfs:label>
+        <family_name>Lutz</family_name>
+        <firstName>Carsten</firstName>
+        <homepage rdf:resource="http://lat.inf.tu-dresden.de/~clu/"/>
+        <name>Carsten Lutz</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/giuseppe-de-giacomo">
+        <swc:affiliation>University of Roma "La Sapienza"</swc:affiliation>
+        <rdfs:label>Giuseppe De Giacomo</rdfs:label>
+        <family_name>De Giacomo</family_name>
+        <firstName>Giuseppe</firstName>
+        <homepage rdf:resource="http://www.dis.uniroma1.it/~degiacomo"/>
+        <mbox_sha1sum>3cf94eccca55ab0ebd77a50c180bdc41fbfb30cc</mbox_sha1sum>
+        <name>Giuseppe De Giacomo</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/bernardo-cuenca-grau">
+        <swc:affiliation>University of Manchester</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Bernardo Cuenca Grau</rdfs:label>
+        <family_name>Cuenca Grau</family_name>
+        <firstName>Bernardo</firstName>
+        <homepage rdf:resource="http://www.cs.man.ac.uk/~bcg"/>
+        <mbox_sha1sum>31ce1d07af5bff43eca72f66c86df49822c34d73</mbox_sha1sum>
+        <name>Bernardo Cuenca Grau</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/volker-haarslev">
+        <swc:affiliation>Concordia University</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Volker Haarslev</rdfs:label>
+        <family_name>Haarslev</family_name>
+        <firstName>Volker</firstName>
+        <homepage rdf:resource="http://www.cse.concordia.ca/~haarslev/"/>
+        <name>Volker Haarslev</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ian-horrocks">
+        <swc:affiliation>University of Manchester</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Ian Horrocks</rdfs:label>
+        <family_name>Horrocks</family_name>
+        <firstName>Ian</firstName>
+        <homepage rdf:resource="http://www.cs.man.ac.uk/~horrocks/"/>
+        <mbox_sha1sum>dfde0275a9cae0de57c25d97ee14fbca31359dd</mbox_sha1sum>
+        <name>Ian Horrocks</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/francesca-alessandra-lisi">
+        <swc:affiliation>Dipartimento di Informatica - Università degli Studi di Bari</swc:affiliation>
+        <rdfs:label>Francesca Alessandra Lisi</rdfs:label>
+        <family_name>Lisi</family_name>
+        <firstName>Francesca Alessandra</firstName>
+        <homepage rdf:resource="http://lacam.di.uniba.it:8000/people/lisi.htm"/>
+        <mbox_sha1sum>82657c852d69248417b8795e8e81298c554da83</mbox_sha1sum>
+        <name>Francesca Alessandra Lisi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ralf-moeller">
+        <swc:affiliation>Hamburg University of Technology</swc:affiliation>
+        <rdfs:label>Ralf Möller</rdfs:label>
+        <family_name>Möller</family_name>
+        <firstName>Ralf</firstName>
+        <homepage rdf:resource="http://www.sts.tu-harburg.de/~r.f.moeller/"/>
+        <mbox_sha1sum>733a0578fca44006bf1a26dc0a05176d9d05086a</mbox_sha1sum>
+        <name>Ralf Möller</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jeff-z-pan">
+        <swc:affiliation>University of Aberdeen</swc:affiliation>
+        <rdfs:label>Jeff Z. Pan</rdfs:label>
+        <family_name>Pan</family_name>
+        <firstName>Jeff Z.</firstName>
+        <homepage rdf:resource="http://www.csd.abdn.ac.uk/~jpan/"/>
+        <mbox_sha1sum>24b23425121f196eb8f9826538eac262f57cf66d</mbox_sha1sum>
+        <name>Jeff Z. Pan</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/riccardo-rosati">
+        <swc:affiliation>DIS, Universita Roma La Sapienza</swc:affiliation>
+        <swc:affiliation>DIS, Universita di Roma La Sapienza, Italy</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Riccardo Rosati</rdfs:label>
+        <family_name>Rosati</family_name>
+        <firstName>Riccardo</firstName>
+        <homepage rdf:resource="http://www.dis.uniroma1.it/~rosati"/>
+        <mbox_sha1sum>347c5f7b49d6802f343668845c30c5e610d28a7f</mbox_sha1sum>
+        <name>Riccardo Rosati</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ulrike-sattler">
+        <swc:affiliation>University of Manchester</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Ulrike Sattler</rdfs:label>
+        <family_name>Sattler</family_name>
+        <firstName>Ulrike</firstName>
+        <homepage rdf:resource="http://www.cs.man.ac.uk/~sattler/"/>
+        <mbox_sha1sum>263ccece2324c257d2b0c10a62c3233893cbae29</mbox_sha1sum>
+        <name>Ulrike Sattler</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/umberto-straccia">
+        <swc:affiliation>ISTI - Italian National Research Council</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Umberto Straccia</rdfs:label>
+        <family_name>Straccia</family_name>
+        <firstName>Umberto</firstName>
+        <homepage rdf:resource="http://gaia.isti.cnr.it/~straccia"/>
+        <name>Umberto Straccia</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/norbert-fuchs">
+        <swc:affiliation>University of Zurich</swc:affiliation>
+        <rdfs:label>Norbert Fuchs</rdfs:label>
+        <family_name>Fuchs</family_name>
+        <firstName>Norbert</firstName>
+        <homepage rdf:resource="http://www.ifi.unizh.ch/stff/fuchs/"/>
+        <mbox_sha1sum>66215b7e98ac8894daf7dd1d6d0160c97bdcfdd6</mbox_sha1sum>
+        <name>Norbert Fuchs</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alain-leger">
+        <swc:affiliation>France Telecom R&#38;D - Research</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Alain Léger</rdfs:label>
+        <family_name>Léger</family_name>
+        <firstName>Alain</firstName>
+        <homepage rdf:resource="http://www.francetelecom.com/en/"/>
+        <name>Alain Léger</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/raul-garcia-castro">
+        <swc:affiliation>Universidad Politecnica de Madrid</swc:affiliation>
+        <rdfs:label>Raul Garcia-Castro</rdfs:label>
+        <family_name>Garcia-Castro</family_name>
+        <firstName>Raul</firstName>
+        <homepage rdf:resource="http://delicias.dia.fi.upm.es/~rgarcia/"/>
+        <mbox_sha1sum>907b89a2b177f2730c2d6ab5c855331fb434d497</mbox_sha1sum>
+        <name>Raul Garcia-Castro</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/michael-wessel">
+        <swc:affiliation>TUHH</swc:affiliation>
+        <rdfs:label>Michael Wessel</rdfs:label>
+        <family_name>Wessel</family_name>
+        <firstName>Michael</firstName>
+        <homepage rdf:resource="http://www.sts.tu-harburg.de/~mi.wessel"/>
+        <mbox_sha1sum>bd38a31cd29506c8509bcc14eb667ea6aaa93211</mbox_sha1sum>
+        <name>Michael Wessel</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kaarel-kaljurand">
+        <swc:affiliation>University of Zurich</swc:affiliation>
+        <rdfs:label>Kaarel Kaljurand</rdfs:label>
+        <family_name>Kaljurand</family_name>
+        <firstName>Kaarel</firstName>
+        <homepage rdf:resource="http://www.ifi.unizh.ch/cl/kalju"/>
+        <mbox_sha1sum>4631d88ec588e303c267a698eef59f46b55af1a8</mbox_sha1sum>
+        <name>Kaarel Kaljurand</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/giorgos-stoilos">
+        <swc:affiliation>National and Technical University of Athens</swc:affiliation>
+        <rdfs:label>Giorgos Stoilos</rdfs:label>
+        <family_name>Stoilos</family_name>
+        <firstName>Giorgos</firstName>
+        <mbox_sha1sum>bccc3af684dc47522826944b0646170213c93b7e</mbox_sha1sum>
+        <name>Giorgos Stoilos</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/asuncion-gomez-perez">
+        <swc:affiliation>Ontology Engineering Group. Laboratorio de Inteligencia Artificial. Facultad
+            de Informática. Universidad Politécnica de Madrid.</swc:affiliation>
+        <rdfs:label>Asunción Gómez-Pérez</rdfs:label>
+        <family_name>Gómez-Pérez</family_name>
+        <firstName>Asunción</firstName>
+        <homepage rdf:resource="http://www.oeg-upm.net/"/>
+        <mbox_sha1sum>f929b4dab306ec656affc5136763b6fe14c2347e</mbox_sha1sum>
+        <name>Asunción Gómez-Pérez</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/thorsten-liebig">
+        <swc:affiliation>Ulm University</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Thorsten Liebig</rdfs:label>
+        <family_name>Liebig</family_name>
+        <firstName>Thorsten</firstName>
+        <mbox_sha1sum>71c41a8ce1fb1818ea77957054496cc009b16</mbox_sha1sum>
+        <name>Thorsten Liebig</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/rolf-schwitter">
+        <swc:affiliation>Macquarie University</swc:affiliation>
+        <rdfs:label>Rolf Schwitter</rdfs:label>
+        <family_name>Schwitter</family_name>
+        <firstName>Rolf</firstName>
+        <homepage rdf:resource="http://www.ics.mq.edu.au/~rolfs"/>
+        <mbox_sha1sum>caaeea5fd882364637f51939b4b1e35608208ae5</mbox_sha1sum>
+        <name>Rolf Schwitter</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/edward-thomas">
+        <swc:affiliation>University of Aberdeen</swc:affiliation>
+        <rdfs:label>Edward Thomas</rdfs:label>
+        <family_name>Thomas</family_name>
+        <firstName>Edward</firstName>
+        <mbox_sha1sum>5642a3afc4c64adc46bfa1a17f2424ff40c8f1a1</mbox_sha1sum>
+        <name>Edward Thomas</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/derek-sleeman">
+        <swc:affiliation>University of Aberdeen</swc:affiliation>
+        <rdfs:label>Derek Sleeman</rdfs:label>
+        <family_name>Sleeman</family_name>
+        <firstName>Derek</firstName>
+        <homepage rdf:resource="http://www.csd.abdn.ac.uk/people/homepage.php?userid=sleeman"/>
+        <mbox_sha1sum>1cd73eb0652a743c45c516199896d836449d050d</mbox_sha1sum>
+        <name>Derek Sleeman</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/olaf-noppens">
+        <swc:affiliation>Ulm University</swc:affiliation>
+        <rdfs:label>Olaf Noppens</rdfs:label>
+        <family_name>Noppens</family_name>
+        <firstName>Olaf</firstName>
+        <mbox_sha1sum>6dafd5b622d480aad741388de96508c484cc0efa</mbox_sha1sum>
+        <name>Olaf Noppens</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/timo-weithoener">
+        <swc:affiliation>Ulm University</swc:affiliation>
+        <rdfs:label>Timo Weithöner</rdfs:label>
+        <family_name>Weithöner</family_name>
+        <firstName>Timo</firstName>
+        <mbox_sha1sum>a2c210061307148415b8d84b39ccdaa5e97fecb4</mbox_sha1sum>
+        <name>Timo Weithöner</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marko-luther">
+        <swc:affiliation>DoCoMo Euro-Lab, Munich</swc:affiliation>
+        <rdfs:label>Marko Luther</rdfs:label>
+        <family_name>Luther</family_name>
+        <firstName>Marko</firstName>
+        <mbox_sha1sum>d11e1107ec730d5c1a95a7f100af961697de0f32</mbox_sha1sum>
+        <name>Marko Luther</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sebastian-boehm">
+        <swc:affiliation>DoCoMo Euro-Lab, Munich</swc:affiliation>
+        <rdfs:label>Sebastian Böhm</rdfs:label>
+        <family_name>Böhm</family_name>
+        <firstName>Sebastian</firstName>
+        <mbox_sha1sum>db5169ff9d4335a1ea9c10bd28fcae0a79b8e2f0</mbox_sha1sum>
+        <name>Sebastian Böhm</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/atila-kaya">
+        <swc:affiliation>Hamburg University of Technology</swc:affiliation>
+        <rdfs:label>Atila Kaya</rdfs:label>
+        <family_name>Kaya</family_name>
+        <firstName>Atila</firstName>
+        <homepage rdf:resource="http://www.sts.tu-harburg.de/~at.kaya/"/>
+        <mbox_sha1sum>9c48cc8355bdb03618fc84728e8fe27e9b7486bf</mbox_sha1sum>
+        <name>Atila Kaya</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alissa-kaplunova">
+        <swc:affiliation>Hamburg University of Technology</swc:affiliation>
+        <rdfs:label>Alissa Kaplunova</rdfs:label>
+        <family_name>Kaplunova</family_name>
+        <firstName>Alissa</firstName>
+        <homepage rdf:resource="http://www.sts.tu-harburg.de/~al.kaplunova/"/>
+        <mbox_sha1sum>6d51675772c278e8a510592b92a5bfe7b855a4db</mbox_sha1sum>
+        <name>Alissa Kaplunova</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/anand-ranganathan">
+        <swc:affiliation>IBM T.J. Watson Research Center</swc:affiliation>
+        <rdfs:label>Anand Ranganathan</rdfs:label>
+        <family_name>Ranganathan</family_name>
+        <firstName>Anand</firstName>
+        <mbox_sha1sum>7da50f3e414d824ec5ad79962bf74d9bf15d1305</mbox_sha1sum>
+        <name>Anand Ranganathan</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/boris-motik">
+        <swc:affiliation>University of Manchester</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Boris Motik</rdfs:label>
+        <family_name>Motik</family_name>
+        <firstName>Boris</firstName>
+        <homepage rdf:resource="http://www.cs.man.ac.uk/~bmotik/"/>
+        <mbox_sha1sum>64f80fd3c2d12a29acf55513175d7913522a22af</mbox_sha1sum>
+        <name>Boris Motik</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/joanne-luciano">
+        <swc:affiliation>Harvard Medical School</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Joanne Luciano</rdfs:label>
+        <family_name>Luciano</family_name>
+        <firstName>Joanne</firstName>
+        <homepage rdf:resource="http://arep.med.harvard.edu/~jluciano"/>
+        <name>Joanne Luciano</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/bijan-parsia">
+        <swc:affiliation>University of Manchester</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Bijan Parsia</rdfs:label>
+        <family_name>Parsia</family_name>
+        <firstName>Bijan</firstName>
+        <mbox_sha1sum>c9ef3edda6fd12cc1e9113217a75e5074e2ee80e</mbox_sha1sum>
+        <name>Bijan Parsia</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alan-ruttenberg">
+        <swc:affiliation>Science Commons</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Alan Ruttenberg</rdfs:label>
+        <family_name>Ruttenberg</family_name>
+        <firstName>Alan</firstName>
+        <homepage rdf:resource="http://neurocommons.org"/>
+        <mbox_sha1sum>f76d56f47b66d4de4b1db513c338604b8944b763</mbox_sha1sum>
+        <name>Alan Ruttenberg</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/suzette-stoutenburg">
+        <swc:affiliation>The MITRE Corporation</swc:affiliation>
+        <rdfs:label>Suzette Stoutenburg</rdfs:label>
+        <family_name>Stoutenburg</family_name>
+        <firstName>Suzette</firstName>
+        <mbox_sha1sum>9b7428977acb91a35fb4fe23a4686025d21e1a59</mbox_sha1sum>
+        <name>Suzette Stoutenburg</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/christine-golbreich">
+        <swc:affiliation>Université de Versailles</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Christine Golbreich</rdfs:label>
+        <family_name>Golbreich</family_name>
+        <firstName>Christine</firstName>
+        <homepage rdf:resource="http://www.med.univ-rennes1.fr/~cgolb/"/>
+        <mbox_sha1sum>5040b86fcd4f7fa0b645e20d358be0e522a3952</mbox_sha1sum>
+        <name>Christine Golbreich</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/pierre-mariot">
+        <swc:affiliation>Ardans</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Pierre Mariot</rdfs:label>
+        <family_name>Mariot</family_name>
+        <firstName>Pierre</firstName>
+        <homepage rdf:resource="http://www.ardans.com"/>
+        <mbox_sha1sum>676d18304634c9c41da311dc9b63f173aa53539d</mbox_sha1sum>
+        <name>Pierre Mariot</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jean-pierre-cotton">
+        <swc:affiliation>Ardans</swc:affiliation>
+        <rdfs:label>Jean-Pierre Cotton</rdfs:label>
+        <family_name>Cotton</family_name>
+        <firstName>Jean-Pierre</firstName>
+        <mbox_sha1sum>3e18ab933a184ee8551360ff484f0c335584e224</mbox_sha1sum>
+        <name>Jean-Pierre Cotton</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/michel-dumontier">
+        <swc:affiliation>Carleton University</swc:affiliation>
+        <rdfs:label>Michel Dumontier</rdfs:label>
+        <family_name>Dumontier</family_name>
+        <firstName>Michel</firstName>
+        <homepage rdf:resource="http://dumontierlab.com"/>
+        <mbox_sha1sum>5e77a59ef110b7f85b3e1c2feb28b3d1c26b870b</mbox_sha1sum>
+        <name>Michel Dumontier</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/chris-mungall">
+        <swc:affiliation>Lawrence Berkeley National Laboratory</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Chris Mungall</rdfs:label>
+        <family_name>Mungall</family_name>
+        <firstName>Chris</firstName>
+        <homepage rdf:resource="http://www.berkeleybop.org"/>
+        <mbox_sha1sum>2b13689dc882a96339cd5542f11348370c387749</mbox_sha1sum>
+        <name>Chris Mungall</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/rinke-hoekstra">
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Rinke Hoekstra</rdfs:label>
+        <family_name>Hoekstra</family_name>
+        <firstName>Rinke</firstName>
+        <homepage rdf:resource="http://www.leibnizcenter.org/users/rinke"/>
+        <name>Rinke Hoekstra</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/francois-marie-lesaffre">
+        <swc:affiliation>Arcelor</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>François-Marie Lesaffre</rdfs:label>
+        <rdfs:label>fm lesaffre</rdfs:label>
+        <family_name>Lesaffre</family_name>
+        <family_name>lesaffre</family_name>
+        <firstName>François-Marie</firstName>
+        <firstName>fm</firstName>
+        <mbox_sha1sum>83540ed1c5eb57353580be332c2369ad6fcc22cd</mbox_sha1sum>
+        <name>François-Marie Lesaffre</name>
+        <name>fm lesaffre</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/maryann-martone">
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Maryann Martone</rdfs:label>
+        <family_name>Martone</family_name>
+        <firstName>Maryann</firstName>
+        <name>Maryann Martone</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/anne-monceaux">
+        <swc:affiliation>EADS-France</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Anne Monceaux</rdfs:label>
+        <family_name>Monceaux</family_name>
+        <firstName>Anne</firstName>
+        <mbox_sha1sum>6a6d6f1c574a3685eeae1a9a56779f3db6094a2f</mbox_sha1sum>
+        <name>Anne Monceaux</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/daniel-oberle">
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Daniel Oberle</rdfs:label>
+        <family_name>Oberle</family_name>
+        <firstName>Daniel</firstName>
+        <name>Daniel Oberle</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/francois-paul-servant">
+        <swc:affiliation>Renault</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>François-Paul Servant</rdfs:label>
+        <family_name>Servant</family_name>
+        <firstName>François-Paul</firstName>
+        <mbox_sha1sum>f613cf44e21e51a62dfc80f2cd31cdba09c5fdcf</mbox_sha1sum>
+        <name>François-Paul Servant</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kent-spackman">
+        <swc:affiliation>Oregon Health and Science University</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Kent Spackman</rdfs:label>
+        <family_name>Spackman</family_name>
+        <firstName>Kent</firstName>
+        <mbox_sha1sum>fa531c95e3f365bb0279f99a6c405d179c87898</mbox_sha1sum>
+        <name>Kent Spackman</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/hans-teijgeler">
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Hans Teijgeler</rdfs:label>
+        <family_name>Teijgeler</family_name>
+        <firstName>Hans</firstName>
+        <homepage rdf:resource="http://www.InfowebML.ws"/>
+        <name>Hans Teijgeler</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yann-loyer">
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Yann Loyer</rdfs:label>
+        <family_name>Loyer</family_name>
+        <firstName>Yann</firstName>
+        <name>Yann Loyer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/daniel-rubin">
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Daniel Rubin</rdfs:label>
+        <family_name>Rubin</family_name>
+        <firstName>Daniel</firstName>
+        <homepage rdf:resource="http://rubin.web.stanford.edu"/>
+        <name>Daniel Rubin</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/rob-shearer">
+        <swc:affiliation>University of Manchester</swc:affiliation>
+        <rdfs:label>Rob Shearer</rdfs:label>
+        <family_name>Shearer</family_name>
+        <firstName>Rob</firstName>
+        <mbox_sha1sum>5864f77182d9326ba37e42de3ba32e9a4a82f37b</mbox_sha1sum>
+        <name>Rob Shearer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/claudio-fernandes">
+        <swc:affiliation>Universidade de Évora</swc:affiliation>
+        <rdfs:label>Cláudio Fernandes</rdfs:label>
+        <family_name>Fernandes</family_name>
+        <firstName>Cláudio</firstName>
+        <mbox_sha1sum>2a2ce0df0320724461d20fefc6beb8e51c46ec31</mbox_sha1sum>
+        <name>Cláudio Fernandes</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/stephen-larson">
+        <swc:affiliation>UCSD</swc:affiliation>
+        <rdfs:label>Stephen Larson</rdfs:label>
+        <family_name>Larson</family_name>
+        <firstName>Stephen</firstName>
+        <mbox_sha1sum>41d808ee81079e907032113dda766ea953ae0395</mbox_sha1sum>
+        <name>Stephen Larson</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marco-ruzzi">
+        <swc:affiliation>DIS, Univ. di Roma "La Sapienza"</swc:affiliation>
+        <rdfs:label>Marco Ruzzi</rdfs:label>
+        <family_name>Ruzzi</family_name>
+        <firstName>Marco</firstName>
+        <homepage rdf:resource="http://www.dis.uniroma1.it/~ruzzi/"/>
+        <mbox_sha1sum>78157ae6c233202f8c1bf40809b6843c3f6af793</mbox_sha1sum>
+        <name>Marco Ruzzi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/maryann-martone">
+        <swc:affiliation>University of California, San Diego</swc:affiliation>
+        <rdfs:label>Maryann Martone</rdfs:label>
+        <family_name>Martone</family_name>
+        <firstName>Maryann</firstName>
+        <homepage rdf:resource="http://ncmir.ucsd.edu"/>
+        <mbox_sha1sum>9f6442f3e5f3e9715dc72743aa5cfd7fdd385f90</mbox_sha1sum>
+        <name>Maryann Martone</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/evren-sirin">
+        <swc:affiliation>Clark &#38; Parsia, LLC</swc:affiliation>
+        <rdfs:label>Evren Sirin</rdfs:label>
+        <family_name>Sirin</family_name>
+        <firstName>Evren</firstName>
+        <mbox_sha1sum>199129950aa1a391f5e9ca3fce00a2e4c17f678c</mbox_sha1sum>
+        <name>Evren Sirin</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/henson-graves">
+        <swc:affiliation>Lockheed Martin Aeronautics Company</swc:affiliation>
+        <rdfs:label>Henson Graves</rdfs:label>
+        <family_name>Graves</family_name>
+        <firstName>Henson</firstName>
+        <mbox_sha1sum>a669e55391b1be4fe32088c056d0d3f933fbc5cb</mbox_sha1sum>
+        <name>Henson Graves</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jose-vieira">
+        <swc:affiliation>Centre for Computing in the Humanities, King's College
+          London</swc:affiliation>
+        <rdfs:label>Jose Vieira</rdfs:label>
+        <family_name>Vieira</family_name>
+        <firstName>Jose</firstName>
+        <mbox_sha1sum>2cc90f4854e8445da94f0556f9b1f7d73cdcb57e</mbox_sha1sum>
+        <name>Jose Vieira</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/brian-lowe">
+        <swc:affiliation>Cornell University - Albert R. Mann Library</swc:affiliation>
+        <rdfs:label>Brian Lowe</rdfs:label>
+        <family_name>Lowe</family_name>
+        <firstName>Brian</firstName>
+        <mbox_sha1sum>c47d50aeb176682b56c0d41d71817d4e07ba665c</mbox_sha1sum>
+        <name>Brian Lowe</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/william-bug">
+        <swc:affiliation>Drexel University College of Medicine</swc:affiliation>
+        <rdfs:label>William Bug</rdfs:label>
+        <family_name>Bug</family_name>
+        <firstName>William</firstName>
+        <mbox_sha1sum>fcd2c41594131ace5b825f459547636f64f5a3b3</mbox_sha1sum>
+        <name>William Bug</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/rolf-gruetter">
+        <swc:affiliation>Swiss Federal Institute for Forest, Snow and Landscape Research, An Institute
+            of the ETH Board</swc:affiliation>
+        <rdfs:label>Rolf Grütter</rdfs:label>
+        <family_name>Grütter</family_name>
+        <firstName>Rolf</firstName>
+        <mbox_sha1sum>ebfcf3b9138cbb5c13a3511f20f055b3cecaa63f</mbox_sha1sum>
+        <name>Rolf Grütter</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/bettina-bauer-messmer">
+        <swc:affiliation>Swiss Federal Institute for Forest, Snow and Landscape Research, An Institute
+            of the ETH Board</swc:affiliation>
+        <rdfs:label>Bettina Bauer-Messmer</rdfs:label>
+        <family_name>Bauer-Messmer</family_name>
+        <firstName>Bettina</firstName>
+        <homepage rdf:resource="http://www.wsl.ch"/>
+        <mbox_sha1sum>dfeb0eb063045e27bd64fe020ec94d7a5a1f7fab</mbox_sha1sum>
+        <name>Bettina Bauer-Messmer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/deborah-nichols">
+        <swc:affiliation>The MITRE Corporation</swc:affiliation>
+        <rdfs:label>Deborah Nichols</rdfs:label>
+        <family_name>Nichols</family_name>
+        <firstName>Deborah</firstName>
+        <mbox_sha1sum>67bd9dce12b6daa4fb832ae6a9dbcaaa92e4c631</mbox_sha1sum>
+        <name>Deborah Nichols</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/natalia-villanueva-rosales">
+        <swc:affiliation>Carleton University</swc:affiliation>
+        <rdfs:label>Natalia Villanueva-Rosales</rdfs:label>
+        <family_name>Villanueva-Rosales</family_name>
+        <firstName>Natalia</firstName>
+        <mbox_sha1sum>400d5c30994b54b61d985b95a119490b0d5a27f</mbox_sha1sum>
+        <name>Natalia Villanueva-Rosales</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alexander-kubias">
+        <swc:affiliation>University of Koblenz-Landau</swc:affiliation>
+        <rdfs:label>Alexander Kubias</rdfs:label>
+        <family_name>Kubias</family_name>
+        <firstName>Alexander</firstName>
+        <homepage rdf:resource="http://www.uni-koblenz.de/~kubias"/>
+        <mbox_sha1sum>8f4d9d5ce94a5037eb58893fe59fdc09e5ffba08</mbox_sha1sum>
+        <name>Alexander Kubias</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/baris-sertkaya">
+        <swc:affiliation>TU Dresden</swc:affiliation>
+        <rdfs:label>Baris Sertkaya</rdfs:label>
+        <family_name>Sertkaya</family_name>
+        <firstName>Baris</firstName>
+        <homepage rdf:resource="http://wwwtcs.inf.tu-dresden.de/~sertkaya"/>
+        <mbox_sha1sum>a0f1824aef4088cc8bfa0ae84a8d41a1ebd1a128</mbox_sha1sum>
+        <name>Baris Sertkaya</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/franz-baader">
+        <swc:affiliation>TU Dresden</swc:affiliation>
+        <rdfs:label>Franz Baader</rdfs:label>
+        <family_name>Baader</family_name>
+        <firstName>Franz</firstName>
+        <name>Franz Baader</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/bernhard-ganter">
+        <swc:affiliation>TU Dresden</swc:affiliation>
+        <rdfs:label>Bernhard Ganter</rdfs:label>
+        <family_name>Ganter</family_name>
+        <firstName>Bernhard</firstName>
+        <name>Bernhard Ganter</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ulrike-sattler">
+        <swc:affiliation>The University of Manchester</swc:affiliation>
+        <rdfs:label>Ulrike Sattler</rdfs:label>
+        <family_name>Sattler</family_name>
+        <firstName>Ulrike</firstName>
+        <name>Ulrike Sattler</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/arianna-ciula">
+        <swc:affiliation>Centre for Computing in the Humanities, King's College
+          London</swc:affiliation>
+        <rdfs:label>Arianna Ciula</rdfs:label>
+        <family_name>Ciula</family_name>
+        <firstName>Arianna</firstName>
+        <mbox_sha1sum>4cdba2ed9499e2241417802aaaccfd508c495bb9</mbox_sha1sum>
+        <name>Arianna Ciula</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/susie-stephens">
+        <swc:affiliation>Oracle</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Susie Stephens</rdfs:label>
+        <family_name>Stephens</family_name>
+        <firstName>Susie</firstName>
+        <name>Susie Stephens</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/goeran-falkman">
+        <swc:affiliation>School of Humanities and Informatics, University of Skövde</swc:affiliation>
+        <rdfs:label>Göran Falkman</rdfs:label>
+        <family_name>Falkman</family_name>
+        <firstName>Göran</firstName>
+        <homepage rdf:resource="http://www.his.se/templates/vanligwebbsida2.aspx?id=8981"/>
+        <mbox_sha1sum>eb60b7b3a7b175972b9a4c5b1cc21642654e75fa</mbox_sha1sum>
+        <name>Göran Falkman</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jesus-prieto-gonzalez">
+        <swc:affiliation>Universidad Politecnica de Madrid</swc:affiliation>
+        <rdfs:label>Jesus Prieto-Gonzalez</rdfs:label>
+        <family_name>Prieto-Gonzalez</family_name>
+        <firstName>Jesus</firstName>
+        <mbox_sha1sum>61eeb97941992c937f7c2eda04d40a8aadaadee5</mbox_sha1sum>
+        <name>Jesus Prieto-Gonzalez</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/julia-dmitrieva">
+        <swc:affiliation>LIACS, Universiteit Leiden, Imaging and Bioinformatics</swc:affiliation>
+        <rdfs:label>Julia Dmitrieva</rdfs:label>
+        <family_name>Dmitrieva</family_name>
+        <firstName>Julia</firstName>
+        <mbox_sha1sum>4b3571c8febfe894f979a73c44175b59d517e593</mbox_sha1sum>
+        <name>Julia Dmitrieva</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yun-bei">
+        <swc:affiliation>LIACS, Universiteit Leiden, Imaging and Bioinformatics</swc:affiliation>
+        <rdfs:label>Yun Bei</rdfs:label>
+        <family_name>Bei</family_name>
+        <firstName>Yun</firstName>
+        <mbox_sha1sum>30cc20d35e3db2dc31ee45232c031d827c325f9a</mbox_sha1sum>
+        <name>Yun Bei</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/fons-j-verbeek">
+        <swc:affiliation>LIACS, Universiteit Leiden, Imaging and Bioinformatics</swc:affiliation>
+        <rdfs:label>Fons J. Verbeek</rdfs:label>
+        <family_name>Verbeek</family_name>
+        <firstName>Fons J.</firstName>
+        <homepage rdf:resource="http://bio-imaging.liacs.nl/"/>
+        <mbox_sha1sum>3d4ed641df16f9b31dd9f2e7d040229c98108984</mbox_sha1sum>
+        <name>Fons J. Verbeek</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/michael-smith">
+        <swc:affiliation>Clark &#38; Parsia LLC</swc:affiliation>
+        <rdfs:label>Michael Smith</rdfs:label>
+        <family_name>Smith</family_name>
+        <firstName>Michael</firstName>
+        <mbox_sha1sum>6a51753815324c6f2b91e234ff65a6e957cf8053</mbox_sha1sum>
+        <name>Michael Smith</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andrew-schain">
+        <swc:affiliation>NASA Headquarters</swc:affiliation>
+        <rdfs:label>Andrew Schain</rdfs:label>
+        <family_name>Schain</family_name>
+        <firstName>Andrew</firstName>
+        <mbox_sha1sum>4c52f4a4b252bccc5753256d0d7b5817a8eb6824</mbox_sha1sum>
+        <name>Andrew Schain</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kendall-clark">
+        <swc:affiliation>Clark &#38; Parsia LLC</swc:affiliation>
+        <swc:affiliation>ClarkParsia LLC</swc:affiliation>
+        <swc:holdsRole rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember"/>
+            <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/owled/2007"/>
+        </swc:holdsRole>
+        <rdfs:label>Kendall Clark</rdfs:label>
+        <family_name>Clark</family_name>
+        <firstName>Kendall</firstName>
+        <mbox_sha1sum>1cde8114566a4ec3c99aeee2aab07bebf5cdc768</mbox_sha1sum>
+        <name>Kendall Clark</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/arlen-griffey">
+        <swc:affiliation>NASA Shared Services Center</swc:affiliation>
+        <rdfs:label>Arlen Griffey</rdfs:label>
+        <family_name>Griffey</family_name>
+        <firstName>Arlen</firstName>
+        <mbox_sha1sum>5035247e138bf7f95c6154017fab644434434f2b</mbox_sha1sum>
+        <name>Arlen Griffey</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/brian-caruso">
+        <swc:affiliation>Cornell University - Albert R. Mann Library</swc:affiliation>
+        <rdfs:label>Brian Caruso</rdfs:label>
+        <family_name>Caruso</family_name>
+        <firstName>Brian</firstName>
+        <mbox_sha1sum>a0274dc07496737028567890e88ab2ae569995e9</mbox_sha1sum>
+        <name>Brian Caruso</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jon-corson-rikert">
+        <swc:affiliation>Cornell University - Albert R. Mann Library</swc:affiliation>
+        <rdfs:label>Jon Corson-Rikert</rdfs:label>
+        <family_name>Corson-Rikert</family_name>
+        <firstName>Jon</firstName>
+        <homepage rdf:resource="http://www.mannlib.cornell.edu"/>
+        <mbox_sha1sum>b838e2f93c7a4f2fb31143f5f0d04aaa7ea6ab0d</mbox_sha1sum>
+        <name>Jon Corson-Rikert</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marco-roos">
+        <swc:affiliation>Faculty of Science, University of Amsterdam</swc:affiliation>
+        <rdfs:label>Marco Roos</rdfs:label>
+        <family_name>Roos</family_name>
+        <firstName>Marco</firstName>
+        <homepage rdf:resource="http://home.medewerker.uva.nl/m.roos1/"/>
+        <mbox_sha1sum>738a452bd0e553ca7607f3b07e83711bd293dab3</mbox_sha1sum>
+        <name>Marco Roos</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nuno-lopes">
+        <swc:affiliation>Universidade de Evora</swc:affiliation>
+        <rdfs:label>Nuno Lopes</rdfs:label>
+        <family_name>Lopes</family_name>
+        <firstName>Nuno</firstName>
+        <mbox_sha1sum>4fd379871467c6183d959f33769f1fa9f70f0f29</mbox_sha1sum>
+        <name>Nuno Lopes</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/martins-barinskis">
+        <swc:affiliation>Institute of Mathematics and Computer Sience, University of
+          Latvia</swc:affiliation>
+        <rdfs:label>Martins Barinskis</rdfs:label>
+        <family_name>Barinskis</family_name>
+        <firstName>Martins</firstName>
+        <mbox_sha1sum>ecffe9789166f35262c921e5c2f5b9e02f5b1be3</mbox_sha1sum>
+        <name>Martins Barinskis</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/guntis-barzdins">
+        <swc:affiliation>Institute of Mathematics and Computer Sience, University of
+          Latvia</swc:affiliation>
+        <rdfs:label>Guntis Barzdins</rdfs:label>
+        <family_name>Barzdins</family_name>
+        <firstName>Guntis</firstName>
+        <mbox_sha1sum>780ead373cdfa9fd55f7e1f600fb4a8e27ffa4de</mbox_sha1sum>
+        <name>Guntis Barzdins</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/m-scott-marshall">
+        <swc:affiliation>Faculty of Science, University of Amsterdam</swc:affiliation>
+        <rdfs:label>M. Scott Marshall</rdfs:label>
+        <family_name>Marshall</family_name>
+        <firstName>M. Scott</firstName>
+        <homepage rdf:resource="http://staff.science.uva.nl/~marshall"/>
+        <mbox_sha1sum>21d293659851deba051fd9b6114df6db6e85b4a8</mbox_sha1sum>
+        <name>M. Scott Marshall</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/tobias-berger">
+        <swc:affiliation>Hamburg University of Technology</swc:affiliation>
+        <rdfs:label>Tobias Berger</rdfs:label>
+        <family_name>Berger</family_name>
+        <firstName>Tobias</firstName>
+        <mbox_sha1sum>b75a06b2b8664b925d3f7b6560ef4876e992c35d</mbox_sha1sum>
+        <name>Tobias Berger</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/matthew-horridge">
+        <swc:affiliation>The University of Manchester</swc:affiliation>
+        <rdfs:label>Matthew Horridge</rdfs:label>
+        <family_name>Horridge</family_name>
+        <firstName>Matthew</firstName>
+        <homepage rdf:resource="http://www.cs.man.ac.uk/~horridgm"/>
+        <mbox_sha1sum>438beea172aa101432d81db30da3a87db30e1dc1</mbox_sha1sum>
+        <name>Matthew Horridge</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/celine-descheneaux">
+        <swc:affiliation>University of Sherbrooke</swc:affiliation>
+        <rdfs:label>Celine Descheneaux</rdfs:label>
+        <family_name>Descheneaux</family_name>
+        <firstName>Celine</firstName>
+        <mbox_sha1sum>b4e0e2f18e612eff95b352f8b1e30da92574bce2</mbox_sha1sum>
+        <name>Celine Descheneaux</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/zhen-liu">
+        <swc:affiliation>IBM T.J. Watson Research Center</swc:affiliation>
+        <rdfs:label>Zhen Liu</rdfs:label>
+        <family_name>Liu</family_name>
+        <firstName>Zhen</firstName>
+        <name>Zhen Liu</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/anton-riabov">
+        <swc:affiliation>IBM T.J. Watson Research Center</swc:affiliation>
+        <rdfs:label>Anton Riabov</rdfs:label>
+        <family_name>Riabov</family_name>
+        <firstName>Anton</firstName>
+        <name>Anton Riabov</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/lisa-fong">
+        <swc:affiliation>UCSD</swc:affiliation>
+        <rdfs:label>Lisa Fong</rdfs:label>
+        <family_name>Fong</family_name>
+        <firstName>Lisa</firstName>
+        <mbox_sha1sum>3bfd962b17eec6070ecc230843cec6fd17aafa19</mbox_sha1sum>
+        <name>Lisa Fong</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/christopher-condit">
+        <swc:affiliation>SDSC-UCSD</swc:affiliation>
+        <rdfs:label>Christopher Condit</rdfs:label>
+        <family_name>Condit</family_name>
+        <firstName>Christopher</firstName>
+        <mbox_sha1sum>c8f7dab0cfd19b77b9768b40f60ea467633291ce</mbox_sha1sum>
+        <name>Christopher Condit</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/li-chen">
+        <swc:affiliation>SDSC-UCSD</swc:affiliation>
+        <rdfs:label>Li Chen</rdfs:label>
+        <family_name>Chen</family_name>
+        <firstName>Li</firstName>
+        <mbox_sha1sum>74e26634f8f505945e54fdcd30ce075b26ecec5b</mbox_sha1sum>
+        <name>Li Chen</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ruth-west">
+        <swc:affiliation>UCSD</swc:affiliation>
+        <rdfs:label>Ruth West</rdfs:label>
+        <family_name>West</family_name>
+        <firstName>Ruth</firstName>
+        <mbox_sha1sum>d30debf69c9a529194e267e217aafeac80a493db</mbox_sha1sum>
+        <name>Ruth West</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/stephan-lamont">
+        <swc:affiliation>UCSD</swc:affiliation>
+        <rdfs:label>Stephan Lamont</rdfs:label>
+        <family_name>Lamont</family_name>
+        <firstName>Stephan</firstName>
+        <mbox_sha1sum>436049a26a210b5cec1b84ff4a27e7443353b6fa</mbox_sha1sum>
+        <name>Stephan Lamont</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/masako-terada">
+        <swc:affiliation>UCSD</swc:affiliation>
+        <rdfs:label>Masako Terada</rdfs:label>
+        <family_name>Terada</family_name>
+        <firstName>Masako</firstName>
+        <mbox_sha1sum>b055ca35066885eaa290c57d08d0b65512d7170b</mbox_sha1sum>
+        <name>Masako Terada</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alain-berger">
+        <swc:affiliation>Ardans</swc:affiliation>
+        <rdfs:label>Alain Berger</rdfs:label>
+        <family_name>Berger</family_name>
+        <firstName>Alain</firstName>
+        <homepage rdf:resource="http://www.ardans.com"/>
+        <mbox_sha1sum>1f42a64a33d28caadbc72cd420de95e4c4766772</mbox_sha1sum>
+        <name>Alain Berger</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/francois-vexler">
+        <swc:affiliation>Ardans</swc:affiliation>
+        <rdfs:label>François Vexler</rdfs:label>
+        <family_name>Vexler</family_name>
+        <firstName>François</firstName>
+        <homepage rdf:resource="http://www.ardans.com"/>
+        <mbox_sha1sum>9634f35c796aa2b7d022477b606d7aadab94553a</mbox_sha1sum>
+        <name>François Vexler</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/caterina-caracciolo">
+        <swc:affiliation>FAO</swc:affiliation>
+        <rdfs:label>Caterina Caracciolo</rdfs:label>
+        <family_name>Caracciolo</family_name>
+        <firstName>Caterina</firstName>
+        <mbox_sha1sum>9fe6cf5f741c0ee9a61035531b2b9d1687ded4a8</mbox_sha1sum>
+        <name>Caterina Caracciolo</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/mariano-rodriguez">
+        <swc:affiliation>Free University of Bozen-Bolzano</swc:affiliation>
+        <rdfs:label>Mariano Rodriguez</rdfs:label>
+        <family_name>Rodriguez</family_name>
+        <firstName>Mariano</firstName>
+        <mbox_sha1sum>9834233dbc9d00654ac36e085f897a38c1a88df3</mbox_sha1sum>
+        <name>Mariano Rodriguez</name>
+    </Person>
+
+    <owl:Ontology rdf:about="http://data.semanticweb.org/ns/swc/ontology">
+    </owl:Ontology>
+
+    <owl:Thing rdf:about="http://dbpedia.org/page/Innsbruck">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://delicias.dia.fi.upm.es/~rgarcia/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://dumontierlab.com">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://gaia.isti.cnr.it/~straccia">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://home.medewerker.uva.nl/m.roos1/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://isweb.uni-koblenz.de">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://lacam.di.uniba.it:8000/people/lisi.htm">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://lat.inf.tu-dresden.de/~clu/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://ncmir.ucsd.edu">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://neurocommons.org">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://rubin.web.stanford.edu">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://staff.science.uva.nl/~marshall">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://vsto.hao.ucar.edu">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.InfowebML.ws">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.aifb.uni-karlsruhe.de/WBS/pha/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.ardans.com">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.berkeleybop.org">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cs.man.ac.uk/~bcg">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cs.man.ac.uk/~bmotik/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cs.man.ac.uk/~horridgm">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cs.man.ac.uk/~horrocks/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cs.man.ac.uk/~sattler/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cs.man.ac.uk/~stevensr">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cs.man.ac.uk/~ykazakov/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cs.manchester.ac.uk">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cs.vu.nl/~schreiber">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.csd.abdn.ac.uk/people/homepage.php?userid=sleeman">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.csd.abdn.ac.uk/~jpan/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cse.concordia.ca/~haarslev/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cse.unsw.edu.au/~annec">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.cse.unsw.edu.au/~tmeyer">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.di.uevora.pt/~spa/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.dic.dinfo.uqam.ca/author/latfi.fatiha">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.dis.uniroma1.it/~degiacomo">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.dis.uniroma1.it/~lembo/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.dis.uniroma1.it/~lenzerin/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.dis.uniroma1.it/~poggi">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.dis.uniroma1.it/~rosati">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.dis.uniroma1.it/~ruzzi/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.fao.org/aims">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.francetelecom.com/en/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.his.se/templates/vanligwebbsida2.aspx?id=12900">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.his.se/templates/vanligwebbsida2.aspx?id=8981">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.ics.mq.edu.au/~rolfs">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.ifi.unizh.ch/cl/kalju">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.ifi.unizh.ch/stff/fuchs/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.inf.unibz.it/~calvanese">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.ksl.stanford.edu/people/dlm/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.leibnizcenter.org/users/rinke">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.mannlib.cornell.edu">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.med.univ-rennes1.fr/~cgolb/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.meteck.org">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.oeg-upm.net/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.ordnancesurvey.co.uk/research">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.partners.org/cird/AboutUs.asp?cBox=Staff&#38;stAb=vik">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.pascal-hitzler.de">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.sts.tu-harburg.de/~al.kaplunova/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.sts.tu-harburg.de/~at.kaya/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.sts.tu-harburg.de/~mi.wessel">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.sts.tu-harburg.de/~r.f.moeller/">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.uni-koblenz.de/~kubias">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.uni-koblenz.de/~sschenk">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://www.wsl.ch">
+    </owl:Thing>
+
+    <owl:Thing rdf:about="http://wwwtcs.inf.tu-dresden.de/~sertkaya">
+    </owl:Thing>
+</rdf:RDF>

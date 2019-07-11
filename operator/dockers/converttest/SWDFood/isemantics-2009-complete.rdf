@@ -1,0 +1,2574 @@
+
+<!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
+<!--     using base file:///Users/knud/Projekte/dogfood-svn/event-conversions/isemantics2009/output-isemantics2010-conference-data.rdf-->
+
+
+<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:ical="http://www.w3.org/2002/12/cal/ical#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swc="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:swrc="http://swrc.ontoware.org/ontology#">
+
+    <swc:ConferenceEvent rdf:about="http://data.semanticweb.org/conference/isemantics/2009">
+        <swc:completeGraph rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/complete"/>
+        <swc:hasAcronym>I-Semantics 2009</swc:hasAcronym>
+        <swc:hasLogo rdf:resource="http://i-semantics.tugraz.at/wp-content/themes/i-know/images/logo_i-semantics.png"/>
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/chair/organisingcommitteemember"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <rdfs:label>5th International Conference on Semantic Systems</rdfs:label>
+        <ical:dtend rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/end_date"/>
+        <ical:dtstart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/start_date"/>
+        <ical:url rdf:resource="http://i-semantics09.tugraz.at/"/>
+        <homepage rdf:resource="http://i-semantics09.tugraz.at/"/>
+    </swc:ConferenceEvent>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/end_date">
+        <ical:date>2009-10-4</ical:date>
+        <ical:tzid>CET</ical:tzid>
+    </rdf:Description>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/isemantics/2009/main/chair/organisingcommitteemember">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/andreas-blumauer"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/hans-weigand"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/klaus-tochtermann"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/michael-hausenblas"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/wernher-behrendt"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/isemantics/2009"/>
+        <rdfs:label>Organising Committee Member</rdfs:label>
+    </swc:Chair>
+
+    <swc:ProgrammeCommitteeMember rdf:about="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/aldo-de-moor"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/aman-shakya"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/andreas-langegger"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/axel-polleres"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/barry-norton"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/christoph-lange"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/christoph-tempich"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/christoph-wieser"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/danny-ayers"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/david-peterson"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/elena-paslaru-bontas-simperl"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/harold-boley"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/holger-stenzhorn"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/ivan-jelinek"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/jelena-jovanovic"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/juan-f-sequeda"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/kecheng-liu"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/leo-obrst"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/leo-sauermann"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/lyndon-j-b-nixon"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/malgorzata-mochol"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/mareike-schoop"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/martin-hepp"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/matthias-klusch"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/matthias-samwald"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/michael-k-bergman"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/milan-milanovic"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/milan-stankovic"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/olaf-hartig"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/orri-erling"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/paola-di-maio"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/peter-reiser"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/phillip-obermeir"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/ralf-heese"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/rejandra-akerkar"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/richard-cyganiak"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/riichiro-mizoguchi"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/robert-tolksdorf"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/ronald-stamper"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/roxana-girju"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/sandra-lovrencic"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/sebastian-dietzold"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/soeren-auer"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/steffen-staab"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/tassilo-pellegrini"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/thomas-schandl"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/tobias-buerger"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/tom-heath"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/violeta-damjanovic"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/zoran-jeremic"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/isemantics/2009"/>
+        <rdfs:label>Programme Committee Member</rdfs:label>
+    </swc:ProgrammeCommitteeMember>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/1">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/hans-weigand"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/klaus-tochtermann"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/tassilo-pellegrini"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/wernher-behrendt"/>
+        <dc:title>I-SEMANTICS'09 International Conference on Semantic Systems - Preface</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/1/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://i-know.tugraz.at/wp-content/uploads/2009/09/Full-Proceedings_I-KNOW_I-SEMANTICS_2009.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>I-SEMANTICS'09 International Conference on Semantic Systems - Preface</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/hans-weigand"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/klaus-tochtermann"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/tassilo-pellegrini"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/wernher-behrendt"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/1/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/hans-weigand"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/wernher-behrendt"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/klaus-tochtermann"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/tassilo-pellegrini"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/10">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/barbara-kump"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/chiara-ghidini"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/luciano-serafini"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/marco-rospocher"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/stefanie-lindstaedt"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/viktoria-pammer"/>
+        <dc:title>Revision Support for Modeling Tasks, Topics and Skills</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/10/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/revision_support_for_modeling_tasks_topics_skills.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Revision Support for Modeling Tasks, Topics and Skills</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/barbara-kump"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/chiara-ghidini"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/luciano-serafini"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/marco-rospocher"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/stefanie-lindstaedt"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/viktoria-pammer"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/10/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/viktoria-pammer"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/barbara-kump"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/chiara-ghidini"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/marco-rospocher"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/luciano-serafini"/>
+        <rdf:_6 rdf:resource="http://data.semanticweb.org/person/stefanie-lindstaedt"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/11">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/violeta-damjanovic"/>
+        <dc:title>Reengineering Patterns for Ontologizing the Business Processes</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/11/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/reengineering_patterns_ontologizing_business_processes.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Reengineering Patterns for Ontologizing the Business Processes</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/violeta-damjanovic"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/11/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/violeta-damjanovic"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/12">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/andreas-blumauer"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/gisela-granitzer"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/tassilo-pellegrini"/>
+        <dc:title>Semantic Web Awareness Barometer 2009 - Comparing Research- and Application-oriented Approaches to Social Software and the Semantic Web</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/12/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/semantic_web_awareness_barometer_2009.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Semantic Web Awareness Barometer 2009 - Comparing Research- and Application-oriented Approaches to Social Software and the Semantic Web</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/andreas-blumauer"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/gisela-granitzer"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/tassilo-pellegrini"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/12/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/tassilo-pellegrini"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/andreas-blumauer"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/gisela-granitzer"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/13">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/sanja-vranes"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/valentina-janev"/>
+        <dc:title>Maturity and Applicability Assessment of Semantic Web Technologies</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/13/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/maturity_and_applicability_assessment.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Maturity and Applicability Assessment of Semantic Web Technologies</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/sanja-vranes"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/valentina-janev"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/13/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/valentina-janev"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/sanja-vranes"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/14">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/christoph-meinel"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/harald-sack"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/matthias-quasthoff"/>
+        <dc:title>Can Software Developers Use Linked Data Vocabulary?</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/14/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/can_sw_developers_use_linked_data_vocab.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Can Software Developers Use Linked Data Vocabulary?</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/christoph-meinel"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/harald-sack"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/matthias-quasthoff"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/14/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/matthias-quasthoff"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/harald-sack"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/christoph-meinel"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/15">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/harald-sack"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/joerg-waitelonis"/>
+        <dc:title>Augmenting Video Search with Linked Open Data</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/15/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/augmenting_video_search_with_lod.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Augmenting Video Search with Linked Open Data</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/harald-sack"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/joerg-waitelonis"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/15/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/joerg-waitelonis"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/harald-sack"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/16">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/behnam-taraghi"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/selver-softic"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/wolfgang-halb"/>
+        <dc:title>Weaving Social E-Learning Platforms Into the Web of Linked Data</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/16/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/weaving_social_e-learning_platforms.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Weaving Social E-Learning Platforms Into the Web of Linked Data</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/behnam-taraghi"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/selver-softic"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/wolfgang-halb"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/16/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/selver-softic"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/behnam-taraghi"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/wolfgang-halb"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/17">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/alexander-stocker"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/anwar-us-saeed"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/atif-latif"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/claudia-wagner"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/patrick-hoefler"/>
+        <dc:title>The Linked Data Value Chain: A Lightweight Model for Business Engineers</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/17/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/the_linked_data_value_chain.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>The Linked Data Value Chain: A Lightweight Model for Business Engineers</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/alexander-stocker"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/anwar-us-saeed"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/atif-latif"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/claudia-wagner"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/patrick-hoefler"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/17/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/atif-latif"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/anwar-us-saeed"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/patrick-hoefler"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/alexander-stocker"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/claudia-wagner"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/18">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jun-fang"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/lei-guo"/>
+        <dc:title>Boundary-based Module Extraction in Weakly Acyclic EL++ Ontologies: Theory Foundation and Preliminary Evaluation</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/18/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/boundary-based_module_extraction_in_ontologies.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Boundary-based Module Extraction in Weakly Acyclic EL++ Ontologies: Theory Foundation and Preliminary Evaluation</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/jun-fang"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/lei-guo"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/18/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/jun-fang"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/lei-guo"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/19">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/kia-teymourian"/>
+        <dc:title>Rule Based Business Process Execution with BPEL+</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/19/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/rule_based_business_process_execution_with_bpel.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Rule Based Business Process Execution with BPEL+</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/kia-teymourian"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/19/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/kia-teymourian"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/2">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/liana-razmerita"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/martynas-jusevicius"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/rokas-firantas"/>
+        <dc:title>Towards a New Generation of Social Networks: Merging Social Web with Semantic Web</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/2/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/towards_a_new_generation_of_social_networks.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Towards a New Generation of Social Networks: Merging Social Web with Semantic Web</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/liana-razmerita"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/martynas-jusevicius"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/rokas-firantas"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/2/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/liana-razmerita"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/rokas-firantas"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/martynas-jusevicius"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/20">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/goekhan-coskun"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/olga-streibel"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/radoslaw-oldakowski"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ralf-heese"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ralph-schaefermeier"/>
+        <dc:title>Towards a Corporate Semantic Web</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/20/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/towards_a_corporate_semantic_web.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Towards a Corporate Semantic Web</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/goekhan-coskun"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/olga-streibel"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/radoslaw-oldakowski"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ralf-heese"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ralph-schaefermeier"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/20/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/goekhan-coskun"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/ralf-heese"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/radoslaw-oldakowski"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <rdf:_6 rdf:resource="http://data.semanticweb.org/person/ralph-schaefermeier"/>
+        <rdf:_7 rdf:resource="http://data.semanticweb.org/person/olga-streibel"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/21">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/marie-aude-aufaure"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/rim-djedidi"/>
+        <dc:title>Ontology Change Management</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/21/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/ontology_change_management.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Ontology Change Management</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/marie-aude-aufaure"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/rim-djedidi"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/21/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/rim-djedidi"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/marie-aude-aufaure"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/22">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/punitha-swamy"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/robert-villa"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/tobias-buerger"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/wolfgang-halb"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/wolfgang-weiss"/>
+        <dc:title>SALERO Intelligent Media Annotation &#38; Search</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/22/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/salero_intelligent_media_annotation_search.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>SALERO Intelligent Media Annotation &#38; Search</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/punitha-swamy"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/robert-villa"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/tobias-buerger"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/wolfgang-halb"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/wolfgang-weiss"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/22/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/wolfgang-weiss"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/tobias-buerger"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/robert-villa"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/punitha-swamy"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/wolfgang-halb"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/23">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/carola-carstens"/>
+        <dc:title>Integrated Ontologies for the Semantic Web: Experiences from Modeling a Research Context Ontology</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/23/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/integrated_ontologies_for_the_semantic_web.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Integrated Ontologies for the Semantic Web: Experiences from Modeling a Research Context Ontology</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/carola-carstens"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/23/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/carola-carstens"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/24">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/andreas-dengel"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/benjamin-adrian"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/heiko-maus"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/martin-klinkigt"/>
+        <dc:title>Using iDocument for Document Categorization in Nepomuk Social Semantic Desktop</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/24/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/using_idocument_for_document_categorization.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Using iDocument for Document Categorization in Nepomuk Social Semantic Desktop</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/andreas-dengel"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/benjamin-adrian"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/heiko-maus"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/martin-klinkigt"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/24/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/benjamin-adrian"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/martin-klinkigt"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/heiko-maus"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/andreas-dengel"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/25">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jans-aasman"/>
+        <dc:title>GeoTemporal Reasoning for the Social Semantic Web</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/25/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/geotemporal_reasoning_for_the_social_semantic_web.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>GeoTemporal Reasoning for the Social Semantic Web</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/jans-aasman"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/25/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/jans-aasman"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/26">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/darius-zand"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/erich-markl"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/josef-withalm"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/oemer-karacan"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/peter-hofbauer"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/walter-woelfel"/>
+        <dc:title>Semantic Web as Driver of Collaborative Demand Capacity Planning</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/26/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/semantic_web_as_driver_of_demand_capacity_planning.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Semantic Web as Driver of Collaborative Demand Capacity Planning</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/darius-zand"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/erich-markl"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/josef-withalm"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/oemer-karacan"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/peter-hofbauer"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/walter-woelfel"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/26/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/peter-hofbauer"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/erich-markl"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/josef-withalm"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/oemer-karacan"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/walter-woelfel"/>
+        <rdf:_6 rdf:resource="http://data.semanticweb.org/person/darius-zand"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/27">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/muhammad-tanvir-afzal"/>
+        <dc:title>Applying Ontological Framework for Finding Links into the Future from Web</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/27/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/applying_ontological_framework.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Applying Ontological Framework for Finding Links into the Future from Web</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/muhammad-tanvir-afzal"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/27/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/muhammad-tanvir-afzal"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/28">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/michel-simonet"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/sellami-mokhtar"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/taleb-nora"/>
+        <dc:title>The Management of the Knowledge Evolution by Using Text Mining Techniques</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/28/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/the_management_of_the_knowledge_evolution.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>The Management of the Knowledge Evolution by Using Text Mining Techniques</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/michel-simonet"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/sellami-mokhtar"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/taleb-nora"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/28/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/taleb-nora"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/sellami-mokhtar"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/michel-simonet"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/29">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/goekhan-coskun"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ralf-heese"/>
+        <dc:title>Applying Ontology Modularization for Corporate Ontology Engineering</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/29/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/applying_ontology_modularization.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Applying Ontology Modularization for Corporate Ontology Engineering</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/goekhan-coskun"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ralf-heese"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/29/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/goekhan-coskun"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/ralf-heese"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/3">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/andreas-abecker"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/frank-kleiner"/>
+        <dc:title>Towards a Collaborative Semantic Wiki-based Approach to IT Service Management</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/3/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/towards_collaborative_approach_it_service_management.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Towards a Collaborative Semantic Wiki-based Approach to IT Service Management</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/andreas-abecker"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/frank-kleiner"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/3/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/frank-kleiner"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/andreas-abecker"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/30">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/mohamed-ben-ahmed"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/nadia-yacoubi"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/yann-pollet"/>
+        <dc:title>A Proposed Ontology-based Algebra For Service Annotation, Discovery, and Composition</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/30/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/a_proposed_ontology-based_algebra.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>A Proposed Ontology-based Algebra For Service Annotation, Discovery, and Composition</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/mohamed-ben-ahmed"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/nadia-yacoubi"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/yann-pollet"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/30/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/nadia-yacoubi"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/yann-pollet"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/mohamed-ben-ahmed"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/31">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/kai-hakkarainen"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/pasi-pohjola"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ritva-engestroem"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/sami-paavola"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/timo-honkela"/>
+        <dc:title>Knowledge Practices, Epistemic Technologies, and Pragmatic Web</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/31/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/knowledge_practices_epistemic_technologies.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Knowledge Practices, Epistemic Technologies, and Pragmatic Web</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/kai-hakkarainen"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/pasi-pohjola"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ritva-engestroem"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/sami-paavola"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/timo-honkela"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/31/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/kai-hakkarainen"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/ritva-engestroem"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/sami-paavola"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/pasi-pohjola"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/timo-honkela"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/32">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/c-baranauskas"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/heiko-hornung"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/m-cecilia"/>
+        <dc:title>An Interaction Design Perspective on the Pragmatic Web: Preliminary Thoughts</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/32/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/an_interaction_design_perspective.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>An Interaction Design Perspective on the Pragmatic Web: Preliminary Thoughts</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/c-baranauskas"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/heiko-hornung"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/m-cecilia"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/32/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/heiko-hornung"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/m-cecilia"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/c-baranauskas"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/33">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/dave-lewis"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/john-mcauley"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/kevin-feeney"/>
+        <dc:title>Ethnomethodology as an Influence on Community-Centred Design</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/33/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/ethnomethodology_as_an_influence.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Ethnomethodology as an Influence on Community-Centred Design</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/dave-lewis"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/john-mcauley"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/kevin-feeney"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/33/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/john-mcauley"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/kevin-feeney"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/dave-lewis"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/34">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/hans-weigand"/>
+        <dc:title>Value Modeling for the Pragmatic Web - the Case of Social Advertising</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/34/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/value_modeling_for_the_pragmatic_web.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Value Modeling for the Pragmatic Web - the Case of Social Advertising</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/hans-weigand"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/34/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/hans-weigand"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/35">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/manuel-atencia"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/marco-schorlemmer"/>
+        <dc:title>Reaching Semantic Agreements through Interaction</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/35/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/reaching_semantic_agreements_interaction.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Reaching Semantic Agreements through Interaction</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/manuel-atencia"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/marco-schorlemmer"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/35/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/manuel-atencia"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/marco-schorlemmer"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/36">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/elio-toppano"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/vito-roberto"/>
+        <dc:title>A Semiotic Framework for Ontology Development</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/36/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/a_semiotic_framework_ontology_dev.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>A Semiotic Framework for Ontology Development</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/elio-toppano"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/vito-roberto"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/36/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/elio-toppano"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/vito-roberto"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/37">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/alexander-zelitchenko"/>
+        <dc:title>Web 2.010 - Social Network "Make Difference Together with Pragmatic Description of Projects in the Standard of European Commission's Framework Programme</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/37/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/web_2010_social_network.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Web 2.010 - Social Network "Make Difference Together with Pragmatic Description of Projects in the Standard of European Commission's Framework Programme</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/alexander-zelitchenko"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/37/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/alexander-zelitchenko"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/38">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/paola-di-maio"/>
+        <dc:title>Toward Pragmatic Dimensions of Knowledge Reuse and Learning on the Web</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/38/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/toward_pragmatic_dimensions_learning.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Toward Pragmatic Dimensions of Knowledge Reuse and Learning on the Web</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/paola-di-maio"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/38/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/paola-di-maio"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/39">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/adrian-benfell"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/kecheng-liu"/>
+        <dc:title>Defining a Pragmatic Based Web-service Discovery Mechanism</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/39/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/defining_a_pragmatic_discovery_mechanism.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Defining a Pragmatic Based Web-service Discovery Mechanism</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/adrian-benfell"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/kecheng-liu"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/39/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/adrian-benfell"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/kecheng-liu"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/4">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/daniel-blunder"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/elena-paslaru-bontas-simperl"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/michael-fried"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/reto-krummenacher"/>
+        <dc:title>An Open Distributed Middleware for the Semantic Web</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/4/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/an_open_distributed_middleware_for_the_semantic_web.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>An Open Distributed Middleware for the Semantic Web</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/daniel-blunder"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/elena-paslaru-bontas-simperl"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/michael-fried"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/reto-krummenacher"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/4/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/reto-krummenacher"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/daniel-blunder"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/elena-paslaru-bontas-simperl"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/michael-fried"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/40">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/richard-von-kaufmann"/>
+        <dc:title>Intention Broadcasting - A Model for Computer-Mediated Intention Sharing and Coordination</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/40/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/intention_broadcasting.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Intention Broadcasting - A Model for Computer-Mediated Intention Sharing and Coordination</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/richard-von-kaufmann"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/40/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/richard-von-kaufmann"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/41">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/andrei-sambra"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/olivier-berger"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/valentin-vlasceanu"/>
+        <dc:title>Bugtrackers triplification</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/41/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/triplification/01_triplifyBugs.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Bugtrackers triplification</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/andrei-sambra"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/olivier-berger"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/valentin-vlasceanu"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/41/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/olivier-berger"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/andrei-sambra"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/valentin-vlasceanu"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/42">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/andreas-blumauer"/>
+        <dc:title>SKOS Thesaurus Management based on Linked Data with Poolparty</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/42/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://i-semantics.tugraz.at/2009/triplification/02_poolparty_triplification_challenge.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>SKOS Thesaurus Management based on Linked Data with Poolparty</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/andreas-blumauer"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/42/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/andreas-blumauer"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/43">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/bernhard-schandl"/>
+        <dc:title>TripFS Exposing File Systems as Linked Data</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/43/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://i-semantics.tugraz.at/2009/triplification/03_tripfs-schandl.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>TripFS Exposing File Systems as Linked Data</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/bernhard-schandl"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/43/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/bernhard-schandl"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/44">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/aristotelis-zosakis"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/dimitris-vekris"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/george-anadiotis"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/panos-andriopoulos"/>
+        <dc:title>Linked Data for the masses - using open source infrastructure and the inbound/outbound Linked Data approach to bring added value to end user applications</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/44/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://i-semantics.tugraz.at/2009/triplification/04_liferay_TriplificationChallenge2009.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Linked Data for the masses - using open source infrastructure and the inbound/outbound Linked Data approach to bring added value to end user applications</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/aristotelis-zosakis"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/dimitris-vekris"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/george-anadiotis"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/panos-andriopoulos"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/44/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/george-anadiotis"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/panos-andriopoulos"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/dimitris-vekris"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/aristotelis-zosakis"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/45">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/anja-jentzsch"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/bo-andersson"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jun-zhao"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/kei-hoi-cheung"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/matthias-samwald"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/oktie-hassanzadeh"/>
+        <dc:title>Linking Open Drug Data</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/45/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://i-semantics.tugraz.at/2009/triplification/05_TriplificationChallengeLODD.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Linking Open Drug Data</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/anja-jentzsch"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/bo-andersson"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/jun-zhao"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/kei-hoi-cheung"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/matthias-samwald"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/oktie-hassanzadeh"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/45/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/anja-jentzsch"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/jun-zhao"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/oktie-hassanzadeh"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/kei-hoi-cheung"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/matthias-samwald"/>
+        <rdf:_6 rdf:resource="http://data.semanticweb.org/person/bo-andersson"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/46">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/konrad-hoeffner"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/matthias-quasthoff"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/sebastian-hellmann"/>
+        <dc:title>Standardized Multilingual Language Resourcesfor the Web of Data</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/46/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://i-semantics.tugraz.at/2009/triplification/06_quasthoff-hellmann-triplification09.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Standardized Multilingual Language Resourcesfor the Web of Data</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/konrad-hoeffner"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/matthias-quasthoff"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/sebastian-hellmann"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/46/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/matthias-quasthoff"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/sebastian-hellmann"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/konrad-hoeffner"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/47">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/alexander-deleon"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jose-cruz-toledo"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/michel-dumontier"/>
+        <dc:title>PDB2RDF - Exposing Molecular and Experimental Knowledge on the Semantic Web</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/47/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://i-semantics.tugraz.at/2009/triplification/07_pdb_triplify_challenge_submission.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>PDB2RDF - Exposing Molecular and Experimental Knowledge on the Semantic Web</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/alexander-deleon"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/jose-cruz-toledo"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/michel-dumontier"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/47/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/jose-cruz-toledo"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/alexander-deleon"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/michel-dumontier"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/48">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/danh-le-phuoc"/>
+        <dc:title>SensorMasher - publishing and building mashup of sensor data</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/48/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://i-semantics.tugraz.at/2009/triplification/09_sensormasher_triplify.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>SensorMasher - publishing and building mashup of sensor data</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/danh-le-phuoc"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/48/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/danh-le-phuoc"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/5">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/claudiu-schora"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/simone-braun"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/valentin-zacharias"/>
+        <dc:title>Semantics to the Bookmarks: A Review of Social Semantic Bookmarking Systems</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/5/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/semantics_to_the_bookmarks_review.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Semantics to the Bookmarks: A Review of Social Semantic Bookmarking Systems</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/claudiu-schora"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/simone-braun"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/valentin-zacharias"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/5/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/simone-braun"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/claudiu-schora"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/valentin-zacharias"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/6">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/dimitris-panagiotou"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/gregoris-mentzas"/>
+        <dc:title>A Knowledge Workbench for Software Development</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/6/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/a_knowledge_workbench_for_software_development.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>A Knowledge Workbench for Software Development</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/dimitris-panagiotou"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/gregoris-mentzas"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/6/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/dimitris-panagiotou"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/gregoris-mentzas"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/7">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/heidemarie-mueller-riedlhuber"/>
+        <dc:title>The European Dictionary of Skills and Competencies (DISCO): an Example of Usage Scenarios for Ontologies</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/7/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/the_european_dictionary_skills_competences.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>The European Dictionary of Skills and Competencies (DISCO): an Example of Usage Scenarios for Ontologies</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/heidemarie-mueller-riedlhuber"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/7/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/heidemarie-mueller-riedlhuber"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/8">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/kia-teymourian"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ralf-heese"/>
+        <dc:title>A Corporate Semantic Wiki for Scientific Workflows</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/8/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/a_corporate_semantic_wiki_for_scientific_workflows.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>A Corporate Semantic Wiki for Scientific Workflows</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/kia-teymourian"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ralf-heese"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/8/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/kia-teymourian"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/ralf-heese"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+    </rdf:Description>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/9">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/fan-bai"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/juergen-ziegler"/>
+        <dc:title>Exchanging Knowledge in Concise Bounded Descriptions. An Approach to Support Collaborative Ontology Development in a Distributed Environment</dc:title>
+        <bibo:authorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/9/authorlist"/>
+        <swrc:month>September</swrc:month>
+        <swrc:url rdf:resource="http://www.i-semantics.at/2009/papers/exchanging_knowledge_concise_bounded_descriptions.pdf"/>
+        <swrc:year>2009</swrc:year>
+        <rdfs:label>Exchanging Knowledge in Concise Bounded Descriptions. An Approach to Support Collaborative Ontology Development in a Distributed Environment</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/fan-bai"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/juergen-ziegler"/>
+    </swrc:InProceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/paper/main/9/authorlist">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/fan-bai"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/juergen-ziegler"/>
+    </rdf:Description>
+
+    <swrc:Proceedings rdf:about="http://data.semanticweb.org/conference/isemantics/2009/proceedings">
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/1"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/10"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/11"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/12"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/13"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/14"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/15"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/16"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/17"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/18"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/19"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/2"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/20"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/21"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/22"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/23"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/24"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/25"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/26"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/27"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/28"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/29"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/3"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/30"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/31"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/32"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/33"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/34"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/35"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/36"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/37"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/38"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/39"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/4"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/40"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/41"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/42"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/43"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/44"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/45"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/46"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/47"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/48"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/5"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/6"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/7"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/8"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/9"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/conference/isemantics/2009"/>
+        <bibo:editorList rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/proceedings/editor_list"/>
+        <swrc:booktitle>Proceedings of 5th International Conference on Semantic Systems (I-Semantics 2009), September 2-4, 2009</swrc:booktitle>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/hans-weigand"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/klaus-tochtermann"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/tassilo-pellegrini"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/wernher-behrendt"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2009</swrc:year>
+    </swrc:Proceedings>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/proceedings/editor_list">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/hans-weigand"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/wernher-behrendt"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/klaus-tochtermann"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/tassilo-pellegrini"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/isemantics/2009/start_date">
+        <ical:date>2009-10-2</ical:date>
+        <ical:tzid>CET</ical:tzid>
+    </rdf:Description>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/boab-interactive">
+        <rdfs:label>BoaB Interactive</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/david-peterson"/>
+        <name>BoaB Interactive</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/bundeswehr-university-munich-germany">
+        <rdfs:label>Universität der Bundeswehr</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/martin-hepp"/>
+        <name>Universität der Bundeswehr</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/communitsense">
+        <rdfs:label>CommunitSense</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/aldo-de-moor"/>
+        <name>CommunitSense</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/czech-technical-university-in-prague">
+        <rdfs:label>Czech Technical University in Prague</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/ivan-jelinek"/>
+        <name>Czech Technical University in Prague</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/deri-nui-galway">
+        <rdfs:label>DERI Galway</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/axel-polleres"/>
+        <member rdf:resource="http://data.semanticweb.org/person/matthias-samwald"/>
+        <member rdf:resource="http://data.semanticweb.org/person/michael-hausenblas"/>
+        <member rdf:resource="http://data.semanticweb.org/person/richard-cyganiak"/>
+        <name>DERI Galway</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/deri-universitaet-innsbruck">
+        <rdfs:label>STI Innsbruck</rdfs:label>
+        <rdfs:label>STI International</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/elena-paslaru-bontas-simperl"/>
+        <member rdf:resource="http://data.semanticweb.org/person/lyndon-j-b-nixon"/>
+        <member rdf:resource="http://data.semanticweb.org/person/tobias-buerger"/>
+        <name>STI Innsbruck</name>
+        <name>STI International</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/detecon-international">
+        <rdfs:label>DETECON International</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/christoph-tempich"/>
+        <name>DETECON International</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/freiburg-university-hospital">
+        <rdfs:label>Universitätsklinikum Freiburg</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/holger-stenzhorn"/>
+        <name>Universitätsklinikum Freiburg</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/freie-universitaet-berlin">
+        <rdfs:label>FU Berlin</rdfs:label>
+        <rdfs:label>Freie Universitaet Berlin</rdfs:label>
+        <rdfs:label>Freie Universitaet Berlin, Germany</rdfs:label>
+        <rdfs:label>Freie Universität Berlin</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/adrian-paschke"/>
+        <member rdf:resource="http://data.semanticweb.org/person/kia-teymourian"/>
+        <member rdf:resource="http://data.semanticweb.org/person/malgorzata-mochol"/>
+        <member rdf:resource="http://data.semanticweb.org/person/markus-luczak-roesch"/>
+        <member rdf:resource="http://data.semanticweb.org/person/phillip-obermeir"/>
+        <member rdf:resource="http://data.semanticweb.org/person/ralf-heese"/>
+        <member rdf:resource="http://data.semanticweb.org/person/robert-tolksdorf"/>
+        <name>FU Berlin</name>
+        <name>Freie Universitaet Berlin</name>
+        <name>Freie Universitaet Berlin, Germany</name>
+        <name>Freie Universität Berlin</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/ftw-telecommunications-research-center-vienna">
+        <rdfs:label>FTW Vienna</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+        <name>FTW Vienna</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki">
+        <rdfs:label>DFKI</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/leo-sauermann"/>
+        <member rdf:resource="http://data.semanticweb.org/person/matthias-klusch"/>
+        <name>DFKI</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/humboldt-universitaet-zu-berlin">
+        <rdfs:label>Humboldt Universität zu Berlin</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/milan-milanovic"/>
+        <member rdf:resource="http://data.semanticweb.org/person/olaf-hartig"/>
+        <name>Humboldt Universität zu Berlin</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/jacobs-university-bremen">
+        <rdfs:label>Jacobs Universität Bremen</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/christoph-lange"/>
+        <name>Jacobs Universität Bremen</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/johannes-kepler-university-linz-austria">
+        <rdfs:label>JKU Linz</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/andreas-langegger"/>
+        <name>JKU Linz</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/kmi-the-open-university-uk">
+        <rdfs:label>KMI Open University</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/barry-norton"/>
+        <name>KMI Open University</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/military-academy-belgrade-serbia">
+        <rdfs:label>Military Academy, Belgrade, Serbia</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/zoran-jeremic"/>
+        <name>Military Academy, Belgrade, Serbia</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/national-institute-of-informatics-japan">
+        <rdfs:label>National Institute of Informatics</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/aman-shakya"/>
+        <name>National Institute of Informatics</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/nrc-institute-of-information-technology">
+        <rdfs:label>NRC Institute of Information Technology</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/harold-boley"/>
+        <name>NRC Institute of Information Technology</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/openlink-software">
+        <rdfs:label>OpenLink Software</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/orri-erling"/>
+        <name>OpenLink Software</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/osaka-university-japan">
+        <rdfs:label>Osaka University</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/riichiro-mizoguchi"/>
+        <name>Osaka University</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/salzburg-research">
+        <rdfs:label>Salzburg Research</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/christoph-wieser"/>
+        <member rdf:resource="http://data.semanticweb.org/person/violeta-damjanovic"/>
+        <member rdf:resource="http://data.semanticweb.org/person/wernher-behrendt"/>
+        <name>Salzburg Research</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/semantic-web-company">
+        <rdfs:label>Semantic Web Company</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/andreas-blumauer"/>
+        <member rdf:resource="http://data.semanticweb.org/person/tassilo-pellegrini"/>
+        <member rdf:resource="http://data.semanticweb.org/person/thomas-schandl"/>
+        <name>Semantic Web Company</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/strathclyde-university">
+        <rdfs:label>Strathclyde University</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/paola-di-maio"/>
+        <name>Strathclyde University</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/structured-dynamics">
+        <rdfs:label>Structured Dynamics</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/michael-k-bergman"/>
+        <name>Structured Dynamics</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/sun-microsystems">
+        <rdfs:label>SUN Microsystems</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/peter-reiser"/>
+        <name>SUN Microsystems</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/talis-information-limited">
+        <rdfs:label>Talis</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/danny-ayers"/>
+        <member rdf:resource="http://data.semanticweb.org/person/tom-heath"/>
+        <name>Talis</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/technomathematics-research-foundation">
+        <rdfs:label>Technomathematics Research Foundation</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/rejandra-akerkar"/>
+        <name>Technomathematics Research Foundation</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/the-mitre-corporation">
+        <rdfs:label>MITRE Corporation</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/leo-obrst"/>
+        <name>MITRE Corporation</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/tilburg-university">
+        <rdfs:label>Tilburg University</rdfs:label>
+        <rdfs:label>University Tilburg</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/hans-weigand"/>
+        <name>Tilburg University</name>
+        <name>University Tilburg</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/universitaet-leipzig">
+        <rdfs:label>Universität Leipzig</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/sebastian-dietzold"/>
+        <member rdf:resource="http://data.semanticweb.org/person/soeren-auer"/>
+        <name>Universität Leipzig</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/universite-paris-sud-xi-orsay">
+        <rdfs:label>Université Paris-Sud XI Orsay</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/milan-stankovic"/>
+        <name>Université Paris-Sud XI Orsay</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-graz">
+        <rdfs:label>University Graz</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/klaus-tochtermann"/>
+        <name>University Graz</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-hohenheim">
+        <rdfs:label>University Hohenheim</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/mareike-schoop"/>
+        <name>University Hohenheim</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-belgrade">
+        <rdfs:label>University of Belgrade</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/jelena-jovanovic"/>
+        <name>University of Belgrade</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-illinois">
+        <rdfs:label>University of Illinois</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/roxana-girju"/>
+        <name>University of Illinois</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-koblenz-landau">
+        <rdfs:label>University of Koblenz-Landau</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/steffen-staab"/>
+        <name>University of Koblenz-Landau</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-reading">
+        <rdfs:label>University of Reading</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/kecheng-liu"/>
+        <name>University of Reading</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-texas-at-austin">
+        <rdfs:label>University of Texas at Austin</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/juan-f-sequeda"/>
+        <name>University of Texas at Austin</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-twente">
+        <rdfs:label>University of Twente</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/ronald-stamper"/>
+        <name>University of Twente</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-zagreb">
+        <rdfs:label>University of Zagreb</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/sandra-lovrencic"/>
+        <name>University of Zagreb</name>
+    </Organization>
+
+    <Person rdf:about="http://data.semanticweb.org/person/adrian-benfell">
+        <rdfs:label>Adrian Benfell</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/39"/>
+        <name>Adrian Benfell</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/adrian-paschke">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin"/>
+        <rdfs:label>Adrian Paschke</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/1"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/12"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/19"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/20"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/29"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/8"/>
+        <mbox_sha1sum>8a239993d8c7c27a6e99b20033e179cfd0012f72</mbox_sha1sum>
+        <mbox_sha1sum>c352377f5d48b16e5e29253acaee884ebce39d74</mbox_sha1sum>
+        <name>Adrian Paschke</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/aldo-de-moor">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/communitsense"/>
+        <rdfs:label>Aldo de Moor</rdfs:label>
+        <name>Aldo de Moor</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alexander-deleon">
+        <rdfs:label>Alexander De Leon</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/47"/>
+        <name>Alexander De Leon</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alexander-stocker">
+        <rdfs:label>Alexander Stocker</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/17"/>
+        <name>Alexander Stocker</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alexander-zelitchenko">
+        <rdfs:label>Alexander Zelitchenko</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/37"/>
+        <name>Alexander Zelitchenko</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/aman-shakya">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/national-institute-of-informatics-japan"/>
+        <rdfs:label>Aman Shakya</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Japan"/>
+        <name>Aman Shakya</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andreas-abecker">
+        <rdfs:label>Andreas Abecker</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/3"/>
+        <name>Andreas Abecker</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andreas-blumauer">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/semantic-web-company"/>
+        <rdfs:label>Andreas Blumauer</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/12"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/42"/>
+        <name>Andreas Blumauer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andreas-dengel">
+        <rdfs:label>Andreas Dengel</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/24"/>
+        <name>Andreas Dengel</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andreas-langegger">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/johannes-kepler-university-linz-austria"/>
+        <rdfs:label>Andreas Langegger</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Austria"/>
+        <name>Andreas Langegger</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andrei-sambra">
+        <rdfs:label>Andrei Sambra</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/41"/>
+        <name>Andrei Sambra</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/anja-jentzsch">
+        <rdfs:label>Anja Jentzsch</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/45"/>
+        <name>Anja Jentzsch</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/anna-v-zhdanova">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ftw-telecommunications-research-center-vienna"/>
+        <rdfs:label>Anna Zhdanova</rdfs:label>
+        <name>Anna Zhdanova</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/anwar-us-saeed">
+        <rdfs:label>Anwar Us Saeed</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/17"/>
+        <name>Anwar Us Saeed</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/aristotelis-zosakis">
+        <rdfs:label>Aristotelis Zosakis</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/44"/>
+        <name>Aristotelis Zosakis</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/atif-latif">
+        <rdfs:label>Atif Latif</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/17"/>
+        <name>Atif Latif</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/axel-polleres">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <rdfs:label>Axel Polleres</rdfs:label>
+        <name>Axel Polleres</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/barbara-kump">
+        <rdfs:label>Barbara Kump</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/10"/>
+        <name>Barbara Kump</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/barry-norton">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/kmi-the-open-university-uk"/>
+        <rdfs:label>Barry Norton</rdfs:label>
+        <name>Barry Norton</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/behnam-taraghi">
+        <rdfs:label>Behnam Taraghi</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/16"/>
+        <name>Behnam Taraghi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/benjamin-adrian">
+        <rdfs:label>Benjamin Adrian</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/24"/>
+        <name>Benjamin Adrian</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/bernhard-schandl">
+        <rdfs:label>Bernhard Schandl</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/43"/>
+        <name>Bernhard Schandl</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/bo-andersson">
+        <rdfs:label>Bo Andersson</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/45"/>
+        <name>Bo Andersson</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/c-baranauskas">
+        <rdfs:label>C. Baranauskas</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/32"/>
+        <name>C. Baranauskas</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/carola-carstens">
+        <rdfs:label>Carola Carstens</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/23"/>
+        <name>Carola Carstens</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/chiara-ghidini">
+        <rdfs:label>Chiara Ghidini</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/10"/>
+        <name>Chiara Ghidini</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/christoph-lange">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/jacobs-university-bremen"/>
+        <rdfs:label>Christoph Lange</rdfs:label>
+        <name>Christoph Lange</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/christoph-meinel">
+        <rdfs:label>Christoph Meinel</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/14"/>
+        <name>Christoph Meinel</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/christoph-tempich">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/detecon-international"/>
+        <rdfs:label>Christoph Tempich</rdfs:label>
+        <name>Christoph Tempich</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/christoph-wieser">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/salzburg-research"/>
+        <rdfs:label>Christoph Wieser</rdfs:label>
+        <name>Christoph Wieser</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/claudia-wagner">
+        <rdfs:label>Claudia Wagner</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/17"/>
+        <name>Claudia Wagner</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/claudiu-schora">
+        <rdfs:label>Claudiu Schora</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/5"/>
+        <name>Claudiu Schora</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/danh-le-phuoc">
+        <rdfs:label>Danh Le Phuoc</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/48"/>
+        <name>Danh Le Phuoc</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/daniel-blunder">
+        <rdfs:label>Daniel Blunder</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/4"/>
+        <name>Daniel Blunder</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/danny-ayers">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/talis-information-limited"/>
+        <rdfs:label>Danny Ayers</rdfs:label>
+        <name>Danny Ayers</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/darius-zand">
+        <rdfs:label>Darius Zand</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/26"/>
+        <name>Darius Zand</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dave-lewis">
+        <rdfs:label>Dave Lewis</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/33"/>
+        <name>Dave Lewis</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/david-peterson">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/boab-interactive"/>
+        <rdfs:label>David Peterson</rdfs:label>
+        <name>David Peterson</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dimitris-panagiotou">
+        <rdfs:label>Dimitris Panagiotou</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/6"/>
+        <name>Dimitris Panagiotou</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dimitris-vekris">
+        <rdfs:label>Dimitris Vekris</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/44"/>
+        <name>Dimitris Vekris</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/elena-paslaru-bontas-simperl">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-universitaet-innsbruck"/>
+        <rdfs:label>Elena Simperl</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Austria"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/4"/>
+        <name>Elena Simperl</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/elio-toppano">
+        <rdfs:label>Elio Toppano</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/36"/>
+        <name>Elio Toppano</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/erich-markl">
+        <rdfs:label>Erich Markl</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/26"/>
+        <name>Erich Markl</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/fan-bai">
+        <rdfs:label>Fan Bai</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/9"/>
+        <name>Fan Bai</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/frank-kleiner">
+        <rdfs:label>Frank Kleiner</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/3"/>
+        <name>Frank Kleiner</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/george-anadiotis">
+        <rdfs:label>George Anadiotis</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/44"/>
+        <name>George Anadiotis</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/gisela-granitzer">
+        <rdfs:label>Gisela Granitzer</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/12"/>
+        <name>Gisela Granitzer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/goekhan-coskun">
+        <rdfs:label>Gökhan Coskun</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/20"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/29"/>
+        <name>Gökhan Coskun</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/gregoris-mentzas">
+        <rdfs:label>Gregoris Mentzas</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/6"/>
+        <name>Gregoris Mentzas</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/hans-weigand">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/tilburg-university"/>
+        <rdfs:label>Hans Weigand</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Netherland"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/1"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/34"/>
+        <name>Hans Weigand</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/harald-sack">
+        <rdfs:label>Harald Sack</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/14"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/15"/>
+        <name>Harald Sack</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/harold-boley">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/nrc-institute-of-information-technology"/>
+        <rdfs:label>Harold Boley</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Canada"/>
+        <name>Harold Boley</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/heidemarie-mueller-riedlhuber">
+        <rdfs:label>Heidemarie Müller-Riedlhuber</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/7"/>
+        <name>Heidemarie Müller-Riedlhuber</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/heiko-hornung">
+        <rdfs:label>Heiko Hornung</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/32"/>
+        <name>Heiko Hornung</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/heiko-maus">
+        <rdfs:label>Heiko Maus</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/24"/>
+        <name>Heiko Maus</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/holger-stenzhorn">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/freiburg-university-hospital"/>
+        <rdfs:label>Holger Stenzhorn</rdfs:label>
+        <name>Holger Stenzhorn</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ivan-jelinek">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/czech-technical-university-in-prague"/>
+        <rdfs:label>Ivan Jelinek</rdfs:label>
+        <name>Ivan Jelinek</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jans-aasman">
+        <rdfs:label>Jans Aasman</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/25"/>
+        <name>Jans Aasman</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jelena-jovanovic">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-belgrade"/>
+        <rdfs:label>Jelena Jovanovic</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Serbia"/>
+        <name>Jelena Jovanovic</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/joerg-waitelonis">
+        <rdfs:label>Jörg Waitelonis</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/15"/>
+        <name>Jörg Waitelonis</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/john-mcauley">
+        <rdfs:label>John McAuley</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/33"/>
+        <name>John McAuley</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jose-cruz-toledo">
+        <rdfs:label>Jose Cruz-Toledo</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/47"/>
+        <name>Jose Cruz-Toledo</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/josef-withalm">
+        <rdfs:label>Josef Withalm</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/26"/>
+        <name>Josef Withalm</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/juan-f-sequeda">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-texas-at-austin"/>
+        <rdfs:label>Juan Sequeda</rdfs:label>
+        <name>Juan Sequeda</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/juergen-ziegler">
+        <rdfs:label>Juergen Ziegler</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/9"/>
+        <name>Juergen Ziegler</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jun-fang">
+        <rdfs:label>Jun Fang</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/18"/>
+        <name>Jun Fang</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jun-zhao">
+        <rdfs:label>Jun Zhao</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/45"/>
+        <name>Jun Zhao</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kai-hakkarainen">
+        <rdfs:label>Kai Hakkarainen</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/31"/>
+        <name>Kai Hakkarainen</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kecheng-liu">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-reading"/>
+        <rdfs:label>Kecheng Liu</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/39"/>
+        <name>Kecheng Liu</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kei-hoi-cheung">
+        <rdfs:label>Kei-Hoi Cheung</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/45"/>
+        <name>Kei-Hoi Cheung</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kevin-feeney">
+        <rdfs:label>Kevin Feeney</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/33"/>
+        <name>Kevin Feeney</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kia-teymourian">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin"/>
+        <rdfs:label>Kia Teymourian</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/19"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/8"/>
+        <name>Kia Teymourian</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/klaus-tochtermann">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-graz"/>
+        <rdfs:label>Klaus Tochtermann</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/1"/>
+        <name>Klaus Tochtermann</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/konrad-hoeffner">
+        <rdfs:label>Konrad Hoeffner</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/46"/>
+        <name>Konrad Hoeffner</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/lei-guo">
+        <rdfs:label>Lei Guo</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/18"/>
+        <name>Lei Guo</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/leo-obrst">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/the-mitre-corporation"/>
+        <rdfs:label>Leo Obrst</rdfs:label>
+        <name>Leo Obrst</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/leo-sauermann">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki"/>
+        <rdfs:label>Leo Sauermann</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <name>Leo Sauermann</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/liana-razmerita">
+        <rdfs:label>Liana Razmerita</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/2"/>
+        <name>Liana Razmerita</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/luciano-serafini">
+        <rdfs:label>Luciano Serafini</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/10"/>
+        <name>Luciano Serafini</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/lyndon-j-b-nixon">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-universitaet-innsbruck"/>
+        <rdfs:label>Lyndon Nixon</rdfs:label>
+        <name>Lyndon Nixon</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/m-cecilia">
+        <rdfs:label>M. Cecilia</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/32"/>
+        <name>M. Cecilia</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/malgorzata-mochol">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin"/>
+        <rdfs:label>Malgorzata Mochol</rdfs:label>
+        <name>Malgorzata Mochol</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/manuel-atencia">
+        <rdfs:label>Manuel Atencia</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/35"/>
+        <name>Manuel Atencia</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marco-rospocher">
+        <rdfs:label>Marco Rospocher</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/10"/>
+        <name>Marco Rospocher</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marco-schorlemmer">
+        <rdfs:label>Marco Schorlemmer</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/35"/>
+        <name>Marco Schorlemmer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/mareike-schoop">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-hohenheim"/>
+        <rdfs:label>Mareike Schoop</rdfs:label>
+        <name>Mareike Schoop</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marie-aude-aufaure">
+        <rdfs:label>Marie-Aude Aufaure</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/21"/>
+        <name>Marie-Aude Aufaure</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/markus-luczak-roesch">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin"/>
+        <rdfs:label>Markus Luczak-Roesch</rdfs:label>
+        <rdfs:label>Markus Luczak-Rösch</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/12"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/20"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/29"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/8"/>
+        <name>Markus Luczak-Roesch</name>
+        <name>Markus Luczak-Rösch</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/martin-hepp">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/bundeswehr-university-munich-germany"/>
+        <rdfs:label>Martin Hepp</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <name>Martin Hepp</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/martin-klinkigt">
+        <rdfs:label>Martin Klinkigt</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/24"/>
+        <name>Martin Klinkigt</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/martynas-jusevicius">
+        <rdfs:label>Martynas Jusevičius</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/2"/>
+        <name>Martynas Jusevičius</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/matthias-klusch">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki"/>
+        <rdfs:label>Matthias Klusch</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <name>Matthias Klusch</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/matthias-quasthoff">
+        <rdfs:label>Matthias Quasthoff</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/14"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/46"/>
+        <name>Matthias Quasthoff</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/matthias-samwald">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <rdfs:label>Matthias Samwald</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/45"/>
+        <name>Matthias Samwald</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/michael-fried">
+        <rdfs:label>Michael Fried</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/4"/>
+        <name>Michael Fried</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/michael-hausenblas">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <rdfs:label>Michael Hausenblas</rdfs:label>
+        <name>Michael Hausenblas</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/michael-k-bergman">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/structured-dynamics"/>
+        <rdfs:label>Mike Bergman</rdfs:label>
+        <name>Mike Bergman</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/michel-dumontier">
+        <rdfs:label>Michel Dumontier</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/47"/>
+        <name>Michel Dumontier</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/michel-simonet">
+        <rdfs:label>Michel Simonet</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/28"/>
+        <name>Michel Simonet</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/milan-milanovic">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/humboldt-universitaet-zu-berlin"/>
+        <rdfs:label>Milan Milanovic</rdfs:label>
+        <name>Milan Milanovic</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/milan-stankovic">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universite-paris-sud-xi-orsay"/>
+        <rdfs:label>Milan Stankovic</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/France"/>
+        <name>Milan Stankovic</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/mohamed-ben-ahmed">
+        <rdfs:label>Mohamed Ben Ahmed</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/30"/>
+        <name>Mohamed Ben Ahmed</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/muhammad-tanvir-afzal">
+        <rdfs:label>Muhammad Tanvir Afzal</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/27"/>
+        <name>Muhammad Tanvir Afzal</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nadia-yacoubi">
+        <rdfs:label>Nadia Yacoubi</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/30"/>
+        <name>Nadia Yacoubi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/oemer-karacan">
+        <rdfs:label>Ömer Karacan</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/26"/>
+        <name>Ömer Karacan</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/oktie-hassanzadeh">
+        <rdfs:label>Oktie Hassanzadeh</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/45"/>
+        <name>Oktie Hassanzadeh</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/olaf-hartig">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/humboldt-universitaet-zu-berlin"/>
+        <rdfs:label>Olaf Hartig</rdfs:label>
+        <name>Olaf Hartig</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/olga-streibel">
+        <rdfs:label>Olga Streibel</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/20"/>
+        <name>Olga Streibel</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/olivier-berger">
+        <rdfs:label>Olivier Berger</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/41"/>
+        <name>Olivier Berger</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/orri-erling">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/openlink-software"/>
+        <rdfs:label>Orri Erling</rdfs:label>
+        <name>Orri Erling</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/panos-andriopoulos">
+        <rdfs:label>Panos Andriopoulos</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/44"/>
+        <name>Panos Andriopoulos</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/paola-di-maio">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/strathclyde-university"/>
+        <rdfs:label>Paola Di Maio</rdfs:label>
+        <rdfs:label>Paola DiMaio</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/38"/>
+        <name>Paola Di Maio</name>
+        <name>Paola DiMaio</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/pasi-pohjola">
+        <rdfs:label>Pasi Pohjola</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/31"/>
+        <name>Pasi Pohjola</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/patrick-hoefler">
+        <rdfs:label>Patrick Hoefler</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/17"/>
+        <name>Patrick Hoefler</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peter-hofbauer">
+        <rdfs:label>Peter Hofbauer</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/26"/>
+        <name>Peter Hofbauer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peter-reiser">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/sun-microsystems"/>
+        <rdfs:label>Peter Reiser</rdfs:label>
+        <name>Peter Reiser</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/phillip-obermeir">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin"/>
+        <rdfs:label>Phillip Obermeir</rdfs:label>
+        <name>Phillip Obermeir</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/punitha-swamy">
+        <rdfs:label>Punitha Swamy</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/22"/>
+        <name>Punitha Swamy</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/radoslaw-oldakowski">
+        <rdfs:label>Radoslaw Oldakowski</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/20"/>
+        <name>Radoslaw Oldakowski</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ralf-heese">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin"/>
+        <rdfs:label>Ralf Heese</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/20"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/29"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/8"/>
+        <name>Ralf Heese</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ralph-schaefermeier">
+        <rdfs:label>Ralph Schäfermeier</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/20"/>
+        <name>Ralph Schäfermeier</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/rejandra-akerkar">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/technomathematics-research-foundation"/>
+        <rdfs:label>Rejandra Akerkar</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/India"/>
+        <name>Rejandra Akerkar</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/reto-krummenacher">
+        <rdfs:label>Reto Krummenacher</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/4"/>
+        <name>Reto Krummenacher</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/richard-cyganiak">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <rdfs:label>Richard Cyganiak</rdfs:label>
+        <name>Richard Cyganiak</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/richard-von-kaufmann">
+        <rdfs:label>Richard von Kaufmann</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/40"/>
+        <name>Richard von Kaufmann</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/riichiro-mizoguchi">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/osaka-university-japan"/>
+        <rdfs:label>R. Mizoguchi</rdfs:label>
+        <name>R. Mizoguchi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/rim-djedidi">
+        <rdfs:label>Rim Djedidi</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/21"/>
+        <name>Rim Djedidi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ritva-engestroem">
+        <rdfs:label>Ritva Engeström</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/31"/>
+        <name>Ritva Engeström</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/robert-tolksdorf">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin"/>
+        <rdfs:label>Robert Tolksdorf</rdfs:label>
+        <name>Robert Tolksdorf</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/robert-villa">
+        <rdfs:label>Robert Villa</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/22"/>
+        <name>Robert Villa</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/rokas-firantas">
+        <rdfs:label>Rokas Firantas</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/2"/>
+        <name>Rokas Firantas</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ronald-stamper">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-twente"/>
+        <rdfs:label>Ronald Stamper</rdfs:label>
+        <name>Ronald Stamper</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/roxana-girju">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-illinois"/>
+        <rdfs:label>Roxana Girju</rdfs:label>
+        <name>Roxana Girju</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sami-paavola">
+        <rdfs:label>Sami Paavola</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/31"/>
+        <name>Sami Paavola</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sandra-lovrencic">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-zagreb"/>
+        <rdfs:label>Sandra Lovrencic</rdfs:label>
+        <name>Sandra Lovrencic</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sanja-vranes">
+        <rdfs:label>Sanja Vraneš</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/13"/>
+        <name>Sanja Vraneš</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sebastian-dietzold">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universitaet-leipzig"/>
+        <rdfs:label>Sebastian Dietzold</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <name>Sebastian Dietzold</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sebastian-hellmann">
+        <rdfs:label>Sebastian Hellmann</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/46"/>
+        <name>Sebastian Hellmann</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sellami-mokhtar">
+        <rdfs:label>Sellami Mokhtar</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/28"/>
+        <name>Sellami Mokhtar</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/selver-softic">
+        <rdfs:label>Selver Softic</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/16"/>
+        <name>Selver Softic</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/simone-braun">
+        <rdfs:label>Simone Braun</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/5"/>
+        <name>Simone Braun</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/soeren-auer">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universitaet-leipzig"/>
+        <rdfs:label>Soeren Auer</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <name>Soeren Auer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/stefanie-lindstaedt">
+        <rdfs:label>Stefanie Lindstaedt</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/10"/>
+        <name>Stefanie Lindstaedt</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/steffen-staab">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-koblenz-landau"/>
+        <rdfs:label>Steffen Staab</rdfs:label>
+        <name>Steffen Staab</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/taleb-nora">
+        <rdfs:label>Taleb Nora</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/28"/>
+        <name>Taleb Nora</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/tassilo-pellegrini">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/semantic-web-company"/>
+        <rdfs:label>Tassilo Pellegrini</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Austria"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/1"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/12"/>
+        <name>Tassilo Pellegrini</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/thomas-schandl">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/semantic-web-company"/>
+        <rdfs:label>Thomas Schandl</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <name>Thomas Schandl</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/timo-honkela">
+        <rdfs:label>Timo Honkela</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/31"/>
+        <name>Timo Honkela</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/tobias-buerger">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-universitaet-innsbruck"/>
+        <rdfs:label>Tobias Buerger</rdfs:label>
+        <rdfs:label>Tobias Bürger</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/22"/>
+        <name>Tobias Buerger</name>
+        <name>Tobias Bürger</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/tom-heath">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/talis-information-limited"/>
+        <rdfs:label>Tom Heath</rdfs:label>
+        <name>Tom Heath</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/valentin-vlasceanu">
+        <rdfs:label>Valentin Vlasceanu</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/41"/>
+        <name>Valentin Vlasceanu</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/valentin-zacharias">
+        <rdfs:label>Valentin Zacharias</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/5"/>
+        <name>Valentin Zacharias</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/valentina-janev">
+        <rdfs:label>Valentina Janev</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/13"/>
+        <name>Valentina Janev</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/viktoria-pammer">
+        <rdfs:label>Viktoria Pammer</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/10"/>
+        <name>Viktoria Pammer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/violeta-damjanovic">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/salzburg-research"/>
+        <rdfs:label>Violeta Damjanovic</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/11"/>
+        <name>Violeta Damjanovic</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/vito-roberto">
+        <rdfs:label>Vito Roberto</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/36"/>
+        <name>Vito Roberto</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/walter-woelfel">
+        <rdfs:label>Walter Wölfel</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/26"/>
+        <name>Walter Wölfel</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/wernher-behrendt">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/salzburg-research"/>
+        <rdfs:label>Wernher Behrendt</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/1"/>
+        <name>Wernher Behrendt</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/wolfgang-halb">
+        <rdfs:label>Wolfgang Halb</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/16"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/22"/>
+        <name>Wolfgang Halb</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/wolfgang-weiss">
+        <rdfs:label>Wolfgang Weiss</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/22"/>
+        <name>Wolfgang Weiss</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yann-pollet">
+        <rdfs:label>Yann Pollet</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/paper/main/30"/>
+        <name>Yann Pollet</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/zoran-jeremic">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/isemantics/2009/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/military-academy-belgrade-serbia"/>
+        <rdfs:label>Zoran Jeremic</rdfs:label>
+        <name>Zoran Jeremic</name>
+    </Person>
+</rdf:RDF>

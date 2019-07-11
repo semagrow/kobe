@@ -1,0 +1,544 @@
+
+<!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
+<!--     using base file:///Users/knud/Projekte/dogfood-svn/easyChair2RDF/output-iwod-conference-data.rdf-->
+
+
+<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:ical="http://www.w3.org/2002/12/cal/ical#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swc="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:swrc="http://swrc.ontoware.org/ontology#"
+    xmlns:swrc_ext="http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#">
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/forth-ics">
+        <rdfs:label>FORTH</rdfs:label>
+        <rdfs:label>Institute of Computer Science, Greece</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/dimitris-plexousakis"/>
+        <member rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <member rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        <name>FORTH</name>
+        <name>Institute of Computer Science, Greece</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/fraunhofer-institute-for-computer-graphics-research-igd">
+        <rdfs:label>Fraunhofer Institute for Computer Graphics Research (IGD)</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/renata-dividino"/>
+        <name>Fraunhofer Institute for Computer Graphics Research (IGD)</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/free-university-of-bozen-bolzano">
+        <rdfs:label>Free University of Bozen-Bolzano</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/alessandro-artale"/>
+        <name>Free University of Bozen-Bolzano</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki">
+        <rdfs:label>German Research Center for Artificial Intelligence (DFKI)</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/daniel-sonntag"/>
+        <name>German Research Center for Artificial Intelligence (DFKI)</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/kmi-the-open-university-uk">
+        <rdfs:label>The Open University</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/enrico-motta"/>
+        <member rdf:resource="http://data.semanticweb.org/person/fouad-zablith"/>
+        <member rdf:resource="http://data.semanticweb.org/person/marta-sabou"/>
+        <member rdf:resource="http://data.semanticweb.org/person/mathieu-daquin"/>
+        <name>The Open University</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/meraka-institute">
+        <rdfs:label>Meraka Institute</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/thomas-meyer"/>
+        <name>Meraka Institute</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/ntnu">
+        <rdfs:label>Norwegian University of Science and Technology</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/jon-atle-gulla"/>
+        <name>Norwegian University of Science and Technology</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/oakland-university">
+        <rdfs:label>Oakland University</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/vijayan-sugumaran"/>
+        <name>Oakland University</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/simon-fraser-university">
+        <rdfs:label>Simon Fraser University</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/james-delgrande"/>
+        <name>Simon Fraser University</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/universidad-nacional-del-sur-uns">
+        <rdfs:label>Universidad Nacional del Sur (UNS)</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/marcelo-falappa"/>
+        <member rdf:resource="http://data.semanticweb.org/person/martin-moguillansky"/>
+        <member rdf:resource="http://data.semanticweb.org/person/nicolas-rotstein"/>
+        <name>Universidad Nacional del Sur (UNS)</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/universidade-de-sao-paulo">
+        <rdfs:label>Universidade de São Paulo</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/renata-wassermann"/>
+        <name>Universidade de São Paulo</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/universitaet-karlsruhe">
+        <rdfs:label>University of Karlsruhe</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/guilin-qi"/>
+        <member rdf:resource="http://data.semanticweb.org/person/peter-haase"/>
+        <name>University of Karlsruhe</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-aberdeen">
+        <rdfs:label>University of Aberdeen</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/jeff-z-pan"/>
+        <name>University of Aberdeen</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-applied-sciences-northwestern-switzerland">
+        <rdfs:label>University of Applied Sciences Northwestern Switzerland</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/holger-wache"/>
+        <name>University of Applied Sciences Northwestern Switzerland</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-bari">
+        <rdfs:label>Universita degli Studi di Bari</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/floriana-esposito"/>
+        <member rdf:resource="http://data.semanticweb.org/person/francesca-lisi"/>
+        <name>Universita degli Studi di Bari</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-mannheim">
+        <rdfs:label>University of Mannheim</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <name>University of Mannheim</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands">
+        <rdfs:label>Vrije Universiteit Amsterdam</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/zhisheng-huang"/>
+        <name>Vrije Universiteit Amsterdam</name>
+    </Organization>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alessandro-artale">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/free-university-of-bozen-bolzano"/>
+        <rdfs:label>Alessandro Artale</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <mbox_sha1sum>9559e5eedaa732e6b078a247cb3bf38263fa509c</mbox_sha1sum>
+        <name>Alessandro Artale</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/daniel-sonntag">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki"/>
+        <rdfs:label>Daniel Sonntag</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/1"/>
+        <mbox_sha1sum>defd58582d0124ecc531d61cd00fb7f2a6016df1</mbox_sha1sum>
+        <name>Daniel Sonntag</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dimitris-plexousakis">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/forth-ics"/>
+        <rdfs:label>Dimitris Plexousakis</rdfs:label>
+        <name>Dimitris Plexousakis</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/enrico-motta">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/kmi-the-open-university-uk"/>
+        <rdfs:label>Enrico Motta</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_Kingdom"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/4"/>
+        <mbox_sha1sum>28a0f82609671f47d811e6bee865afb23abfb8db</mbox_sha1sum>
+        <name>Enrico Motta</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/floriana-esposito">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-bari"/>
+        <rdfs:label>Floriana Esposito</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/5"/>
+        <mbox_sha1sum>e11d3c3bab0abac8725bcfe1aaa2511f49f79713</mbox_sha1sum>
+        <name>Floriana Esposito</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/fouad-zablith">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/kmi-the-open-university-uk"/>
+        <rdfs:label>Fouad Zablith</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_Kingdom"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/4"/>
+        <mbox_sha1sum>388132c508c443bcb261ded283b98383f4f4149f</mbox_sha1sum>
+        <name>Fouad Zablith</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/francesca-lisi">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-bari"/>
+        <rdfs:label>Francesca Lisi</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/5"/>
+        <mbox_sha1sum>082657c852d69248417b8795e8e81298c554da83</mbox_sha1sum>
+        <name>Francesca Lisi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/giorgos-flouris">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/chair/organisingcommitteemember"/>
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/forth-ics"/>
+        <rdfs:label>Giorgos Flouris</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Greece"/>
+        <mbox_sha1sum>dc808b065733afaf3aa11d334f478b26f7ef527d</mbox_sha1sum>
+        <name>Giorgos Flouris</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/grigoris-antoniou">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/chair/organisingcommitteemember"/>
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/forth-ics"/>
+        <rdfs:label>Grigoris Antoniou</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Greece"/>
+        <mbox_sha1sum>f44cd7769f416e96864ac43498b082155196829e</mbox_sha1sum>
+        <name>Grigoris Antoniou</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/guilin-qi">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universitaet-karlsruhe"/>
+        <rdfs:label>Guilin Qi</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <mbox_sha1sum>7618a76dbd015fd744d2a2d5ef46642e65764490</mbox_sha1sum>
+        <name>Guilin Qi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/heiner-stuckenschmidt">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-mannheim"/>
+        <rdfs:label>Heiner Stuckenschmidt</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <mbox_sha1sum>f072571d8c8abd21e637a9dec2c5e835165c8ece</mbox_sha1sum>
+        <name>Heiner Stuckenschmidt</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/holger-wache">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-applied-sciences-northwestern-switzerland"/>
+        <rdfs:label>Holger Wache</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Switzerland"/>
+        <mbox_sha1sum>612ab1009b9f9bb7c31f53982a6de846e572dfff</mbox_sha1sum>
+        <name>Holger Wache</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/james-delgrande">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/simon-fraser-university"/>
+        <rdfs:label>James Delgrande</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Canada"/>
+        <mbox_sha1sum>612fd5e0f87bbfa4e40f864689eeed6477daa54e</mbox_sha1sum>
+        <name>James Delgrande</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jeff-z-pan">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-aberdeen"/>
+        <rdfs:label>Jeff Z. Pan</rdfs:label>
+        <name>Jeff Z. Pan</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jon-atle-gulla">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ntnu"/>
+        <rdfs:label>Jon Atle Gulla</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Norway"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/2"/>
+        <mbox_sha1sum>ee30decb84ca12092dac4b6a6e960a348363646a</mbox_sha1sum>
+        <name>Jon Atle Gulla</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marcelo-falappa">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universidad-nacional-del-sur-uns"/>
+        <rdfs:label>Marcelo Falappa</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Argentina"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/3"/>
+        <mbox_sha1sum>e7996a4e8321c123cb491771157e9cc24a3cfbbd</mbox_sha1sum>
+        <name>Marcelo Falappa</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marta-sabou">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/kmi-the-open-university-uk"/>
+        <rdfs:label>Marta Sabou</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_Kingdom"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/4"/>
+        <mbox_sha1sum>19f8655880a3531e2a1d6eb329f44d5d6b88324b</mbox_sha1sum>
+        <name>Marta Sabou</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/martin-moguillansky">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universidad-nacional-del-sur-uns"/>
+        <rdfs:label>Martin Moguillansky</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Argentina"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/3"/>
+        <mbox_sha1sum>05879450ba4781510619a0bcce12a72a51ceaf91</mbox_sha1sum>
+        <name>Martin Moguillansky</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/mathieu-daquin">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/chair/organisingcommitteemember"/>
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/kmi-the-open-university-uk"/>
+        <rdfs:label>Mathieu d'Aquin</rdfs:label>
+        <rdfs:label>Mathieu d’Aquin</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Great_Britain"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_Kingdom"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/4"/>
+        <mbox_sha1sum>e61cc68181adeb9fbbddc539a6fa01dd24b299c8</mbox_sha1sum>
+        <name>Mathieu d'Aquin</name>
+        <name>Mathieu d’Aquin</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nicolas-rotstein">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universidad-nacional-del-sur-uns"/>
+        <rdfs:label>Nicolas Rotstein</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Argentina"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/3"/>
+        <mbox_sha1sum>f6854301d1429ff6e2b7b3251227203ed4195220</mbox_sha1sum>
+        <name>Nicolas Rotstein</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peter-haase">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universitaet-karlsruhe"/>
+        <rdfs:label>Peter Haase</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <mbox_sha1sum>37df258c12bd6cff2ef621f28549b5e48334e3d1</mbox_sha1sum>
+        <name>Peter Haase</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/renata-dividino">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/fraunhofer-institute-for-computer-graphics-research-igd"/>
+        <rdfs:label>Renata Dividino</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/1"/>
+        <mbox_sha1sum>e0924a593798bdbaa39fd04ee8e9d9d5e1dd18ad</mbox_sha1sum>
+        <name>Renata Dividino</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/renata-wassermann">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universidade-de-sao-paulo"/>
+        <rdfs:label>Renata Wassermann</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Brazil"/>
+        <mbox_sha1sum>a70ec591561a81e38107ddc7de18167a32775608</mbox_sha1sum>
+        <name>Renata Wassermann</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/thomas-meyer">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/meraka-institute"/>
+        <rdfs:label>Thomas Meyer</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/South_Africa"/>
+        <mbox_sha1sum>b76b053d4974b2d025df52989b8d9af9f0bb9ca7</mbox_sha1sum>
+        <name>Thomas Meyer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/vijayan-sugumaran">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/oakland-university"/>
+        <rdfs:label>Vijayan Sugumaran</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/2"/>
+        <mbox_sha1sum>090fcb89fa62a44e520a5a2bc2aa800b3125931e</mbox_sha1sum>
+        <name>Vijayan Sugumaran</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/zhisheng-huang">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands"/>
+        <rdfs:label>Zhisheng Huang</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/The_Netherlands"/>
+        <mbox_sha1sum>238a59a17bd96fbb93f39aa9dba2f6847a8d261c</mbox_sha1sum>
+        <name>Zhisheng Huang</name>
+    </Person>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/iwod/2008">
+        <swc:completeGraph rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/complete"/>
+        <swc:hasAcronym>IWOD2008</swc:hasAcronym>
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/proceedings"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/chair/organisingcommitteemember"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember"/>
+        <rdfs:label>International Workshop on Ontology Dynamics</rdfs:label>
+        <ical:dtend rdf:parseType="Resource">
+            <ical:date>2008-10-27</ical:date>
+            <ical:tzid>GMT+1</ical:tzid>
+        </ical:dtend>
+        <ical:dtstart rdf:parseType="Resource">
+            <ical:date>2008-10-27</ical:date>
+            <ical:tzid>GMT+1</ical:tzid>
+        </ical:dtstart>
+        <ical:url rdf:resource="http://www.csd.abdn.ac.uk/iwod2008/"/>
+        <homepage rdf:resource="http://www.csd.abdn.ac.uk/iwod2008/"/>
+    </swc:WorkshopEvent>
+
+    <swc:OrganisingCommitteeMember rdf:about="http://data.semanticweb.org/workshop/iwod/2008/main/chair/organisingcommitteemember">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/dimitris-plexousakis"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/jeff-z-pan"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/mathieu-daquin"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/iwod/2008"/>
+    </swc:OrganisingCommitteeMember>
+
+    <swc:PCMember rdf:about="http://data.semanticweb.org/workshop/iwod/2008/main/pcmember">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/alessandro-artale"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/guilin-qi"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/holger-wache"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/james-delgrande"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/mathieu-daquin"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/peter-haase"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/renata-wassermann"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/thomas-meyer"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/zhisheng-huang"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/iwod/2008"/>
+    </swc:PCMember>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/iwod/2008/paper/main/1">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/daniel-sonntag"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/renata-dividino"/>
+        <dc:title>Controlled Ontology Evolution through Semiotic-based Ontology Evaluation</dc:title>
+        <swrc:abstract>Ontology evaluation is an important issue that must be addressed during the lifecycle of an ontology because it assures that the ontology reflects the desired requirements during selection, design, population, evolution, usage, or other processes of the ontology lifecycle. Ontology evaluation aims at assessing the quality and the adequacy of an ontology from the point of view of a particular predefined criterion, for use in a specific context, for a specific purpose. Here, we demonstrate that evaluation is an important issue for ontology evolution. To capture the different nature of evaluation and evolution criteria, we use a tool (S-OntoEval) aiming at assessing ontology quality by implementing existing quality metrics that draw upon semiotic theory. An evaluation of the SWIntO ontology of the SmartWeb project shows its controlled evolution by quality measurement and improvement.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/daniel-sonntag"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/renata-dividino"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/renata-dividino"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/daniel-sonntag"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Controlled Ontology Evolution through Semiotic-based Ontology Evaluation</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/daniel-sonntag"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/renata-dividino"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/iwod/2008/paper/main/2">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jon-atle-gulla"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/vijayan-sugumaran"/>
+        <dc:subject>Ontologies</dc:subject>
+        <dc:subject>Ontology Creation</dc:subject>
+        <dc:subject>Semantic Web</dc:subject>
+        <dc:subject>Text Mining</dc:subject>
+        <dc:title>An Ontology Creation Methodology: A Phased Approach</dc:title>
+        <swrc:abstract>Existing ontology construction workbenches have severe limitations in creating ontologies from representative text collections. This paper presents a new workbench-supported ontology creation methodology that is specially designed for non-ontology experts with little knowledge of semantic markup languages. The workbench generates OWL models and is implemented as part of a search project for the entertainment domain. New techniques are gradually being added to the workbench, and early testing indicates that the ontology creation approach can be used by domain experts without much guidance from ontology experts.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jon-atle-gulla"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/vijayan-sugumaran"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/jon-atle-gulla"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/vijayan-sugumaran"/>
+        </swrc_ext:authorList>
+        <rdfs:label>An Ontology Creation Methodology: A Phased Approach</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/jon-atle-gulla"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/vijayan-sugumaran"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/iwod/2008/paper/main/3">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/marcelo-falappa"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/martin-moguillansky"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/nicolas-rotstein"/>
+        <dc:title>A Theoretical Model to Handle Ontology Debugging &#38; Change Through Argumentation</dc:title>
+        <swrc:abstract>A dynamic argumentation framework based on ALC description logics is presented by extending notions from argumentation. Since argumentation frameworks reason over graphs that relate arguments through attack, a methodology is proposed to bridge ontology-specific concepts to argumentation notions. In this way, inconsistency in the former will be represented as an attack in the latter. This approach benefits from (argumentation) acceptability semantics to restore consistency to ontologies. Finally, a model of ontology change is presented along with a rational characterization.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/marcelo-falappa"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/martin-moguillansky"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/nicolas-rotstein"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/martin-moguillansky"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/nicolas-rotstein"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/marcelo-falappa"/>
+        </swrc_ext:authorList>
+        <rdfs:label>A Theoretical Model to Handle Ontology Debugging &#38; Change Through Argumentation</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/marcelo-falappa"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/martin-moguillansky"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/nicolas-rotstein"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/iwod/2008/paper/main/4">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/enrico-motta"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/fouad-zablith"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/marta-sabou"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/mathieu-daquin"/>
+        <dc:title>Using Background Knowledge for Ontology Evolution</dc:title>
+        <swrc:abstract>One of the current bottlenecks for automating ontology evolution is resolving the right links between newly arising information and the existing knowledge in the ontology. Most of existing approaches mainly rely on the user when it comes to capturing and representing new knowledge. Our ontology evolution framework intends to reduce or even eliminate user input through the use of background knowledge. In this paper, we show how various sources of background knowledge could be exploited for relation discovery. We perform a relation discovery experiment focusing on the use of WordNet and Semantic Web ontologies as sources of background knowledge. We back our experiment with a thorough analysis that highlights various issues on how to improve and validate relation discovery in the future, which will directly improve the task of automatically performing ontology changes during evolution.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/enrico-motta"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/fouad-zablith"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/marta-sabou"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/mathieu-daquin"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/fouad-zablith"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/marta-sabou"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/mathieu-daquin"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/enrico-motta"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Using Background Knowledge for Ontology Evolution</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/enrico-motta"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/fouad-zablith"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/marta-sabou"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/mathieu-daquin"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/iwod/2008/paper/main/5">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/floriana-esposito"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/francesca-lisi"/>
+        <dc:title>Supporting the Evolution of SHIQ Ontologies with Inductive Logic Programming -- A Preliminary Study</dc:title>
+        <swrc:abstract>The definition of new concepts or roles for which extensional knowledge become available can turn out to be necessary to make a DL ontology evolve. In this paper we reformulate this task as a machine learning problem and study a solution based on techniques borrowed from that form of logic-based machine learning known under the name of Inductive Logic Programming (ILP). More precisely, we propose to adapt previous ILP results to the knowledge representation framework of DL+log in order to learn rules to be used for changing SHIQ ontologies.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/floriana-esposito"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/francesca-lisi"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/francesca-lisi"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/floriana-esposito"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Supporting the Evolution of SHIQ Ontologies with Inductive Logic Programming -- A Preliminary Study</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/floriana-esposito"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/francesca-lisi"/>
+    </swrc:InProceedings>
+
+    <swrc:Proceedings rdf:about="http://data.semanticweb.org/workshop/iwod/2008/proceedings">
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/1"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/2"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/3"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/4"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/iwod/2008/paper/main/5"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/iwod/2008"/>
+        <swrc:booktitle>Proceedings of the International Workshop on Ontology Dynamics at ISWC2008, October 26-30, 2008</swrc:booktitle>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/dimitris-plexousakis"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/jeff-z-pan"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/mathieu-daquin"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:editorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/dimitris-plexousakis"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/jeff-z-pan"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/mathieu-daquin"/>
+            <rdf:_5 rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        </swrc_ext:editorList>
+    </swrc:Proceedings>
+</rdf:RDF>

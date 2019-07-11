@@ -1,0 +1,840 @@
+
+<!-- Processed by Id: cwm.py,v 1.193 2007/06/26 02:36:15 syosi Exp -->
+<!--     using base file:///Users/knud/Projekte/data.semanticweb.org/iswc+aswc2007dataConversion/cleanCMT/-->
+
+
+<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:ical="http://www.w3.org/2002/12/cal/ical#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swc="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:swrc="http://swrc.ontoware.org/ontology#"
+    xmlns:swrc_ext="http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#">
+
+    <swc:ConferenceEvent rdf:about="http://data.semanticweb.org/conference/iswc-aswc/2007">
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/workshop/esoe/2007"/>
+    </swc:ConferenceEvent>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/freie-universitaet-berlin">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Freie_Universitaet_Berlin"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Freie_Universitaet_Berlin"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>52.448118</geo:lat>
+            <geo:long>13.286104</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.fu-berlin.de/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/olga-streibel"/>
+        <name>Freie Universität Berlin</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/furtwangen-university">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Furtwangen_University"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Furtwangen_University"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>48.051328</geo:lat>
+            <geo:long>8.207538</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.fh-furtwangen.de/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/timo-muenster"/>
+        <member rdf:resource="http://data.semanticweb.org/person/tobias-kowatsch"/>
+        <member rdf:resource="http://data.semanticweb.org/person/wolfgang-maass"/>
+        <name>Furtwangen University</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/furtwangen-university/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/FZI_Forschungszentrum_Informatik"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/FZI_Forschungszentrum_Informatik"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>49.012057</geo:lat>
+            <geo:long>8.424985</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.fzi.de/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/andreas-walter"/>
+        <member rdf:resource="http://data.semanticweb.org/person/simone-braun"/>
+        <member rdf:resource="http://data.semanticweb.org/person/valentin-zacharias"/>
+        <name>FZI Forschungszentrum Informatik</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/irit-universite-paul-sabatier">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/IRIT_Universite_Paul_Sabatier"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/IRIT_Universite_Paul_Sabatier"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>43.563255</geo:lat>
+            <geo:long>1.461377</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.irit.fr/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/kevin-ottens"/>
+        <member rdf:resource="http://data.semanticweb.org/person/marie-pierre-gleizes"/>
+        <member rdf:resource="http://data.semanticweb.org/person/nathalie-aussenac-gilles"/>
+        <member rdf:resource="http://data.semanticweb.org/person/valerie-camps"/>
+        <name>IRIT - Université Paul Sabatier</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/irit-universite-paul-sabatier/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/lri-university-of-paris-sud">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/LRI_University_of_Paris-Sud"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/LRI_University_of_Paris-Sud"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>48.702362</geo:lat>
+            <geo:long>2.181687</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.lri.fr/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/chantal-reynaud"/>
+        <name>LRI - University of Paris-Sud</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/lri-university-of-paris-sud/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/osaka-university-japan">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Osaka_University_Japan"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Osaka_University_Japan"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>34.68</geo:lat>
+            <geo:long>135.5</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.osaka-u.ac.jp/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/riichiro-mizoguchi"/>
+        <member rdf:resource="http://data.semanticweb.org/person/kouji-kozaki"/>
+        <member rdf:resource="http://data.semanticweb.org/person/yoshinobu-kitamura"/>
+        <name>Osaka University, Japan</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/osaka-university-japan/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/universita-politecnica-delle-marche">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Universita_Politecnica_delle_Marche"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Universita_Politecnica_delle_Marche"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>43.589219</geo:lat>
+            <geo:long>13.518934</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.univpm.it/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/aldo-franco-dragoni"/>
+        <member rdf:resource="http://data.semanticweb.org/person/mauro-mazzieri"/>
+        <name>Università Politecnica delle Marche</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/universita-politecnica-delle-marche/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-luxembourg">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/University_of_Luxembourg"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/University_of_Luxembourg"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>49.631506</geo:lat>
+            <geo:long>6.116381</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.uni.lu/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/cedric-pruski"/>
+        <member rdf:resource="http://data.semanticweb.org/person/nicolas-guelfi"/>
+        <name>University of Luxembourg</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/university-of-luxembourg/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-southampton">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/University_of_Southampton"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/University_of_Southampton"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>50.934038</geo:lat>
+            <geo:long>-1.396307</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.soton.ac.uk/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/ching-man-au-yeung"/>
+        <member rdf:resource="http://data.semanticweb.org/person/nicholas-gibbins"/>
+        <member rdf:resource="http://data.semanticweb.org/person/nigel-r-shadbolt"/>
+        <name>University of Southampton</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/university-of-southampton/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-the-aegean">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/University_of_the_Aegean"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/University_of_the_Aegean"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>39.063782</geo:lat>
+            <geo:long>26.603651</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.aegean.gr/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/george-vouros"/>
+        <member rdf:resource="http://data.semanticweb.org/person/konstantinos-kotis"/>
+        <name>University of the Aegean</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/university-of-the-aegean/html"/>
+    </Organization>
+
+    <Person rdf:about="http://data.semanticweb.org/person/aldo-franco-dragoni">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universita-politecnica-delle-marche"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Aldo_Franco_Dragoni"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Aldo_Franco_Dragoni"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/562"/>
+        <mbox_sha1sum>40e203bc6eb7e19f107b4fe10c52acddd1f35a22</mbox_sha1sum>
+        <name>Aldo Franco Dragoni</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Aldo_Franco_Dragoni"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andreas-hotho">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/chair_0"/>
+        <mbox_sha1sum>618346f249ba96ff62d1a2765d7badc4282125ad</mbox_sha1sum>
+        <name>Andreas Hotho</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andreas-schmidt">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Andreas_Schmidt"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Andreas_Schmidt"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/565"/>
+        <mbox_sha1sum>44d5688b295742902f566175753460e7af82bf29</mbox_sha1sum>
+        <name>Andreas Schmidt</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Andreas_Schmidt"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andreas-walter">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Andreas_Walter"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Andreas_Walter"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/565"/>
+        <mbox_sha1sum>f50483d52b45c811373a69473e90fa26c92b61f2</mbox_sha1sum>
+        <name>Andreas Walter</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Andreas_Walter"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/cedric-pruski">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-luxembourg"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Cedric_Pruski"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Cedric_Pruski"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/568"/>
+        <mbox_sha1sum>cf9763f11adc387da1afbbb416050eaf24783d9f</mbox_sha1sum>
+        <name>Cedric Pruski</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Cedric_Pruski"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/chantal-reynaud">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/lri-university-of-paris-sud"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Chantal_Reynaud"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Chantal_Reynaud"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/568"/>
+        <mbox_sha1sum>04ce08482efb0b78b1bfcd21b5cdfae552c1248a</mbox_sha1sum>
+        <name>Chantal Reynaud</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Chantal_Reynaud"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ching-man-au-yeung">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-southampton"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Ching_Man_Au_Yeung"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Ching_Man_Au_Yeung"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/564"/>
+        <mbox_sha1sum>46dd827656a64f32a384fa2fd0803e4d29f298b0</mbox_sha1sum>
+        <name>Ching Man Au Yeung</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Ching_Man_Au_Yeung"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/christos-chalkiopoulos-christos">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Christos_Chalkiopoulos_Christos"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Christos_Chalkiopoulos_Christos"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/566"/>
+        <mbox_sha1sum>0ac4ff05224fd1526477e6c87717811be7a522b1</mbox_sha1sum>
+        <name>Christos Chalkiopoulos Christos</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Christos_Chalkiopoulos_Christos"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/eiichi-sunagawa">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Eiichi_Sunagawa"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Eiichi_Sunagawa"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/569"/>
+        <mbox_sha1sum>f6daf71071f921756042626ff0b9916e416e781c</mbox_sha1sum>
+        <name>Eiichi Sunagawa</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Eiichi_Sunagawa"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ernie-ong">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/chair_0"/>
+        <mbox_sha1sum>c8662948be18ca59557f5c9f29cbcac1429e2665</mbox_sha1sum>
+        <name>Ernie Ong</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/george-vouros">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-the-aegean"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/George_Vouros"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/George_Vouros"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/566"/>
+        <mbox_sha1sum>358c03a5d9940c9255d9f614c0b75c72bbd70113</mbox_sha1sum>
+        <name>George Vouros</name>
+        <page rdf:resource="http://ontoworld.org/wiki/George_Vouros"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kevin-ottens">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/irit-universite-paul-sabatier"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Kevin_Ottens"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Kevin_Ottens"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/570"/>
+        <mbox_sha1sum>9bebd073ff228ab95590ed44a0369a735e4682ae</mbox_sha1sum>
+        <name>Kévin Ottens</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Kevin_Ottens"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/konstantinos-kotis">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-the-aegean"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Konstantinos_Kotis"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Konstantinos_Kotis"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/566"/>
+        <mbox_sha1sum>1005832a13d62538b91d368d750b0fd7aff0be7f</mbox_sha1sum>
+        <name>Konstantinos Kotis</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Konstantinos_Kotis"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kouji-kozaki">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/osaka-university-japan"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Kouji_Kozaki"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Kouji_Kozaki"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/569"/>
+        <mbox_sha1sum>c493b1b07fa4dacfdda46edc55ebae341758972f</mbox_sha1sum>
+        <name>Kouji Kozaki</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Kouji_Kozaki"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/luke-chen">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/chair_0"/>
+        <mbox_sha1sum>17cd3cd3ad7edfdb3dc2abd7c1ba5029938c7e6b</mbox_sha1sum>
+        <name>Luke Chen</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marie-pierre-gleizes">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/irit-universite-paul-sabatier"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Marie-Pierre_Gleizes"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Marie-Pierre_Gleizes"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/570"/>
+        <mbox_sha1sum>c44522f6831050654475941af718cf94de52eec9</mbox_sha1sum>
+        <name>Marie-Pierre Gleizes</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Marie-Pierre_Gleizes"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/mauro-mazzieri">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universita-politecnica-delle-marche"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Mauro_Mazzieri"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Mauro_Mazzieri"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/562"/>
+        <mbox_sha1sum>629d559a4b94b746414b9ea190aaaa6c920f3f7b</mbox_sha1sum>
+        <name>Mauro Mazzieri</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Mauro_Mazzieri"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nathalie-aussenac-gilles">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/irit-universite-paul-sabatier"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Nathalie_Aussenac-Gilles"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Nathalie_Aussenac-Gilles"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/570"/>
+        <mbox_sha1sum>0d8484d596863458892f75339962757725d8ecc8</mbox_sha1sum>
+        <name>Nathalie Aussenac-Gilles</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Nathalie_Aussenac-Gilles"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nicholas-gibbins">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-southampton"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Nicholas_Gibbins"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Nicholas_Gibbins"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/564"/>
+        <mbox_sha1sum>28339a9a36ee4e330da9613958efb89e2961c6cb</mbox_sha1sum>
+        <name>Nicholas Gibbins</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Nicholas_Gibbins"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nicolas-guelfi">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-luxembourg"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Nicolas_Guelfi"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Nicolas_Guelfi"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/568"/>
+        <mbox_sha1sum>1c0e5098bb3f71e7bb516e9bceb265caf15baac9</mbox_sha1sum>
+        <name>Nicolas Guelfi</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Nicolas_Guelfi"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nigel-r-shadbolt">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-southampton"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Nigel_Shadbolt"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Nigel_Shadbolt"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/564"/>
+        <mbox_sha1sum>e966302104bd52f060f0e4545e8299f2d54ee3ae</mbox_sha1sum>
+        <name>Nigel Shadbolt</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Nigel_Shadbolt"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nikoleta-lelli">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Nikoleta_Lelli"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Nikoleta_Lelli"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/566"/>
+        <mbox_sha1sum>cea04cf83fac34830ac4754cb3d5f2fafa47930f</mbox_sha1sum>
+        <name>Nikoleta Lelli</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Nikoleta_Lelli"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/olga-streibel">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Olga_Streibel"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Olga_Streibel"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/571"/>
+        <mbox_sha1sum>6b7f915da290fced0cfa7b4420aca637df200b99</mbox_sha1sum>
+        <name>Olga Streibel</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Olga_Streibel"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peter-haase">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/chair_0"/>
+        <mbox_sha1sum>2ee85d155adcbc166a4b6cde4d53020040e6ea2c</mbox_sha1sum>
+        <name>Peter Haase</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/philippe-cudre-mauroux">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/chair_0"/>
+        <mbox_sha1sum>41c5f6cc92718b433b1369f145d225851873348b</mbox_sha1sum>
+        <name>Philippe Cudre Mauroux</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/riichiro-mizoguchi">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/osaka-university-japan"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Riichiro_Mizoguchi"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Riichiro_Mizoguchi"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/569"/>
+        <mbox_sha1sum>36f7c5e541fbc21084f8bc4c85215922ab342097</mbox_sha1sum>
+        <name>Riichiro Mizoguchi</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Riichiro_Mizoguchi"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/simone-braun">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Simone_Braun"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Simone_Braun"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/565"/>
+        <mbox_sha1sum>126a93c041c139a245c725a26927b0372861f01a</mbox_sha1sum>
+        <name>Simone Braun</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Simone_Braun"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/timo-muenster">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/furtwangen-university"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Timo_Muenster"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Timo_Muenster"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/567"/>
+        <mbox_sha1sum>a1cf45486da562b9e0dc307dca9b55456549a154</mbox_sha1sum>
+        <name>Timo Münster</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Timo_Muenster"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/tobias-kowatsch">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/furtwangen-university"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Tobias_Kowatsch"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Tobias_Kowatsch"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/567"/>
+        <mbox_sha1sum>a920d35329f90706ad8179a588136046094c7d5d</mbox_sha1sum>
+        <name>Tobias Kowatsch</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Tobias_Kowatsch"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/valentin-zacharias">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Valentin_Zacharias"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Valentin_Zacharias"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/565"/>
+        <mbox_sha1sum>641d33ac81d5e4afddca5102950a76ee177b4f88</mbox_sha1sum>
+        <name>Valentin Zacharias</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Valentin_Zacharias"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/valerie-camps">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/irit-universite-paul-sabatier"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Valerie_Camps"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Valerie_Camps"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/570"/>
+        <mbox_sha1sum>36472c790c1ede849a39ecc7bd4cf4de33e883cd</mbox_sha1sum>
+        <name>Valérie Camps</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Valerie_Camps"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/vlad-tanasescu">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Vlad_Tanasescu"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Vlad_Tanasescu"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/571"/>
+        <mbox_sha1sum>6a503d9afd9ff67b5ba1ff23b4cf39a2e933bbca</mbox_sha1sum>
+        <name>Vlad Tanasescu</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Vlad_Tanasescu"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/wolfgang-maass">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/furtwangen-university"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Wolfgang_Maass"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Wolfgang_Maass"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/567"/>
+        <mbox_sha1sum>6716e5d7cecf77816bffe55ee08b078fe7ac1f82</mbox_sha1sum>
+        <name>Wolfgang Maass</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Wolfgang_Maass"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yoshinobu-kitamura">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/osaka-university-japan"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Yoshinobu_Kitamura"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Yoshinobu_Kitamura"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/569"/>
+        <mbox_sha1sum>46de6791f7e7e7d0b6a843c91cf8875be88baa19</mbox_sha1sum>
+        <name>Yoshinobu Kitamura</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Yoshinobu_Kitamura"/>
+    </Person>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/esoe/2007">
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/chair_0"/>
+    </swc:WorkshopEvent>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/esoe/2007">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/proceedings"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/chair_0"/>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/iswc-aswc/2007"/>
+        <rdfs:label>International Workshop on Emergent Semantics and Ontology Evolution</rdfs:label>
+        <ical:summary>International Workshop on Emergent Semantics and Ontology Evolution</ical:summary>
+        <ical:url rdf:resource="http://km.aifb.uni-karlsruhe.de/ws/esoe2007"/>
+		<swc:completeGraph rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/complete"/>
+		<swc:hasAcronym>ESOE2007</swc:hasAcronym>
+    </swc:WorkshopEvent>
+
+    <swc:WorkshopOrganiser rdf:about="http://data.semanticweb.org/workshop/esoe/2007/chair_0">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/andreas-hotho"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/ernie-ong"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/luke-chen"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/peter-haase"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/philippe-cudre-mauroux"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/esoe/2007"/>
+    </swc:WorkshopOrganiser>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/esoe/2007/papers/562">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/talks/562"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/aldo-franco-dragoni"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/mauro-mazzieri"/>
+        <dc:title>Ontology Revision as Non-Prioritized Belief Revision</dc:title>
+        <rdfs:label>Ontology Revision as Non-Prioritized Belief Revision</rdfs:label>
+        <swrc:abstract>Ontology revision is the process of managing an ontology when a new axiom or fact would render it inconsistent. So far, the AGM approach to belief revision has been adapted to work with ontologies. However, when multiple sources are contributing uncertain knowledge about a static domain, an approach that doesn't give priority to incoming information and allows to recover previously discarded axioms is more suited.
+We describe an ontology revision framework that links symbolic and numerical techniques to allow the consistent evolution of an ontology from the contributions of multiple potentially unreliable sources.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/aldo-franco-dragoni"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/mauro-mazzieri"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>Ontology Revision as Non-Prioritized Belief Revision</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/mauro-mazzieri"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/aldo-franco-dragoni"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/esoe-2007-paper-562-ontology-revision"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/aldo-franco-dragoni"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/mauro-mazzieri"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/esoe/2007/papers/564">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/talks/564"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ching-man-au-yeung"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/nicholas-gibbins"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/nigel-r-shadbolt"/>
+        <dc:title>Understanding the Semantics of Ambiguous Tags in Folksonomies</dc:title>
+        <rdfs:label>Understanding the Semantics of Ambiguous Tags in Folksonomies</rdfs:label>
+        <swrc:abstract>The use of tags to describe Web resources in a collaborative manner has experienced rising popularity among Web users in recent years. The product of such activity is given the name folksonomy, which can be considered as a scheme of organizing information in the users' own way. In this paper, we present a possible way to analyze the tripartite graphs - graphs involving users, tags and resources - of folksonomies and discuss how these elements acquire their meanings through their associations with other elements, a process we call mutual contextualization. In particular, we demonstrate how different meanings of ambiguous tags can be discovered through such analysis of the tripartite graph by studying the tag sf. We also discuss how the result can be used as a basis to better understand the nature of folksonomies.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/ching-man-au-yeung"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/nicholas-gibbins"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/nigel-r-shadbolt"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>Understanding the Semantics of Ambiguous Tags in Folksonomies</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/ching-man-au-yeung"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/nicholas-gibbins"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/nigel-r-shadbolt"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/esoe-2007-paper-564-understanding-the"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ching-man-au-yeung"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/nicholas-gibbins"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/nigel-r-shadbolt"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/esoe/2007/papers/565">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/talks/565"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/andreas-schmidt"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/andreas-walter"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/simone-braun"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/valentin-zacharias"/>
+        <dc:title>The Ontology Maturing Approach for Collaborative and Work Integrated Ontology Development: Evaluation Results and Future Directions</dc:title>
+        <rdfs:label>The Ontology Maturing Approach for Collaborative and Work Integrated Ontology Development: Evaluation Results and Future Directions</rdfs:label>
+        <swrc:abstract>Ontology maturing as a conceptual process model is based on the assumption that ontology engineering is a continuous collaborative and informal learning process and always embedded in tasks that make use of the ontology to be developed. For supporting ontology maturing, we need lightweight and easy-to-use tools integrating usage and construction processes of ontologies. Within two applications - ImageNotion for semantic annotation of images and SOBOLEO for semantically enriched social bookmarking - we have shown that such ontology maturing support is feasible with the help of Web 2.0 technologies. In this paper, we want to present the conclusions from two evaluation sessions with end users and summarize requirements for further development.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/andreas-schmidt"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/andreas-walter"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/simone-braun"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/valentin-zacharias"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>The Ontology Maturing Approach for Collaborative and Work Integrated Ontology Development: Evaluation Results and Future Directions</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/andreas-walter"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/andreas-schmidt"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/simone-braun"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/valentin-zacharias"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/esoe-2007-paper-565-the-ontology"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/andreas-schmidt"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/andreas-walter"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/simone-braun"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/valentin-zacharias"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/esoe/2007/papers/566">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/talks/566"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/christos-chalkiopoulos-christos"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/george-vouros"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/konstantinos-kotis"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/nikoleta-lelli"/>
+        <dc:title>The HCOME-3O Framework for Supporting the Collaborative Engineering of Evolving Ontologies</dc:title>
+        <rdfs:label>The HCOME-3O Framework for Supporting the Collaborative Engineering of Evolving Ontologies</rdfs:label>
+        <swrc:abstract>Nowadays it is widely accepted that ontologies, the key technology for the realization of the Semantic Web, are artefacts that are collaboratively and iteratively developed/evolved, shared, evaluated and discussed within communities of knowledge workers. To enhance the potential of ontologies to be collaboratively engineered and be consistently evolved within and between different communities, they must be escorted with rich meta-information describing the conceptualisations they realize, implementation decisions, the rationale for their evolution, as well as the evolution itself. To support the collaborative engineering of ontologies within and across different communities, this paper proposes a framework of (meta-)ontologies for capturing the meta-information that is necessary for interlinking, sharing, and combining knowledge among the parties involved in such a process. The framework is being embedded in the HCOME ontology engineering methodology, and can be applied to the design and implementation of ontology engineering tools towards advancing their interoperability.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/christos-chalkiopoulos-christos"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/george-vouros"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/konstantinos-kotis"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/nikoleta-lelli"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>The HCOME-3O Framework for Supporting the Collaborative Engineering of Evolving Ontologies</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/konstantinos-kotis"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/george-vouros"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/christos-chalkiopoulos-christos"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/nikoleta-lelli"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/esoe-2007-paper-566-the-hcome3o"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/christos-chalkiopoulos-christos"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/george-vouros"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/konstantinos-kotis"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/nikoleta-lelli"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/esoe/2007/papers/567">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/talks/567"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/timo-muenster"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/tobias-kowatsch"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/wolfgang-maass"/>
+        <dc:title>Vocabulary Patterns in Free-for-all Collaborative Indexing Systems</dc:title>
+        <rdfs:label>Vocabulary Patterns in Free-for-all Collaborative Indexing Systems</rdfs:label>
+        <swrc:abstract>In collaborative indexing systems users generate a big amount of metadata by labelling web-based content. These labels are known as tags and form a shared vocabulary. In order to understand the characteristics of that vocabulary, we study structural patterns of these tags by implying the theory of self-organizing systems. Therefore, we utilize the graph theoretic notion to model the network of tags and their valued connections, which represent frequency rates of co-occurring tags. Empirical data is provided by the free-for-all collaborative indexing systems Delicious, Connotea and CiteULike. First, we measure the frequency distribution of co-occurring tags. Secondly, we correlate these tags towards their rank over time. Results indicate a strong relationship among a few tags as well as a notable persistence of these tags over time. Therefore, we make the educated guess that the observed collaborative indexing systems are self-organizing systems towards a shared vocabulary building. Implications on the results are the presence of semantic domains based on high frequency rates of co-occurring tags, which reflect topics of interest among the user community. When observing those semantic domains over time, that information can be used to provide a historical or trend-setting development of the community's interests, thus enhancing collaborative indexing systems in general as well as providing a new tool to develop community-based products and services at the same time.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/timo-muenster"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/tobias-kowatsch"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/wolfgang-maass"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>Vocabulary Patterns in Free-for-all Collaborative Indexing Systems</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/wolfgang-maass"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/tobias-kowatsch"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/timo-muenster"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/esoe-2007-paper-567-vocabulary-patterns"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/timo-muenster"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/tobias-kowatsch"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/wolfgang-maass"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/esoe/2007/papers/568">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/talks/568"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/cedric-pruski"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/chantal-reynaud"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/nicolas-guelfi"/>
+        <dc:title>Understanding and Supporting Ontology Evolution by Observing the WWW Conference</dc:title>
+        <rdfs:label>Understanding and Supporting Ontology Evolution by Observing the WWW Conference</rdfs:label>
+        <swrc:abstract>Ontologies which represent domain knowledge in information systems are efficient to enhance information retrieval. However, domain knowledge is evolving over time and thus it should be also expressible at ontology level. Unfortunately, we consider that ontology evolution is barely study and its basic principles have not been yet precisely defined according to our notion of evolution. In this paper, we have followed a bottom-up approach consisting in a rigorous analysis of the evolution of a particular domain over a significant period of time (namely the WWW series of conference over a decade) to highlight concrete domain knowledge evolutions. We then have generalized and we present a precise set of evolution features that should be offered by ontology metamodels. We also evaluate the modelling capabilities of OWL to represent these features and finally, we show the contribution of ontology evolution support to improve Web information retrieval.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/cedric-pruski"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/chantal-reynaud"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/nicolas-guelfi"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>Understanding and Supporting Ontology Evolution by Observing the WWW Conference</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/nicolas-guelfi"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/cedric-pruski"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/chantal-reynaud"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/esoe-2007-paper-568-understanding-and"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/cedric-pruski"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/chantal-reynaud"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/nicolas-guelfi"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/esoe/2007/papers/569">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/talks/569"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/eiichi-sunagawa"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/kouji-kozaki"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/riichiro-mizoguchi"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/yoshinobu-kitamura"/>
+        <dc:title>A Framework for Cooperative Ontology Construction Based on Dependency Management of Modules</dc:title>
+        <rdfs:label>A Framework for Cooperative Ontology Construction Based on Dependency Management of Modules</rdfs:label>
+        <swrc:abstract>To construct large scale ontologies, two major approaches are discussed by many researchers. One is a cooperative construction of ontologies, and the other is a modularization of ontologies. To combine these two approaches, this paper discusses a framework for supporting cooperative ontology construction based on dependency management among modularized ontologies. In such a situation, one of the key issues is the maintenance of consistency among inter-dependent ontologies because each ontology is revised asynchronously by different developers. In order to realize consistent development of ontologies, the framework provides two functions: to manage the dependencies between ontology modules and to keep and restore consistencies between them when they are influenced by changes of other modules. Furthermore, we outline an implementation of our framework in our environment for building/using ontology: Hozo.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/eiichi-sunagawa"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/kouji-kozaki"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/riichiro-mizoguchi"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/yoshinobu-kitamura"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>A Framework for Cooperative Ontology Construction Based on Dependency Management of Modules</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/kouji-kozaki"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/eiichi-sunagawa"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/yoshinobu-kitamura"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/riichiro-mizoguchi"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/esoe-2007-paper-569-a-framework"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/eiichi-sunagawa"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/kouji-kozaki"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/riichiro-mizoguchi"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/yoshinobu-kitamura"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/esoe/2007/papers/570">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/talks/570"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/kevin-ottens"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/marie-pierre-gleizes"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/nathalie-aussenac-gilles"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/valerie-camps"/>
+        <dc:title>Dynamic Ontology Co-Evolution from Texts: Principles and Case Study </dc:title>
+        <rdfs:label>Dynamic Ontology Co-Evolution from Texts: Principles and Case Study </rdfs:label>
+        <swrc:abstract>As claimed in the Semantic Web project, a huge amount of physically distributed interacting software agents could find the semantic of available resources and answer more relevantly to users' requests if the content of these resources would be represented with formal semantic concepts defined in ontologies. Because Web information sources are highly dynamic and conceptually heterogeneous, one of the most challenging problems in the Semantic Web research is the proper and frequent ontology updating in keeping with knowledge changes. To tackle this problem, we have developed a self-organizing multi-agent system -Dynamo- able to create an ontology draft from automatic text processing. Because it is well-known that only a part of a domain description is explicitly described in texts, Dynamo enables an ontology co-construction with a domain expert in a fully interactive way. In this paper, we present the principles of this approach and related experiments. </swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/kevin-ottens"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/marie-pierre-gleizes"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/nathalie-aussenac-gilles"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/valerie-camps"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>Dynamic Ontology Co-Evolution from Texts: Principles and Case Study </swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/kevin-ottens"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/nathalie-aussenac-gilles"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/marie-pierre-gleizes"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/valerie-camps"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/esoe-2007-paper-570-dynamic-ontology"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/kevin-ottens"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/marie-pierre-gleizes"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/nathalie-aussenac-gilles"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/valerie-camps"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/esoe/2007/papers/571">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/talks/571"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/olga-streibel"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/vlad-tanasescu"/>
+        <dc:title>Extreme Tagging: Emergent Semantics through the Tagging of Tags</dc:title>
+        <rdfs:label>Extreme Tagging: Emergent Semantics through the Tagging of Tags</rdfs:label>
+        <swrc:abstract>While the Semantic Web requires a large amount of structured knowledge (triples) to allow machine reasoning, the acquisition of this knowledge still represents an open issue. Indeed, expressing expert knowledge in a given formalism is a tedious process. Less structured annotations such as tagging have, however, proved immensely popular, whilst existing unstructured or semi-structured collaborative knowledge bases such as Wikipedia have proven to be useful and scalable. Both processes are often regulated through social mechanisms such as wiki-like operations, recommendations, ratings, and collaborative games. To promote collaborative tagging as a means to acquire unstructured as well as structured knowledge we introduce the notion of Extreme Tagging, which describes systems which allow the tagging of resources, as well as of tags themselves and their relations. We provide a formal description of extreme tagging followed by examples and highlight the necessity of regulatory processes which can be applied to it. We also present a prototype implementation.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/olga-streibel"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/vlad-tanasescu"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>Extreme Tagging: Emergent Semantics through the Tagging of Tags</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/vlad-tanasescu"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/olga-streibel"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/esoe-2007-paper-571-extreme-tagging"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/olga-streibel"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/vlad-tanasescu"/>
+    </swrc:InProceedings>
+
+    <swrc:Proceedings rdf:about="http://data.semanticweb.org/workshop/esoe/2007/proceedings">
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/562"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/564"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/565"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/566"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/567"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/568"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/569"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/570"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/571"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/esoe/2007"/>
+        <swrc:booktitle>Proceedings of the International Workshop on Emergent Semantics and Ontology Evolution (ESOE2007) at ISWC/ASWC2007, Busan, South Korea</swrc:booktitle>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/andreas-hotho"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/ernie-ong"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/luke-chen"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/peter-haase"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/philippe-cudre-mauroux"/>
+        <swrc:month>November</swrc:month>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:editorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/peter-haase"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/andreas-hotho"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/luke-chen"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/ernie-ong"/>
+            <rdf:_5 rdf:resource="http://data.semanticweb.org/person/philippe-cudre-mauroux"/>
+        </swrc_ext:editorList>
+    </swrc:Proceedings>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/esoe/2007/talks/562">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/562"/>
+        <rdfs:label>Ontology Revision as Non-Prioritized Belief Revision</rdfs:label>
+        <ical:summary>Ontology Revision as Non-Prioritized Belief Revision</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/esoe/2007/talks/564">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/564"/>
+        <rdfs:label>Understanding the Semantics of Ambiguous Tags in Folksonomies</rdfs:label>
+        <ical:summary>Understanding the Semantics of Ambiguous Tags in Folksonomies</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/esoe/2007/talks/565">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/565"/>
+        <rdfs:label>The Ontology Maturing Approach for Collaborative and Work Integrated Ontology Development: Evaluation Results and Future Directions</rdfs:label>
+        <ical:summary>The Ontology Maturing Approach for Collaborative and Work Integrated Ontology Development: Evaluation Results and Future Directions</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/esoe/2007/talks/566">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/566"/>
+        <rdfs:label>The HCOME-3O Framework for Supporting the Collaborative Engineering of Evolving Ontologies</rdfs:label>
+        <ical:summary>The HCOME-3O Framework for Supporting the Collaborative Engineering of Evolving Ontologies</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/esoe/2007/talks/567">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/567"/>
+        <rdfs:label>Vocabulary Patterns in Free-for-all Collaborative Indexing Systems</rdfs:label>
+        <ical:summary>Vocabulary Patterns in Free-for-all Collaborative Indexing Systems</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/esoe/2007/talks/568">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/568"/>
+        <rdfs:label>Understanding and Supporting Ontology Evolution by Observing the WWW Conference</rdfs:label>
+        <ical:summary>Understanding and Supporting Ontology Evolution by Observing the WWW Conference</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/esoe/2007/talks/569">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/569"/>
+        <rdfs:label>A Framework for Cooperative Ontology Construction Based on Dependency Management of Modules</rdfs:label>
+        <ical:summary>A Framework for Cooperative Ontology Construction Based on Dependency Management of Modules</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/esoe/2007/talks/570">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/570"/>
+        <rdfs:label>Dynamic Ontology Co-Evolution from Texts: Principles and Case Study </rdfs:label>
+        <ical:summary>Dynamic Ontology Co-Evolution from Texts: Principles and Case Study </ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/esoe/2007/talks/571">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/esoe/2007/papers/571"/>
+        <rdfs:label>Extreme Tagging: Emergent Semantics through the Tagging of Tags</rdfs:label>
+        <ical:summary>Extreme Tagging: Emergent Semantics through the Tagging of Tags</ical:summary>
+    </swc:PaperPresentation>
+
+</rdf:RDF>

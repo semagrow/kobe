@@ -1,0 +1,1148 @@
+<rdf:RDF xmlns="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/bundeswehr-university-munich-germany">
+        <prefLabel>Universität der Bundeswehr</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/deri-nui-galway">
+        <prefLabel>DERI, NUI Galway</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/deri-universitaet-innsbruck">
+        <prefLabel>STI Innsbruck</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/freiburg-university-hospital">
+        <prefLabel>Universitätsklinikum Freiburg</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/freie-universitaet-berlin">
+        <prefLabel>Freie Universität Berlin</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/ftw-telecommunications-research-center-vienna">
+        <prefLabel>Forschungszentrum Telekommunikation Wien (FTW)</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/humboldt-universitaet-zu-berlin">
+        <prefLabel>Humboldt-Universität zu Berlin</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/jacobs-university-bremen">
+        <prefLabel>Jacobs University Bremen</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/johannes-kepler-university-linz-austria">
+        <prefLabel>Johannes Kepler University Linz</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/kmi-the-open-university-uk">
+        <prefLabel>-</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/technische-universitaet-darmstadt">
+        <prefLabel>Technische Universität Darmstadt</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/tilburg-university">
+        <prefLabel>Tilburg University</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/universita-politecnica-delle-marche">
+        <prefLabel>Università Politecnica delle Marche</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/university-of-maryland">
+        <prefLabel>University of Maryland</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/yahoo-research">
+        <prefLabel>Yahoo! Research</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/aidan-hogan">
+        <prefLabel>Aidan Hogan</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/aimin-pan">
+        <prefLabel>Aimin Pan</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/alasdair-j-g-gray">
+        <prefLabel>Alasdair J. G. Gray</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/alessandra-toninelli">
+        <prefLabel>Alessandra Toninelli</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/alexander-deleon">
+        <prefLabel>Alexander De León</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/alexander-loeser">
+        <prefLabel>Alexander Löser</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/alexandre-passant">
+        <prefLabel>Alexandre Passant</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/amit-sheth">
+        <prefLabel>Amit P. Sheth</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/andreas-harth">
+        <prefLabel>Andreas Harth</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/andreas-langegger">
+        <prefLabel>Andreas Langegger</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/andriy-nikolov">
+        <prefLabel>Andriy Nikolov</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/andy-seaborne">
+        <prefLabel>Andy Seaborne</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/anna-v-zhdanova">
+        <prefLabel>Anna Fensel</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/annette-ten-teije">
+        <prefLabel>Annette ten Teije</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/ansgar-scherp">
+        <prefLabel>Ansgar Scherp</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/anthony-g-cohn">
+        <prefLabel>Anthony G. Cohn</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/anthony-jameson">
+        <prefLabel>Anthony Jameson</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/arnd-christian-koenig">
+        <prefLabel>Arnd Christian König</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/arpita-ghosh">
+        <prefLabel>Arpita  Ghosh</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/asuncion-gomez-perez">
+        <prefLabel>Asunción Gómez-Pérez</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/atif-latif">
+        <prefLabel>Atif Latif</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/axel-polleres">
+        <prefLabel>Axel Polleres</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/barry-smyth">
+        <prefLabel>Barry Smyth</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/benjamin-nowack">
+        <prefLabel>Benjamin Nowack</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/bernhard-schandl">
+        <prefLabel>Bernhard Schandl</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/bertram-ludaescher">
+        <prefLabel>Bertram Ludäscher</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/bettina-hoser">
+        <prefLabel>Bettina Hoser</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/boanerges-aleman-meza">
+        <prefLabel>Boanerges Aleman-Meza</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/boris-villazon-terrazas">
+        <prefLabel>Boris Villazón-Terrazas</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/carlo-torniai">
+        <prefLabel>Carlo Torniai</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/carole-a-goble">
+        <prefLabel>Carole A. Goble</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/cassio-dos-santos">
+        <prefLabel>Cassio dos Santos</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/cherie-youn">
+        <prefLabel>Cherie H. Youn</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/christian-bizer">
+        <prefLabel>Christian Bizer</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/christian-meilicke">
+        <prefLabel>Christian Meilicke</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/christopher-brewster">
+        <prefLabel>Christopher Brewster</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/claudia-damato">
+        <prefLabel>Claudia d'Amato</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/claudia-niederee">
+        <prefLabel>Claudia Niederée</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/claudia-wagner">
+        <prefLabel>Claudia Wagner</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/clement-jonquet">
+        <prefLabel>Clement Marie Jonquet</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/craig-knoblock">
+        <prefLabel>Craig A. Knoblock</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/dan-brickley">
+        <prefLabel>Dan Brickley</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/danh-le-phuoc">
+        <prefLabel>Danh Le Phuoc</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/danica-damljanovic">
+        <prefLabel>Danica Damljanović</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/daniel-c-wolfson">
+        <prefLabel>Daniel C. Wolfson</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/daniel-olmedilla">
+        <prefLabel>Daniel Olmedilla</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/daniel-schwabe">
+        <prefLabel>Daniel Schwabe</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/daniele-braga">
+        <prefLabel>Daniele Braga</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/dave-reynolds">
+        <prefLabel>Dave Reynolds</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/david-aumueller">
+        <prefLabel>David Aumüller</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/david-huynh">
+        <prefLabel>David Huynh</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/david-peterson">
+        <prefLabel>David Peterson</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/david-robertson">
+        <prefLabel>David Robertson</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/davide-francesco-barbieri">
+        <prefLabel>Davide Francesco Barbieri</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/deborah-mcguinness">
+        <prefLabel>Deborah L. McGuinness</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/denny-vrandecic">
+        <prefLabel>Denny Vrandečić</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/diego-berrueta">
+        <prefLabel>Diego Berrueta</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/dimka-karastoyanova">
+        <prefLabel>Dimka Karastoyanova</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/donald-metzler">
+        <prefLabel>Donald Metzler</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/dragan-gasevic">
+        <prefLabel>Dragan Gašević</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/earl-wagner">
+        <prefLabel>Earl Wagner</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/eero-hyvoenen">
+        <prefLabel>Eero Hyvönen</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/elena-paslaru-bontas-simperl">
+        <prefLabel>Elena Paslaru Bontas Simperl</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/emanuele-della-valle">
+        <prefLabel>Emanuele Della Valle</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/emily-kigel">
+        <prefLabel>Emily Kigel</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/enrico-franconi">
+        <prefLabel>Enrico Franconi</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/enrico-motta">
+        <prefLabel>Enrico Motta</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/erik-wilde">
+        <prefLabel>Erik Wilde</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/ernesto-jimenez-ruiz">
+        <prefLabel>Ernesto Jimenez Ruiz</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/evan-k-wallace">
+        <prefLabel>Evan K. Wallace</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/evan-patton">
+        <prefLabel>Evan Patton</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/eyal-oren">
+        <prefLabel>Eyal Oren</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/fabien-gandon">
+        <prefLabel>Fabien Gandon</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/felix-naumann">
+        <prefLabel>Felix Naumann</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/francesca-alessandra-lisi">
+        <prefLabel>Francesca Alessandra Lisi</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/francesco-donini">
+        <prefLabel>Francesco M. Donini</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/francisco-martin-recuerda">
+        <prefLabel>Francisco Martín-Recuerda</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/francois-bry">
+        <prefLabel>François Bry</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/francois-marie-lesaffre">
+        <prefLabel>François-Marie Lesaffre</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/francois-paul-servant">
+        <prefLabel>François-Paul Servant</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/francois-scharffe">
+        <prefLabel>François Scharffe</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/frank-van-harmelen">
+        <prefLabel>Frank van Harmelen</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/franz-wanner">
+        <prefLabel>Franz Wanner</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/freddy-lecue">
+        <prefLabel>Freddy Lécué</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/frederick-giasson">
+        <prefLabel>Frederick Giasson</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/georgi-kobilarov">
+        <prefLabel>Georgi Kobilarov</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/gianluca-correndo">
+        <prefLabel>Gianluca Correndo</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/giovanni-tummarello">
+        <prefLabel>Giovanni Tummarello</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/gong-cheng">
+        <prefLabel>Gong Cheng</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/grazyna-paliwoda-pekosz">
+        <prefLabel>Grażyna Paliwoda-Pękosz</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/gregory-williams">
+        <prefLabel>Gregory Williams</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/guenter-ladwig">
+        <prefLabel>Günter Ladwig</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/gunnar-aastrand-grimnes">
+        <prefLabel>Gunnar Aastrand Grimnes</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/guotong-xie">
+        <prefLabel>Guo Tong Xie</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/guus-schreiber">
+        <prefLabel>Guus Schreiber</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/harith-alani">
+        <prefLabel>Harith Alani</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/harold-r-solbrig">
+        <prefLabel>Harold R. Solbrig</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/harry-halpin">
+        <prefLabel>Harry Halpin</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/henson-graves">
+        <prefLabel>Henson Graves</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/hideaki-takeda">
+        <prefLabel>Hideaki Takeda</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/hidir-aras">
+        <prefLabel>Hidir Aras</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/hugh-glaser">
+        <prefLabel>Hugh Glaser</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/hugo-zaragoza">
+        <prefLabel>Hugo Zaragoza</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/i-v-ramakrishnan">
+        <prefLabel>I. V. Ramakrishnan</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/iadh-ounis">
+        <prefLabel>Iadh Ounis</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/ian-millard">
+        <prefLabel>Ian Millard</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/ivan-herman">
+        <prefLabel>Ivan Herman</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jacco-van-ossenbruggen">
+        <prefLabel>Jacco van Ossenbruggen</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jaime-ramirez">
+        <prefLabel>Jaime Ramírez</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jason-i-hong">
+        <prefLabel>Jason I. Hong</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jason-jung">
+        <prefLabel>Jason J. Jung</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jeff-z-pan">
+        <prefLabel>Jeff Z. Pan</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jelena-jovanovic">
+        <prefLabel>Jelena Jovanovic</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jennifer-golbeck">
+        <prefLabel>Jennifer Golbeck</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jens-lehmann">
+        <prefLabel>Jens Lehmann</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jerome-david">
+        <prefLabel>Jérôme David</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jerome-euzenat">
+        <prefLabel>Jérôme Euzenat</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jian-tao-sun">
+        <prefLabel>Jian-Tao Sun</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jiang-dejun">
+        <prefLabel>Jiang Dejun</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jie-bao">
+        <prefLabel>Jie Bao</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/joerg-hoffmann">
+        <prefLabel>Jörg Hoffmann</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/johanna-voelker">
+        <prefLabel>Johanna Völker</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/john-breslin">
+        <prefLabel>John G. Breslin</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/john-sheridan">
+        <prefLabel>John Sheridan</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jorge-a-perez">
+        <prefLabel>Jorge A. Pérez</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jos-de-bruijn">
+        <prefLabel>Jos de Bruijn</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jose-emilio-labra">
+        <prefLabel>Jose Emilio Labra</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jose-iria">
+        <prefLabel>José Iria</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jose-julio-alferes">
+        <prefLabel>José Júlio Alferes</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jose-luis-ambite">
+        <prefLabel>José Luis Ambite</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/josh-lieberman">
+        <prefLabel>Joshua Lieberman</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/juan-f-sequeda">
+        <prefLabel>Juan F. Sequeda</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/juergen-angele">
+        <prefLabel>Jürgen Angele</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/juergen-bock">
+        <prefLabel>Jürgen Bock</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/juergen-umbrich">
+        <prefLabel>Jürgen Umbrich</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/juergen-ziegler">
+        <prefLabel>Jürgen Ziegler</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/jun-zhao">
+        <prefLabel>Jun Zhao</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/juri-luca-de-coi">
+        <prefLabel>Juri Luca De Coi</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/kai-uwe-sattler">
+        <prefLabel>Kai-Uwe Sattler</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/klaus-tochtermann">
+        <prefLabel>Klaus Tochtermann</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/knud-moeller">
+        <prefLabel>Knud Hinnerk Möller</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/kotaro-nakayama">
+        <prefLabel>Kotaro Nakayama</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/krishnaprasad-thirunarayan">
+        <prefLabel>Krishnaprasad Thirunarayan</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/lalana-kagal">
+        <prefLabel>Lalana Kagal</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/lars-schmidt-thieme">
+        <prefLabel>Lars Schmidt-Thieme</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/lei-zhang">
+        <prefLabel>Lei Zhang</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/les-carr">
+        <prefLabel>Les Carr</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/li-ding">
+        <prefLabel>Li Ding</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/libby-miller">
+        <prefLabel>Libby Miller</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/lora-aroyo">
+        <prefLabel>Lora Aroyo</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/lourens-van-der-meij">
+        <prefLabel>Lourens van der Meij</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/lyndon-j-b-nixon">
+        <prefLabel>Lyndon J.B. Nixon</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/malgorzata-mochol">
+        <prefLabel>Malgorzata Mochól</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/manfred-hauswirth">
+        <prefLabel>Manfred Hauswirth</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/manuel-salvadores">
+        <prefLabel>Manuel Salvadores</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/margherita-sini">
+        <prefLabel>Margherita Sini</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/maria-s-perez-hernandez">
+        <prefLabel>María S. Pérez-Hernández</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/mariano-consens">
+        <prefLabel>Mariano Consens</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/mark-a-musen">
+        <prefLabel>Mark A. Musen</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/mark-greaves">
+        <prefLabel>Mark Greaves</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/marko-luther">
+        <prefLabel>Marko Luther</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/markus-luczak-roesch">
+        <prefLabel>Markus Luczak-Rösch</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/marta-sabou">
+        <prefLabel>Marta Sabou</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/marten-van-sinderen">
+        <prefLabel>Marten van Sinderen</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/martin-dzbor">
+        <prefLabel>Martin Dzbor</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/martin-hepp">
+        <prefLabel>Martin Hepp</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/massimo-paolucci">
+        <prefLabel>Massimo Paoluccci</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/mathew-joseph">
+        <prefLabel>Mathew Joseph</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/mathieu-daquin">
+        <prefLabel>Mathieu d'Aquin</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/matthew-rowe">
+        <prefLabel>Matthew Rowe</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/meena-nagarajan">
+        <prefLabel>Meenakshi Nagarajan</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/mi-kyung-lee">
+        <prefLabel>Mi-Kyung Lee</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/michael-grossniklaus">
+        <prefLabel>Michael Grossniklaus</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/michael-hausenblas">
+        <prefLabel>Michael Hausenblas</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/michael-k-bergman">
+        <prefLabel>Mike Bergman</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/michiel-hildebrand">
+        <prefLabel>Michiel Hildebrand</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/milan-stankovic">
+        <prefLabel>Milan Stankovic</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/mischa-tuffield">
+        <prefLabel>Mischa Tuffield</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/muhammad-tanvir-afzal">
+        <prefLabel>Muhammad Tanvir Afzal</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/natalya-noy">
+        <prefLabel>Natasha F. Noy</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/nicholas-john-kings">
+        <prefLabel>Nicholas John Kings</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/nigam-shah">
+        <prefLabel>Nigam H. Shah</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/nigel-r-shadbolt">
+        <prefLabel>Nigel R. Shadbolt</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/niko-popitsch">
+        <prefLabel>Niko Popitsch</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/norbert-fuchs">
+        <prefLabel>Norbert E. Fuchs</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/nuria-oliver">
+        <prefLabel>Nuria Oliver</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/oktie-hassanzadeh">
+        <prefLabel>Oktie Hassanzadeh</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/olaf-gorlitz">
+        <prefLabel>Olaf Görlitz</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/olaf-hartig">
+        <prefLabel>Olaf Hartig</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/ondrej-svab">
+        <prefLabel>Ondřej Sváb-Zamazal</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/oscar-munoz-garcia">
+        <prefLabel>Óscar Muñoz-García</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/oszkar-ambrus">
+        <prefLabel>Oszkar Ambrus</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/paola-di-maio">
+        <prefLabel>Paola Di Maio</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/patrick-sinclair">
+        <prefLabel>Patrick Sinclair</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/paul-alexandru-chirita">
+        <prefLabel>Paul-Alexandru Chirita</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/paul-miller">
+        <prefLabel>Paul Miller</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/pavel-smrz">
+        <prefLabel>Pavel Smrž</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/pawel-lula">
+        <prefLabel>Paweł Lula</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/philipp-cimiano">
+        <prefLabel>Philipp Cimiano</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/philipp-kaerger">
+        <prefLabel>Philipp Kärger</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/philippe-cudre-mauroux">
+        <prefLabel>Philippe Cudré-Mauroux</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/philippe-laublet">
+        <prefLabel>Philippe Laublet</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/qiaoling-liu">
+        <prefLabel>Qiaoling Liu</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/qiu-ji">
+        <prefLabel>Qiu Ji</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/rafael-gonzalez-cabero">
+        <prefLabel>Rafael González-Cabero</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/ralf-moeller">
+        <prefLabel>Ralf Möller</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/ramanathan-v-guha">
+        <prefLabel>Ramanathan V. Guha</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/raphael-troncy">
+        <prefLabel>Raphaël Troncy</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/raul-garcia-castro">
+        <prefLabel>Raúl García-Castro</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/regis-saint-paul">
+        <prefLabel>Régis Saint-Paul</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/richard-cyganiak">
+        <prefLabel>Richard Cyganiak</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/riichiro-mizoguchi">
+        <prefLabel>Riichiro Mizoguchi</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/rob-styles">
+        <prefLabel>Rob Styles</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/rob-vesse">
+        <prefLabel>Rob Vesse</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/robert-davies">
+        <prefLabel>Robert Davies</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/robert-stevens">
+        <prefLabel>Robert Stevens</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/ruediger-klein">
+        <prefLabel>Rüdiger Klein</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/s-muthukrishnan">
+        <prefLabel>S. Muthukrishnan</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/sean-bechhofer">
+        <prefLabel>Sean Bechhofer</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/sebastian-boehm">
+        <prefLabel>Sebastian Böhm</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/sebastian-dietzold">
+        <prefLabel>Sebastian Dietzold</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/sergio-fernandez">
+        <prefLabel>Sergio Fernández</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/seung-woo-lee">
+        <prefLabel>Seung-Woo Lee</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/shahan-khatchadourian">
+        <prefLabel>Shahan Khatchadourian</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/sheila-mcilraith">
+        <prefLabel>Sheila A. McIlraith</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/shenghui-wang">
+        <prefLabel>Shenghui Wang</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/shyam-rajaram">
+        <prefLabel>Shyamsundar Rajaram</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/siegfried-handschuh">
+        <prefLabel>Siegfried Handschuh</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/simon-schenk">
+        <prefLabel>Simon Schenk</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/soeren-auer">
+        <prefLabel>Sören Auer</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/sofia-angeletou">
+        <prefLabel>Sofia Angeletou</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/stefan-decker">
+        <prefLabel>Stefan Decker</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/stefan-schlobach">
+        <prefLabel>Stefan Schlobach</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/stefano-ceri">
+        <prefLabel>Stefano Ceri</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/stephan-bloehdorn">
+        <prefLabel>Stephan Blöhdorn</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/steve-harris">
+        <prefLabel>Steve Harris</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/susie-stephens">
+        <prefLabel>Susie M. Stephens</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/takashi-yamauchi">
+        <prefLabel>Takashi Yamauchi</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/tamas-hauer">
+        <prefLabel>Tamás Hauer</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/thanh-tran">
+        <prefLabel>Duc Thanh Tran</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/tim-finin">
+        <prefLabel>Timothy Finin</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/tobias-buerger">
+        <prefLabel>Tobias Bürger</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/tom-heath">
+        <prefLabel>Tom Heath</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/tuukka-hastrup">
+        <prefLabel>Tuukka Hastrup</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/uldis-bojars">
+        <prefLabel>Uldis Bojārs</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/ulrich-kuester">
+        <prefLabel>Ulrich Küster</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/vanessa-lopez">
+        <prefLabel>Vanessa López</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/vassilios-peristeras">
+        <prefLabel>Vassilios Peristeras</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/veronique-malaise">
+        <prefLabel>Véronique Malaisé</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/victoria-uren">
+        <prefLabel>Victoria Uren</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/vinay-chaudhri">
+        <prefLabel>Vinay Chaudhri</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/violeta-damjanovic">
+        <prefLabel>Violeta Damjanović</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/virgilio-almeida">
+        <prefLabel>Virgílio Almeida</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/vit-novacek">
+        <prefLabel>Vít Nováček</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/vojtech-svatek">
+        <prefLabel>Vojtěch Svátek</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/vs-subrahmanian">
+        <prefLabel>V.S. Subrahmanian</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/walter-binder">
+        <prefLabel>Walter Binder</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/wei-hu">
+        <prefLabel>Wei Hu</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/wendy-hall">
+        <prefLabel>Wendy Hall</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/willem-van-hage">
+        <prefLabel>Willem Robert van Hage</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/wolfgang-halb">
+        <prefLabel>Wolfgang Halb</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/xingzhi-sun">
+        <prefLabel>XingZhi Sun</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/ya-xi-chen">
+        <prefLabel>Ya-Xi Chen</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/yang-yang">
+        <prefLabel>Yang Yang</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/york-sure">
+        <prefLabel>York Sure</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/yuzhong-qu">
+        <prefLabel>Yuzhong Qu</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/yves-raimond">
+        <prefLabel>Yves Raimond</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/workshop/cold/2010">
+        <prefLabel>First International Workshop on Consuming Linked Data</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://tomheath.com/id/me">
+        <prefLabel>Tom Heath</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/organization/worcester-polytechnic-institute">
+        <prefLabel>Worcester Polytechnic Institute</prefLabel>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/person/kathleen-stewart-hornsby">
+        <prefLabel>Kathleen Stewart Hornsby</prefLabel>
+    </rdf:Description>
+
+</rdf:RDF>

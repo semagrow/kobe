@@ -1,0 +1,1563 @@
+
+<!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
+<!--     using base file:///Users/knud/Projekte/dogfood-svn/easyChair2RDF/output-om-conference-data.rdf-->
+
+
+<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:ical="http://www.w3.org/2002/12/cal/ical#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swc="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:swrc="http://swrc.ontoware.org/ontology#"
+    xmlns:swrc_ext="http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#">
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/bosch-research">
+        <rdfs:label>Bosch Research</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/baoshi-yan"/>
+        <name>Bosch Research</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/chinese-academy-of-sciences">
+        <rdfs:label>Chinese Academy of Sciences</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/songmao-zhang"/>
+        <name>Chinese Academy of Sciences</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/clinical-informatics-r-d-partners-healthcare-system">
+        <rdfs:label>Clinical Informatics R&#38;D, Partners HealthCare System</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/vipul-kashyap"/>
+        <name>Clinical Informatics R&#38;D, Partners HealthCare System</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/fbk-irst">
+        <rdfs:label>FBK-IRST</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/luciano-serafini"/>
+        <name>FBK-IRST</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki">
+        <rdfs:label>DFKI</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/anthony-jameson"/>
+        <member rdf:resource="http://data.semanticweb.org/person/ludger-van-elst"/>
+        <name>DFKI</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/iiia-csic">
+        <rdfs:label>IIIA-CSIC</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/marco-schorlemmer"/>
+        <name>IIIA-CSIC</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/informatica-trentina-s-p-a">
+        <rdfs:label>Informatica Trentina S.P.A.</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/ivan-pilati"/>
+        <member rdf:resource="http://data.semanticweb.org/person/pavel-shvaiko"/>
+        <name>Informatica Trentina S.P.A.</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/inria-rhone-alpes">
+        <rdfs:label>INRIA</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/jerome-david"/>
+        <member rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+        <name>INRIA</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/isti-cnr">
+        <rdfs:label>ISTI-C.N.R.</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/umberto-straccia"/>
+        <name>ISTI-C.N.R.</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/lig">
+        <rdfs:label>LIG</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/jerome-david"/>
+        <member rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+        <name>LIG</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/linkoepings-universitet">
+        <rdfs:label>Linköpings Universitet</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/patrick-lambrix"/>
+        <name>Linköpings Universitet</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/national-institute-of-informatics-japan">
+        <rdfs:label>National Institute of Informatics</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/ryutaro-ichise"/>
+        <name>National Institute of Informatics</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/ricoh-europe-plc">
+        <rdfs:label>Ricoh Europe plc.</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/yannis-kalfoglou"/>
+        <name>Ricoh Europe plc.</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/sap-ag">
+        <rdfs:label>SAP</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/york-sure"/>
+        <name>SAP</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/southeast-university">
+        <rdfs:label>Southeast University</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/wei-hu"/>
+        <name>Southeast University</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/stanford-university">
+        <rdfs:label>Stanford University</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/natalya-noy"/>
+        <name>Stanford University</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/taslab">
+        <rdfs:label>TasLab</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/ivan-pilati"/>
+        <member rdf:resource="http://data.semanticweb.org/person/pavel-shvaiko"/>
+        <name>TasLab</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/the-mitre-corporation">
+        <rdfs:label>The MITRE Corporation</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/peter-mork"/>
+        <name>The MITRE Corporation</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-alberta">
+        <rdfs:label>University of Alberta</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/eleni-stroulia"/>
+        <name>University of Alberta</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-calabria">
+        <rdfs:label>University of Calabria</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/luigi-palopoli"/>
+        <name>University of Calabria</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-edinburgh">
+        <rdfs:label>University of Edinburgh</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/paolo-besana"/>
+        <name>University of Edinburgh</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-illinois-at-chicago">
+        <rdfs:label>University of Illinois at Chicago</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/isabel-cruz"/>
+        <name>University of Illinois at Chicago</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-mannheim">
+        <rdfs:label>University of Mannheim</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+        <member rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <name>University of Mannheim</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-trento-italy">
+        <rdfs:label>University of Trento</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/fausto-giunchiglia"/>
+        <member rdf:resource="http://data.semanticweb.org/person/paolo-bouquet"/>
+        <member rdf:resource="http://data.semanticweb.org/person/yannis-velegrakis"/>
+        <name>University of Trento</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/us-national-library-of-medicine">
+        <rdfs:label>US National Library of Medicine</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/olivier-bodenreider"/>
+        <name>US National Library of Medicine</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/vienna-university-of-technology">
+        <rdfs:label>Vienna University of Technology</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/monika-lanzenberger"/>
+        <name>Vienna University of Technology</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands">
+        <rdfs:label>Vrije Universiteit Amsterdam</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/antoine-isaac"/>
+        <name>Vrije Universiteit Amsterdam</name>
+    </Organization>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alfio-ferrara">
+        <rdfs:label>Alfio Ferrara</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/2"/>
+        <name>Alfio Ferrara</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/anthony-jameson">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki"/>
+        <rdfs:label>Anthony Jameson</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <name>Anthony Jameson</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/antoine-isaac">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands"/>
+        <rdfs:label>Antoine Isaac</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Netherlands"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/5"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <name>Antoine Isaac</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/baoshi-yan">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/bosch-research"/>
+        <rdfs:label>Baoshi Yan</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+        <name>Baoshi Yan</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/baowen-xu">
+        <rdfs:label>Baowen Xu</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/14"/>
+        <name>Baowen Xu</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/brigitte-safar">
+        <rdfs:label>Brigitte Safar</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/19"/>
+        <name>Brigitte Safar</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/cassia-trojahn">
+        <rdfs:label>Cassia Trojahn</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/5"/>
+        <name>Cassia Trojahn</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/caterina-caracciolo">
+        <rdfs:label>Caterina Caracciolo</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <name>Caterina Caracciolo</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/chantal-reynaud">
+        <rdfs:label>Chantal Reynaud</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/19"/>
+        <name>Chantal Reynaud</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/christian-meilicke">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-mannheim"/>
+        <rdfs:label>Christian Meilicke</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/1"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/23"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <name>Christian Meilicke</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/christoph-quix">
+        <rdfs:label>Christoph Quix</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/13"/>
+        <name>Christoph Quix</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/daniel-sonntag">
+        <rdfs:label>Daniel Sonntag</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/27"/>
+        <name>Daniel Sonntag</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/daniele-montanari">
+        <rdfs:label>Daniele Montanari</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/26"/>
+        <name>Daniele Montanari</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/david-kensche">
+        <rdfs:label>David Kensche</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/13"/>
+        <name>David Kensche</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/david-macii">
+        <rdfs:label>David Macii</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/25"/>
+        <name>David Macii</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/davide-lorusso">
+        <rdfs:label>Davide Lorusso</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/2"/>
+        <name>Davide Lorusso</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/domenico-beneventano">
+        <rdfs:label>Domenico Beneventano</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/26"/>
+        <name>Domenico Beneventano</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/eduardo-mena">
+        <rdfs:label>Eduardo Mena</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/11"/>
+        <name>Eduardo Mena</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/eleni-stroulia">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-alberta"/>
+        <rdfs:label>Eleni Stroulia</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Canada"/>
+        <name>Eleni Stroulia</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/enrico-motta">
+        <rdfs:label>Enrico Motta</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/12"/>
+        <name>Enrico Motta</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/fabio-andreatta">
+        <rdfs:label>Fabio Andreatta</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/25"/>
+        <name>Fabio Andreatta</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/fausto-giunchiglia">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-trento-italy"/>
+        <rdfs:label>Fausto Giunchiglia</rdfs:label>
+        <mbox_sha1sum>ad1bf97094dfdc9d370fdf06df968c90c4b4852d</mbox_sha1sum>
+        <name>Fausto Giunchiglia</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/faycal-hamdi">
+        <rdfs:label>Faycal Hamdi</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/19"/>
+        <name>Faycal Hamdi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/gianluca-correndo">
+        <rdfs:label>Gianluca Correndo</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/6"/>
+        <name>Gianluca Correndo</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/giorgos-stamou">
+        <rdfs:label>Giorgos Stamou</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/2"/>
+        <name>Giorgos Stamou</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/giorgos-stoilos">
+        <rdfs:label>Giorgos Stoilos</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/2"/>
+        <name>Giorgos Stoilos</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/guus-schreiber">
+        <rdfs:label>Guus Schreiber</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/24"/>
+        <name>Guus Schreiber</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/haifa-zargayouna">
+        <rdfs:label>Haifa Zargayouna</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/19"/>
+        <name>Haifa Zargayouna</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/hap-kolb">
+        <rdfs:label>Hap Kolb</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/24"/>
+        <name>Hap Kolb</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/harith-alani">
+        <rdfs:label>Harith Alani</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/6"/>
+        <name>Harith Alani</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/he-tan">
+        <rdfs:label>He Tan</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/17"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/21"/>
+        <name>He Tan</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/heiko-paulheim">
+        <rdfs:label>Heiko Paulheim</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/20"/>
+        <name>Heiko Paulheim</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/heiner-stuckenschmidt">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-mannheim"/>
+        <rdfs:label>Heiner Stuckenschmidt</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/1"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/23"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <mbox_sha1sum>f072571d8c8abd21e637a9dec2c5e835165c8ece</mbox_sha1sum>
+        <name>Heiner Stuckenschmidt</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/isabel-cruz">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-illinois-at-chicago"/>
+        <rdfs:label>Isabel Cruz</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+        <name>Isabel Cruz</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ivan-pilati">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/informatica-trentina-s-p-a"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/taslab"/>
+        <rdfs:label>Ivan Pilati</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/25"/>
+        <name>Ivan Pilati</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jan-hettenhausen">
+        <rdfs:label>Jan Hettenhausen</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/15"/>
+        <name>Jan Hettenhausen</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jerome-david">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/inria-rhone-alpes"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/lig"/>
+        <rdfs:label>Jerome David</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/France"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/3"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/9"/>
+        <name>Jerome David</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jerome-euzenat">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/inria-rhone-alpes"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/lig"/>
+        <rdfs:label>Jerome Euzenat</rdfs:label>
+        <rdfs:label>Jérôme Euzenat</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/3"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <mbox_sha1sum>22bc9bfef9e568c1439538b6a03d4cd8becf01f9</mbox_sha1sum>
+        <name>Jerome Euzenat</name>
+        <name>Jérôme Euzenat</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jie-tang">
+        <rdfs:label>Jie Tang</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/16"/>
+        <name>Jie Tang</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/john-domingue">
+        <rdfs:label>John Domingue</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/28"/>
+        <name>John Domingue</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jorge-gracia">
+        <rdfs:label>Jorge Gracia</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/11"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/18"/>
+        <name>Jorge Gracia</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/juan-pane">
+        <rdfs:label>Juan Pane</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <name>Juan Pane</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/juanzi-li">
+        <rdfs:label>Juanzi Li</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/16"/>
+        <name>Juanzi Li</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/juergen-bock">
+        <rdfs:label>Jurgen Bock</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/15"/>
+        <name>Jurgen Bock</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/konstantin-todorov">
+        <rdfs:label>Konstantin Todorov</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/22"/>
+        <name>Konstantin Todorov</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/laura-hollink">
+        <rdfs:label>Laura Hollink</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <name>Laura Hollink</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/luca-mion">
+        <rdfs:label>Luca Mion</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/25"/>
+        <name>Luca Mion</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/luciano-serafini">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/fbk-irst"/>
+        <rdfs:label>Luciano Serafini</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <name>Luciano Serafini</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ludger-van-elst">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki"/>
+        <rdfs:label>Ludger van Elst</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <name>Ludger van Elst</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/luigi-palopoli">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-calabria"/>
+        <rdfs:label>Luigi Palopoli</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <name>Luigi Palopoli</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/mansur-r-kabuka">
+        <rdfs:label>Mansur R. Kabuka</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/10"/>
+        <name>Mansur R. Kabuka</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marco-schorlemmer">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/iiia-csic"/>
+        <rdfs:label>Marco Schorlemmer</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Spain"/>
+        <name>Marco Schorlemmer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/maria-vargas-vera">
+        <rdfs:label>Maria Vargas-Vera</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/12"/>
+        <name>Maria Vargas-Vera</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marta-sabou">
+        <rdfs:label>Marta Sabou</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/18"/>
+        <name>Marta Sabou</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/masaki-aono">
+        <rdfs:label>Masaki Aono</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/8"/>
+        <name>Masaki Aono</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/md-hanif-seddiqui">
+        <rdfs:label>Md. Hanif Seddiqui</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/8"/>
+        <name>Md. Hanif Seddiqui</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/miklos-nagy">
+        <rdfs:label>Miklos Nagy</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/12"/>
+        <name>Miklos Nagy</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/monika-lanzenberger">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/vienna-university-of-technology"/>
+        <rdfs:label>Monika Lanzenberger</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Austria"/>
+        <name>Monika Lanzenberger</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/natalya-noy">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/stanford-university"/>
+        <rdfs:label>Natasha Noy</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+        <name>Natasha Noy</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/olivier-bodenreider">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/us-national-library-of-medicine"/>
+        <rdfs:label>Olivier Bodenreider</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+        <name>Olivier Bodenreider</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ondrej-svab">
+        <rdfs:label>Ondrej Svab-Zamazal</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/23"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <name>Ondrej Svab-Zamazal</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/paolo-besana">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-edinburgh"/>
+        <rdfs:label>Paolo Besana</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/UK"/>
+        <name>Paolo Besana</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/paolo-bouquet">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-trento-italy"/>
+        <rdfs:label>Paolo Bouquet</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <name>Paolo Bouquet</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/patrick-lambrix">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/linkoepings-universitet"/>
+        <rdfs:label>Patrick Lambrix</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Sweden"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/17"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/21"/>
+        <name>Patrick Lambrix</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/paul-smart">
+        <rdfs:label>Paul Smart</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/6"/>
+        <name>Paul Smart</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/paulo-quaresma">
+        <rdfs:label>Paulo Quaresma</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/5"/>
+        <name>Paulo Quaresma</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/pavel-shvaiko">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/informatica-trentina-s-p-a"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/taslab"/>
+        <rdfs:label>Pavel Shvaiko</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <mbox_sha1sum>6fc18ceccfe31ac7c9d76fea4e28a96b6fdd804e</mbox_sha1sum>
+        <name>Pavel Shvaiko</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peng-wang">
+        <rdfs:label>Peng Wang</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/14"/>
+        <name>Peng Wang</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peter-geibel">
+        <rdfs:label>Peter Geibel</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/22"/>
+        <name>Peter Geibel</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peter-mork">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/the-mitre-corporation"/>
+        <rdfs:label>Peter Mork</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+        <name>Peter Mork</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/piotr-stolarski">
+        <rdfs:label>Piotr Stolarski</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/12"/>
+        <name>Piotr Stolarski</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/qian-zhong">
+        <rdfs:label>Qian Zhong</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/16"/>
+        <name>Qian Zhong</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/qiang-liu">
+        <rdfs:label>Qiang Liu</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/17"/>
+        <name>Qiang Liu</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ryutaro-ichise">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/national-institute-of-informatics-japan"/>
+        <rdfs:label>Ryutaro Ichise</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Japan"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <name>Ryutaro Ichise</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sandra-geisler">
+        <rdfs:label>Sandra Geisler</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/13"/>
+        <name>Sandra Geisler</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/shenghui-wang">
+        <rdfs:label>Shenghui Wang</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/5"/>
+        <name>Shenghui Wang</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/songmao-zhang">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/chinese-academy-of-sciences"/>
+        <rdfs:label>Songmao Zhang</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/China"/>
+        <name>Songmao Zhang</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/stefan-dietze">
+        <rdfs:label>Stefan Dietze</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/28"/>
+        <name>Stefan Dietze</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/tassos-venetis">
+        <rdfs:label>Tassos Venetis</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/2"/>
+        <name>Tassos Venetis</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/umberto-straccia">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/isti-cnr"/>
+        <rdfs:label>Umberto Straccia</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <name>Umberto Straccia</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/vassilis-tzouvaras">
+        <rdfs:label>Vassilis Tzouvaras</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/2"/>
+        <name>Vassilis Tzouvaras</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/veronique-malaise">
+        <rdfs:label>Veronique Malaise</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <name>Veronique Malaise</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/vipul-kashyap">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/clinical-informatics-r-d-partners-healthcare-system"/>
+        <rdfs:label>Vipul Kashyap</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+        <name>Vipul Kashyap</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/vojtech-svatek">
+        <rdfs:label>Vojtech Svatek</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/23"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <name>Vojtech Svatek</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/wei-hu">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/southeast-university"/>
+        <rdfs:label>Wei Hu</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/China"/>
+        <name>Wei Hu</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/wei-xu">
+        <rdfs:label>Wei Xu</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/21"/>
+        <name>Wei Xu</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/willem-van-hage">
+        <rdfs:label>Willem Robert van Hage</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/24"/>
+        <name>Willem Robert van Hage</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/xiang-li">
+        <rdfs:label>Xiang Li</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/13"/>
+        <name>Xiang Li</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/xiao-zhang">
+        <rdfs:label>Xiao Zhang</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/16"/>
+        <name>Xiao Zhang</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yannis-kalfoglou">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ricoh-europe-plc"/>
+        <rdfs:label>Yannis Kalfoglou</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/UK"/>
+        <name>Yannis Kalfoglou</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yannis-velegrakis">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-trento-italy"/>
+        <rdfs:label>Yannis Velegrakis</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <name>Yannis Velegrakis</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/york-sure">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/sap-ag"/>
+        <rdfs:label>York Sure</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <name>York Sure</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yves-r-jean-mary">
+        <rdfs:label>Yves R. Jean-Mary</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/10"/>
+        <name>Yves R. Jean-Mary</name>
+    </Person>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/om/2008">
+        <swc:completeGraph rdf:resource="http://data.semanticweb.org/workshop/om/2008/complete"/>
+        <swc:hasAcronym>OM2008</swc:hasAcronym>
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/workshop/om/2008/main/pcmember"/>
+        <rdfs:label>The Third International Workshop on Ontology Matching</rdfs:label>
+        <ical:dtend rdf:parseType="Resource">
+            <ical:date>2008-10-26</ical:date>
+            <ical:tzid>GMT+1</ical:tzid>
+        </ical:dtend>
+        <ical:dtstart rdf:parseType="Resource">
+            <ical:date>2008-10-26</ical:date>
+            <ical:tzid>GMT+1</ical:tzid>
+        </ical:dtstart>
+        <ical:url rdf:resource="http://om2008.ontologymatching.org/"/>
+        <homepage rdf:resource="http://om2008.ontologymatching.org/"/>
+    </swc:WorkshopEvent>
+
+    <swc:OrganisingCommitteeMember rdf:about="http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/fausto-giunchiglia"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/pavel-shvaiko"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/om/2008"/>
+    </swc:OrganisingCommitteeMember>
+
+    <swc:PCMember rdf:about="http://data.semanticweb.org/workshop/om/2008/main/pcmember">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/anthony-jameson"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/antoine-isaac"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/baoshi-yan"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/eleni-stroulia"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/isabel-cruz"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/ivan-pilati"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/jerome-david"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/luciano-serafini"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/ludger-van-elst"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/luigi-palopoli"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/marco-schorlemmer"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/monika-lanzenberger"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/natalya-noy"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/olivier-bodenreider"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/paolo-besana"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/paolo-bouquet"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/patrick-lambrix"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/peter-mork"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/ryutaro-ichise"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/songmao-zhang"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/umberto-straccia"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/vipul-kashyap"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/wei-hu"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/yannis-kalfoglou"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/yannis-velegrakis"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/york-sure"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/om/2008"/>
+    </swc:PCMember>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/1">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <dc:title>Incoherence as a basis for measuring the quality of ontology mappings</dc:title>
+        <swrc:abstract>Traditionally, the quality of ontology matching is measured using precisionand recall with respect to a reference mapping. These measures have atleast two major drawbacks. First, a mapping with acceptable precision and recallmight nevertheless suffer from internal logical problems that hinder a sensible useof the mapping. Second, in practical situations reference mappings are not available.To avoid these drawbacks we introduce quality measures that are based onthe notion of mapping incoherence that can be used without a reference mapping.We argue that these measures are a reasonable complement to the well-knownmeasures already used for mapping evaluation. In particular, we show that one ofthese measures provides a strict upper bound for the precision of a mapping.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Incoherence as a basis for measuring the quality of ontology mappings</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/10">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/mansur-r-kabuka"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/yves-r-jean-mary"/>
+        <dc:title>ASMOV: results for OAEI 2008</dc:title>
+        <swrc:abstract>The Automated Semantic Mapping of Ontologies with Validation (ASMOV) algorithm for ontology alignment was one of the top performing algorithms in the 2007 Ontology Alignment Evaluation Initiative (OAEI). In this paper, we present a brief overview of the algorithm and its improvements, followed by an analysis of its results on the 2008 OAEI tests.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/mansur-r-kabuka"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/yves-r-jean-mary"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/yves-r-jean-mary"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/mansur-r-kabuka"/>
+        </swrc_ext:authorList>
+        <rdfs:label>ASMOV: results for OAEI 2008</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/mansur-r-kabuka"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/yves-r-jean-mary"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/11">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/eduardo-mena"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jorge-gracia"/>
+        <dc:title>Ontology matching with CIDER: evaluation report for the OAEI 2008</dc:title>
+        <swrc:abstract>Ontology matching, the task of determining relations thathold among terms of two different ontologies, is a key issue in the Semantic Web and other related fields. In order to compare the behaviour of different ontology matching systems, the Ontology Alignment Evaluation Initiative (OAEI) has established a periodical controlled evaluationthat comes in a yearly event. We present here our participation in the2008 initiative.Our schema-based alignment algorithm compares each pair of ontologyterms by, firstly, extracting their ontological contexts up to a certaindepth (enriched by using transitive entailment) and, secondly, combining different elementary ontology matching techniques (e.g., lexical distances and vector space modelling). Benchmark results show a very goodbehaviour in terms of precision, while preserving an acceptable recall.Based on our experience, we have also included some remarks about thenature of benchmark test cases that, in our opinion, could help improvingthe OAEI tests in the future.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/eduardo-mena"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jorge-gracia"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/jorge-gracia"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/eduardo-mena"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Ontology matching with CIDER: evaluation report for the OAEI 2008</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/eduardo-mena"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/jorge-gracia"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/12">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/enrico-motta"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/maria-vargas-vera"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/miklos-nagy"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/piotr-stolarski"/>
+        <dc:title>DSSim results for OAEI 2008</dc:title>
+        <swrc:abstract>The growing importance of ontology mapping on the Semantic Webhas highlighted the need to manage the uncertain nature of interpreting semanticmeta data represented by heterogeneous ontologies. Considering this uncertaintyone can potentially improve the ontology mapping precision, which can lead tobetter acceptance of systems that operate in this environment. Further the applicationof different techniques like computational linguistics or belief conflictresolution that can contribute the development of better mapping algorithms arerequired in order to process the incomplete and inconsistent information used andproduced during any mapping algorithm. In this paper we introduce our algorithmcalled “DSSim” and describe the improvements that we have made compared toOAEI 2006 and OAEI 2007.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/enrico-motta"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/maria-vargas-vera"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/miklos-nagy"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/piotr-stolarski"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/miklos-nagy"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/maria-vargas-vera"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/piotr-stolarski"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/enrico-motta"/>
+        </swrc_ext:authorList>
+        <rdfs:label>DSSim results for OAEI 2008</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/enrico-motta"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/maria-vargas-vera"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/miklos-nagy"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/piotr-stolarski"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/13">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/christoph-quix"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/david-kensche"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/sandra-geisler"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/xiang-li"/>
+        <dc:title>Results of GeRoMeSuite for OAEI 2008</dc:title>
+        <swrc:abstract>GeRoMeSuite is a generic model management system which providesseveral functions for managing complex data models, such as schema integration,definition and execution of schema mappings, model transformation, and matching.The system use the generic metamodel GeRoMe for representing models,and because of this, it is able to deal with models in various modeling languagessuch as XML Schema, OWL, ER, and relational schemas.A matching component for matching and alignment of schemas is also part ofthe system. We participated this year the first time in an OAEI contest in orderto evaluate and compare the performance of our matcher component with othersystems. Therefore, we focused our efforts on the ‘benchmark’ track.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/christoph-quix"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/david-kensche"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/sandra-geisler"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/xiang-li"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/christoph-quix"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/sandra-geisler"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/david-kensche"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/xiang-li"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Results of GeRoMeSuite for OAEI 2008</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/christoph-quix"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/david-kensche"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/sandra-geisler"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/xiang-li"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/14">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/baowen-xu"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/peng-wang"/>
+        <dc:title>Lily: ontology alignment results for OAEI 2008</dc:title>
+        <swrc:abstract>This paper presents the alignment results of Lily for the ontologyalignment contest OAEI 2008. Lily is an ontology mapping system, and it hasfour main features: generic ontology matching, large scale ontology matching,semantic ontology matching and mapping debugging. In the past year, Lily hasbeen improved greatly for both function and performance. Lily submited theresults for seven alignment tasks: benchmark, anatomy, fao, directory,mldirectory, library and conference. The results of the benchmark task arepresented. The paper also discusses the strengths and weaknesses of our system.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/baowen-xu"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/peng-wang"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/peng-wang"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/baowen-xu"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Lily: ontology alignment results for OAEI 2008</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/baowen-xu"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/peng-wang"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/15">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jan-hettenhausen"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/juergen-bock"/>
+        <dc:title>MapPSO results for OAEI 2008</dc:title>
+        <swrc:abstract>We present first results of an ontology alignment approach that isbased on discrete particle swarm optimisation. Firstly in this paper we will describe,how the algorithm approaches the ontology matching task as an optimisationproblem, and briefly sketch how the specific technique of particle swarmoptimisation is applied. Secondly, we will briefly discuss the results gained forthe Benchmark data set of the 2008 Ontology Alignment Evaluation Intiative.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jan-hettenhausen"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/juergen-bock"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/juergen-bock"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/jan-hettenhausen"/>
+        </swrc_ext:authorList>
+        <rdfs:label>MapPSO results for OAEI 2008</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/jan-hettenhausen"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/juergen-bock"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/16">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jie-tang"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/juanzi-li"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/qian-zhong"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/xiao-zhang"/>
+        <dc:title>RiMOM results for OAEI 2008</dc:title>
+        <swrc:abstract>In this report, we give a brief explanation of how RiMOM obtains the ontology alignment results at OAEI 2008 contest. We introduce the alignment process of RiMOM and more than 8 different alignment strategies integrated in RiMOM. Since every strategy is defined based on one specific ontological-information, we, in particular, study how the different strategies perform for different alignment tasks in the contest and design a strategy selection technique to get better performance. The result shows this technique is very useful. We also discuss some future work about RiMOM.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jie-tang"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/juanzi-li"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/qian-zhong"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/xiao-zhang"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/xiao-zhang"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/qian-zhong"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/juanzi-li"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/jie-tang"/>
+        </swrc_ext:authorList>
+        <rdfs:label>RiMOM results for OAEI 2008</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/jie-tang"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/juanzi-li"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/qian-zhong"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/xiao-zhang"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/17">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/he-tan"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/patrick-lambrix"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/qiang-liu"/>
+        <dc:title>SAMBO and SAMBOdtf results for the Ontology Alignment Evaluation Initiative 2008</dc:title>
+        <swrc:abstract>This article describes a base system for ontology alignment, SAMBO,and an extension, SAMBOdtf.We present their results for the benchmark, anatomyand FAO tasks in the 2008 Ontology Alignment Evaluation Initiative. For thebenchmark and FAO tasks SAMBO uses a strategy based on string matching aswell as the use of a thesaurus. It obtains good results in many cases. For theanatomy task SAMBO uses a combination of string matching and the use of domainknowledge. This combination performed well in former evaluations usingother anatomy ontologies. SAMBOdtf uses the same strategies but, in addition,uses an advanced filtering technique that augments recall while maintaining ahigh precision.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/he-tan"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/patrick-lambrix"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/qiang-liu"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/patrick-lambrix"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/he-tan"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/qiang-liu"/>
+        </swrc_ext:authorList>
+        <rdfs:label>SAMBO and SAMBOdtf results for the Ontology Alignment Evaluation Initiative 2008</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/he-tan"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/patrick-lambrix"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/qiang-liu"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/18">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jorge-gracia"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/marta-sabou"/>
+        <dc:title>Spider: bringing non-equivalence mappings to OAEI</dc:title>
+        <swrc:abstract>With the large majority of existing matching systems focusing on derivingequivalence mappings, OAEI has been primarily focused on assessing suchkind of relations. As the field inevitably advances towards the discovery of morecomplex mappings, the contest will need to reflect such changes as well. In thispaper we present Spider, a system that provides alignments containing not onlyequivalence mappings, but also a variety of different mapping types (namely,subsumption, disjointness and named relations). Our goal is both to get an insightinto the functioning of our system and, more importantly, to assess the currentsupport for dealing with non-equivalence mappings in the OAEI contest. Wehope that our observations will contribute to further enhance the procedure of thecontest.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jorge-gracia"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/marta-sabou"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/marta-sabou"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/jorge-gracia"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Spider: bringing non-equivalence mappings to OAEI</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/jorge-gracia"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/marta-sabou"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/19">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/brigitte-safar"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/chantal-reynaud"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/faycal-hamdi"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/haifa-zargayouna"/>
+        <dc:title>TaxoMap in the OAEI 2008 alignment contest</dc:title>
+        <swrc:abstract>TaxoMap is an alignment tool which aim is to discover rich correspondencesbetween concepts. It performs an oriented alignment (from a sourceto a target ontology) and takes into account labels and sub-class descriptions.Our participation in last year edition of the competition have put the emphasis oncertain limits. TaxoMap 2 is a new implementation of TaxoMap that reduces significantlyruntime and enables parameterization by specifying the ontology languageand different thresholds used to extract different mapping relations. Thenew implementation stresses on terminological techniques, it takes into accountsynonymy, and multi-label description of concepts. Special effort was made tohandle large-scale ontologies by partitioning input ontologies into modules toalign. We conclude the paper by pointing out the necessary improvements thatneed to be made.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/brigitte-safar"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/chantal-reynaud"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/faycal-hamdi"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/haifa-zargayouna"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/faycal-hamdi"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/haifa-zargayouna"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/brigitte-safar"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/chantal-reynaud"/>
+        </swrc_ext:authorList>
+        <rdfs:label>TaxoMap in the OAEI 2008 alignment contest</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/brigitte-safar"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/chantal-reynaud"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/faycal-hamdi"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/haifa-zargayouna"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/2">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/alfio-ferrara"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/davide-lorusso"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/giorgos-stamou"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/giorgos-stoilos"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/tassos-venetis"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/vassilis-tzouvaras"/>
+        <dc:title>Resolution of conicts among ontology mappings: a fuzzy approach</dc:title>
+        <swrc:abstract>Interoperability is a strong requirement in open distributedsystems and in the Semantic Web. The need for ontology integrationis not always completely met by the available ontology matching techniques because, in most cases, the semantics of the compared ontologiesis not considered, thus leading to inconsistent mappings. Probabilisticapproaches has been proposed to validate mappings and solve the inconsistencies, based on a mapping confidence measure. As probabilisticapproaches suffer from the lack of well-founded likelihood measures ofmapping correctness, we propose a validation approach based on fuzzyinterpretation of mappings, which better models the notion of degreeof similarity between ontology elements. Moreover, we describe a conflict resolution method which computes the minimal sets of conflictingmappings and can be the ground of different validation strategies.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/alfio-ferrara"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/davide-lorusso"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/giorgos-stamou"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/giorgos-stoilos"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/tassos-venetis"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/vassilis-tzouvaras"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/alfio-ferrara"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/davide-lorusso"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/giorgos-stamou"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/giorgos-stoilos"/>
+            <rdf:_5 rdf:resource="http://data.semanticweb.org/person/vassilis-tzouvaras"/>
+            <rdf:_6 rdf:resource="http://data.semanticweb.org/person/tassos-venetis"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Resolution of conicts among ontology mappings: a fuzzy approach</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/alfio-ferrara"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/davide-lorusso"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/giorgos-stamou"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/giorgos-stoilos"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/tassos-venetis"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/vassilis-tzouvaras"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/20">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/heiko-paulheim"/>
+        <dc:title>On applying matching tools to large-scale ontologies</dc:title>
+        <swrc:abstract>Many existing ontology matching tools are not well scalable.In this paper, we present the Malasco system, which serves as a framework for reusing existing, non-scalable matching systems on large-scaleontologies. The results achieved with different combinations of partitioning and matching tools are discussed, and optimization techniques areexamined. It is shown that the loss of result quality when matching withpartitioned data can be reduced to less than 5% compared to matchingwith unpartitioned data.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/heiko-paulheim"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/heiko-paulheim"/>
+        </swrc_ext:authorList>
+        <rdfs:label>On applying matching tools to large-scale ontologies</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/heiko-paulheim"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/21">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/he-tan"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/patrick-lambrix"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/wei-xu"/>
+        <dc:title>Literature-based alignment of ontologies</dc:title>
+        <swrc:abstract>In this paper we propose and evaluate new strategies foraligning ontologies based on text categorization of literature using supportvector machines-based text classifiers, and compare them with existingliterature-based strategies. We also compare and combine thesestrategies with linguistic strategies.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/he-tan"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/patrick-lambrix"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/wei-xu"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/patrick-lambrix"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/he-tan"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/wei-xu"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Literature-based alignment of ontologies</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/he-tan"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/patrick-lambrix"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/wei-xu"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/22">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/konstantin-todorov"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/peter-geibel"/>
+        <dc:title>Ontology mapping via structural and instance-based similarity measures</dc:title>
+        <swrc:abstract>The paper presents an overview of a novel procedure formapping hierarchical ontologies, populated with properly classified textdocuments. It combines structural and instance-based approaches to reducethe terminological and conceptual ontology heterogeneity. It yieldsimportant granularity and instantiation judgments about the inputs andis to be applied to mapping web-directories.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/konstantin-todorov"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/peter-geibel"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/konstantin-todorov"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/peter-geibel"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Ontology mapping via structural and instance-based similarity measures</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/konstantin-todorov"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/peter-geibel"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/23">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ondrej-svab"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/vojtech-svatek"/>
+        <dc:title>Testing the impact of pattern-based ontology refactoring on ontology matching results</dc:title>
+        <swrc:abstract>We observe the impact of ontology refactoring, based on detectionof name patterns in the ontology structure, on the results of ontology matching.Results of our experiment are evaluated using novel logic-based measures accompaniedby an analysis of typical effects. Although the pattern detection methodonly covers a fraction of ontological errors, there seems to be a measurable effecton the quality of the resulting matching.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/ondrej-svab"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/vojtech-svatek"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/ondrej-svab"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/vojtech-svatek"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Testing the impact of pattern-based ontology refactoring on ontology matching results</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ondrej-svab"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/vojtech-svatek"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/24">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/guus-schreiber"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/hap-kolb"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/willem-van-hage"/>
+        <dc:title>Relevance-based evaluation of alignment approaches: the OAEI 2007 food task revisited</dc:title>
+        <swrc:abstract>Current state-of-the-art ontology-alignment evaluation methods arebased on the assumption that alignment relations come in two flavors: correctand incorrect. Some alignment systems find more correct mappings than othersand hence, by this assumption, they perform better. In practical applications however,it does not only matter how many correct mappings you find, but also whichcorrect mappings you find. This means that, apart from correctness, relevanceshould also be included in the evaluation procedure. In this paper we expand thesample-based evaluation of the OAEI 2007 food task with a sample evaluationthat uses relevance to prototypical search tasks as a selection criterion for thedrawing of sample mappings.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/guus-schreiber"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/hap-kolb"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/willem-van-hage"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/willem-van-hage"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/hap-kolb"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/guus-schreiber"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Relevance-based evaluation of alignment approaches: the OAEI 2007 food task revisited</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/guus-schreiber"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/hap-kolb"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/willem-van-hage"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/25">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/david-macii"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/fabio-andreatta"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ivan-pilati"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/luca-mion"/>
+        <dc:title>Matching ontologies for emergency evacuation plans</dc:title>
+        <swrc:abstract>In case of emergency, the coordination of different servicesdeals with different working methods, different languages, different instruments, different sensors and different data representations. Thus,the coordination of services includes heterogeneity problems that canbe managed with the help of ontology matching techniques. In this paper we present a scenario where the requirements for ontology matchingarise from emergency evacuation plans, in the specific domain of civilprotection applications. We envisage what kind of smart sensor technologies could be used to support critical decisions when heterogeneoussources of information have to be matched.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/david-macii"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/fabio-andreatta"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/ivan-pilati"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/luca-mion"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/luca-mion"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/ivan-pilati"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/david-macii"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/fabio-andreatta"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Matching ontologies for emergency evacuation plans</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/david-macii"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/fabio-andreatta"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ivan-pilati"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/luca-mion"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/26">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/daniele-montanari"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/domenico-beneventano"/>
+        <dc:title>Ontological mappings of product catalogues</dc:title>
+        <swrc:abstract>In this paper we built on top of recent effort in the areas of semanticsand interoperability to establish the basis for a comprehensive and sustainableapproach to the development and later management of bridging systems amonga variety of corporate system that need to be interconnected without beingindividually modified. In particular, we collect some preliminary evidence thata sustainable approach exists to the definition of mappings which can withstandchanges of the underlying classification schemes. This in turn adds evidencetowards the feasibility of a dynamic interoperable infrastructure supporting aglobal adaptive electronic market place.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/daniele-montanari"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/domenico-beneventano"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/domenico-beneventano"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/daniele-montanari"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Ontological mappings of product catalogues</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/daniele-montanari"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/domenico-beneventano"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/27">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/daniel-sonntag"/>
+        <dc:title>Towards dialogue-based interactive semantic mediation in the medical domain</dc:title>
+        <swrc:abstract>We think of ontology matching as a dialogue-based interactivemediation process for which we propose a three stage model. Apreliminary evaluation shows how we applied this method of eliciting inputfor ontology matching in the medical domain. Especially, we addressthe challenge how to use dialogue-based interactivity with the user torate partial alignments between two ontologies.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/daniel-sonntag"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/daniel-sonntag"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Towards dialogue-based interactive semantic mediation in the medical domain</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/daniel-sonntag"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/28">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/john-domingue"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/stefan-dietze"/>
+        <dc:title>Towards ontology interoperability through conceptual groundings</dc:title>
+        <swrc:abstract>The widespread use of ontologies raises the need to resolve heterogeneities betweendistinct conceptualisations in order to support interoperability. The aim of ontology mapping is,to establish formal relations between a set of knowledge entities which represent the same or asimilar meaning in distinct ontologies. Whereas the symbolic approach of established SWrepresentation standards – based on first-order logic and syllogistic reasoning – does notimplicitly represent similarity relationships, the ontology mapping task strongly relies onidentifying semantic similarities. However, while concept representations across distinctontologies hardly equal another, manually or even semi-automatically identifying similarityrelationships is costly. Conceptual Spaces (CS) enable the representation of concepts as vectorspaces which implicitly carry similarity information. But CS provide neither an implicitrepresentational mechanism nor a means to represent arbitrary relations between concepts orinstances. In order to overcome these issues, we propose a hybrid knowledge representationapproach which extends first-order logic ontologies with a conceptual grounding through a setof CS-based representations. Consequently, semantic similarity between instances –represented as members in CS – is indicated by means of distance metrics. Hence, automaticsimilarity-detection between instances across distinct ontologies is supported in order tofacilitate ontology mapping.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/john-domingue"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/stefan-dietze"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/stefan-dietze"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/john-domingue"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Towards ontology interoperability through conceptual groundings</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/john-domingue"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/stefan-dietze"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/3">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jerome-david"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+        <dc:title>On fixing semantic alignment evaluation measures</dc:title>
+        <swrc:abstract>The evaluation of ontology matching algorithms mainly consists ofcomparing a produced alignment with a reference one. Usually, this evaluationrelies on the classical precision and recall measures. This evaluation model is notsatisfactory since it does not take into account neither the closeness of correspondances,nor the semantics of alignments. A first solution consists of generalizingthe precision and recall measures in order to solve the problem of rigidity of classicalmodel. Another solution aims at taking advantage of the semantic of alignmentsin the evaluation. In this paper, we show and analyze the limits of theseevaluation models. Given that measures values depend on the syntactic form ofthe alignment, we first propose an normalization of alignment. Then, we proposetwo new sets of evaluation measures. The first one is a semantic extension of relaxedprecision and recall. The second one consists of bounding the alignmentspace to make ideal semantic precision and recall applicable.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jerome-david"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/jerome-david"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+        </swrc_ext:authorList>
+        <rdfs:label>On fixing semantic alignment evaluation measures</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/jerome-david"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/5">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/antoine-isaac"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/cassia-trojahn"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/paulo-quaresma"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/shenghui-wang"/>
+        <dc:title>Using quantitative aspects of alignment generation for argumentation on mappings</dc:title>
+        <swrc:abstract>State-of-the art mappers articulate several techniques usingdifferent sources of knowledge in an unified process. An important issueof ontology mapping is to find ways of choosing among many techniquesand their variations, and then combining their results. For this,an innovative and promising option is to use frameworks dealing witharguments for or against correspondences. In this paper, we re-use anargumentation framework that considers the confidence levels of mappingarguments. We also propose new frameworks that use voting as away to cope with various degrees of consensus among arguments. Wecompare these frameworks by evaluating their application to a range ofindividual mappers, in the context of a real-world library case.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/antoine-isaac"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/cassia-trojahn"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/paulo-quaresma"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/shenghui-wang"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/antoine-isaac"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/cassia-trojahn"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/shenghui-wang"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/paulo-quaresma"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Using quantitative aspects of alignment generation for argumentation on mappings</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/antoine-isaac"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/cassia-trojahn"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/paulo-quaresma"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/shenghui-wang"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/6">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/gianluca-correndo"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/harith-alani"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/paul-smart"/>
+        <dc:title>A community based approach for managing ontology alignments</dc:title>
+        <swrc:abstract>The Semantic Web is rapidly becoming a defacto distributedrepository for semantically represented data, thus leveraging on the addedon value of the network effect. Various ontology mapping techniques andtools have been devised to facilitate the bridging and integration of distributeddata repositories. Nevertheless, ontology mapping can benefitfrom human supervision to increase accuracy of results. The spread ofWeb 2.0 approaches demonstrate the possibility of using collaborativetechniques for reaching consensus. While a number of prototypes for collaborativeontology construction are being developed, collaborative ontologymapping is not yet well investigated. In this paper, we describe aprototype that combines off-the-shelf ontology mapping tools with socialsoftware techniques to enable users to collaborate on mapping ontologies.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/gianluca-correndo"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/harith-alani"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/paul-smart"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/gianluca-correndo"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/harith-alani"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/paul-smart"/>
+        </swrc_ext:authorList>
+        <rdfs:label>A community based approach for managing ontology alignments</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/gianluca-correndo"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/harith-alani"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/paul-smart"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/7">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/antoine-isaac"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/caterina-caracciolo"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/juan-pane"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/laura-hollink"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ondrej-svab"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/pavel-shvaiko"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ryutaro-ichise"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/veronique-malaise"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/vojtech-svatek"/>
+        <dc:title>First results of the Ontology Alignment Evaluation Initiative 2008</dc:title>
+        <swrc:abstract>Ontology matching consists of finding correspondences between ontologyentities. OAEI campaigns aim at comparing ontology matching systems onprecisely defined test sets. Test sets can use ontologies of different nature (fromexpressive OWL ontologies to simple directories) and use different modalities(e.g., blind evaluation, open evaluation, consensus). OAEI-2008 builds over previouscampaigns by having 4 tracks with 8 test sets followed by 13 participants.Following the trend of previous years, more participants evolve at the forefront.The final and official results of the campaign are those published on the OAEIweb site.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/antoine-isaac"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/caterina-caracciolo"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/juan-pane"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/laura-hollink"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/ondrej-svab"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/pavel-shvaiko"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/ryutaro-ichise"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/veronique-malaise"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/vojtech-svatek"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/caterina-caracciolo"/>
+            <rdf:_10 rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+            <rdf:_11 rdf:resource="http://data.semanticweb.org/person/ondrej-svab"/>
+            <rdf:_12 rdf:resource="http://data.semanticweb.org/person/vojtech-svatek"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/laura-hollink"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/ryutaro-ichise"/>
+            <rdf:_5 rdf:resource="http://data.semanticweb.org/person/antoine-isaac"/>
+            <rdf:_6 rdf:resource="http://data.semanticweb.org/person/veronique-malaise"/>
+            <rdf:_7 rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+            <rdf:_8 rdf:resource="http://data.semanticweb.org/person/juan-pane"/>
+            <rdf:_9 rdf:resource="http://data.semanticweb.org/person/pavel-shvaiko"/>
+        </swrc_ext:authorList>
+        <rdfs:label>First results of the Ontology Alignment Evaluation Initiative 2008</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/antoine-isaac"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/caterina-caracciolo"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/christian-meilicke"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/juan-pane"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/laura-hollink"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ondrej-svab"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/pavel-shvaiko"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ryutaro-ichise"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/veronique-malaise"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/vojtech-svatek"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/8">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/masaki-aono"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/md-hanif-seddiqui"/>
+        <dc:title>Alignment results of Anchor-Flood algorithm for OAEI-2008</dc:title>
+        <swrc:abstract>Our proposed algorithm called Anchor-Flood algorithm, starts off withanchors. It gradually explores concepts by collecting neighbors in concept taxonomy,thereby taking advantage of locality of reference in the graph data structure.Then local alignment process runs over the collected small blocks of concepts.The process is repeated for the newly found aligned pairs. In this way, we cansignificantly reduce the computational time for the alignment as our algorithmconcentrates on the aligned pairs and it resolves the scalability problem in ontologyalignment over large ontologies. Through several experiments against OAEI-2008 datasets, we will demonstrate the results and the features of our Anchor-Flood algorithm.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/masaki-aono"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/md-hanif-seddiqui"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/md-hanif-seddiqui"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/masaki-aono"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Alignment results of Anchor-Flood algorithm for OAEI-2008</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/masaki-aono"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/md-hanif-seddiqui"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/paper/main/9">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/om/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jerome-david"/>
+        <dc:title>AROMA results for OAEI 2008</dc:title>
+        <swrc:abstract>This paper presents the results obtained by AROMA for its first participationto OAEI. AROMA is an hybrid, extensional and asymmetric ontologyalignment method which makes use of the association paradigm and a statisticalinterstingness measure, the implication intensity.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jerome-david"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/jerome-david"/>
+        </swrc_ext:authorList>
+        <rdfs:label>AROMA results for OAEI 2008</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/jerome-david"/>
+    </swrc:InProceedings>
+
+    <swrc:Proceedings rdf:about="http://data.semanticweb.org/workshop/om/2008/proceedings">
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/1"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/10"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/11"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/12"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/13"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/14"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/15"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/16"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/17"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/18"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/19"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/2"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/20"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/21"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/22"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/23"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/24"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/25"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/26"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/27"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/28"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/3"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/5"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/6"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/7"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/8"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/om/2008/paper/main/9"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/om/2008"/>
+        <swrc:booktitle>Proceedings of the 3rd International Workshop on Ontology Matching (OM-2008) Collocated with the 7th International Semantic Web Conference (ISWC-2008)</swrc:booktitle>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/fausto-giunchiglia"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/pavel-shvaiko"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:editorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/pavel-shvaiko"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/jerome-euzenat"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/fausto-giunchiglia"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/heiner-stuckenschmidt"/>
+        </swrc_ext:editorList>
+    </swrc:Proceedings>
+</rdf:RDF>

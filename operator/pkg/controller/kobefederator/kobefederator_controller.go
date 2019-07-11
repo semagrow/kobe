@@ -2,6 +2,7 @@ package kobefederator
 
 import (
 	"context"
+	"reflect"
 	"strconv"
 
 	kobefederatorv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederator/v1alpha1"
@@ -9,6 +10,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/intstr"
@@ -123,29 +125,6 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Creating a new deployment for kobefederator", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-
-		/*
-			envs := []corev1.EnvVar{}
-			for i, endpoint := range instance.Spec.Endpoints {
-				env := corev1.EnvVar{Name: "endpoint" + strconv.Itoa(i), Value: endpoint}
-				envs = append(envs, env)
-				//env = corev1.EnvVar{Name: "dataset" + strconv.Itoa(i), Value: endpoint}
-			}
-			for i, datasetname := range instance.Spec.DatasetNames {
-				env := corev1.EnvVar{Name: "dataset" + strconv.Itoa(i), Value: datasetname}
-				envs = append(envs, env)
-			}
-
-			for _, initcontainer := range instance.Spec.InitContainers { //do it for all init containers.Possible only 2 will be needed
-
-				//put them as arguments to a command that the user can set for the init container if he wants
-				initcontainer.Args = instance.Spec.Endpoints
-
-				// put them also as environment variables to pass to init container .In the form endpoint1 ="endpointN1" endpoint2="endpointN2"
-				// put in environment also the raw names of each dataset ! MORE is MORE
-				initcontainer.Env = envs
-			}
-		*/
 		dep := r.newDeploymentForFederator(instance)
 		reqLogger.Info("Creating a new Deployment %s/%s\n", dep.Namespace, dep.Name)
 		err = r.client.Create(context.TODO(), dep)
@@ -158,7 +137,28 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 		return reconcile.Result{}, err
 	}
 
-	//check if someone changed the affinity of the kobefederator and update it
+	//check for status changes
+	podList := &corev1.PodList{}
+	labelSelector := labels.SelectorFromSet(labelsForKobeFederator(instance.Name))
+	listOps := &client.ListOptions{Namespace: instance.Namespace, LabelSelector: labelSelector}
+	err = r.client.List(context.TODO(), listOps, podList)
+	if err != nil {
+		reqLogger.Info("Failed to list pods: %v", err)
+		return reconcile.Result{}, err
+	}
+	podNames := getPodNames(podList.Items)
+
+	// Update status.PodNames if needed
+	if !reflect.DeepEqual(podNames, instance.Status.PodNames) {
+		instance.Status.PodNames = podNames
+		err := r.client.Update(context.TODO(), instance)
+		if err != nil {
+			reqLogger.Info("failed to update node status: %v", err)
+			return reconcile.Result{}, err
+		}
+	}
+
+	//update kobe federator affinity
 	if instance.Spec.Affinity.NodeAffinity != nil || instance.Spec.Affinity.PodAffinity != nil || instance.Spec.Affinity.PodAntiAffinity != nil {
 		affinity := instance.Spec.Affinity
 		if *found.Spec.Template.Spec.Affinity != affinity {
@@ -196,11 +196,19 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 	return reconcile.Result{}, err
 }
 
+//---------------------------------functions that create native kubernetes objects that are owned by a federator -----------------------
+func getPodNames(pods []corev1.Pod) []string {
+	var podNames []string
+	for _, pod := range pods {
+		podNames = append(podNames, pod.Name)
+	}
+	return podNames
+}
+
 func labelsForKobeFederator(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
 
-//---------------------------------functions that create native kubernetes objects that are owned by a federator -----------------------
 func (r *ReconcileKobeFederator) newDeploymentForFederator(m *kobefederatorv1alpha1.KobeFederator) *appsv1.Deployment {
 	labels := labelsForKobeFederator(m.Name)
 

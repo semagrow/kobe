@@ -109,12 +109,26 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 
 	//check if every kobedataset of the benchmark is healthy.Create a list of the endpoints and of the names of the datasets
 	for _, datasetInfo := range foundBenchmark.Spec.Datasets {
-		dataset := &kobedatasetv1alpha1.KobeDataset{}
-		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: foundBenchmark.Namespace, Name: datasetInfo.Name}, dataset)
+		foundDataset := &kobedatasetv1alpha1.KobeDataset{}
+		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: foundBenchmark.Namespace, Name: datasetInfo.Name}, foundDataset)
 		if err != nil {
 			reqLogger.Info("Failed to find a specific dataset from the list of datasets of this benchmark")
 			return reconcile.Result{RequeueAfter: 5}, err
 		}
+		//check for the healthiness of the individual pods of the kobe dataset
+		for _, podname := range foundDataset.Status.PodNames {
+			foundPod := &corev1.Pod{}
+			err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: podname}, foundPod)
+			if err != nil && errors.IsNotFound(err) {
+				reqLogger.Info("Failed to get the pod of the kobe dataset that experiment will use")
+				return reconcile.Result{RequeueAfter: 5}, nil
+			}
+			if foundPod.Status.Phase != "Running" {
+				reqLogger.Info("Kobe dataset pod is not ready so experiment needs to wait")
+				return reconcile.Result{RequeueAfter: 5}, nil
+			}
+		}
+
 		//create a list of the sparql endpoints
 		endpoints = append(endpoints, dataset.Name+"."+dataset.Namespace+".svc.cluster-domain.example")
 		datasets = append(datasets, dataset.Name)
@@ -125,14 +139,32 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		FedCR := r.newFederatorForExperiment(instance, kobeFedSpec, endpoints, datasets)
 		err := r.client.Create(context.TODO(), FedCR)
 		if err != nil {
-			reqLogger.Info("Failed to create the federator %s to run the experiment ")
+			reqLogger.Info("Failed to create the kobe federator %s to run the experiment ")
 			return reconcile.Result{RequeueAfter: 5}, err
 		}
 
 	}
-
-	//Create more stuff here that are necessary to init the federators and the queries
-	//get the queries and mount them so the job can find them
+	//check if the pods of the federators exist and have a status of running before proceeding
+	for _, kobeFedSpec := range instance.Spec.Federators {
+		foundFed := &kobefederatorv1alpha1.KobeFederator{}
+		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: kobeFedSpec.Name}, foundFed)
+		if err != nil && errors.IsNotFound(err) {
+			reqLogger.Info("Failed to get kobe federator that the experiment will use")
+			return reconcile.Result{RequeueAfter: 5}, nil
+		}
+		for _, podname := range foundFed.Status.PodNames {
+			foundPod := &corev1.Pod{}
+			err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: podname}, foundPod)
+			if err != nil && errors.IsNotFound(err) {
+				reqLogger.Info("Failed to get the pod of the kobe federator that experiment will use")
+				return reconcile.Result{RequeueAfter: 5}, nil
+			}
+			if foundPod.Status.Phase != "Running" {
+				reqLogger.Info("Kobe federator pod is not ready so experiment needs to wait")
+				return reconcile.Result{RequeueAfter: 5}, nil
+			}
+		}
+	}
 
 	//Everything is healthy and ready for the experiment.
 	if instance.Spec.RunFlag == false { //dont run just yet just have it defined
@@ -144,7 +176,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	err = r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: instance.Name + "-" + strconv.Itoa(identifier)}, foundJob)
 	if err == nil {
 		//to fix this .. do something else here cause there should be multiple jobs and there should be no problem
-		reqLogger.Info("There are more jobs running or jave finished for this experiment\n ")
+		reqLogger.Info("There are more jobs running or have finished for this experiment\n ")
 		identifier++
 		//return reconcile.Result{}, err
 	}
