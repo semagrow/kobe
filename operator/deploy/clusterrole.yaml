@@ -81,3 +81,9 @@ rules:
   - '*'
   verbs:
   - '*'
+- apiGroups:
+  - kobeutil.kobe.com
+  resources:
+  - '*'
+  verbs:
+  - '*'

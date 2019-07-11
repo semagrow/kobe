@@ -130,8 +130,8 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		}
 
 		//create a list of the sparql endpoints
-		endpoints = append(endpoints, dataset.Name+"."+dataset.Namespace+".svc.cluster-domain.example")
-		datasets = append(datasets, dataset.Name)
+		endpoints = append(endpoints, foundDataset.Name+"."+foundDataset.Namespace+".svc.cluster-domain.example")
+		datasets = append(datasets, foundDataset.Name)
 	}
 
 	//create each federator from the spec defined in the kobeexperiment yaml.Also provide each of the feds with lists of endpoints and dataset names
