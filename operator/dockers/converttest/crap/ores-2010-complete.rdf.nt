@@ -1,0 +1,870 @@
+<http://data.semanticweb.org/organization/aalto-university-fi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/aalto-university-fi> <http://www.w3.org/2000/01/rdf-schema#label> "Aalto University" .
+<http://data.semanticweb.org/organization/aalto-university-fi> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/organization/aalto-university-fi> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/organization/aalto-university-fi> <http://xmlns.com/foaf/0.1/name> "Aalto University" .
+<http://data.semanticweb.org/organization/bbn-technologies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/bbn-technologies> <http://www.w3.org/2000/01/rdf-schema#label> "BBN" .
+<http://data.semanticweb.org/organization/bbn-technologies> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/mike-dean> .
+<http://data.semanticweb.org/organization/bbn-technologies> <http://xmlns.com/foaf/0.1/name> "BBN" .
+<http://data.semanticweb.org/organization/eliko-tak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/eliko-tak> <http://www.w3.org/2000/01/rdf-schema#label> "ELIKO TAK" .
+<http://data.semanticweb.org/organization/eliko-tak> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/martin-luts> .
+<http://data.semanticweb.org/organization/eliko-tak> <http://xmlns.com/foaf/0.1/name> "ELIKO TAK" .
+<http://data.semanticweb.org/organization/fluid-operations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/fluid-operations> <http://www.w3.org/2000/01/rdf-schema#label> "Fluid Operations" .
+<http://data.semanticweb.org/organization/fluid-operations> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/peter-haase> .
+<http://data.semanticweb.org/organization/fluid-operations> <http://xmlns.com/foaf/0.1/name> "Fluid Operations" .
+<http://data.semanticweb.org/organization/jacobs-university-bremen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/jacobs-university-bremen> <http://www.w3.org/2000/01/rdf-schema#label> "Jacobs University Bremen" .
+<http://data.semanticweb.org/organization/jacobs-university-bremen> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/christoph-lange> .
+<http://data.semanticweb.org/organization/jacobs-university-bremen> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/michael-kohlhase> .
+<http://data.semanticweb.org/organization/jacobs-university-bremen> <http://xmlns.com/foaf/0.1/name> "Jacobs University Bremen" .
+<http://data.semanticweb.org/organization/johannes-kepler-university-linz-austria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/johannes-kepler-university-linz-austria> <http://www.w3.org/2000/01/rdf-schema#label> "Johannes Kepler University Linz" .
+<http://data.semanticweb.org/organization/johannes-kepler-university-linz-austria> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/wolfram-woess> .
+<http://data.semanticweb.org/organization/johannes-kepler-university-linz-austria> <http://xmlns.com/foaf/0.1/name> "Johannes Kepler University Linz" .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://www.w3.org/2000/01/rdf-schema#label> "The Open University" .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/mathieu-daquin> .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://xmlns.com/foaf/0.1/name> "The Open University" .
+<http://data.semanticweb.org/organization/northeastern-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/northeastern-university> <http://www.w3.org/2000/01/rdf-schema#label> "Northeastern University" .
+<http://data.semanticweb.org/organization/northeastern-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/kenneth-baclawski> .
+<http://data.semanticweb.org/organization/northeastern-university> <http://xmlns.com/foaf/0.1/name> "Northeastern University" .
+<http://data.semanticweb.org/organization/poznan-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/poznan-university> <http://www.w3.org/2000/01/rdf-schema#label> "Pozna\u0144 University" .
+<http://data.semanticweb.org/organization/poznan-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/raul-palma> .
+<http://data.semanticweb.org/organization/poznan-university> <http://xmlns.com/foaf/0.1/name> "Pozna\u0144 University" .
+<http://data.semanticweb.org/organization/profium-ltd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/profium-ltd> <http://www.w3.org/2000/01/rdf-schema#label> "Profium Ltd." .
+<http://data.semanticweb.org/organization/profium-ltd> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/janne-saarela> .
+<http://data.semanticweb.org/organization/profium-ltd> <http://xmlns.com/foaf/0.1/name> "Profium Ltd." .
+<http://data.semanticweb.org/organization/rensselaer-polytechnic-institute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/rensselaer-polytechnic-institute> <http://www.w3.org/2000/01/rdf-schema#label> "Rensselaer Polytechnic Institute" .
+<http://data.semanticweb.org/organization/rensselaer-polytechnic-institute> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/li-ding> .
+<http://data.semanticweb.org/organization/rensselaer-polytechnic-institute> <http://xmlns.com/foaf/0.1/name> "Rensselaer Polytechnic Institute" .
+<http://data.semanticweb.org/organization/stanford-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/stanford-university> <http://www.w3.org/2000/01/rdf-schema#label> "Stanford University" .
+<http://data.semanticweb.org/organization/stanford-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/mark-a-musen> .
+<http://data.semanticweb.org/organization/stanford-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/natalya-noy> .
+<http://data.semanticweb.org/organization/stanford-university> <http://xmlns.com/foaf/0.1/name> "Stanford University" .
+<http://data.semanticweb.org/organization/the-mitre-corporation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/the-mitre-corporation> <http://www.w3.org/2000/01/rdf-schema#label> "MITRE Corporation" .
+<http://data.semanticweb.org/organization/the-mitre-corporation> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/leo-obrst> .
+<http://data.semanticweb.org/organization/the-mitre-corporation> <http://xmlns.com/foaf/0.1/name> "MITRE Corporation" .
+<http://data.semanticweb.org/organization/university-of-bremen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-bremen> <http://www.w3.org/2000/01/rdf-schema#label> "Universit\u00E4t Bremen" .
+<http://data.semanticweb.org/organization/university-of-bremen> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/alexander-garcia-castro> .
+<http://data.semanticweb.org/organization/university-of-bremen> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/john-bateman> .
+<http://data.semanticweb.org/organization/university-of-bremen> <http://xmlns.com/foaf/0.1/name> "Universit\u00E4t Bremen" .
+<http://data.semanticweb.org/organization/university-of-helsinki> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-helsinki> <http://www.w3.org/2000/01/rdf-schema#label> "University of Helsinki" .
+<http://data.semanticweb.org/organization/university-of-helsinki> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/organization/university-of-helsinki> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/jouni-tuominen> .
+<http://data.semanticweb.org/organization/university-of-helsinki> <http://xmlns.com/foaf/0.1/name> "University of Helsinki" .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://www.w3.org/2000/01/rdf-schema#label> "Universit\u00E4t M\u00FCnster" .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/tomi-kauppinen> .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://xmlns.com/foaf/0.1/name> "Universit\u00E4t M\u00FCnster" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/2000/01/rdf-schema#label> "Vrije Universiteit" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/antoine-isaac> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/name> "Vrije Universiteit" .
+<http://data.semanticweb.org/organization/w3c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/w3c> <http://www.w3.org/2000/01/rdf-schema#label> "W3C" .
+<http://data.semanticweb.org/organization/w3c> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/sandro-hawke> .
+<http://data.semanticweb.org/organization/w3c> <http://xmlns.com/foaf/0.1/name> "W3C" .
+<http://data.semanticweb.org/person/adrian-marte> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adrian-marte> <http://www.w3.org/2000/01/rdf-schema#label> "Adrian Marte" .
+<http://data.semanticweb.org/person/adrian-marte> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/9> .
+<http://data.semanticweb.org/person/adrian-marte> <http://xmlns.com/foaf/0.1/name> "Adrian Marte" .
+<http://data.semanticweb.org/person/alejandro-llaves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alejandro-llaves> <http://www.w3.org/2000/01/rdf-schema#label> "Alejandro Llaves" .
+<http://data.semanticweb.org/person/alejandro-llaves> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/11> .
+<http://data.semanticweb.org/person/alejandro-llaves> <http://xmlns.com/foaf/0.1/name> "Alejandro Llaves" .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-bremen> .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Garc\u00EDa Castro" .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "5f84327bfd387f1db9c26d39fe2962ab92e0b6cc" .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/name> "Alexander Garc\u00EDa Castro" .
+<http://data.semanticweb.org/person/anderson-bestteti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/anderson-bestteti> <http://www.w3.org/2000/01/rdf-schema#label> "Anderson Bestteti" .
+<http://data.semanticweb.org/person/anderson-bestteti> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/15> .
+<http://data.semanticweb.org/person/anderson-bestteti> <http://xmlns.com/foaf/0.1/name> "Anderson Bestteti" .
+<http://data.semanticweb.org/person/antoine-isaac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/antoine-isaac> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/antoine-isaac> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> .
+<http://data.semanticweb.org/person/antoine-isaac> <http://www.w3.org/2000/01/rdf-schema#label> "Antoine Isaac" .
+<http://data.semanticweb.org/person/antoine-isaac> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/The_Netherlands> .
+<http://data.semanticweb.org/person/antoine-isaac> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "b3f1e62e330cd51c8d2bc7d275d11ed9f4345caa" .
+<http://data.semanticweb.org/person/antoine-isaac> <http://xmlns.com/foaf/0.1/name> "Antoine Isaac" .
+<http://data.semanticweb.org/person/antoine-zimmermann> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/antoine-zimmermann> <http://www.w3.org/2000/01/rdf-schema#label> "Antoine Zimmermann" .
+<http://data.semanticweb.org/person/antoine-zimmermann> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/12> .
+<http://data.semanticweb.org/person/antoine-zimmermann> <http://xmlns.com/foaf/0.1/name> "Antoine Zimmermann" .
+<http://data.semanticweb.org/person/arturs-sprogis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/arturs-sprogis> <http://www.w3.org/2000/01/rdf-schema#label> "Art\u016Brs Spro\u0123is" .
+<http://data.semanticweb.org/person/arturs-sprogis> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/5> .
+<http://data.semanticweb.org/person/arturs-sprogis> <http://xmlns.com/foaf/0.1/name> "Art\u016Brs Spro\u0123is" .
+<http://data.semanticweb.org/person/barry-norton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/barry-norton> <http://www.w3.org/2000/01/rdf-schema#label> "Barry Norton" .
+<http://data.semanticweb.org/person/barry-norton> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/9> .
+<http://data.semanticweb.org/person/barry-norton> <http://xmlns.com/foaf/0.1/name> "Barry Norton" .
+<http://data.semanticweb.org/person/beracah-yankama> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/beracah-yankama> <http://www.w3.org/2000/01/rdf-schema#label> "Beracah Yankama" .
+<http://data.semanticweb.org/person/beracah-yankama> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/6> .
+<http://data.semanticweb.org/person/beracah-yankama> <http://xmlns.com/foaf/0.1/name> "Beracah Yankama" .
+<http://data.semanticweb.org/person/c-forbes-dewey-jr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/c-forbes-dewey-jr> <http://www.w3.org/2000/01/rdf-schema#label> "C. Forbes Dewey Jr." .
+<http://data.semanticweb.org/person/c-forbes-dewey-jr> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/6> .
+<http://data.semanticweb.org/person/c-forbes-dewey-jr> <http://xmlns.com/foaf/0.1/name> "C. Forbes Dewey Jr." .
+<http://data.semanticweb.org/person/carlos-pedrinaci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/carlos-pedrinaci> <http://www.w3.org/2000/01/rdf-schema#label> "Carlos Pedrinaci" .
+<http://data.semanticweb.org/person/carlos-pedrinaci> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/10> .
+<http://data.semanticweb.org/person/carlos-pedrinaci> <http://xmlns.com/foaf/0.1/name> "Carlos Pedrinaci" .
+<http://data.semanticweb.org/person/christoph-lange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/christoph-lange> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/christoph-lange> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/jacobs-university-bremen> .
+<http://data.semanticweb.org/person/christoph-lange> <http://www.w3.org/2000/01/rdf-schema#label> "Christoph Lange" .
+<http://data.semanticweb.org/person/christoph-lange> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/christoph-lange> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/8> .
+<http://data.semanticweb.org/person/christoph-lange> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "9590b8b4c24d188c0aa801b9dcd449879bbb8c98" .
+<http://data.semanticweb.org/person/christoph-lange> <http://xmlns.com/foaf/0.1/name> "Christoph Lange" .
+<http://data.semanticweb.org/person/dave-lambert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/dave-lambert> <http://www.w3.org/2000/01/rdf-schema#label> "David Lambert" .
+<http://data.semanticweb.org/person/dave-lambert> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/10> .
+<http://data.semanticweb.org/person/dave-lambert> <http://xmlns.com/foaf/0.1/name> "David Lambert" .
+<http://data.semanticweb.org/person/dimitrios-tzovaras> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/dimitrios-tzovaras> <http://www.w3.org/2000/01/rdf-schema#label> "Dimitrios Tzovaras" .
+<http://data.semanticweb.org/person/dimitrios-tzovaras> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/17> .
+<http://data.semanticweb.org/person/dimitrios-tzovaras> <http://xmlns.com/foaf/0.1/name> "Dimitrios Tzovaras" .
+<http://data.semanticweb.org/person/dionisis-kehagias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/dionisis-kehagias> <http://www.w3.org/2000/01/rdf-schema#label> "Dionisis Kehagias" .
+<http://data.semanticweb.org/person/dionisis-kehagias> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/17> .
+<http://data.semanticweb.org/person/dionisis-kehagias> <http://xmlns.com/foaf/0.1/name> "Dionisis Kehagias" .
+<http://data.semanticweb.org/person/dionysia-kontotasiou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/dionysia-kontotasiou> <http://www.w3.org/2000/01/rdf-schema#label> "Dionysia Kontotasiou" .
+<http://data.semanticweb.org/person/dionysia-kontotasiou> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/17> .
+<http://data.semanticweb.org/person/dionysia-kontotasiou> <http://xmlns.com/foaf/0.1/name> "Dionysia Kontotasiou" .
+<http://data.semanticweb.org/person/dong-liu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/dong-liu> <http://www.w3.org/2000/01/rdf-schema#label> "Dong Liu" .
+<http://data.semanticweb.org/person/dong-liu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/10> .
+<http://data.semanticweb.org/person/dong-liu> <http://xmlns.com/foaf/0.1/name> "Dong Liu" .
+<http://data.semanticweb.org/person/eero-hyvoenen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/eero-hyvoenen> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/eero-hyvoenen> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/aalto-university-fi> .
+<http://data.semanticweb.org/person/eero-hyvoenen> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-helsinki> .
+<http://data.semanticweb.org/person/eero-hyvoenen> <http://www.w3.org/2000/01/rdf-schema#label> "Eero Hyv\u00F6nen" .
+<http://data.semanticweb.org/person/eero-hyvoenen> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Finland> .
+<http://data.semanticweb.org/person/eero-hyvoenen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/2> .
+<http://data.semanticweb.org/person/eero-hyvoenen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/3> .
+<http://data.semanticweb.org/person/eero-hyvoenen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/4> .
+<http://data.semanticweb.org/person/eero-hyvoenen> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "2516dd9c72bc37b375b21b6a790160168634d50e" .
+<http://data.semanticweb.org/person/eero-hyvoenen> <http://xmlns.com/foaf/0.1/name> "Eero Hyv\u00F6nen" .
+<http://data.semanticweb.org/person/faiez-gargouri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/faiez-gargouri> <http://www.w3.org/2000/01/rdf-schema#label> "Faiez Gargouri" .
+<http://data.semanticweb.org/person/faiez-gargouri> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/7> .
+<http://data.semanticweb.org/person/faiez-gargouri> <http://xmlns.com/foaf/0.1/name> "Faiez Gargouri" .
+<http://data.semanticweb.org/person/giuseppe-nicosia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/giuseppe-nicosia> <http://www.w3.org/2000/01/rdf-schema#label> "Giuseppe Nicosia" .
+<http://data.semanticweb.org/person/giuseppe-nicosia> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/6> .
+<http://data.semanticweb.org/person/giuseppe-nicosia> <http://xmlns.com/foaf/0.1/name> "Giuseppe Nicosia" .
+<http://data.semanticweb.org/person/guntis-barzdins> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/guntis-barzdins> <http://www.w3.org/2000/01/rdf-schema#label> "Guntis B\u0101rzdi\u0146\u0161" .
+<http://data.semanticweb.org/person/guntis-barzdins> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/5> .
+<http://data.semanticweb.org/person/guntis-barzdins> <http://xmlns.com/foaf/0.1/name> "Guntis B\u0101rzdi\u0146\u0161" .
+<http://data.semanticweb.org/person/jacek-kopecky> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jacek-kopecky> <http://www.w3.org/2000/01/rdf-schema#label> "Jacek Kopecky" .
+<http://data.semanticweb.org/person/jacek-kopecky> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/10> .
+<http://data.semanticweb.org/person/jacek-kopecky> <http://xmlns.com/foaf/0.1/name> "Jacek Kopecky" .
+<http://data.semanticweb.org/person/janis-barzdins> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/janis-barzdins> <http://www.w3.org/2000/01/rdf-schema#label> "J\u0101nis B\u0101rzdi\u0146\u0161" .
+<http://data.semanticweb.org/person/janis-barzdins> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/5> .
+<http://data.semanticweb.org/person/janis-barzdins> <http://xmlns.com/foaf/0.1/name> "J\u0101nis B\u0101rzdi\u0146\u0161" .
+<http://data.semanticweb.org/person/janne-saarela> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/janne-saarela> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/janne-saarela> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/profium-ltd> .
+<http://data.semanticweb.org/person/janne-saarela> <http://www.w3.org/2000/01/rdf-schema#label> "Janne Saarela" .
+<http://data.semanticweb.org/person/janne-saarela> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Finland> .
+<http://data.semanticweb.org/person/janne-saarela> <http://xmlns.com/foaf/0.1/name> "Janne Saarela" .
+<http://data.semanticweb.org/person/john-bateman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/john-bateman> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/john-bateman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-bremen> .
+<http://data.semanticweb.org/person/john-bateman> <http://www.w3.org/2000/01/rdf-schema#label> "John Bateman" .
+<http://data.semanticweb.org/person/john-bateman> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/john-bateman> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "ca0ddad0940e188a2844b14ba968d8a195939dba" .
+<http://data.semanticweb.org/person/john-bateman> <http://xmlns.com/foaf/0.1/name> "John Bateman" .
+<http://data.semanticweb.org/person/john-domingue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/john-domingue> <http://www.w3.org/2000/01/rdf-schema#label> "John Domingue" .
+<http://data.semanticweb.org/person/john-domingue> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/10> .
+<http://data.semanticweb.org/person/john-domingue> <http://xmlns.com/foaf/0.1/name> "John Domingue" .
+<http://data.semanticweb.org/person/jouni-tuominen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jouni-tuominen> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/jouni-tuominen> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-helsinki> .
+<http://data.semanticweb.org/person/jouni-tuominen> <http://www.w3.org/2000/01/rdf-schema#label> "Jouni Tuominen" .
+<http://data.semanticweb.org/person/jouni-tuominen> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Finland> .
+<http://data.semanticweb.org/person/jouni-tuominen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/3> .
+<http://data.semanticweb.org/person/jouni-tuominen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/4> .
+<http://data.semanticweb.org/person/jouni-tuominen> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "05b1e6decfa94b6b5c06c7624930d9e988abb070" .
+<http://data.semanticweb.org/person/jouni-tuominen> <http://xmlns.com/foaf/0.1/name> "Jouni Tuominen" .
+<http://data.semanticweb.org/person/jussi-kurki> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jussi-kurki> <http://www.w3.org/2000/01/rdf-schema#label> "Jussi Kurki" .
+<http://data.semanticweb.org/person/jussi-kurki> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/2> .
+<http://data.semanticweb.org/person/jussi-kurki> <http://xmlns.com/foaf/0.1/name> "Jussi Kurki" .
+<http://data.semanticweb.org/person/kalle-tomingas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/kalle-tomingas> <http://www.w3.org/2000/01/rdf-schema#label> "Kalle Tomingas" .
+<http://data.semanticweb.org/person/kalle-tomingas> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/13> .
+<http://data.semanticweb.org/person/kalle-tomingas> <http://xmlns.com/foaf/0.1/name> "Kalle Tomingas" .
+<http://data.semanticweb.org/person/karlis-cerans> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/karlis-cerans> <http://www.w3.org/2000/01/rdf-schema#label> "K\u0101rlis \u010Cer\u0101ns" .
+<http://data.semanticweb.org/person/karlis-cerans> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/5> .
+<http://data.semanticweb.org/person/karlis-cerans> <http://xmlns.com/foaf/0.1/name> "K\u0101rlis \u010Cer\u0101ns" .
+<http://data.semanticweb.org/person/kenneth-baclawski> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/kenneth-baclawski> <http://data.semanticweb.org/ns/swc/ontology#givesKeynoteTalk> <http://data.semanticweb.org/workshop/ores/2010/keynote/> .
+<http://data.semanticweb.org/person/kenneth-baclawski> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/kenneth-baclawski> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/northeastern-university> .
+<http://data.semanticweb.org/person/kenneth-baclawski> <http://www.w3.org/2000/01/rdf-schema#label> "Ken Baclawski" .
+<http://data.semanticweb.org/person/kenneth-baclawski> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/kenneth-baclawski> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "29e2b7efbdbf448c562511b67d42d3a46f974a3a" .
+<http://data.semanticweb.org/person/kenneth-baclawski> <http://xmlns.com/foaf/0.1/name> "Ken Baclawski" .
+<http://data.semanticweb.org/person/kim-viljanen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/kim-viljanen> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/kim-viljanen> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/aalto-university-fi> .
+<http://data.semanticweb.org/person/kim-viljanen> <http://www.w3.org/2000/01/rdf-schema#label> "Kim Viljanen" .
+<http://data.semanticweb.org/person/kim-viljanen> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Finland> .
+<http://data.semanticweb.org/person/kim-viljanen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/3> .
+<http://data.semanticweb.org/person/kim-viljanen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/4> .
+<http://data.semanticweb.org/person/kim-viljanen> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "238c1b33e0e3ed5f6e17dfbf5f0e31991692156f" .
+<http://data.semanticweb.org/person/kim-viljanen> <http://xmlns.com/foaf/0.1/name> "Kim Viljanen" .
+<http://data.semanticweb.org/person/klaus-reichling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/klaus-reichling> <http://www.w3.org/2000/01/rdf-schema#label> "Klaus Reichling" .
+<http://data.semanticweb.org/person/klaus-reichling> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/18> .
+<http://data.semanticweb.org/person/klaus-reichling> <http://xmlns.com/foaf/0.1/name> "Klaus Reichling" .
+<http://data.semanticweb.org/person/larissa-freitas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/larissa-freitas> <http://www.w3.org/2000/01/rdf-schema#label> "Larissa Freitas" .
+<http://data.semanticweb.org/person/larissa-freitas> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/15> .
+<http://data.semanticweb.org/person/larissa-freitas> <http://xmlns.com/foaf/0.1/name> "Larissa Freitas" .
+<http://data.semanticweb.org/person/leo-obrst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/leo-obrst> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/leo-obrst> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/the-mitre-corporation> .
+<http://data.semanticweb.org/person/leo-obrst> <http://www.w3.org/2000/01/rdf-schema#label> "Leo J. Obrst" .
+<http://data.semanticweb.org/person/leo-obrst> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/leo-obrst> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "206849f07b39136bc7948f40da94c22ddb105c67" .
+<http://data.semanticweb.org/person/leo-obrst> <http://xmlns.com/foaf/0.1/name> "Leo J. Obrst" .
+<http://data.semanticweb.org/person/li-ding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/li-ding> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/li-ding> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/rensselaer-polytechnic-institute> .
+<http://data.semanticweb.org/person/li-ding> <http://www.w3.org/2000/01/rdf-schema#label> "Li Ding" .
+<http://data.semanticweb.org/person/li-ding> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/li-ding> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "a7d0967c21ba8952ab0443bf822750d4c44afe2c" .
+<http://data.semanticweb.org/person/li-ding> <http://xmlns.com/foaf/0.1/name> "Li Ding" .
+<http://data.semanticweb.org/person/maria-maleshkova> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/maria-maleshkova> <http://www.w3.org/2000/01/rdf-schema#label> "Maria Maleshkova" .
+<http://data.semanticweb.org/person/maria-maleshkova> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/10> .
+<http://data.semanticweb.org/person/maria-maleshkova> <http://xmlns.com/foaf/0.1/name> "Maria Maleshkova" .
+<http://data.semanticweb.org/person/mark-a-musen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/mark-a-musen> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/mark-a-musen> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/stanford-university> .
+<http://data.semanticweb.org/person/mark-a-musen> <http://www.w3.org/2000/01/rdf-schema#label> "Mark Musen" .
+<http://data.semanticweb.org/person/mark-a-musen> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/mark-a-musen> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "60602b405f9d456ffc0e30d22d535100159b7874" .
+<http://data.semanticweb.org/person/mark-a-musen> <http://xmlns.com/foaf/0.1/name> "Mark Musen" .
+<http://data.semanticweb.org/person/martin-luts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/martin-luts> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/martin-luts> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/eliko-tak> .
+<http://data.semanticweb.org/person/martin-luts> <http://www.w3.org/2000/01/rdf-schema#label> "Martin Luts" .
+<http://data.semanticweb.org/person/martin-luts> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Estonia> .
+<http://data.semanticweb.org/person/martin-luts> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/13> .
+<http://data.semanticweb.org/person/martin-luts> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/18> .
+<http://data.semanticweb.org/person/martin-luts> <http://xmlns.com/foaf/0.1/name> "Martin Luts" .
+<http://data.semanticweb.org/person/martins-zviedris> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/martins-zviedris> <http://www.w3.org/2000/01/rdf-schema#label> "Martins Zviedris" .
+<http://data.semanticweb.org/person/martins-zviedris> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/16> .
+<http://data.semanticweb.org/person/martins-zviedris> <http://xmlns.com/foaf/0.1/name> "Martins Zviedris" .
+<http://data.semanticweb.org/person/mathieu-daquin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/mathieu-daquin> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/mathieu-daquin> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/kmi-the-open-university-uk> .
+<http://data.semanticweb.org/person/mathieu-daquin> <http://www.w3.org/2000/01/rdf-schema#label> "Mathieu d'Aquin" .
+<http://data.semanticweb.org/person/mathieu-daquin> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/UK> .
+<http://data.semanticweb.org/person/mathieu-daquin> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "e61cc68181adeb9fbbddc539a6fa01dd24b299c8" .
+<http://data.semanticweb.org/person/mathieu-daquin> <http://xmlns.com/foaf/0.1/name> "Mathieu d'Aquin" .
+<http://data.semanticweb.org/person/michael-kohlhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/michael-kohlhase> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/michael-kohlhase> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/jacobs-university-bremen> .
+<http://data.semanticweb.org/person/michael-kohlhase> <http://www.w3.org/2000/01/rdf-schema#label> "Michael Kohlhase" .
+<http://data.semanticweb.org/person/michael-kohlhase> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/michael-kohlhase> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "cc75a6c34248d4eb498a577dffa4287a69e8fe92" .
+<http://data.semanticweb.org/person/michael-kohlhase> <http://xmlns.com/foaf/0.1/name> "Michael Kohlhase" .
+<http://data.semanticweb.org/person/mick-kerrigan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/mick-kerrigan> <http://www.w3.org/2000/01/rdf-schema#label> "Mick Kerrigan" .
+<http://data.semanticweb.org/person/mick-kerrigan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/9> .
+<http://data.semanticweb.org/person/mick-kerrigan> <http://xmlns.com/foaf/0.1/name> "Mick Kerrigan" .
+<http://data.semanticweb.org/person/mike-dean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/mike-dean> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/mike-dean> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/bbn-technologies> .
+<http://data.semanticweb.org/person/mike-dean> <http://www.w3.org/2000/01/rdf-schema#label> "Mike Dean" .
+<http://data.semanticweb.org/person/mike-dean> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/mike-dean> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "6006a914f7d645142fadf08d9a4e33aee98416d0" .
+<http://data.semanticweb.org/person/mike-dean> <http://xmlns.com/foaf/0.1/name> "Mike Dean" .
+<http://data.semanticweb.org/person/mikko-salonoja> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/mikko-salonoja> <http://www.w3.org/2000/01/rdf-schema#label> "Mikko Salonoja" .
+<http://data.semanticweb.org/person/mikko-salonoja> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/3> .
+<http://data.semanticweb.org/person/mikko-salonoja> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/4> .
+<http://data.semanticweb.org/person/mikko-salonoja> <http://xmlns.com/foaf/0.1/name> "Mikko Salonoja" .
+<http://data.semanticweb.org/person/najla-sassi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/najla-sassi> <http://www.w3.org/2000/01/rdf-schema#label> "Najla Sassi" .
+<http://data.semanticweb.org/person/najla-sassi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/7> .
+<http://data.semanticweb.org/person/najla-sassi> <http://xmlns.com/foaf/0.1/name> "Najla Sassi" .
+<http://data.semanticweb.org/person/natalya-noy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/natalya-noy> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/natalya-noy> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/stanford-university> .
+<http://data.semanticweb.org/person/natalya-noy> <http://www.w3.org/2000/01/rdf-schema#label> "Natasha Noy" .
+<http://data.semanticweb.org/person/natalya-noy> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/natalya-noy> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "7d8b34490f91ef43b84489a7630394b04a8c2c21" .
+<http://data.semanticweb.org/person/natalya-noy> <http://xmlns.com/foaf/0.1/name> "Natasha Noy" .
+<http://data.semanticweb.org/person/nigam-shah> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/nigam-shah> <http://data.semanticweb.org/ns/swc/ontology#givesKeynoteTalk> <http://data.semanticweb.org/workshop/ores/2010/keynote/> .
+<http://data.semanticweb.org/person/nigam-shah> <http://www.w3.org/2000/01/rdf-schema#label> "Nigam Shah" .
+<http://data.semanticweb.org/person/nigam-shah> <http://xmlns.com/foaf/0.1/name> "Nigam Shah" .
+<http://data.semanticweb.org/person/patrick-maue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/patrick-maue> <http://www.w3.org/2000/01/rdf-schema#label> "Patrick Mau\u00E9" .
+<http://data.semanticweb.org/person/patrick-maue> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/11> .
+<http://data.semanticweb.org/person/patrick-maue> <http://xmlns.com/foaf/0.1/name> "Patrick Mau\u00E9" .
+<http://data.semanticweb.org/person/peter-haase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/peter-haase> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/peter-haase> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/fluid-operations> .
+<http://data.semanticweb.org/person/peter-haase> <http://www.w3.org/2000/01/rdf-schema#label> "Peter Haase" .
+<http://data.semanticweb.org/person/peter-haase> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/peter-haase> <http://xmlns.com/foaf/0.1/name> "Peter Haase" .
+<http://data.semanticweb.org/person/philippe-martin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/philippe-martin> <http://www.w3.org/2000/01/rdf-schema#label> "Philippe Martin" .
+<http://data.semanticweb.org/person/philippe-martin> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/14> .
+<http://data.semanticweb.org/person/philippe-martin> <http://xmlns.com/foaf/0.1/name> "Philippe Martin" .
+<http://data.semanticweb.org/person/raul-palma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/raul-palma> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/raul-palma> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/poznan-university> .
+<http://data.semanticweb.org/person/raul-palma> <http://www.w3.org/2000/01/rdf-schema#label> "Ra\u00FAl Palma" .
+<http://data.semanticweb.org/person/raul-palma> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Poland> .
+<http://data.semanticweb.org/person/raul-palma> <http://xmlns.com/foaf/0.1/name> "Ra\u00FAl Palma" .
+<http://data.semanticweb.org/person/renars-liepins> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/renars-liepins> <http://www.w3.org/2000/01/rdf-schema#label> "Ren\u0101rs Liepi\u0146\u0161" .
+<http://data.semanticweb.org/person/renars-liepins> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/5> .
+<http://data.semanticweb.org/person/renars-liepins> <http://xmlns.com/foaf/0.1/name> "Ren\u0101rs Liepi\u0146\u0161" .
+<http://data.semanticweb.org/person/renata-vieira> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/renata-vieira> <http://www.w3.org/2000/01/rdf-schema#label> "Renata Vieira" .
+<http://data.semanticweb.org/person/renata-vieira> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/15> .
+<http://data.semanticweb.org/person/renata-vieira> <http://xmlns.com/foaf/0.1/name> "Renata Vieira" .
+<http://data.semanticweb.org/person/renato-umeton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/renato-umeton> <http://www.w3.org/2000/01/rdf-schema#label> "Renato Umeton" .
+<http://data.semanticweb.org/person/renato-umeton> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/6> .
+<http://data.semanticweb.org/person/renato-umeton> <http://xmlns.com/foaf/0.1/name> "Renato Umeton" .
+<http://data.semanticweb.org/person/renke-fahl-spiewack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/renke-fahl-spiewack> <http://www.w3.org/2000/01/rdf-schema#label> "Renke Fahl-Spiewack" .
+<http://data.semanticweb.org/person/renke-fahl-spiewack> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/18> .
+<http://data.semanticweb.org/person/renke-fahl-spiewack> <http://xmlns.com/foaf/0.1/name> "Renke Fahl-Spiewack" .
+<http://data.semanticweb.org/person/sandro-hawke> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/sandro-hawke> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/sandro-hawke> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/w3c> .
+<http://data.semanticweb.org/person/sandro-hawke> <http://www.w3.org/2000/01/rdf-schema#label> "Sandro Hawke" .
+<http://data.semanticweb.org/person/sandro-hawke> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/sandro-hawke> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "2c098f780abf7f05166243a541edeb966dfbd596" .
+<http://data.semanticweb.org/person/sandro-hawke> <http://xmlns.com/foaf/0.1/name> "Sandro Hawke" .
+<http://data.semanticweb.org/person/simone-braun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/simone-braun> <http://www.w3.org/2000/01/rdf-schema#label> "Simone Braun" .
+<http://data.semanticweb.org/person/simone-braun> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/1> .
+<http://data.semanticweb.org/person/simone-braun> <http://xmlns.com/foaf/0.1/name> "Simone Braun" .
+<http://data.semanticweb.org/person/thore-fechner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/thore-fechner> <http://www.w3.org/2000/01/rdf-schema#label> "Thore Fechner" .
+<http://data.semanticweb.org/person/thore-fechner> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/11> .
+<http://data.semanticweb.org/person/thore-fechner> <http://xmlns.com/foaf/0.1/name> "Thore Fechner" .
+<http://data.semanticweb.org/person/tomi-kauppinen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/tomi-kauppinen> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/tomi-kauppinen> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-muenster> .
+<http://data.semanticweb.org/person/tomi-kauppinen> <http://www.w3.org/2000/01/rdf-schema#label> "Tomi Kauppinen" .
+<http://data.semanticweb.org/person/tomi-kauppinen> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/tomi-kauppinen> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "0c135e38d8998089dd79a2f430f8449bf6591332" .
+<http://data.semanticweb.org/person/tomi-kauppinen> <http://xmlns.com/foaf/0.1/name> "Tomi Kauppinen" .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://www.w3.org/2000/01/rdf-schema#label> "Valentin Zacharias" .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/1> .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://xmlns.com/foaf/0.1/name> "Valentin Zacharias" .
+<http://data.semanticweb.org/person/vyacheslav-zholudev> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/vyacheslav-zholudev> <http://www.w3.org/2000/01/rdf-schema#label> "Vyacheslav Zholudev" .
+<http://data.semanticweb.org/person/vyacheslav-zholudev> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/8> .
+<http://data.semanticweb.org/person/vyacheslav-zholudev> <http://xmlns.com/foaf/0.1/name> "Vyacheslav Zholudev" .
+<http://data.semanticweb.org/person/wassim-jaziri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/wassim-jaziri> <http://www.w3.org/2000/01/rdf-schema#label> "Wassim Jaziri" .
+<http://data.semanticweb.org/person/wassim-jaziri> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ores/2010/paper/main/7> .
+<http://data.semanticweb.org/person/wassim-jaziri> <http://xmlns.com/foaf/0.1/name> "Wassim Jaziri" .
+<http://data.semanticweb.org/person/wolfram-woess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/wolfram-woess> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/person/wolfram-woess> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/johannes-kepler-university-linz-austria> .
+<http://data.semanticweb.org/person/wolfram-woess> <http://www.w3.org/2000/01/rdf-schema#label> "Wolfram W\u00F6\u00DF" .
+<http://data.semanticweb.org/person/wolfram-woess> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Austria> .
+<http://data.semanticweb.org/person/wolfram-woess> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "2eba0701fe5433b19ad31316f2aec87c44334946" .
+<http://data.semanticweb.org/person/wolfram-woess> <http://xmlns.com/foaf/0.1/name> "Wolfram W\u00F6\u00DF" .
+<http://data.semanticweb.org/workshop/ores/2010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/workshop/ores/2010> <http://data.semanticweb.org/ns/swc/ontology#completeGraph> <http://data.semanticweb.org/workshop/ores/2010/complete> .
+<http://data.semanticweb.org/workshop/ores/2010> <http://data.semanticweb.org/ns/swc/ontology#hasAcronym> "ORES2010" .
+<http://data.semanticweb.org/workshop/ores/2010> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/workshop/ores/2010> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/ores/2010/main/pcmember> .
+<http://data.semanticweb.org/workshop/ores/2010> <http://data.semanticweb.org/ns/swc/ontology#isSuperEventOf> <http://data.semanticweb.org/workshop/ores/2010/keynote/> .
+<http://data.semanticweb.org/workshop/ores/2010> <http://www.w3.org/2000/01/rdf-schema#label> "1st Workshop on Ontology Repositories and Editors for the Semantic Web" .
+<http://data.semanticweb.org/workshop/ores/2010> <http://www.w3.org/2002/12/cal/ical#dtend> <http://data.semanticweb.org/workshop/ores/2010/end_date> .
+<http://data.semanticweb.org/workshop/ores/2010> <http://www.w3.org/2002/12/cal/ical#dtstart> <http://data.semanticweb.org/workshop/ores/2010/start_date> .
+<http://data.semanticweb.org/workshop/ores/2010> <http://www.w3.org/2002/12/cal/ical#url> <http://www.ontologydynamics.org/od/index.php/ores2010/> .
+<http://data.semanticweb.org/workshop/ores/2010> <http://xmlns.com/foaf/0.1/homepage> <http://www.ontologydynamics.org/od/index.php/ores2010/> .
+<http://data.semanticweb.org/workshop/ores/2010/end_date> <http://www.w3.org/2002/12/cal/ical#date> "2010-05-31" .
+<http://data.semanticweb.org/workshop/ores/2010/end_date> <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+2" .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#KeynoteTalk> .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/workshop/ores/2010> .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://data.semanticweb.org/ns/swc/ontology#speaker> <http://data.semanticweb.org/person/kenneth-baclawski> .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://data.semanticweb.org/ns/swc/ontology#speaker> <http://data.semanticweb.org/person/nigam-shah> .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://www.w3.org/2000/01/rdf-schema#label> "BioPortal" .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://www.w3.org/2000/01/rdf-schema#label> "Open Ontology Repository" .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://www.w3.org/2002/12/cal/ical#description> "" .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://www.w3.org/2002/12/cal/ical#dtstart> _:node1dfiro49fx1 .
+_:node1dfiro49fx1 <http://www.w3.org/2002/12/cal/ical#date> "2010-05-31T09:10:00" .
+_:node1dfiro49fx1 <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+2" .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://www.w3.org/2002/12/cal/ical#dtstart> _:node1dfiro49fx2 .
+_:node1dfiro49fx2 <http://www.w3.org/2002/12/cal/ical#date> "2010-05-31T16:30:00" .
+_:node1dfiro49fx2 <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+2" .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://www.w3.org/2002/12/cal/ical#duration> "PT0H45M" .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://www.w3.org/2002/12/cal/ical#duration> "PT0H50M" .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://www.w3.org/2002/12/cal/ical#summary> "BioPortal" .
+<http://data.semanticweb.org/workshop/ores/2010/keynote/> <http://www.w3.org/2002/12/cal/ical#summary> "Open Ontology Repository" .
+<http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#Chair> .
+<http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/alexander-garcia-castro> .
+<http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/christoph-lange> .
+<http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/mathieu-daquin> .
+<http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/ores/2010> .
+<http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> <http://www.w3.org/2000/01/rdf-schema#label> "Organising Committee Member" .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/antoine-isaac> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/janne-saarela> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/john-bateman> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/jouni-tuominen> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/kenneth-baclawski> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/leo-obrst> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/li-ding> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/mark-a-musen> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/martin-luts> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/michael-kohlhase> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/mike-dean> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/natalya-noy> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/peter-haase> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/raul-palma> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/sandro-hawke> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/tomi-kauppinen> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/wolfram-woess> .
+<http://data.semanticweb.org/workshop/ores/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/ores/2010> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/simone-braun> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/valentin-zacharias> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://purl.org/dc/elements/1.1/title> "SOBOLEO \u2013 A Repository for Living Ontologies" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/simone-braun> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/valentin-zacharias> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-01.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/1/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://www.w3.org/2000/01/rdf-schema#label> "SOBOLEO \u2013 A Repository for Living Ontologies" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/simone-braun> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/valentin-zacharias> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/simone-braun> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/1/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/valentin-zacharias> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/carlos-pedrinaci> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/dave-lambert> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/dong-liu> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jacek-kopecky> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/john-domingue> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/maria-maleshkova> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://purl.org/dc/elements/1.1/title> "iServe: a Linked Services Publishing Platform" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/carlos-pedrinaci> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/dave-lambert> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/dong-liu> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jacek-kopecky> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/john-domingue> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/maria-maleshkova> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-10.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/10/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://www.w3.org/2000/01/rdf-schema#label> "iServe: a Linked Services Publishing Platform" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/carlos-pedrinaci> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/dave-lambert> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/dong-liu> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jacek-kopecky> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/john-domingue> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/maria-maleshkova> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/carlos-pedrinaci> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/dong-liu> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/maria-maleshkova> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/dave-lambert> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://data.semanticweb.org/person/jacek-kopecky> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/10/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_6> <http://data.semanticweb.org/person/john-domingue> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/alejandro-llaves> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/patrick-maue> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/thore-fechner> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://purl.org/dc/elements/1.1/title> "Context-aware access to ontologies on the Web" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/alejandro-llaves> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/patrick-maue> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/thore-fechner> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-11.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/11/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://www.w3.org/2000/01/rdf-schema#label> "Context-aware access to ontologies on the Web" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/alejandro-llaves> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/patrick-maue> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/thore-fechner> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/patrick-maue> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/alejandro-llaves> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/11/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/thore-fechner> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/antoine-zimmermann> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://purl.org/dc/elements/1.1/title> "Ontology Recommendation for the Data Publishers" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/antoine-zimmermann> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-12.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/12/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology Recommendation for the Data Publishers" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/antoine-zimmermann> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/12/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/antoine-zimmermann> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/kalle-tomingas> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/martin-luts> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://purl.org/dc/elements/1.1/title> "Semantic Interoperability Framework for Estonian Public Sector's E-Services Integration" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/kalle-tomingas> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/martin-luts> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-13.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/13/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Interoperability Framework for Estonian Public Sector's E-Services Integration" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/kalle-tomingas> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/martin-luts> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/kalle-tomingas> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/13/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/martin-luts> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/philippe-martin> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://purl.org/dc/elements/1.1/title> "Ontology Repositories with Only One Large Shared Cooperatively-built and Evaluated Ontology" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/philippe-martin> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-14.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/14/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology Repositories with Only One Large Shared Cooperatively-built and Evaluated Ontology" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/philippe-martin> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/14/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/philippe-martin> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/anderson-bestteti> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/larissa-freitas> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/renata-vieira> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://purl.org/dc/elements/1.1/title> "Using extended metadata model OMV and metrics in OntoLP Portal" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/anderson-bestteti> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/larissa-freitas> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/renata-vieira> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-15.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/15/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://www.w3.org/2000/01/rdf-schema#label> "Using extended metadata model OMV and metrics in OntoLP Portal" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/anderson-bestteti> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/larissa-freitas> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/renata-vieira> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/anderson-bestteti> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/larissa-freitas> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/15/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/renata-vieira> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/martins-zviedris> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://purl.org/dc/elements/1.1/title> "Ontology Repository for User Interaction" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/martins-zviedris> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-16.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/16/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology Repository for User Interaction" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/martins-zviedris> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/16/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/martins-zviedris> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/dimitrios-tzovaras> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/dionisis-kehagias> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/dionysia-kontotasiou> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://purl.org/dc/elements/1.1/title> "Evaluation Framework for Ontology Development and Management Methodologies" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/dimitrios-tzovaras> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/dionisis-kehagias> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/dionysia-kontotasiou> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-17.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/17/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation Framework for Ontology Development and Management Methodologies" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/dimitrios-tzovaras> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/dionisis-kehagias> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/dionysia-kontotasiou> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/dionisis-kehagias> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/dionysia-kontotasiou> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/17/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/dimitrios-tzovaras> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/klaus-reichling> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/martin-luts> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/renke-fahl-spiewack> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://purl.org/dc/elements/1.1/title> "A pan-European repository: SEMIC.EU as the point of reference for eGovernment ontologies" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/klaus-reichling> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/martin-luts> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/renke-fahl-spiewack> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-18.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/18/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://www.w3.org/2000/01/rdf-schema#label> "A pan-European repository: SEMIC.EU as the point of reference for eGovernment ontologies" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/klaus-reichling> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/martin-luts> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/renke-fahl-spiewack> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/klaus-reichling> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/martin-luts> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/18/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/renke-fahl-spiewack> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jussi-kurki> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://purl.org/dc/elements/1.1/title> "Collaborative Metadata Editor Integrated with Ontology Services and Faceted Portals" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jussi-kurki> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-02.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/2/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://www.w3.org/2000/01/rdf-schema#label> "Collaborative Metadata Editor Integrated with Ontology Services and Faceted Portals" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jussi-kurki> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/jussi-kurki> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/2/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jouni-tuominen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/mikko-salonoja> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://purl.org/dc/elements/1.1/title> "Linked Open Ontology Services" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jouni-tuominen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/mikko-salonoja> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-03.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/3/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://www.w3.org/2000/01/rdf-schema#label> "Linked Open Ontology Services" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jouni-tuominen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/mikko-salonoja> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/jouni-tuominen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/mikko-salonoja> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/3/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jouni-tuominen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/mikko-salonoja> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://purl.org/dc/elements/1.1/title> "A User Interface for Ontology Repositories" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jouni-tuominen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/mikko-salonoja> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-04.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/4/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://www.w3.org/2000/01/rdf-schema#label> "A User Interface for Ontology Repositories" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jouni-tuominen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/mikko-salonoja> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/jouni-tuominen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/mikko-salonoja> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/4/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/eero-hyvoenen> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/arturs-sprogis> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/guntis-barzdins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/janis-barzdins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/karlis-cerans> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/renars-liepins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://purl.org/dc/elements/1.1/title> "OWLGrEd: a UML Style Graphical Editor for OWL" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/arturs-sprogis> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/guntis-barzdins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/janis-barzdins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/karlis-cerans> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/renars-liepins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-05.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/5/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://www.w3.org/2000/01/rdf-schema#label> "OWLGrEd: a UML Style Graphical Editor for OWL" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/arturs-sprogis> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/guntis-barzdins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/janis-barzdins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/karlis-cerans> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/renars-liepins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/janis-barzdins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/guntis-barzdins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/karlis-cerans> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/renars-liepins> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/5/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://data.semanticweb.org/person/arturs-sprogis> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/beracah-yankama> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/c-forbes-dewey-jr> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/giuseppe-nicosia> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/renato-umeton> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://purl.org/dc/elements/1.1/title> "OREMP: Ontology Reasoning Engine for Molecular Pathways" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/beracah-yankama> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/c-forbes-dewey-jr> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/giuseppe-nicosia> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/renato-umeton> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-06.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/6/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://www.w3.org/2000/01/rdf-schema#label> "OREMP: Ontology Reasoning Engine for Molecular Pathways" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/beracah-yankama> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/c-forbes-dewey-jr> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/giuseppe-nicosia> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/renato-umeton> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/renato-umeton> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/beracah-yankama> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/giuseppe-nicosia> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/6/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/c-forbes-dewey-jr> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/faiez-gargouri> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/najla-sassi> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/wassim-jaziri> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://purl.org/dc/elements/1.1/title> "CONSISTOLOGY: A Semantic Tool to Support Ontology Evolution and Consistency" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/faiez-gargouri> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/najla-sassi> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/wassim-jaziri> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-07.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/7/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://www.w3.org/2000/01/rdf-schema#label> "CONSISTOLOGY: A Semantic Tool to Support Ontology Evolution and Consistency" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/faiez-gargouri> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/najla-sassi> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/wassim-jaziri> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/najla-sassi> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/wassim-jaziri> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/7/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/faiez-gargouri> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/christoph-lange> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/vyacheslav-zholudev> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://purl.org/dc/elements/1.1/title> "Previewing OWL Changes and Refactorings Using a Flexible XML Database" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/christoph-lange> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/vyacheslav-zholudev> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-08.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/8/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://www.w3.org/2000/01/rdf-schema#label> "Previewing OWL Changes and Refactorings Using a Flexible XML Database" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/christoph-lange> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/vyacheslav-zholudev> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/christoph-lange> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/8/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/vyacheslav-zholudev> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/ores/2010/proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/adrian-marte> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/barry-norton> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/mick-kerrigan> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://purl.org/dc/elements/1.1/title> "On the Use of Transformation and Linked Data Principles in a Generic Repository for Semantic Web Services" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://swrc.ontoware.org/ontology#abstract> "" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/adrian-marte> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/barry-norton> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/mick-kerrigan> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-596/paper-09.pdf> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> <http://data.semanticweb.org/workshop/ores/2010/paper/main/9/authorlist> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://www.w3.org/2000/01/rdf-schema#label> "On the Use of Transformation and Linked Data Principles in a Generic Repository for Semantic Web Services" .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/adrian-marte> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/barry-norton> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/mick-kerrigan> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/barry-norton> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/mick-kerrigan> .
+<http://data.semanticweb.org/workshop/ores/2010/paper/main/9/authorlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/adrian-marte> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#Proceedings> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/1> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/10> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/11> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/12> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/13> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/14> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/15> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/16> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/17> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/18> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/2> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/3> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/4> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/5> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/6> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/7> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/8> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/ores/2010/paper/main/9> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/ores/2010> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://swrc.ontoware.org/ontology#booktitle> "Proceedings of 1st Workshop on Ontology Repositories and Editors for the Semantic Web (ORES2010) at ESWC2010, May 30\u2013June 3, 2010" .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/alexander-garcia-castro> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/christoph-lange> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/mathieu-daquin> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://swrc.ontoware.org/ontology#month> "May" .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#editorList> <http://data.semanticweb.org/workshop/ores/2010/proceedings/editor_list> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings/editor_list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/mathieu-daquin> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings/editor_list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/alexander-garcia-castro> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings/editor_list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/christoph-lange> .
+<http://data.semanticweb.org/workshop/ores/2010/proceedings/editor_list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/kim-viljanen> .
+<http://data.semanticweb.org/workshop/ores/2010/start_date> <http://www.w3.org/2002/12/cal/ical#date> "2010-05-31" .
+<http://data.semanticweb.org/workshop/ores/2010/start_date> <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+2" .

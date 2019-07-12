@@ -1,0 +1,687 @@
+<http://data.semanticweb.org/workshop/LDOW/2008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/workshop/LDOW/2008> <http://www.w3.org/2000/01/rdf-schema#label> "Linked Data on the Web" .
+<http://data.semanticweb.org/workshop/LDOW/2008> <http://www.w3.org/2002/12/cal/ical#dtend> _:node1dfirntghx1 .
+<http://data.semanticweb.org/workshop/LDOW/2008> <http://www.w3.org/2002/12/cal/ical#dtstart> _:node1dfirntghx2 .
+<http://data.semanticweb.org/workshop/LDOW/2008> <http://xmlns.com/foaf/0.1/homepage> <http://events.linkeddata.org/ldow2008/> .
+<http://data.semanticweb.org/workshop/LDOW/2008> <http://data.semanticweb.org/ns/swc/ontology#completeGraph> <http://data.semanticweb.org/workshop/LDOW/2008/complete> .
+<http://data.semanticweb.org/workshop/LDOW/2008> <http://data.semanticweb.org/ns/swc/ontology#hasAcronym> "LDOW2008" .
+<http://data.semanticweb.org/workshop/LDOW/2008> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/LDOW/2008/chair/workshopchair> .
+<http://data.semanticweb.org/workshop/LDOW/2008> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/conference/www/2008> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#Proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://www.w3.org/2000/01/rdf-schema#label> "Proceedings of the WWW2008 Workshop on Linked Data on the Web" .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/1> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/10> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/11> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/12> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/13> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/14> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/15> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/16> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/17> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/18> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/19> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/2> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/20> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/21> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/22> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/23> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/3> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/4> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/5> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/6> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/7> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/8> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/LDOW/2008/paper/9> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/LDOW/2008> .
+<http://data.semanticweb.org/workshop/LDOW/2008/proceedings> <http://xmlns.com/foaf/0.1/page> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/> .
+<http://data.semanticweb.org/person/afraz-jaffri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/afraz-jaffri> <http://www.w3.org/2000/01/rdf-schema#label> "Afraz Jaffri" .
+<http://data.semanticweb.org/person/afraz-jaffri> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/5> .
+<http://data.semanticweb.org/person/afraz-jaffri> <http://xmlns.com/foaf/0.1/name> "Afraz Jaffri" .
+<http://data.semanticweb.org/person/alexandre-passant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexandre-passant> <http://www.w3.org/2000/01/rdf-schema#label> "Alexandre Passant" .
+<http://data.semanticweb.org/person/alexandre-passant> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/14> .
+<http://data.semanticweb.org/person/alexandre-passant> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/16> .
+<http://data.semanticweb.org/person/alexandre-passant> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/23> .
+<http://data.semanticweb.org/person/alexandre-passant> <http://xmlns.com/foaf/0.1/name> "Alexandre Passant" .
+<http://data.semanticweb.org/person/alexandre-passant> <http://xmlns.com/foaf/0.1/page> <http://apassant.net> .
+<http://data.semanticweb.org/person/anne-cregan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/anne-cregan> <http://www.w3.org/2000/01/rdf-schema#label> "Anne Cregan" .
+<http://data.semanticweb.org/person/anne-cregan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/18> .
+<http://data.semanticweb.org/person/anne-cregan> <http://xmlns.com/foaf/0.1/name> "Anne Cregan" .
+<http://data.semanticweb.org/person/anne-cregan> <http://xmlns.com/foaf/0.1/page> <http://www.cse.unsw.edu.au/~annec> .
+<http://data.semanticweb.org/person/bernhard-haslhofer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/bernhard-haslhofer> <http://www.w3.org/2000/01/rdf-schema#label> "Bernhard Haslhofer" .
+<http://data.semanticweb.org/person/bernhard-haslhofer> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/7> .
+<http://data.semanticweb.org/person/bernhard-haslhofer> <http://xmlns.com/foaf/0.1/name> "Bernhard Haslhofer" .
+<http://data.semanticweb.org/person/bernhard-haslhofer> <http://xmlns.com/foaf/0.1/page> <http://www.cs.univie.ac.at/bernhard.haslhofer> .
+<http://data.semanticweb.org/person/bernhard-schandl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/bernhard-schandl> <http://www.w3.org/2000/01/rdf-schema#label> "Bernhard Schandl" .
+<http://data.semanticweb.org/person/bernhard-schandl> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/7> .
+<http://data.semanticweb.org/person/bernhard-schandl> <http://xmlns.com/foaf/0.1/name> "Bernhard Schandl" .
+<http://data.semanticweb.org/person/bernhard-schandl> <http://xmlns.com/foaf/0.1/page> <http://www.cs.univie.ac.at/bernhard.schandl> .
+<http://data.semanticweb.org/person/chengli-xu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/chengli-xu> <http://www.w3.org/2000/01/rdf-schema#label> "Chengli Xu" .
+<http://data.semanticweb.org/person/chengli-xu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/15> .
+<http://data.semanticweb.org/person/chengli-xu> <http://xmlns.com/foaf/0.1/name> "Chengli Xu" .
+<http://data.semanticweb.org/person/christian-bizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/christian-bizer> <http://www.w3.org/2000/01/rdf-schema#label> "Christian Bizer" .
+<http://data.semanticweb.org/person/christian-bizer> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/6> .
+<http://data.semanticweb.org/person/christian-bizer> <http://xmlns.com/foaf/0.1/name> "Christian Bizer" .
+<http://data.semanticweb.org/person/christian-bizer> <http://xmlns.com/foaf/0.1/page> <http://www.wiwiss.fu-berlin.de/en/institute/pwo/bizer/> .
+<http://data.semanticweb.org/person/christian-bizer> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/LDOW/2008/chair/workshopchair> .
+<http://data.semanticweb.org/person/christian-becker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/christian-becker> <http://www.w3.org/2000/01/rdf-schema#label> "Christian Becker" .
+<http://data.semanticweb.org/person/christian-becker> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/6> .
+<http://data.semanticweb.org/person/christian-becker> <http://xmlns.com/foaf/0.1/name> "Christian Becker" .
+<http://data.semanticweb.org/person/christopher-sutton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/christopher-sutton> <http://www.w3.org/2000/01/rdf-schema#label> "Christopher Sutton" .
+<http://data.semanticweb.org/person/christopher-sutton> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/11> .
+<http://data.semanticweb.org/person/christopher-sutton> <http://xmlns.com/foaf/0.1/name> "Christopher Sutton" .
+<http://data.semanticweb.org/person/christopher-sutton> <http://xmlns.com/foaf/0.1/page> <http://www.sonictruths.net/> .
+<http://data.semanticweb.org/person/chunying-zhou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/chunying-zhou> <http://www.w3.org/2000/01/rdf-schema#label> "Chunying Zhou" .
+<http://data.semanticweb.org/person/chunying-zhou> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/15> .
+<http://data.semanticweb.org/person/chunying-zhou> <http://xmlns.com/foaf/0.1/name> "Chunying Zhou" .
+<http://data.semanticweb.org/person/daniele-cordioli> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/daniele-cordioli> <http://www.w3.org/2000/01/rdf-schema#label> "Daniele Cordioli" .
+<http://data.semanticweb.org/person/daniele-cordioli> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/20> .
+<http://data.semanticweb.org/person/daniele-cordioli> <http://xmlns.com/foaf/0.1/name> "Daniele Cordioli" .
+<http://data.semanticweb.org/person/daniele-cordioli> <http://xmlns.com/foaf/0.1/page> <http://www.expertsystem.it> .
+<http://data.semanticweb.org/person/danny-ayers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/danny-ayers> <http://www.w3.org/2000/01/rdf-schema#label> "Danny Ayers" .
+<http://data.semanticweb.org/person/danny-ayers> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/1> .
+<http://data.semanticweb.org/person/danny-ayers> <http://xmlns.com/foaf/0.1/name> "Danny Ayers" .
+<http://data.semanticweb.org/person/danny-ayers> <http://xmlns.com/foaf/0.1/page> <http://dannyayers.com> .
+<http://data.semanticweb.org/person/david-peterson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/david-peterson> <http://www.w3.org/2000/01/rdf-schema#label> "David Peterson" .
+<http://data.semanticweb.org/person/david-peterson> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/18> .
+<http://data.semanticweb.org/person/david-peterson> <http://xmlns.com/foaf/0.1/name> "David Peterson" .
+<http://data.semanticweb.org/person/david-peterson> <http://xmlns.com/foaf/0.1/page> <http://boab.info/> .
+<http://data.semanticweb.org/person/david-shotton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/david-shotton> <http://www.w3.org/2000/01/rdf-schema#label> "David Shotton" .
+<http://data.semanticweb.org/person/david-shotton> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/4> .
+<http://data.semanticweb.org/person/david-shotton> <http://xmlns.com/foaf/0.1/name> "David Shotton" .
+<http://data.semanticweb.org/person/enrico-motta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/enrico-motta> <http://www.w3.org/2000/01/rdf-schema#label> "Enrico Motta" .
+<http://data.semanticweb.org/person/enrico-motta> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/13> .
+<http://data.semanticweb.org/person/enrico-motta> <http://xmlns.com/foaf/0.1/name> "Enrico Motta" .
+<http://data.semanticweb.org/person/francois-paul-servant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/francois-paul-servant> <http://www.w3.org/2000/01/rdf-schema#label> "Francois-Paul Servant" .
+<http://data.semanticweb.org/person/francois-paul-servant> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/17> .
+<http://data.semanticweb.org/person/francois-paul-servant> <http://xmlns.com/foaf/0.1/name> "Francois-Paul Servant" .
+<http://data.semanticweb.org/person/frederick-giasson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/frederick-giasson> <http://www.w3.org/2000/01/rdf-schema#label> "Frederick Giasson" .
+<http://data.semanticweb.org/person/frederick-giasson> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/22> .
+<http://data.semanticweb.org/person/frederick-giasson> <http://xmlns.com/foaf/0.1/name> "Frederick Giasson" .
+<http://data.semanticweb.org/person/frederick-giasson> <http://xmlns.com/foaf/0.1/page> <http://fgiasson.com> .
+<http://data.semanticweb.org/person/georgi-kobilarov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/georgi-kobilarov> <http://www.w3.org/2000/01/rdf-schema#label> "Georgi Kobilarov" .
+<http://data.semanticweb.org/person/georgi-kobilarov> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/9> .
+<http://data.semanticweb.org/person/georgi-kobilarov> <http://xmlns.com/foaf/0.1/name> "Georgi Kobilarov" .
+<http://data.semanticweb.org/person/georgi-kobilarov> <http://xmlns.com/foaf/0.1/page> <http://www.georgikobilarov.com> .
+<http://data.semanticweb.org/person/giovanni-tummarello> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/giovanni-tummarello> <http://www.w3.org/2000/01/rdf-schema#label> "Giovanni Tummarello" .
+<http://data.semanticweb.org/person/giovanni-tummarello> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/20> .
+<http://data.semanticweb.org/person/giovanni-tummarello> <http://xmlns.com/foaf/0.1/name> "Giovanni Tummarello" .
+<http://data.semanticweb.org/person/giovanni-tummarello> <http://xmlns.com/foaf/0.1/page> <http://www.deri.ie/about/team/member/giovanni_tummarello/> .
+<http://data.semanticweb.org/person/gong-cheng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/gong-cheng> <http://www.w3.org/2000/01/rdf-schema#label> "Gong Cheng" .
+<http://data.semanticweb.org/person/gong-cheng> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/2> .
+<http://data.semanticweb.org/person/gong-cheng> <http://xmlns.com/foaf/0.1/name> "Gong Cheng" .
+<http://data.semanticweb.org/person/gong-cheng> <http://xmlns.com/foaf/0.1/page> <http://iws.seu.edu.cn/page/english/people/gcheng/> .
+<http://data.semanticweb.org/person/graham-klyne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/graham-klyne> <http://www.w3.org/2000/01/rdf-schema#label> "Graham Klyne" .
+<http://data.semanticweb.org/person/graham-klyne> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/4> .
+<http://data.semanticweb.org/person/graham-klyne> <http://xmlns.com/foaf/0.1/name> "Graham Klyne" .
+<http://data.semanticweb.org/person/heiko-stoermer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/heiko-stoermer> <http://www.w3.org/2000/01/rdf-schema#label> "Heiko Stoermer" .
+<http://data.semanticweb.org/person/heiko-stoermer> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/20> .
+<http://data.semanticweb.org/person/heiko-stoermer> <http://xmlns.com/foaf/0.1/name> "Heiko Stoermer" .
+<http://data.semanticweb.org/person/heiko-stoermer> <http://xmlns.com/foaf/0.1/page> <http://www.know-who.net> .
+<http://data.semanticweb.org/person/honghan-wu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/honghan-wu> <http://www.w3.org/2000/01/rdf-schema#label> "Honghan Wu" .
+<http://data.semanticweb.org/person/honghan-wu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/2> .
+<http://data.semanticweb.org/person/honghan-wu> <http://xmlns.com/foaf/0.1/name> "Honghan Wu" .
+<http://data.semanticweb.org/person/honghan-wu> <http://xmlns.com/foaf/0.1/page> <http://iws.seu.edu.cn/page/english/people/hhwu/> .
+<http://data.semanticweb.org/person/huajun-chen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/huajun-chen> <http://www.w3.org/2000/01/rdf-schema#label> "Huajun Chen" .
+<http://data.semanticweb.org/person/huajun-chen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/15> .
+<http://data.semanticweb.org/person/huajun-chen> <http://xmlns.com/foaf/0.1/name> "Huajun Chen" .
+<http://data.semanticweb.org/person/hugh-glaser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/hugh-glaser> <http://www.w3.org/2000/01/rdf-schema#label> "Hugh Glaser" .
+<http://data.semanticweb.org/person/hugh-glaser> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/5> .
+<http://data.semanticweb.org/person/hugh-glaser> <http://xmlns.com/foaf/0.1/name> "Hugh Glaser" .
+<http://data.semanticweb.org/person/hugh-glaser> <http://xmlns.com/foaf/0.1/page> <http://www.ecs.soton.ac.uk/people/hg> .
+<http://data.semanticweb.org/person/ian-dickinson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ian-dickinson> <http://www.w3.org/2000/01/rdf-schema#label> "Ian Dickinson" .
+<http://data.semanticweb.org/person/ian-dickinson> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/9> .
+<http://data.semanticweb.org/person/ian-dickinson> <http://xmlns.com/foaf/0.1/name> "Ian Dickinson" .
+<http://data.semanticweb.org/person/ian-dickinson> <http://xmlns.com/foaf/0.1/page> <http://www.hpl.hp.com/personal/Ian_Dickinson> .
+<http://data.semanticweb.org/person/ian-millard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ian-millard> <http://www.w3.org/2000/01/rdf-schema#label> "Ian Millard" .
+<http://data.semanticweb.org/person/ian-millard> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/5> .
+<http://data.semanticweb.org/person/ian-millard> <http://xmlns.com/foaf/0.1/name> "Ian Millard" .
+<http://data.semanticweb.org/person/ian-millard> <http://xmlns.com/foaf/0.1/page> <http://www.ecs.soton.ac.uk/people/icm> .
+<http://data.semanticweb.org/person/jianqiang-li> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jianqiang-li> <http://www.w3.org/2000/01/rdf-schema#label> "Jianqiang Li" .
+<http://data.semanticweb.org/person/jianqiang-li> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/3> .
+<http://data.semanticweb.org/person/jianqiang-li> <http://xmlns.com/foaf/0.1/name> "Jianqiang Li" .
+<http://data.semanticweb.org/person/john-brisbin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/john-brisbin> <http://www.w3.org/2000/01/rdf-schema#label> "John Brisbin" .
+<http://data.semanticweb.org/person/john-brisbin> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/18> .
+<http://data.semanticweb.org/person/john-brisbin> <http://xmlns.com/foaf/0.1/name> "John Brisbin" .
+<http://data.semanticweb.org/person/john-brisbin> <http://xmlns.com/foaf/0.1/page> <http://www.boabinteractive.com.au> .
+<http://data.semanticweb.org/person/jun-zhao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jun-zhao> <http://www.w3.org/2000/01/rdf-schema#label> "Jun Zhao" .
+<http://data.semanticweb.org/person/jun-zhao> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/4> .
+<http://data.semanticweb.org/person/jun-zhao> <http://xmlns.com/foaf/0.1/name> "Jun Zhao" .
+<http://data.semanticweb.org/person/jun-zhao> <http://xmlns.com/foaf/0.1/page> <http://users.ox.ac.uk/~zool0770/> .
+<http://data.semanticweb.org/person/kingsley-idehen> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/LDOW/2008/chair/workshopchair> .
+<http://data.semanticweb.org/person/kingsley-idehen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/kingsley-idehen> <http://www.w3.org/2000/01/rdf-schema#label> "Kingsley Idehen" .
+<http://data.semanticweb.org/person/kingsley-idehen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/15> .
+<http://data.semanticweb.org/person/kingsley-idehen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/21> .
+<http://data.semanticweb.org/person/kingsley-idehen> <http://xmlns.com/foaf/0.1/name> "Kingsley Idehen" .
+<http://data.semanticweb.org/person/kingsley-idehen> <http://xmlns.com/foaf/0.1/page> <http://www.openlinksw.com> .
+<http://data.semanticweb.org/person/mark-sandler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/mark-sandler> <http://www.w3.org/2000/01/rdf-schema#label> "Mark Sandler" .
+<http://data.semanticweb.org/person/mark-sandler> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/11> .
+<http://data.semanticweb.org/person/mark-sandler> <http://xmlns.com/foaf/0.1/name> "Mark Sandler" .
+<http://data.semanticweb.org/person/mc-schraefel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/mc-schraefel> <http://www.w3.org/2000/01/rdf-schema#label> "mc schraefel" .
+<http://data.semanticweb.org/person/mc-schraefel> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/12> .
+<http://data.semanticweb.org/person/mc-schraefel> <http://xmlns.com/foaf/0.1/name> "mc schraefel" .
+<http://data.semanticweb.org/person/michael-hausenblas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/michael-hausenblas> <http://www.w3.org/2000/01/rdf-schema#label> "Michael Hausenblas" .
+<http://data.semanticweb.org/person/michael-hausenblas> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/10> .
+<http://data.semanticweb.org/person/michael-hausenblas> <http://xmlns.com/foaf/0.1/name> "Michael Hausenblas" .
+<http://data.semanticweb.org/person/michael-hausenblas> <http://xmlns.com/foaf/0.1/page> <http://sw-app.org/about.html> .
+<http://data.semanticweb.org/person/michael-k-bergman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/michael-k-bergman> <http://www.w3.org/2000/01/rdf-schema#label> "Michael K. Bergman" .
+<http://data.semanticweb.org/person/michael-k-bergman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/22> .
+<http://data.semanticweb.org/person/michael-k-bergman> <http://xmlns.com/foaf/0.1/name> "Michael K. Bergman" .
+<http://data.semanticweb.org/person/michael-k-bergman> <http://xmlns.com/foaf/0.1/page> <http://www.mkbergman.com> .
+<http://data.semanticweb.org/person/nadeem-shabir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/nadeem-shabir> <http://www.w3.org/2000/01/rdf-schema#label> "Nadeem Shabir" .
+<http://data.semanticweb.org/person/nadeem-shabir> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/1> .
+<http://data.semanticweb.org/person/nadeem-shabir> <http://xmlns.com/foaf/0.1/name> "Nadeem Shabir" .
+<http://data.semanticweb.org/person/nadeem-shabir> <http://xmlns.com/foaf/0.1/page> <http://www.virtualchaos.co.uk/blog> .
+<http://data.semanticweb.org/person/paolo-bouquet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/paolo-bouquet> <http://www.w3.org/2000/01/rdf-schema#label> "Paolo Bouquet" .
+<http://data.semanticweb.org/person/paolo-bouquet> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/20> .
+<http://data.semanticweb.org/person/paolo-bouquet> <http://xmlns.com/foaf/0.1/name> "Paolo Bouquet" .
+<http://data.semanticweb.org/person/paolo-bouquet> <http://xmlns.com/foaf/0.1/page> <http://disi.unitn.it/~bouquet/> .
+<http://data.semanticweb.org/person/paul-miller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/paul-miller> <http://www.w3.org/2000/01/rdf-schema#label> "Paul Miller" .
+<http://data.semanticweb.org/person/paul-miller> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/8> .
+<http://data.semanticweb.org/person/paul-miller> <http://xmlns.com/foaf/0.1/name> "Paul Miller" .
+<http://data.semanticweb.org/person/paul-miller> <http://xmlns.com/foaf/0.1/page> <http://www.talis.com/> .
+<http://data.semanticweb.org/person/peter-coetzee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/peter-coetzee> <http://www.w3.org/2000/01/rdf-schema#label> "Peter Coetzee" .
+<http://data.semanticweb.org/person/peter-coetzee> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/13> .
+<http://data.semanticweb.org/person/peter-coetzee> <http://xmlns.com/foaf/0.1/name> "Peter Coetzee" .
+<http://data.semanticweb.org/person/philippe-laublet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/philippe-laublet> <http://www.w3.org/2000/01/rdf-schema#label> "Philippe Laublet" .
+<http://data.semanticweb.org/person/philippe-laublet> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/14> .
+<http://data.semanticweb.org/person/philippe-laublet> <http://xmlns.com/foaf/0.1/name> "Philippe Laublet" .
+<http://data.semanticweb.org/person/richard-cyganiak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/richard-cyganiak> <http://www.w3.org/2000/01/rdf-schema#label> "Richard Cyganiak" .
+<http://data.semanticweb.org/person/richard-cyganiak> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/19> .
+<http://data.semanticweb.org/person/richard-cyganiak> <http://xmlns.com/foaf/0.1/name> "Richard Cyganiak" .
+<http://data.semanticweb.org/person/rob-atkinson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/rob-atkinson> <http://www.w3.org/2000/01/rdf-schema#label> "Rob Atkinson" .
+<http://data.semanticweb.org/person/rob-atkinson> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/18> .
+<http://data.semanticweb.org/person/rob-atkinson> <http://xmlns.com/foaf/0.1/name> "Rob Atkinson" .
+<http://data.semanticweb.org/person/rob-styles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/rob-styles> <http://www.w3.org/2000/01/rdf-schema#label> "Rob Styles" .
+<http://data.semanticweb.org/person/rob-styles> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/1> .
+<http://data.semanticweb.org/person/rob-styles> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/8> .
+<http://data.semanticweb.org/person/rob-styles> <http://xmlns.com/foaf/0.1/name> "Rob Styles" .
+<http://data.semanticweb.org/person/rob-styles> <http://xmlns.com/foaf/0.1/page> <http://www.dynamicorange.com/blog/> .
+<http://data.semanticweb.org/person/tim-berners-lee> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/LDOW/2008/chair/workshopchair> .
+<http://data.semanticweb.org/person/tim-berners-lee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/tim-berners-lee> <http://www.w3.org/2000/01/rdf-schema#label> "Tim Berners-Lee" .
+<http://data.semanticweb.org/person/tim-berners-lee> <http://xmlns.com/foaf/0.1/name> "Tim Berners-Lee" .
+<http://data.semanticweb.org/person/tom-heath> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/LDOW/2008/chair/workshopchair> .
+<http://data.semanticweb.org/person/tom-heath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/tom-heath> <http://www.w3.org/2000/01/rdf-schema#label> "Tom Heath" .
+<http://data.semanticweb.org/person/tom-heath> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/13> .
+<http://data.semanticweb.org/person/tom-heath> <http://xmlns.com/foaf/0.1/name> "Tom Heath" .
+<http://data.semanticweb.org/person/tom-heath> <http://xmlns.com/foaf/0.1/page> <http://kmi.open.ac.uk/people/tom/html> .
+<http://data.semanticweb.org/person/tuukka-hastrup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/tuukka-hastrup> <http://www.w3.org/2000/01/rdf-schema#label> "Tuukka Hastrup" .
+<http://data.semanticweb.org/person/tuukka-hastrup> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/19> .
+<http://data.semanticweb.org/person/tuukka-hastrup> <http://xmlns.com/foaf/0.1/name> "Tuukka Hastrup" .
+<http://data.semanticweb.org/person/tuukka-hastrup> <http://xmlns.com/foaf/0.1/page> <http://iki.fi/Tuukka> .
+<http://data.semanticweb.org/person/uldis-bojars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/uldis-bojars> <http://www.w3.org/2000/01/rdf-schema#label> "Uldis Bojars" .
+<http://data.semanticweb.org/person/uldis-bojars> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/19> .
+<http://data.semanticweb.org/person/uldis-bojars> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/23> .
+<http://data.semanticweb.org/person/uldis-bojars> <http://xmlns.com/foaf/0.1/name> "Uldis Bojars" .
+<http://data.semanticweb.org/person/uldis-bojars> <http://xmlns.com/foaf/0.1/page> <http://captsolo.net/> .
+<http://data.semanticweb.org/person/weiyi-ge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/weiyi-ge> <http://www.w3.org/2000/01/rdf-schema#label> "Weiyi Ge" .
+<http://data.semanticweb.org/person/weiyi-ge> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/2> .
+<http://data.semanticweb.org/person/weiyi-ge> <http://xmlns.com/foaf/0.1/name> "Weiyi Ge" .
+<http://data.semanticweb.org/person/weiyi-ge> <http://xmlns.com/foaf/0.1/page> <http://iws.seu.edu.cn/page/english/people/wyge/> .
+<http://data.semanticweb.org/person/wolfgang-halb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/wolfgang-halb> <http://www.w3.org/2000/01/rdf-schema#label> "Wolfgang Halb" .
+<http://data.semanticweb.org/person/wolfgang-halb> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/10> .
+<http://data.semanticweb.org/person/wolfgang-halb> <http://xmlns.com/foaf/0.1/name> "Wolfgang Halb" .
+<http://data.semanticweb.org/person/wolfgang-halb> <http://xmlns.com/foaf/0.1/page> <http://www.joanneum.at/iis/> .
+<http://data.semanticweb.org/person/yu-zhao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yu-zhao> <http://www.w3.org/2000/01/rdf-schema#label> "Yu Zhao" .
+<http://data.semanticweb.org/person/yu-zhao> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/3> .
+<http://data.semanticweb.org/person/yu-zhao> <http://xmlns.com/foaf/0.1/name> "Yu Zhao" .
+<http://data.semanticweb.org/person/yuzhong-qu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yuzhong-qu> <http://www.w3.org/2000/01/rdf-schema#label> "Yuzhong Qu" .
+<http://data.semanticweb.org/person/yuzhong-qu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/2> .
+<http://data.semanticweb.org/person/yuzhong-qu> <http://xmlns.com/foaf/0.1/name> "Yuzhong Qu" .
+<http://data.semanticweb.org/person/yuzhong-qu> <http://xmlns.com/foaf/0.1/page> <http://cse.seu.edu.cn/people/yzqu/> .
+<http://data.semanticweb.org/person/yves-raimond> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yves-raimond> <http://www.w3.org/2000/01/rdf-schema#label> "Yves Raimond" .
+<http://data.semanticweb.org/person/yves-raimond> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/10> .
+<http://data.semanticweb.org/person/yves-raimond> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/LDOW/2008/paper/11> .
+<http://data.semanticweb.org/person/yves-raimond> <http://xmlns.com/foaf/0.1/name> "Yves Raimond" .
+<http://data.semanticweb.org/person/yves-raimond> <http://xmlns.com/foaf/0.1/page> <http://moustaki.org/> .
+<http://data.semanticweb.org/workshop/LDOW/2008/chair/workshopchair> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/christian-bizer> .
+<http://data.semanticweb.org/workshop/LDOW/2008/chair/workshopchair> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/kingsley-idehen> .
+<http://data.semanticweb.org/workshop/LDOW/2008/chair/workshopchair> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/tim-berners-lee> .
+<http://data.semanticweb.org/workshop/LDOW/2008/chair/workshopchair> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/tom-heath> .
+<http://data.semanticweb.org/workshop/LDOW/2008/chair/workshopchair> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/LDOW/2008> .
+<http://data.semanticweb.org/workshop/LDOW/2008/chair/workshopchair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopChair> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/michael-hausenblas> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/wolfgang-halb> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/yves-raimond> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://purl.org/dc/elements/1.1/title> "Building Linked Data For Both Humans and Machines" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://swrc.ontoware.org/ontology#abstract> "In this paper we describe our experience with building the riese dataset, an interlinked, RDF-based version of the Eurostat data, containing statistical data about over 500 million Europeans. The riese dataset (http://riese.joanneum.at), aims at serving roughly 3 billion RDF triples, along with millions of high-quality interlinks. Our contribution is twofold: Firstly, we suggest using RDFa as the main deployment mechanism, hence serving both humans and machines to effectively and effciently explore and use the dataset. Secondly, we introduce a new way of enriching the dataset with high-quality links: the User Contributed Interlinking, a Wiki-style way of adding semantic links to data pages." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/michael-hausenblas> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/wolfgang-halb> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/yves-raimond> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper06.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx3 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://www.w3.org/2000/01/rdf-schema#label> "Building Linked Data For Both Humans and Machines" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/michael-hausenblas> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/wolfgang-halb> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/10> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/yves-raimond> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/christopher-sutton> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/mark-sandler> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/yves-raimond> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://purl.org/dc/elements/1.1/title> "Automatic Interlinking of Music Datasets on the Semantic Web" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://swrc.ontoware.org/ontology#abstract> "In this paper, we describe current efforts towards interlinkingmusic-related datasets on the Web. We first explain some initial interlinking experiences, and the poor results obtained by taking a na\\\"ive approach.We then detail a particular interlinking algorithm, taking into account both the similarities of web resources and of their neighbors. We detail the application of this algorithm in two contexts: to link a Creative Commons music dataset to an editorial one, and to link a personal music collection to corresponding web identifiers. The latter provides a user with personally meaningful entry points for exploring the web of data, and we conclude by describing some concrete tools built to generate and use such links." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/christopher-sutton> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/mark-sandler> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/yves-raimond> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper18.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx4 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://www.w3.org/2000/01/rdf-schema#label> "Automatic Interlinking of Music Datasets on the Semantic Web" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/christopher-sutton> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/mark-sandler> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/11> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/yves-raimond> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/12> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/12> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/mc-schraefel> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/12> <http://purl.org/dc/elements/1.1/title> "Tabulator Redux: Browsing and Writing Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/12> <http://swrc.ontoware.org/ontology#abstract> "A first category of Semantic Web browsers were designed to present a given dataset (an RDF graph) for perusal, in various forms. These include mSpace, Exhibit, and to a certain extent Haystack. A second category tackled mechanisms and display issues around linked data gathered on the fly. These include Tabulator, Oink, Disco, Open Link Software's Data Browser, and Object Browser. The challenge of once that data is gathered, how might it be edited, extended and annotated has so far been left largely unaddressed. This is not surprising: there are a number of steep challenges for determining how to support editing information in the open web of linked data. These include the representation of both the web of documents and the web of things, and the relationships between them; ensuring the user is aware of and has control over the social context such as licensing and privacy of data being entered, and, on a web in which anyone can say anything about anything, helping the user intuitively select the things which they actually wish to see in a given situation. There is also the view update problem: the difficulty of reflecting user edits back through functions used to map web data to a screen presentation. In the latest version of the Tabulator project, described in this paper we have focused on providing the write side of the readable/writable web.Our approach has been to allow modification and addition of information naturally within the browsing interface, and to relay changes to the server triple by triple for least possible brittleness (there is no explicit 'save' operation). Challenges which remain include the propagation of changes by collaborators back to the interface to create a shared editing system. To support writing across (semantic) Web resources, our work has contributed several technologies, including a HTTP/SPARQL/Update-based protocol between an editor (or other system) and incrementally editable resources stored in an open source, world-writable 'data wiki'. This begins enabling the writable Semantic Web." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/12> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/mc-schraefel> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/12> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper11.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/12> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx5 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/12> <http://www.w3.org/2000/01/rdf-schema#label> "Tabulator Redux: Browsing and Writing Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/12> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/mc-schraefel> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/enrico-motta> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/peter-coetzee> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/tom-heath> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://purl.org/dc/elements/1.1/title> "SparqPlug: Generating Linked Data from Legacy HTML, SPARQL and the DOM" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://swrc.ontoware.org/ontology#abstract> "The availability of linked RDF data remains a significant barrier to the realisation of a Semantic Web. In this paper we present SparqPlug, a framework that uses the SPARQL query language and the HTML Document Object Model to convert legacy HTML-only data sets into RDF. This approach improves upon existing approaches in a number of ways. For example, it allows HTML data to be queried using the full flexibility of SPARQL and makes converted data automatically available in the Semantic Web. We outline the process of mass generation of RDF from HTML using SparqPlug and illustrate this with a case study. The paper concludes with an examination of factors affecting SparqPlug's performance across various forms of HTML data." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/enrico-motta> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/peter-coetzee> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/tom-heath> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper05.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx6 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://www.w3.org/2000/01/rdf-schema#label> "SparqPlug: Generating Linked Data from Legacy HTML, SPARQL and the DOM" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/enrico-motta> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/peter-coetzee> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/13> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/tom-heath> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/alexandre-passant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/philippe-laublet> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://purl.org/dc/elements/1.1/title> "Meaning Of A Tag: A collaborative approach to bridge the gap between tagging and Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://swrc.ontoware.org/ontology#abstract> "This paper introduces MOAT, a lightweight Semantic Web framework that offers a simple and collaborative way to let Web 2.0 content producers bridge the gap between free-tagging and semantically-annotated content.That way, users can create inter-linked RDF data and solve some issues raised when using tags to annotate their data." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/alexandre-passant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/philippe-laublet> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper22.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx7 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://www.w3.org/2000/01/rdf-schema#label> "Meaning Of A Tag: A collaborative approach to bridge the gap between tagging and Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/alexandre-passant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/14> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/philippe-laublet> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/chengli-xu> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/chunying-zhou> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/huajun-chen> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/kingsley-idehen> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://purl.org/dc/elements/1.1/title> "Browser-based Semantic Mapping Tool for Linked Datain Semantic Web" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://swrc.ontoware.org/ontology#abstract> "With the ever growing need of semantically linking data across different domain, organizational, cultural and diplomacy boundaries using RDF and OWL, one of the major obstacles impeding the advancement of the Semantic Web is the data availability. This paper propose a browser-based semantic mapping tool for linked data for converting linked data on the Web is available for Semantic Web applications. Till now, this mapping tool focus on helping users define mappings from relational schema to RDF schema. It provides much easy-to-use functionality to facilitate users in this work, such as drag-and-drop mapping, visualization mapping, data source annotation,database server independent, standard mapping language." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/chengli-xu> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/chunying-zhou> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/huajun-chen> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/kingsley-idehen> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper09.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx8 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://www.w3.org/2000/01/rdf-schema#label> "Browser-based Semantic Mapping Tool for Linked Datain Semantic Web" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/chengli-xu> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/chunying-zhou> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/huajun-chen> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/15> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/kingsley-idehen> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/16> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/16> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/alexandre-passant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/16> <http://purl.org/dc/elements/1.1/title> ":me owl:sameAs flickr:33669349@N00 ." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/16> <http://swrc.ontoware.org/ontology#abstract> "In order to release the Social Semantic Web and solve data-portability issues, there is a need from Web 2.0 providers to open their data and deliver it in machine-redeable way. Modeling it with vocabularies as FOAF, SIOC, as well as reusing data from the Linked Data initiative as DBpedia or geonames.org can help to achieve this task.The goal of this demo is to showcase a RDF exporter for Flickr profiles that acts such a way." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/16> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/alexandre-passant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/16> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper10.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/16> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx9 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/16> <http://www.w3.org/2000/01/rdf-schema#label> ":me owl:sameAs flickr:33669349@N00 ." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/16> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/alexandre-passant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/17> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/17> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/francois-paul-servant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/17> <http://purl.org/dc/elements/1.1/title> "Linking Enterprise Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/17> <http://swrc.ontoware.org/ontology#abstract> "The \"Linking Open Data\"? community initiative contributed a great deal to the concretization of the web of data, describing best practice, publishing large sets of RDF data on the web, and consequently giving birth to a new area of possibilities for innovative mashups using these data. Enterprises' information systems too can be envisioned as a space of linked data. We describe herein how we used Linked Data principles in a work intended to foster adoption of semantic web technologies in our company." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/17> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/francois-paul-servant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/17> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper21.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/17> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx10 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/17> <http://www.w3.org/2000/01/rdf-schema#label> "Linking Enterprise Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/17> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/francois-paul-servant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/anne-cregan> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/david-peterson> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/john-brisbin> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/rob-atkinson> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://purl.org/dc/elements/1.1/title> "n2Mate: Exploiting social capital to create a standards-rich semantic network" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://swrc.ontoware.org/ontology#abstract> "A significant boost on the path towards a web of linked, open data is the establishment and promotion of common semantic resources including ontologies and other operationalised vocabularies, and their instance data.Without consensus on these, we arehamstrung by the famous \"n-squared\"? mapping problem. In addition, each vocabulary has its own associated attributes to do with why it was developed, what purposes it is best suited for, and how accurate and reliable it is at both a content and technical level, but most of this information is opaque to the general community.Our theory is that it is the lack of socially-sensitised processes highlighting who is using what and why, that have led to the current unmanageable plethora of vocabularies, where it is far easier to build your own vocabulary than try to find a suitable, reliable existing one.We therefore suggest that there is considerable value in the development of an online facility that performs the function of providing a space listing vocabulary and ontology resources with their associated authority, governance and quality of service attributes. Presenting this in a visual form and providing pivotable search facilities enhances recognition and comprehension.Additionally, and critically, the facility provides a focal point where discourse communities can make authority claims, rate vocabularies on various parameters, register their commitment to or usage of particular vocabularies, and provide feedback on their experiences. Through social interaction, we expect the most solid and useful vocabularies to emerge and form a stable semantic platform for content representation and interlinked knowledge.Our strategy is to become sufficiently enmeshed in the native information habits of people and their derivative institutions to reveal and collect their standards-seeking needs and activities with a minimum of effort on their part.This paper describes a pilot facility testing the theory above. Dubbed \"n2Mate\"?, it is a novel exploitation of social networking software to provide a lightweight and flexible platform for testing the efficacy of leveraging social networks to link existing registers and 'seed' an information space focussing on the use of standards in online information management.The paper uses examples from the Australian context to provide clear illustration of the central arguments." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/anne-cregan> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/david-peterson> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/john-brisbin> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/rob-atkinson> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper17.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx11 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://www.w3.org/2000/01/rdf-schema#label> "n2Mate: Exploiting social capital to create a standards-rich semantic network" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/anne-cregan> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/david-peterson> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/john-brisbin> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/18> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/rob-atkinson> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/richard-cyganiak> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/tuukka-hastrup> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/uldis-bojars> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://purl.org/dc/elements/1.1/title> "Browsing Linked Data with Fenfire" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://swrc.ontoware.org/ontology#abstract> "A wealth of information has recently become available as browsable RDFdata on the Web, but the selection of client applications to interactwith this Linked Data remains limited. We show how to browse LinkedData with Fenfire, an RDF browser and editor that employs a graph viewand focuses on an engaging and interactive browsing experience. Thissets Fenfire apart from previous table- and outline-based Linked Databrowsers." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/richard-cyganiak> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/tuukka-hastrup> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/uldis-bojars> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper14.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx12 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://www.w3.org/2000/01/rdf-schema#label> "Browsing Linked Data with Fenfire" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/richard-cyganiak> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/tuukka-hastrup> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/19> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/uldis-bojars> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/danny-ayers> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/nadeem-shabir> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/rob-styles> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://purl.org/dc/elements/1.1/title> "Semantic Marc, MARC21 and The Semantic Web" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://swrc.ontoware.org/ontology#abstract> "The MARC standard for exchanging bibliographic data has been in use for several decades and is used by major libraries worldwide. This paper discusses the possibilities of representing the most prevalent form of MARC, MARC21, as RDF for the Semantic Web, and aims to understand the tradeoffs, if any, resulting from transforming the data. Critically our approach goes beyond a simple transliteration of the MARC21 record syntax to develop rich semantic descriptions of the varied things which may be described using bibliographic records. We present an algorithmic approach for consistently generating URIs from textual data, discuss the algorithmic matching of author names and suggest how RDF generated from MARC records may be linked to other data sources on the Web." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/danny-ayers> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/nadeem-shabir> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/rob-styles> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper02.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx13 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Marc, MARC21 and The Semantic Web" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/danny-ayers> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/nadeem-shabir> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/rob-styles> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/daniele-cordioli> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/giovanni-tummarello> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/heiko-stoermer> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/paolo-bouquet> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://purl.org/dc/elements/1.1/title> "An Entity Name System for Linking Semantic Web Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://swrc.ontoware.org/ontology#abstract> "In this paper, we argue that realizing the vision of the Semantic Web as an open and global decentralized knowledge space would greatly benefit from the availability of a large-scale service which may enable the systematic reuse of URIs across independently produced Semantic Web contents. Such a service, which we call an Entity Name System (ENS), might play for the Semantic Web the role that the DNS played for interlinking hypertexts on theWeb. The key idea behing the ENS is that any tool/application for creating content (not only Semantic Web) may be empowered through simple plugins or extensions to interact with a network of ENS servers. Here we show how this has been done in a few prototypes for MS Word, Protege and an editor for FOAF profiles." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/daniele-cordioli> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/giovanni-tummarello> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/heiko-stoermer> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/paolo-bouquet> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper23.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx14 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://www.w3.org/2000/01/rdf-schema#label> "An Entity Name System for Linking Semantic Web Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/daniele-cordioli> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/giovanni-tummarello> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/heiko-stoermer> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/20> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/paolo-bouquet> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/21> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/21> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/kingsley-idehen> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/21> <http://purl.org/dc/elements/1.1/title> "Linked Data Spaces & Data Portability" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/21> <http://swrc.ontoware.org/ontology#abstract> "In the year 2007, the size of the Linked Data injected into the Web grew to several billion RDF triples, served by a network of interlinked data sources that cover domains such as general knowledge, geographic information, people, companies, online communities, films, music, books and scientific publications. Unfortunately, the growth rate of User Generated content from a variety of Web based unstructured and semi-structured data-silos continues to exceed that of structured Linked Data. Thus, we have a pressing need for technology, capable of bridging this broadening divide via transparent generation of Linked Data from existing data-silos on the Web. Our Linked Data technology demonstration explores the use of the OpenLink Data Spaces platform as a solution to this problem." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/21> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/kingsley-idehen> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/21> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper20.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/21> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx15 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/21> <http://www.w3.org/2000/01/rdf-schema#label> "Linked Data Spaces & Data Portability" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/21> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/kingsley-idehen> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/frederick-giasson> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/michael-k-bergman> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://purl.org/dc/elements/1.1/title> "zLinks:Semantic Framework for Invoking Contextual Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://swrc.ontoware.org/ontology#abstract> "This first-ever demonstration of the new zLinks plug-in shows how any existing Web document link can be automatically transformed into a portal to relevant Linked Data.Each existing link disambiguates to its contextual and relevant subject concept (SC) or named entity (NE).The SCs are grounded in the OpenCyc knowledge base, supplemented by aliases and WordNet synsets to aid disambiguation.The NEs are drawn from Wikipedia as processed via YAGO, and other online fact-based repositories.The UMBEL ontology basis to this framework offers significant further advantages.The zLinks popup is invoked only as desired via unobtrusive user interface cues." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/frederick-giasson> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/michael-k-bergman> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper16.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx16 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://www.w3.org/2000/01/rdf-schema#label> "zLinks:Semantic Framework for Invoking Contextual Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/frederick-giasson> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/22> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/michael-k-bergman> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/alexandre-passant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/uldis-bojars> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://purl.org/dc/elements/1.1/title> "Weaving SIOC into the Web of Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://swrc.ontoware.org/ontology#abstract> "Social media sites offer a rich source of large amounts of data. The SIOC ontology and related tools allow to express this information as linked RDF data. This paper describes approaches for making this information an integral part of the Web of Data." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/alexandre-passant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/uldis-bojars> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper01.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx17 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://www.w3.org/2000/01/rdf-schema#label> "Weaving SIOC into the Web of Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/alexandre-passant> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/23> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/uldis-bojars> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/gong-cheng> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/honghan-wu> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/weiyi-ge> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/yuzhong-qu> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://purl.org/dc/elements/1.1/title> "Searching Semantic Web Objects Based on Class Hierarchies" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://swrc.ontoware.org/ontology#abstract> "On the Semantic Web, objects can be identified by URIs and described by using RDF. With more and more RDF data published, object search on the Semantic Web is in demand for browsing, reuse, and integration. We developed the Falcons system, a keyword-based search engine for the Semantic Web. In this paper, we present the object search service provided by Falcons. For building an inverted index from query terms to Semantic Web objects (SW objects), we present a method to construct comprehensive textual description of SW objects. Furthermore, SW objects are also indexed from their classes and ancestor classes to support the class-based query restriction. Especially, class subsumption reasoning on multiple vocabularies on the Semantic Web is performed, and a class recommendation technique is proposed to enable hierarchically navigating classes. In addition, a summarization method for SW objects is devised to enable users to browse the summaries of objects." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/gong-cheng> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/honghan-wu> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/weiyi-ge> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/yuzhong-qu> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper12.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx18 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://www.w3.org/2000/01/rdf-schema#label> "Searching Semantic Web Objects Based on Class Hierarchies" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/gong-cheng> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/honghan-wu> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/weiyi-ge> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/yuzhong-qu> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jianqiang-li> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/yu-zhao> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://purl.org/dc/elements/1.1/title> "A Case Study on Linked Data Generation and Consumption" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://swrc.ontoware.org/ontology#abstract> "The availability of large amounts of interlinked semantic data is a fundamental prerequisite of the Semantic Web. At present, almost all the usable ontological data is built manually or by directly transforming certain (semi-)structured data sources into certain formats of semantic data. To solve the \"isolated data island\"? problem of the Semantic Web caused by this situation, the Linking Open Data initiative was launched to unite these machine readable datasets as a Web of Data. In this paper, an alternative method to make a contribution to this trend is proposed. By extracting the linked data from the existing Web of Documents in an automatic way, the inherent statements implied by the hyperlinks can be made available on the Web. This realizes the maximized reuse of the current Web (In most cases, the current Web is rendered as Web of Documents) and provides a bridge between the Web of Documents and the Web of Data. An experimental study utilizing the resultant linked data for Small Web search is introduced, in which the ontological information about the webpages serves as the metadata and this provides the potential to enhance the web search quality. The results of this study show that, compared with the existing solutions, the precision of Small Web search is significantly improved." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jianqiang-li> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/yu-zhao> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper04.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx19 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://www.w3.org/2000/01/rdf-schema#label> "A Case Study on Linked Data Generation and Consumption" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jianqiang-li> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/yu-zhao> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/david-shotton> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/graham-klyne> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jun-zhao> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://purl.org/dc/elements/1.1/title> "Provenance and Linked Data in Biological Data Webs" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://swrc.ontoware.org/ontology#abstract> "To created a linked data web of heterogeneous biological data resources, we need not only to define and create the alignment between related data resources but also to express the knowledge about why data items from different sources are linked with each other and how each data link has evolved, so that scientists can trust the data links provided by the data web. This paper highlights the importance of keeping provenance information about the links between data items from different sources, and proposes the use of named graphs to make a provenance statement about each pair of linked data items and each release of a data web." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/david-shotton> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/graham-klyne> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jun-zhao> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper07.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx20 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://www.w3.org/2000/01/rdf-schema#label> "Provenance and Linked Data in Biological Data Webs" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/david-shotton> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/graham-klyne> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jun-zhao> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/afraz-jaffri> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/hugh-glaser> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ian-millard> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://purl.org/dc/elements/1.1/title> "URI Disambiguation in the Context of Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://swrc.ontoware.org/ontology#abstract> "The Linked Data initiative has given rise to an increasing number of RDF datasets, many of which are freely accessible online. These resources often arise as a result of database exports; however sufficient consideration may not be given to the unseen implications caused when they are used in the wider context of the Semantic Web. This paper investigates two popular resources, DBLP and DBpedia, and discusses whether the issues regarding identity management and co-reference resolution have been suitably addressed. We find that a large percentage of authors in DBLP have been conflated, and that disambiguation pages have been incorrectly linked using owl:sameAs within DBpedia. Systems for dealing with these issues are presented, and directions are given for future research." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/afraz-jaffri> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/hugh-glaser> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ian-millard> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper19.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx21 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://www.w3.org/2000/01/rdf-schema#label> "URI Disambiguation in the Context of Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/afraz-jaffri> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/hugh-glaser> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ian-millard> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/christian-bizer> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/christian-becker> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://purl.org/dc/elements/1.1/title> "DBpedia Mobile: A Location-Enabled Linked Data Browser" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://swrc.ontoware.org/ontology#abstract> "In this demonstration, we present DBpedia Mobile, alocation-centric DBpedia client application for mobile devicesconsisting of a map view and a Fresnel-based LinkedData browser. The DBpedia project extracts structuredinformation from Wikipedia and publishes this informationas Linked Data on the Web. The DBpedia dataset containsinformation about 1.95 million things, including 200,000geographic locations. DBpedia is interlinked with variousother location-related datasets. Based on the current GPSposition of a mobile device, DBpedia Mobile renders amap indicating nearby locations from the DBpedia dataset.Starting from this map, users can explore background informationabout locations and can navigate into interlinkeddatasets. DBpedia Mobile demonstrates that the DBpediadataset can serve as a useful starting point to explore theGeospatial Semantic Web using a mobile device." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/christian-bizer> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/christian-becker> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper13.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx22 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://www.w3.org/2000/01/rdf-schema#label> "DBpedia Mobile: A Location-Enabled Linked Data Browser" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/christian-bizer> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/christian-becker> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/bernhard-haslhofer> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/bernhard-schandl> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://purl.org/dc/elements/1.1/title> "The OAI2LOD Server: Exposing OAI-PMH Metadata as Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://swrc.ontoware.org/ontology#abstract> "Many institutions grant access to their metadata repositories via the Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH). However, this protocol has two significant drawbacks: it does not make its resources accessible via dereferencable URIs, and it provides only restricted means of selective access to metadata. The OAI2LOD Server handles these shortcomings by republishing metadata originating from an OAI-PMH endpoint according to the principles of Linked Data. As the ongoing OAI-ORE specification process shows, these principles are gaining growing importance also in the digital libraries domain." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/bernhard-haslhofer> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/bernhard-schandl> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper03.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx23 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://www.w3.org/2000/01/rdf-schema#label> "The OAI2LOD Server: Exposing OAI-PMH Metadata as Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/bernhard-haslhofer> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/bernhard-schandl> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/paul-miller> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/rob-styles> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://purl.org/dc/elements/1.1/title> "Open Data Commons, a license for open data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://swrc.ontoware.org/ontology#abstract> "Acceptance of the need for a data licensing regime has grown apace since last year's WWW conference. In this paper, we bring developments right up to date and call for widespread engagement." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/paul-miller> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/rob-styles> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper08.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx24 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://www.w3.org/2000/01/rdf-schema#label> "Open Data Commons, a license for open data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/paul-miller> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/rob-styles> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/LDOW/2008/proceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/georgi-kobilarov> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ian-dickinson> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://purl.org/dc/elements/1.1/title> "Humboldt: Exploring Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://swrc.ontoware.org/ontology#abstract> "We present Humboldt, a novel user interface for browsing RDF data. Current user interfaces for browsing RDF data are reviewed.We argue that browsing tasks require both a facet browser's ability to select and process groups of resources at a time and a 'resource at a time' browser's ability to navigate anywhere in a dataset.We describe Humboldt which combines these two features in a single coherent interface.Our approach is based on the operation of \\emph{pivoting}, which enables the user to move the focus of a browsing from one set of resources to a set of related resources.With repeated use of the pivot operation the user can browse anywhere in the data.We describe a preliminary evaluation of our approach and discuss its implications for further development." .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/georgi-kobilarov> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ian-dickinson> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://swrc.ontoware.org/ontology#url> <http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-369/paper15.pdf> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfirntghx25 .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://www.w3.org/2000/01/rdf-schema#label> "Humboldt: Exploring Linked Data" .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/georgi-kobilarov> .
+<http://data.semanticweb.org/workshop/LDOW/2008/paper/9> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ian-dickinson> .
+_:node1dfirntghx24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/paul-miller> .
+_:node1dfirntghx24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/rob-styles> .
+_:node1dfirntghx25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/georgi-kobilarov> .
+_:node1dfirntghx25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/ian-dickinson> .
+_:node1dfirntghx3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/wolfgang-halb> .
+_:node1dfirntghx3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/yves-raimond> .
+_:node1dfirntghx3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/michael-hausenblas> .
+_:node1dfirntghx4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/yves-raimond> .
+_:node1dfirntghx4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/christopher-sutton> .
+_:node1dfirntghx4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/mark-sandler> .
+_:node1dfirntghx5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/mc-schraefel> .
+_:node1dfirntghx6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/peter-coetzee> .
+_:node1dfirntghx6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/tom-heath> .
+_:node1dfirntghx6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/enrico-motta> .
+_:node1dfirntghx7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/alexandre-passant> .
+_:node1dfirntghx7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/philippe-laublet> .
+_:node1dfirntghx8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/chunying-zhou> .
+_:node1dfirntghx8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/chengli-xu> .
+_:node1dfirntghx8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/huajun-chen> .
+_:node1dfirntghx8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/kingsley-idehen> .
+_:node1dfirntghx9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/alexandre-passant> .
+_:node1dfirntghx10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/francois-paul-servant> .
+_:node1dfirntghx2 <http://www.w3.org/2002/12/cal/ical#date> "2008-04-22T08:30:00" .
+_:node1dfirntghx2 <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+8" .
+_:node1dfirntghx11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/david-peterson> .
+_:node1dfirntghx11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/anne-cregan> .
+_:node1dfirntghx11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/rob-atkinson> .
+_:node1dfirntghx11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/john-brisbin> .
+_:node1dfirntghx12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/tuukka-hastrup> .
+_:node1dfirntghx12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/richard-cyganiak> .
+_:node1dfirntghx12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/uldis-bojars> .
+_:node1dfirntghx14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/paolo-bouquet> .
+_:node1dfirntghx14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/heiko-stoermer> .
+_:node1dfirntghx14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/daniele-cordioli> .
+_:node1dfirntghx14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/giovanni-tummarello> .
+_:node1dfirntghx15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/kingsley-idehen> .
+_:node1dfirntghx16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/michael-k-bergman> .
+_:node1dfirntghx16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/frederick-giasson> .
+_:node1dfirntghx17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/uldis-bojars> .
+_:node1dfirntghx17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/alexandre-passant> .
+_:node1dfirntghx1 <http://www.w3.org/2002/12/cal/ical#date> "2008-04-22T18:00:00" .
+_:node1dfirntghx1 <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+8" .
+_:node1dfirntghx13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/rob-styles> .
+_:node1dfirntghx13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/danny-ayers> .
+_:node1dfirntghx13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/nadeem-shabir> .
+_:node1dfirntghx18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/gong-cheng> .
+_:node1dfirntghx18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/weiyi-ge> .
+_:node1dfirntghx18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/honghan-wu> .
+_:node1dfirntghx18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/yuzhong-qu> .
+_:node1dfirntghx19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/jianqiang-li> .
+_:node1dfirntghx19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/yu-zhao> .
+_:node1dfirntghx20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/jun-zhao> .
+_:node1dfirntghx20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/david-shotton> .
+_:node1dfirntghx20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/graham-klyne> .
+_:node1dfirntghx21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/afraz-jaffri> .
+_:node1dfirntghx21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/hugh-glaser> .
+_:node1dfirntghx21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/ian-millard> .
+_:node1dfirntghx22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/christian-becker> .
+_:node1dfirntghx22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/christian-bizer> .
+_:node1dfirntghx23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/bernhard-haslhofer> .
+_:node1dfirntghx23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/bernhard-schandl> .

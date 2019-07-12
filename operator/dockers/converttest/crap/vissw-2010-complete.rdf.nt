@@ -1,0 +1,658 @@
+<http://data.semanticweb.org/organization/cnr-istc-italy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/cnr-istc-italy> <http://www.w3.org/2000/01/rdf-schema#label> "CNR-ISTC" .
+<http://data.semanticweb.org/organization/cnr-istc-italy> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Technology Laboratory, ISTC, Rome" .
+<http://data.semanticweb.org/organization/cnr-istc-italy> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/aldo-gangemi> .
+<http://data.semanticweb.org/organization/cnr-istc-italy> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/valentina-presutti> .
+<http://data.semanticweb.org/organization/cnr-istc-italy> <http://xmlns.com/foaf/0.1/name> "CNR-ISTC" .
+<http://data.semanticweb.org/organization/cnr-istc-italy> <http://xmlns.com/foaf/0.1/name> "Semantic Technology Laboratory, ISTC, Rome" .
+<http://data.semanticweb.org/organization/day-software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/day-software> <http://www.w3.org/2000/01/rdf-schema#label> "Day Software" .
+<http://data.semanticweb.org/organization/day-software> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/bertrand-delacretaz> .
+<http://data.semanticweb.org/organization/day-software> <http://xmlns.com/foaf/0.1/name> "Day Software" .
+<http://data.semanticweb.org/organization/dept-of-informatics-puc-rio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/dept-of-informatics-puc-rio> <http://www.w3.org/2000/01/rdf-schema#label> "PUC-Rio" .
+<http://data.semanticweb.org/organization/dept-of-informatics-puc-rio> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/daniel-schwabe> .
+<http://data.semanticweb.org/organization/dept-of-informatics-puc-rio> <http://xmlns.com/foaf/0.1/name> "PUC-Rio" .
+<http://data.semanticweb.org/organization/deri-nui-galway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/deri-nui-galway> <http://www.w3.org/2000/01/rdf-schema#label> "DERI, NUI Galway" .
+<http://data.semanticweb.org/organization/deri-nui-galway> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Enterprise Research Institute, National University of Ireland, Galway" .
+<http://data.semanticweb.org/organization/deri-nui-galway> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/alexandre-passant> .
+<http://data.semanticweb.org/organization/deri-nui-galway> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/knud-moeller> .
+<http://data.semanticweb.org/organization/deri-nui-galway> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/michael-hausenblas> .
+<http://data.semanticweb.org/organization/deri-nui-galway> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/oszkar-ambrus> .
+<http://data.semanticweb.org/organization/deri-nui-galway> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/siegfried-handschuh> .
+<http://data.semanticweb.org/organization/deri-nui-galway> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/vinhtuan-thai> .
+<http://data.semanticweb.org/organization/deri-nui-galway> <http://xmlns.com/foaf/0.1/name> "DERI, NUI Galway" .
+<http://data.semanticweb.org/organization/deri-nui-galway> <http://xmlns.com/foaf/0.1/name> "Digital Enterprise Research Institute, National University of Ireland, Galway" .
+<http://data.semanticweb.org/organization/design-for-context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/design-for-context> <http://www.w3.org/2000/01/rdf-schema#label> "Design for Context" .
+<http://data.semanticweb.org/organization/design-for-context> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/duane-degler> .
+<http://data.semanticweb.org/organization/design-for-context> <http://xmlns.com/foaf/0.1/name> "Design for Context" .
+<http://data.semanticweb.org/organization/epimorphics-ltd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/epimorphics-ltd> <http://www.w3.org/2000/01/rdf-schema#label> "Epimorphics Ltd" .
+<http://data.semanticweb.org/organization/epimorphics-ltd> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/ian-dickinson> .
+<http://data.semanticweb.org/organization/epimorphics-ltd> <http://xmlns.com/foaf/0.1/name> "Epimorphics Ltd" .
+<http://data.semanticweb.org/organization/fh-potsdam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/fh-potsdam> <http://www.w3.org/2000/01/rdf-schema#label> "FH Potsdam" .
+<http://data.semanticweb.org/organization/fh-potsdam> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/moritz-stefaner> .
+<http://data.semanticweb.org/organization/fh-potsdam> <http://xmlns.com/foaf/0.1/name> "FH Potsdam" .
+<http://data.semanticweb.org/organization/free-university-of-bozen-bolzano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/free-university-of-bozen-bolzano> <http://www.w3.org/2000/01/rdf-schema#label> "Free University of Bozen-Bolzano" .
+<http://data.semanticweb.org/organization/free-university-of-bozen-bolzano> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/enrico-franconi> .
+<http://data.semanticweb.org/organization/free-university-of-bozen-bolzano> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/marco-trevisan> .
+<http://data.semanticweb.org/organization/free-university-of-bozen-bolzano> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/paolo-guagliardo> .
+<http://data.semanticweb.org/organization/free-university-of-bozen-bolzano> <http://xmlns.com/foaf/0.1/name> "Free University of Bozen-Bolzano" .
+<http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> <http://www.w3.org/2000/01/rdf-schema#label> "DFKI" .
+<http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> <http://xmlns.com/foaf/0.1/name> "DFKI" .
+<http://data.semanticweb.org/organization/hasso-plattner-institut-hpi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/hasso-plattner-institut-hpi> <http://www.w3.org/2000/01/rdf-schema#label> "Hasso-Plattner-Institut" .
+<http://data.semanticweb.org/organization/hasso-plattner-institut-hpi> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/harald-sack> .
+<http://data.semanticweb.org/organization/hasso-plattner-institut-hpi> <http://xmlns.com/foaf/0.1/name> "Hasso-Plattner-Institut" .
+<http://data.semanticweb.org/organization/ibm-research> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/ibm-research> <http://www.w3.org/2000/01/rdf-schema#label> "IBM Research" .
+<http://data.semanticweb.org/organization/ibm-research> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/adam-perer> .
+<http://data.semanticweb.org/organization/ibm-research> <http://xmlns.com/foaf/0.1/name> "IBM Research" .
+<http://data.semanticweb.org/organization/inria-rhone-alpes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/inria-rhone-alpes> <http://www.w3.org/2000/01/rdf-schema#label> "INRIA" .
+<http://data.semanticweb.org/organization/inria-rhone-alpes> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/alain-giboin> .
+<http://data.semanticweb.org/organization/inria-rhone-alpes> <http://xmlns.com/foaf/0.1/name> "INRIA" .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://www.w3.org/2000/01/rdf-schema#label> "The Open University" .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/enrico-motta> .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://xmlns.com/foaf/0.1/name> "The Open University" .
+<http://data.semanticweb.org/organization/microsoft-research> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/microsoft-research> <http://www.w3.org/2000/01/rdf-schema#label> "Microsoft Research" .
+<http://data.semanticweb.org/organization/microsoft-research> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/nathalie-henry> .
+<http://data.semanticweb.org/organization/microsoft-research> <http://xmlns.com/foaf/0.1/name> "Microsoft Research" .
+<http://data.semanticweb.org/organization/mit-csail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/mit-csail> <http://www.w3.org/2000/01/rdf-schema#label> "MIT" .
+<http://data.semanticweb.org/organization/mit-csail> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/david-karger> .
+<http://data.semanticweb.org/organization/mit-csail> <http://xmlns.com/foaf/0.1/name> "MIT" .
+<http://data.semanticweb.org/organization/northwestern-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/northwestern-university> <http://www.w3.org/2000/01/rdf-schema#label> "Northwestern University" .
+<http://data.semanticweb.org/organization/northwestern-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/earl-wagner> .
+<http://data.semanticweb.org/organization/northwestern-university> <http://xmlns.com/foaf/0.1/name> "Northwestern University" .
+<http://data.semanticweb.org/organization/open-universiteit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/open-universiteit> <http://www.w3.org/2000/01/rdf-schema#label> "Open Universiteit" .
+<http://data.semanticweb.org/organization/open-universiteit> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/lloyd-rutledge> .
+<http://data.semanticweb.org/organization/open-universiteit> <http://xmlns.com/foaf/0.1/name> "Open Universiteit" .
+<http://data.semanticweb.org/organization/simon-fraser-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/simon-fraser-university> <http://www.w3.org/2000/01/rdf-schema#label> "Simon Fraser University" .
+<http://data.semanticweb.org/organization/simon-fraser-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/carlo-torniai> .
+<http://data.semanticweb.org/organization/simon-fraser-university> <http://xmlns.com/foaf/0.1/name> "Simon Fraser University" .
+<http://data.semanticweb.org/organization/talis-information-limited> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/talis-information-limited> <http://www.w3.org/2000/01/rdf-schema#label> "Talis Information Ltd" .
+<http://data.semanticweb.org/organization/talis-information-limited> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/tom-heath> .
+<http://data.semanticweb.org/organization/talis-information-limited> <http://xmlns.com/foaf/0.1/name> "Talis Information Ltd" .
+<http://data.semanticweb.org/organization/telefonica-research-and-development> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/telefonica-research-and-development> <http://www.w3.org/2000/01/rdf-schema#label> "Telefonica Research" .
+<http://data.semanticweb.org/organization/telefonica-research-and-development> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/eve-hoggan> .
+<http://data.semanticweb.org/organization/telefonica-research-and-development> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/karen-church> .
+<http://data.semanticweb.org/organization/telefonica-research-and-development> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/nuria-oliver> .
+<http://data.semanticweb.org/organization/telefonica-research-and-development> <http://xmlns.com/foaf/0.1/name> "Telefonica Research" .
+<http://data.semanticweb.org/organization/trinity-college-dublin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/trinity-college-dublin> <http://www.w3.org/2000/01/rdf-schema#label> "Trinity College Dublin" .
+<http://data.semanticweb.org/organization/trinity-college-dublin> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/gavin-doherty> .
+<http://data.semanticweb.org/organization/trinity-college-dublin> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/ielka-van-der-sluis> .
+<http://data.semanticweb.org/organization/trinity-college-dublin> <http://xmlns.com/foaf/0.1/name> "Trinity College Dublin" .
+<http://data.semanticweb.org/organization/universitaet-duisburg-essen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/universitaet-duisburg-essen> <http://www.w3.org/2000/01/rdf-schema#label> "University of Duisburg-Essen" .
+<http://data.semanticweb.org/organization/universitaet-duisburg-essen> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/steffen-lohmann> .
+<http://data.semanticweb.org/organization/universitaet-duisburg-essen> <http://xmlns.com/foaf/0.1/name> "University of Duisburg-Essen" .
+<http://data.semanticweb.org/organization/university-college-dublin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-college-dublin> <http://www.w3.org/2000/01/rdf-schema#label> "University College Dublin" .
+<http://data.semanticweb.org/organization/university-college-dublin> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/barry-smyth> .
+<http://data.semanticweb.org/organization/university-college-dublin> <http://xmlns.com/foaf/0.1/name> "University College Dublin" .
+<http://data.semanticweb.org/organization/university-of-aberdeen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-aberdeen> <http://www.w3.org/2000/01/rdf-schema#label> "University of Aberdeen" .
+<http://data.semanticweb.org/organization/university-of-aberdeen> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/chris-mellish> .
+<http://data.semanticweb.org/organization/university-of-aberdeen> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/feikje-hielkema> .
+<http://data.semanticweb.org/organization/university-of-aberdeen> <http://xmlns.com/foaf/0.1/name> "University of Aberdeen" .
+<http://data.semanticweb.org/organization/university-of-bremen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-bremen> <http://www.w3.org/2000/01/rdf-schema#label> "University of Bremen" .
+<http://data.semanticweb.org/organization/university-of-bremen> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/hidir-aras> .
+<http://data.semanticweb.org/organization/university-of-bremen> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/rainer-malaka> .
+<http://data.semanticweb.org/organization/university-of-bremen> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/sandra-siegel> .
+<http://data.semanticweb.org/organization/university-of-bremen> <http://xmlns.com/foaf/0.1/name> "University of Bremen" .
+<http://data.semanticweb.org/organization/university-of-konstanz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-konstanz> <http://www.w3.org/2000/01/rdf-schema#label> "University of Konstanz" .
+<http://data.semanticweb.org/organization/university-of-konstanz> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/franz-wanner> .
+<http://data.semanticweb.org/organization/university-of-konstanz> <http://xmlns.com/foaf/0.1/name> "University of Konstanz" .
+<http://data.semanticweb.org/organization/university-of-munich> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-munich> <http://www.w3.org/2000/01/rdf-schema#label> "University of Munich" .
+<http://data.semanticweb.org/organization/university-of-munich> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/andreas-butz> .
+<http://data.semanticweb.org/organization/university-of-munich> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/dominikus-baur> .
+<http://data.semanticweb.org/organization/university-of-munich> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/sebastian-boring> .
+<http://data.semanticweb.org/organization/university-of-munich> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/ya-xi-chen> .
+<http://data.semanticweb.org/organization/university-of-munich> <http://xmlns.com/foaf/0.1/name> "University of Munich" .
+<http://data.semanticweb.org/organization/university-of-oxford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-oxford> <http://www.w3.org/2000/01/rdf-schema#label> "Oxford University" .
+<http://data.semanticweb.org/organization/university-of-oxford> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/jun-zhao> .
+<http://data.semanticweb.org/organization/university-of-oxford> <http://xmlns.com/foaf/0.1/name> "Oxford University" .
+<http://data.semanticweb.org/organization/university-of-pittsburgh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-pittsburgh> <http://www.w3.org/2000/01/rdf-schema#label> "University of Pittsburgh" .
+<http://data.semanticweb.org/organization/university-of-pittsburgh> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/peter-brusilovsky> .
+<http://data.semanticweb.org/organization/university-of-pittsburgh> <http://xmlns.com/foaf/0.1/name> "University of Pittsburgh" .
+<http://data.semanticweb.org/organization/university-of-st-gallen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-st-gallen> <http://www.w3.org/2000/01/rdf-schema#label> "University of St. Gallen" .
+<http://data.semanticweb.org/organization/university-of-st-gallen> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/wolfgang-maass> .
+<http://data.semanticweb.org/organization/university-of-st-gallen> <http://xmlns.com/foaf/0.1/name> "University of St. Gallen" .
+<http://data.semanticweb.org/organization/university-of-vienna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-vienna> <http://www.w3.org/2000/01/rdf-schema#label> "Uni Vienna" .
+<http://data.semanticweb.org/organization/university-of-vienna> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/bernhard-schandl> .
+<http://data.semanticweb.org/organization/university-of-vienna> <http://xmlns.com/foaf/0.1/name> "Uni Vienna" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/2000/01/rdf-schema#label> "VU Amsterdam" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/lora-aroyo> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/name> "VU Amsterdam" .
+<http://data.semanticweb.org/person/adam-perer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adam-perer> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/adam-perer> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-research> .
+<http://data.semanticweb.org/person/adam-perer> <http://www.w3.org/2000/01/rdf-schema#label> "Adam  Perer" .
+<http://data.semanticweb.org/person/adam-perer> <http://xmlns.com/foaf/0.1/name> "Adam  Perer" .
+<http://data.semanticweb.org/person/alain-giboin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alain-giboin> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/alain-giboin> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/inria-rhone-alpes> .
+<http://data.semanticweb.org/person/alain-giboin> <http://www.w3.org/2000/01/rdf-schema#label> "Alain Giboin" .
+<http://data.semanticweb.org/person/alain-giboin> <http://xmlns.com/foaf/0.1/name> "Alain Giboin" .
+<http://data.semanticweb.org/person/aldo-gangemi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/aldo-gangemi> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/aldo-gangemi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cnr-istc-italy> .
+<http://data.semanticweb.org/person/aldo-gangemi> <http://www.w3.org/2000/01/rdf-schema#label> "Aldo Gangemi" .
+<http://data.semanticweb.org/person/aldo-gangemi> <http://xmlns.com/foaf/0.1/name> "Aldo Gangemi" .
+<http://data.semanticweb.org/person/alexandre-passant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexandre-passant> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/alexandre-passant> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/deri-nui-galway> .
+<http://data.semanticweb.org/person/alexandre-passant> <http://www.w3.org/2000/01/rdf-schema#label> "Alexandre Passant" .
+<http://data.semanticweb.org/person/alexandre-passant> <http://xmlns.com/foaf/0.1/name> "Alexandre Passant" .
+<http://data.semanticweb.org/person/andreas-butz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/andreas-butz> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-munich> .
+<http://data.semanticweb.org/person/andreas-butz> <http://www.w3.org/2000/01/rdf-schema#label> "Andreas  Butz" .
+<http://data.semanticweb.org/person/andreas-butz> <http://www.w3.org/2000/01/rdf-schema#label> "Andreas  Butz" .
+<http://data.semanticweb.org/person/andreas-butz> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> .
+<http://data.semanticweb.org/person/andreas-butz> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> .
+<http://data.semanticweb.org/person/andreas-butz> <http://xmlns.com/foaf/0.1/name> "Andreas  Butz" .
+<http://data.semanticweb.org/person/andreas-butz> <http://xmlns.com/foaf/0.1/name> "Andreas  Butz" .
+<http://data.semanticweb.org/person/anthony-jameson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/anthony-jameson> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> .
+<http://data.semanticweb.org/person/anthony-jameson> <http://www.w3.org/2000/01/rdf-schema#label> "Anthony  Jameson" .
+<http://data.semanticweb.org/person/anthony-jameson> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> .
+<http://data.semanticweb.org/person/anthony-jameson> <http://xmlns.com/foaf/0.1/name> "Anthony  Jameson" .
+<http://data.semanticweb.org/person/barry-smyth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/barry-smyth> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/barry-smyth> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-college-dublin> .
+<http://data.semanticweb.org/person/barry-smyth> <http://www.w3.org/2000/01/rdf-schema#label> "Barry  Smyth" .
+<http://data.semanticweb.org/person/barry-smyth> <http://xmlns.com/foaf/0.1/name> "Barry  Smyth" .
+<http://data.semanticweb.org/person/bernhard-schandl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/bernhard-schandl> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/bernhard-schandl> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-vienna> .
+<http://data.semanticweb.org/person/bernhard-schandl> <http://www.w3.org/2000/01/rdf-schema#label> "Bernhard Schandl" .
+<http://data.semanticweb.org/person/bernhard-schandl> <http://xmlns.com/foaf/0.1/name> "Bernhard Schandl" .
+<http://data.semanticweb.org/person/bertrand-delacretaz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/bertrand-delacretaz> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/bertrand-delacretaz> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/day-software> .
+<http://data.semanticweb.org/person/bertrand-delacretaz> <http://www.w3.org/2000/01/rdf-schema#label> "Bertrand Delacretaz" .
+<http://data.semanticweb.org/person/bertrand-delacretaz> <http://xmlns.com/foaf/0.1/name> "Bertrand Delacretaz" .
+<http://data.semanticweb.org/person/carlo-torniai> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/carlo-torniai> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/carlo-torniai> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/simon-fraser-university> .
+<http://data.semanticweb.org/person/carlo-torniai> <http://www.w3.org/2000/01/rdf-schema#label> "Carlo   Torniai" .
+<http://data.semanticweb.org/person/carlo-torniai> <http://xmlns.com/foaf/0.1/name> "Carlo   Torniai" .
+<http://data.semanticweb.org/person/chris-mellish> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/chris-mellish> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-aberdeen> .
+<http://data.semanticweb.org/person/chris-mellish> <http://www.w3.org/2000/01/rdf-schema#label> "Chris  Mellish" .
+<http://data.semanticweb.org/person/chris-mellish> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> .
+<http://data.semanticweb.org/person/chris-mellish> <http://xmlns.com/foaf/0.1/name> "Chris  Mellish" .
+<http://data.semanticweb.org/person/daniel-schwabe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/daniel-schwabe> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/daniel-schwabe> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/dept-of-informatics-puc-rio> .
+<http://data.semanticweb.org/person/daniel-schwabe> <http://www.w3.org/2000/01/rdf-schema#label> "Daniel Schwabe" .
+<http://data.semanticweb.org/person/daniel-schwabe> <http://xmlns.com/foaf/0.1/name> "Daniel Schwabe" .
+<http://data.semanticweb.org/person/david-karger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/david-karger> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/david-karger> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/mit-csail> .
+<http://data.semanticweb.org/person/david-karger> <http://www.w3.org/2000/01/rdf-schema#label> "David Karger" .
+<http://data.semanticweb.org/person/david-karger> <http://xmlns.com/foaf/0.1/name> "David Karger" .
+<http://data.semanticweb.org/person/dominikus-baur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/dominikus-baur> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-munich> .
+<http://data.semanticweb.org/person/dominikus-baur> <http://www.w3.org/2000/01/rdf-schema#label> "Dominikus  Baur" .
+<http://data.semanticweb.org/person/dominikus-baur> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> .
+<http://data.semanticweb.org/person/dominikus-baur> <http://xmlns.com/foaf/0.1/name> "Dominikus  Baur" .
+<http://data.semanticweb.org/person/duane-degler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/duane-degler> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/duane-degler> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/design-for-context> .
+<http://data.semanticweb.org/person/duane-degler> <http://www.w3.org/2000/01/rdf-schema#label> "Duane Degler" .
+<http://data.semanticweb.org/person/duane-degler> <http://xmlns.com/foaf/0.1/name> "Duane Degler" .
+<http://data.semanticweb.org/person/earl-wagner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/earl-wagner> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/earl-wagner> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/northwestern-university> .
+<http://data.semanticweb.org/person/earl-wagner> <http://www.w3.org/2000/01/rdf-schema#label> "Earl   Wagner" .
+<http://data.semanticweb.org/person/earl-wagner> <http://xmlns.com/foaf/0.1/name> "Earl   Wagner" .
+<http://data.semanticweb.org/person/enrico-franconi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/enrico-franconi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/free-university-of-bozen-bolzano> .
+<http://data.semanticweb.org/person/enrico-franconi> <http://www.w3.org/2000/01/rdf-schema#label> "Enrico  Franconi" .
+<http://data.semanticweb.org/person/enrico-franconi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> .
+<http://data.semanticweb.org/person/enrico-franconi> <http://xmlns.com/foaf/0.1/name> "Enrico  Franconi" .
+<http://data.semanticweb.org/person/enrico-motta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/enrico-motta> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/enrico-motta> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/kmi-the-open-university-uk> .
+<http://data.semanticweb.org/person/enrico-motta> <http://www.w3.org/2000/01/rdf-schema#label> "Enrico Motta" .
+<http://data.semanticweb.org/person/enrico-motta> <http://xmlns.com/foaf/0.1/name> "Enrico Motta" .
+<http://data.semanticweb.org/person/eve-hoggan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/eve-hoggan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/telefonica-research-and-development> .
+<http://data.semanticweb.org/person/eve-hoggan> <http://www.w3.org/2000/01/rdf-schema#label> "Eve  Hoggan" .
+<http://data.semanticweb.org/person/eve-hoggan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> .
+<http://data.semanticweb.org/person/eve-hoggan> <http://xmlns.com/foaf/0.1/name> "Eve  Hoggan" .
+<http://data.semanticweb.org/person/feikje-hielkema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/feikje-hielkema> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-aberdeen> .
+<http://data.semanticweb.org/person/feikje-hielkema> <http://www.w3.org/2000/01/rdf-schema#label> "Feikje  Hielkema" .
+<http://data.semanticweb.org/person/feikje-hielkema> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> .
+<http://data.semanticweb.org/person/feikje-hielkema> <http://xmlns.com/foaf/0.1/name> "Feikje  Hielkema" .
+<http://data.semanticweb.org/person/franz-wanner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/franz-wanner> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/franz-wanner> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-konstanz> .
+<http://data.semanticweb.org/person/franz-wanner> <http://www.w3.org/2000/01/rdf-schema#label> "Franz   Wanner" .
+<http://data.semanticweb.org/person/franz-wanner> <http://xmlns.com/foaf/0.1/name> "Franz   Wanner" .
+<http://data.semanticweb.org/person/gavin-doherty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/gavin-doherty> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/trinity-college-dublin> .
+<http://data.semanticweb.org/person/gavin-doherty> <http://www.w3.org/2000/01/rdf-schema#label> "Gavin  Doherty" .
+<http://data.semanticweb.org/person/gavin-doherty> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> .
+<http://data.semanticweb.org/person/gavin-doherty> <http://xmlns.com/foaf/0.1/name> "Gavin  Doherty" .
+<http://data.semanticweb.org/person/harald-sack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/harald-sack> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/harald-sack> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/hasso-plattner-institut-hpi> .
+<http://data.semanticweb.org/person/harald-sack> <http://www.w3.org/2000/01/rdf-schema#label> "Harald Sack" .
+<http://data.semanticweb.org/person/harald-sack> <http://xmlns.com/foaf/0.1/name> "Harald Sack" .
+<http://data.semanticweb.org/person/hidir-aras> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/hidir-aras> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-bremen> .
+<http://data.semanticweb.org/person/hidir-aras> <http://www.w3.org/2000/01/rdf-schema#label> "Hidir  Aras" .
+<http://data.semanticweb.org/person/hidir-aras> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> .
+<http://data.semanticweb.org/person/hidir-aras> <http://xmlns.com/foaf/0.1/name> "Hidir  Aras" .
+<http://data.semanticweb.org/person/ian-dickinson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ian-dickinson> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/ian-dickinson> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/epimorphics-ltd> .
+<http://data.semanticweb.org/person/ian-dickinson> <http://www.w3.org/2000/01/rdf-schema#label> "Ian Dickinson" .
+<http://data.semanticweb.org/person/ian-dickinson> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/UK> .
+<http://data.semanticweb.org/person/ian-dickinson> <http://xmlns.com/foaf/0.1/name> "Ian Dickinson" .
+<http://data.semanticweb.org/person/ielka-van-der-sluis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ielka-van-der-sluis> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/trinity-college-dublin> .
+<http://data.semanticweb.org/person/ielka-van-der-sluis> <http://www.w3.org/2000/01/rdf-schema#label> "Ielka  van der Sluis" .
+<http://data.semanticweb.org/person/ielka-van-der-sluis> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> .
+<http://data.semanticweb.org/person/ielka-van-der-sluis> <http://xmlns.com/foaf/0.1/name> "Ielka  van der Sluis" .
+<http://data.semanticweb.org/person/jun-zhao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jun-zhao> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/jun-zhao> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-oxford> .
+<http://data.semanticweb.org/person/jun-zhao> <http://www.w3.org/2000/01/rdf-schema#label> "Jun   Zhao" .
+<http://data.semanticweb.org/person/jun-zhao> <http://xmlns.com/foaf/0.1/name> "Jun   Zhao" .
+<http://data.semanticweb.org/person/karen-church> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/karen-church> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/karen-church> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/telefonica-research-and-development> .
+<http://data.semanticweb.org/person/karen-church> <http://www.w3.org/2000/01/rdf-schema#label> "Karen Church" .
+<http://data.semanticweb.org/person/karen-church> <http://www.w3.org/2000/01/rdf-schema#label> "Karen Church" .
+<http://data.semanticweb.org/person/karen-church> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> .
+<http://data.semanticweb.org/person/karen-church> <http://xmlns.com/foaf/0.1/name> "Karen Church" .
+<http://data.semanticweb.org/person/karen-church> <http://xmlns.com/foaf/0.1/name> "Karen Church" .
+<http://data.semanticweb.org/person/knud-moeller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/knud-moeller> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/knud-moeller> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/deri-nui-galway> .
+<http://data.semanticweb.org/person/knud-moeller> <http://www.w3.org/2000/01/rdf-schema#label> "Knud M\u00F6ller" .
+<http://data.semanticweb.org/person/knud-moeller> <http://www.w3.org/2000/01/rdf-schema#label> "Knud M\u00F6ller" .
+<http://data.semanticweb.org/person/knud-moeller> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> .
+<http://data.semanticweb.org/person/knud-moeller> <http://xmlns.com/foaf/0.1/name> "Knud M\u00F6ller" .
+<http://data.semanticweb.org/person/knud-moeller> <http://xmlns.com/foaf/0.1/name> "Knud M\u00F6ller" .
+<http://data.semanticweb.org/person/lloyd-rutledge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/lloyd-rutledge> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/lloyd-rutledge> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/open-universiteit> .
+<http://data.semanticweb.org/person/lloyd-rutledge> <http://www.w3.org/2000/01/rdf-schema#label> "Lloyd Rutledge" .
+<http://data.semanticweb.org/person/lloyd-rutledge> <http://xmlns.com/foaf/0.1/name> "Lloyd Rutledge" .
+<http://data.semanticweb.org/person/lora-aroyo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/lora-aroyo> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/lora-aroyo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> .
+<http://data.semanticweb.org/person/lora-aroyo> <http://www.w3.org/2000/01/rdf-schema#label> "Lora Aroyo" .
+<http://data.semanticweb.org/person/lora-aroyo> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/The_Netherlands> .
+<http://data.semanticweb.org/person/lora-aroyo> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "c1544e63d723bb7310c57a36a94dfa75ae9a63c3" .
+<http://data.semanticweb.org/person/lora-aroyo> <http://xmlns.com/foaf/0.1/name> "Lora Aroyo" .
+<http://data.semanticweb.org/person/marco-trevisan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/marco-trevisan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/free-university-of-bozen-bolzano> .
+<http://data.semanticweb.org/person/marco-trevisan> <http://www.w3.org/2000/01/rdf-schema#label> "Marco  Trevisan" .
+<http://data.semanticweb.org/person/marco-trevisan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> .
+<http://data.semanticweb.org/person/marco-trevisan> <http://xmlns.com/foaf/0.1/name> "Marco  Trevisan" .
+<http://data.semanticweb.org/person/michael-hausenblas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/michael-hausenblas> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/michael-hausenblas> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/deri-nui-galway> .
+<http://data.semanticweb.org/person/michael-hausenblas> <http://www.w3.org/2000/01/rdf-schema#label> "Michael Hausenblas" .
+<http://data.semanticweb.org/person/michael-hausenblas> <http://xmlns.com/foaf/0.1/name> "Michael Hausenblas" .
+<http://data.semanticweb.org/person/moritz-stefaner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/moritz-stefaner> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/moritz-stefaner> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/fh-potsdam> .
+<http://data.semanticweb.org/person/moritz-stefaner> <http://www.w3.org/2000/01/rdf-schema#label> "Moritz  Stefaner" .
+<http://data.semanticweb.org/person/moritz-stefaner> <http://xmlns.com/foaf/0.1/name> "Moritz  Stefaner" .
+<http://data.semanticweb.org/person/nathalie-henry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/nathalie-henry> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/nathalie-henry> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/microsoft-research> .
+<http://data.semanticweb.org/person/nathalie-henry> <http://www.w3.org/2000/01/rdf-schema#label> "Nathalie Henry" .
+<http://data.semanticweb.org/person/nathalie-henry> <http://xmlns.com/foaf/0.1/name> "Nathalie Henry" .
+<http://data.semanticweb.org/person/nuria-oliver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/nuria-oliver> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/telefonica-research-and-development> .
+<http://data.semanticweb.org/person/nuria-oliver> <http://www.w3.org/2000/01/rdf-schema#label> "Nuria Oliver" .
+<http://data.semanticweb.org/person/nuria-oliver> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> .
+<http://data.semanticweb.org/person/nuria-oliver> <http://xmlns.com/foaf/0.1/name> "Nuria Oliver" .
+<http://data.semanticweb.org/person/oszkar-ambrus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/oszkar-ambrus> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/deri-nui-galway> .
+<http://data.semanticweb.org/person/oszkar-ambrus> <http://www.w3.org/2000/01/rdf-schema#label> "Oszkar Ambrus" .
+<http://data.semanticweb.org/person/oszkar-ambrus> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> .
+<http://data.semanticweb.org/person/oszkar-ambrus> <http://xmlns.com/foaf/0.1/name> "Oszkar Ambrus" .
+<http://data.semanticweb.org/person/paolo-guagliardo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/paolo-guagliardo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/free-university-of-bozen-bolzano> .
+<http://data.semanticweb.org/person/paolo-guagliardo> <http://www.w3.org/2000/01/rdf-schema#label> "Paolo  Guagliardo" .
+<http://data.semanticweb.org/person/paolo-guagliardo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> .
+<http://data.semanticweb.org/person/paolo-guagliardo> <http://xmlns.com/foaf/0.1/name> "Paolo  Guagliardo" .
+<http://data.semanticweb.org/person/peter-brusilovsky> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/peter-brusilovsky> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/peter-brusilovsky> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-pittsburgh> .
+<http://data.semanticweb.org/person/peter-brusilovsky> <http://www.w3.org/2000/01/rdf-schema#label> "Peter Brusilovsky" .
+<http://data.semanticweb.org/person/peter-brusilovsky> <http://xmlns.com/foaf/0.1/name> "Peter Brusilovsky" .
+<http://data.semanticweb.org/person/rainer-malaka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/rainer-malaka> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-bremen> .
+<http://data.semanticweb.org/person/rainer-malaka> <http://www.w3.org/2000/01/rdf-schema#label> "Rainer  Malaka" .
+<http://data.semanticweb.org/person/rainer-malaka> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> .
+<http://data.semanticweb.org/person/rainer-malaka> <http://xmlns.com/foaf/0.1/name> "Rainer  Malaka" .
+<http://data.semanticweb.org/person/sandra-siegel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/sandra-siegel> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-bremen> .
+<http://data.semanticweb.org/person/sandra-siegel> <http://www.w3.org/2000/01/rdf-schema#label> "Sandra  Siegel" .
+<http://data.semanticweb.org/person/sandra-siegel> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> .
+<http://data.semanticweb.org/person/sandra-siegel> <http://xmlns.com/foaf/0.1/name> "Sandra  Siegel" .
+<http://data.semanticweb.org/person/sebastian-boring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/sebastian-boring> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-munich> .
+<http://data.semanticweb.org/person/sebastian-boring> <http://www.w3.org/2000/01/rdf-schema#label> "Sebastian  Boring" .
+<http://data.semanticweb.org/person/sebastian-boring> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> .
+<http://data.semanticweb.org/person/sebastian-boring> <http://xmlns.com/foaf/0.1/name> "Sebastian  Boring" .
+<http://data.semanticweb.org/person/siegfried-handschuh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/siegfried-handschuh> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/siegfried-handschuh> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/deri-nui-galway> .
+<http://data.semanticweb.org/person/siegfried-handschuh> <http://www.w3.org/2000/01/rdf-schema#label> "Siegfried Handschuh" .
+<http://data.semanticweb.org/person/siegfried-handschuh> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Ireland> .
+<http://data.semanticweb.org/person/siegfried-handschuh> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> .
+<http://data.semanticweb.org/person/siegfried-handschuh> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "583cac1297018405882f186064c6d98cd127af70" .
+<http://data.semanticweb.org/person/siegfried-handschuh> <http://xmlns.com/foaf/0.1/name> "Siegfried Handschuh" .
+<http://data.semanticweb.org/person/steffen-lohmann> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/steffen-lohmann> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/steffen-lohmann> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universitaet-duisburg-essen> .
+<http://data.semanticweb.org/person/steffen-lohmann> <http://www.w3.org/2000/01/rdf-schema#label> "Steffen Lohmann" .
+<http://data.semanticweb.org/person/steffen-lohmann> <http://xmlns.com/foaf/0.1/name> "Steffen Lohmann" .
+<http://data.semanticweb.org/person/tom-heath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/tom-heath> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/tom-heath> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/talis-information-limited> .
+<http://data.semanticweb.org/person/tom-heath> <http://www.w3.org/2000/01/rdf-schema#label> "Tom Heath" .
+<http://data.semanticweb.org/person/tom-heath> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/UK> .
+<http://data.semanticweb.org/person/tom-heath> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "1dd0dab717be578c153b8ed70bee284845439706" .
+<http://data.semanticweb.org/person/tom-heath> <http://xmlns.com/foaf/0.1/name> "Tom Heath" .
+<http://data.semanticweb.org/person/valentina-presutti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/valentina-presutti> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/valentina-presutti> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cnr-istc-italy> .
+<http://data.semanticweb.org/person/valentina-presutti> <http://www.w3.org/2000/01/rdf-schema#label> "Valentina Presutti" .
+<http://data.semanticweb.org/person/valentina-presutti> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/valentina-presutti> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "a88c958afc852ccec957656b3d63aed3f6046698" .
+<http://data.semanticweb.org/person/valentina-presutti> <http://xmlns.com/foaf/0.1/name> "Valentina Presutti" .
+<http://data.semanticweb.org/person/vinhtuan-thai> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/vinhtuan-thai> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/vinhtuan-thai> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/deri-nui-galway> .
+<http://data.semanticweb.org/person/vinhtuan-thai> <http://www.w3.org/2000/01/rdf-schema#label> "VinhTuan Thai" .
+<http://data.semanticweb.org/person/vinhtuan-thai> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Ireland> .
+<http://data.semanticweb.org/person/vinhtuan-thai> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "67abf94faa44a44ca38d68dec2192740d8bc04da" .
+<http://data.semanticweb.org/person/vinhtuan-thai> <http://xmlns.com/foaf/0.1/name> "VinhTuan Thai" .
+<http://data.semanticweb.org/person/wolfgang-maass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/wolfgang-maass> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/wolfgang-maass> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-st-gallen> .
+<http://data.semanticweb.org/person/wolfgang-maass> <http://www.w3.org/2000/01/rdf-schema#label> "Wolfgang Maass" .
+<http://data.semanticweb.org/person/wolfgang-maass> <http://xmlns.com/foaf/0.1/name> "Wolfgang Maass" .
+<http://data.semanticweb.org/person/ya-xi-chen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ya-xi-chen> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-munich> .
+<http://data.semanticweb.org/person/ya-xi-chen> <http://www.w3.org/2000/01/rdf-schema#label> "Ya-Xi  Chen" .
+<http://data.semanticweb.org/person/ya-xi-chen> <http://www.w3.org/2000/01/rdf-schema#label> "Ya-Xi Chen" .
+<http://data.semanticweb.org/person/ya-xi-chen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> .
+<http://data.semanticweb.org/person/ya-xi-chen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> .
+<http://data.semanticweb.org/person/ya-xi-chen> <http://xmlns.com/foaf/0.1/name> "Ya-Xi  Chen" .
+<http://data.semanticweb.org/person/ya-xi-chen> <http://xmlns.com/foaf/0.1/name> "Ya-Xi Chen" .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#OrganisingCommitteeMember> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/ian-dickinson> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/lora-aroyo> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/siegfried-handschuh> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/tom-heath> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/valentina-presutti> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/vinhtuan-thai> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/vissw/2010> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PCMember> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/adam-perer> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/alain-giboin> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/aldo-gangemi> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/alexandre-passant> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/barry-smyth> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/bernhard-schandl> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/bertrand-delacretaz> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/carlo-torniai> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/daniel-schwabe> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/david-karger> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/duane-degler> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/earl-wagner> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/enrico-motta> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/franz-wanner> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/harald-sack> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/jun-zhao> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/karen-church> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/knud-moeller> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/lloyd-rutledge> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/michael-hausenblas> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/moritz-stefaner> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/nathalie-henry> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/peter-brusilovsky> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/steffen-lohmann> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/wolfgang-maass> .
+<http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/vissw/2010> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/VISSW/2010/proceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://purl.org/dc/elements/1.1/title> "Scenarios and Challenges for the Sharing of Event-Indexed Media" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://swrc.ontoware.org/ontology#abstract> "The domain and goals of the new GLOCAL Integrating Project are summarized, and some likely usage contexts and scenarios are sketched. Several issues that are raised by GLOCAL which are relevant to VISSW 2010 are listed." .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://swrc.ontoware.org/ontology#month> "February" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-565/paper1.pdf> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfiro6v8x1 .
+_:node1dfiro6v8x1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://www.w3.org/2000/01/rdf-schema#label> "Scenarios and Challenges for the Sharing of Event-Indexed Media" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/VISSW/2010/proceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/chris-mellish> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/feikje-hielkema> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/gavin-doherty> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ielka-van-der-sluis> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://purl.org/dc/elements/1.1/title> "Ontology Based Queries \u2013 Investigating a Natural Language Interface" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://swrc.ontoware.org/ontology#abstract> "In this paper we look at what may be learned from a comparative study examining non-technical users with a background in social science browsing and querying metadata. Four query tasks were carried out with a natural language interface and with an interface that uses a web paradigm with hyperlinks. While it can be difficult to attribute differences in performance to specific design features, a qualitative analysis of the user behavior provides some insight into the task and problematic aspects of existing interfaces. In general it was found that casual subjects have difficulties recognizing typical ontology based concepts like objects, attributes and values." .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/chris-mellish> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/feikje-hielkema> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/gavin-doherty> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ielka-van-der-sluis> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://swrc.ontoware.org/ontology#month> "February" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-565/paper2.pdf> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfiro6v8x2 .
+_:node1dfiro6v8x2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/ielka-van-der-sluis> .
+_:node1dfiro6v8x2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/feikje-hielkema> .
+_:node1dfiro6v8x2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/chris-mellish> .
+_:node1dfiro6v8x2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/gavin-doherty> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology Based Queries \u2013 Investigating a Natural Language Interface" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/chris-mellish> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/feikje-hielkema> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/gavin-doherty> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ielka-van-der-sluis> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/VISSW/2010/proceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/enrico-franconi> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/marco-trevisan> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/paolo-guagliardo> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://purl.org/dc/elements/1.1/title> "An intelligent query interface based on ontology navigation" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://swrc.ontoware.org/ontology#abstract> "In this paper we present a formal framework and an experimental software supporting the user in the task of formulating a precise query \u2013 which best captures their information needs \u2013 even in the case of complete ignorance of the vocabulary of the underlying information system holding the data. Our intelligent interface is driven by means of appropriate automated reasoning techniques over an ontology describing the domain of the data in the information system." .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/enrico-franconi> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/marco-trevisan> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/paolo-guagliardo> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://swrc.ontoware.org/ontology#month> "February" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-565/paper3.pdf> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfiro6v8x3 .
+_:node1dfiro6v8x3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/enrico-franconi> .
+_:node1dfiro6v8x3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/paolo-guagliardo> .
+_:node1dfiro6v8x3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/marco-trevisan> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://www.w3.org/2000/01/rdf-schema#label> "An intelligent query interface based on ontology navigation" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/enrico-franconi> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/marco-trevisan> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/paolo-guagliardo> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/VISSW/2010/proceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/knud-moeller> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/oszkar-ambrus> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/siegfried-handschuh> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://purl.org/dc/elements/1.1/title> "Konduit VQB: a Visual Query Builder for SPARQL on the Social Semantic Desktop" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://swrc.ontoware.org/ontology#abstract> "With the adoption of Nepomuk as an organic part of KDE the semantic desktop became a reality to a great number of users and is employed by a growing number of applications. Thus, the amount of semantic data is constantly growing on the desktop. Therefore users need a way to access this data outside of the limiting use cases of the applications employing Nepomuk-KDE. We aim to assist users in building queries and running them to make use of RDF data that would otherwise be partially or completely hidden. In this paper, as an initial iteration of our efforts, we present four approaches to building SPARQL queries visually, based on two different categorizations: schema- based vs. instance-based and SELECT vs. CONSTRUCT queries. We present the used interfaces, visual languages and query generation methods associated to each of approaches as well as the autocompletion techniques for the instancebased query builders." .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/knud-moeller> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/oszkar-ambrus> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/siegfried-handschuh> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://swrc.ontoware.org/ontology#month> "February" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-565/paper4.pdf> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfiro6v8x4 .
+_:node1dfiro6v8x4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/oszkar-ambrus> .
+_:node1dfiro6v8x4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/knud-moeller> .
+_:node1dfiro6v8x4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/siegfried-handschuh> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://www.w3.org/2000/01/rdf-schema#label> "Konduit VQB: a Visual Query Builder for SPARQL on the Social Semantic Desktop" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/knud-moeller> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/oszkar-ambrus> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/siegfried-handschuh> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/VISSW/2010/proceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/hidir-aras> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/rainer-malaka> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/sandra-siegel> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://purl.org/dc/elements/1.1/title> "Semantic Cloud: An Enhanced Browsing Interface for Exploring Resources in Folksonomy Systems" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://swrc.ontoware.org/ontology#abstract> "Popular Web folksonomy systems such as Delicious or Flickr allow users to create web contents and annotate them with a set of freely chosen keywords (tags) in order to organize them for later retrieval. Unfortunately, existing user interfaces of folksonomy systems have limited browsing capabilities and do not exploit tag semantics sufficiently for browsing linked data. In this paper, we present Semantic Cloud, an approach for exploring data in folksonomy systems based on a hierarchical semantic representation of the tag-space, which is obtained by analyzing folksonomy data." .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/hidir-aras> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/rainer-malaka> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/sandra-siegel> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://swrc.ontoware.org/ontology#month> "February" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-565/paper5.pdf> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfiro6v8x5 .
+_:node1dfiro6v8x5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/hidir-aras> .
+_:node1dfiro6v8x5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/sandra-siegel> .
+_:node1dfiro6v8x5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/rainer-malaka> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Cloud: An Enhanced Browsing Interface for Exploring Resources in Folksonomy Systems" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/hidir-aras> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/rainer-malaka> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/sandra-siegel> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/VISSW/2010/proceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/andreas-butz> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/sebastian-boring> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ya-xi-chen> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://purl.org/dc/elements/1.1/title> "How Last.fm Illustrates the Musical World: User Behavior and Relevant User-Generated Content" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://swrc.ontoware.org/ontology#abstract> "Over the last few years, online multimedia exchange platforms have experienced a rapid growth. They allow users to share their own content and access other\u2019s in turn and hence form very large public collections of User-Generated Content. While research is mostly looking at photo sharing platforms, such as Flickr, much less is known about online music communities. In this paper we present the results of an observational user study followed by a large-scale online survey, which investigated the behavior and the relevant content generated by the users of Last.fm, one of the most popular music communities. Based on the analysis of the results, we present implications for the usage of User-Generated Content in online music communities. Then we developed a first prototype based on the implications for improving semantic understanding of collaborative tags. We believe our study gives insights for developing information visualization and recommender systems for online music communities." .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/andreas-butz> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/sebastian-boring> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ya-xi-chen> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://swrc.ontoware.org/ontology#month> "February" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-565/paper6.pdf> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfiro6v8x6 .
+_:node1dfiro6v8x6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/ya-xi-chen> .
+_:node1dfiro6v8x6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/sebastian-boring> .
+_:node1dfiro6v8x6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/andreas-butz> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://www.w3.org/2000/01/rdf-schema#label> "How Last.fm Illustrates the Musical World: User Behavior and Relevant User-Generated Content" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/andreas-butz> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/sebastian-boring> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ya-xi-chen> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/VISSW/2010/proceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/andreas-butz> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/dominikus-baur> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ya-xi-chen> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://purl.org/dc/elements/1.1/title> "Gaining Musical Insights: Visualizing Multiple Listening Histories" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://swrc.ontoware.org/ontology#abstract> "Listening histories are rich sources of implicit information. Combining listening histories of multiple users allows comparisons in musical taste and discovery of new music, though few existing work specifically addresses this issue. In this paper we present two interactive visualizations which give users a deeper insight into consent and dissent in their listening behaviors, and help them to compare their musical tastes. HisFlocks shows overlaps in genre and artist in certain time periods and LoomFM illustrates sequential listening patterns. Our first feedback on these systems was very promising and we plan to extend our concepts to broader scenarios with a greater number of listening histories." .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/andreas-butz> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/dominikus-baur> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ya-xi-chen> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://swrc.ontoware.org/ontology#month> "February" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-565/paper7.pdf> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfiro6v8x7 .
+_:node1dfiro6v8x7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/ya-xi-chen> .
+_:node1dfiro6v8x7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/dominikus-baur> .
+_:node1dfiro6v8x7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/andreas-butz> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://www.w3.org/2000/01/rdf-schema#label> "Gaining Musical Insights: Visualizing Multiple Listening Histories" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/andreas-butz> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/dominikus-baur> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ya-xi-chen> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/VISSW/2010/proceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/eve-hoggan> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/karen-church> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/nuria-oliver> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://purl.org/dc/elements/1.1/title> "Designing social mobile interfaces: experiences with MobiMood, a mobile mood sharing application" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://swrc.ontoware.org/ontology#abstract> "The exploration of mood and emotions in HCI is emerging as an important field of research. Our moods are affected by many different factors and can change multiple times throughout each day. Furthermore, our moods can have significant implications on our social interactions and our willingness to interact with others. We have developed MobiMood, a novel proof-of-concept social mobile application that enables groups of friends to share their moods with each other. In this paper, we present some high level results of an exploratory field study of MobiMood and highlight key implications in the design of future social mobile interfaces." .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/eve-hoggan> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/karen-church> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/nuria-oliver> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://swrc.ontoware.org/ontology#month> "February" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://swrc.ontoware.org/ontology#url> <http://ceur-ws.org/Vol-565/paper8.pdf> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfiro6v8x8 .
+_:node1dfiro6v8x8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/karen-church> .
+_:node1dfiro6v8x8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/eve-hoggan> .
+_:node1dfiro6v8x8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/nuria-oliver> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://www.w3.org/2000/01/rdf-schema#label> "Designing social mobile interfaces: experiences with MobiMood, a mobile mood sharing application" .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/eve-hoggan> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/karen-church> .
+<http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/nuria-oliver> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#Proceedings> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/1> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/2> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/3> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/4> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/5> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/6> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/7> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/VISSW/2010/paper/main/8> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/vissw/2010> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://swrc.ontoware.org/ontology#booktitle> "Proceedings of the Workshop on Visual Interfaces to the Social and Semantic Web at IUI'10, February 07-10, 2010" .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/ian-dickinson> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/lora-aroyo> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/siegfried-handschuh> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/tom-heath> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/valentina-presutti> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/vinhtuan-thai> .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://swrc.ontoware.org/ontology#month> "February" .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://swrc.ontoware.org/ontology#year> "2010" .
+<http://data.semanticweb.org/workshop/VISSW/2010/proceedings> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#editorList> _:node1dfiro6v8x9 .
+_:node1dfiro6v8x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/siegfried-handschuh> .
+_:node1dfiro6v8x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/tom-heath> .
+_:node1dfiro6v8x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/vinhtuan-thai> .
+_:node1dfiro6v8x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/valentina-presutti> .
+_:node1dfiro6v8x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://data.semanticweb.org/person/lora-aroyo> .
+_:node1dfiro6v8x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_6> <http://data.semanticweb.org/person/ian-dickinson> .
+<http://data.semanticweb.org/workshop/vissw/2010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/workshop/vissw/2010> <http://data.semanticweb.org/ns/swc/ontology#completeGraph> <http://data.semanticweb.org/workshop/vissw/2010/complete> .
+<http://data.semanticweb.org/workshop/vissw/2010> <http://data.semanticweb.org/ns/swc/ontology#hasAcronym> "VISSW2010" .
+<http://data.semanticweb.org/workshop/vissw/2010> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/VISSW/2010/proceedings> .
+<http://data.semanticweb.org/workshop/vissw/2010> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/workshop/vissw/2010> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/workshop/vissw/2010> <http://www.w3.org/2000/01/rdf-schema#label> "Workshop on Visual Interfaces to the Social and Semantic Web" .
+<http://data.semanticweb.org/workshop/vissw/2010> <http://www.w3.org/2002/12/cal/ical#dtend> _:node1dfiro6v8x10 .
+_:node1dfiro6v8x10 <http://www.w3.org/2002/12/cal/ical#date> "2010-02-07" .
+_:node1dfiro6v8x10 <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+8" .
+<http://data.semanticweb.org/workshop/vissw/2010> <http://www.w3.org/2002/12/cal/ical#dtstart> _:node1dfiro6v8x11 .
+_:node1dfiro6v8x11 <http://www.w3.org/2002/12/cal/ical#date> "2010-02-07" .
+_:node1dfiro6v8x11 <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+8" .
+<http://data.semanticweb.org/workshop/vissw/2010> <http://www.w3.org/2002/12/cal/ical#url> <http://www.smart-ui.org/events/vissw2010/> .
+<http://data.semanticweb.org/workshop/vissw/2010> <http://xmlns.com/foaf/0.1/homepage> <http://www.smart-ui.org/events/vissw2010/> .

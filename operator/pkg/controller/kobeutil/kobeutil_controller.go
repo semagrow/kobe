@@ -194,7 +194,6 @@ func (r *ReconcileKobeUtil) newServiceForNfs(m *kobeutilv1alpha1.KobeUtil) *core
 		},
 
 		Spec: corev1.ServiceSpec{
-			ClusterIP: "10.96.0.5",
 			Selector: map[string]string{
 				"role": "kobe-nfs-pod",
 			},

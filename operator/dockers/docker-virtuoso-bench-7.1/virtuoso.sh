@@ -3,6 +3,10 @@
 cd /data
 
 mkdir -p dumps
+if [ "$DOWNLOAD_URL" ] &&  [ -d "/kobe/dataset/$DATASET_NAME" ]; then
+    echo "removing old files completely"   
+    rm -r /kobe/dataset/$DATASET_NAME
+fi
 
 if  [ "$DATASET_NAME" ] &&[ ! -f "/kobe/dataset/$DATASET_NAME/.data_loaded" ]  ;
 then
@@ -68,8 +72,10 @@ then
     done
 
 else 
-    cp  /kobe/dataset/$DATASET_NAME/database/virtuoso.db /var/lib/virtuoso/db/virtuoso.db
- 
+    if [ "$DATASET_NAME" ]; then
+        echo "copying old database.db"
+    	cp  /kobe/dataset/$DATASET_NAME/database/virtuoso.db /var/lib/virtuoso/db/virtuoso.db
+    fi 
 fi
 
 virtuoso-t +wait +foreground +configfile /virtuoso.ini
