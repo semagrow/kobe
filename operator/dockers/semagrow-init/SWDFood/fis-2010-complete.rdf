@@ -1,0 +1,2201 @@
+
+<!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
+<!--     using base file:///Users/knud/Projekte/dogfood-svn/event-conversions/fis2010/-->
+
+
+<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:ical="http://www.w3.org/2002/12/cal/ical#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swc="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:swrc="http://swrc.ontoware.org/ontology#"
+    xmlns:swrc_ext="http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#">
+
+    <swc:ConferenceEvent rdf:about="http://data.semanticweb.org/conference/fis/2010">
+        <swc:completeGraph rdf:resource="http://data.semanticweb.org/conference/fis/2010/complete"/>
+        <swc:hasAcronym>FIS2010</swc:hasAcronym>
+        <swc:hasLogo rdf:resource="http://data.semanticweb.org/images/logo_fis2010.png"/>
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/conference"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/education"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/finance"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/industrial"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/local"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/meta-data"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/panel"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/poster-and-demo"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/publication"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/technical-program-committee-co-internet-of-service"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/technical-program-committee-co-network-architectur"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/technical-program-committee-co-semantic-technologi"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/tutorial"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/workshop"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/boosting-future-internet-research-and-innovation-t"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/pay-as-you-go-data-integration-on-the-public-web-o"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/the-innovation-triathlon%3A-the-first-the-fastest-"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/building-semantic-mashups-with-jigs4owl"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/federation-of-future-internet-research-experimenta"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/how-to-develop-ontologies-using-the-neon-methodolo"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/introduction-to-planetlab-europe-and-related-measu"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/the-open-provenance-model"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/workshop/digearth/2010"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/workshop/fes/2010"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/workshop/fiee/2010"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/workshop/mifi/2010"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/workshop/onespace/2010"/>
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/workshop/sefi/2010"/>
+        <rdfs:label>3rd Future Internet Symposium</rdfs:label>
+        <owl:sameAs rdf:resource="http://semanticweb.org/id/FIS2010"/>
+        <ical:url rdf:resource="http://www.fis2010.org/"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:ConferenceEvent>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Organizing Committee at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/conference">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/dieter-fensel"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Conference Chair at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/education">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/elena-simperl"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/ruzica-piskac"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Education Chair at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/finance">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/alexander-wahler"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Finance Chair at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/industrial">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/udo-bub"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Industrial Chair at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/local">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/robert-tolksdorf"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Local Chair at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/meta-data">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/axel-polleres"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/knud-moeller"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Meta Data Chair at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/panel">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/elmar-dorner"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Panel Chair at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/poster-and-demo">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/harith-alani"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/pierluigi-plebani"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Poster and Demo Chair at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/publication">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/raul-garcia-castro"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Publication Chair at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/technical-program-committee-co-internet-of-service">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/arne-j-berre"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Technical Program Committee Co-Chair (Internet of Services, Things and Content) at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/technical-program-committee-co-network-architectur">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/kurt-tutschku"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Technical Program Committee Co-Chair (Network Architecture and Protocols at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/technical-program-committee-co-semantic-technologi">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/asuncion-gomez-perez"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Technical Program Committee Co-Chair (Semantic Technologies) at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/tutorial">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/marko-luther"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/oscar-corcho"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Tutorial Chair at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:Chair rdf:about="http://data.semanticweb.org/conference/fis/2010/chair/workshop">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/dumitru-roman"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Workshop Chair at FIS 2010</rdfs:label>
+    </swc:Chair>
+
+    <swc:TalkEvent rdf:about="http://data.semanticweb.org/conference/fis/2010/keynote/boosting-future-internet-research-and-innovation-t">
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/boosting-future-internet-research-and-innovation-t/speaker"/>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Boosting Future Internet research and innovation to underpin the Digital Agenda for Europe</rdfs:label>
+        <ical:description>The Internet has proved to be an extraordinary catalyser of innovation which has dramatically transformed our economy and society. However, the underlying network and service infrastructure shows its limits in the face of an increasing complexity of technologies and application contexts. The future Digital Society needs to rely upon a more versatile, sustainable, trustworthy and secure internet infrastructure. This speech will introduce the policy measures foreseen in the Digital Agenda to reinvigorate investments in advanced internet infrastructures, as well as the next research and innovation priorities combining both advanced R&#38;D and a demand driven Public Private Partnership on Future Internet.</ical:description>
+        <ical:summary>Boosting Future Internet research and innovation to underpin the Digital Agenda for Europe</ical:summary>
+    </swc:TalkEvent>
+
+    <swc:Presenter rdf:about="http://data.semanticweb.org/conference/fis/2010/keynote/boosting-future-internet-research-and-innovation-t/speaker">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/mario-campolargo"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/boosting-future-internet-research-and-innovation-t"/>
+        <rdfs:label>Keynote Speaker</rdfs:label>
+    </swc:Presenter>
+
+    <swc:TalkEvent rdf:about="http://data.semanticweb.org/conference/fis/2010/keynote/pay-as-you-go-data-integration-on-the-public-web-o">
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/pay-as-you-go-data-integration-on-the-public-web-o/speaker"/>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Pay-as-you-go Data Integration on the public Web of Linked Data</rdfs:label>
+        <ical:description>Linked Data technologies provide for setting data links between records in distinct databases and thus to connect these databases into a global dataspace. Over the last three years, Linked Data technologies have been adopted by an increasing number of data providers, including the US and UK governments as well as mayor players in the media and pharmaceutical industry, leading to the creation of a global public dataspace containing billions of assertions, the Web of Linked Data. In his talk, Christian Bizer will give an overview of the Web of Linked Data. Afterwards, he will demonstrate how the openness and self-descriptiveness of Linked Data provide for splitting data integration costs between data publishers, data consumers and third parties and thus enable global-scale data integration in an evolutionary, pay-as-you-go fashion.</ical:description>
+        <ical:summary>Pay-as-you-go Data Integration on the public Web of Linked Data</ical:summary>
+    </swc:TalkEvent>
+
+    <swc:Presenter rdf:about="http://data.semanticweb.org/conference/fis/2010/keynote/pay-as-you-go-data-integration-on-the-public-web-o/speaker">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/christian-bizer"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/pay-as-you-go-data-integration-on-the-public-web-o"/>
+        <rdfs:label>Keynote Speaker</rdfs:label>
+    </swc:Presenter>
+
+    <swc:TalkEvent rdf:about="http://data.semanticweb.org/conference/fis/2010/keynote/the-innovation-triathlon%3A-the-first-the-fastest-">
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/the-innovation-triathlon%3A-the-first-the-fastest-/speaker"/>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>The Innovation Triathlon: The First, the Fastest, and the Fittest</rdfs:label>
+        <ical:description>Innovation is a complex process that easily fails because it involves more than just technical considerations. Of the many promising ideas that arise at the research labs, only a few make it to the marketplace. A diverse mix of talent and expertise, combinations of technologies, business models and policies drive innovation. Critical factors that foster the creation and international growth of high-tech start-up businesses will be presented. Also the new innovation ecosystem of EIT ICT Labs, which will serve as innovation hub bridging the gaps between birth of innovation initiatives and their development in the industrial or entrepreneurial innovation systems will be discussed.</ical:description>
+        <ical:summary>The Innovation Triathlon: The First, the Fastest, and the Fittest</ical:summary>
+    </swc:TalkEvent>
+
+    <swc:Presenter rdf:about="http://data.semanticweb.org/conference/fis/2010/keynote/the-innovation-triathlon%3A-the-first-the-fastest-/speaker">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/iddo-bante"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/the-innovation-triathlon%3A-the-first-the-fastest-"/>
+        <rdfs:label>Keynote Speaker</rdfs:label>
+    </swc:Presenter>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/industry/1">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/cagri-etemoglu"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jorge-carapinha"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/marcio-melo"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/olafur-ingborsson"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/paul-weissmann"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/peter-feil"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/saemundur-thorsteinsson"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/selami-ciftci"/>
+        <dc:title>Network Virtualization – Opportunities and challenges for operators</dc:title>
+        <swrc:abstract>In the last few years, the concept of network virtualization has gained a lot of attention both from industry and research projects. This paper evaluates the potential of network virtualization from an operator’s perspective, with the short-term goal of optimizing service delivery and rollout, and on a longer term as an enabler of technology integration and migration. Based on possible scenarios for implementing and using network virtualization, new business roles and models are examined. Open issues and topics for further evaluation are identified. In summary, the objective is to identify the challenges but also new opportunities for telecom operators raised by network virtualization.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/cagri-etemoglu"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jorge-carapinha"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/marcio-melo"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/olafur-ingborsson"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/paul-weissmann"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/peter-feil"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/saemundur-thorsteinsson"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/selami-ciftci"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/1/authors"/>
+        <rdfs:label>Network Virtualization – Opportunities and challenges for operators</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/cagri-etemoglu"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/jorge-carapinha"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/marcio-melo"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/olafur-ingborsson"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/paul-weissmann"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/peter-feil"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/saemundur-thorsteinsson"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/selami-ciftci"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/industry/1/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/jorge-carapinha"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/peter-feil"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/paul-weissmann"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/saemundur-thorsteinsson"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/cagri-etemoglu"/>
+        <rdf:_6 rdf:resource="http://data.semanticweb.org/person/olafur-ingborsson"/>
+        <rdf:_7 rdf:resource="http://data.semanticweb.org/person/selami-ciftci"/>
+        <rdf:_8 rdf:resource="http://data.semanticweb.org/person/marcio-melo"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/industry/2">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/maximilian-ahrens"/>
+        <dc:title>Cloud Computing and the Impact on Enterprise IT</dc:title>
+        <swrc:abstract>This paper examines the impact of the cloud computing paradigm on enterprise IT structures. The first section of the paper defines the term cloud computing with the relevant aspects for this paper. In the second chapter the paper shows the potential of cloud computing for the enterprise IT. In the last section the paper will briefly reflect how the future development of infrastructure technologies will create more potential for enterprise IT cloud cases in the future.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/maximilian-ahrens"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/2/authors"/>
+        <rdfs:label>Cloud Computing and the Impact on Enterprise IT</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/maximilian-ahrens"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/industry/2/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/maximilian-ahrens"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/1">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/hein-venter"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ickin-vural"/>
+        <dc:title>Mobile Botnet Detection using Network Forensics</dc:title>
+        <swrc:abstract>Malicious software (malware) infects large numbers of computers around the world. This malware can be used to promote unwanted products, disseminate offensive content, or provide unauthorized access to personal and financial information. Until recently mobile networks have been relatively isolated from the Internet, so there has been little need to protect them against Botnets. Mobile networks are now well integrated with the internet, so threats on the internet such as Botnets have started to migrate onto mobile networks. Botnets on mobile devices will probably appear very soon, there are already signs that this is happening. This paper studies the potential threat of Botnets based on mobile networks, and proposes the use of computational intelligence techniques to detect Botnets. We then simulate anomaly detection followed by an interpretation of the simulated values.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/hein-venter"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/ickin-vural"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/1/authors"/>
+        <rdfs:label>Mobile Botnet Detection using Network Forensics</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/hein-venter"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ickin-vural"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/1/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/ickin-vural"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/hein-venter"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/2">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/adrian-marte"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/barry-norton"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/reto-krummenacher"/>
+        <dc:title>Towards Linked Open Services and Processes</dc:title>
+        <swrc:abstract>The combination of semantic technology and Web services in form of `Semantic Web Services' has until now been oriented towards extension of the {WS-*} stack with ontology-based descriptions. The same time, there is a strong movement away from this stack --- for which the `Web' part is little more than branding --- towards RESTful services. The Linked Open Data initiative is a keen adopter of this approach and exposes many datasets via SPARQL endpoints and RESTful services. Our developing approach of `Linked Open Services', whose current state is described in this paper, accommodates such Linked Data endpoints and general RESTful services alongside {WS-*} stack-based services with descriptions based on RDF and SPARQL. This capitalises on the Linked Data Cloud and makes service description and comprehension more easy and direct to the growing Linked Data community. Along the way, we show how the existing link between service messaging and the semantic viewpoint, commonly called `lifting and lowering', is usually unduly restricted to ontology-based classification and misses how the effect of a service contributes to the knowledge of its consumer. Our SPARQL-based approach helps also in the composition of services as knowledge-centric processes, and encourages the development and exposure of services that communicate RDF.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/adrian-marte"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/barry-norton"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/reto-krummenacher"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/2/authors"/>
+        <rdfs:label>Towards Linked Open Services and Processes</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/adrian-marte"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/barry-norton"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/reto-krummenacher"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/2/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/reto-krummenacher"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/barry-norton"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/adrian-marte"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/3">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/michael-schwanzer"/>
+        <dc:title>Energy Consumption Information Services for Smart Home Inhabitants</dc:title>
+        <swrc:abstract>We investigate services giving users an adequate insight on his or her energy consumption habits in order to optimize it in the long run. The explored energy awareness services are addressed to inhabitants of smart homes, equipped with smart meters, advanced communication facilities, sensors and actuators. To analyze the potential of such services, a game at a social network Facebook has been designed and implemented, and the information about players' responses and interactions within the game environment has been collected and analyzed. The players have had their virtual home energy usage visualized in different ways, and had to optimize the energy consumption basing on their own perceptions of the consumption information. Evaluations reveal, in particular, that users are specifically responsive to information shown as a real-time graph and as costs in Euro, and are able to produce and share with each other policies for managing their smart home environments.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/michael-schwanzer"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/3/authors"/>
+        <rdfs:label>Energy Consumption Information Services for Smart Home Inhabitants</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/michael-schwanzer"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/3/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/michael-schwanzer"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/4">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/dominick-smyth"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/mark-roantree"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/paolo-cappellari"/>
+        <dc:title>Knowledge Management in Sensor Enabled Online Services</dc:title>
+        <swrc:abstract>The Future Internet, has as its vision, the development of improved features and usability for services, applications and content. In many cases, services can be provided automatically through the use of monitors or sensors. This means web generated sensor data becoming available not only to the companies that own the sensors but also to the domain users who generate the data and to information and knowledge workers who harvest the output. The goal is improving the service through better usage of the information provided by the service. Applications and services vary from climate, traffic, health and sports event monitoring. In this paper, we present the WSW system that harvests web sensor data to provide additional and, in some cases, more accurate information using an analysis of both live and warehoused information.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/dominick-smyth"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/mark-roantree"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/paolo-cappellari"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/4/authors"/>
+        <rdfs:label>Knowledge Management in Sensor Enabled Online Services</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/dominick-smyth"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/mark-roantree"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/paolo-cappellari"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/4/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/dominick-smyth"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/paolo-cappellari"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/mark-roantree"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/5">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ildefons-magrans-de-abril"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jens-happe"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ulrich-winkler"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/wolfgang-theilmann"/>
+        <dc:title>Managing On-demand Business Applications with Hierarchical Service-level Agreements</dc:title>
+        <swrc:abstract>Business applications are facing an increasing demand for being delivered as on-demand services. Service Level Agreements (SLAs) are a common way for specifying the exact conditions how services are delivered, both for business- and IT-based services. At the same time, the paradigm of service-orientation is expanded to different domains such as business and IT-based services. Services are composed out of other services across domains. Consequently, SLAs have to managed across such service hierarchies. In this paper, we present the lessons learned from applying a generic, multi-layer SLA management framework to the context of on-demand business applications. We explain the implemented architecture and show how a hierarchy of services can be managed via SLAs. We explain in detail how SLAs can be established for different layers and how SLA terms are translated across the service hierarchy.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/ildefons-magrans-de-abril"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jens-happe"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/ulrich-winkler"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/wolfgang-theilmann"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/5/authors"/>
+        <rdfs:label>Managing On-demand Business Applications with Hierarchical Service-level Agreements</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/ildefons-magrans-de-abril"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/jens-happe"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ulrich-winkler"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/wolfgang-theilmann"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/5/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/wolfgang-theilmann"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/ulrich-winkler"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/jens-happe"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/ildefons-magrans-de-abril"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/1">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/bernd-reuther"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/daniel-guenther"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/dennis-schwerdel"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/paul-mueller"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/robert-henjes"/>
+        <dc:title>German-Lab Experimental Facility</dc:title>
+        <swrc:abstract>The G-Lab project aims to investigate concepts and technologies for future networks in a practical manner. Thus G-Lab consists of two major fields of activities: research studies of future network components and the design and setup of experimental facilities. Both is controlled by the same community to ensure, that the experimental facility fits to the demand of researchers. Researchers gain access to virtualized resources or may gain exclusive access to resource if necessary. We present the current setup of the experimental facility, describing the available hardware, management of the platform, the utilization of the Planet-Lab software and the user management.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/bernd-reuther"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/daniel-guenther"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/dennis-schwerdel"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/paul-mueller"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/robert-henjes"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/1/authors"/>
+        <rdfs:label>German-Lab Experimental Facility</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/bernd-reuther"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/daniel-guenther"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/dennis-schwerdel"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/paul-mueller"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/robert-henjes"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/1/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/dennis-schwerdel"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/daniel-guenther"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/robert-henjes"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/bernd-reuther"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/paul-mueller"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/2">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/blerim-cici"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/george-xylomenos"/>
+        <dc:title>Design and Evaluation of a Socket Emulator for Publish/Subscribe Networks</dc:title>
+        <swrc:abstract>In order for a Future Internet architecture to be globally deployed, it must ensure that existing applications will continue to operate efficiently on top of it. As part of the Publish Subscribe Internet Routing Paradigm (PSIRP) project, we have explored various options for making endpoint centric applications based on the Sockets Application Programming Interface (API) compatible with the information centric PSIRP prototype implementation. We developed an emulator that mediates between the client/server socket calls and the publish/subscribe PSIRP calls, transforming the exchange of packets to distribution of publications. To assess the overhead of our emulator, we measure the execution time of a simple file transfer application in native socket mode, in emulated socket mode and in native publish/subscribe mode.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/blerim-cici"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/george-xylomenos"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/2/authors"/>
+        <rdfs:label>Design and Evaluation of a Socket Emulator for Publish/Subscribe Networks</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/blerim-cici"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/george-xylomenos"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/2/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/george-xylomenos"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/blerim-cici"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/3">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/david-levy"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/maximilian-ott"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/yan-shvartzshnaider"/>
+        <dc:title>Publish/Subscribe On Top Of DHT Using RETE algorithm</dc:title>
+        <swrc:abstract>This paper discusses the construction of a Global Semantic Graph (GSG) to support future information- and collaboration-centric applications and services. The GSG is a publish/subscribe (pub/sub) based architecture that supports publication of tuples and subscriptions with standing graph queries. We believe that an implementation of an efficient pattern matching algorithm such as Rete on top of a distributed environment might serve as a possible substrate for GSG's pub/sub facility. Rete operates on loosely coupled alpha, beta and join nodes and therefore has been chosen by us for implementation in a distributed setting. In this paper, we propose a way to perform Rete's pattern matching over a DHT-based Structured P2P network to provide a scalable content-based publish/subscribe service.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/david-levy"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/maximilian-ott"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/yan-shvartzshnaider"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/3/authors"/>
+        <rdfs:label>Publish/Subscribe On Top Of DHT Using RETE algorithm</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/david-levy"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/maximilian-ott"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/yan-shvartzshnaider"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/3/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/yan-shvartzshnaider"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/maximilian-ott"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/david-levy"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/4">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/eileen-dillon"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/frances-cleary-grant"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/gemma-power"/>
+        <dc:title>Experimental Testing in the Future Internet PERIMETER Project</dc:title>
+        <swrc:abstract>The Future Internet faces many challenges for new Internet architectures, protocols and services requiring early experimentation and testing in large-scale environments. Furthermore, the complexity of the software and technologies running on the Future Internet will require more innovative and different approaches to the testing process. This paper examines these requirements and challenges and demonstrates how they are dealt with in the Telecommunications Software and Systems Group using a case study of the Future Internet project; PERIMETER. Details of the testing and experimental methodologies and the role of testbed activities involved in this Quality of Experience network mobility project to develop and adapt to the needs of the Future Internet are provided. The paper concludes with observations of the further developments and innovations required to achieve an end-to-end solution for experimental testing in PERIMETER, and more generally for other Future Internet projects.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/eileen-dillon"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/frances-cleary-grant"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/gemma-power"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/4/authors"/>
+        <rdfs:label>Experimental Testing in the Future Internet PERIMETER Project</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/eileen-dillon"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/frances-cleary-grant"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/gemma-power"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/4/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/eileen-dillon"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/gemma-power"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/frances-cleary-grant"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/5">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/mohammad-hossein-rezvani"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/morteza-analoui"/>
+        <dc:title>An Economic Case for End System Multicast</dc:title>
+        <swrc:abstract>The Future Internet faces many challenges for new Internet architectures, protocols and services requiring early experimentation and testing in large-scale environments. Furthermore, the complexity of the software and technologies running on the Future Internet will require more innovative and different approaches to the testing process. This paper examines these requirements and challenges and demonstrates how they are dealt with in the Telecommunications Software and Systems Group using a case study of the Future Internet project; PERIMETER. Details of the testing and experimental methodologies and the role of testbed activities involved in this Quality of Experience network mobility project to develop and adapt to the needs of the Future Internet are provided. The paper concludes with observations of the further developments and innovations required to achieve an end-to-end solution for experimental testing in PERIMETER, and more generally for other Future Internet projects.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/mohammad-hossein-rezvani"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/morteza-analoui"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/5/authors"/>
+        <rdfs:label>An Economic Case for End System Multicast</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/mohammad-hossein-rezvani"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/morteza-analoui"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/5/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/morteza-analoui"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/mohammad-hossein-rezvani"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/6">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/george-polyzos"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/giannis-marias"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/nikos-fotiou"/>
+        <dc:title>Towards a Secure Rendezvous Network for Future Publish/Subscribe Architectures</dc:title>
+        <swrc:abstract>Publish/Subscribe is often regarded as a promising paradigm for Future Internet architectures. Its information oriented nature and its particular security features have stimulated current research efforts which aim at applying publish/subscribe principles to a clean-slate Internet architecture. One of the core components of publish/subscribe architectures is the rendezvous network. Any security failure that a rendezvous network may face will probably jeopardize the operation of the whole (inter-)network. In this paper we highlight security requirements and potential security issues of rendezvous networks and we present security solutions that can be applied in order to shield them.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/george-polyzos"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/giannis-marias"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/nikos-fotiou"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/6/authors"/>
+        <rdfs:label>Towards a Secure Rendezvous Network for Future Publish/Subscribe Architectures</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/george-polyzos"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/giannis-marias"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/nikos-fotiou"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/6/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/nikos-fotiou"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/giannis-marias"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/george-polyzos"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/1">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/andreas-hartl"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/francois-bry"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/klara-weiand"/>
+        <dc:title>visKWQL, Visual Keyword Queries for Semantic Data</dc:title>
+        <swrc:abstract>Querying a Wiki must be simple enough for beginning users, yet powerful enough to accommodate experienced users. To this end, the keyword-based KiWi query language (KWQL) supports queries ranging from simple lists of keywords to expressive rules for selecting and reshaping Wiki (meta-)data. In this demo, we showcase visKWQL, a visual interface for the KWQL language aimed at supporting users in the query construction process. visKWQL and its editor are described, and their functionality is illustrated using example queries. The editor provides guidance throughout the query construction process through hints, warnings and highlighting of syntactic errors. The editor enables round-tripping between the twin languages KWQL and visKWQL, mean- ing that users can switch freely between the textual and visual form when constructing or editing a query. It is implemented using HTML, JavaScript, and CSS, and can thus be used in (almost) any web browser without any additional software.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/andreas-hartl"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/francois-bry"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/klara-weiand"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/1/authors"/>
+        <rdfs:label>visKWQL, Visual Keyword Queries for Semantic Data</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/andreas-hartl"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/francois-bry"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/klara-weiand"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/1/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/andreas-hartl"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/klara-weiand"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/francois-bry"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/10">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/lyndon-j-b-nixon"/>
+        <dc:title>NoTube: Making Television More Personal</dc:title>
+        <swrc:abstract>The NoTube European project looks at creating the future of TV, in which the TV user will be placed back in the driver’s seat by having a personalized TV experience with rich interaction possibilities. For this, new technologies like Linked Data, Semantic Web and Social Web data analysis are applied to the TV domain.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/lyndon-j-b-nixon"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/10/authors"/>
+        <rdfs:label>NoTube: Making Television More Personal</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/lyndon-j-b-nixon"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/10/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/lyndon-j-b-nixon"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/11">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/andreas-eberhart"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/andreas-wagner"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/guenter-ladwig"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/peter-haase"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/sebastian-godelet"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/thanh-tran"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/tobias-mathass"/>
+        <dc:title>The Information Workbench. Interacting with the Web of Data</dc:title>
+        <swrc:abstract>We present the Information Workbench, an application for interacting with the Web of data. The Information Workbench man- ages large amounts of structured and unstructured information, which may be imported and integrated from existing sources, but also allows end users to annotate, complete and update information in a collaborative way. New paradigms for accessing information include hybrid search across the structured and unstructured data, keyword search combined with facetted search, as well as semantic query completion and interpretation, which assists the user in expressing complex information needs by an automated translation of keyword queries into hybrid queries. A Living UI based on widgets for the interaction with the data enables a homogeneous, seamless, continuous and personal experience.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/andreas-eberhart"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/andreas-wagner"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/guenter-ladwig"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/peter-haase"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/sebastian-godelet"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/thanh-tran"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/tobias-mathass"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/11/authors"/>
+        <rdfs:label>The Information Workbench. Interacting with the Web of Data</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/andreas-eberhart"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/andreas-wagner"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/guenter-ladwig"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/peter-haase"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/sebastian-godelet"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/thanh-tran"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/tobias-mathass"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/11/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/peter-haase"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/andreas-eberhart"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/sebastian-godelet"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/tobias-mathass"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/thanh-tran"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/2">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/benedikt-linse"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/francois-bry"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/franziska-von-dem-bussche"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/klara-weiand"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/tim-furche"/>
+        <dc:title>Not So Creepy Crawler: Crawling the Web with Xquery</dc:title>
+        <swrc:abstract>Web crawlers are increasingly used for focused tasks such as the extraction of data from Wikipedia or the analysis of social networks like last.fm. In these cases, pages are far more uniformly structured than in the general Web and thus crawlers can use the structure of Web pages for more precise data extraction and more expressive analysis. In this demonstration, we present a focused, structure-based crawler generator, the "Not so Creepy Crawler" (nc2). What sets nc2 apart, is that all analysis and decision tasks of the crawling process are delegated to an (arbitrary) XML query engine such as XQuery or Xcerpt. Customizing crawlers just means writing (declarative) XML queries that can access the currently crawled document as well as the metadata of the crawl process. We identify four types of queries that together suffice to realize a wide variety of focused crawlers.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/benedikt-linse"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/francois-bry"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/franziska-von-dem-bussche"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/klara-weiand"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/tim-furche"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/2/authors"/>
+        <rdfs:label>Not So Creepy Crawler: Crawling the Web with Xquery</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/benedikt-linse"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/francois-bry"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/franziska-von-dem-bussche"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/klara-weiand"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/tim-furche"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/2/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/franziska-von-dem-bussche"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/klara-weiand"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/benedikt-linse"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/tim-furche"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/francois-bry"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/3">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/adrian-marte"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/barry-norton"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/reto-krummenancher"/>
+        <dc:title>Linked Open Services: Current Implementations and Approaches to Composition</dc:title>
+        <swrc:abstract>Linked Open Services are a principled attempt to guide the creation and exposure of online services, in order to enable productive use of, and contribution to, Linked Data. As a technical basis, they communicate RDF directly via HTTP-based interaction, and their contribution to the consumer’s knowledge, in terms of Linked Data, is described using SPARQL-based constructs. In this demo we will show some of our latest results in the production of Linked Open Services and the applications in which they can be taken up.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/adrian-marte"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/barry-norton"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/reto-krummenancher"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/3/authors"/>
+        <rdfs:label>Linked Open Services: Current Implementations and Approaches to Composition</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/adrian-marte"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/barry-norton"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/reto-krummenancher"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/3/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/barry-norton"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/reto-krummenancher"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/adrian-marte"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/4">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/daniel-playfair"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/ulrich-winkler"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/wolfgang-theilmann"/>
+        <dc:title>ERP B3: Service Level Driven Management of On-Demand Business Support Systems</dc:title>
+        <swrc:abstract>ERP B3 is a SLA@SOI framework based solution for Service Level Agreement driven, on demand and dynamic provisioned ERP systems. In this demonstration we want to show SLA management for hosted ERP systems from three perspectives; the customer, the sales, and IT administrator perspective. Aspects of the negotiation, planning and provisioning workflow, which involves all stakeholders, are outlined.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/daniel-playfair"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/ulrich-winkler"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/wolfgang-theilmann"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/4/authors"/>
+        <rdfs:label>ERP B3: Service Level Driven Management of On-Demand Business Support Systems</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/daniel-playfair"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/ulrich-winkler"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/wolfgang-theilmann"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/4/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/ulrich-winkler"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/daniel-playfair"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/wolfgang-theilmann"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/5">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/anne-augustin"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/hannes-muehleisen"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/kia-teymourian"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/marko-harasic"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/robert-tolksdorf"/>
+        <dc:title>Nature Inspired Self-Organizing Semantic Storage</dc:title>
+        <swrc:abstract>Traditional approaches for semantic storage and analysis are facing their limits on the handling of enormous data amounts of today’s applications. We believe that a more radical departure from contemporary architectures of stores is necessary to satisfy that central scalability requirement. One of the most promising new schools of thought in system design are swarm intelligent and swarm-based approaches for data distribution and organization. In this paper, we describe our current work on a swarm-based storage service for Semantic Web data.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/anne-augustin"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/hannes-muehleisen"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/kia-teymourian"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/marko-harasic"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/robert-tolksdorf"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/5/authors"/>
+        <rdfs:label>Nature Inspired Self-Organizing Semantic Storage</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/anne-augustin"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/hannes-muehleisen"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/kia-teymourian"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/marko-harasic"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/robert-tolksdorf"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/5/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/robert-tolksdorf"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/hannes-muehleisen"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/kia-teymourian"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/marko-harasic"/>
+        <rdf:_5 rdf:resource="http://data.semanticweb.org/person/anne-augustin"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/6">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/douglas-j-leith"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/venkatram-badarla"/>
+        <dc:title>Behaviour of Maximum-Throughput Dynamic Routing in Loopy Networks</dc:title>
+        <swrc:abstract>Maximizing network throughput via back-pressure routing is the subject of a considerable body of literature. However, the associated optimal throughput guarantees come at the cost of excessively high delays. Though there exists some proposals in literature for improving the delay performance, the impact of these proposals on the delay performance is very little in loopy networks (i.e., networks with routing loops). In this demonstration, with series of experiments over different topologies, we show that the basic back-pressure algorithm and two of its variants for improving delay performance induce extensive routing loops with associated high packet delay even in simple network topologies.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/douglas-j-leith"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/venkatram-badarla"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/6/authors"/>
+        <rdfs:label>Behaviour of Maximum-Throughput Dynamic Routing in Loopy Networks</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/douglas-j-leith"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/venkatram-badarla"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/6/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/venkatram-badarla"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/douglas-j-leith"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/7">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/david-levy"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/maximilian-ott"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/yan-shvartzshnaider"/>
+        <dc:title>Persistent Content-based Publish/Subscribe Service On Top Of DHT</dc:title>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/david-levy"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/maximilian-ott"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/yan-shvartzshnaider"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/7/authors"/>
+        <rdfs:label>Persistent Content-based Publish/Subscribe Service On Top Of DHT</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/david-levy"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/maximilian-ott"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/yan-shvartzshnaider"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/7/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/yan-shvartzshnaider"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/maximilian-ott"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/david-levy"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/8">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/irini-fundulaki"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/maria-michou"/>
+        <dc:title>Access Control for RDF: Experimental Results</dc:title>
+        <swrc:abstract>One of the current barriers towards realizing the huge potential of Future Internet is the protection of sensitive information, i.e., the ability to selectively expose (or hide) information to (from) users depending on their access privileges. In this work we discuss the experiments conducted with our repository independent, portable across platforms system that supports fine-grained enforcement of RDF access control.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/irini-fundulaki"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/maria-michou"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/8/authors"/>
+        <rdfs:label>Access Control for RDF: Experimental Results</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/irini-fundulaki"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/maria-michou"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/8/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/irini-fundulaki"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/maria-michou"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/9">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/eileen-dillon"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/frances-cleary-grant"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/gemma-power"/>
+        <dc:title>Experimental Testing in the Future Internet PERIMETER Project</dc:title>
+        <swrc:abstract>This submission will provide interested parties with the opportunity to learn more about the FP7 PERIMETER project. Details of the testing and experimental methodologies and the role of testbed activities involved in this Quality of Experience network mobility project will be given. A demonstration and explanation of the Quality of Experience management system of PERIMETER will be provided and will allow visitors to interact with the system using a Google Android device with the PERIMETER middleware installed. This will be illustrated with the aid of the purpose built PERIMETER Visualisation Tool.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/eileen-dillon"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/frances-cleary-grant"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/gemma-power"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/9/authors"/>
+        <rdfs:label>Experimental Testing in the Future Internet PERIMETER Project</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/eileen-dillon"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/frances-cleary-grant"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/gemma-power"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/posters/9/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/eileen-dillon"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/gemma-power"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/frances-cleary-grant"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/1">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/irini-fundulaki"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/maria-michou"/>
+        <dc:title>Controlling Access to RDF Graphs</dc:title>
+        <swrc:abstract>One of the current barriers towards realizing the huge potential of Future Internet is the protection of sensitive information, i.e., the ability to selectively expose (or hide) information to (from) users depending on their access privileges. Given that RDF has established itself as the de facto standard for data representation over the Web, our work focuses on controlling access to RDF data. We present a high-level access control specification language that allows fine-grained specification of access control permissions (at triple level) and formally define its semantics. We adopt an annotation-based enforcement model, where a user can explicitly associate data items with annotations specifying whether the item is accessible or not. In addition, we discuss the implementation of our framework, propose a set of dimensions that should be considered when defining a benchmark to evaluate the different access control enforcement models and present the results of our experiments conducted on different Semantic Web platforms.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/irini-fundulaki"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/maria-michou"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/1/authors"/>
+        <rdfs:label>Controlling Access to RDF Graphs</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/irini-fundulaki"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/maria-michou"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/1/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/irini-fundulaki"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/maria-michou"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/2">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jose-danado"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/marcin-davies"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/paulo-ricca"/>
+        <dc:title>An Authoring Tool for User generated Mobile Services</dc:title>
+        <swrc:abstract>Imagine what kind of applications become possible when our mobile devices not only present data but provide valuable information to other users. Users become able to instantaneously create services and to publish content and knowledge on their own mobile device, which can be discovered and accessed remotely by other mobile users in a simple way. To achieve the vision of customizable and context aware user-generated mobile services, we present a mobile authoring tool for end-users to create, customize and deploy mobile services while on-the-go. This tool is designed to allow users with different levels of technical expertise to create mobile services. The paper also gives insight on the performed usability evaluations, namely user interviews and an online survey.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jose-danado"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/marcin-davies"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/paulo-ricca"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/2/authors"/>
+        <rdfs:label>An Authoring Tool for User generated Mobile Services</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/jose-danado"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/marcin-davies"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/paulo-ricca"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/2/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/jose-danado"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/marcin-davies"/>
+        <rdf:_3 rdf:resource="http://data.semanticweb.org/person/paulo-ricca"/>
+        <rdf:_4 rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+    </rdf:Seq>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/3">
+        <swc:hasTopic rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/conference/fis/2010/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/luc-moreau"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/rocio-aldeco-perez"/>
+        <dc:title>A Provenance-based Compliance Framework</dc:title>
+        <swrc:abstract>Given the significant amount of personal information available on the Web, verifying its correct use emerges as an important issue. When personal information is published, it should be later used under a set of usage policies. If these policies are not followed, sensitive data could be exposed and used against its owner. Under these circumstances, processing transparency is desirable since it allows users to decide whether information is used appropriately. It has been argued that data provenance can be used as the mechanism to underpin such a transparency. Thereby, if provenance of data is available, processing becomes transparent since the provenance of data can be analysed against usage policies to decide whether processing was performed in compliance with such policies. The aim of this paper is to present a Provenance-based Compliance Framework that uses provenance to verify the compliance of processing to predefined information usage policies. It consists of a provenance-based view of past processing of information, a representation of processing policies and a comparison stage in which the past processing is analysed against the processing policies. This paper also presents an implementation using a very common on-line activity: on-line shopping.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/luc-moreau"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/rocio-aldeco-perez"/>
+        <swrc:month>September</swrc:month>
+        <swrc:year>2010</swrc:year>
+        <swrc_ext:authorList rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/3/authors"/>
+        <rdfs:label>A Provenance-based Compliance Framework</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/luc-moreau"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/rocio-aldeco-perez"/>
+    </swrc:InProceedings>
+
+    <rdf:Seq rdf:about="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/3/authors">
+        <rdf:_1 rdf:resource="http://data.semanticweb.org/person/rocio-aldeco-perez"/>
+        <rdf:_2 rdf:resource="http://data.semanticweb.org/person/luc-moreau"/>
+    </rdf:Seq>
+
+    <rdf:Description rdf:about="http://data.semanticweb.org/conference/fis/2010/proceedings">
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/1"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/2"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/1"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/2"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/3"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/4"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/5"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/1"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/2"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/3"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/4"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/5"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/6"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/1"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/10"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/11"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/2"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/3"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/4"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/5"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/6"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/7"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/8"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/9"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/1"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/2"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/3"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+    </rdf:Description>
+
+    <swc:TutorialEvent rdf:about="http://data.semanticweb.org/conference/fis/2010/tutorial/building-semantic-mashups-with-jigs4owl">
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/building-semantic-mashups-with-jigs4owl/organiser"/>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Building Semantic Mashups with Jigs4OWL</rdfs:label>
+        <ical:description>Imagine you plan to provide a company-wide application from semantic data which has to serve various purposes with an user-centered interface as quickly and flexible as possible. Which server infrastructure is appropriate? Which client protocol is the best? How to deploy the service to the user? The semantic mashup framework Jigs4OWL provides a solution to this. It offers a web-enabled semantic infrastructure while hiding all non-relevant technical details. It allows to easily build web browser applications with the help of customizable widgets and a few lines of JavaScript code which aggregate, visualize, and mashup semantic content with other data sources or services. The tutorial will enable participants to understand, employ and adapt this framework for their own needs. This includes a code level session for a showcase mashup which is comprehensible for participants even with only basic programming or scripting experience.</ical:description>
+        <ical:dtstart>2010-09-20</ical:dtstart>
+        <ical:summary>Building Semantic Mashups with Jigs4OWL</ical:summary>
+        <ical:url rdf:resource="http://www.jigs4owl.com/fis2010/"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:TutorialEvent>
+
+    <swc:Role rdf:about="http://data.semanticweb.org/conference/fis/2010/tutorial/building-semantic-mashups-with-jigs4owl/organiser">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/mario-volke"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/thorsten-liebig"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/building-semantic-mashups-with-jigs4owl"/>
+        <rdfs:label>Tutorial Organiser</rdfs:label>
+    </swc:Role>
+
+    <swc:TutorialEvent rdf:about="http://data.semanticweb.org/conference/fis/2010/tutorial/federation-of-future-internet-research-experimenta">
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/federation-of-future-internet-research-experimenta/organiser"/>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Federation of Future Internet Research &#38; Experimentation (FIRE) Facilities – "Teagle" as a Tool for Generic Resource Federation</rdfs:label>
+        <ical:description>Teagle is the central coordination and testbed deployment engine used for Panlab, a large scale federated experimental facility. Teagle allows the setup of distributed testbeds using ICT resources provided by Panlab. Such resources include general purpose machines, dedicated devices or complex software systems such as Next Generation Network (NGN) enablers and an Evolved Packet Core (EPC) for mobile and fixed NGN related testbeds. 
+The resources can be booked and configured upon demand serving specific testing or experimentation needs. Users of this facility and its underlying infrastructure usually are research and development teams or individuals from industry and academia.
+In this half day tutorial participants will learn:
+About the FIRE initiative as the driver for experimentally driven Future Internet research in Europe
+About the Teagle architecture and its core components
+About the Panlab framework and its operational procedures
+How to use the creation environment provided by Teagle to design custom testbed setups
+How to make use of such a testbed for distributed or local experiments
+How to join the federation, commit own resources and use resources provided by other partners</ical:description>
+        <ical:dtstart>2010-09-20</ical:dtstart>
+        <ical:summary>Federation of Future Internet Research &#38; Experimentation (FIRE) Facilities – "Teagle" as a Tool for Generic Resource Federation</ical:summary>
+        <ical:url rdf:resource="http://www.fire-teagle.org/teagle/fis-2010-tutorial.jsp"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:TutorialEvent>
+
+    <swc:Role rdf:about="http://data.semanticweb.org/conference/fis/2010/tutorial/federation-of-future-internet-research-experimenta/organiser">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/konrad-campowsky"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/sebastian-wahle"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/federation-of-future-internet-research-experimenta"/>
+        <rdfs:label>Tutorial Organiser</rdfs:label>
+    </swc:Role>
+
+    <swc:TutorialEvent rdf:about="http://data.semanticweb.org/conference/fis/2010/tutorial/how-to-develop-ontologies-using-the-neon-methodolo">
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/how-to-develop-ontologies-using-the-neon-methodolo/organiser"/>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>How to develop ontologies using the NeOn Methodology and the NeOn toolkit</rdfs:label>
+        <ical:description>Our tutorial targets ontology modelers and engineers. The tutorial will provide guidance for the development of ontologies with respect to the complete ontology lifecycle. We illustrate ontology networks. We exercise ontology engineering activities using the NeOn toolkit, and specially the gOntt and the XD plug-ins.fundamental principles and best practices in ontology development using the NeOn Methodology for building</ical:description>
+        <ical:dtstart>2010-09-20</ical:dtstart>
+        <ical:summary>How to develop ontologies using the NeOn Methodology and the NeOn toolkit</ical:summary>
+        <ical:url rdf:resource="http://granvia.dia.fi.upm.es/FIS_Tutorial/index.html "/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:TutorialEvent>
+
+    <swc:Role rdf:about="http://data.semanticweb.org/conference/fis/2010/tutorial/how-to-develop-ontologies-using-the-neon-methodolo/organiser">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/aldo-gangemi"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/asuncion-gomez-perez"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/maria-del-carmen-suarez-de-figueroa"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/valentina-presutti"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/how-to-develop-ontologies-using-the-neon-methodolo"/>
+        <rdfs:label>Tutorial Organiser</rdfs:label>
+    </swc:Role>
+
+    <swc:TutorialEvent rdf:about="http://data.semanticweb.org/conference/fis/2010/tutorial/introduction-to-planetlab-europe-and-related-measu">
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/introduction-to-planetlab-europe-and-related-measu/organiser"/>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Introduction to PlanetLab Europe and related measurement infrastructures</rdfs:label>
+        <ical:description>In this tutorial we will provide an introduction to PlanetLab Europe (PLE) and related measurement infrastructures (ETOMIC). The aim is to provide interested researchers with a comprehensive course on how to use the infrastructures. Attendants will learn how to book PLE resources and also how to program high-resolution measurements using the ETOMIC system, which features ad-hoc hardware with tens of nanoseconds resolution.</ical:description>
+        <ical:dtstart>2010-09-20</ical:dtstart>
+        <ical:summary>Introduction to PlanetLab Europe and related measurement infrastructures</ical:summary>
+        <ical:url rdf:resource="http://onelab.eu/index.php/news/391-onelab-tutorial-at-fis-2010.html"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:TutorialEvent>
+
+    <swc:Role rdf:about="http://data.semanticweb.org/conference/fis/2010/tutorial/introduction-to-planetlab-europe-and-related-measu/organiser">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/elliot-jaffe"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/javier-aracil"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/scott-kirkpatrick"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/introduction-to-planetlab-europe-and-related-measu"/>
+        <rdfs:label>Tutorial Organiser</rdfs:label>
+    </swc:Role>
+
+    <swc:TutorialEvent rdf:about="http://data.semanticweb.org/conference/fis/2010/tutorial/the-open-provenance-model">
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/the-open-provenance-model/organiser"/>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>The Open Provenance Model</rdfs:label>
+        <ical:description>Where was a document found? How was this data set produced? Were all facts included in this decision? Were all the latest figures included in this diagram? Can this scientific experiment be reproduced? Provenance matters! Provenance, which is an explicit representation of the origin of data, is important for users to be able to put their trust in data. The Open Provenance Model (OPM) is a community-driven model for provenance, which originates from the Provenance Challenge series, allowing provenance to be exchanged between systems. In this tutorial, we will introduce the rationale for OPM, its concepts and theoretical underpinnings, its concrete bindings to XML Schema and OWL, and emerging profiles. We will run through a series of small case studies exploiting OPM provenance, and we will organize a hands-on session, where a small application is OPM-enabled, provenance is generated, visualized and exploited. All examples covered by this tutorial will exploit the Java-based OPMtoolbox, the OPM XML schema, the OPM OWL ontology, or the OPM Vocabulary.</ical:description>
+        <ical:dtstart>2010-09-20</ical:dtstart>
+        <ical:summary>The Open Provenance Model</ical:summary>
+        <ical:url rdf:resource="http://openprovenance.org/tutorial"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:TutorialEvent>
+
+    <swc:Role rdf:about="http://data.semanticweb.org/conference/fis/2010/tutorial/the-open-provenance-model/organiser">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/jun-zhao"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/luc-moreau"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/paul-groth"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/the-open-provenance-model"/>
+        <rdfs:label>Tutorial Organiser</rdfs:label>
+    </swc:Role>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/athens-university-of-economics-and-business">
+        <rdfs:label>Athens University of Economics and Business</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/blerim-cici"/>
+        <member rdf:resource="http://data.semanticweb.org/person/george-polyzos"/>
+        <member rdf:resource="http://data.semanticweb.org/person/george-xylomenos"/>
+        <member rdf:resource="http://data.semanticweb.org/person/giannis-marias"/>
+        <member rdf:resource="http://data.semanticweb.org/person/nikos-fotiou"/>
+        <name>Athens University of Economics and Business</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/cnr-istc-italy">
+        <member rdf:resource="http://data.semanticweb.org/person/aldo-gangemi"/>
+        <member rdf:resource="http://data.semanticweb.org/person/valentina-presutti"/>
+        <name>ISTC-CNR</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/deri-nui-galway">
+        <rdfs:label>DERI NUI Galway</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/axel-polleres"/>
+        <member rdf:resource="http://data.semanticweb.org/person/knud-moeller"/>
+        <name>DERI NUI Galway</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/deri-universitaet-innsbruck">
+        <rdfs:label>STI Innsbruck</rdfs:label>
+        <rdfs:label>STI International</rdfs:label>
+        <rdfs:label>Semantic Technology Institute (STI)</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/adrian-marte"/>
+        <member rdf:resource="http://data.semanticweb.org/person/alexander-wahler"/>
+        <member rdf:resource="http://data.semanticweb.org/person/dieter-fensel"/>
+        <member rdf:resource="http://data.semanticweb.org/person/reto-krummenacher"/>
+        <name>STI Innsbruck</name>
+        <name>STI International</name>
+        <name>Semantic Technology Institute (STI)</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/derivo-gmbh">
+        <member rdf:resource="http://data.semanticweb.org/person/thorsten-liebig"/>
+        <name>derivo GmbH</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/deutsche-telekom-ag">
+        <rdfs:label>Deutsche Telekom AG</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/paul-weissmann"/>
+        <member rdf:resource="http://data.semanticweb.org/person/peter-feil"/>
+        <name>Deutsche Telekom AG</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/deutschen-telekom-ag-laboratories">
+        <rdfs:label>Deutschen Telekom AG, Laboratories</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/udo-bub"/>
+        <name>Deutschen Telekom AG, Laboratories</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/docomo">
+        <rdfs:label>DOCOMO</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/marko-luther"/>
+        <name>DOCOMO</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/dublin-city-university">
+        <rdfs:label>Dublin City University</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/dominick-smyth"/>
+        <member rdf:resource="http://data.semanticweb.org/person/mark-roantree"/>
+        <member rdf:resource="http://data.semanticweb.org/person/paolo-cappellari"/>
+        <name>Dublin City University</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/epfl">
+        <rdfs:label>EPFL</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/ruzica-piskac"/>
+        <name>EPFL</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/etomic">
+        <member rdf:resource="http://data.semanticweb.org/person/javier-aracil"/>
+        <name>ETOMIC</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/european-commission">
+        <member rdf:resource="http://data.semanticweb.org/person/mario-campolargo"/>
+        <name>European Commission</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/forth-ics">
+        <rdfs:label>Institute of Computer Science, FORTH</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/giorgos-flouris"/>
+        <member rdf:resource="http://data.semanticweb.org/person/grigoris-antoniou"/>
+        <member rdf:resource="http://data.semanticweb.org/person/irini-fundulaki"/>
+        <member rdf:resource="http://data.semanticweb.org/person/maria-michou"/>
+        <name>Institute of Computer Science, FORTH</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/fraunhofer-fokus">
+        <member rdf:resource="http://data.semanticweb.org/person/sebastian-wahle"/>
+        <name>Fraunhofer FOKUS</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/freie-universitaet-berlin">
+        <rdfs:label>Freie Universität Berlin</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/christian-bizer"/>
+        <member rdf:resource="http://data.semanticweb.org/person/robert-tolksdorf"/>
+        <name>FU Berlin</name>
+        <name>Freie Universität Berlin</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/ftw-telecommunications-research-center-vienna">
+        <rdfs:label>FTW</rdfs:label>
+        <rdfs:label>FTW Telecommunications Research Center Vienna</rdfs:label>
+        <rdfs:label>Telecommunications Research Center Vienna (FTW)</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/anna-v-zhdanova"/>
+        <member rdf:resource="http://data.semanticweb.org/person/marcin-davies"/>
+        <name>FTW</name>
+        <name>FTW Telecommunications Research Center Vienna</name>
+        <name>Telecommunications Research Center Vienna (FTW)</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/iran-university-of-science-and-technology-iust">
+        <rdfs:label>Iran University of Science and Technology (IUST)</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/mohammad-hossein-rezvani"/>
+        <member rdf:resource="http://data.semanticweb.org/person/morteza-analoui"/>
+        <name>Iran University of Science and Technology (IUST)</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/karlsruhe-institute-of-technology">
+        <rdfs:label>KIT</rdfs:label>
+        <rdfs:label>Karlsruhe Institute of Technology (KIT)</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/barry-norton"/>
+        <member rdf:resource="http://data.semanticweb.org/person/elena-simperl"/>
+        <name>KIT</name>
+        <name>Karlsruhe Institute of Technology (KIT)</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/kmi-the-open-university-uk">
+        <rdfs:label>Open University</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/harith-alani"/>
+        <name>Open University</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/nicta">
+        <rdfs:label>National ICT Australia (NICTA)</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/maximilian-ott"/>
+        <name>National ICT Australia (NICTA)</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/planetlab-europe">
+        <member rdf:resource="http://data.semanticweb.org/person/elliot-jaffe"/>
+        <member rdf:resource="http://data.semanticweb.org/person/scott-kirkpatrick"/>
+        <name>PlanetLab Europe</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/politecnico-di-milano">
+        <rdfs:label>Politecnico di Milano</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/pierluigi-plebani"/>
+        <name>Politecnico di Milano</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/portugal-telecom-inovacao">
+        <rdfs:label>Portugal Telecom Inovação</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/jorge-carapinha"/>
+        <member rdf:resource="http://data.semanticweb.org/person/marcio-melo"/>
+        <name>Portugal Telecom Inovação</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/sap-ag">
+        <rdfs:label>SAP</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/elmar-dorner"/>
+        <name>SAP</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/sap-research">
+        <rdfs:label>SAP Research</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/ildefons-magrans-de-abril"/>
+        <member rdf:resource="http://data.semanticweb.org/person/jens-happe"/>
+        <member rdf:resource="http://data.semanticweb.org/person/ulrich-winkler"/>
+        <member rdf:resource="http://data.semanticweb.org/person/wolfgang-theilmann"/>
+        <name>SAP Research</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/siminn-hf">
+        <rdfs:label>Síminn hf.</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/olafur-ingborsson"/>
+        <member rdf:resource="http://data.semanticweb.org/person/saemundur-thorsteinsson"/>
+        <name>Síminn hf.</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/sintef">
+        <rdfs:label>SINTEF</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/arne-j-berre"/>
+        <member rdf:resource="http://data.semanticweb.org/person/dumitru-roman"/>
+        <name>SINTEF</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/technische-universitaet-berlin">
+        <member rdf:resource="http://data.semanticweb.org/person/konrad-campowsky"/>
+        <name>Technische Universität Berlin</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/tuerk-telekom-a-s">
+        <rdfs:label>Türk Telekom A.S.</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/cagri-etemoglu"/>
+        <member rdf:resource="http://data.semanticweb.org/person/selami-ciftci"/>
+        <name>Türk Telekom A.S.</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/ulm-university">
+        <member rdf:resource="http://data.semanticweb.org/person/mario-volke"/>
+        <name>ULM University</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/universidad-politecnica-de-madrid">
+        <rdfs:label>Universidad Politécnica de Madrid</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/asuncion-gomez-perez"/>
+        <member rdf:resource="http://data.semanticweb.org/person/raul-garcia-castro"/>
+        <name>Universidad Politécnica de Madrid</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/universitaet-wuerzburg">
+        <rdfs:label>University of Würzburg</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/robert-henjes"/>
+        <name>University of Würzburg</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-applied-sciences-technikum-wien">
+        <rdfs:label>University of Applied Sciences Technikum Wien</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/michael-schwanzer"/>
+        <name>University of Applied Sciences Technikum Wien</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-kaiserslautern">
+        <rdfs:label>University of Kaiserslautern</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/bernd-reuther"/>
+        <member rdf:resource="http://data.semanticweb.org/person/daniel-guenther"/>
+        <member rdf:resource="http://data.semanticweb.org/person/dennis-schwerdel"/>
+        <member rdf:resource="http://data.semanticweb.org/person/paul-mueller"/>
+        <name>University of Kaiserslautern</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-oxford">
+        <member rdf:resource="http://data.semanticweb.org/person/jun-zhao"/>
+        <name>University of Oxford</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-pretoria">
+        <rdfs:label>University of Pretoria</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/hein-venter"/>
+        <member rdf:resource="http://data.semanticweb.org/person/ickin-vural"/>
+        <name>University of Pretoria</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-southampton">
+        <rdfs:label>University of Southampton</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/luc-moreau"/>
+        <member rdf:resource="http://data.semanticweb.org/person/rocio-aldeco-perez"/>
+        <name>University of Southampton</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-sydney">
+        <rdfs:label>University of Sydney</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/david-levy"/>
+        <member rdf:resource="http://data.semanticweb.org/person/yan-shvartzshnaider"/>
+        <name>University of Sydney</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-twente">
+        <member rdf:resource="http://data.semanticweb.org/person/iddo-bante"/>
+        <name>University of Twente</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-vienna">
+        <rdfs:label>University of Vienna</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/kurt-tutschku"/>
+        <name>University of Vienna</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/upm">
+        <rdfs:label>UPM</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/asuncion-gomez-perez"/>
+        <member rdf:resource="http://data.semanticweb.org/person/maria-del-carmen-suarez-de-figueroa"/>
+        <member rdf:resource="http://data.semanticweb.org/person/oscar-corcho"/>
+        <name>UPM</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands">
+        <member rdf:resource="http://data.semanticweb.org/person/paul-groth"/>
+        <name>Free University of Amsterdam</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/waterford-institute-of-technology">
+        <rdfs:label>Waterford Institute of Technology</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/eileen-dillon"/>
+        <member rdf:resource="http://data.semanticweb.org/person/frances-cleary-grant"/>
+        <member rdf:resource="http://data.semanticweb.org/person/gemma-power"/>
+        <name>Waterford Institute of Technology</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/ydreams">
+        <rdfs:label>YDreams</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/jose-danado"/>
+        <member rdf:resource="http://data.semanticweb.org/person/paulo-ricca"/>
+        <name>YDreams</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/zimory-gmbh">
+        <rdfs:label>Zimory GmbH</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/maximilian-ahrens"/>
+        <name>Zimory GmbH</name>
+    </Organization>
+
+    <Person rdf:about="http://data.semanticweb.org/person/">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair"/>
+        <rdfs:label> </rdfs:label>
+        <name> </name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/adrian-marte">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-universitaet-innsbruck"/>
+        <rdfs:label>Adrian Marte</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/2"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/3"/>
+        <mbox_sha1sum>7ae854a556d73b4957e15b6f13efc08eaa48e3e4</mbox_sha1sum>
+        <name>Adrian Marte</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/aldo-gangemi">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/how-to-develop-ontologies-using-the-neon-methodolo/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/cnr-istc-italy"/>
+        <name>Aldo Gangemi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alexander-wahler">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/finance"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-universitaet-innsbruck"/>
+        <rdfs:label>Alexander Wahler</rdfs:label>
+        <name>Alexander Wahler</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andreas-eberhart">
+        <rdfs:label>Andreas Eberhart</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/11"/>
+        <name>Andreas Eberhart</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andreas-hartl">
+        <rdfs:label>Andreas Hartl</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/1"/>
+        <name>Andreas Hartl</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/andreas-wagner">
+        <rdfs:label>Andreas Wagner</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/11"/>
+        <name>Andreas Wagner</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/anna-v-zhdanova">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/workshop"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ftw-telecommunications-research-center-vienna"/>
+        <rdfs:label>Anna Fensel</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/3"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/2"/>
+        <mbox_sha1sum>4802a0b7ba4035eb4e087d7f3290a32bc90e8267</mbox_sha1sum>
+        <name>Anna Fensel</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/anne-augustin">
+        <rdfs:label>Anne Augustin</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/5"/>
+        <name>Anne Augustin</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/arne-j-berre">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/technical-program-committee-co-internet-of-service"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/sintef"/>
+        <rdfs:label>Arne J. Berre</rdfs:label>
+        <name>Arne J. Berre</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/asuncion-gomez-perez">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/technical-program-committee-co-semantic-technologi"/>
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/how-to-develop-ontologies-using-the-neon-methodolo/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universidad-politecnica-de-madrid"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/upm"/>
+        <rdfs:label>Asun Gomez-Perez</rdfs:label>
+        <name>Asun Gomez-Perez</name>
+        <name>Asunción Gómez-Pérez</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/axel-polleres">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/meta-data"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <rdfs:label>Axel Polleres</rdfs:label>
+        <name>Axel Polleres</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/barry-norton">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/karlsruhe-institute-of-technology"/>
+        <rdfs:label>Barry Norton</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/2"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/3"/>
+        <mbox_sha1sum>d0e34d3c877274da8400cbf54501dfcbd3dbf2f1</mbox_sha1sum>
+        <name>Barry Norton</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/benedikt-linse">
+        <rdfs:label>Benedikt Linse</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/2"/>
+        <name>Benedikt Linse</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/bernd-reuther">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-kaiserslautern"/>
+        <rdfs:label>Bernd Reuther</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/1"/>
+        <mbox_sha1sum>110830d2a0201db2b36150267559d599ed6b946c</mbox_sha1sum>
+        <name>Bernd Reuther</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/blerim-cici">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/athens-university-of-economics-and-business"/>
+        <rdfs:label>Blerim Cici</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/2"/>
+        <mbox_sha1sum>200a7231f6042a718b6d93801d764465c6048dfa</mbox_sha1sum>
+        <name>Blerim Cici</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/cagri-etemoglu">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/tuerk-telekom-a-s"/>
+        <rdfs:label>Çagri Etemoglu</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/1"/>
+        <mbox_sha1sum>71c5ebb0e8da8e782db161328c7e65c4e91a46eb</mbox_sha1sum>
+        <name>Çagri Etemoglu</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/christian-bizer">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/pay-as-you-go-data-integration-on-the-public-web-o/speaker"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin"/>
+        <name>Christian Bizer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/daniel-guenther">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-kaiserslautern"/>
+        <rdfs:label>Daniel Günther</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/1"/>
+        <mbox_sha1sum>c96b2aedd3ff338acbe3a5ee4e913be24d4e4ed3</mbox_sha1sum>
+        <name>Daniel Günther</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/daniel-playfair">
+        <rdfs:label>Daniel Playfair</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/4"/>
+        <name>Daniel Playfair</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/david-levy">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-sydney"/>
+        <rdfs:label>David Levy</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/3"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/7"/>
+        <mbox_sha1sum>221000ab4144e63bae2fe5e6038b944d495ee238</mbox_sha1sum>
+        <name>David Levy</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dennis-schwerdel">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-kaiserslautern"/>
+        <rdfs:label>Dennis Schwerdel</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/1"/>
+        <mbox_sha1sum>68556954bb14deb67f2f11c1f62f8679fcecf462</mbox_sha1sum>
+        <name>Dennis Schwerdel</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dieter-fensel">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/conference"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-universitaet-innsbruck"/>
+        <rdfs:label>Dieter Fensel</rdfs:label>
+        <name>Dieter Fensel</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dominick-smyth">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/dublin-city-university"/>
+        <rdfs:label>Dominick Smyth</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/4"/>
+        <mbox_sha1sum>bb425247a1d44f8101df671ce9213a2a41a27017</mbox_sha1sum>
+        <name>Dominick Smyth</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/douglas-j-leith">
+        <rdfs:label>Douglas J. Leith</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/6"/>
+        <name>Douglas J. Leith</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dumitru-roman">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/workshop"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/sintef"/>
+        <rdfs:label>Dumitru Roman</rdfs:label>
+        <name>Dumitru Roman</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/eileen-dillon">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/waterford-institute-of-technology"/>
+        <rdfs:label>Eileen Dillon</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/4"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/9"/>
+        <mbox_sha1sum>7a6d3735c1f7f5eaa2d6ccb2ec9c506fd137ec2d</mbox_sha1sum>
+        <name>Eileen Dillon</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/elena-simperl">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/education"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/karlsruhe-institute-of-technology"/>
+        <rdfs:label>Elena Simperl</rdfs:label>
+        <name>Elena Simperl</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/elliot-jaffe">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/introduction-to-planetlab-europe-and-related-measu/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/planetlab-europe"/>
+        <name>Elliot Jaffe</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/elmar-dorner">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/panel"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/sap-ag"/>
+        <rdfs:label>Elmar Dorner</rdfs:label>
+        <name>Elmar Dorner</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/frances-cleary-grant">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/waterford-institute-of-technology"/>
+        <rdfs:label>Frances Cleary Grant</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/4"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/9"/>
+        <mbox_sha1sum>25eca202efc718bf861a1d707f1ae5084e73526e</mbox_sha1sum>
+        <name>Frances Cleary Grant</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/francois-bry">
+        <rdfs:label>François Bry</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/1"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/2"/>
+        <name>François Bry</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/franziska-von-dem-bussche">
+        <rdfs:label>Franziska von Dem Bussche</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/2"/>
+        <name>Franziska von Dem Bussche</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/gemma-power">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/waterford-institute-of-technology"/>
+        <rdfs:label>Gemma Power</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/4"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/9"/>
+        <mbox_sha1sum>382a35bafb3c91bf7757712c2a41172271b0cb9d</mbox_sha1sum>
+        <name>Gemma Power</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/george-polyzos">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/athens-university-of-economics-and-business"/>
+        <rdfs:label>George Polyzos</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/6"/>
+        <mbox_sha1sum>f72e634fc7bd32a4a54b75f5fe9560d916df0ef6</mbox_sha1sum>
+        <name>George Polyzos</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/george-xylomenos">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/athens-university-of-economics-and-business"/>
+        <rdfs:label>George Xylomenos</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/2"/>
+        <mbox_sha1sum>9232a524059d4f490a01405f9447687d6276f3e4</mbox_sha1sum>
+        <name>George Xylomenos</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/giannis-marias">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/athens-university-of-economics-and-business"/>
+        <rdfs:label>Giannis Marias</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/6"/>
+        <mbox_sha1sum>382a35bafb3c91bf7757712c2a41172271b0cb9d</mbox_sha1sum>
+        <name>Giannis Marias</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/giorgos-flouris">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/forth-ics"/>
+        <rdfs:label>Giorgos Flouris</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/8"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/1"/>
+        <mbox_sha1sum>dc808b065733afaf3aa11d334f478b26f7ef527d</mbox_sha1sum>
+        <name>Giorgos Flouris</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/grigoris-antoniou">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/forth-ics"/>
+        <rdfs:label>Grigoris Antoniou</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/8"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/1"/>
+        <name>Grigoris Antoniou</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/guenter-ladwig">
+        <rdfs:label>Gunter Ladwig</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/11"/>
+        <name>Gunter Ladwig</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/hannes-muehleisen">
+        <rdfs:label>Hannes Mühleisen</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/5"/>
+        <name>Hannes Mühleisen</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/harith-alani">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/poster-and-demo"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/kmi-the-open-university-uk"/>
+        <rdfs:label>Harith Alani</rdfs:label>
+        <name>Harith Alani</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/hein-venter">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-pretoria"/>
+        <rdfs:label>Hein Venter</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/1"/>
+        <name>Hein Venter</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ickin-vural">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-pretoria"/>
+        <rdfs:label>Ickin Vural</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/1"/>
+        <mbox_sha1sum>1969b79f411d69d6b2d014bbac3d2a0bc20ea3c6</mbox_sha1sum>
+        <name>Ickin Vural</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/iddo-bante">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/the-innovation-triathlon%3A-the-first-the-fastest-/speaker"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-twente"/>
+        <name>Iddo Bante</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ildefons-magrans-de-abril">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/sap-research"/>
+        <rdfs:label>Ildefons Magrans de Abril</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/5"/>
+        <name>Ildefons Magrans de Abril</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/irini-fundulaki">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/forth-ics"/>
+        <rdfs:label>Irini Fundulaki</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/8"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/1"/>
+        <mbox_sha1sum>3a79ff13627175c39272220b0ec5301003bdff4a</mbox_sha1sum>
+        <name>Irini Fundulaki</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/javier-aracil">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/introduction-to-planetlab-europe-and-related-measu/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/etomic"/>
+        <name>Javier Aracil</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jens-happe">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/sap-research"/>
+        <rdfs:label>Jens Happe</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/5"/>
+        <mbox_sha1sum>d73b91316a41a880cbdb1352c3eb007fec8d48fe</mbox_sha1sum>
+        <name>Jens Happe</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jorge-carapinha">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/portugal-telecom-inovacao"/>
+        <rdfs:label>Jorge Carapinha</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/1"/>
+        <mbox_sha1sum>9c99f30bbf4f87c07ffcee612c7cac17a36f079d</mbox_sha1sum>
+        <name>Jorge Carapinha</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jose-danado">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ydreams"/>
+        <rdfs:label>José Danado</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/2"/>
+        <mbox_sha1sum>5b920cc724180236bbdc88a1981c466227b84f55</mbox_sha1sum>
+        <name>José Danado</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jun-zhao">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/the-open-provenance-model/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-oxford"/>
+        <name>Jun Zhao</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kia-teymourian">
+        <rdfs:label>Kia Teymourian</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/5"/>
+        <name>Kia Teymourian</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/klara-weiand">
+        <rdfs:label>Klara Weiand</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/1"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/2"/>
+        <name>Klara Weiand</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/knud-moeller">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/meta-data"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <rdfs:label>Knud Möller</rdfs:label>
+        <name>Knud Möller</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/konrad-campowsky">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/federation-of-future-internet-research-experimenta/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/technische-universitaet-berlin"/>
+        <name>Konrad Campowsky</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kurt-tutschku">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/technical-program-committee-co-network-architectur"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-vienna"/>
+        <rdfs:label>Kurt Tutschku</rdfs:label>
+        <name>Kurt Tutschku</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/luc-moreau">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/the-open-provenance-model/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-southampton"/>
+        <rdfs:label>Luc Moreau</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/3"/>
+        <name>Luc Moreau</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/lyndon-j-b-nixon">
+        <rdfs:label>Lyndon Nixon</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/10"/>
+        <name>Lyndon Nixon</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marcin-davies">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ftw-telecommunications-research-center-vienna"/>
+        <rdfs:label>Marcin Davies</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/2"/>
+        <mbox_sha1sum>26638142e7057a1f9c4c687d7417cb2677f560d4</mbox_sha1sum>
+        <name>Marcin Davies</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marcio-melo">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/portugal-telecom-inovacao"/>
+        <rdfs:label>Márcio Melo</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/1"/>
+        <mbox_sha1sum>72071f557225d5335a7dab08722c4bc28653a973</mbox_sha1sum>
+        <name>Márcio Melo</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/maria-del-carmen-suarez-de-figueroa">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/how-to-develop-ontologies-using-the-neon-methodolo/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/upm"/>
+        <name>María Del Carmen Suárez de Figueroa</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/maria-michou">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/forth-ics"/>
+        <rdfs:label>Maria Michou</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/8"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/1"/>
+        <name>Maria Michou</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/mario-campolargo">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/keynote/boosting-future-internet-research-and-innovation-t/speaker"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/european-commission"/>
+        <name>Mario Campolargo</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/mario-volke">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/building-semantic-mashups-with-jigs4owl/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ulm-university"/>
+        <name>Mario Volke</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/mark-roantree">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/dublin-city-university"/>
+        <rdfs:label>Mark Roantree</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/4"/>
+        <mbox_sha1sum>2d90c909e32e1c9cc6f57801db71a90a950e5437</mbox_sha1sum>
+        <name>Mark Roantree</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marko-harasic">
+        <rdfs:label>Marko Harasic</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/5"/>
+        <name>Marko Harasic</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/marko-luther">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/tutorial"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/docomo"/>
+        <rdfs:label>Marko Luther</rdfs:label>
+        <name>Marko Luther</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/maximilian-ahrens">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/zimory-gmbh"/>
+        <rdfs:label>Maximilian Ahrens</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/2"/>
+        <mbox_sha1sum>7c8ba7160ae765d29cab0ae4c37cda9e959e2679</mbox_sha1sum>
+        <name>Maximilian Ahrens</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/maximilian-ott">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/nicta"/>
+        <rdfs:label>Maximilian Ott</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/3"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/7"/>
+        <mbox_sha1sum>d57ec17d35ca8184b6e0e5138ea1f26a03b09ab3</mbox_sha1sum>
+        <name>Maximilian Ott</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/michael-schwanzer">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-applied-sciences-technikum-wien"/>
+        <rdfs:label>Michael Schwanzer</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/3"/>
+        <mbox_sha1sum>f4781847baee9bd3d2610c48f204a2864f957673</mbox_sha1sum>
+        <name>Michael Schwanzer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/mohammad-hossein-rezvani">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/iran-university-of-science-and-technology-iust"/>
+        <rdfs:label>Mohammad Hossein Rezvani</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/5"/>
+        <mbox_sha1sum>adfb9f7ae9c8f15161817153b044850e495c8489</mbox_sha1sum>
+        <name>Mohammad Hossein Rezvani</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/morteza-analoui">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/iran-university-of-science-and-technology-iust"/>
+        <rdfs:label>Morteza Analoui</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/5"/>
+        <mbox_sha1sum>0e0a3267c2a2574fee2432ab385a1729f543eb30</mbox_sha1sum>
+        <name>Morteza Analoui</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nikos-fotiou">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/athens-university-of-economics-and-business"/>
+        <rdfs:label>Nikos Fotiou</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/6"/>
+        <mbox_sha1sum>a40d56367635ffb2d61e0cefc7a57b095553c061</mbox_sha1sum>
+        <name>Nikos Fotiou</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/olafur-ingborsson">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/siminn-hf"/>
+        <rdfs:label>Ólafur Ingbórsson</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/1"/>
+        <mbox_sha1sum>5e0653a0de1bcb67fd827b5f3a1d737c30e01c0e</mbox_sha1sum>
+        <name>Ólafur Ingbórsson</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/oscar-corcho">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/tutorial"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/upm"/>
+        <rdfs:label>Oscar Corcho</rdfs:label>
+        <name>Oscar Corcho</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/paolo-cappellari">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/dublin-city-university"/>
+        <rdfs:label>Paolo Cappellari</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/4"/>
+        <name>Paolo Cappellari</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/paul-groth">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/the-open-provenance-model/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands"/>
+        <name>Paul Groth</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/paul-mueller">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-kaiserslautern"/>
+        <rdfs:label>Paul Müller</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/1"/>
+        <mbox_sha1sum>efb942e986f931265668f8b4ad385b0aa8cccb53</mbox_sha1sum>
+        <name>Paul Müller</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/paul-weissmann">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deutsche-telekom-ag"/>
+        <rdfs:label>Paul Weissmann</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/1"/>
+        <mbox_sha1sum>b56714e9f5fbbddfb7ee1f8ea3c5de9a11626e5b</mbox_sha1sum>
+        <name>Paul Weissmann</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/paulo-ricca">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ydreams"/>
+        <rdfs:label>Paulo Ricca</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/2"/>
+        <mbox_sha1sum>9a55cecb966518331cbf3aa199e93776a08b4def</mbox_sha1sum>
+        <name>Paulo Ricca</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peter-feil">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deutsche-telekom-ag"/>
+        <rdfs:label>Peter Feil</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/1"/>
+        <mbox_sha1sum>ab1fe5becf8fc02d8499829f3daaad9bbb9203e2</mbox_sha1sum>
+        <name>Peter Feil</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/peter-haase">
+        <rdfs:label>Peter Haase</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/11"/>
+        <name>Peter Haase</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/pierluigi-plebani">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/poster-and-demo"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/politecnico-di-milano"/>
+        <rdfs:label>Pierluigi Plebani</rdfs:label>
+        <name>Pierluigi Plebani</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/raul-garcia-castro">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/publication"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universidad-politecnica-de-madrid"/>
+        <rdfs:label>Raúl García Castro</rdfs:label>
+        <name>Raúl García Castro</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/reto-krummenacher">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-universitaet-innsbruck"/>
+        <rdfs:label>Reto Krummenacher</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/2"/>
+        <mbox_sha1sum>227c6f6b1e1b54def057ea2a928f654ab410884d</mbox_sha1sum>
+        <name>Reto Krummenacher</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/reto-krummenancher">
+        <rdfs:label>Reto Krummenancher</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/3"/>
+        <name>Reto Krummenancher</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/robert-henjes">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/universitaet-wuerzburg"/>
+        <rdfs:label>Robert Henjes</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/1"/>
+        <mbox_sha1sum>34499316242d6d2a726b2b176cc06ff87cb5cdd8</mbox_sha1sum>
+        <name>Robert Henjes</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/robert-tolksdorf">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/local"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin"/>
+        <rdfs:label>Robert Tolksdorf</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/5"/>
+        <name>Robert Tolksdorf</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/rocio-aldeco-perez">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-southampton"/>
+        <rdfs:label>Rocio Aldeco-Perez</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/semantic_technologies/3"/>
+        <mbox_sha1sum>e53dd85942ac726a14636eada6fa5ec84e7b667c</mbox_sha1sum>
+        <name>Rocio Aldeco-Perez</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ruzica-piskac">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/education"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/epfl"/>
+        <rdfs:label>Ruzica Piskac</rdfs:label>
+        <name>Ruzica Piskac</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/saemundur-thorsteinsson">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/siminn-hf"/>
+        <rdfs:label>Saemundur Thorsteinsson</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/1"/>
+        <mbox_sha1sum>2cc0061af5da93421e6c24432bd3b0f7c85e9143</mbox_sha1sum>
+        <name>Saemundur Thorsteinsson</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/scott-kirkpatrick">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/introduction-to-planetlab-europe-and-related-measu/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/planetlab-europe"/>
+        <name>Scott Kirkpatrick</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sebastian-godelet">
+        <rdfs:label>Sebastian Godelet</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/11"/>
+        <name>Sebastian Godelet</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sebastian-wahle">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/federation-of-future-internet-research-experimenta/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/fraunhofer-fokus"/>
+        <name>Sebastian Wahle</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/selami-ciftci">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/tuerk-telekom-a-s"/>
+        <rdfs:label>Selami Çiftçi</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/industry/1"/>
+        <mbox_sha1sum>8787a341095404b209090275fb01810afb0f8672</mbox_sha1sum>
+        <name>Selami Çiftçi</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/thanh-tran">
+        <rdfs:label>Thanh Tran</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/11"/>
+        <name>Thanh Tran</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/thorsten-liebig">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/building-semantic-mashups-with-jigs4owl/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/derivo-gmbh"/>
+        <name>Thorsten Liebig</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/tim-furche">
+        <rdfs:label>Tim Furche</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/2"/>
+        <name>Tim Furche</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/tobias-mathass">
+        <rdfs:label>Tobias Mathaß</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/11"/>
+        <name>Tobias Mathaß</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/udo-bub">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/chair/industrial"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deutschen-telekom-ag-laboratories"/>
+        <rdfs:label>Udo Bub</rdfs:label>
+        <name>Udo Bub</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/ulrich-winkler">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/sap-research"/>
+        <rdfs:label>Ulrich Winkler</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/5"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/4"/>
+        <mbox_sha1sum>63fa9c03b14a16684da2d10deb03b0bdc1a7601d</mbox_sha1sum>
+        <name>Ulrich Winkler</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/valentina-presutti">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/conference/fis/2010/tutorial/how-to-develop-ontologies-using-the-neon-methodolo/organiser"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/cnr-istc-italy"/>
+        <name>Valentina Presutti</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/venkatram-badarla">
+        <rdfs:label>Venkatram Badarla</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/6"/>
+        <name>Venkatram Badarla</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/wolfgang-theilmann">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/sap-research"/>
+        <rdfs:label>Wolfgang Theilmann</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/internet_of_services_things_content/5"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/4"/>
+        <mbox_sha1sum>e2e54338df2cf0f8844ffdec869eb9e2e4a84653</mbox_sha1sum>
+        <name>Wolfgang Theilmann</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yan-shvartzshnaider">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-sydney"/>
+        <rdfs:label>Yan Shvartzshnaider</rdfs:label>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/3"/>
+        <made rdf:resource="http://data.semanticweb.org/conference/fis/2010/paper/posters/7"/>
+        <mbox_sha1sum>d048848c3ebf0c52a5a8c71e91d03faa5be55525</mbox_sha1sum>
+        <name>Yan Shvartzshnaider</name>
+    </Person>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/digearth/2010">
+        <swc:hasAcronym>DIGEARTH2010</swc:hasAcronym>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Towards Digital Earth: Search, Discover, and Share Geospatial Data</rdfs:label>
+        <ical:dtstart>2010-09-20</ical:dtstart>
+        <ical:summary>Towards Digital Earth: Search, Discover, and Share Geospatial Data</ical:summary>
+        <ical:url rdf:resource="http://ifgi.uni-muenster.de/DE2010/"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:WorkshopEvent>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/fes/2010">
+        <swc:hasAcronym>FES2010</swc:hasAcronym>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Future Enterprise Systems (FES)</rdfs:label>
+        <ical:dtstart>2010-09-20</ical:dtstart>
+        <ical:summary>Future Enterprise Systems (FES)</ical:summary>
+        <ical:url rdf:resource="http://coin.sti2.org/"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:WorkshopEvent>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/fiee/2010">
+        <swc:hasAcronym>FIEE2010</swc:hasAcronym>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Future of Internet in an Enlarged Europe</rdfs:label>
+        <ical:dtstart>2010-09-20</ical:dtstart>
+        <ical:summary>Future of Internet in an Enlarged Europe</ical:summary>
+        <ical:url rdf:resource="http://interop-vlab.eu/unite-project/unite-news-and-announcements/unite-workshop-201cfuture-of-internet-in-an-enlarged-europe201d"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:WorkshopEvent>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/mifi/2010">
+        <swc:hasAcronym>MIFI2010</swc:hasAcronym>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Mining the Future Internet</rdfs:label>
+        <ical:dtstart>2010-09-20</ical:dtstart>
+        <ical:summary>Mining the Future Internet</ical:summary>
+        <ical:url rdf:resource="http://mining-future-internet.org/"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:WorkshopEvent>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/onespace/2010">
+        <swc:hasAcronym>ONESPACE2010</swc:hasAcronym>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Onespace 2010: Blending Physical and Digital Spaces on the Internet</rdfs:label>
+        <ical:dtstart>2010-09-20</ical:dtstart>
+        <ical:summary>Onespace 2010: Blending Physical and Digital Spaces on the Internet</ical:summary>
+        <ical:url rdf:resource="http://onespace.kmi.open.ac.uk/2010/"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:WorkshopEvent>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/sefi/2010">
+        <swc:hasAcronym>SEFI2010</swc:hasAcronym>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/fis/2010"/>
+        <rdfs:label>Security in NGNs and the Future Internet</rdfs:label>
+        <ical:dtstart>2010-09-20</ical:dtstart>
+        <ical:summary>Security in NGNs and the Future Internet</ical:summary>
+        <ical:url rdf:resource="http://www.fokus.fraunhofer.de/go/fis2010-security-ws"/>
+        <based_near rdf:resource="http://dbpedia.org/resource/Berlin"/>
+    </swc:WorkshopEvent>
+</rdf:RDF>

@@ -19,7 +19,7 @@ type Federator struct {
 	ConfFromFileImage string           `json:"confFromFileImage"` //image that makes init file from dump or endpoint
 	InputFileDir      string           `json:"inputFileDir"`      //where the above image expects the dump to be(if from dump)
 	OutputFileDir     string           `json:"outputFileDir"`     //where the above image will place its result config file
-	ConfImage         string           `json:"initImage"`
+	ConfImage         string           `json:"confImage"`
 }
 
 // KobeExperimentSpec defines the desired state of KobeExperiment
@@ -28,11 +28,12 @@ type KobeExperimentSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
-	Benchmark     string      `json:"benchmark"`
-	Federators    []Federator `json:"federators"`
-	RunFlag       bool        `json:"runFlag"`
-	ClientImage   string      `json:"clientImage"`
-	ClientCommand []string    `json:"clientCommands"`
+	Benchmark    string      `json:"benchmark"`
+	Federators   []Federator `json:"federators"`
+	RunFlag      bool        `json:"runFlag"`
+	TimesToRun   int         `json:"timesToRun"`
+	EvalImage    string      `json:"evalImage"`
+	EvalCommands []string    `json:"evalCommands"`
 }
 
 // KobeExperimentStatus defines the observed state of KobeExperiment

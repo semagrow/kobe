@@ -1,0 +1,446 @@
+<http://data.semanticweb.org/conference/iswc-aswc/2007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent> .
+<http://data.semanticweb.org/conference/iswc-aswc/2007> <http://data.semanticweb.org/ns/swc/ontology#isSuperEventOf> <http://data.semanticweb.org/workshop/peas/2007> .
+<http://data.semanticweb.org/organization/agencia-catalana-de-certificacio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/agencia-catalana-de-certificacio> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Agencia_Catalana_de_Certificacio> .
+<http://data.semanticweb.org/organization/agencia-catalana-de-certificacio> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Agencia_Catalana_de_Certificacio> .
+<http://data.semanticweb.org/organization/agencia-catalana-de-certificacio> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7fbgx1 .
+_:node1dfqj7fbgx1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7fbgx1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "41.3887868890716" .
+_:node1dfqj7fbgx1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "2.15898513793945" .
+<http://data.semanticweb.org/organization/agencia-catalana-de-certificacio> <http://xmlns.com/foaf/0.1/homepage> <http://www.catcert.net/> .
+<http://data.semanticweb.org/organization/agencia-catalana-de-certificacio> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/ignacio-alamillo> .
+<http://data.semanticweb.org/organization/agencia-catalana-de-certificacio> <http://xmlns.com/foaf/0.1/name> "Agencia Catalana de Certificaci\u00F3" .
+<http://data.semanticweb.org/organization/agencia-catalana-de-certificacio> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/agencia-catalana-de-certificacio/html> .
+<http://data.semanticweb.org/organization/dlut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/dlut> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/DLUT> .
+<http://data.semanticweb.org/organization/dlut> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/DLUT> .
+<http://data.semanticweb.org/organization/dlut> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7fbgx2 .
+_:node1dfqj7fbgx2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7fbgx2 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "38.933241" .
+_:node1dfqj7fbgx2 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "121.609211" .
+<http://data.semanticweb.org/organization/dlut> <http://xmlns.com/foaf/0.1/homepage> <http://www.dlut.edu.cn/> .
+<http://data.semanticweb.org/organization/dlut> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/weisen-guo> .
+<http://data.semanticweb.org/organization/dlut> <http://xmlns.com/foaf/0.1/name> "DLUT" .
+<http://data.semanticweb.org/organization/dlut> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/dlut/html> .
+<http://data.semanticweb.org/organization/hong-kong-baptist-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/hong-kong-baptist-university> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Hong_Kong_Baptist_University> .
+<http://data.semanticweb.org/organization/hong-kong-baptist-university> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Hong_Kong_Baptist_University> .
+<http://data.semanticweb.org/organization/hong-kong-baptist-university> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7fbgx3 .
+_:node1dfqj7fbgx3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7fbgx3 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "22.337446" .
+_:node1dfqj7fbgx3 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "114.181949" .
+<http://data.semanticweb.org/organization/hong-kong-baptist-university> <http://xmlns.com/foaf/0.1/homepage> <http://www.hkbu.edu.hk/> .
+<http://data.semanticweb.org/organization/hong-kong-baptist-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/kai-kin-chan> .
+<http://data.semanticweb.org/organization/hong-kong-baptist-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/william-cheung> .
+<http://data.semanticweb.org/organization/hong-kong-baptist-university> <http://xmlns.com/foaf/0.1/name> "Hong Kong Baptist University" .
+<http://data.semanticweb.org/organization/hong-kong-baptist-university> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/hong-kong-baptist-university/html> .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/L3S_Research_Center> .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/L3S_Research_Center> .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7fbgx4 .
+_:node1dfqj7fbgx4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7fbgx4 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "52.38896" .
+_:node1dfqj7fbgx4 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "9.714672" .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://xmlns.com/foaf/0.1/homepage> <http://www.l3s.de/> .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/arne-koesling> .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/daniel-olmedilla> .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/ekaterini-ioannou> .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/juri-de-coi> .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/wolfgang-nejdl> .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://xmlns.com/foaf/0.1/name> "L3S Research Center" .
+<http://data.semanticweb.org/organization/l3s-research-center> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/l3s-research-center/html> .
+<http://data.semanticweb.org/organization/national-chengchi-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/national-chengchi-university> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/National_Chengchi_University> .
+<http://data.semanticweb.org/organization/national-chengchi-university> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/National_Chengchi_University> .
+<http://data.semanticweb.org/organization/national-chengchi-university> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7fbgx5 .
+_:node1dfqj7fbgx5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7fbgx5 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "24.986992" .
+_:node1dfqj7fbgx5 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "121.575222" .
+<http://data.semanticweb.org/organization/national-chengchi-university> <http://xmlns.com/foaf/0.1/homepage> <http://www.nccu.edu.tw/> .
+<http://data.semanticweb.org/organization/national-chengchi-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/yuh-jong-hu> .
+<http://data.semanticweb.org/organization/national-chengchi-university> <http://xmlns.com/foaf/0.1/name> "National Chengchi University" .
+<http://data.semanticweb.org/organization/national-chengchi-university> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/national-chengchi-university/html> .
+<http://data.semanticweb.org/organization/s21sec-labs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/s21sec-labs> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/S21sec_Labs> .
+<http://data.semanticweb.org/organization/s21sec-labs> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/S21sec_Labs> .
+<http://data.semanticweb.org/organization/s21sec-labs> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7fbgx6 .
+_:node1dfqj7fbgx6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7fbgx6 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "43.320725" .
+_:node1dfqj7fbgx6 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-1.984449" .
+<http://data.semanticweb.org/organization/s21sec-labs> <http://xmlns.com/foaf/0.1/homepage> <http://www.s21sec.com/> .
+<http://data.semanticweb.org/organization/s21sec-labs> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/daniel-chavarri> .
+<http://data.semanticweb.org/organization/s21sec-labs> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/mario-reyes-de-los-mozos> .
+<http://data.semanticweb.org/organization/s21sec-labs> <http://xmlns.com/foaf/0.1/name> "S21sec Labs" .
+<http://data.semanticweb.org/organization/s21sec-labs> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/s21sec-labs/html> .
+<http://data.semanticweb.org/organization/university-of-koblenz-landau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-koblenz-landau> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/University_of_Koblenz-Landau> .
+<http://data.semanticweb.org/organization/university-of-koblenz-landau> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/University_of_Koblenz-Landau> .
+<http://data.semanticweb.org/organization/university-of-koblenz-landau> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7fbgx7 .
+_:node1dfqj7fbgx7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7fbgx7 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "50.34144" .
+_:node1dfqj7fbgx7 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "7.594429" .
+<http://data.semanticweb.org/organization/university-of-koblenz-landau> <http://xmlns.com/foaf/0.1/homepage> <http://www.uni-koblenz-landau.de/> .
+<http://data.semanticweb.org/organization/university-of-koblenz-landau> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/christoph-ringelstein> .
+<http://data.semanticweb.org/organization/university-of-koblenz-landau> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/steffen-staab> .
+<http://data.semanticweb.org/organization/university-of-koblenz-landau> <http://xmlns.com/foaf/0.1/name> "University of Koblenz-Landau" .
+<http://data.semanticweb.org/organization/university-of-koblenz-landau> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/university-of-koblenz-landau/html> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/University_of_Tokyo> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/University_of_Tokyo> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7fbgx8 .
+_:node1dfqj7fbgx8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7fbgx8 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "35.669998" .
+_:node1dfqj7fbgx8 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "139.770004" .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/homepage> <http://www.u-tokyo.ac.jp/> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/steven-kraines> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/name> "University of Tokyo" .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/university-of-tokyo/html> .
+<http://data.semanticweb.org/organization/usc-isi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/usc-isi> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/USC_ISI> .
+<http://data.semanticweb.org/organization/usc-isi> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/USC_ISI> .
+<http://data.semanticweb.org/organization/usc-isi> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7fbgx9 .
+_:node1dfqj7fbgx9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7fbgx9 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "37.271875" .
+_:node1dfqj7fbgx9 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-119.27023" .
+<http://data.semanticweb.org/organization/usc-isi> <http://xmlns.com/foaf/0.1/homepage> <http://www.isi.edu/> .
+<http://data.semanticweb.org/organization/usc-isi> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/varun-ratnakar> .
+<http://data.semanticweb.org/organization/usc-isi> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/yolanda-gil> .
+<http://data.semanticweb.org/organization/usc-isi> <http://xmlns.com/foaf/0.1/name> "USC/ISI" .
+<http://data.semanticweb.org/organization/usc-isi> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/usc-isi/html> .
+<http://data.semanticweb.org/person/arne-koesling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/arne-koesling> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/l3s-research-center> .
+<http://data.semanticweb.org/person/arne-koesling> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Arne_Koesling> .
+<http://data.semanticweb.org/person/arne-koesling> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Arne_Koesling> .
+<http://data.semanticweb.org/person/arne-koesling> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/433> .
+<http://data.semanticweb.org/person/arne-koesling> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "dfae4454cd3a14714a563fe68c08047bdfd22ce7" .
+<http://data.semanticweb.org/person/arne-koesling> <http://xmlns.com/foaf/0.1/name> "Arne Koesling" .
+<http://data.semanticweb.org/person/arne-koesling> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Arne_Koesling> .
+<http://data.semanticweb.org/person/christoph-ringelstein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/christoph-ringelstein> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-koblenz-landau> .
+<http://data.semanticweb.org/person/christoph-ringelstein> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Christoph_Ringelstein> .
+<http://data.semanticweb.org/person/christoph-ringelstein> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Christoph_Ringelstein> .
+<http://data.semanticweb.org/person/christoph-ringelstein> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/442> .
+<http://data.semanticweb.org/person/christoph-ringelstein> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "f9494ac20a9ed51659ca68c10a1735eb7b3674c9" .
+<http://data.semanticweb.org/person/christoph-ringelstein> <http://xmlns.com/foaf/0.1/name> "Christoph Ringelstein" .
+<http://data.semanticweb.org/person/christoph-ringelstein> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Christoph_Ringelstein> .
+<http://data.semanticweb.org/person/daniel-chavarri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/daniel-chavarri> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/s21sec-labs> .
+<http://data.semanticweb.org/person/daniel-chavarri> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Daniel_Chavarri> .
+<http://data.semanticweb.org/person/daniel-chavarri> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Daniel_Chavarri> .
+<http://data.semanticweb.org/person/daniel-chavarri> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/447> .
+<http://data.semanticweb.org/person/daniel-chavarri> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "ffac7769a8fd3f248495ba0fec621a5885727492" .
+<http://data.semanticweb.org/person/daniel-chavarri> <http://xmlns.com/foaf/0.1/name> "Daniel Chavarri" .
+<http://data.semanticweb.org/person/daniel-chavarri> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Daniel_Chavarri> .
+<http://data.semanticweb.org/person/daniel-olmedilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/daniel-olmedilla> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/peas/2007/chair_0> .
+<http://data.semanticweb.org/person/daniel-olmedilla> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/l3s-research-center> .
+<http://data.semanticweb.org/person/daniel-olmedilla> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Daniel_Olmedilla> .
+<http://data.semanticweb.org/person/daniel-olmedilla> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Daniel_Olmedilla> .
+<http://data.semanticweb.org/person/daniel-olmedilla> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/433> .
+<http://data.semanticweb.org/person/daniel-olmedilla> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "c3a45a041dadb23f4b7dd53cde114f0a5132a8b2" .
+<http://data.semanticweb.org/person/daniel-olmedilla> <http://xmlns.com/foaf/0.1/name> "Daniel Olmedilla" .
+<http://data.semanticweb.org/person/daniel-olmedilla> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Daniel_Olmedilla> .
+<http://data.semanticweb.org/person/ekaterini-ioannou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ekaterini-ioannou> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/l3s-research-center> .
+<http://data.semanticweb.org/person/ekaterini-ioannou> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Ekaterini_Ioannou> .
+<http://data.semanticweb.org/person/ekaterini-ioannou> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Ekaterini_Ioannou> .
+<http://data.semanticweb.org/person/ekaterini-ioannou> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/433> .
+<http://data.semanticweb.org/person/ekaterini-ioannou> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "a0d6bda988db2919b655d08af45e0c88499c3a88" .
+<http://data.semanticweb.org/person/ekaterini-ioannou> <http://xmlns.com/foaf/0.1/name> "Ekaterini Ioannou" .
+<http://data.semanticweb.org/person/ekaterini-ioannou> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Ekaterini_Ioannou> .
+<http://data.semanticweb.org/person/ignacio-alamillo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ignacio-alamillo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/agencia-catalana-de-certificacio> .
+<http://data.semanticweb.org/person/ignacio-alamillo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Ignacio_Alamillo> .
+<http://data.semanticweb.org/person/ignacio-alamillo> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Ignacio_Alamillo> .
+<http://data.semanticweb.org/person/ignacio-alamillo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/447> .
+<http://data.semanticweb.org/person/ignacio-alamillo> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "fee514962af646c32b710c0af191760a644a5c58" .
+<http://data.semanticweb.org/person/ignacio-alamillo> <http://xmlns.com/foaf/0.1/name> "Ignacio Alamillo" .
+<http://data.semanticweb.org/person/ignacio-alamillo> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Ignacio_Alamillo> .
+<http://data.semanticweb.org/person/juri-de-coi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/juri-de-coi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/l3s-research-center> .
+<http://data.semanticweb.org/person/juri-de-coi> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Juri_De_Coi> .
+<http://data.semanticweb.org/person/juri-de-coi> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Juri_De_Coi> .
+<http://data.semanticweb.org/person/juri-de-coi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/433> .
+<http://data.semanticweb.org/person/juri-de-coi> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "493fcf27055b93d646235c00ba0221f67222823b" .
+<http://data.semanticweb.org/person/juri-de-coi> <http://xmlns.com/foaf/0.1/name> "Juri De Coi" .
+<http://data.semanticweb.org/person/juri-de-coi> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Juri_De_Coi> .
+<http://data.semanticweb.org/person/kai-kin-chan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/kai-kin-chan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/hong-kong-baptist-university> .
+<http://data.semanticweb.org/person/kai-kin-chan> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Kai-kin_Chan> .
+<http://data.semanticweb.org/person/kai-kin-chan> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Kai-kin_Chan> .
+<http://data.semanticweb.org/person/kai-kin-chan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/415> .
+<http://data.semanticweb.org/person/kai-kin-chan> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "1de587470103a7c22168d61d8d2223c3d6407498" .
+<http://data.semanticweb.org/person/kai-kin-chan> <http://xmlns.com/foaf/0.1/name> "Kai-kin Chan" .
+<http://data.semanticweb.org/person/kai-kin-chan> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Kai-kin_Chan> .
+<http://data.semanticweb.org/person/lalana-kagal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/lalana-kagal> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/peas/2007/chair_0> .
+<http://data.semanticweb.org/person/lalana-kagal> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "68047c6f3a10c173746fa3f6fc6f9218d2921d64" .
+<http://data.semanticweb.org/person/lalana-kagal> <http://xmlns.com/foaf/0.1/name> "Lalana Kagal" .
+<http://data.semanticweb.org/person/mario-reyes-de-los-mozos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/mario-reyes-de-los-mozos> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/s21sec-labs> .
+<http://data.semanticweb.org/person/mario-reyes-de-los-mozos> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Mario_Reyes_de_los_Mozos> .
+<http://data.semanticweb.org/person/mario-reyes-de-los-mozos> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Mario_Reyes_de_los_Mozos> .
+<http://data.semanticweb.org/person/mario-reyes-de-los-mozos> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/447> .
+<http://data.semanticweb.org/person/mario-reyes-de-los-mozos> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "528f0e997e13dcbbd2bc055239804fe75a965b1c" .
+<http://data.semanticweb.org/person/mario-reyes-de-los-mozos> <http://xmlns.com/foaf/0.1/name> "Mario Reyes de los Mozos" .
+<http://data.semanticweb.org/person/mario-reyes-de-los-mozos> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Mario_Reyes_de_los_Mozos> .
+<http://data.semanticweb.org/person/steffen-staab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/steffen-staab> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-koblenz-landau> .
+<http://data.semanticweb.org/person/steffen-staab> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Steffen_Staab> .
+<http://data.semanticweb.org/person/steffen-staab> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Steffen_Staab> .
+<http://data.semanticweb.org/person/steffen-staab> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/442> .
+<http://data.semanticweb.org/person/steffen-staab> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "ae8f32f31b69df2872d4c5d2e3bf21cf09cadf90" .
+<http://data.semanticweb.org/person/steffen-staab> <http://xmlns.com/foaf/0.1/name> "Steffen Staab" .
+<http://data.semanticweb.org/person/steffen-staab> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Steffen_Staab> .
+<http://data.semanticweb.org/person/steven-kraines> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/steven-kraines> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-tokyo> .
+<http://data.semanticweb.org/person/steven-kraines> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Steven_Kraines> .
+<http://data.semanticweb.org/person/steven-kraines> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Steven_Kraines> .
+<http://data.semanticweb.org/person/steven-kraines> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/347> .
+<http://data.semanticweb.org/person/steven-kraines> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "cae64abb3103a78139dd94a00e3c434dd8e8ae1a" .
+<http://data.semanticweb.org/person/steven-kraines> <http://xmlns.com/foaf/0.1/name> "Steven Kraines" .
+<http://data.semanticweb.org/person/steven-kraines> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Steven_Kraines> .
+<http://data.semanticweb.org/person/tim-finin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/tim-finin> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/peas/2007/chair_0> .
+<http://data.semanticweb.org/person/tim-finin> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "49953f47b9c33484a753eaf14102af56c0148d37" .
+<http://data.semanticweb.org/person/tim-finin> <http://xmlns.com/foaf/0.1/name> "Tim Finin" .
+<http://data.semanticweb.org/person/varun-ratnakar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/varun-ratnakar> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/usc-isi> .
+<http://data.semanticweb.org/person/varun-ratnakar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Varun_Ratnakar> .
+<http://data.semanticweb.org/person/varun-ratnakar> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Varun_Ratnakar> .
+<http://data.semanticweb.org/person/varun-ratnakar> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/415> .
+<http://data.semanticweb.org/person/varun-ratnakar> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "dfa9bf19ab9efc995c8bd65c8646ee173666f9e8" .
+<http://data.semanticweb.org/person/varun-ratnakar> <http://xmlns.com/foaf/0.1/name> "Varun Ratnakar" .
+<http://data.semanticweb.org/person/varun-ratnakar> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Varun_Ratnakar> .
+<http://data.semanticweb.org/person/weisen-guo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/weisen-guo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/dlut> .
+<http://data.semanticweb.org/person/weisen-guo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Weisen_Guo> .
+<http://data.semanticweb.org/person/weisen-guo> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Weisen_Guo> .
+<http://data.semanticweb.org/person/weisen-guo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/347> .
+<http://data.semanticweb.org/person/weisen-guo> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "e4586bbcfbdbbec422b07cb2aab0c0b3469bcf29" .
+<http://data.semanticweb.org/person/weisen-guo> <http://xmlns.com/foaf/0.1/name> "Weisen Guo" .
+<http://data.semanticweb.org/person/weisen-guo> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Weisen_Guo> .
+<http://data.semanticweb.org/person/william-cheung> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/william-cheung> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/hong-kong-baptist-university> .
+<http://data.semanticweb.org/person/william-cheung> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/William_Cheung> .
+<http://data.semanticweb.org/person/william-cheung> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/William_Cheung> .
+<http://data.semanticweb.org/person/william-cheung> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/415> .
+<http://data.semanticweb.org/person/william-cheung> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "894da0ab2f410c5fc8bb771f7295985987be47e8" .
+<http://data.semanticweb.org/person/william-cheung> <http://xmlns.com/foaf/0.1/name> "William Cheung" .
+<http://data.semanticweb.org/person/william-cheung> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/William_Cheung> .
+<http://data.semanticweb.org/person/wolfgang-nejdl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/wolfgang-nejdl> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/l3s-research-center> .
+<http://data.semanticweb.org/person/wolfgang-nejdl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Wolfgang_Nejdl> .
+<http://data.semanticweb.org/person/wolfgang-nejdl> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Wolfgang_Nejdl> .
+<http://data.semanticweb.org/person/wolfgang-nejdl> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/433> .
+<http://data.semanticweb.org/person/wolfgang-nejdl> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "8f4db0c244d721b7e92ce184bd4317b94bd2f494" .
+<http://data.semanticweb.org/person/wolfgang-nejdl> <http://xmlns.com/foaf/0.1/name> "Wolfgang Nejdl" .
+<http://data.semanticweb.org/person/wolfgang-nejdl> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Wolfgang_Nejdl> .
+<http://data.semanticweb.org/person/yolanda-gil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yolanda-gil> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/usc-isi> .
+<http://data.semanticweb.org/person/yolanda-gil> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Yolanda_Gil> .
+<http://data.semanticweb.org/person/yolanda-gil> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Yolanda_Gil> .
+<http://data.semanticweb.org/person/yolanda-gil> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/415> .
+<http://data.semanticweb.org/person/yolanda-gil> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "271995cf045094b4e575e4c7aaf3ad3006658cac" .
+<http://data.semanticweb.org/person/yolanda-gil> <http://xmlns.com/foaf/0.1/name> "Yolanda Gil" .
+<http://data.semanticweb.org/person/yolanda-gil> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Yolanda_Gil> .
+<http://data.semanticweb.org/person/yuh-jong-hu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yuh-jong-hu> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/national-chengchi-university> .
+<http://data.semanticweb.org/person/yuh-jong-hu> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Yuh-Jong_Hu> .
+<http://data.semanticweb.org/person/yuh-jong-hu> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Yuh-Jong_Hu> .
+<http://data.semanticweb.org/person/yuh-jong-hu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/peas/2007/papers/414> .
+<http://data.semanticweb.org/person/yuh-jong-hu> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d204805321eeeef99250f1411f8fb994afd15613" .
+<http://data.semanticweb.org/person/yuh-jong-hu> <http://xmlns.com/foaf/0.1/name> "Yuh-Jong Hu" .
+<http://data.semanticweb.org/person/yuh-jong-hu> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Yuh-Jong_Hu> .
+<http://data.semanticweb.org/workshop/peas/2007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/workshop/peas/2007> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/peas/2007/chair_0> .
+<http://data.semanticweb.org/workshop/peas/2007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/workshop/peas/2007> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/peas/2007/proceedings> .
+<http://data.semanticweb.org/workshop/peas/2007> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/peas/2007/chair_0> .
+<http://data.semanticweb.org/workshop/peas/2007> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/conference/iswc-aswc/2007> .
+<http://data.semanticweb.org/workshop/peas/2007> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Web Privacy Enforcement and Accountability Workshop" .
+<http://data.semanticweb.org/workshop/peas/2007> <http://www.w3.org/2002/12/cal/ical#summary> "Semantic Web Privacy Enforcement and Accountability Workshop" .
+<http://data.semanticweb.org/workshop/peas/2007> <http://www.w3.org/2002/12/cal/ical#url> <http://www.l3s.de/~olmedilla/events/2007/PEAS07> .
+<http://data.semanticweb.org/workshop/peas/2007> <http://data.semanticweb.org/ns/swc/ontology#completeGraph> <http://data.semanticweb.org/workshop/peas/2007/complete> .
+<http://data.semanticweb.org/workshop/peas/2007> <http://data.semanticweb.org/ns/swc/ontology#hasAcronym> "PEAS2007" .
+<http://data.semanticweb.org/workshop/peas/2007/chair_0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopOrganiser> .
+<http://data.semanticweb.org/workshop/peas/2007/chair_0> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/daniel-olmedilla> .
+<http://data.semanticweb.org/workshop/peas/2007/chair_0> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/lalana-kagal> .
+<http://data.semanticweb.org/workshop/peas/2007/chair_0> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/tim-finin> .
+<http://data.semanticweb.org/workshop/peas/2007/chair_0> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/peas/2007> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/peas/2007/proceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/peas/2007/talks/347> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/steven-kraines> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/weisen-guo> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://purl.org/dc/elements/1.1/title> "Recommendation Privacy Protection in Trust-based Knowledge Sharing Network" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://www.w3.org/2000/01/rdf-schema#label> "Recommendation Privacy Protection in Trust-based Knowledge Sharing Network" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://swrc.ontoware.org/ontology#abstract> "Trust can be applied to knowledge sharing on a distributed network of knowledge source agents. Each agent represents a person who trusts some other agents. Based on these trust-relationships, an agent can infer the trustworthiness of an unknown agent by asking trusted agents for recommendations. However, the person represented by an agent may not be willing to share his or her individual opinion about the trustwor-thiness of a particular agent to agents that do not protect information privacy. A solution for this issue is proposed using three kinds of privacy policies: generosity, caution, and non-cooperation. An agent that adopts the caution policy towards another agent will hide the details of the trust recommendation path. An analysis shows the effect of the privacy policies on the calculated reliabilities of the recommended trust values." .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/steven-kraines> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/weisen-guo> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://swrc.ontoware.org/ontology#title> "Recommendation Privacy Protection in Trust-based Knowledge Sharing Network" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7fbgx10 .
+_:node1dfqj7fbgx10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/weisen-guo> .
+_:node1dfqj7fbgx10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/steven-kraines> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/peas-2007-paper-347-recommendation-privacy> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/steven-kraines> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/347> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/weisen-guo> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/peas/2007/proceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/peas/2007/talks/414> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/yuh-jong-hu> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://purl.org/dc/elements/1.1/title> "Semantic-Driven Enforcement of Rights Delegation Policies via the Combination of Rules and Ontologies" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic-Driven Enforcement of Rights Delegation Policies via the Combination of Rules and Ontologies" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://swrc.ontoware.org/ontology#abstract> "We show that the semantic formal model for Open Digital Right Language (ODRL)-based rights \ndelegation policies can be enforced and expressed as a combination of ontologies and rules, e.g., Semantic Web Rule Language (SWRL). Based on ODRL's expressions and data dictionary, a rights delegation ontology is proposed in this study. Furthermore, we express the rights delegation policy as a set of ontology statements, rules, and facts for usage and transfer rights delegation. When verifying ODRL formal semantics, our SWRL approach is superior to the generic restricted First Order Logic (FOL) model because we have an understandable formal semantics of policies for automatic machine processing and a higher expressive power for policy compliance checking. On the other hand, the rights delegation semantics shown as a generic full FOL might have a higher complexity of license verification, which results in a  policy compliance checking that is possibly undecidable. A real usage rights delegation scenario for digital content is demonstrated in order to justify the feasibility of our formal semantic model for digital rights delegation. We hope this study will shed some light on future sensitive information usage and delegation rights controlled from a privacy protection perspective." .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/yuh-jong-hu> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://swrc.ontoware.org/ontology#title> "Semantic-Driven Enforcement of Rights Delegation Policies via the Combination of Rules and Ontologies" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7fbgx11 .
+_:node1dfqj7fbgx11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/yuh-jong-hu> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/peas-2007-paper-414-semanticdriven-enforcement> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/414> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/yuh-jong-hu> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/peas/2007/proceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/peas/2007/talks/415> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/kai-kin-chan> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/varun-ratnakar> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/william-cheung> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/yolanda-gil> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://purl.org/dc/elements/1.1/title> "Privacy Enforcement in Data Analysis Workflows" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://www.w3.org/2000/01/rdf-schema#label> "Privacy Enforcement in Data Analysis Workflows" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://swrc.ontoware.org/ontology#abstract> "Collaborative e-Science projects commonly require data analysis to be performed on distributed data sets which may contain sensitive information. In addition to the credential-based privacy protection, ensuring proper handling of computerized data for disclosure and analysis is particularly essential in e-Science. In this paper, we propose a semantic approach for enforcing it through workflow systems. We define privacy preservation and analysis-relevant terms as ontologies and incorporate them into a proposed policy framework to represent and enforce the policies. We believe that workflow systems with the proposed privacy-awareness incorporated could ease the scientists in setting up privacy polices that suit for different types of collaborative research projects and can help them in safeguarding the privacy of sensitive data throughout the data analysis lifecycle." .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/kai-kin-chan> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/varun-ratnakar> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/william-cheung> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/yolanda-gil> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://swrc.ontoware.org/ontology#title> "Privacy Enforcement in Data Analysis Workflows" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7fbgx12 .
+_:node1dfqj7fbgx12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/yolanda-gil> .
+_:node1dfqj7fbgx12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/william-cheung> .
+_:node1dfqj7fbgx12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/varun-ratnakar> .
+_:node1dfqj7fbgx12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/kai-kin-chan> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/peas-2007-paper-415-privacy-enforcement> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/kai-kin-chan> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/varun-ratnakar> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/william-cheung> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/415> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/yolanda-gil> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/peas/2007/proceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/peas/2007/talks/433> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/arne-koesling> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/daniel-olmedilla> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ekaterini-ioannou> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/juri-de-coi> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/wolfgang-nejdl> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://purl.org/dc/elements/1.1/title> "Access Control for Sharing Semantic Data across Desktops" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://www.w3.org/2000/01/rdf-schema#label> "Access Control for Sharing Semantic Data across Desktops" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://swrc.ontoware.org/ontology#abstract> "Personal Information Management (PIM) systems aim to provide convenient access to all data and metadata on a desktop to the user itself as well as the co-workers. Obviously, sharing desktop data with co-workers raises privacy and access control issues which have to be addressed. In this paper we discuss these issues, and present appropriate solutions. In line with the architecture of current PIM systems, our solutions cover all semantic data shared in such a context, i.e. all desktop resources as well as other data structures created by the system, such as metadata in an RDF store and inverted index entries created for efficient textual search. We discuss different kinds of policies to specify protection for desktop data and metadata, and describe our access control system to express and execute these policies efficiently. Additionally, we describe the extension of an existing PIM system, Beagle++, with our approach, as well as our experiments, with convincing results on performance and scalability." .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/arne-koesling> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/daniel-olmedilla> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ekaterini-ioannou> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/juri-de-coi> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/wolfgang-nejdl> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://swrc.ontoware.org/ontology#title> "Access Control for Sharing Semantic Data across Desktops" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7fbgx13 .
+_:node1dfqj7fbgx13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/ekaterini-ioannou> .
+_:node1dfqj7fbgx13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/juri-de-coi> .
+_:node1dfqj7fbgx13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/arne-koesling> .
+_:node1dfqj7fbgx13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/daniel-olmedilla> .
+_:node1dfqj7fbgx13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://data.semanticweb.org/person/wolfgang-nejdl> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/peas-2007-paper-433-access-control> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/arne-koesling> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/daniel-olmedilla> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ekaterini-ioannou> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/juri-de-coi> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/433> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/wolfgang-nejdl> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/peas/2007/proceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/peas/2007/talks/442> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/christoph-ringelstein> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/steffen-staab> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://purl.org/dc/elements/1.1/title> "Logging in Distributed Workflows" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://www.w3.org/2000/01/rdf-schema#label> "Logging in Distributed Workflows" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://swrc.ontoware.org/ontology#abstract> "Business needs are nowadays frequently realized by business workflows spanning multiple organizations. Current infrastructures, such as SOA, support this trend on the implementation side. As a side effect these issues of privacy and data protection arise, because data is shipped across organizational boundaries.  At the same time increased awareness about protection of privacy and IPR have lead to comprehensive contractual and legal constructs - including the information of services consumers about the ways their data is handled. We propose to solve such information requests in widely distributed workflow executions by gathering the related information during the execution and attaching it directly to the processed data. Together with the data this information is passed through the workflow and at the end it is returned to the service consumer." .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/christoph-ringelstein> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/steffen-staab> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://swrc.ontoware.org/ontology#title> "Logging in Distributed Workflows" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7fbgx14 .
+_:node1dfqj7fbgx14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/christoph-ringelstein> .
+_:node1dfqj7fbgx14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/steffen-staab> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/peas-2007-paper-442-logging-in> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/christoph-ringelstein> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/442> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/steffen-staab> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/peas/2007/proceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/peas/2007/talks/447> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/daniel-chavarri> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ignacio-alamillo> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/mario-reyes-de-los-mozos> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://purl.org/dc/elements/1.1/title> "Privacy and Capability Management for the European eIDM Framework" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://www.w3.org/2000/01/rdf-schema#label> "Privacy and Capability Management for the European eIDM Framework" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://swrc.ontoware.org/ontology#abstract> "The natural evolution of eGovernment is to go beyond the management of identities and therefore it is necessary to manage people, companies or organizations, and their capabilities to interact with Public Administrations. When developing an application based on an eID management system, this management issue must be tackled within each application (i.e. demonstrate the capability of one person to act, demonstrate the economical reliability, demonstrate his professional status, etc ...) and is normally based on the local jurisdiction. The objective of the present paper is to introduce a distributed system for the privacy-enhanced management of the capabilities associated to a person within the EU framework, independently from the origin and destination EU member state. The core of this system is the intelligence of the Capabilities Resolution Nodes (CRN) to cope with the complexity of the capability resolution and the capability sources discovery in the pan-European scenario. A European Capacity Resolution Network will be able to grow up the interoperability of the digital identities provided and valid in each member state and will answer the question \u201Cis this person, identified with this digital identity and who is described by those attributes, allowed to carry out this legal act in this country according to its law?\u201D." .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/daniel-chavarri> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ignacio-alamillo> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/mario-reyes-de-los-mozos> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://swrc.ontoware.org/ontology#title> "Privacy and Capability Management for the European eIDM Framework" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7fbgx15 .
+_:node1dfqj7fbgx15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/mario-reyes-de-los-mozos> .
+_:node1dfqj7fbgx15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/ignacio-alamillo> .
+_:node1dfqj7fbgx15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/daniel-chavarri> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/peas-2007-paper-447-privacy-and> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/daniel-chavarri> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ignacio-alamillo> .
+<http://data.semanticweb.org/workshop/peas/2007/papers/447> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/mario-reyes-de-los-mozos> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#Proceedings> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/peas/2007/papers/347> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/peas/2007/papers/414> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/peas/2007/papers/415> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/peas/2007/papers/433> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/peas/2007/papers/442> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/peas/2007/papers/447> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/peas/2007> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://swrc.ontoware.org/ontology#booktitle> "Proceedings of the Workshop on Privacy Enforcement and Accountability with Semantics (PEAS2007) at ISWC/ASWC2007, Busan, South Korea" .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/daniel-olmedilla> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/lalana-kagal> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/tim-finin> .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/peas/2007/proceedings> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#editorList> _:node1dfqj7fbgx16 .
+_:node1dfqj7fbgx16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/tim-finin> .
+_:node1dfqj7fbgx16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/lalana-kagal> .
+_:node1dfqj7fbgx16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/daniel-olmedilla> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/347> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/347> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/peas/2007/papers/347> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/347> <http://www.w3.org/2000/01/rdf-schema#label> "Recommendation Privacy Protection in Trust-based Knowledge Sharing Network" .
+<http://data.semanticweb.org/workshop/peas/2007/talks/347> <http://www.w3.org/2002/12/cal/ical#summary> "Recommendation Privacy Protection in Trust-based Knowledge Sharing Network" .
+<http://data.semanticweb.org/workshop/peas/2007/talks/414> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/414> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/peas/2007/papers/414> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/414> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic-Driven Enforcement of Rights Delegation Policies via the Combination of Rules and Ontologies" .
+<http://data.semanticweb.org/workshop/peas/2007/talks/414> <http://www.w3.org/2002/12/cal/ical#summary> "Semantic-Driven Enforcement of Rights Delegation Policies via the Combination of Rules and Ontologies" .
+<http://data.semanticweb.org/workshop/peas/2007/talks/415> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/415> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/peas/2007/papers/415> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/415> <http://www.w3.org/2000/01/rdf-schema#label> "Privacy Enforcement in Data Analysis Workflows" .
+<http://data.semanticweb.org/workshop/peas/2007/talks/415> <http://www.w3.org/2002/12/cal/ical#summary> "Privacy Enforcement in Data Analysis Workflows" .
+<http://data.semanticweb.org/workshop/peas/2007/talks/433> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/433> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/peas/2007/papers/433> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/433> <http://www.w3.org/2000/01/rdf-schema#label> "Access Control for Sharing Semantic Data across Desktops" .
+<http://data.semanticweb.org/workshop/peas/2007/talks/433> <http://www.w3.org/2002/12/cal/ical#summary> "Access Control for Sharing Semantic Data across Desktops" .
+<http://data.semanticweb.org/workshop/peas/2007/talks/442> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/442> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/peas/2007/papers/442> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/442> <http://www.w3.org/2000/01/rdf-schema#label> "Logging in Distributed Workflows" .
+<http://data.semanticweb.org/workshop/peas/2007/talks/442> <http://www.w3.org/2002/12/cal/ical#summary> "Logging in Distributed Workflows" .
+<http://data.semanticweb.org/workshop/peas/2007/talks/447> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/447> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/peas/2007/papers/447> .
+<http://data.semanticweb.org/workshop/peas/2007/talks/447> <http://www.w3.org/2000/01/rdf-schema#label> "Privacy and Capability Management for the European eIDM Framework" .
+<http://data.semanticweb.org/workshop/peas/2007/talks/447> <http://www.w3.org/2002/12/cal/ical#summary> "Privacy and Capability Management for the European eIDM Framework" .

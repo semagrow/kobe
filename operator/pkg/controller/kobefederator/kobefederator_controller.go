@@ -223,22 +223,23 @@ func (r *ReconcileKobeFederator) newDeploymentForFederator(m *kobefederatorv1alp
 
 	//create init containers definitions that make one config file for federator per dataset
 	initContainers := []corev1.Container{}
-	vmounts := []corev1.VolumeMount{}
 	volumes := []corev1.Volume{}
 	for i, datasetname := range m.Spec.DatasetNames {
 		//each init container is given DATASET_NAME and DATASET_ENDPOINT environment variables to work with)
 		//also inputfiledir and outputfiledir both point to exports/<datasetname>dumps and exports/dataset respectively to nfs server
+		vmounts := []corev1.VolumeMount{}
 		envs := []corev1.EnvVar{}
 		env := corev1.EnvVar{Name: "DATASET_NAME", Value: datasetname}
 		envs = append(envs, env)
 		env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: m.Spec.Endpoints[i]}
 		envs = append(envs, env)
 
-		volume := corev1.Volume{Name: "nfs" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/dump"}}}
-		volumes = append(volumes, volume)
+		volume1 := corev1.Volume{Name: "nfs-in-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/dump"}}}
+		volume2 := corev1.Volume{Name: "nfs-out-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/"}}}
+		volumes = append(volumes, volume1, volume2)
 
-		vmountin := corev1.VolumeMount{Name: "nfs" + datasetname, MountPath: m.Spec.InputFileDir}
-		vmountout := corev1.VolumeMount{Name: "nfs" + datasetname, MountPath: m.Spec.OutputFileDir}
+		vmountin := corev1.VolumeMount{Name: "nfs-in-" + datasetname, MountPath: m.Spec.InputFileDir}
+		vmountout := corev1.VolumeMount{Name: "nfs-out-" + datasetname, MountPath: m.Spec.OutputFileDir}
 		vmounts = append(vmounts, vmountin, vmountout)
 
 		container := corev1.Container{

@@ -1,0 +1,1216 @@
+<http://data.semanticweb.org/organization/bosch-research> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/bosch-research> <http://www.w3.org/2000/01/rdf-schema#label> "Bosch Research" .
+<http://data.semanticweb.org/organization/bosch-research> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/baoshi-yan> .
+<http://data.semanticweb.org/organization/bosch-research> <http://xmlns.com/foaf/0.1/name> "Bosch Research" .
+<http://data.semanticweb.org/organization/chinese-academy-of-sciences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/chinese-academy-of-sciences> <http://www.w3.org/2000/01/rdf-schema#label> "Chinese Academy of Sciences" .
+<http://data.semanticweb.org/organization/chinese-academy-of-sciences> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/songmao-zhang> .
+<http://data.semanticweb.org/organization/chinese-academy-of-sciences> <http://xmlns.com/foaf/0.1/name> "Chinese Academy of Sciences" .
+<http://data.semanticweb.org/organization/clinical-informatics-r-d-partners-healthcare-system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/clinical-informatics-r-d-partners-healthcare-system> <http://www.w3.org/2000/01/rdf-schema#label> "Clinical Informatics R&D, Partners HealthCare System" .
+<http://data.semanticweb.org/organization/clinical-informatics-r-d-partners-healthcare-system> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/vipul-kashyap> .
+<http://data.semanticweb.org/organization/clinical-informatics-r-d-partners-healthcare-system> <http://xmlns.com/foaf/0.1/name> "Clinical Informatics R&D, Partners HealthCare System" .
+<http://data.semanticweb.org/organization/fbk-irst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/fbk-irst> <http://www.w3.org/2000/01/rdf-schema#label> "FBK-IRST" .
+<http://data.semanticweb.org/organization/fbk-irst> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/luciano-serafini> .
+<http://data.semanticweb.org/organization/fbk-irst> <http://xmlns.com/foaf/0.1/name> "FBK-IRST" .
+<http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> <http://www.w3.org/2000/01/rdf-schema#label> "DFKI" .
+<http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/ludger-van-elst> .
+<http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> <http://xmlns.com/foaf/0.1/name> "DFKI" .
+<http://data.semanticweb.org/organization/iiia-csic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/iiia-csic> <http://www.w3.org/2000/01/rdf-schema#label> "IIIA-CSIC" .
+<http://data.semanticweb.org/organization/iiia-csic> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/marco-schorlemmer> .
+<http://data.semanticweb.org/organization/iiia-csic> <http://xmlns.com/foaf/0.1/name> "IIIA-CSIC" .
+<http://data.semanticweb.org/organization/informatica-trentina-s-p-a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/informatica-trentina-s-p-a> <http://www.w3.org/2000/01/rdf-schema#label> "Informatica Trentina S.P.A." .
+<http://data.semanticweb.org/organization/informatica-trentina-s-p-a> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/ivan-pilati> .
+<http://data.semanticweb.org/organization/informatica-trentina-s-p-a> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/pavel-shvaiko> .
+<http://data.semanticweb.org/organization/informatica-trentina-s-p-a> <http://xmlns.com/foaf/0.1/name> "Informatica Trentina S.P.A." .
+<http://data.semanticweb.org/organization/inria-rhone-alpes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/inria-rhone-alpes> <http://www.w3.org/2000/01/rdf-schema#label> "INRIA" .
+<http://data.semanticweb.org/organization/inria-rhone-alpes> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/jerome-david> .
+<http://data.semanticweb.org/organization/inria-rhone-alpes> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/jerome-euzenat> .
+<http://data.semanticweb.org/organization/inria-rhone-alpes> <http://xmlns.com/foaf/0.1/name> "INRIA" .
+<http://data.semanticweb.org/organization/isti-cnr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/isti-cnr> <http://www.w3.org/2000/01/rdf-schema#label> "ISTI-C.N.R." .
+<http://data.semanticweb.org/organization/isti-cnr> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/umberto-straccia> .
+<http://data.semanticweb.org/organization/isti-cnr> <http://xmlns.com/foaf/0.1/name> "ISTI-C.N.R." .
+<http://data.semanticweb.org/organization/lig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/lig> <http://www.w3.org/2000/01/rdf-schema#label> "LIG" .
+<http://data.semanticweb.org/organization/lig> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/jerome-david> .
+<http://data.semanticweb.org/organization/lig> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/jerome-euzenat> .
+<http://data.semanticweb.org/organization/lig> <http://xmlns.com/foaf/0.1/name> "LIG" .
+<http://data.semanticweb.org/organization/linkoepings-universitet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/linkoepings-universitet> <http://www.w3.org/2000/01/rdf-schema#label> "Link\u00F6pings Universitet" .
+<http://data.semanticweb.org/organization/linkoepings-universitet> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/patrick-lambrix> .
+<http://data.semanticweb.org/organization/linkoepings-universitet> <http://xmlns.com/foaf/0.1/name> "Link\u00F6pings Universitet" .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://www.w3.org/2000/01/rdf-schema#label> "National Institute of Informatics" .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/ryutaro-ichise> .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://xmlns.com/foaf/0.1/name> "National Institute of Informatics" .
+<http://data.semanticweb.org/organization/ricoh-europe-plc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/ricoh-europe-plc> <http://www.w3.org/2000/01/rdf-schema#label> "Ricoh Europe plc." .
+<http://data.semanticweb.org/organization/ricoh-europe-plc> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/yannis-kalfoglou> .
+<http://data.semanticweb.org/organization/ricoh-europe-plc> <http://xmlns.com/foaf/0.1/name> "Ricoh Europe plc." .
+<http://data.semanticweb.org/organization/sap-ag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/sap-ag> <http://www.w3.org/2000/01/rdf-schema#label> "SAP" .
+<http://data.semanticweb.org/organization/sap-ag> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/york-sure> .
+<http://data.semanticweb.org/organization/sap-ag> <http://xmlns.com/foaf/0.1/name> "SAP" .
+<http://data.semanticweb.org/organization/southeast-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/southeast-university> <http://www.w3.org/2000/01/rdf-schema#label> "Southeast University" .
+<http://data.semanticweb.org/organization/southeast-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/wei-hu> .
+<http://data.semanticweb.org/organization/southeast-university> <http://xmlns.com/foaf/0.1/name> "Southeast University" .
+<http://data.semanticweb.org/organization/stanford-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/stanford-university> <http://www.w3.org/2000/01/rdf-schema#label> "Stanford University" .
+<http://data.semanticweb.org/organization/stanford-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/natalya-noy> .
+<http://data.semanticweb.org/organization/stanford-university> <http://xmlns.com/foaf/0.1/name> "Stanford University" .
+<http://data.semanticweb.org/organization/taslab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/taslab> <http://www.w3.org/2000/01/rdf-schema#label> "TasLab" .
+<http://data.semanticweb.org/organization/taslab> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/ivan-pilati> .
+<http://data.semanticweb.org/organization/taslab> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/pavel-shvaiko> .
+<http://data.semanticweb.org/organization/taslab> <http://xmlns.com/foaf/0.1/name> "TasLab" .
+<http://data.semanticweb.org/organization/the-mitre-corporation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/the-mitre-corporation> <http://www.w3.org/2000/01/rdf-schema#label> "The MITRE Corporation" .
+<http://data.semanticweb.org/organization/the-mitre-corporation> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/peter-mork> .
+<http://data.semanticweb.org/organization/the-mitre-corporation> <http://xmlns.com/foaf/0.1/name> "The MITRE Corporation" .
+<http://data.semanticweb.org/organization/university-of-alberta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-alberta> <http://www.w3.org/2000/01/rdf-schema#label> "University of Alberta" .
+<http://data.semanticweb.org/organization/university-of-alberta> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/eleni-stroulia> .
+<http://data.semanticweb.org/organization/university-of-alberta> <http://xmlns.com/foaf/0.1/name> "University of Alberta" .
+<http://data.semanticweb.org/organization/university-of-calabria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-calabria> <http://www.w3.org/2000/01/rdf-schema#label> "University of Calabria" .
+<http://data.semanticweb.org/organization/university-of-calabria> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/luigi-palopoli> .
+<http://data.semanticweb.org/organization/university-of-calabria> <http://xmlns.com/foaf/0.1/name> "University of Calabria" .
+<http://data.semanticweb.org/organization/university-of-edinburgh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-edinburgh> <http://www.w3.org/2000/01/rdf-schema#label> "University of Edinburgh" .
+<http://data.semanticweb.org/organization/university-of-edinburgh> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/paolo-besana> .
+<http://data.semanticweb.org/organization/university-of-edinburgh> <http://xmlns.com/foaf/0.1/name> "University of Edinburgh" .
+<http://data.semanticweb.org/organization/university-of-illinois-at-chicago> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-illinois-at-chicago> <http://www.w3.org/2000/01/rdf-schema#label> "University of Illinois at Chicago" .
+<http://data.semanticweb.org/organization/university-of-illinois-at-chicago> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/isabel-cruz> .
+<http://data.semanticweb.org/organization/university-of-illinois-at-chicago> <http://xmlns.com/foaf/0.1/name> "University of Illinois at Chicago" .
+<http://data.semanticweb.org/organization/university-of-mannheim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-mannheim> <http://www.w3.org/2000/01/rdf-schema#label> "University of Mannheim" .
+<http://data.semanticweb.org/organization/university-of-mannheim> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/christian-meilicke> .
+<http://data.semanticweb.org/organization/university-of-mannheim> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/organization/university-of-mannheim> <http://xmlns.com/foaf/0.1/name> "University of Mannheim" .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://www.w3.org/2000/01/rdf-schema#label> "University of Trento" .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/fausto-giunchiglia> .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/paolo-bouquet> .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/yannis-velegrakis> .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://xmlns.com/foaf/0.1/name> "University of Trento" .
+<http://data.semanticweb.org/organization/us-national-library-of-medicine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/us-national-library-of-medicine> <http://www.w3.org/2000/01/rdf-schema#label> "US National Library of Medicine" .
+<http://data.semanticweb.org/organization/us-national-library-of-medicine> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/olivier-bodenreider> .
+<http://data.semanticweb.org/organization/us-national-library-of-medicine> <http://xmlns.com/foaf/0.1/name> "US National Library of Medicine" .
+<http://data.semanticweb.org/organization/vienna-university-of-technology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/vienna-university-of-technology> <http://www.w3.org/2000/01/rdf-schema#label> "Vienna University of Technology" .
+<http://data.semanticweb.org/organization/vienna-university-of-technology> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/monika-lanzenberger> .
+<http://data.semanticweb.org/organization/vienna-university-of-technology> <http://xmlns.com/foaf/0.1/name> "Vienna University of Technology" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/2000/01/rdf-schema#label> "Vrije Universiteit Amsterdam" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/antoine-isaac> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/name> "Vrije Universiteit Amsterdam" .
+<http://data.semanticweb.org/person/alfio-ferrara> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alfio-ferrara> <http://www.w3.org/2000/01/rdf-schema#label> "Alfio Ferrara" .
+<http://data.semanticweb.org/person/alfio-ferrara> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/2> .
+<http://data.semanticweb.org/person/alfio-ferrara> <http://xmlns.com/foaf/0.1/name> "Alfio Ferrara" .
+<http://data.semanticweb.org/person/anthony-jameson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/anthony-jameson> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/anthony-jameson> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> .
+<http://data.semanticweb.org/person/anthony-jameson> <http://www.w3.org/2000/01/rdf-schema#label> "Anthony Jameson" .
+<http://data.semanticweb.org/person/anthony-jameson> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/anthony-jameson> <http://xmlns.com/foaf/0.1/name> "Anthony Jameson" .
+<http://data.semanticweb.org/person/antoine-isaac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/antoine-isaac> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/antoine-isaac> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> .
+<http://data.semanticweb.org/person/antoine-isaac> <http://www.w3.org/2000/01/rdf-schema#label> "Antoine Isaac" .
+<http://data.semanticweb.org/person/antoine-isaac> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Netherlands> .
+<http://data.semanticweb.org/person/antoine-isaac> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/5> .
+<http://data.semanticweb.org/person/antoine-isaac> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/antoine-isaac> <http://xmlns.com/foaf/0.1/name> "Antoine Isaac" .
+<http://data.semanticweb.org/person/baoshi-yan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/baoshi-yan> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/baoshi-yan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/bosch-research> .
+<http://data.semanticweb.org/person/baoshi-yan> <http://www.w3.org/2000/01/rdf-schema#label> "Baoshi Yan" .
+<http://data.semanticweb.org/person/baoshi-yan> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/baoshi-yan> <http://xmlns.com/foaf/0.1/name> "Baoshi Yan" .
+<http://data.semanticweb.org/person/baowen-xu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/baowen-xu> <http://www.w3.org/2000/01/rdf-schema#label> "Baowen Xu" .
+<http://data.semanticweb.org/person/baowen-xu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/14> .
+<http://data.semanticweb.org/person/baowen-xu> <http://xmlns.com/foaf/0.1/name> "Baowen Xu" .
+<http://data.semanticweb.org/person/brigitte-safar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/brigitte-safar> <http://www.w3.org/2000/01/rdf-schema#label> "Brigitte Safar" .
+<http://data.semanticweb.org/person/brigitte-safar> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/19> .
+<http://data.semanticweb.org/person/brigitte-safar> <http://xmlns.com/foaf/0.1/name> "Brigitte Safar" .
+<http://data.semanticweb.org/person/cassia-trojahn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/cassia-trojahn> <http://www.w3.org/2000/01/rdf-schema#label> "Cassia Trojahn" .
+<http://data.semanticweb.org/person/cassia-trojahn> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/5> .
+<http://data.semanticweb.org/person/cassia-trojahn> <http://xmlns.com/foaf/0.1/name> "Cassia Trojahn" .
+<http://data.semanticweb.org/person/caterina-caracciolo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/caterina-caracciolo> <http://www.w3.org/2000/01/rdf-schema#label> "Caterina Caracciolo" .
+<http://data.semanticweb.org/person/caterina-caracciolo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/caterina-caracciolo> <http://xmlns.com/foaf/0.1/name> "Caterina Caracciolo" .
+<http://data.semanticweb.org/person/chantal-reynaud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/chantal-reynaud> <http://www.w3.org/2000/01/rdf-schema#label> "Chantal Reynaud" .
+<http://data.semanticweb.org/person/chantal-reynaud> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/19> .
+<http://data.semanticweb.org/person/chantal-reynaud> <http://xmlns.com/foaf/0.1/name> "Chantal Reynaud" .
+<http://data.semanticweb.org/person/christian-meilicke> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/christian-meilicke> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/christian-meilicke> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-mannheim> .
+<http://data.semanticweb.org/person/christian-meilicke> <http://www.w3.org/2000/01/rdf-schema#label> "Christian Meilicke" .
+<http://data.semanticweb.org/person/christian-meilicke> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/christian-meilicke> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/1> .
+<http://data.semanticweb.org/person/christian-meilicke> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/23> .
+<http://data.semanticweb.org/person/christian-meilicke> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/christian-meilicke> <http://xmlns.com/foaf/0.1/name> "Christian Meilicke" .
+<http://data.semanticweb.org/person/christoph-quix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/christoph-quix> <http://www.w3.org/2000/01/rdf-schema#label> "Christoph Quix" .
+<http://data.semanticweb.org/person/christoph-quix> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/13> .
+<http://data.semanticweb.org/person/christoph-quix> <http://xmlns.com/foaf/0.1/name> "Christoph Quix" .
+<http://data.semanticweb.org/person/daniel-sonntag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/daniel-sonntag> <http://www.w3.org/2000/01/rdf-schema#label> "Daniel Sonntag" .
+<http://data.semanticweb.org/person/daniel-sonntag> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/27> .
+<http://data.semanticweb.org/person/daniel-sonntag> <http://xmlns.com/foaf/0.1/name> "Daniel Sonntag" .
+<http://data.semanticweb.org/person/daniele-montanari> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/daniele-montanari> <http://www.w3.org/2000/01/rdf-schema#label> "Daniele Montanari" .
+<http://data.semanticweb.org/person/daniele-montanari> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/26> .
+<http://data.semanticweb.org/person/daniele-montanari> <http://xmlns.com/foaf/0.1/name> "Daniele Montanari" .
+<http://data.semanticweb.org/person/david-kensche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/david-kensche> <http://www.w3.org/2000/01/rdf-schema#label> "David Kensche" .
+<http://data.semanticweb.org/person/david-kensche> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/13> .
+<http://data.semanticweb.org/person/david-kensche> <http://xmlns.com/foaf/0.1/name> "David Kensche" .
+<http://data.semanticweb.org/person/david-macii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/david-macii> <http://www.w3.org/2000/01/rdf-schema#label> "David Macii" .
+<http://data.semanticweb.org/person/david-macii> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/25> .
+<http://data.semanticweb.org/person/david-macii> <http://xmlns.com/foaf/0.1/name> "David Macii" .
+<http://data.semanticweb.org/person/davide-lorusso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/davide-lorusso> <http://www.w3.org/2000/01/rdf-schema#label> "Davide Lorusso" .
+<http://data.semanticweb.org/person/davide-lorusso> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/2> .
+<http://data.semanticweb.org/person/davide-lorusso> <http://xmlns.com/foaf/0.1/name> "Davide Lorusso" .
+<http://data.semanticweb.org/person/domenico-beneventano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/domenico-beneventano> <http://www.w3.org/2000/01/rdf-schema#label> "Domenico Beneventano" .
+<http://data.semanticweb.org/person/domenico-beneventano> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/26> .
+<http://data.semanticweb.org/person/domenico-beneventano> <http://xmlns.com/foaf/0.1/name> "Domenico Beneventano" .
+<http://data.semanticweb.org/person/eduardo-mena> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/eduardo-mena> <http://www.w3.org/2000/01/rdf-schema#label> "Eduardo Mena" .
+<http://data.semanticweb.org/person/eduardo-mena> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/11> .
+<http://data.semanticweb.org/person/eduardo-mena> <http://xmlns.com/foaf/0.1/name> "Eduardo Mena" .
+<http://data.semanticweb.org/person/eleni-stroulia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/eleni-stroulia> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/eleni-stroulia> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-alberta> .
+<http://data.semanticweb.org/person/eleni-stroulia> <http://www.w3.org/2000/01/rdf-schema#label> "Eleni Stroulia" .
+<http://data.semanticweb.org/person/eleni-stroulia> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Canada> .
+<http://data.semanticweb.org/person/eleni-stroulia> <http://xmlns.com/foaf/0.1/name> "Eleni Stroulia" .
+<http://data.semanticweb.org/person/enrico-motta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/enrico-motta> <http://www.w3.org/2000/01/rdf-schema#label> "Enrico Motta" .
+<http://data.semanticweb.org/person/enrico-motta> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/12> .
+<http://data.semanticweb.org/person/enrico-motta> <http://xmlns.com/foaf/0.1/name> "Enrico Motta" .
+<http://data.semanticweb.org/person/fabio-andreatta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/fabio-andreatta> <http://www.w3.org/2000/01/rdf-schema#label> "Fabio Andreatta" .
+<http://data.semanticweb.org/person/fabio-andreatta> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/25> .
+<http://data.semanticweb.org/person/fabio-andreatta> <http://xmlns.com/foaf/0.1/name> "Fabio Andreatta" .
+<http://data.semanticweb.org/person/fausto-giunchiglia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/fausto-giunchiglia> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/fausto-giunchiglia> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-trento-italy> .
+<http://data.semanticweb.org/person/fausto-giunchiglia> <http://www.w3.org/2000/01/rdf-schema#label> "Fausto Giunchiglia" .
+<http://data.semanticweb.org/person/fausto-giunchiglia> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "ad1bf97094dfdc9d370fdf06df968c90c4b4852d" .
+<http://data.semanticweb.org/person/fausto-giunchiglia> <http://xmlns.com/foaf/0.1/name> "Fausto Giunchiglia" .
+<http://data.semanticweb.org/person/faycal-hamdi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/faycal-hamdi> <http://www.w3.org/2000/01/rdf-schema#label> "Faycal Hamdi" .
+<http://data.semanticweb.org/person/faycal-hamdi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/19> .
+<http://data.semanticweb.org/person/faycal-hamdi> <http://xmlns.com/foaf/0.1/name> "Faycal Hamdi" .
+<http://data.semanticweb.org/person/gianluca-correndo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/gianluca-correndo> <http://www.w3.org/2000/01/rdf-schema#label> "Gianluca Correndo" .
+<http://data.semanticweb.org/person/gianluca-correndo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/6> .
+<http://data.semanticweb.org/person/gianluca-correndo> <http://xmlns.com/foaf/0.1/name> "Gianluca Correndo" .
+<http://data.semanticweb.org/person/giorgos-stamou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/giorgos-stamou> <http://www.w3.org/2000/01/rdf-schema#label> "Giorgos Stamou" .
+<http://data.semanticweb.org/person/giorgos-stamou> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/2> .
+<http://data.semanticweb.org/person/giorgos-stamou> <http://xmlns.com/foaf/0.1/name> "Giorgos Stamou" .
+<http://data.semanticweb.org/person/giorgos-stoilos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/giorgos-stoilos> <http://www.w3.org/2000/01/rdf-schema#label> "Giorgos Stoilos" .
+<http://data.semanticweb.org/person/giorgos-stoilos> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/2> .
+<http://data.semanticweb.org/person/giorgos-stoilos> <http://xmlns.com/foaf/0.1/name> "Giorgos Stoilos" .
+<http://data.semanticweb.org/person/guus-schreiber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/guus-schreiber> <http://www.w3.org/2000/01/rdf-schema#label> "Guus Schreiber" .
+<http://data.semanticweb.org/person/guus-schreiber> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/24> .
+<http://data.semanticweb.org/person/guus-schreiber> <http://xmlns.com/foaf/0.1/name> "Guus Schreiber" .
+<http://data.semanticweb.org/person/haifa-zargayouna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/haifa-zargayouna> <http://www.w3.org/2000/01/rdf-schema#label> "Haifa Zargayouna" .
+<http://data.semanticweb.org/person/haifa-zargayouna> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/19> .
+<http://data.semanticweb.org/person/haifa-zargayouna> <http://xmlns.com/foaf/0.1/name> "Haifa Zargayouna" .
+<http://data.semanticweb.org/person/hap-kolb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/hap-kolb> <http://www.w3.org/2000/01/rdf-schema#label> "Hap Kolb" .
+<http://data.semanticweb.org/person/hap-kolb> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/24> .
+<http://data.semanticweb.org/person/hap-kolb> <http://xmlns.com/foaf/0.1/name> "Hap Kolb" .
+<http://data.semanticweb.org/person/harith-alani> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/harith-alani> <http://www.w3.org/2000/01/rdf-schema#label> "Harith Alani" .
+<http://data.semanticweb.org/person/harith-alani> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/6> .
+<http://data.semanticweb.org/person/harith-alani> <http://xmlns.com/foaf/0.1/name> "Harith Alani" .
+<http://data.semanticweb.org/person/he-tan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/he-tan> <http://www.w3.org/2000/01/rdf-schema#label> "He Tan" .
+<http://data.semanticweb.org/person/he-tan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/17> .
+<http://data.semanticweb.org/person/he-tan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/21> .
+<http://data.semanticweb.org/person/he-tan> <http://xmlns.com/foaf/0.1/name> "He Tan" .
+<http://data.semanticweb.org/person/heiko-paulheim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/heiko-paulheim> <http://www.w3.org/2000/01/rdf-schema#label> "Heiko Paulheim" .
+<http://data.semanticweb.org/person/heiko-paulheim> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/20> .
+<http://data.semanticweb.org/person/heiko-paulheim> <http://xmlns.com/foaf/0.1/name> "Heiko Paulheim" .
+<http://data.semanticweb.org/person/heiner-stuckenschmidt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/heiner-stuckenschmidt> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/heiner-stuckenschmidt> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-mannheim> .
+<http://data.semanticweb.org/person/heiner-stuckenschmidt> <http://www.w3.org/2000/01/rdf-schema#label> "Heiner Stuckenschmidt" .
+<http://data.semanticweb.org/person/heiner-stuckenschmidt> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/1> .
+<http://data.semanticweb.org/person/heiner-stuckenschmidt> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/23> .
+<http://data.semanticweb.org/person/heiner-stuckenschmidt> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/heiner-stuckenschmidt> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "f072571d8c8abd21e637a9dec2c5e835165c8ece" .
+<http://data.semanticweb.org/person/heiner-stuckenschmidt> <http://xmlns.com/foaf/0.1/name> "Heiner Stuckenschmidt" .
+<http://data.semanticweb.org/person/isabel-cruz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/isabel-cruz> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/isabel-cruz> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-illinois-at-chicago> .
+<http://data.semanticweb.org/person/isabel-cruz> <http://www.w3.org/2000/01/rdf-schema#label> "Isabel Cruz" .
+<http://data.semanticweb.org/person/isabel-cruz> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/isabel-cruz> <http://xmlns.com/foaf/0.1/name> "Isabel Cruz" .
+<http://data.semanticweb.org/person/ivan-pilati> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ivan-pilati> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/ivan-pilati> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/informatica-trentina-s-p-a> .
+<http://data.semanticweb.org/person/ivan-pilati> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/taslab> .
+<http://data.semanticweb.org/person/ivan-pilati> <http://www.w3.org/2000/01/rdf-schema#label> "Ivan Pilati" .
+<http://data.semanticweb.org/person/ivan-pilati> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/ivan-pilati> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/25> .
+<http://data.semanticweb.org/person/ivan-pilati> <http://xmlns.com/foaf/0.1/name> "Ivan Pilati" .
+<http://data.semanticweb.org/person/jan-hettenhausen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jan-hettenhausen> <http://www.w3.org/2000/01/rdf-schema#label> "Jan Hettenhausen" .
+<http://data.semanticweb.org/person/jan-hettenhausen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/15> .
+<http://data.semanticweb.org/person/jan-hettenhausen> <http://xmlns.com/foaf/0.1/name> "Jan Hettenhausen" .
+<http://data.semanticweb.org/person/jerome-david> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jerome-david> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/jerome-david> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/inria-rhone-alpes> .
+<http://data.semanticweb.org/person/jerome-david> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/lig> .
+<http://data.semanticweb.org/person/jerome-david> <http://www.w3.org/2000/01/rdf-schema#label> "Jerome David" .
+<http://data.semanticweb.org/person/jerome-david> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/France> .
+<http://data.semanticweb.org/person/jerome-david> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/3> .
+<http://data.semanticweb.org/person/jerome-david> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/9> .
+<http://data.semanticweb.org/person/jerome-david> <http://xmlns.com/foaf/0.1/name> "Jerome David" .
+<http://data.semanticweb.org/person/jerome-euzenat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jerome-euzenat> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/jerome-euzenat> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/inria-rhone-alpes> .
+<http://data.semanticweb.org/person/jerome-euzenat> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/lig> .
+<http://data.semanticweb.org/person/jerome-euzenat> <http://www.w3.org/2000/01/rdf-schema#label> "Jerome Euzenat" .
+<http://data.semanticweb.org/person/jerome-euzenat> <http://www.w3.org/2000/01/rdf-schema#label> "J\u00E9r\u00F4me Euzenat" .
+<http://data.semanticweb.org/person/jerome-euzenat> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/3> .
+<http://data.semanticweb.org/person/jerome-euzenat> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/jerome-euzenat> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "22bc9bfef9e568c1439538b6a03d4cd8becf01f9" .
+<http://data.semanticweb.org/person/jerome-euzenat> <http://xmlns.com/foaf/0.1/name> "Jerome Euzenat" .
+<http://data.semanticweb.org/person/jerome-euzenat> <http://xmlns.com/foaf/0.1/name> "J\u00E9r\u00F4me Euzenat" .
+<http://data.semanticweb.org/person/jie-tang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jie-tang> <http://www.w3.org/2000/01/rdf-schema#label> "Jie Tang" .
+<http://data.semanticweb.org/person/jie-tang> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/16> .
+<http://data.semanticweb.org/person/jie-tang> <http://xmlns.com/foaf/0.1/name> "Jie Tang" .
+<http://data.semanticweb.org/person/john-domingue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/john-domingue> <http://www.w3.org/2000/01/rdf-schema#label> "John Domingue" .
+<http://data.semanticweb.org/person/john-domingue> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/28> .
+<http://data.semanticweb.org/person/john-domingue> <http://xmlns.com/foaf/0.1/name> "John Domingue" .
+<http://data.semanticweb.org/person/jorge-gracia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jorge-gracia> <http://www.w3.org/2000/01/rdf-schema#label> "Jorge Gracia" .
+<http://data.semanticweb.org/person/jorge-gracia> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/11> .
+<http://data.semanticweb.org/person/jorge-gracia> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/18> .
+<http://data.semanticweb.org/person/jorge-gracia> <http://xmlns.com/foaf/0.1/name> "Jorge Gracia" .
+<http://data.semanticweb.org/person/juan-pane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/juan-pane> <http://www.w3.org/2000/01/rdf-schema#label> "Juan Pane" .
+<http://data.semanticweb.org/person/juan-pane> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/juan-pane> <http://xmlns.com/foaf/0.1/name> "Juan Pane" .
+<http://data.semanticweb.org/person/juanzi-li> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/juanzi-li> <http://www.w3.org/2000/01/rdf-schema#label> "Juanzi Li" .
+<http://data.semanticweb.org/person/juanzi-li> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/16> .
+<http://data.semanticweb.org/person/juanzi-li> <http://xmlns.com/foaf/0.1/name> "Juanzi Li" .
+<http://data.semanticweb.org/person/juergen-bock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/juergen-bock> <http://www.w3.org/2000/01/rdf-schema#label> "Jurgen Bock" .
+<http://data.semanticweb.org/person/juergen-bock> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/15> .
+<http://data.semanticweb.org/person/juergen-bock> <http://xmlns.com/foaf/0.1/name> "Jurgen Bock" .
+<http://data.semanticweb.org/person/konstantin-todorov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/konstantin-todorov> <http://www.w3.org/2000/01/rdf-schema#label> "Konstantin Todorov" .
+<http://data.semanticweb.org/person/konstantin-todorov> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/22> .
+<http://data.semanticweb.org/person/konstantin-todorov> <http://xmlns.com/foaf/0.1/name> "Konstantin Todorov" .
+<http://data.semanticweb.org/person/laura-hollink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/laura-hollink> <http://www.w3.org/2000/01/rdf-schema#label> "Laura Hollink" .
+<http://data.semanticweb.org/person/laura-hollink> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/laura-hollink> <http://xmlns.com/foaf/0.1/name> "Laura Hollink" .
+<http://data.semanticweb.org/person/luca-mion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/luca-mion> <http://www.w3.org/2000/01/rdf-schema#label> "Luca Mion" .
+<http://data.semanticweb.org/person/luca-mion> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/25> .
+<http://data.semanticweb.org/person/luca-mion> <http://xmlns.com/foaf/0.1/name> "Luca Mion" .
+<http://data.semanticweb.org/person/luciano-serafini> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/luciano-serafini> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/luciano-serafini> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/fbk-irst> .
+<http://data.semanticweb.org/person/luciano-serafini> <http://www.w3.org/2000/01/rdf-schema#label> "Luciano Serafini" .
+<http://data.semanticweb.org/person/luciano-serafini> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/luciano-serafini> <http://xmlns.com/foaf/0.1/name> "Luciano Serafini" .
+<http://data.semanticweb.org/person/ludger-van-elst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ludger-van-elst> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/ludger-van-elst> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/german-research-center-for-artificial-intelligence-dfki> .
+<http://data.semanticweb.org/person/ludger-van-elst> <http://www.w3.org/2000/01/rdf-schema#label> "Ludger van Elst" .
+<http://data.semanticweb.org/person/ludger-van-elst> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/ludger-van-elst> <http://xmlns.com/foaf/0.1/name> "Ludger van Elst" .
+<http://data.semanticweb.org/person/luigi-palopoli> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/luigi-palopoli> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/luigi-palopoli> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-calabria> .
+<http://data.semanticweb.org/person/luigi-palopoli> <http://www.w3.org/2000/01/rdf-schema#label> "Luigi Palopoli" .
+<http://data.semanticweb.org/person/luigi-palopoli> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/luigi-palopoli> <http://xmlns.com/foaf/0.1/name> "Luigi Palopoli" .
+<http://data.semanticweb.org/person/mansur-r-kabuka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/mansur-r-kabuka> <http://www.w3.org/2000/01/rdf-schema#label> "Mansur R. Kabuka" .
+<http://data.semanticweb.org/person/mansur-r-kabuka> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/10> .
+<http://data.semanticweb.org/person/mansur-r-kabuka> <http://xmlns.com/foaf/0.1/name> "Mansur R. Kabuka" .
+<http://data.semanticweb.org/person/marco-schorlemmer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/marco-schorlemmer> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/marco-schorlemmer> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/iiia-csic> .
+<http://data.semanticweb.org/person/marco-schorlemmer> <http://www.w3.org/2000/01/rdf-schema#label> "Marco Schorlemmer" .
+<http://data.semanticweb.org/person/marco-schorlemmer> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Spain> .
+<http://data.semanticweb.org/person/marco-schorlemmer> <http://xmlns.com/foaf/0.1/name> "Marco Schorlemmer" .
+<http://data.semanticweb.org/person/maria-vargas-vera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/maria-vargas-vera> <http://www.w3.org/2000/01/rdf-schema#label> "Maria Vargas-Vera" .
+<http://data.semanticweb.org/person/maria-vargas-vera> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/12> .
+<http://data.semanticweb.org/person/maria-vargas-vera> <http://xmlns.com/foaf/0.1/name> "Maria Vargas-Vera" .
+<http://data.semanticweb.org/person/marta-sabou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/marta-sabou> <http://www.w3.org/2000/01/rdf-schema#label> "Marta Sabou" .
+<http://data.semanticweb.org/person/marta-sabou> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/18> .
+<http://data.semanticweb.org/person/marta-sabou> <http://xmlns.com/foaf/0.1/name> "Marta Sabou" .
+<http://data.semanticweb.org/person/masaki-aono> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/masaki-aono> <http://www.w3.org/2000/01/rdf-schema#label> "Masaki Aono" .
+<http://data.semanticweb.org/person/masaki-aono> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/8> .
+<http://data.semanticweb.org/person/masaki-aono> <http://xmlns.com/foaf/0.1/name> "Masaki Aono" .
+<http://data.semanticweb.org/person/md-hanif-seddiqui> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/md-hanif-seddiqui> <http://www.w3.org/2000/01/rdf-schema#label> "Md. Hanif Seddiqui" .
+<http://data.semanticweb.org/person/md-hanif-seddiqui> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/8> .
+<http://data.semanticweb.org/person/md-hanif-seddiqui> <http://xmlns.com/foaf/0.1/name> "Md. Hanif Seddiqui" .
+<http://data.semanticweb.org/person/miklos-nagy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/miklos-nagy> <http://www.w3.org/2000/01/rdf-schema#label> "Miklos Nagy" .
+<http://data.semanticweb.org/person/miklos-nagy> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/12> .
+<http://data.semanticweb.org/person/miklos-nagy> <http://xmlns.com/foaf/0.1/name> "Miklos Nagy" .
+<http://data.semanticweb.org/person/monika-lanzenberger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/monika-lanzenberger> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/monika-lanzenberger> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vienna-university-of-technology> .
+<http://data.semanticweb.org/person/monika-lanzenberger> <http://www.w3.org/2000/01/rdf-schema#label> "Monika Lanzenberger" .
+<http://data.semanticweb.org/person/monika-lanzenberger> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Austria> .
+<http://data.semanticweb.org/person/monika-lanzenberger> <http://xmlns.com/foaf/0.1/name> "Monika Lanzenberger" .
+<http://data.semanticweb.org/person/natalya-noy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/natalya-noy> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/natalya-noy> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/stanford-university> .
+<http://data.semanticweb.org/person/natalya-noy> <http://www.w3.org/2000/01/rdf-schema#label> "Natasha Noy" .
+<http://data.semanticweb.org/person/natalya-noy> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/natalya-noy> <http://xmlns.com/foaf/0.1/name> "Natasha Noy" .
+<http://data.semanticweb.org/person/olivier-bodenreider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/olivier-bodenreider> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/olivier-bodenreider> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/us-national-library-of-medicine> .
+<http://data.semanticweb.org/person/olivier-bodenreider> <http://www.w3.org/2000/01/rdf-schema#label> "Olivier Bodenreider" .
+<http://data.semanticweb.org/person/olivier-bodenreider> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/olivier-bodenreider> <http://xmlns.com/foaf/0.1/name> "Olivier Bodenreider" .
+<http://data.semanticweb.org/person/ondrej-svab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ondrej-svab> <http://www.w3.org/2000/01/rdf-schema#label> "Ondrej Svab-Zamazal" .
+<http://data.semanticweb.org/person/ondrej-svab> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/23> .
+<http://data.semanticweb.org/person/ondrej-svab> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/ondrej-svab> <http://xmlns.com/foaf/0.1/name> "Ondrej Svab-Zamazal" .
+<http://data.semanticweb.org/person/paolo-besana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/paolo-besana> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/paolo-besana> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-edinburgh> .
+<http://data.semanticweb.org/person/paolo-besana> <http://www.w3.org/2000/01/rdf-schema#label> "Paolo Besana" .
+<http://data.semanticweb.org/person/paolo-besana> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/UK> .
+<http://data.semanticweb.org/person/paolo-besana> <http://xmlns.com/foaf/0.1/name> "Paolo Besana" .
+<http://data.semanticweb.org/person/paolo-bouquet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/paolo-bouquet> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/paolo-bouquet> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-trento-italy> .
+<http://data.semanticweb.org/person/paolo-bouquet> <http://www.w3.org/2000/01/rdf-schema#label> "Paolo Bouquet" .
+<http://data.semanticweb.org/person/paolo-bouquet> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/paolo-bouquet> <http://xmlns.com/foaf/0.1/name> "Paolo Bouquet" .
+<http://data.semanticweb.org/person/patrick-lambrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/patrick-lambrix> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/patrick-lambrix> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/linkoepings-universitet> .
+<http://data.semanticweb.org/person/patrick-lambrix> <http://www.w3.org/2000/01/rdf-schema#label> "Patrick Lambrix" .
+<http://data.semanticweb.org/person/patrick-lambrix> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Sweden> .
+<http://data.semanticweb.org/person/patrick-lambrix> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/17> .
+<http://data.semanticweb.org/person/patrick-lambrix> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/21> .
+<http://data.semanticweb.org/person/patrick-lambrix> <http://xmlns.com/foaf/0.1/name> "Patrick Lambrix" .
+<http://data.semanticweb.org/person/paul-smart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/paul-smart> <http://www.w3.org/2000/01/rdf-schema#label> "Paul Smart" .
+<http://data.semanticweb.org/person/paul-smart> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/6> .
+<http://data.semanticweb.org/person/paul-smart> <http://xmlns.com/foaf/0.1/name> "Paul Smart" .
+<http://data.semanticweb.org/person/paulo-quaresma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/paulo-quaresma> <http://www.w3.org/2000/01/rdf-schema#label> "Paulo Quaresma" .
+<http://data.semanticweb.org/person/paulo-quaresma> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/5> .
+<http://data.semanticweb.org/person/paulo-quaresma> <http://xmlns.com/foaf/0.1/name> "Paulo Quaresma" .
+<http://data.semanticweb.org/person/pavel-shvaiko> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/pavel-shvaiko> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/pavel-shvaiko> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/informatica-trentina-s-p-a> .
+<http://data.semanticweb.org/person/pavel-shvaiko> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/taslab> .
+<http://data.semanticweb.org/person/pavel-shvaiko> <http://www.w3.org/2000/01/rdf-schema#label> "Pavel Shvaiko" .
+<http://data.semanticweb.org/person/pavel-shvaiko> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/pavel-shvaiko> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "6fc18ceccfe31ac7c9d76fea4e28a96b6fdd804e" .
+<http://data.semanticweb.org/person/pavel-shvaiko> <http://xmlns.com/foaf/0.1/name> "Pavel Shvaiko" .
+<http://data.semanticweb.org/person/peng-wang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/peng-wang> <http://www.w3.org/2000/01/rdf-schema#label> "Peng Wang" .
+<http://data.semanticweb.org/person/peng-wang> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/14> .
+<http://data.semanticweb.org/person/peng-wang> <http://xmlns.com/foaf/0.1/name> "Peng Wang" .
+<http://data.semanticweb.org/person/peter-geibel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/peter-geibel> <http://www.w3.org/2000/01/rdf-schema#label> "Peter Geibel" .
+<http://data.semanticweb.org/person/peter-geibel> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/22> .
+<http://data.semanticweb.org/person/peter-geibel> <http://xmlns.com/foaf/0.1/name> "Peter Geibel" .
+<http://data.semanticweb.org/person/peter-mork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/peter-mork> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/peter-mork> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/the-mitre-corporation> .
+<http://data.semanticweb.org/person/peter-mork> <http://www.w3.org/2000/01/rdf-schema#label> "Peter Mork" .
+<http://data.semanticweb.org/person/peter-mork> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/peter-mork> <http://xmlns.com/foaf/0.1/name> "Peter Mork" .
+<http://data.semanticweb.org/person/piotr-stolarski> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/piotr-stolarski> <http://www.w3.org/2000/01/rdf-schema#label> "Piotr Stolarski" .
+<http://data.semanticweb.org/person/piotr-stolarski> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/12> .
+<http://data.semanticweb.org/person/piotr-stolarski> <http://xmlns.com/foaf/0.1/name> "Piotr Stolarski" .
+<http://data.semanticweb.org/person/qian-zhong> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/qian-zhong> <http://www.w3.org/2000/01/rdf-schema#label> "Qian Zhong" .
+<http://data.semanticweb.org/person/qian-zhong> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/16> .
+<http://data.semanticweb.org/person/qian-zhong> <http://xmlns.com/foaf/0.1/name> "Qian Zhong" .
+<http://data.semanticweb.org/person/qiang-liu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/qiang-liu> <http://www.w3.org/2000/01/rdf-schema#label> "Qiang Liu" .
+<http://data.semanticweb.org/person/qiang-liu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/17> .
+<http://data.semanticweb.org/person/qiang-liu> <http://xmlns.com/foaf/0.1/name> "Qiang Liu" .
+<http://data.semanticweb.org/person/ryutaro-ichise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ryutaro-ichise> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/ryutaro-ichise> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/national-institute-of-informatics-japan> .
+<http://data.semanticweb.org/person/ryutaro-ichise> <http://www.w3.org/2000/01/rdf-schema#label> "Ryutaro Ichise" .
+<http://data.semanticweb.org/person/ryutaro-ichise> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Japan> .
+<http://data.semanticweb.org/person/ryutaro-ichise> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/ryutaro-ichise> <http://xmlns.com/foaf/0.1/name> "Ryutaro Ichise" .
+<http://data.semanticweb.org/person/sandra-geisler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/sandra-geisler> <http://www.w3.org/2000/01/rdf-schema#label> "Sandra Geisler" .
+<http://data.semanticweb.org/person/sandra-geisler> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/13> .
+<http://data.semanticweb.org/person/sandra-geisler> <http://xmlns.com/foaf/0.1/name> "Sandra Geisler" .
+<http://data.semanticweb.org/person/shenghui-wang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/shenghui-wang> <http://www.w3.org/2000/01/rdf-schema#label> "Shenghui Wang" .
+<http://data.semanticweb.org/person/shenghui-wang> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/5> .
+<http://data.semanticweb.org/person/shenghui-wang> <http://xmlns.com/foaf/0.1/name> "Shenghui Wang" .
+<http://data.semanticweb.org/person/songmao-zhang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/songmao-zhang> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/songmao-zhang> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/chinese-academy-of-sciences> .
+<http://data.semanticweb.org/person/songmao-zhang> <http://www.w3.org/2000/01/rdf-schema#label> "Songmao Zhang" .
+<http://data.semanticweb.org/person/songmao-zhang> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/China> .
+<http://data.semanticweb.org/person/songmao-zhang> <http://xmlns.com/foaf/0.1/name> "Songmao Zhang" .
+<http://data.semanticweb.org/person/stefan-dietze> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/stefan-dietze> <http://www.w3.org/2000/01/rdf-schema#label> "Stefan Dietze" .
+<http://data.semanticweb.org/person/stefan-dietze> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/28> .
+<http://data.semanticweb.org/person/stefan-dietze> <http://xmlns.com/foaf/0.1/name> "Stefan Dietze" .
+<http://data.semanticweb.org/person/tassos-venetis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/tassos-venetis> <http://www.w3.org/2000/01/rdf-schema#label> "Tassos Venetis" .
+<http://data.semanticweb.org/person/tassos-venetis> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/2> .
+<http://data.semanticweb.org/person/tassos-venetis> <http://xmlns.com/foaf/0.1/name> "Tassos Venetis" .
+<http://data.semanticweb.org/person/umberto-straccia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/umberto-straccia> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/umberto-straccia> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/isti-cnr> .
+<http://data.semanticweb.org/person/umberto-straccia> <http://www.w3.org/2000/01/rdf-schema#label> "Umberto Straccia" .
+<http://data.semanticweb.org/person/umberto-straccia> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/umberto-straccia> <http://xmlns.com/foaf/0.1/name> "Umberto Straccia" .
+<http://data.semanticweb.org/person/vassilis-tzouvaras> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/vassilis-tzouvaras> <http://www.w3.org/2000/01/rdf-schema#label> "Vassilis Tzouvaras" .
+<http://data.semanticweb.org/person/vassilis-tzouvaras> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/2> .
+<http://data.semanticweb.org/person/vassilis-tzouvaras> <http://xmlns.com/foaf/0.1/name> "Vassilis Tzouvaras" .
+<http://data.semanticweb.org/person/veronique-malaise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/veronique-malaise> <http://www.w3.org/2000/01/rdf-schema#label> "Veronique Malaise" .
+<http://data.semanticweb.org/person/veronique-malaise> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/veronique-malaise> <http://xmlns.com/foaf/0.1/name> "Veronique Malaise" .
+<http://data.semanticweb.org/person/vipul-kashyap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/vipul-kashyap> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/vipul-kashyap> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/clinical-informatics-r-d-partners-healthcare-system> .
+<http://data.semanticweb.org/person/vipul-kashyap> <http://www.w3.org/2000/01/rdf-schema#label> "Vipul Kashyap" .
+<http://data.semanticweb.org/person/vipul-kashyap> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/vipul-kashyap> <http://xmlns.com/foaf/0.1/name> "Vipul Kashyap" .
+<http://data.semanticweb.org/person/vojtech-svatek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/vojtech-svatek> <http://www.w3.org/2000/01/rdf-schema#label> "Vojtech Svatek" .
+<http://data.semanticweb.org/person/vojtech-svatek> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/23> .
+<http://data.semanticweb.org/person/vojtech-svatek> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/person/vojtech-svatek> <http://xmlns.com/foaf/0.1/name> "Vojtech Svatek" .
+<http://data.semanticweb.org/person/wei-hu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/wei-hu> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/wei-hu> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/southeast-university> .
+<http://data.semanticweb.org/person/wei-hu> <http://www.w3.org/2000/01/rdf-schema#label> "Wei Hu" .
+<http://data.semanticweb.org/person/wei-hu> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/China> .
+<http://data.semanticweb.org/person/wei-hu> <http://xmlns.com/foaf/0.1/name> "Wei Hu" .
+<http://data.semanticweb.org/person/wei-xu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/wei-xu> <http://www.w3.org/2000/01/rdf-schema#label> "Wei Xu" .
+<http://data.semanticweb.org/person/wei-xu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/21> .
+<http://data.semanticweb.org/person/wei-xu> <http://xmlns.com/foaf/0.1/name> "Wei Xu" .
+<http://data.semanticweb.org/person/willem-van-hage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/willem-van-hage> <http://www.w3.org/2000/01/rdf-schema#label> "Willem Robert van Hage" .
+<http://data.semanticweb.org/person/willem-van-hage> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/24> .
+<http://data.semanticweb.org/person/willem-van-hage> <http://xmlns.com/foaf/0.1/name> "Willem Robert van Hage" .
+<http://data.semanticweb.org/person/xiang-li> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/xiang-li> <http://www.w3.org/2000/01/rdf-schema#label> "Xiang Li" .
+<http://data.semanticweb.org/person/xiang-li> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/13> .
+<http://data.semanticweb.org/person/xiang-li> <http://xmlns.com/foaf/0.1/name> "Xiang Li" .
+<http://data.semanticweb.org/person/xiao-zhang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/xiao-zhang> <http://www.w3.org/2000/01/rdf-schema#label> "Xiao Zhang" .
+<http://data.semanticweb.org/person/xiao-zhang> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/16> .
+<http://data.semanticweb.org/person/xiao-zhang> <http://xmlns.com/foaf/0.1/name> "Xiao Zhang" .
+<http://data.semanticweb.org/person/yannis-kalfoglou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yannis-kalfoglou> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/yannis-kalfoglou> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ricoh-europe-plc> .
+<http://data.semanticweb.org/person/yannis-kalfoglou> <http://www.w3.org/2000/01/rdf-schema#label> "Yannis Kalfoglou" .
+<http://data.semanticweb.org/person/yannis-kalfoglou> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/UK> .
+<http://data.semanticweb.org/person/yannis-kalfoglou> <http://xmlns.com/foaf/0.1/name> "Yannis Kalfoglou" .
+<http://data.semanticweb.org/person/yannis-velegrakis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yannis-velegrakis> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/yannis-velegrakis> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-trento-italy> .
+<http://data.semanticweb.org/person/yannis-velegrakis> <http://www.w3.org/2000/01/rdf-schema#label> "Yannis Velegrakis" .
+<http://data.semanticweb.org/person/yannis-velegrakis> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/yannis-velegrakis> <http://xmlns.com/foaf/0.1/name> "Yannis Velegrakis" .
+<http://data.semanticweb.org/person/york-sure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/york-sure> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/person/york-sure> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/sap-ag> .
+<http://data.semanticweb.org/person/york-sure> <http://www.w3.org/2000/01/rdf-schema#label> "York Sure" .
+<http://data.semanticweb.org/person/york-sure> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/york-sure> <http://xmlns.com/foaf/0.1/name> "York Sure" .
+<http://data.semanticweb.org/person/yves-r-jean-mary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yves-r-jean-mary> <http://www.w3.org/2000/01/rdf-schema#label> "Yves R. Jean-Mary" .
+<http://data.semanticweb.org/person/yves-r-jean-mary> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2008/paper/main/10> .
+<http://data.semanticweb.org/person/yves-r-jean-mary> <http://xmlns.com/foaf/0.1/name> "Yves R. Jean-Mary" .
+<http://data.semanticweb.org/workshop/om/2008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/workshop/om/2008> <http://data.semanticweb.org/ns/swc/ontology#completeGraph> <http://data.semanticweb.org/workshop/om/2008/complete> .
+<http://data.semanticweb.org/workshop/om/2008> <http://data.semanticweb.org/ns/swc/ontology#hasAcronym> "OM2008" .
+<http://data.semanticweb.org/workshop/om/2008> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/workshop/om/2008> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/om/2008/main/pcmember> .
+<http://data.semanticweb.org/workshop/om/2008> <http://www.w3.org/2000/01/rdf-schema#label> "The Third International Workshop on Ontology Matching" .
+<http://data.semanticweb.org/workshop/om/2008> <http://www.w3.org/2002/12/cal/ical#dtend> _:node1dfqj7ep2x1 .
+_:node1dfqj7ep2x1 <http://www.w3.org/2002/12/cal/ical#date> "2008-10-26" .
+_:node1dfqj7ep2x1 <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+1" .
+<http://data.semanticweb.org/workshop/om/2008> <http://www.w3.org/2002/12/cal/ical#dtstart> _:node1dfqj7ep2x2 .
+_:node1dfqj7ep2x2 <http://www.w3.org/2002/12/cal/ical#date> "2008-10-26" .
+_:node1dfqj7ep2x2 <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+1" .
+<http://data.semanticweb.org/workshop/om/2008> <http://www.w3.org/2002/12/cal/ical#url> <http://om2008.ontologymatching.org/> .
+<http://data.semanticweb.org/workshop/om/2008> <http://xmlns.com/foaf/0.1/homepage> <http://om2008.ontologymatching.org/> .
+<http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#OrganisingCommitteeMember> .
+<http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/fausto-giunchiglia> .
+<http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/jerome-euzenat> .
+<http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/pavel-shvaiko> .
+<http://data.semanticweb.org/workshop/om/2008/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/om/2008> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PCMember> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/antoine-isaac> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/baoshi-yan> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/christian-meilicke> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/eleni-stroulia> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/isabel-cruz> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/ivan-pilati> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/jerome-david> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/luciano-serafini> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/ludger-van-elst> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/luigi-palopoli> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/marco-schorlemmer> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/monika-lanzenberger> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/natalya-noy> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/olivier-bodenreider> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/paolo-besana> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/paolo-bouquet> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/patrick-lambrix> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/peter-mork> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/ryutaro-ichise> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/songmao-zhang> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/umberto-straccia> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/vipul-kashyap> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/wei-hu> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/yannis-kalfoglou> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/yannis-velegrakis> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/york-sure> .
+<http://data.semanticweb.org/workshop/om/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/om/2008> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/christian-meilicke> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://purl.org/dc/elements/1.1/title> "Incoherence as a basis for measuring the quality of ontology mappings" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://swrc.ontoware.org/ontology#abstract> "Traditionally, the quality of ontology matching is measured using precisionand recall with respect to a reference mapping. These measures have atleast two major drawbacks. First, a mapping with acceptable precision and recallmight nevertheless suffer from internal logical problems that hinder a sensible useof the mapping. Second, in practical situations reference mappings are not available.To avoid these drawbacks we introduce quality measures that are based onthe notion of mapping incoherence that can be used without a reference mapping.We argue that these measures are a reasonable complement to the well-knownmeasures already used for mapping evaluation. In particular, we show that one ofthese measures provides a strict upper bound for the precision of a mapping." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/christian-meilicke> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x3 .
+_:node1dfqj7ep2x3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/christian-meilicke> .
+_:node1dfqj7ep2x3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://www.w3.org/2000/01/rdf-schema#label> "Incoherence as a basis for measuring the quality of ontology mappings" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/christian-meilicke> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/mansur-r-kabuka> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/yves-r-jean-mary> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://purl.org/dc/elements/1.1/title> "ASMOV: results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://swrc.ontoware.org/ontology#abstract> "The Automated Semantic Mapping of Ontologies with Validation (ASMOV) algorithm for ontology alignment was one of the top performing algorithms in the 2007 Ontology Alignment Evaluation Initiative (OAEI). In this paper, we present a brief overview of the algorithm and its improvements, followed by an analysis of its results on the 2008 OAEI tests." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/mansur-r-kabuka> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/yves-r-jean-mary> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x4 .
+_:node1dfqj7ep2x4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/yves-r-jean-mary> .
+_:node1dfqj7ep2x4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/mansur-r-kabuka> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://www.w3.org/2000/01/rdf-schema#label> "ASMOV: results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/mansur-r-kabuka> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/10> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/yves-r-jean-mary> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/eduardo-mena> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jorge-gracia> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://purl.org/dc/elements/1.1/title> "Ontology matching with CIDER: evaluation report for the OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://swrc.ontoware.org/ontology#abstract> "Ontology matching, the task of determining relations thathold among terms of two different ontologies, is a key issue in the Semantic Web and other related fields. In order to compare the behaviour of different ontology matching systems, the Ontology Alignment Evaluation Initiative (OAEI) has established a periodical controlled evaluationthat comes in a yearly event. We present here our participation in the2008 initiative.Our schema-based alignment algorithm compares each pair of ontologyterms by, firstly, extracting their ontological contexts up to a certaindepth (enriched by using transitive entailment) and, secondly, combining different elementary ontology matching techniques (e.g., lexical distances and vector space modelling). Benchmark results show a very goodbehaviour in terms of precision, while preserving an acceptable recall.Based on our experience, we have also included some remarks about thenature of benchmark test cases that, in our opinion, could help improvingthe OAEI tests in the future." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/eduardo-mena> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jorge-gracia> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x5 .
+_:node1dfqj7ep2x5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/jorge-gracia> .
+_:node1dfqj7ep2x5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/eduardo-mena> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology matching with CIDER: evaluation report for the OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/eduardo-mena> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/11> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jorge-gracia> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/enrico-motta> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/maria-vargas-vera> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/miklos-nagy> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/piotr-stolarski> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://purl.org/dc/elements/1.1/title> "DSSim results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://swrc.ontoware.org/ontology#abstract> "The growing importance of ontology mapping on the Semantic Webhas highlighted the need to manage the uncertain nature of interpreting semanticmeta data represented by heterogeneous ontologies. Considering this uncertaintyone can potentially improve the ontology mapping precision, which can lead tobetter acceptance of systems that operate in this environment. Further the applicationof different techniques like computational linguistics or belief conflictresolution that can contribute the development of better mapping algorithms arerequired in order to process the incomplete and inconsistent information used andproduced during any mapping algorithm. In this paper we introduce our algorithmcalled \u201CDSSim\u201D and describe the improvements that we have made compared toOAEI 2006 and OAEI 2007." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/enrico-motta> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/maria-vargas-vera> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/miklos-nagy> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/piotr-stolarski> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x6 .
+_:node1dfqj7ep2x6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/miklos-nagy> .
+_:node1dfqj7ep2x6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/maria-vargas-vera> .
+_:node1dfqj7ep2x6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/piotr-stolarski> .
+_:node1dfqj7ep2x6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/enrico-motta> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://www.w3.org/2000/01/rdf-schema#label> "DSSim results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/enrico-motta> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/maria-vargas-vera> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/miklos-nagy> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/12> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/piotr-stolarski> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/christoph-quix> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/david-kensche> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/sandra-geisler> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/xiang-li> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://purl.org/dc/elements/1.1/title> "Results of GeRoMeSuite for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://swrc.ontoware.org/ontology#abstract> "GeRoMeSuite is a generic model management system which providesseveral functions for managing complex data models, such as schema integration,definition and execution of schema mappings, model transformation, and matching.The system use the generic metamodel GeRoMe for representing models,and because of this, it is able to deal with models in various modeling languagessuch as XML Schema, OWL, ER, and relational schemas.A matching component for matching and alignment of schemas is also part ofthe system. We participated this year the first time in an OAEI contest in orderto evaluate and compare the performance of our matcher component with othersystems. Therefore, we focused our efforts on the \u2018benchmark\u2019 track." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/christoph-quix> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/david-kensche> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/sandra-geisler> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/xiang-li> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x7 .
+_:node1dfqj7ep2x7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/christoph-quix> .
+_:node1dfqj7ep2x7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/sandra-geisler> .
+_:node1dfqj7ep2x7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/david-kensche> .
+_:node1dfqj7ep2x7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/xiang-li> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://www.w3.org/2000/01/rdf-schema#label> "Results of GeRoMeSuite for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/christoph-quix> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/david-kensche> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/sandra-geisler> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/13> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/xiang-li> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/baowen-xu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/peng-wang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://purl.org/dc/elements/1.1/title> "Lily: ontology alignment results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://swrc.ontoware.org/ontology#abstract> "This paper presents the alignment results of Lily for the ontologyalignment contest OAEI 2008. Lily is an ontology mapping system, and it hasfour main features: generic ontology matching, large scale ontology matching,semantic ontology matching and mapping debugging. In the past year, Lily hasbeen improved greatly for both function and performance. Lily submited theresults for seven alignment tasks: benchmark, anatomy, fao, directory,mldirectory, library and conference. The results of the benchmark task arepresented. The paper also discusses the strengths and weaknesses of our system." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/baowen-xu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/peng-wang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x8 .
+_:node1dfqj7ep2x8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/peng-wang> .
+_:node1dfqj7ep2x8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/baowen-xu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://www.w3.org/2000/01/rdf-schema#label> "Lily: ontology alignment results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/baowen-xu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/14> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/peng-wang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jan-hettenhausen> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/juergen-bock> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://purl.org/dc/elements/1.1/title> "MapPSO results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://swrc.ontoware.org/ontology#abstract> "We present first results of an ontology alignment approach that isbased on discrete particle swarm optimisation. Firstly in this paper we will describe,how the algorithm approaches the ontology matching task as an optimisationproblem, and briefly sketch how the specific technique of particle swarmoptimisation is applied. Secondly, we will briefly discuss the results gained forthe Benchmark data set of the 2008 Ontology Alignment Evaluation Intiative." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jan-hettenhausen> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/juergen-bock> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x9 .
+_:node1dfqj7ep2x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/juergen-bock> .
+_:node1dfqj7ep2x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/jan-hettenhausen> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://www.w3.org/2000/01/rdf-schema#label> "MapPSO results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jan-hettenhausen> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/15> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/juergen-bock> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jie-tang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/juanzi-li> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/qian-zhong> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/xiao-zhang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://purl.org/dc/elements/1.1/title> "RiMOM results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://swrc.ontoware.org/ontology#abstract> "In this report, we give a brief explanation of how RiMOM obtains the ontology alignment results at OAEI 2008 contest. We introduce the alignment process of RiMOM and more than 8 different alignment strategies integrated in RiMOM. Since every strategy is defined based on one specific ontological-information, we, in particular, study how the different strategies perform for different alignment tasks in the contest and design a strategy selection technique to get better performance. The result shows this technique is very useful. We also discuss some future work about RiMOM." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jie-tang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/juanzi-li> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/qian-zhong> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/xiao-zhang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x10 .
+_:node1dfqj7ep2x10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/xiao-zhang> .
+_:node1dfqj7ep2x10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/qian-zhong> .
+_:node1dfqj7ep2x10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/juanzi-li> .
+_:node1dfqj7ep2x10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/jie-tang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://www.w3.org/2000/01/rdf-schema#label> "RiMOM results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jie-tang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/juanzi-li> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/qian-zhong> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/16> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/xiao-zhang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/he-tan> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/patrick-lambrix> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/qiang-liu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://purl.org/dc/elements/1.1/title> "SAMBO and SAMBOdtf results for the Ontology Alignment Evaluation Initiative 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://swrc.ontoware.org/ontology#abstract> "This article describes a base system for ontology alignment, SAMBO,and an extension, SAMBOdtf.We present their results for the benchmark, anatomyand FAO tasks in the 2008 Ontology Alignment Evaluation Initiative. For thebenchmark and FAO tasks SAMBO uses a strategy based on string matching aswell as the use of a thesaurus. It obtains good results in many cases. For theanatomy task SAMBO uses a combination of string matching and the use of domainknowledge. This combination performed well in former evaluations usingother anatomy ontologies. SAMBOdtf uses the same strategies but, in addition,uses an advanced filtering technique that augments recall while maintaining ahigh precision." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/he-tan> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/patrick-lambrix> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/qiang-liu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x11 .
+_:node1dfqj7ep2x11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/patrick-lambrix> .
+_:node1dfqj7ep2x11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/he-tan> .
+_:node1dfqj7ep2x11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/qiang-liu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://www.w3.org/2000/01/rdf-schema#label> "SAMBO and SAMBOdtf results for the Ontology Alignment Evaluation Initiative 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/he-tan> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/patrick-lambrix> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/17> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/qiang-liu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jorge-gracia> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/marta-sabou> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://purl.org/dc/elements/1.1/title> "Spider: bringing non-equivalence mappings to OAEI" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://swrc.ontoware.org/ontology#abstract> "With the large majority of existing matching systems focusing on derivingequivalence mappings, OAEI has been primarily focused on assessing suchkind of relations. As the field inevitably advances towards the discovery of morecomplex mappings, the contest will need to reflect such changes as well. In thispaper we present Spider, a system that provides alignments containing not onlyequivalence mappings, but also a variety of different mapping types (namely,subsumption, disjointness and named relations). Our goal is both to get an insightinto the functioning of our system and, more importantly, to assess the currentsupport for dealing with non-equivalence mappings in the OAEI contest. Wehope that our observations will contribute to further enhance the procedure of thecontest." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jorge-gracia> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/marta-sabou> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x12 .
+_:node1dfqj7ep2x12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/marta-sabou> .
+_:node1dfqj7ep2x12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/jorge-gracia> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://www.w3.org/2000/01/rdf-schema#label> "Spider: bringing non-equivalence mappings to OAEI" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jorge-gracia> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/18> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/marta-sabou> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/brigitte-safar> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/chantal-reynaud> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/faycal-hamdi> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/haifa-zargayouna> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://purl.org/dc/elements/1.1/title> "TaxoMap in the OAEI 2008 alignment contest" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://swrc.ontoware.org/ontology#abstract> "TaxoMap is an alignment tool which aim is to discover rich correspondencesbetween concepts. It performs an oriented alignment (from a sourceto a target ontology) and takes into account labels and sub-class descriptions.Our participation in last year edition of the competition have put the emphasis oncertain limits. TaxoMap 2 is a new implementation of TaxoMap that reduces significantlyruntime and enables parameterization by specifying the ontology languageand different thresholds used to extract different mapping relations. Thenew implementation stresses on terminological techniques, it takes into accountsynonymy, and multi-label description of concepts. Special effort was made tohandle large-scale ontologies by partitioning input ontologies into modules toalign. We conclude the paper by pointing out the necessary improvements thatneed to be made." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/brigitte-safar> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/chantal-reynaud> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/faycal-hamdi> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/haifa-zargayouna> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x13 .
+_:node1dfqj7ep2x13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/faycal-hamdi> .
+_:node1dfqj7ep2x13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/haifa-zargayouna> .
+_:node1dfqj7ep2x13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/brigitte-safar> .
+_:node1dfqj7ep2x13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/chantal-reynaud> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://www.w3.org/2000/01/rdf-schema#label> "TaxoMap in the OAEI 2008 alignment contest" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/brigitte-safar> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/chantal-reynaud> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/faycal-hamdi> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/19> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/haifa-zargayouna> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/alfio-ferrara> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/davide-lorusso> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/giorgos-stamou> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/giorgos-stoilos> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/tassos-venetis> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/vassilis-tzouvaras> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://purl.org/dc/elements/1.1/title> "Resolution of conicts among ontology mappings: a fuzzy approach" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://swrc.ontoware.org/ontology#abstract> "Interoperability is a strong requirement in open distributedsystems and in the Semantic Web. The need for ontology integrationis not always completely met by the available ontology matching techniques because, in most cases, the semantics of the compared ontologiesis not considered, thus leading to inconsistent mappings. Probabilisticapproaches has been proposed to validate mappings and solve the inconsistencies, based on a mapping confidence measure. As probabilisticapproaches suffer from the lack of well-founded likelihood measures ofmapping correctness, we propose a validation approach based on fuzzyinterpretation of mappings, which better models the notion of degreeof similarity between ontology elements. Moreover, we describe a conflict resolution method which computes the minimal sets of conflictingmappings and can be the ground of different validation strategies." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/alfio-ferrara> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/davide-lorusso> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/giorgos-stamou> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/giorgos-stoilos> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/tassos-venetis> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/vassilis-tzouvaras> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x14 .
+_:node1dfqj7ep2x14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/alfio-ferrara> .
+_:node1dfqj7ep2x14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/davide-lorusso> .
+_:node1dfqj7ep2x14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/giorgos-stamou> .
+_:node1dfqj7ep2x14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/giorgos-stoilos> .
+_:node1dfqj7ep2x14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://data.semanticweb.org/person/vassilis-tzouvaras> .
+_:node1dfqj7ep2x14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_6> <http://data.semanticweb.org/person/tassos-venetis> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://www.w3.org/2000/01/rdf-schema#label> "Resolution of conicts among ontology mappings: a fuzzy approach" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/alfio-ferrara> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/davide-lorusso> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/giorgos-stamou> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/giorgos-stoilos> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/tassos-venetis> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/vassilis-tzouvaras> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/20> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/20> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/heiko-paulheim> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/20> <http://purl.org/dc/elements/1.1/title> "On applying matching tools to large-scale ontologies" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/20> <http://swrc.ontoware.org/ontology#abstract> "Many existing ontology matching tools are not well scalable.In this paper, we present the Malasco system, which serves as a framework for reusing existing, non-scalable matching systems on large-scaleontologies. The results achieved with different combinations of partitioning and matching tools are discussed, and optimization techniques areexamined. It is shown that the loss of result quality when matching withpartitioned data can be reduced to less than 5% compared to matchingwith unpartitioned data." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/20> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/heiko-paulheim> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/20> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/20> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/20> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x15 .
+_:node1dfqj7ep2x15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/heiko-paulheim> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/20> <http://www.w3.org/2000/01/rdf-schema#label> "On applying matching tools to large-scale ontologies" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/20> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/heiko-paulheim> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/he-tan> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/patrick-lambrix> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/wei-xu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://purl.org/dc/elements/1.1/title> "Literature-based alignment of ontologies" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://swrc.ontoware.org/ontology#abstract> "In this paper we propose and evaluate new strategies foraligning ontologies based on text categorization of literature using supportvector machines-based text classifiers, and compare them with existingliterature-based strategies. We also compare and combine thesestrategies with linguistic strategies." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/he-tan> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/patrick-lambrix> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/wei-xu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x16 .
+_:node1dfqj7ep2x16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/patrick-lambrix> .
+_:node1dfqj7ep2x16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/he-tan> .
+_:node1dfqj7ep2x16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/wei-xu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://www.w3.org/2000/01/rdf-schema#label> "Literature-based alignment of ontologies" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/he-tan> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/patrick-lambrix> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/21> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/wei-xu> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/konstantin-todorov> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/peter-geibel> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://purl.org/dc/elements/1.1/title> "Ontology mapping via structural and instance-based similarity measures" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://swrc.ontoware.org/ontology#abstract> "The paper presents an overview of a novel procedure formapping hierarchical ontologies, populated with properly classified textdocuments. It combines structural and instance-based approaches to reducethe terminological and conceptual ontology heterogeneity. It yieldsimportant granularity and instantiation judgments about the inputs andis to be applied to mapping web-directories." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/konstantin-todorov> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/peter-geibel> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x17 .
+_:node1dfqj7ep2x17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/konstantin-todorov> .
+_:node1dfqj7ep2x17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/peter-geibel> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology mapping via structural and instance-based similarity measures" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/konstantin-todorov> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/22> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/peter-geibel> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/christian-meilicke> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ondrej-svab> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/vojtech-svatek> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://purl.org/dc/elements/1.1/title> "Testing the impact of pattern-based ontology refactoring on ontology matching results" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://swrc.ontoware.org/ontology#abstract> "We observe the impact of ontology refactoring, based on detectionof name patterns in the ontology structure, on the results of ontology matching.Results of our experiment are evaluated using novel logic-based measures accompaniedby an analysis of typical effects. Although the pattern detection methodonly covers a fraction of ontological errors, there seems to be a measurable effecton the quality of the resulting matching." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/christian-meilicke> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ondrej-svab> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/vojtech-svatek> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x18 .
+_:node1dfqj7ep2x18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/ondrej-svab> .
+_:node1dfqj7ep2x18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/vojtech-svatek> .
+_:node1dfqj7ep2x18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/christian-meilicke> .
+_:node1dfqj7ep2x18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://www.w3.org/2000/01/rdf-schema#label> "Testing the impact of pattern-based ontology refactoring on ontology matching results" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/christian-meilicke> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ondrej-svab> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/23> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/vojtech-svatek> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/guus-schreiber> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/hap-kolb> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/willem-van-hage> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://purl.org/dc/elements/1.1/title> "Relevance-based evaluation of alignment approaches: the OAEI 2007 food task revisited" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://swrc.ontoware.org/ontology#abstract> "Current state-of-the-art ontology-alignment evaluation methods arebased on the assumption that alignment relations come in two flavors: correctand incorrect. Some alignment systems find more correct mappings than othersand hence, by this assumption, they perform better. In practical applications however,it does not only matter how many correct mappings you find, but also whichcorrect mappings you find. This means that, apart from correctness, relevanceshould also be included in the evaluation procedure. In this paper we expand thesample-based evaluation of the OAEI 2007 food task with a sample evaluationthat uses relevance to prototypical search tasks as a selection criterion for thedrawing of sample mappings." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/guus-schreiber> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/hap-kolb> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/willem-van-hage> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x19 .
+_:node1dfqj7ep2x19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/willem-van-hage> .
+_:node1dfqj7ep2x19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/hap-kolb> .
+_:node1dfqj7ep2x19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/guus-schreiber> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://www.w3.org/2000/01/rdf-schema#label> "Relevance-based evaluation of alignment approaches: the OAEI 2007 food task revisited" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/guus-schreiber> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/hap-kolb> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/24> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/willem-van-hage> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/david-macii> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/fabio-andreatta> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ivan-pilati> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/luca-mion> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://purl.org/dc/elements/1.1/title> "Matching ontologies for emergency evacuation plans" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://swrc.ontoware.org/ontology#abstract> "In case of emergency, the coordination of different servicesdeals with different working methods, different languages, different instruments, different sensors and different data representations. Thus,the coordination of services includes heterogeneity problems that canbe managed with the help of ontology matching techniques. In this paper we present a scenario where the requirements for ontology matchingarise from emergency evacuation plans, in the specific domain of civilprotection applications. We envisage what kind of smart sensor technologies could be used to support critical decisions when heterogeneoussources of information have to be matched." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/david-macii> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/fabio-andreatta> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ivan-pilati> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/luca-mion> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x20 .
+_:node1dfqj7ep2x20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/luca-mion> .
+_:node1dfqj7ep2x20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/ivan-pilati> .
+_:node1dfqj7ep2x20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/david-macii> .
+_:node1dfqj7ep2x20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/fabio-andreatta> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://www.w3.org/2000/01/rdf-schema#label> "Matching ontologies for emergency evacuation plans" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/david-macii> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/fabio-andreatta> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ivan-pilati> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/25> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/luca-mion> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/daniele-montanari> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/domenico-beneventano> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://purl.org/dc/elements/1.1/title> "Ontological mappings of product catalogues" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://swrc.ontoware.org/ontology#abstract> "In this paper we built on top of recent effort in the areas of semanticsand interoperability to establish the basis for a comprehensive and sustainableapproach to the development and later management of bridging systems amonga variety of corporate system that need to be interconnected without beingindividually modified. In particular, we collect some preliminary evidence thata sustainable approach exists to the definition of mappings which can withstandchanges of the underlying classification schemes. This in turn adds evidencetowards the feasibility of a dynamic interoperable infrastructure supporting aglobal adaptive electronic market place." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/daniele-montanari> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/domenico-beneventano> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x21 .
+_:node1dfqj7ep2x21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/domenico-beneventano> .
+_:node1dfqj7ep2x21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/daniele-montanari> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://www.w3.org/2000/01/rdf-schema#label> "Ontological mappings of product catalogues" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/daniele-montanari> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/26> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/domenico-beneventano> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/27> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/27> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/daniel-sonntag> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/27> <http://purl.org/dc/elements/1.1/title> "Towards dialogue-based interactive semantic mediation in the medical domain" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/27> <http://swrc.ontoware.org/ontology#abstract> "We think of ontology matching as a dialogue-based interactivemediation process for which we propose a three stage model. Apreliminary evaluation shows how we applied this method of eliciting inputfor ontology matching in the medical domain. Especially, we addressthe challenge how to use dialogue-based interactivity with the user torate partial alignments between two ontologies." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/27> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/daniel-sonntag> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/27> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/27> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/27> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x22 .
+_:node1dfqj7ep2x22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/daniel-sonntag> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/27> <http://www.w3.org/2000/01/rdf-schema#label> "Towards dialogue-based interactive semantic mediation in the medical domain" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/27> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/daniel-sonntag> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/john-domingue> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/stefan-dietze> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://purl.org/dc/elements/1.1/title> "Towards ontology interoperability through conceptual groundings" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://swrc.ontoware.org/ontology#abstract> "The widespread use of ontologies raises the need to resolve heterogeneities betweendistinct conceptualisations in order to support interoperability. The aim of ontology mapping is,to establish formal relations between a set of knowledge entities which represent the same or asimilar meaning in distinct ontologies. Whereas the symbolic approach of established SWrepresentation standards \u2013 based on first-order logic and syllogistic reasoning \u2013 does notimplicitly represent similarity relationships, the ontology mapping task strongly relies onidentifying semantic similarities. However, while concept representations across distinctontologies hardly equal another, manually or even semi-automatically identifying similarityrelationships is costly. Conceptual Spaces (CS) enable the representation of concepts as vectorspaces which implicitly carry similarity information. But CS provide neither an implicitrepresentational mechanism nor a means to represent arbitrary relations between concepts orinstances. In order to overcome these issues, we propose a hybrid knowledge representationapproach which extends first-order logic ontologies with a conceptual grounding through a setof CS-based representations. Consequently, semantic similarity between instances \u2013represented as members in CS \u2013 is indicated by means of distance metrics. Hence, automaticsimilarity-detection between instances across distinct ontologies is supported in order tofacilitate ontology mapping." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/john-domingue> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/stefan-dietze> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x23 .
+_:node1dfqj7ep2x23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/stefan-dietze> .
+_:node1dfqj7ep2x23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/john-domingue> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://www.w3.org/2000/01/rdf-schema#label> "Towards ontology interoperability through conceptual groundings" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/john-domingue> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/28> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/stefan-dietze> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jerome-david> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jerome-euzenat> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://purl.org/dc/elements/1.1/title> "On fixing semantic alignment evaluation measures" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://swrc.ontoware.org/ontology#abstract> "The evaluation of ontology matching algorithms mainly consists ofcomparing a produced alignment with a reference one. Usually, this evaluationrelies on the classical precision and recall measures. This evaluation model is notsatisfactory since it does not take into account neither the closeness of correspondances,nor the semantics of alignments. A first solution consists of generalizingthe precision and recall measures in order to solve the problem of rigidity of classicalmodel. Another solution aims at taking advantage of the semantic of alignmentsin the evaluation. In this paper, we show and analyze the limits of theseevaluation models. Given that measures values depend on the syntactic form ofthe alignment, we first propose an normalization of alignment. Then, we proposetwo new sets of evaluation measures. The first one is a semantic extension of relaxedprecision and recall. The second one consists of bounding the alignmentspace to make ideal semantic precision and recall applicable." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jerome-david> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jerome-euzenat> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x24 .
+_:node1dfqj7ep2x24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/jerome-david> .
+_:node1dfqj7ep2x24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/jerome-euzenat> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://www.w3.org/2000/01/rdf-schema#label> "On fixing semantic alignment evaluation measures" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jerome-david> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jerome-euzenat> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/antoine-isaac> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/cassia-trojahn> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/paulo-quaresma> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/shenghui-wang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://purl.org/dc/elements/1.1/title> "Using quantitative aspects of alignment generation for argumentation on mappings" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://swrc.ontoware.org/ontology#abstract> "State-of-the art mappers articulate several techniques usingdifferent sources of knowledge in an unified process. An important issueof ontology mapping is to find ways of choosing among many techniquesand their variations, and then combining their results. For this,an innovative and promising option is to use frameworks dealing witharguments for or against correspondences. In this paper, we re-use anargumentation framework that considers the confidence levels of mappingarguments. We also propose new frameworks that use voting as away to cope with various degrees of consensus among arguments. Wecompare these frameworks by evaluating their application to a range ofindividual mappers, in the context of a real-world library case." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/antoine-isaac> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/cassia-trojahn> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/paulo-quaresma> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/shenghui-wang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x25 .
+_:node1dfqj7ep2x25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/antoine-isaac> .
+_:node1dfqj7ep2x25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/cassia-trojahn> .
+_:node1dfqj7ep2x25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/shenghui-wang> .
+_:node1dfqj7ep2x25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/paulo-quaresma> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://www.w3.org/2000/01/rdf-schema#label> "Using quantitative aspects of alignment generation for argumentation on mappings" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/antoine-isaac> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/cassia-trojahn> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/paulo-quaresma> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/shenghui-wang> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/gianluca-correndo> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/harith-alani> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/paul-smart> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://purl.org/dc/elements/1.1/title> "A community based approach for managing ontology alignments" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://swrc.ontoware.org/ontology#abstract> "The Semantic Web is rapidly becoming a defacto distributedrepository for semantically represented data, thus leveraging on the addedon value of the network effect. Various ontology mapping techniques andtools have been devised to facilitate the bridging and integration of distributeddata repositories. Nevertheless, ontology mapping can benefitfrom human supervision to increase accuracy of results. The spread ofWeb 2.0 approaches demonstrate the possibility of using collaborativetechniques for reaching consensus. While a number of prototypes for collaborativeontology construction are being developed, collaborative ontologymapping is not yet well investigated. In this paper, we describe aprototype that combines off-the-shelf ontology mapping tools with socialsoftware techniques to enable users to collaborate on mapping ontologies." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/gianluca-correndo> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/harith-alani> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/paul-smart> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x26 .
+_:node1dfqj7ep2x26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/gianluca-correndo> .
+_:node1dfqj7ep2x26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/harith-alani> .
+_:node1dfqj7ep2x26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/paul-smart> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://www.w3.org/2000/01/rdf-schema#label> "A community based approach for managing ontology alignments" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/gianluca-correndo> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/harith-alani> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/paul-smart> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/antoine-isaac> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/caterina-caracciolo> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/christian-meilicke> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jerome-euzenat> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/juan-pane> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/laura-hollink> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ondrej-svab> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/pavel-shvaiko> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ryutaro-ichise> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/veronique-malaise> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/vojtech-svatek> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://purl.org/dc/elements/1.1/title> "First results of the Ontology Alignment Evaluation Initiative 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#abstract> "Ontology matching consists of finding correspondences between ontologyentities. OAEI campaigns aim at comparing ontology matching systems onprecisely defined test sets. Test sets can use ontologies of different nature (fromexpressive OWL ontologies to simple directories) and use different modalities(e.g., blind evaluation, open evaluation, consensus). OAEI-2008 builds over previouscampaigns by having 4 tracks with 8 test sets followed by 13 participants.Following the trend of previous years, more participants evolve at the forefront.The final and official results of the campaign are those published on the OAEIweb site." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/antoine-isaac> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/caterina-caracciolo> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/christian-meilicke> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jerome-euzenat> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/juan-pane> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/laura-hollink> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ondrej-svab> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/pavel-shvaiko> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ryutaro-ichise> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/veronique-malaise> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/vojtech-svatek> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x27 .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/caterina-caracciolo> .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_10> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_11> <http://data.semanticweb.org/person/ondrej-svab> .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_12> <http://data.semanticweb.org/person/vojtech-svatek> .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/jerome-euzenat> .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/laura-hollink> .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/ryutaro-ichise> .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://data.semanticweb.org/person/antoine-isaac> .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_6> <http://data.semanticweb.org/person/veronique-malaise> .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_7> <http://data.semanticweb.org/person/christian-meilicke> .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_8> <http://data.semanticweb.org/person/juan-pane> .
+_:node1dfqj7ep2x27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_9> <http://data.semanticweb.org/person/pavel-shvaiko> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://www.w3.org/2000/01/rdf-schema#label> "First results of the Ontology Alignment Evaluation Initiative 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/antoine-isaac> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/caterina-caracciolo> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/christian-meilicke> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jerome-euzenat> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/juan-pane> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/laura-hollink> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ondrej-svab> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/pavel-shvaiko> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ryutaro-ichise> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/veronique-malaise> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/vojtech-svatek> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/masaki-aono> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/md-hanif-seddiqui> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://purl.org/dc/elements/1.1/title> "Alignment results of Anchor-Flood algorithm for OAEI-2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://swrc.ontoware.org/ontology#abstract> "Our proposed algorithm called Anchor-Flood algorithm, starts off withanchors. It gradually explores concepts by collecting neighbors in concept taxonomy,thereby taking advantage of locality of reference in the graph data structure.Then local alignment process runs over the collected small blocks of concepts.The process is repeated for the newly found aligned pairs. In this way, we cansignificantly reduce the computational time for the alignment as our algorithmconcentrates on the aligned pairs and it resolves the scalability problem in ontologyalignment over large ontologies. Through several experiments against OAEI-2008 datasets, we will demonstrate the results and the features of our Anchor-Flood algorithm." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/masaki-aono> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/md-hanif-seddiqui> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x28 .
+_:node1dfqj7ep2x28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/md-hanif-seddiqui> .
+_:node1dfqj7ep2x28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/masaki-aono> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://www.w3.org/2000/01/rdf-schema#label> "Alignment results of Anchor-Flood algorithm for OAEI-2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/masaki-aono> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/md-hanif-seddiqui> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/9> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/om/2008/proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/9> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jerome-david> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/9> <http://purl.org/dc/elements/1.1/title> "AROMA results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/9> <http://swrc.ontoware.org/ontology#abstract> "This paper presents the results obtained by AROMA for its first participationto OAEI. AROMA is an hybrid, extensional and asymmetric ontologyalignment method which makes use of the association paradigm and a statisticalinterstingness measure, the implication intensity." .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/9> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jerome-david> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/9> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/9> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/9> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7ep2x29 .
+_:node1dfqj7ep2x29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/jerome-david> .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/9> <http://www.w3.org/2000/01/rdf-schema#label> "AROMA results for OAEI 2008" .
+<http://data.semanticweb.org/workshop/om/2008/paper/main/9> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jerome-david> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#Proceedings> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/1> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/10> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/11> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/12> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/13> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/14> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/15> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/16> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/17> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/18> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/19> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/2> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/20> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/21> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/22> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/23> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/24> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/25> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/26> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/27> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/28> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/3> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/5> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/6> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/7> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/8> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/om/2008/paper/main/9> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/om/2008> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://swrc.ontoware.org/ontology#booktitle> "Proceedings of the 3rd International Workshop on Ontology Matching (OM-2008) Collocated with the 7th International Semantic Web Conference (ISWC-2008)" .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/fausto-giunchiglia> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/jerome-euzenat> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/pavel-shvaiko> .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/om/2008/proceedings> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#editorList> _:node1dfqj7ep2x30 .
+_:node1dfqj7ep2x30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/pavel-shvaiko> .
+_:node1dfqj7ep2x30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/jerome-euzenat> .
+_:node1dfqj7ep2x30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/fausto-giunchiglia> .
+_:node1dfqj7ep2x30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/heiner-stuckenschmidt> .

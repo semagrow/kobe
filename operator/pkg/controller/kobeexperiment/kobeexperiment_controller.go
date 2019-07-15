@@ -52,8 +52,14 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 		return err
 	}
 
-	// TODO(user): Modify this to be the types you create that are owned by the primary resource
-	// Watch for changes to secondary resource Pods and requeue the owner KobeExperiment
+	err = c.Watch(&source.Kind{Type: &batchv1.Job{}}, &handler.EnqueueRequestForOwner{
+		IsController: true,
+		OwnerType:    &kobeexperimentv1alpha1.KobeExperiment{},
+	})
+	if err != nil {
+		return err
+	}
+
 	err = c.Watch(&source.Kind{Type: &corev1.Pod{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
 		OwnerType:    &kobeexperimentv1alpha1.KobeExperiment{},
@@ -172,25 +178,26 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	}
 
 	//Create the new job that will run the EVAL client for this experiment
-	foundJob := &batchv1.Job{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: instance.Name + "-" + strconv.Itoa(identifier)}, foundJob)
-	if err == nil {
-		//to fix this .. do something else here cause there should be multiple jobs and there should be no problem
-		reqLogger.Info("There are more jobs running or have finished for this experiment\n ")
-		identifier++
-		//return reconcile.Result{}, err
+	if instance.Spec.TimesToRun > 0 {
+		foundJob := &batchv1.Job{}
+		err = r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: instance.Name + "-" + strconv.Itoa(identifier)}, foundJob)
+		if err == nil {
+			if &foundJob.Status.Succeeded == nil || foundJob.Status.Succeeded == 0 {
+				return reconcile.Result{}, nil
+			}
+			reqLogger.Info("All past jobs are done /n")
+			identifier++
+		}
+		experimentJob := r.newJobForExperiment(instance, identifier)
+		reqLogger.Info("Creating a new job to run the experiment for this setup")
+		err = r.client.Create(context.TODO(), experimentJob)
+		if err != nil {
+			reqLogger.Info("FAILED to create the job to run this expriment  %s/%s\n", experimentJob.Name, experimentJob.Namespace)
+			return reconcile.Result{}, err
+		}
+		reqLogger.Info("Reached the end of the reconciling loop for the kobe Experiment %s/%s\n", instance.Name, instance.Namespace)
 	}
-	reqLogger.Info("HEY THERE YOU \n")
-	experimentJob := r.newJobForExperiment(instance, identifier)
-	reqLogger.Info("Creating a new job to run the experiment for this setup")
-	err = r.client.Create(context.TODO(), experimentJob)
-	if err != nil {
-		reqLogger.Info("FAILED to create the job to run this expriment  %s/%s\n", experimentJob.Name, experimentJob.Namespace)
-		return reconcile.Result{}, err
-	}
-	reqLogger.Info("Reached the end of the reconciling loop for the kobe Experiment %s/%s\n", instance.Name, instance.Namespace)
-
-	return reconcile.Result{}, err
+	return reconcile.Result{}, nil
 }
 
 //----------------------functions that create native kubernetes objects--------------------------------------
@@ -215,14 +222,14 @@ func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.
 				metav1.ObjectMeta{},
 				corev1.PodSpec{
 					Containers: []corev1.Container{{
-						Image:           m.Spec.ClientImage, //this is gonna be the image of client program
+						Image:           m.Spec.EvalImage, //this is gonna be the image of client program
 						Name:            "job" + "-" + strconv.Itoa(i),
 						ImagePullPolicy: corev1.PullIfNotPresent,
 						Ports: []corev1.ContainerPort{{
 							ContainerPort: int32(8990), //client endpoint
 							Name:          "client",
 						}},
-						Command: m.Spec.ClientCommand,
+						Command: m.Spec.EvalCommands,
 					}},
 					RestartPolicy: corev1.RestartPolicyOnFailure,
 				},

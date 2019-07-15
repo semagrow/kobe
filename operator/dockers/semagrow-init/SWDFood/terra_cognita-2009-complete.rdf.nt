@@ -1,0 +1,709 @@
+<http://data.semanticweb.org/organization/bbn-technologies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/bbn-technologies> <http://www.w3.org/2000/01/rdf-schema#label> "BBN Technologies" .
+<http://data.semanticweb.org/organization/bbn-technologies> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/dave-kolas> .
+<http://data.semanticweb.org/organization/bbn-technologies> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/mike-dean> .
+<http://data.semanticweb.org/organization/bbn-technologies> <http://xmlns.com/foaf/0.1/name> "BBN Technologies" .
+<http://data.semanticweb.org/organization/cefriel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/cefriel> <http://www.w3.org/2000/01/rdf-schema#label> "CEFRIEL" .
+<http://data.semanticweb.org/organization/cefriel> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/daniele-dellaglio> .
+<http://data.semanticweb.org/organization/cefriel> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/irene-celino> .
+<http://data.semanticweb.org/organization/cefriel> <http://xmlns.com/foaf/0.1/name> "CEFRIEL" .
+<http://data.semanticweb.org/organization/department-of-geography-university-of-maryland-at-college-park> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/department-of-geography-university-of-maryland-at-college-park> <http://www.w3.org/2000/01/rdf-schema#label> "Department of Geography, University of Maryland at College park" .
+<http://data.semanticweb.org/organization/department-of-geography-university-of-maryland-at-college-park> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/naijun-zhou> .
+<http://data.semanticweb.org/organization/department-of-geography-university-of-maryland-at-college-park> <http://xmlns.com/foaf/0.1/name> "Department of Geography, University of Maryland at College park" .
+<http://data.semanticweb.org/organization/european-commission-dg-joint-research-centre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/european-commission-dg-joint-research-centre> <http://www.w3.org/2000/01/rdf-schema#label> "European Commission - DG Joint Research Centre" .
+<http://data.semanticweb.org/organization/european-commission-dg-joint-research-centre> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/michael-lutz> .
+<http://data.semanticweb.org/organization/european-commission-dg-joint-research-centre> <http://xmlns.com/foaf/0.1/name> "European Commission - DG Joint Research Centre" .
+<http://data.semanticweb.org/organization/franz-inc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/franz-inc> <http://www.w3.org/2000/01/rdf-schema#label> "Franz Inc" .
+<http://data.semanticweb.org/organization/franz-inc> <http://www.w3.org/2000/01/rdf-schema#label> "Franz, Inc." .
+<http://data.semanticweb.org/organization/franz-inc> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/craig-norvell> .
+<http://data.semanticweb.org/organization/franz-inc> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/jans-aasman> .
+<http://data.semanticweb.org/organization/franz-inc> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/steve-haflich> .
+<http://data.semanticweb.org/organization/franz-inc> <http://xmlns.com/foaf/0.1/name> "Franz Inc" .
+<http://data.semanticweb.org/organization/franz-inc> <http://xmlns.com/foaf/0.1/name> "Franz, Inc." .
+<http://data.semanticweb.org/organization/image-matters-llc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/image-matters-llc> <http://www.w3.org/2000/01/rdf-schema#label> "Image Matters LLC" .
+<http://data.semanticweb.org/organization/image-matters-llc> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/harry-chen> .
+<http://data.semanticweb.org/organization/image-matters-llc> <http://xmlns.com/foaf/0.1/name> "Image Matters LLC" .
+<http://data.semanticweb.org/organization/northrop-grumman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/northrop-grumman> <http://www.w3.org/2000/01/rdf-schema#label> "Northrop Grumman" .
+<http://data.semanticweb.org/organization/northrop-grumman> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/eric-freese> .
+<http://data.semanticweb.org/organization/northrop-grumman> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/james-ressler> .
+<http://data.semanticweb.org/organization/northrop-grumman> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/veleria-boaten> .
+<http://data.semanticweb.org/organization/northrop-grumman> <http://xmlns.com/foaf/0.1/name> "Northrop Grumman" .
+<http://data.semanticweb.org/organization/ordnance-survey-of-great-britain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/ordnance-survey-of-great-britain> <http://www.w3.org/2000/01/rdf-schema#label> "Ordnance Survey" .
+<http://data.semanticweb.org/organization/ordnance-survey-of-great-britain> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/glen-hart> .
+<http://data.semanticweb.org/organization/ordnance-survey-of-great-britain> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/john-goodwin> .
+<http://data.semanticweb.org/organization/ordnance-survey-of-great-britain> <http://xmlns.com/foaf/0.1/name> "Ordnance Survey" .
+<http://data.semanticweb.org/organization/politecnico-di-milano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/politecnico-di-milano> <http://www.w3.org/2000/01/rdf-schema#label> "DEI, Politecnico di Milano" .
+<http://data.semanticweb.org/organization/politecnico-di-milano> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/emanuele-della-valle> .
+<http://data.semanticweb.org/organization/politecnico-di-milano> <http://xmlns.com/foaf/0.1/name> "DEI, Politecnico di Milano" .
+<http://data.semanticweb.org/organization/sap-research> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/sap-research> <http://www.w3.org/2000/01/rdf-schema#label> "SAP Research" .
+<http://data.semanticweb.org/organization/sap-research> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/florian-probst> .
+<http://data.semanticweb.org/organization/sap-research> <http://xmlns.com/foaf/0.1/name> "SAP Research" .
+<http://data.semanticweb.org/organization/school-of-computing-university-of-leeds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/school-of-computing-university-of-leeds> <http://www.w3.org/2000/01/rdf-schema#label> "School of Computing, University of Leeds" .
+<http://data.semanticweb.org/organization/school-of-computing-university-of-leeds> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/vania-dimitrova> .
+<http://data.semanticweb.org/organization/school-of-computing-university-of-leeds> <http://xmlns.com/foaf/0.1/name> "School of Computing, University of Leeds" .
+<http://data.semanticweb.org/organization/scitor-corp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/scitor-corp> <http://www.w3.org/2000/01/rdf-schema#label> "Scitor Corp." .
+<http://data.semanticweb.org/organization/scitor-corp> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/dan-adams> .
+<http://data.semanticweb.org/organization/scitor-corp> <http://xmlns.com/foaf/0.1/name> "Scitor Corp." .
+<http://data.semanticweb.org/organization/socop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/socop> <http://www.w3.org/2000/01/rdf-schema#label> "SOCoP" .
+<http://data.semanticweb.org/organization/socop> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/gary-berg-cross> .
+<http://data.semanticweb.org/organization/socop> <http://xmlns.com/foaf/0.1/name> "SOCoP" .
+<http://data.semanticweb.org/organization/swiss-federal-institute-for-forest-snow-and-landscape-research> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/swiss-federal-institute-for-forest-snow-and-landscape-research> <http://www.w3.org/2000/01/rdf-schema#label> "Swiss Federal Institute for Forest, Snow and Landscape Research WSL" .
+<http://data.semanticweb.org/organization/swiss-federal-institute-for-forest-snow-and-landscape-research> <http://www.w3.org/2000/01/rdf-schema#label> "Swiss Federal Institute for Forest, Snow and Landscape Research, An Institute of the ETH Board" .
+<http://data.semanticweb.org/organization/swiss-federal-institute-for-forest-snow-and-landscape-research> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/rolf-gruetter> .
+<http://data.semanticweb.org/organization/swiss-federal-institute-for-forest-snow-and-landscape-research> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/thomas-scharrenbach> .
+<http://data.semanticweb.org/organization/swiss-federal-institute-for-forest-snow-and-landscape-research> <http://xmlns.com/foaf/0.1/name> "Swiss Federal Institute for Forest, Snow and Landscape Research WSL" .
+<http://data.semanticweb.org/organization/swiss-federal-institute-for-forest-snow-and-landscape-research> <http://xmlns.com/foaf/0.1/name> "Swiss Federal Institute for Forest, Snow and Landscape Research, An Institute of the ETH Board" .
+<http://data.semanticweb.org/organization/traverse-technologies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/traverse-technologies> <http://www.w3.org/2000/01/rdf-schema#label> "Traverse Technologies" .
+<http://data.semanticweb.org/organization/traverse-technologies> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/josh-lieberman> .
+<http://data.semanticweb.org/organization/traverse-technologies> <http://xmlns.com/foaf/0.1/name> "Traverse Technologies" .
+<http://data.semanticweb.org/organization/universiteit-van-amsterdam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/universiteit-van-amsterdam> <http://www.w3.org/2000/01/rdf-schema#label> "University of Amsterdam" .
+<http://data.semanticweb.org/organization/universiteit-van-amsterdam> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/radboud-winkels> .
+<http://data.semanticweb.org/organization/universiteit-van-amsterdam> <http://xmlns.com/foaf/0.1/name> "University of Amsterdam" .
+<http://data.semanticweb.org/organization/university-of-amsterdam-leibniz-center-for-law> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-amsterdam-leibniz-center-for-law> <http://www.w3.org/2000/01/rdf-schema#label> "University of Amsterdam - Leibniz Center for Law" .
+<http://data.semanticweb.org/organization/university-of-amsterdam-leibniz-center-for-law> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/erik-hupkes> .
+<http://data.semanticweb.org/organization/university-of-amsterdam-leibniz-center-for-law> <http://xmlns.com/foaf/0.1/name> "University of Amsterdam - Leibniz Center for Law" .
+<http://data.semanticweb.org/organization/university-of-illinois-at-chicago> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-illinois-at-chicago> <http://www.w3.org/2000/01/rdf-schema#label> "University of Illinois at Chicago" .
+<http://data.semanticweb.org/organization/university-of-illinois-at-chicago> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/isabel-cruz> .
+<http://data.semanticweb.org/organization/university-of-illinois-at-chicago> <http://xmlns.com/foaf/0.1/name> "University of Illinois at Chicago" .
+<http://data.semanticweb.org/organization/university-of-iowa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-iowa> <http://www.w3.org/2000/01/rdf-schema#label> "University of Iowa" .
+<http://data.semanticweb.org/organization/university-of-iowa> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/kathleen-hornsby> .
+<http://data.semanticweb.org/organization/university-of-iowa> <http://xmlns.com/foaf/0.1/name> "University of Iowa" .
+<http://data.semanticweb.org/organization/university-of-leeds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-leeds> <http://www.w3.org/2000/01/rdf-schema#label> "University of Leeds" .
+<http://data.semanticweb.org/organization/university-of-leeds> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/anthony-g-cohn> .
+<http://data.semanticweb.org/organization/university-of-leeds> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/ronald-denaux> .
+<http://data.semanticweb.org/organization/university-of-leeds> <http://xmlns.com/foaf/0.1/name> "University of Leeds" .
+<http://data.semanticweb.org/organization/university-of-maine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-maine> <http://www.w3.org/2000/01/rdf-schema#label> "University of Maine" .
+<http://data.semanticweb.org/organization/university-of-maine> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/max-egenhofer> .
+<http://data.semanticweb.org/organization/university-of-maine> <http://xmlns.com/foaf/0.1/name> "University of Maine" .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://www.w3.org/2000/01/rdf-schema#label> "Institute for Geoinformatics, University of M\u00FCnster" .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://www.w3.org/2000/01/rdf-schema#label> "Institute for Geoinformatics; University of Muenster" .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://www.w3.org/2000/01/rdf-schema#label> "University of Muenster" .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/angela-schwering> .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/arne-broering> .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/carsten-kessler> .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/christoph-stasch> .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/krzysztof-janowicz> .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/sven-schade> .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://xmlns.com/foaf/0.1/name> "Institute for Geoinformatics, University of M\u00FCnster" .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://xmlns.com/foaf/0.1/name> "Institute for Geoinformatics; University of Muenster" .
+<http://data.semanticweb.org/organization/university-of-muenster> <http://xmlns.com/foaf/0.1/name> "University of Muenster" .
+<http://data.semanticweb.org/organization/university-of-wisconsin-madison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-wisconsin-madison> <http://www.w3.org/2000/01/rdf-schema#label> "University of Wisconsin, Madison" .
+<http://data.semanticweb.org/organization/university-of-wisconsin-madison> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/nancy-wiegand> .
+<http://data.semanticweb.org/organization/university-of-wisconsin-madison> <http://xmlns.com/foaf/0.1/name> "University of Wisconsin, Madison" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/2000/01/rdf-schema#label> "University of Amsterdam/Vrije Universiteit Amsterdam" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/2000/01/rdf-schema#label> "VU University Amsterdam" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/guus-schreiber> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/jan-wielemaker> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/rinke-hoekstra> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/willem-van-hage> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/name> "University of Amsterdam/Vrije Universiteit Amsterdam" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/name> "VU University Amsterdam" .
+<http://data.semanticweb.org/person/angela-schwering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/angela-schwering> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/angela-schwering> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-muenster> .
+<http://data.semanticweb.org/person/angela-schwering> <http://www.w3.org/2000/01/rdf-schema#label> "Angela Schwering" .
+<http://data.semanticweb.org/person/angela-schwering> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/angela-schwering> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "9736b3251f9f344cbfcfb7e3d3463e5bda08470a" .
+<http://data.semanticweb.org/person/angela-schwering> <http://xmlns.com/foaf/0.1/name> "Angela Schwering" .
+<http://data.semanticweb.org/person/anthony-g-cohn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/anthony-g-cohn> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-leeds> .
+<http://data.semanticweb.org/person/anthony-g-cohn> <http://www.w3.org/2000/01/rdf-schema#label> "Anthony Cohn" .
+<http://data.semanticweb.org/person/anthony-g-cohn> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/anthony-g-cohn> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> .
+<http://data.semanticweb.org/person/anthony-g-cohn> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "405fc64aabd338520f29ee885b478f23f845b9e1" .
+<http://data.semanticweb.org/person/anthony-g-cohn> <http://xmlns.com/foaf/0.1/name> "Anthony Cohn" .
+<http://data.semanticweb.org/person/arne-broering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/arne-broering> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-muenster> .
+<http://data.semanticweb.org/person/arne-broering> <http://www.w3.org/2000/01/rdf-schema#label> "Arne Broering" .
+<http://data.semanticweb.org/person/arne-broering> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/arne-broering> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> .
+<http://data.semanticweb.org/person/arne-broering> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "88ca37838b7339aba46bd2889a1a011ff7bcba60" .
+<http://data.semanticweb.org/person/arne-broering> <http://xmlns.com/foaf/0.1/name> "Arne Broering" .
+<http://data.semanticweb.org/person/carsten-kessler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/carsten-kessler> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-muenster> .
+<http://data.semanticweb.org/person/carsten-kessler> <http://www.w3.org/2000/01/rdf-schema#label> "Carsten Kessler" .
+<http://data.semanticweb.org/person/carsten-kessler> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/carsten-kessler> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> .
+<http://data.semanticweb.org/person/carsten-kessler> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d010ef2b186e6439a622f2f4ad8305f885495215" .
+<http://data.semanticweb.org/person/carsten-kessler> <http://xmlns.com/foaf/0.1/name> "Carsten Kessler" .
+<http://data.semanticweb.org/person/christoph-stasch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/christoph-stasch> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-muenster> .
+<http://data.semanticweb.org/person/christoph-stasch> <http://www.w3.org/2000/01/rdf-schema#label> "Christoph Stasch" .
+<http://data.semanticweb.org/person/christoph-stasch> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/christoph-stasch> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> .
+<http://data.semanticweb.org/person/christoph-stasch> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "5c16e35d025bfc99a3d90e44c43096f67cc2dec4" .
+<http://data.semanticweb.org/person/christoph-stasch> <http://xmlns.com/foaf/0.1/name> "Christoph Stasch" .
+<http://data.semanticweb.org/person/craig-norvell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/craig-norvell> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/franz-inc> .
+<http://data.semanticweb.org/person/craig-norvell> <http://www.w3.org/2000/01/rdf-schema#label> "Craig Norvell" .
+<http://data.semanticweb.org/person/craig-norvell> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/craig-norvell> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> .
+<http://data.semanticweb.org/person/craig-norvell> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "f3761407cab38a968580b688f51c5cbbcf7d0644" .
+<http://data.semanticweb.org/person/craig-norvell> <http://xmlns.com/foaf/0.1/name> "Craig Norvell" .
+<http://data.semanticweb.org/person/dalia-varanka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/dalia-varanka> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/dalia-varanka> <http://www.w3.org/2000/01/rdf-schema#label> "Dalia Varanka" .
+<http://data.semanticweb.org/person/dalia-varanka> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "fa2be0b0aaf5ffc9f9dba5d1afb805162ac4af1e" .
+<http://data.semanticweb.org/person/dalia-varanka> <http://xmlns.com/foaf/0.1/name> "Dalia Varanka" .
+<http://data.semanticweb.org/person/dan-adams> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/dan-adams> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/dan-adams> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/scitor-corp> .
+<http://data.semanticweb.org/person/dan-adams> <http://www.w3.org/2000/01/rdf-schema#label> "Dan Adams" .
+<http://data.semanticweb.org/person/dan-adams> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/dan-adams> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "dea2a7d9db7cc8d506be1f5897c4b7e13b8b32f1" .
+<http://data.semanticweb.org/person/dan-adams> <http://xmlns.com/foaf/0.1/name> "Dan Adams" .
+<http://data.semanticweb.org/person/daniele-dellaglio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/daniele-dellaglio> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cefriel> .
+<http://data.semanticweb.org/person/daniele-dellaglio> <http://www.w3.org/2000/01/rdf-schema#label> "Daniele Dell'Aglio" .
+<http://data.semanticweb.org/person/daniele-dellaglio> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/daniele-dellaglio> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> .
+<http://data.semanticweb.org/person/daniele-dellaglio> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d961eff3c9dc7d0a7ac7c829fa3a1562f75810bf" .
+<http://data.semanticweb.org/person/daniele-dellaglio> <http://xmlns.com/foaf/0.1/name> "Daniele Dell'Aglio" .
+<http://data.semanticweb.org/person/dave-kolas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/dave-kolas> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/dave-kolas> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/dave-kolas> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/bbn-technologies> .
+<http://data.semanticweb.org/person/dave-kolas> <http://www.w3.org/2000/01/rdf-schema#label> "Dave Kolas" .
+<http://data.semanticweb.org/person/dave-kolas> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/dave-kolas> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "cd8d54e1c3da5e7fb726ea5be6a9ea981fcdd554" .
+<http://data.semanticweb.org/person/dave-kolas> <http://xmlns.com/foaf/0.1/name> "Dave Kolas" .
+<http://data.semanticweb.org/person/emanuele-della-valle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/emanuele-della-valle> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/politecnico-di-milano> .
+<http://data.semanticweb.org/person/emanuele-della-valle> <http://www.w3.org/2000/01/rdf-schema#label> "Emanuele Della Valle" .
+<http://data.semanticweb.org/person/emanuele-della-valle> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/emanuele-della-valle> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> .
+<http://data.semanticweb.org/person/emanuele-della-valle> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "1ee386235c89959195075bc4944d5c68f8265f96" .
+<http://data.semanticweb.org/person/emanuele-della-valle> <http://xmlns.com/foaf/0.1/name> "Emanuele Della Valle" .
+<http://data.semanticweb.org/person/eric-freese> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/eric-freese> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/northrop-grumman> .
+<http://data.semanticweb.org/person/eric-freese> <http://www.w3.org/2000/01/rdf-schema#label> "Eric Freese" .
+<http://data.semanticweb.org/person/eric-freese> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/eric-freese> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> .
+<http://data.semanticweb.org/person/eric-freese> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "3289d16310fe2d2e6e9dd089b1f25dc65346afe7" .
+<http://data.semanticweb.org/person/eric-freese> <http://xmlns.com/foaf/0.1/name> "Eric Freese" .
+<http://data.semanticweb.org/person/erik-hupkes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/erik-hupkes> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-amsterdam-leibniz-center-for-law> .
+<http://data.semanticweb.org/person/erik-hupkes> <http://www.w3.org/2000/01/rdf-schema#label> "Erik Hupkes" .
+<http://data.semanticweb.org/person/erik-hupkes> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Netherlands> .
+<http://data.semanticweb.org/person/erik-hupkes> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> .
+<http://data.semanticweb.org/person/erik-hupkes> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "35544474fcb67033b278513d805dd2682bb49f8e" .
+<http://data.semanticweb.org/person/erik-hupkes> <http://xmlns.com/foaf/0.1/name> "Erik Hupkes" .
+<http://data.semanticweb.org/person/florian-probst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/florian-probst> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/florian-probst> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/sap-research> .
+<http://data.semanticweb.org/person/florian-probst> <http://www.w3.org/2000/01/rdf-schema#label> "Florian Probst" .
+<http://data.semanticweb.org/person/florian-probst> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/florian-probst> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "41b5875a0f99bce52440660f8e607fbbda2f2858" .
+<http://data.semanticweb.org/person/florian-probst> <http://xmlns.com/foaf/0.1/name> "Florian Probst" .
+<http://data.semanticweb.org/person/gary-berg-cross> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/gary-berg-cross> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/gary-berg-cross> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/gary-berg-cross> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/socop> .
+<http://data.semanticweb.org/person/gary-berg-cross> <http://www.w3.org/2000/01/rdf-schema#label> "Gary Berg-Cross" .
+<http://data.semanticweb.org/person/gary-berg-cross> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/gary-berg-cross> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "8dd42769398b53b1cb558d91f70c01e2ba91f5e5" .
+<http://data.semanticweb.org/person/gary-berg-cross> <http://xmlns.com/foaf/0.1/name> "Gary Berg-Cross" .
+<http://data.semanticweb.org/person/glen-hart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/glen-hart> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/glen-hart> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ordnance-survey-of-great-britain> .
+<http://data.semanticweb.org/person/glen-hart> <http://www.w3.org/2000/01/rdf-schema#label> "Glen Hart" .
+<http://data.semanticweb.org/person/glen-hart> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/glen-hart> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> .
+<http://data.semanticweb.org/person/glen-hart> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "20e382d981f723a765ea9f9541b24b22aad4ab64" .
+<http://data.semanticweb.org/person/glen-hart> <http://xmlns.com/foaf/0.1/name> "Glen Hart" .
+<http://data.semanticweb.org/person/guus-schreiber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/guus-schreiber> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> .
+<http://data.semanticweb.org/person/guus-schreiber> <http://www.w3.org/2000/01/rdf-schema#label> "Guus Schreiber" .
+<http://data.semanticweb.org/person/guus-schreiber> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Netherlands> .
+<http://data.semanticweb.org/person/guus-schreiber> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> .
+<http://data.semanticweb.org/person/guus-schreiber> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "ddaa983ca5d101642d761f81ec885e9c2bd0a093" .
+<http://data.semanticweb.org/person/guus-schreiber> <http://xmlns.com/foaf/0.1/name> "Guus Schreiber" .
+<http://data.semanticweb.org/person/harry-chen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/harry-chen> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/harry-chen> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/image-matters-llc> .
+<http://data.semanticweb.org/person/harry-chen> <http://www.w3.org/2000/01/rdf-schema#label> "Harry Chen" .
+<http://data.semanticweb.org/person/harry-chen> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/harry-chen> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "80368445d942c6e207c6694353355c3bd37f3e7a" .
+<http://data.semanticweb.org/person/harry-chen> <http://xmlns.com/foaf/0.1/name> "Harry Chen" .
+<http://data.semanticweb.org/person/irene-celino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/irene-celino> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cefriel> .
+<http://data.semanticweb.org/person/irene-celino> <http://www.w3.org/2000/01/rdf-schema#label> "Irene Celino" .
+<http://data.semanticweb.org/person/irene-celino> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/irene-celino> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> .
+<http://data.semanticweb.org/person/irene-celino> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "a62cfa4877ae7d8b225f36c1afeeeec08a5316ae" .
+<http://data.semanticweb.org/person/irene-celino> <http://xmlns.com/foaf/0.1/name> "Irene Celino" .
+<http://data.semanticweb.org/person/isabel-cruz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/isabel-cruz> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/isabel-cruz> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-illinois-at-chicago> .
+<http://data.semanticweb.org/person/isabel-cruz> <http://www.w3.org/2000/01/rdf-schema#label> "Isabel Cruz" .
+<http://data.semanticweb.org/person/isabel-cruz> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/isabel-cruz> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "450162ac52a51c1ed888fa843c004bbc77d8e757" .
+<http://data.semanticweb.org/person/isabel-cruz> <http://xmlns.com/foaf/0.1/name> "Isabel Cruz" .
+<http://data.semanticweb.org/person/james-ressler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/james-ressler> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/james-ressler> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/northrop-grumman> .
+<http://data.semanticweb.org/person/james-ressler> <http://www.w3.org/2000/01/rdf-schema#label> "James Ressler" .
+<http://data.semanticweb.org/person/james-ressler> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/james-ressler> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> .
+<http://data.semanticweb.org/person/james-ressler> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "bd9ac8aa30c1ddd0a2bf700a97961bdabd0240ca" .
+<http://data.semanticweb.org/person/james-ressler> <http://xmlns.com/foaf/0.1/name> "James Ressler" .
+<http://data.semanticweb.org/person/james-wilson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/james-wilson> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/james-wilson> <http://www.w3.org/2000/01/rdf-schema#label> "James Wilson" .
+<http://data.semanticweb.org/person/james-wilson> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "9afe05b5f102788d883c5c099c60dc57fd8ede04" .
+<http://data.semanticweb.org/person/james-wilson> <http://xmlns.com/foaf/0.1/name> "James Wilson" .
+<http://data.semanticweb.org/person/jan-wielemaker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jan-wielemaker> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> .
+<http://data.semanticweb.org/person/jan-wielemaker> <http://www.w3.org/2000/01/rdf-schema#label> "Jan Wielemaker" .
+<http://data.semanticweb.org/person/jan-wielemaker> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Netherlands> .
+<http://data.semanticweb.org/person/jan-wielemaker> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> .
+<http://data.semanticweb.org/person/jan-wielemaker> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "9d8169de29505191fc4f28e2abf1ab16e112d93e" .
+<http://data.semanticweb.org/person/jan-wielemaker> <http://xmlns.com/foaf/0.1/name> "Jan Wielemaker" .
+<http://data.semanticweb.org/person/jans-aasman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jans-aasman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/franz-inc> .
+<http://data.semanticweb.org/person/jans-aasman> <http://www.w3.org/2000/01/rdf-schema#label> "Jans Aasman" .
+<http://data.semanticweb.org/person/jans-aasman> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/jans-aasman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> .
+<http://data.semanticweb.org/person/jans-aasman> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "203216e2412e287bad61ff368f0b51f41cc73311" .
+<http://data.semanticweb.org/person/jans-aasman> <http://xmlns.com/foaf/0.1/name> "Jans Aasman" .
+<http://data.semanticweb.org/person/john-goodwin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/john-goodwin> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/john-goodwin> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ordnance-survey-of-great-britain> .
+<http://data.semanticweb.org/person/john-goodwin> <http://www.w3.org/2000/01/rdf-schema#label> "John Goodwin" .
+<http://data.semanticweb.org/person/john-goodwin> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/john-goodwin> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "4e6e5f3e9ee7afb2826133bbc3c6695d19674cc4" .
+<http://data.semanticweb.org/person/john-goodwin> <http://xmlns.com/foaf/0.1/name> "John Goodwin" .
+<http://data.semanticweb.org/person/josh-lieberman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/josh-lieberman> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/josh-lieberman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/traverse-technologies> .
+<http://data.semanticweb.org/person/josh-lieberman> <http://www.w3.org/2000/01/rdf-schema#label> "Joshua Lieberman" .
+<http://data.semanticweb.org/person/josh-lieberman> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/josh-lieberman> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "54c6799f73f339807a4361a398becbd90fb0125e" .
+<http://data.semanticweb.org/person/josh-lieberman> <http://xmlns.com/foaf/0.1/name> "Joshua Lieberman" .
+<http://data.semanticweb.org/person/kathleen-hornsby> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/kathleen-hornsby> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/kathleen-hornsby> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-iowa> .
+<http://data.semanticweb.org/person/kathleen-hornsby> <http://www.w3.org/2000/01/rdf-schema#label> "Kathleen Stewart Hornsby" .
+<http://data.semanticweb.org/person/kathleen-hornsby> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/kathleen-hornsby> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "fb680aef3e8e2ebd9354859699ea1db2221f02a5" .
+<http://data.semanticweb.org/person/kathleen-hornsby> <http://xmlns.com/foaf/0.1/name> "Kathleen Stewart Hornsby" .
+<http://data.semanticweb.org/person/krzysztof-janowicz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/krzysztof-janowicz> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-muenster> .
+<http://data.semanticweb.org/person/krzysztof-janowicz> <http://www.w3.org/2000/01/rdf-schema#label> "Krzysztof Janowicz" .
+<http://data.semanticweb.org/person/krzysztof-janowicz> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/krzysztof-janowicz> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> .
+<http://data.semanticweb.org/person/krzysztof-janowicz> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "9e40e41b72288075afe71a0056587fe2845a0e83" .
+<http://data.semanticweb.org/person/krzysztof-janowicz> <http://xmlns.com/foaf/0.1/name> "Krzysztof Janowicz" .
+<http://data.semanticweb.org/person/max-egenhofer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/max-egenhofer> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/max-egenhofer> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-maine> .
+<http://data.semanticweb.org/person/max-egenhofer> <http://www.w3.org/2000/01/rdf-schema#label> "Max Egenhofer" .
+<http://data.semanticweb.org/person/max-egenhofer> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/max-egenhofer> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "102c446b2de82962ce190a751971ba6a95eb3942" .
+<http://data.semanticweb.org/person/max-egenhofer> <http://xmlns.com/foaf/0.1/name> "Max Egenhofer" .
+<http://data.semanticweb.org/person/michael-lutz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/michael-lutz> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/michael-lutz> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/european-commission-dg-joint-research-centre> .
+<http://data.semanticweb.org/person/michael-lutz> <http://www.w3.org/2000/01/rdf-schema#label> "Michael Lutz" .
+<http://data.semanticweb.org/person/michael-lutz> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/michael-lutz> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "6b4169e940b49b0f8892e9e598b2b7b0ab633d1d" .
+<http://data.semanticweb.org/person/michael-lutz> <http://xmlns.com/foaf/0.1/name> "Michael Lutz" .
+<http://data.semanticweb.org/person/mike-dean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/mike-dean> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/mike-dean> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/bbn-technologies> .
+<http://data.semanticweb.org/person/mike-dean> <http://www.w3.org/2000/01/rdf-schema#label> "Mike Dean" .
+<http://data.semanticweb.org/person/mike-dean> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/mike-dean> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "6006a914f7d645142fadf08d9a4e33aee98416d0" .
+<http://data.semanticweb.org/person/mike-dean> <http://xmlns.com/foaf/0.1/name> "Mike Dean" .
+<http://data.semanticweb.org/person/naijun-zhou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/naijun-zhou> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/naijun-zhou> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/department-of-geography-university-of-maryland-at-college-park> .
+<http://data.semanticweb.org/person/naijun-zhou> <http://www.w3.org/2000/01/rdf-schema#label> "Naijun Zhou" .
+<http://data.semanticweb.org/person/naijun-zhou> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/naijun-zhou> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "553af71ff137d14a192d7cd3be5a792929c3a4c0" .
+<http://data.semanticweb.org/person/naijun-zhou> <http://xmlns.com/foaf/0.1/name> "Naijun Zhou" .
+<http://data.semanticweb.org/person/nancy-wiegand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/nancy-wiegand> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/nancy-wiegand> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/nancy-wiegand> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-wisconsin-madison> .
+<http://data.semanticweb.org/person/nancy-wiegand> <http://www.w3.org/2000/01/rdf-schema#label> "Nancy Wiegand" .
+<http://data.semanticweb.org/person/nancy-wiegand> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/nancy-wiegand> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "e8118a298ce1fad96098f13a97181f0d72b8376c" .
+<http://data.semanticweb.org/person/nancy-wiegand> <http://xmlns.com/foaf/0.1/name> "Nancy Wiegand" .
+<http://data.semanticweb.org/person/ola-ahlqvist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ola-ahlqvist> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/ola-ahlqvist> <http://www.w3.org/2000/01/rdf-schema#label> "Ola Ahlqvist" .
+<http://data.semanticweb.org/person/ola-ahlqvist> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "08fec7b02ecbf39c38c51d7b037eca86441e86c6" .
+<http://data.semanticweb.org/person/ola-ahlqvist> <http://xmlns.com/foaf/0.1/name> "Ola Ahlqvist" .
+<http://data.semanticweb.org/person/radboud-winkels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/radboud-winkels> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universiteit-van-amsterdam> .
+<http://data.semanticweb.org/person/radboud-winkels> <http://www.w3.org/2000/01/rdf-schema#label> "Radboud Winkels" .
+<http://data.semanticweb.org/person/radboud-winkels> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Netherlands> .
+<http://data.semanticweb.org/person/radboud-winkels> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> .
+<http://data.semanticweb.org/person/radboud-winkels> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "e35545199297ca1d75c70a9812d321696b70144a" .
+<http://data.semanticweb.org/person/radboud-winkels> <http://xmlns.com/foaf/0.1/name> "Radboud Winkels" .
+<http://data.semanticweb.org/person/rinke-hoekstra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/rinke-hoekstra> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> .
+<http://data.semanticweb.org/person/rinke-hoekstra> <http://www.w3.org/2000/01/rdf-schema#label> "Rinke Hoekstra" .
+<http://data.semanticweb.org/person/rinke-hoekstra> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Netherlands> .
+<http://data.semanticweb.org/person/rinke-hoekstra> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> .
+<http://data.semanticweb.org/person/rinke-hoekstra> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "e2ecb1374b79573194ca37c3e71c977523c4346a" .
+<http://data.semanticweb.org/person/rinke-hoekstra> <http://xmlns.com/foaf/0.1/name> "Rinke Hoekstra" .
+<http://data.semanticweb.org/person/rolf-gruetter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/rolf-gruetter> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/swiss-federal-institute-for-forest-snow-and-landscape-research> .
+<http://data.semanticweb.org/person/rolf-gruetter> <http://www.w3.org/2000/01/rdf-schema#label> "Rolf Gr\u00FCtter" .
+<http://data.semanticweb.org/person/rolf-gruetter> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Switzerland> .
+<http://data.semanticweb.org/person/rolf-gruetter> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> .
+<http://data.semanticweb.org/person/rolf-gruetter> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "ebfcf3b9138cbb5c13a3511f20f055b3cecaa63f" .
+<http://data.semanticweb.org/person/rolf-gruetter> <http://xmlns.com/foaf/0.1/name> "Rolf Gr\u00FCtter" .
+<http://data.semanticweb.org/person/ronald-denaux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ronald-denaux> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-leeds> .
+<http://data.semanticweb.org/person/ronald-denaux> <http://www.w3.org/2000/01/rdf-schema#label> "Ronald Denaux" .
+<http://data.semanticweb.org/person/ronald-denaux> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/ronald-denaux> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> .
+<http://data.semanticweb.org/person/ronald-denaux> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "3064359ee79959158bda30a623ebfc489fa1dc35" .
+<http://data.semanticweb.org/person/ronald-denaux> <http://xmlns.com/foaf/0.1/name> "Ronald Denaux" .
+<http://data.semanticweb.org/person/sergei-levashkin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/sergei-levashkin> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/person/sergei-levashkin> <http://www.w3.org/2000/01/rdf-schema#label> "Sergei Levashkin" .
+<http://data.semanticweb.org/person/sergei-levashkin> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "976fbff434fe3116f1e58836c0ca2c07f6ed1f66" .
+<http://data.semanticweb.org/person/sergei-levashkin> <http://xmlns.com/foaf/0.1/name> "Sergei Levashkin" .
+<http://data.semanticweb.org/person/steve-haflich> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/steve-haflich> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/franz-inc> .
+<http://data.semanticweb.org/person/steve-haflich> <http://www.w3.org/2000/01/rdf-schema#label> "Steve Haflich" .
+<http://data.semanticweb.org/person/steve-haflich> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/steve-haflich> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> .
+<http://data.semanticweb.org/person/steve-haflich> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "89c8d81b3b14b02aec7960f01dd0f3ff6bb49e44" .
+<http://data.semanticweb.org/person/steve-haflich> <http://xmlns.com/foaf/0.1/name> "Steve Haflich" .
+<http://data.semanticweb.org/person/sven-schade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/sven-schade> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-muenster> .
+<http://data.semanticweb.org/person/sven-schade> <http://www.w3.org/2000/01/rdf-schema#label> "Sven Schade" .
+<http://data.semanticweb.org/person/sven-schade> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/sven-schade> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> .
+<http://data.semanticweb.org/person/sven-schade> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "9af9dd09fa5321faa59ef2f6c69ca607b92d38f7" .
+<http://data.semanticweb.org/person/sven-schade> <http://xmlns.com/foaf/0.1/name> "Sven Schade" .
+<http://data.semanticweb.org/person/thomas-scharrenbach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/thomas-scharrenbach> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/swiss-federal-institute-for-forest-snow-and-landscape-research> .
+<http://data.semanticweb.org/person/thomas-scharrenbach> <http://www.w3.org/2000/01/rdf-schema#label> "Thomas Scharrenbach" .
+<http://data.semanticweb.org/person/thomas-scharrenbach> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Switzerland> .
+<http://data.semanticweb.org/person/thomas-scharrenbach> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> .
+<http://data.semanticweb.org/person/thomas-scharrenbach> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d6f4651db93a6556e68a4941a732afdf9e1c11c6" .
+<http://data.semanticweb.org/person/thomas-scharrenbach> <http://xmlns.com/foaf/0.1/name> "Thomas Scharrenbach" .
+<http://data.semanticweb.org/person/vania-dimitrova> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/vania-dimitrova> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/school-of-computing-university-of-leeds> .
+<http://data.semanticweb.org/person/vania-dimitrova> <http://www.w3.org/2000/01/rdf-schema#label> "Vania Dimitrova" .
+<http://data.semanticweb.org/person/vania-dimitrova> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/vania-dimitrova> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> .
+<http://data.semanticweb.org/person/vania-dimitrova> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "c467a9bd8e406c04b2216123707d5eb1c757378f" .
+<http://data.semanticweb.org/person/vania-dimitrova> <http://xmlns.com/foaf/0.1/name> "Vania Dimitrova" .
+<http://data.semanticweb.org/person/veleria-boaten> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/veleria-boaten> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/northrop-grumman> .
+<http://data.semanticweb.org/person/veleria-boaten> <http://www.w3.org/2000/01/rdf-schema#label> "Veleria Boaten" .
+<http://data.semanticweb.org/person/veleria-boaten> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/veleria-boaten> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> .
+<http://data.semanticweb.org/person/veleria-boaten> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "2877aa92145734eddc3db950f23369f058e9e492" .
+<http://data.semanticweb.org/person/veleria-boaten> <http://xmlns.com/foaf/0.1/name> "Veleria Boaten" .
+<http://data.semanticweb.org/person/willem-van-hage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/willem-van-hage> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> .
+<http://data.semanticweb.org/person/willem-van-hage> <http://www.w3.org/2000/01/rdf-schema#label> "Willem Robert van Hage" .
+<http://data.semanticweb.org/person/willem-van-hage> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Netherlands> .
+<http://data.semanticweb.org/person/willem-van-hage> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> .
+<http://data.semanticweb.org/person/willem-van-hage> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "6b25dea02fbc6b6663e71b15efd548f0b17f8e0d" .
+<http://data.semanticweb.org/person/willem-van-hage> <http://xmlns.com/foaf/0.1/name> "Willem Robert van Hage" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009> <http://data.semanticweb.org/ns/swc/ontology#completeGraph> <http://data.semanticweb.org/workshop/terra_cognita/2009/complete> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009> <http://data.semanticweb.org/ns/swc/ontology#hasAcronym> "Terra2009" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009> <http://www.w3.org/2000/01/rdf-schema#label> "Terra Cognita" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009> <http://www.w3.org/2002/12/cal/ical#dtend> _:node1dfqj7h31x1 .
+_:node1dfqj7h31x1 <http://www.w3.org/2002/12/cal/ical#date> "2009-10-26" .
+_:node1dfqj7h31x1 <http://www.w3.org/2002/12/cal/ical#tzid> "EDT" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009> <http://www.w3.org/2002/12/cal/ical#dtstart> _:node1dfqj7h31x2 .
+_:node1dfqj7h31x2 <http://www.w3.org/2002/12/cal/ical#date> "2009-10-26" .
+_:node1dfqj7h31x2 <http://www.w3.org/2002/12/cal/ical#tzid> "EDT" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009> <http://www.w3.org/2002/12/cal/ical#url> <http://asio.bbn.com/terracognita2009/> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009> <http://xmlns.com/foaf/0.1/homepage> <http://asio.bbn.com/terracognita2009/> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/chair/organisingcommitteemember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#OrganisingCommitteeMember> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/dave-kolas> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/gary-berg-cross> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/nancy-wiegand> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/terra_cognita/2009> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PCMember> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/angela-schwering> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/dalia-varanka> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/dan-adams> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/dave-kolas> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/florian-probst> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/gary-berg-cross> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/glen-hart> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/harry-chen> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/isabel-cruz> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/james-ressler> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/james-wilson> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/john-goodwin> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/josh-lieberman> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/kathleen-hornsby> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/max-egenhofer> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/michael-lutz> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/mike-dean> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/naijun-zhou> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/nancy-wiegand> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/ola-ahlqvist> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/sergei-levashkin> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/terra_cognita/2009> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/erik-hupkes> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/radboud-winkels> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/rinke-hoekstra> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://purl.org/dc/elements/1.1/subject> "Google Maps" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://purl.org/dc/elements/1.1/subject> "SKOS and OWL" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://purl.org/dc/elements/1.1/subject> "land use" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://purl.org/dc/elements/1.1/subject> "normative assessment" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://purl.org/dc/elements/1.1/subject> "spatial planning" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://purl.org/dc/elements/1.1/title> "Spatial Planning on the Semantic Web" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://swrc.ontoware.org/ontology#abstract> "Land use regulations are an important but often underrated legal domain. Especially in densely populated regions such as the Netherlands, spatial plans have a profound impact on (local) governments and citizens alike.map based legal case assessment. Users can see what is allowed and what not in specific areas on the map, they can represent a (simple) case by selecting or drawing an area on the map. Given a designation for that area, they can have the system assess whether this is allowed or not. The same solution also enables the comparison of two or more sets of spatial norms that govern the same region, e.g. coming from a municipality and the province it is part of. We demonstrate a practical use of a case assessment method using OWL 2 DL, and present a prototype system that provides a partial implementation of the approach." .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/erik-hupkes> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/radboud-winkels> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/rinke-hoekstra> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://swrc.ontoware.org/ontology#url> <http://CEUR-WS.org/Vol-518/terra09_submission_1.pdf> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://swrc.ontoware.org/ontology#year> "2009" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7h31x3 .
+_:node1dfqj7h31x3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/radboud-winkels> .
+_:node1dfqj7h31x3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/rinke-hoekstra> .
+_:node1dfqj7h31x3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/erik-hupkes> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Planning on the Semantic Web" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/erik-hupkes> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/radboud-winkels> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/rinke-hoekstra> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/rolf-gruetter> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/thomas-scharrenbach> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://purl.org/dc/elements/1.1/subject> "Knowledge Representation" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://purl.org/dc/elements/1.1/subject> "Region Connection Calculus (RCC)" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://purl.org/dc/elements/1.1/subject> "Spatio-Thematic Query Processing" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://purl.org/dc/elements/1.1/subject> "Vague Spatial Concepts" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://purl.org/dc/elements/1.1/subject> "Web Ontology Language (OWL)" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://purl.org/dc/elements/1.1/title> "A Qualitative Approach to Vague Spatio-Thematic Query Processing" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://swrc.ontoware.org/ontology#abstract> "When representing knowledge in geographic information systems, a challenge is to enhance thematic knowledge, typically represented by ontologies, with spatial knowledge. A way to achieve this is to combine existing approaches to spatial knowledge representation with ontologies. In this paper an implementation of the Region Connection Calculus (RCC) in the Web Ontology Language (OWL) augmented by DL-safe rules is used in order to represent spatio-thematic knowledge. It is shown how the represented knowledge supports the processing of queries using, possibly vague, spatial concepts. Thereby, the division of land into administrative regions rather than, for instance, a metric system is taken as a frame of reference for evaluating closeness. Hence, closeness is evaluated based on purely qualitative criteria. Since colloquial descriptions typically involve qualitative concepts, the presented approach is expected to align better with the way how human beings deal with closeness than a quantitative approach. The paper is discussed w.r.t. related work and an overview of possible future extensions is provided." .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/rolf-gruetter> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/thomas-scharrenbach> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://swrc.ontoware.org/ontology#url> <http://CEUR-WS.org/Vol-518/terra09_submission_2.pdf> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://swrc.ontoware.org/ontology#year> "2009" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7h31x4 .
+_:node1dfqj7h31x4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/rolf-gruetter> .
+_:node1dfqj7h31x4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/thomas-scharrenbach> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://www.w3.org/2000/01/rdf-schema#label> "A Qualitative Approach to Vague Spatio-Thematic Query Processing" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/rolf-gruetter> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/thomas-scharrenbach> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/eric-freese> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/james-ressler> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/veleria-boaten> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://purl.org/dc/elements/1.1/subject> "business rule" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://purl.org/dc/elements/1.1/subject> "conflation" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://purl.org/dc/elements/1.1/subject> "geospatial" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://purl.org/dc/elements/1.1/subject> "ontology" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://purl.org/dc/elements/1.1/subject> "semantic" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://purl.org/dc/elements/1.1/title> "Semantic Method of Conflation" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://swrc.ontoware.org/ontology#abstract> "The fusion of geospatial entities, commonly called feature conflation, requires aligning the type and characteristics of the entities. Similar to the problem of entity disambiguation in natural language parsing and metadata recognition, feature conflation involves identification of matching elements and properties in order to determine similarity among entities in terms of location and description. This paper presents a semantic approach for automated feature conflation that solves the type-matching problem by using ontologies and the meaning of feature types to logically merge geospatial features." .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/eric-freese> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/james-ressler> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/veleria-boaten> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://swrc.ontoware.org/ontology#url> <http://CEUR-WS.org/Vol-518/terra09_submission_3.pdf> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://swrc.ontoware.org/ontology#year> "2009" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7h31x5 .
+_:node1dfqj7h31x5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/james-ressler> .
+_:node1dfqj7h31x5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/eric-freese> .
+_:node1dfqj7h31x5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/veleria-boaten> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Method of Conflation" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/eric-freese> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/james-ressler> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/veleria-boaten> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/daniele-dellaglio> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/emanuele-della-valle> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/irene-celino> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://purl.org/dc/elements/1.1/subject> "Events" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://purl.org/dc/elements/1.1/subject> "Geo-data" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://purl.org/dc/elements/1.1/subject> "Linked Data" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://purl.org/dc/elements/1.1/subject> "SPARQL" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://purl.org/dc/elements/1.1/subject> "Urban Computing" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://purl.org/dc/elements/1.1/title> "The Experience of Realizing a Semantic Web Urban Computing Application" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://swrc.ontoware.org/ontology#abstract> "Urban Computing is a branch of Pervasive Computing that investigates urban settings and everyday lifestyles. A lot of information to develop pervasive applications for urban environments is often already available, even if scattered and not integrated: maps, points of interest, user locations, traffic, pollution, events are just a few examples of the digitalized information which we can access on the Web. And applications for mobile users that leverage such information are rapidly growing.In this paper, we report our experience in applying techniques developed by the Semantic Web and geo-spatial communities to Urban Computing application development. We refer to the early achievements of the LarKC project, in which we developed the described demonstrator. We highlight the positive sides of our experience and we discuss open issues and possible advances." .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/daniele-dellaglio> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/emanuele-della-valle> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/irene-celino> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://swrc.ontoware.org/ontology#url> <http://CEUR-WS.org/Vol-518/terra09_submission_4.pdf> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://swrc.ontoware.org/ontology#year> "2009" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7h31x6 .
+_:node1dfqj7h31x6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/emanuele-della-valle> .
+_:node1dfqj7h31x6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/irene-celino> .
+_:node1dfqj7h31x6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/daniele-dellaglio> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://www.w3.org/2000/01/rdf-schema#label> "The Experience of Realizing a Semantic Web Urban Computing Application" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/daniele-dellaglio> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/emanuele-della-valle> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/irene-celino> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/guus-schreiber> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jan-wielemaker> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/willem-van-hage> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://purl.org/dc/elements/1.1/subject> "logic programming" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://purl.org/dc/elements/1.1/subject> "prolog" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://purl.org/dc/elements/1.1/subject> "rdf" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://purl.org/dc/elements/1.1/subject> "spatial indexing" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://purl.org/dc/elements/1.1/title> "The Space package: Tight Integration Between Space and Semantics" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://swrc.ontoware.org/ontology#abstract> "Interpretation of spatial features often requires combined reasoning over geometry and semantics. We introduce the Space package, an open source SWI-Prolog extension that provides spatial indexing capabilities. Together with the existing semantic web reasoning capabilities of SWI-Prolog, this allows efficient integration of spatial and semantic queries and provides an infrastructure for declarative programming with space and semantics." .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/guus-schreiber> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jan-wielemaker> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/willem-van-hage> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://swrc.ontoware.org/ontology#url> <http://CEUR-WS.org/Vol-518/terra09_submission_6.pdf> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://swrc.ontoware.org/ontology#year> "2009" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7h31x7 .
+_:node1dfqj7h31x7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/willem-van-hage> .
+_:node1dfqj7h31x7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/jan-wielemaker> .
+_:node1dfqj7h31x7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/guus-schreiber> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://www.w3.org/2000/01/rdf-schema#label> "The Space package: Tight Integration Between Space and Semantics" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/guus-schreiber> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jan-wielemaker> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/willem-van-hage> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/arne-broering> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/carsten-kessler> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/christoph-stasch> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/krzysztof-janowicz> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/sven-schade> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://purl.org/dc/elements/1.1/subject> "Semantic Enablement" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://purl.org/dc/elements/1.1/subject> "Semantic Web" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://purl.org/dc/elements/1.1/subject> "Spatial Data Infrastructures" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://purl.org/dc/elements/1.1/title> "A Transparent Semantic Enablement Layer for the Geospatial Web" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://swrc.ontoware.org/ontology#abstract> "Based on abstract reference models, the Open Geospatial Consortium (OGC) has established standards for storing, retrieving, and processing geographical information. These standards act as basis for the implementation of specific services and Spatial Data Infrastructures (SDI). Research on geo-semantics plays an increasing role to support complex queries and discovery across heterogeneous information sources, as well as for on-the-fly integration, service orchestration, and semantic translation. So far, this research targets individual solutions or focuses on the Semantic Web, leaving the integration into SDI aside.  What is missing is a common and transparent semantic enablement layer for Spatial Data Infrastructures which also integrates reasoning services known from the Semantic Web. Focusing on Sensor Web Enablement (SWE) we outline how spatial data infrastructures in general can benefit from such a semantic enablement layer. Instead of developing new semantically enabled services from scratch, we propose to create profiles of existing services that implement a transparent mapping between the OGC and the Semantic Web world." .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/arne-broering> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/carsten-kessler> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/christoph-stasch> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/krzysztof-janowicz> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/sven-schade> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://swrc.ontoware.org/ontology#url> <http://CEUR-WS.org/Vol-518/terra09_submission_7.pdf> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://swrc.ontoware.org/ontology#year> "2009" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7h31x8 .
+_:node1dfqj7h31x8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/krzysztof-janowicz> .
+_:node1dfqj7h31x8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/sven-schade> .
+_:node1dfqj7h31x8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/arne-broering> .
+_:node1dfqj7h31x8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/carsten-kessler> .
+_:node1dfqj7h31x8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://data.semanticweb.org/person/christoph-stasch> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://www.w3.org/2000/01/rdf-schema#label> "A Transparent Semantic Enablement Layer for the Geospatial Web" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/arne-broering> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/carsten-kessler> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/christoph-stasch> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/krzysztof-janowicz> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/sven-schade> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/anthony-g-cohn> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/glen-hart> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/ronald-denaux> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/vania-dimitrova> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://purl.org/dc/elements/1.1/subject> "Exploratory Study" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://purl.org/dc/elements/1.1/subject> "Ontology Engineering" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://purl.org/dc/elements/1.1/subject> "Ontology Metadata" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://purl.org/dc/elements/1.1/subject> "Ontology Purpose" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://purl.org/dc/elements/1.1/title> "Towards Modelling the Intended Purpose of Ontologies: A Case Study in Geography" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://swrc.ontoware.org/ontology#abstract> "As the Semantic Web technologies gain popularity, more organisations are  providing semantic resources related to the geographical domain but are doing  this based on ontologies that represent their own conceptualisations andfinding, understanding and evaluating relevant semantic  resources is still very time consuming, cognitively demanding and often  require a deep understanding of the domain and the used semantic  technologies. To help address this problem, we are investigating how ontology  purposes can be captured and used to facilitate ontology engineering. The  paper presents an exploratory study which examines whether it is possible to  identify generic categories to model the purpose of geography-related  ontologies. As an output, we present an initial categorisation of ontology  purposes and discuss how these categories can help us understand the ontology  itself." .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/anthony-g-cohn> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/glen-hart> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/ronald-denaux> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/vania-dimitrova> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://swrc.ontoware.org/ontology#url> <http://CEUR-WS.org/Vol-518/terra09_submission_9.pdf> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://swrc.ontoware.org/ontology#year> "2009" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7h31x9 .
+_:node1dfqj7h31x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/ronald-denaux> .
+_:node1dfqj7h31x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/anthony-g-cohn> .
+_:node1dfqj7h31x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/vania-dimitrova> .
+_:node1dfqj7h31x9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/glen-hart> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://www.w3.org/2000/01/rdf-schema#label> "Towards Modelling the Intended Purpose of Ontologies: A Case Study in Geography" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/anthony-g-cohn> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/glen-hart> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/ronald-denaux> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/vania-dimitrova> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/craig-norvell> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jans-aasman> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/steve-haflich> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://purl.org/dc/elements/1.1/subject> "Geospatial 2D 3D 4D" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://purl.org/dc/elements/1.1/subject> "moving objects" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://purl.org/dc/elements/1.1/subject> "rdf database" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://purl.org/dc/elements/1.1/subject> "scalability" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://purl.org/dc/elements/1.1/title> "Efficient 3D and 4D Geospatial Indexing in RDF Stores with a Focus on Moving Objects" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://swrc.ontoware.org/ontology#abstract> "We first explain AllegroGraph's existing capabilities for 2D geospatial indexing for proximity queries.  We explain our general position on geospatial encoding and serialization.  We describe our current work extending to 3D and 4D to support  moving objects (MOBs) with efficient cursors on MOB tracks, and posit five classes of MOB queries." .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/craig-norvell> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jans-aasman> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/steve-haflich> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://swrc.ontoware.org/ontology#url> <http://CEUR-WS.org/Vol-518/terra09_submission_11.pdf> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://swrc.ontoware.org/ontology#year> "2009" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7h31x10 .
+_:node1dfqj7h31x10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/jans-aasman> .
+_:node1dfqj7h31x10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/steve-haflich> .
+_:node1dfqj7h31x10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/craig-norvell> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://www.w3.org/2000/01/rdf-schema#label> "Efficient 3D and 4D Geospatial Indexing in RDF Stores with a Focus on Moving Objects" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/craig-norvell> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jans-aasman> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/steve-haflich> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#Proceedings> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/1> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/2> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/3> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/4> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/5> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/7> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/8> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/terra_cognita/2009> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://swrc.ontoware.org/ontology#booktitle> "Proceedings of the Terra Cognita 2009 Workshop (TERRA2009) at ISWC2009, October 25-39, 2009" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/dave-kolas> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/gary-berg-cross> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/nancy-wiegand> .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://swrc.ontoware.org/ontology#year> "2009" .
+<http://data.semanticweb.org/workshop/terra_cognita/2009/proceedings> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#editorList> _:node1dfqj7h31x11 .
+_:node1dfqj7h31x11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/dave-kolas> .
+_:node1dfqj7h31x11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/nancy-wiegand> .
+_:node1dfqj7h31x11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/gary-berg-cross> .

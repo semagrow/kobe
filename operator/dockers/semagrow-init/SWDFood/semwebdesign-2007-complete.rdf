@@ -1,0 +1,628 @@
+
+<!-- Processed by Id: cwm.py,v 1.193 2007/06/26 02:36:15 syosi Exp -->
+<!--     using base file:///Users/knud/Projekte/data.semanticweb.org/iswc+aswc2007dataConversion/cleanCMT/-->
+
+
+<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:ical="http://www.w3.org/2002/12/cal/ical#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swc="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:swrc="http://swrc.ontoware.org/ontology#"
+    xmlns:swrc_ext="http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#">
+
+    <swc:ConferenceEvent rdf:about="http://data.semanticweb.org/conference/iswc-aswc/2007">
+        <swc:isSuperEventOf rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007"/>
+    </swc:ConferenceEvent>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/boston-architectural-college">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Boston_Architectural_College"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Boston_Architectural_College"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>42.348792</geo:lat>
+            <geo:long>-71.085641</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.the-bac.edu/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/sotirios-kotsopoulos"/>
+        <name>Boston Architectural College</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/boston-architectural-college/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/cambridge-university">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Cambridge_University"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Cambridge_University"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>52.202702</geo:lat>
+            <geo:long>0.119884</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.cam.ac.uk/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/sanghee-kim"/>
+        <name>Cambridge University</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/cambridge-university/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/creativity-cognition-studios">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Creativity_Cognition_Studios"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Creativity_Cognition_Studios"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>-33.883901</geo:lat>
+            <geo:long>151.199791</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.creativityandcognition.com/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/alastair-weakley"/>
+        <name>Creativity &#38; Cognition Studios</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/creativity-cognition-studios/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/osaka-university-japan">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Osaka_University"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Osaka_University"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>34.860651</geo:lat>
+            <geo:long>135.629482</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.osaka-u.ac.jp/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/kikuo-fujita"/>
+        <member rdf:resource="http://data.semanticweb.org/person/yutaka-nomaguchi"/>
+        <name>Osaka University</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/osaka-university/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/rmit">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/RMIT"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/RMIT"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>-37.814251</geo:lat>
+            <geo:long>144.963169</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.rmit.edu.au/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/jeremy-yuille"/>
+        <member rdf:resource="http://data.semanticweb.org/person/keith-deverell"/>
+        <name>RMIT</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/rmit/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-baath">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/University_of_Baath"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/University_of_Baath"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>34.718193</geo:lat>
+            <geo:long>36.724205</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.albaath-univ.edu.sy/"/>
+        <name>University of Baath</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/university-of-baath/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-bath">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/University_of_Bath"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/University_of_Bath"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>51.386888</geo:lat>
+            <geo:long>-2.323008</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.bath.ac.uk/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/chris-mcmahon"/>
+        <member rdf:resource="http://data.semanticweb.org/person/injae-shin"/>
+        <name>University of Bath</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/university-of-bath/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-jyvaeskylae">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/University_of_Jyvaeskylae"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/University_of_Jyvaeskylae"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>62.24263</geo:lat>
+            <geo:long>25.740023</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.jyu.fi/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/pertti-saariluoma"/>
+        <name>University of Jyväskylä</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/university-of-jyvaeskylae/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-oulu-finland">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/University_of_Oulu_Finland"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/University_of_Oulu_Finland"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>65.063772</geo:lat>
+            <geo:long>25.470686</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.oulu.fi/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/kalevi-nevala"/>
+        <name>University of Oulu, Finland</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/university-of-oulu-finland/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-southampton">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/University_of_Southampton"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/University_of_Southampton"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>50.934038</geo:lat>
+            <geo:long>-1.396307</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.soton.ac.uk/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/gary-wills"/>
+        <member rdf:resource="http://data.semanticweb.org/person/nigel-r-shadbolt"/>
+        <member rdf:resource="http://data.semanticweb.org/person/pooja-jadlhav"/>
+        <member rdf:resource="http://data.semanticweb.org/person/richard-crowder"/>
+        <name>University of Southampton</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/university-of-southampton/html"/>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-tokyo">
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/University_of_Tokyo"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/University_of_Tokyo"/>
+        <based_near rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            <geo:lat>35.669998</geo:lat>
+            <geo:long>139.770004</geo:long>
+        </based_near>
+        <homepage rdf:resource="http://www.u-tokyo.ac.jp/"/>
+        <member rdf:resource="http://data.semanticweb.org/person/hideaki-takeda"/>
+        <name>University of Tokyo</name>
+        <page rdf:resource="http://data.semanticweb.org/organization/university-of-tokyo/html"/>
+    </Organization>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alastair-weakley">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/creativity-cognition-studios"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Alastair_Weakley"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Alastair_Weakley"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511"/>
+        <mbox_sha1sum>33cf536864263aece06dc1fdf511b9109807458c</mbox_sha1sum>
+        <name>Alastair Weakley</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Alastair_Weakley"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/chris-mcmahon">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-baath"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Chris_McMahon"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Chris_McMahon"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528"/>
+        <mbox_sha1sum>5b75df49ef8a87654fcb57f50eefea687728fe19</mbox_sha1sum>
+        <name>Chris McMahon</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Chris_McMahon"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dean-allemang">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0"/>
+        <mbox_sha1sum>7f1f0e180c29d551c6b96d6e3a31177da4e7db0c</mbox_sha1sum>
+        <name>Dean Allemang</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/fabio-ciravegna">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0"/>
+        <mbox_sha1sum>464d09b4ca82f5a8e391511cd3d86c2bda719baa</mbox_sha1sum>
+        <name>Fabio Ciravegna</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/gary-wills">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-southampton"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Gary_Wills"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Gary_Wills"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536"/>
+        <mbox_sha1sum>d68fa2ffdef3d0cf9ffa1e6a56eeb6e83e6f247d</mbox_sha1sum>
+        <name>Gary Wills</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Gary_Wills"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/hideaki-takeda">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-tokyo"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Hideaki_Takeda"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Hideaki_Takeda"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493"/>
+        <mbox_sha1sum>d2d472ef928860ee0f9ca92cafadf7e5dbaea062</mbox_sha1sum>
+        <name>Hideaki Takeda</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Hideaki_Takeda"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/injae-shin">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-bath"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Injae_Shin"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Injae_Shin"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528"/>
+        <mbox_sha1sum>fb8e0ddae39d00b045668f86f8425e19b85c754a</mbox_sha1sum>
+        <name>Injae Shin</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Injae_Shin"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jeremy-yuille">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/rmit"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Jeremy_Yuille"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Jeremy_Yuille"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511"/>
+        <mbox_sha1sum>d6a9c0685cff9e38f22997d16f0c1b1984269842</mbox_sha1sum>
+        <name>Jeremy Yuille</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Jeremy_Yuille"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kalevi-nevala">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-oulu-finland"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Kalevi_Nevala"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Kalevi_Nevala"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522"/>
+        <mbox_sha1sum>a6782d0a84bc490eb82ad250aa1a8366d3d791ce</mbox_sha1sum>
+        <name>Kalevi Nevala</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Kalevi_Nevala"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/keith-deverell">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/rmit"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Keith_Deverell"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Keith_Deverell"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511"/>
+        <mbox_sha1sum>41cedbc2827f1069a0974a0a5bd31d21c7d70077</mbox_sha1sum>
+        <name>Keith Deverell</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Keith_Deverell"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kikuo-fujita">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/osaka-university-japan"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Kikuo_Fujita"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Kikuo_Fujita"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509"/>
+        <mbox_sha1sum>f896037bd15226522220c90b5f091e77b5d3e219</mbox_sha1sum>
+        <name>Kikuo Fujita</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Kikuo_Fujita"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nigel-r-shadbolt">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-southampton"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Nigel_Shadbolt"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Nigel_Shadbolt"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536"/>
+        <mbox_sha1sum>e966302104bd52f060f0e4545e8299f2d54ee3ae</mbox_sha1sum>
+        <name>Nigel Shadbolt</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Nigel_Shadbolt"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/pertti-saariluoma">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-jyvaeskylae"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Pertti_Saariluoma"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Pertti_Saariluoma"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522"/>
+        <mbox_sha1sum>a80dcb5327934177bd3a713310d8855ce8d165e4</mbox_sha1sum>
+        <name>Pertti Saariluoma</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Pertti_Saariluoma"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/pooja-jadlhav">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-southampton"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Pooja_Jadlhav"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Pooja_Jadlhav"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536"/>
+        <mbox_sha1sum>26d91b25908e607e038dd00e9de679539befb0e6</mbox_sha1sum>
+        <name>Pooja Jadlhav</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Pooja_Jadlhav"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/richard-crowder">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-southampton"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Richard_Crowder"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Richard_Crowder"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536"/>
+        <mbox_sha1sum>2cc635a5f0edaee0f88a1c5f8b14c38ea34f9d35</mbox_sha1sum>
+        <name>Richard Crowder</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Richard_Crowder"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/rob-h-bracewell">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0"/>
+        <mbox_sha1sum>045a62de29ca81efe8ba0b863c8225b110953fe1</mbox_sha1sum>
+        <name>Rob H. Bracewell</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sanghee-kim">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/cambridge-university"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Sanghee_Kim"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Sanghee_Kim"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528"/>
+        <mbox_sha1sum>7835a42d2d31f5e531b6ae76d6687feea9930dbe</mbox_sha1sum>
+        <mbox_sha1sum>a986f2df14d4a170a74a92d0d84e854ff42dfb62</mbox_sha1sum>
+        <name>Sanghee Kim</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Sanghee_Kim"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/sotirios-kotsopoulos">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/boston-architectural-college"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Sotirios_Kotsopoulos"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Sotirios_Kotsopoulos"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526"/>
+        <mbox_sha1sum>b807584e6f5cc34a6d430fce2b8d7aeee538b98f</mbox_sha1sum>
+        <name>Sotirios Kotsopoulos</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Sotirios_Kotsopoulos"/>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yong-se-kim">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0"/>
+        <mbox_sha1sum>35074bd81e6a5922997476ac3106181381357a30</mbox_sha1sum>
+        <name>Yong Se Kim</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yoshinobu-kitamura">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0"/>
+        <mbox_sha1sum>46de6791f7e7e7d0b6a843c91cf8875be88baa19</mbox_sha1sum>
+        <name>Yoshinobu Kitamura</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/yutaka-nomaguchi">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/osaka-university-japan"/>
+        <rdfs:seeAlso rdf:resource="http://ontoworld.org/wiki/Special:ExportRDF/Yutaka_Nomaguchi"/>
+        <owl:sameAs rdf:resource="http://ontoworld.org/wiki/Special:URIResolver/Yutaka_Nomaguchi"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509"/>
+        <mbox_sha1sum>63d00c96d29af71c8ad2769494e0ccef38382d8c</mbox_sha1sum>
+        <name>Yutaka Nomaguchi</name>
+        <page rdf:resource="http://ontoworld.org/wiki/Yutaka_Nomaguchi"/>
+    </Person>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007">
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0"/>
+    </swc:WorkshopEvent>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings"/>
+        <swc:isSubEventOf rdf:resource="http://data.semanticweb.org/conference/iswc-aswc/2007"/>
+        <rdfs:label>Semantic Web and Web 2.0 in Architectural, Product, Engineering Design Workshop</rdfs:label>
+        <ical:summary>Semantic Web and Web 2.0 in Architectural, Product, Engineering Design Workshop</ical:summary>
+        <ical:url rdf:resource="http://www-edc.eng.cam.ac.uk/~shk32/ws.html"/>
+		<swc:completeGraph rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/complete"/>
+		<swc:hasAcronym>SWinDESIGN2007</swc:hasAcronym>
+    </swc:WorkshopEvent>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/493"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/hideaki-takeda"/>
+        <dc:title>Some considerations on openness of design information (position paper)</dc:title>
+        <rdfs:label>Some considerations on openness of design information (position paper)</rdfs:label>
+        <swrc:abstract>Towards a sustainable society, design of artifacts must be optimized with limited resources on the earth while keeping our life. In order to realize it, I emphasize openness of design information. In this paper, I discuss needs for openness of design information and methods to realize it. I argue why design information should be open and what benefits will result by opening and sharing design information. Opening design information looks difficult considering the current structure of the industries, but I show some possibilities from two aspects of design activities. In software design, open source software is getting accepted as a way of developing software products. I overview it and analyze how it can be applied to artifact design. Then I discuss how such an environment can be built. Identification, representation, and sharing mechanism are crucial. Lastly I summarize discussion with people in the design community. Many people disagree with opening design information, but I dispute with their objections.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/hideaki-takeda"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>Some considerations on openness of design information (position paper)</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/hideaki-takeda"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/semwebdesign-2007-paper-493-some-considerations"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/hideaki-takeda"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/509"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/kikuo-fujita"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/yutaka-nomaguchi"/>
+        <dc:title>DRIFT: A Framework for Ontology-based Design Support Systems</dc:title>
+        <rdfs:label>DRIFT: A Framework for Ontology-based Design Support Systems</rdfs:label>
+        <swrc:abstract>This paper proposes a framework for ontology-based design support systems, called DRIFT (Design Rationale Integration Framework of Three layers), which records, structures and retrieves reflective operations and their relationships in design process. Although an ontology can provide concepts of constant knowledge, such as knowledge about first principles of physical phenomena or prescription of successful design cases, a dynamic aspect of design process is usually out of ontology support. DRIFT automatically captures and manages the whole design argumentation through tracking design operations over an ontology-based design support system. This paper states our position and demonstrates a prototype system of DRIFT to show its performances and effectiveness. </swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/kikuo-fujita"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/yutaka-nomaguchi"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>DRIFT: A Framework for Ontology-based Design Support Systems</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/yutaka-nomaguchi"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/kikuo-fujita"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/semwebdesign-2007-paper-509-drift-a"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/kikuo-fujita"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/yutaka-nomaguchi"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/511"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/alastair-weakley"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jeremy-yuille"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/keith-deverell"/>
+        <dc:title>WEB 2.0 in Support of Sketching in Architectural Practice</dc:title>
+        <rdfs:label>WEB 2.0 in Support of Sketching in Architectural Practice</rdfs:label>
+        <swrc:abstract>This position paper describes Scribblr, a web-based system to support remote, shared annotation of architectural images and plans. The paper describes the current work practice of our clients, a large engineering firm in collaboration with an architect in another country. In particular we are concerned with sketching activities which are important in their work. We describe how, by employing Web-2.0 technologies in the development of Scribblr, we have been able to meet the requirements of a traditional paper-based sketching environment, and indeed to add new capabilities. The paper describes the rationale behind our application of modern Web technologies in this prototype.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/alastair-weakley"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jeremy-yuille"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/keith-deverell"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>WEB 2.0 in Support of Sketching in Architectural Practice</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/alastair-weakley"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/keith-deverell"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/jeremy-yuille"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/semwebdesign-2007-paper-511-web-20"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/alastair-weakley"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/jeremy-yuille"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/keith-deverell"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/522"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/kalevi-nevala"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/pertti-saariluoma"/>
+        <dc:title>From Concepts to Design Ontologies</dc:title>
+        <rdfs:label>From Concepts to Design Ontologies</rdfs:label>
+        <swrc:abstract>The research on engineering knowledge systems is continually evolving. Knowledge is conveyed through the thought processes of engineers. For a resourceful support of engineering design the thought processes must be understood. The aim of this paper is to discuss how to transform conceptual knowledge to design ontologies. We suggest a procedure termed Cartesian reasoning to explicate some intuitive steps in engineering thinking and put them under scrutiny.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/kalevi-nevala"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/pertti-saariluoma"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>From Concepts to Design Ontologies</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/pertti-saariluoma"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/kalevi-nevala"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/semwebdesign-2007-paper-522-from-concepts"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/kalevi-nevala"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/pertti-saariluoma"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/526"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/sotirios-kotsopoulos"/>
+        <dc:title>Design Concepts in Architecture: the porosity paradigm</dc:title>
+        <rdfs:label>Design Concepts in Architecture: the porosity paradigm</rdfs:label>
+        <swrc:abstract>Presented is a paradigm of how a design concept can be converted into a system of  production rules to generate designs. The rules are expressed by the means of shape grammar formalism. The paradigm demonstrates how porosity a concept transferred from biology, medicine and organic chemistry was implemented by architect Steven Holl and his team in designing the 350-unit student residence Simmons Hall at MIT. In the presentation, spatial algebras, rule schemata and shape rules are used to capture Holl’s version of porosity. It is also provided a discussion on how the semantic web may contribute in communicating design concepts.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/sotirios-kotsopoulos"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>Design Concepts in Architecture: the porosity paradigm</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/sotirios-kotsopoulos"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/semwebdesign-2007-paper-526-design-concepts"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/sotirios-kotsopoulos"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/528"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/chris-mcmahon"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/injae-shin"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/sanghee-kim"/>
+        <dc:title>An Approach to Capture Design-induced Error Using an Ontology</dc:title>
+        <rdfs:label>An Approach to Capture Design-induced Error Using an Ontology</rdfs:label>
+        <swrc:abstract>As current engineered systems (e.g. aviation systems) have been equipped with automated and computer-based artifacts, human-system interaction has been an important issue. Understanding the infleunce of design on human performance requires phycological theories that explain human behaviour and cognition. One of the challenges of modelling such theories is to identify complex relations between systems and humans including different task perspectives. To address this problem, we have developed an ontology that specifies which relations are better comprehended when assisted with the theories and have used it to model human errors induced by designs. This paper presents the results of developing the ontology using a supporting tool, i.e. PCPACK.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/chris-mcmahon"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/injae-shin"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/sanghee-kim"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>An Approach to Capture Design-induced Error Using an Ontology</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/injae-shin"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/sanghee-kim"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/chris-mcmahon"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/semwebdesign-2007-paper-528-an-approach"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/chris-mcmahon"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/injae-shin"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/sanghee-kim"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/536"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/gary-wills"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/nigel-r-shadbolt"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/pooja-jadlhav"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/richard-crowder"/>
+        <dc:title>Data Mining to Support Engineering Design Decision</dc:title>
+        <rdfs:label>Data Mining to Support Engineering Design Decision</rdfs:label>
+        <swrc:abstract>The design and maintenance of an aero-engine generates a significant amount of documentation. When designing new engines, engineers must obtain knowledge gained from maintenance of existing engines to identify possible areas of concern. Firstly, this paper investigate the use of advanced business intelligence tenchniques to solve the problem of knowledge transfer from maintenance to design of aeroengines. Based on data availability and quality, various models were deployed. An association model was used to uncover hidden trends among parts involved in maintenance events. Classification techniques comprising of various algorithms was employed to determine severity of events. Causes of high severity events that lead to major financial loss was traced with the help of summarization techniques. Secondly this paper compares and evaluates the business intelligence approach to solve the problem of knowledge transfer with solutions available from the Semantic Web. The results obtained provide a compelling need to have data mining support on RDF/OWL-based warehoused data.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/gary-wills"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/nigel-r-shadbolt"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/pooja-jadlhav"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/richard-crowder"/>
+        <swrc:month>November</swrc:month>
+        <swrc:title>Data Mining to Support Engineering Design Decision</swrc:title>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/gary-wills"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/richard-crowder"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/nigel-r-shadbolt"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/pooja-jadlhav"/>
+        </swrc_ext:authorList>
+        <owl:sameAs rdf:resource="http://revyu.com/things/semwebdesign-2007-paper-536-data-mining"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/gary-wills"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/nigel-r-shadbolt"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/pooja-jadlhav"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/richard-crowder"/>
+    </swrc:InProceedings>
+
+    <swrc:Proceedings rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings">
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007"/>
+        <swrc:booktitle>Proceedings of the Workshop on Semantic Web and Web 2.0 in Architectural, Product, Engineering Design 2007 at ISWC/ASWC2007, Busan, South Korea</swrc:booktitle>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/dean-allemang"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/fabio-ciravegna"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/rob-h-bracewell"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/sanghee-kim"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/yong-se-kim"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/yoshinobu-kitamua"/>
+        <swrc:month>November</swrc:month>
+        <swrc:year>2007</swrc:year>
+        <swrc_ext:editorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/fabio-ciravegna"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/dean-allemang"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/sanghee-kim"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/yoshinobu-kitamua"/>
+            <rdf:_5 rdf:resource="http://data.semanticweb.org/person/yong-se-kim"/>
+            <rdf:_6 rdf:resource="http://data.semanticweb.org/person/rob-h-bracewell"/>
+        </swrc_ext:editorList>
+    </swrc:Proceedings>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/493">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493"/>
+        <rdfs:label>Some considerations on openness of design information (position paper)</rdfs:label>
+        <ical:summary>Some considerations on openness of design information (position paper)</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/509">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509"/>
+        <rdfs:label>DRIFT: A Framework for Ontology-based Design Support Systems</rdfs:label>
+        <ical:summary>DRIFT: A Framework for Ontology-based Design Support Systems</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/511">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511"/>
+        <rdfs:label>WEB 2.0 in Support of Sketching in Architectural Practice</rdfs:label>
+        <ical:summary>WEB 2.0 in Support of Sketching in Architectural Practice</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/522">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522"/>
+        <rdfs:label>From Concepts to Design Ontologies</rdfs:label>
+        <ical:summary>From Concepts to Design Ontologies</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/526">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526"/>
+        <rdfs:label>Design Concepts in Architecture: the porosity paradigm</rdfs:label>
+        <ical:summary>Design Concepts in Architecture: the porosity paradigm</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/528">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528"/>
+        <rdfs:label>An Approach to Capture Design-induced Error Using an Ontology</rdfs:label>
+        <ical:summary>An Approach to Capture Design-induced Error Using an Ontology</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:PaperPresentation rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/talks/536">
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536"/>
+        <rdfs:label>Data Mining to Support Engineering Design Decision</rdfs:label>
+        <ical:summary>Data Mining to Support Engineering Design Decision</ical:summary>
+    </swc:PaperPresentation>
+
+    <swc:WorkshopOrganiser rdf:about="http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/dean-allemang"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/fabio-ciravegna"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/rob-h-bracewell"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/sanghee-kim"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/yong-se-kim"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/yoshinobu-kitamura"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/semwebdesign/2007"/>
+    </swc:WorkshopOrganiser>
+</rdf:RDF>

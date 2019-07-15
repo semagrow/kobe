@@ -1,0 +1,12 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix svd: <http://rdf.iit.demokritos.gr/2013/sevod#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+_:node1dfqjg6n6x1 a void:Dataset ;
+	void:sparqlEndpoint <http://testingsss.com> ;
+	void:triples "0"^^xsd:long ;
+	void:properties "0"^^xsd:int ;
+	void:classes "0"^^xsd:int ;
+	void:entities "0"^^xsd:long ;
+	void:distinctSubjects "0"^^xsd:int ;
+	void:distinctObjects "0"^^xsd:int .

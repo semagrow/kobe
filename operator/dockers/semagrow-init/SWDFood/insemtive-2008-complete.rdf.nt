@@ -1,0 +1,482 @@
+<http://data.semanticweb.org/organization/bt-innovate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/bt-innovate> <http://www.w3.org/2000/01/rdf-schema#label> "BT" .
+<http://data.semanticweb.org/organization/bt-innovate> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/nicholas-john-kings> .
+<http://data.semanticweb.org/organization/bt-innovate> <http://xmlns.com/foaf/0.1/name> "BT" .
+<http://data.semanticweb.org/organization/cnr-istc-italy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/cnr-istc-italy> <http://www.w3.org/2000/01/rdf-schema#label> "Institute of Cognitive Sciences and Technology (CNR), Italy" .
+<http://data.semanticweb.org/organization/cnr-istc-italy> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/valentina-presutti> .
+<http://data.semanticweb.org/organization/cnr-istc-italy> <http://xmlns.com/foaf/0.1/name> "Institute of Cognitive Sciences and Technology (CNR), Italy" .
+<http://data.semanticweb.org/organization/department-of-computer-science-and-engineering-chalmers-university-of-technology-goeteborg-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/department-of-computer-science-and-engineering-chalmers-university-of-technology-goeteborg-university> <http://www.w3.org/2000/01/rdf-schema#label> "Department of Computer Science and Engineering, Chalmers, University of Technology/G\u00F6teborg University" .
+<http://data.semanticweb.org/organization/department-of-computer-science-and-engineering-chalmers-university-of-technology-goeteborg-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/olof-torgersson> .
+<http://data.semanticweb.org/organization/department-of-computer-science-and-engineering-chalmers-university-of-technology-goeteborg-university> <http://xmlns.com/foaf/0.1/name> "Department of Computer Science and Engineering, Chalmers, University of Technology/G\u00F6teborg University" .
+<http://data.semanticweb.org/organization/deri-universitaet-innsbruck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/deri-universitaet-innsbruck> <http://www.w3.org/2000/01/rdf-schema#label> "STI, University of Innsbruck, Austria" .
+<http://data.semanticweb.org/organization/deri-universitaet-innsbruck> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/elena-paslaru-bontas-simperl> .
+<http://data.semanticweb.org/organization/deri-universitaet-innsbruck> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/katharina-siorpaes> .
+<http://data.semanticweb.org/organization/deri-universitaet-innsbruck> <http://xmlns.com/foaf/0.1/name> "STI, University of Innsbruck, Austria" .
+<http://data.semanticweb.org/organization/fbk-irst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/fbk-irst> <http://www.w3.org/2000/01/rdf-schema#label> "Fondazione Bruno Kessler" .
+<http://data.semanticweb.org/organization/fbk-irst> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/organization/fbk-irst> <http://xmlns.com/foaf/0.1/name> "Fondazione Bruno Kessler" .
+<http://data.semanticweb.org/organization/foaf-project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/foaf-project> <http://www.w3.org/2000/01/rdf-schema#label> "FOAF Project" .
+<http://data.semanticweb.org/organization/foaf-project> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/dan-brickley> .
+<http://data.semanticweb.org/organization/foaf-project> <http://xmlns.com/foaf/0.1/name> "FOAF Project" .
+<http://data.semanticweb.org/organization/freie-universitaet-berlin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/freie-universitaet-berlin> <http://www.w3.org/2000/01/rdf-schema#label> "Freie Universit\u00E4t Berlin, Germany" .
+<http://data.semanticweb.org/organization/freie-universitaet-berlin> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/christian-bizer> .
+<http://data.semanticweb.org/organization/freie-universitaet-berlin> <http://xmlns.com/foaf/0.1/name> "Freie Universit\u00E4t Berlin, Germany" .
+<http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> <http://www.w3.org/2000/01/rdf-schema#label> "FZI" .
+<http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> <http://www.w3.org/2000/01/rdf-schema#label> "FZI, Germany" .
+<http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/andreas-schmidt> .
+<http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/hans-joerg-happel> .
+<http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/simone-braun> .
+<http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/valentin-zacharias> .
+<http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> <http://xmlns.com/foaf/0.1/name> "FZI" .
+<http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> <http://xmlns.com/foaf/0.1/name> "FZI, Germany" .
+<http://data.semanticweb.org/organization/institut-aifb-universitaet-karlsruhe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/institut-aifb-universitaet-karlsruhe> <http://www.w3.org/2000/01/rdf-schema#label> "AIFB" .
+<http://data.semanticweb.org/organization/institut-aifb-universitaet-karlsruhe> <http://www.w3.org/2000/01/rdf-schema#label> "AIFB, Universit\u00E4t Karlsruhe, Germany" .
+<http://data.semanticweb.org/organization/institut-aifb-universitaet-karlsruhe> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/denny-vrandecic> .
+<http://data.semanticweb.org/organization/institut-aifb-universitaet-karlsruhe> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/peter-haase> .
+<http://data.semanticweb.org/organization/institut-aifb-universitaet-karlsruhe> <http://xmlns.com/foaf/0.1/name> "AIFB" .
+<http://data.semanticweb.org/organization/institut-aifb-universitaet-karlsruhe> <http://xmlns.com/foaf/0.1/name> "AIFB, Universit\u00E4t Karlsruhe, Germany" .
+<http://data.semanticweb.org/organization/institute-of-ontology-sahlgrenska-academy-goeteborg-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/institute-of-ontology-sahlgrenska-academy-goeteborg-university> <http://www.w3.org/2000/01/rdf-schema#label> "Institute of Ontology, Sahlgrenska Academy, G\u00F6teborg University" .
+<http://data.semanticweb.org/organization/institute-of-ontology-sahlgrenska-academy-goeteborg-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/mats-jontell> .
+<http://data.semanticweb.org/organization/institute-of-ontology-sahlgrenska-academy-goeteborg-university> <http://xmlns.com/foaf/0.1/name> "Institute of Ontology, Sahlgrenska Academy, G\u00F6teborg University" .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://www.w3.org/2000/01/rdf-schema#label> "Open University" .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://www.w3.org/2000/01/rdf-schema#label> "Open University, UK" .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/carlos-pedrinaci> .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/marta-sabou> .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://xmlns.com/foaf/0.1/name> "Open University" .
+<http://data.semanticweb.org/organization/kmi-the-open-university-uk> <http://xmlns.com/foaf/0.1/name> "Open University, UK" .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://www.w3.org/2000/01/rdf-schema#label> "NII" .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://www.w3.org/2000/01/rdf-schema#label> "National Institute of Informatics" .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/fuyuki-ishikawa> .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/hideaki-takeda> .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/shinichi-honiden> .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://xmlns.com/foaf/0.1/name> "NII" .
+<http://data.semanticweb.org/organization/national-institute-of-informatics-japan> <http://xmlns.com/foaf/0.1/name> "National Institute of Informatics" .
+<http://data.semanticweb.org/organization/salzburg-research-austria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/salzburg-research-austria> <http://www.w3.org/2000/01/rdf-schema#label> "Salzburg Research, Austria" .
+<http://data.semanticweb.org/organization/salzburg-research-austria> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/sebastian-schaffert> .
+<http://data.semanticweb.org/organization/salzburg-research-austria> <http://xmlns.com/foaf/0.1/name> "Salzburg Research, Austria" .
+<http://data.semanticweb.org/organization/stanford-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/stanford-university> <http://www.w3.org/2000/01/rdf-schema#label> "Stanford University, USA" .
+<http://data.semanticweb.org/organization/stanford-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/tania-tudorache> .
+<http://data.semanticweb.org/organization/stanford-university> <http://xmlns.com/foaf/0.1/name> "Stanford University, USA" .
+<http://data.semanticweb.org/organization/talis-information-limited> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/talis-information-limited> <http://www.w3.org/2000/01/rdf-schema#label> "Talis" .
+<http://data.semanticweb.org/organization/talis-information-limited> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/tom-heath> .
+<http://data.semanticweb.org/organization/talis-information-limited> <http://xmlns.com/foaf/0.1/name> "Talis" .
+<http://data.semanticweb.org/organization/university-of-alcala-de-henares> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-alcala-de-henares> <http://www.w3.org/2000/01/rdf-schema#label> "University of Alcala de Henares" .
+<http://data.semanticweb.org/organization/university-of-alcala-de-henares> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/sinuhe-arroyo> .
+<http://data.semanticweb.org/organization/university-of-alcala-de-henares> <http://xmlns.com/foaf/0.1/name> "University of Alcala de Henares" .
+<http://data.semanticweb.org/organization/university-of-skoevde> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-skoevde> <http://www.w3.org/2000/01/rdf-schema#label> "University of Sk\u00F6vde" .
+<http://data.semanticweb.org/organization/university-of-skoevde> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/goeran-falkman> .
+<http://data.semanticweb.org/organization/university-of-skoevde> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/marie-gustafsson> .
+<http://data.semanticweb.org/organization/university-of-skoevde> <http://xmlns.com/foaf/0.1/name> "University of Sk\u00F6vde" .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://www.w3.org/2000/01/rdf-schema#label> "The University of Tokyo" .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://www.w3.org/2000/01/rdf-schema#label> "University Tokyo, Japan" .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/hideaki-takeda> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/shinichi-honiden> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/yukino-baba> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/name> "The University of Tokyo" .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/name> "University Tokyo, Japan" .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://www.w3.org/2000/01/rdf-schema#label> "University of Trento" .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://www.w3.org/2000/01/rdf-schema#label> "University of Trento, Italy" .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/ilya-zaihrayeu> .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/tabin-hasan> .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://xmlns.com/foaf/0.1/name> "University of Trento" .
+<http://data.semanticweb.org/organization/university-of-trento-italy> <http://xmlns.com/foaf/0.1/name> "University of Trento, Italy" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/2000/01/rdf-schema#label> "VU Amsterdam" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://www.w3.org/2000/01/rdf-schema#label> "Vrije Universiteit Amsterdam" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/chide-groenouwe> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/eyal-oren> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/jan-top> .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/name> "VU Amsterdam" .
+<http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> <http://xmlns.com/foaf/0.1/name> "Vrije Universiteit Amsterdam" .
+<http://data.semanticweb.org/person/andreas-schmidt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/andreas-schmidt> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/andreas-schmidt> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> .
+<http://data.semanticweb.org/person/andreas-schmidt> <http://www.w3.org/2000/01/rdf-schema#label> "Andreas Schmidt" .
+<http://data.semanticweb.org/person/andreas-schmidt> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/andreas-schmidt> <http://xmlns.com/foaf/0.1/name> "Andreas Schmidt" .
+<http://data.semanticweb.org/person/anthony-jameson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/anthony-jameson> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/fbk-irst> .
+<http://data.semanticweb.org/person/anthony-jameson> <http://www.w3.org/2000/01/rdf-schema#label> "Anthony Jameson" .
+<http://data.semanticweb.org/person/anthony-jameson> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/anthony-jameson> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> .
+<http://data.semanticweb.org/person/anthony-jameson> <http://xmlns.com/foaf/0.1/name> "Anthony Jameson" .
+<http://data.semanticweb.org/person/carlos-pedrinaci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/carlos-pedrinaci> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/carlos-pedrinaci> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/kmi-the-open-university-uk> .
+<http://data.semanticweb.org/person/carlos-pedrinaci> <http://www.w3.org/2000/01/rdf-schema#label> "Carlos Pedrinaci" .
+<http://data.semanticweb.org/person/carlos-pedrinaci> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/UK> .
+<http://data.semanticweb.org/person/carlos-pedrinaci> <http://xmlns.com/foaf/0.1/name> "Carlos Pedrinaci" .
+<http://data.semanticweb.org/person/chide-groenouwe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/chide-groenouwe> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> .
+<http://data.semanticweb.org/person/chide-groenouwe> <http://www.w3.org/2000/01/rdf-schema#label> "Chide Groenouwe" .
+<http://data.semanticweb.org/person/chide-groenouwe> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> .
+<http://data.semanticweb.org/person/chide-groenouwe> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "020abbdf6d4d7a266be02b446127b49566b0b147" .
+<http://data.semanticweb.org/person/chide-groenouwe> <http://xmlns.com/foaf/0.1/name> "Chide Groenouwe" .
+<http://data.semanticweb.org/person/christian-bizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/christian-bizer> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/christian-bizer> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/freie-universitaet-berlin> .
+<http://data.semanticweb.org/person/christian-bizer> <http://www.w3.org/2000/01/rdf-schema#label> "Chris Bizer" .
+<http://data.semanticweb.org/person/christian-bizer> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/christian-bizer> <http://xmlns.com/foaf/0.1/name> "Chris Bizer" .
+<http://data.semanticweb.org/person/dan-brickley> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/dan-brickley> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/dan-brickley> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/foaf-project> .
+<http://data.semanticweb.org/person/dan-brickley> <http://www.w3.org/2000/01/rdf-schema#label> "Dan Brickley" .
+<http://data.semanticweb.org/person/dan-brickley> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/UK> .
+<http://data.semanticweb.org/person/dan-brickley> <http://xmlns.com/foaf/0.1/name> "Dan Brickley" .
+<http://data.semanticweb.org/person/denny-vrandecic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/denny-vrandecic> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/denny-vrandecic> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/institut-aifb-universitaet-karlsruhe> .
+<http://data.semanticweb.org/person/denny-vrandecic> <http://www.w3.org/2000/01/rdf-schema#label> "Denny Vrandecic" .
+<http://data.semanticweb.org/person/denny-vrandecic> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/denny-vrandecic> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "f289692d248278ba786537d1b07f00284967379d" .
+<http://data.semanticweb.org/person/denny-vrandecic> <http://xmlns.com/foaf/0.1/name> "Denny Vrandecic" .
+<http://data.semanticweb.org/person/elena-paslaru-bontas-simperl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/elena-paslaru-bontas-simperl> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/elena-paslaru-bontas-simperl> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/deri-universitaet-innsbruck> .
+<http://data.semanticweb.org/person/elena-paslaru-bontas-simperl> <http://www.w3.org/2000/01/rdf-schema#label> "Elena Simperl" .
+<http://data.semanticweb.org/person/elena-paslaru-bontas-simperl> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Austria> .
+<http://data.semanticweb.org/person/elena-paslaru-bontas-simperl> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "09814d21068fb5bacc73c395dfd09780f462748a" .
+<http://data.semanticweb.org/person/elena-paslaru-bontas-simperl> <http://xmlns.com/foaf/0.1/name> "Elena Simperl" .
+<http://data.semanticweb.org/person/eyal-oren> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/eyal-oren> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/eyal-oren> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> .
+<http://data.semanticweb.org/person/eyal-oren> <http://www.w3.org/2000/01/rdf-schema#label> "Eyal Oren" .
+<http://data.semanticweb.org/person/eyal-oren> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/The_Netherlands> .
+<http://data.semanticweb.org/person/eyal-oren> <http://xmlns.com/foaf/0.1/name> "Eyal Oren" .
+<http://data.semanticweb.org/person/fuyuki-ishikawa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/fuyuki-ishikawa> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/national-institute-of-informatics-japan> .
+<http://data.semanticweb.org/person/fuyuki-ishikawa> <http://www.w3.org/2000/01/rdf-schema#label> "Fuyuki Ishikawa" .
+<http://data.semanticweb.org/person/fuyuki-ishikawa> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Japan> .
+<http://data.semanticweb.org/person/fuyuki-ishikawa> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> .
+<http://data.semanticweb.org/person/fuyuki-ishikawa> <http://xmlns.com/foaf/0.1/name> "Fuyuki Ishikawa" .
+<http://data.semanticweb.org/person/goeran-falkman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/goeran-falkman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-skoevde> .
+<http://data.semanticweb.org/person/goeran-falkman> <http://www.w3.org/2000/01/rdf-schema#label> "G\u00F6ran Falkman" .
+<http://data.semanticweb.org/person/goeran-falkman> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Sweden> .
+<http://data.semanticweb.org/person/goeran-falkman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> .
+<http://data.semanticweb.org/person/goeran-falkman> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "eb60b7b3a7b175972b9a4c5b1cc21642654e75fa" .
+<http://data.semanticweb.org/person/goeran-falkman> <http://xmlns.com/foaf/0.1/name> "G\u00F6ran Falkman" .
+<http://data.semanticweb.org/person/hans-joerg-happel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/hans-joerg-happel> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> .
+<http://data.semanticweb.org/person/hans-joerg-happel> <http://www.w3.org/2000/01/rdf-schema#label> "Hans-J\u00F6rg Happel" .
+<http://data.semanticweb.org/person/hans-joerg-happel> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/hans-joerg-happel> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> .
+<http://data.semanticweb.org/person/hans-joerg-happel> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "cc20a32692c256e3aa01513d72d6ceaa2c59169c" .
+<http://data.semanticweb.org/person/hans-joerg-happel> <http://xmlns.com/foaf/0.1/name> "Hans-J\u00F6rg Happel" .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/national-institute-of-informatics-japan> .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-tokyo> .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://www.w3.org/2000/01/rdf-schema#label> "Hideaki Takeda" .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Japan> .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://xmlns.com/foaf/0.1/name> "Hideaki Takeda" .
+<http://data.semanticweb.org/person/ilya-zaihrayeu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ilya-zaihrayeu> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/ilya-zaihrayeu> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-trento-italy> .
+<http://data.semanticweb.org/person/ilya-zaihrayeu> <http://www.w3.org/2000/01/rdf-schema#label> "Ilya Zaihrayeu" .
+<http://data.semanticweb.org/person/ilya-zaihrayeu> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/ilya-zaihrayeu> <http://xmlns.com/foaf/0.1/name> "Ilya Zaihrayeu" .
+<http://data.semanticweb.org/person/jan-top> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jan-top> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> .
+<http://data.semanticweb.org/person/jan-top> <http://www.w3.org/2000/01/rdf-schema#label> "Jan Top" .
+<http://data.semanticweb.org/person/jan-top> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> .
+<http://data.semanticweb.org/person/jan-top> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "f1e1d09075304b7fabc2477c75628988bbeb41dd" .
+<http://data.semanticweb.org/person/jan-top> <http://xmlns.com/foaf/0.1/name> "Jan Top" .
+<http://data.semanticweb.org/person/katharina-siorpaes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/katharina-siorpaes> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/katharina-siorpaes> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/deri-universitaet-innsbruck> .
+<http://data.semanticweb.org/person/katharina-siorpaes> <http://www.w3.org/2000/01/rdf-schema#label> "Katharina Siorpaes" .
+<http://data.semanticweb.org/person/katharina-siorpaes> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Austria> .
+<http://data.semanticweb.org/person/katharina-siorpaes> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "9e0cf1db7ae7fea47ab28f639f63aa4f799e7b8c" .
+<http://data.semanticweb.org/person/katharina-siorpaes> <http://xmlns.com/foaf/0.1/name> "Katharina Siorpaes" .
+<http://data.semanticweb.org/person/marie-gustafsson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/marie-gustafsson> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-skoevde> .
+<http://data.semanticweb.org/person/marie-gustafsson> <http://www.w3.org/2000/01/rdf-schema#label> "Marie Gustafsson" .
+<http://data.semanticweb.org/person/marie-gustafsson> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Sweden> .
+<http://data.semanticweb.org/person/marie-gustafsson> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> .
+<http://data.semanticweb.org/person/marie-gustafsson> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "2c22a57f36fe795c4134f6f0d7444744ca1f6d2a" .
+<http://data.semanticweb.org/person/marie-gustafsson> <http://xmlns.com/foaf/0.1/name> "Marie Gustafsson" .
+<http://data.semanticweb.org/person/marta-sabou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/marta-sabou> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/marta-sabou> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/kmi-the-open-university-uk> .
+<http://data.semanticweb.org/person/marta-sabou> <http://www.w3.org/2000/01/rdf-schema#label> "Marta Sabou" .
+<http://data.semanticweb.org/person/marta-sabou> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/UK> .
+<http://data.semanticweb.org/person/marta-sabou> <http://xmlns.com/foaf/0.1/name> "Marta Sabou" .
+<http://data.semanticweb.org/person/mats-jontell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/mats-jontell> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/institute-of-ontology-sahlgrenska-academy-goeteborg-university> .
+<http://data.semanticweb.org/person/mats-jontell> <http://www.w3.org/2000/01/rdf-schema#label> "Mats Jontell" .
+<http://data.semanticweb.org/person/mats-jontell> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Sweden> .
+<http://data.semanticweb.org/person/mats-jontell> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> .
+<http://data.semanticweb.org/person/mats-jontell> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "c75375de31222829610b2a87de7b944ee88c4d6b" .
+<http://data.semanticweb.org/person/mats-jontell> <http://xmlns.com/foaf/0.1/name> "Mats Jontell" .
+<http://data.semanticweb.org/person/nicholas-john-kings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/nicholas-john-kings> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/nicholas-john-kings> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/bt-innovate> .
+<http://data.semanticweb.org/person/nicholas-john-kings> <http://www.w3.org/2000/01/rdf-schema#label> "Nick Kings" .
+<http://data.semanticweb.org/person/nicholas-john-kings> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/UK> .
+<http://data.semanticweb.org/person/nicholas-john-kings> <http://xmlns.com/foaf/0.1/name> "Nick Kings" .
+<http://data.semanticweb.org/person/olof-torgersson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/olof-torgersson> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/department-of-computer-science-and-engineering-chalmers-university-of-technology-goeteborg-university> .
+<http://data.semanticweb.org/person/olof-torgersson> <http://www.w3.org/2000/01/rdf-schema#label> "Olof Torgersson" .
+<http://data.semanticweb.org/person/olof-torgersson> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Sweden> .
+<http://data.semanticweb.org/person/olof-torgersson> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> .
+<http://data.semanticweb.org/person/olof-torgersson> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "691ecaf1638e9b156f959f20b80dd12a486c0cc3" .
+<http://data.semanticweb.org/person/olof-torgersson> <http://xmlns.com/foaf/0.1/name> "Olof Torgersson" .
+<http://data.semanticweb.org/person/peter-haase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/peter-haase> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/peter-haase> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/institut-aifb-universitaet-karlsruhe> .
+<http://data.semanticweb.org/person/peter-haase> <http://www.w3.org/2000/01/rdf-schema#label> "Peter Haase" .
+<http://data.semanticweb.org/person/peter-haase> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/peter-haase> <http://xmlns.com/foaf/0.1/name> "Peter Haase" .
+<http://data.semanticweb.org/person/sebastian-schaffert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/sebastian-schaffert> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/sebastian-schaffert> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/salzburg-research-austria> .
+<http://data.semanticweb.org/person/sebastian-schaffert> <http://www.w3.org/2000/01/rdf-schema#label> "Sebastian Schaffert" .
+<http://data.semanticweb.org/person/sebastian-schaffert> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Austria> .
+<http://data.semanticweb.org/person/sebastian-schaffert> <http://xmlns.com/foaf/0.1/name> "Sebastian Schaffert" .
+<http://data.semanticweb.org/person/shinichi-honiden> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/shinichi-honiden> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/national-institute-of-informatics-japan> .
+<http://data.semanticweb.org/person/shinichi-honiden> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-tokyo> .
+<http://data.semanticweb.org/person/shinichi-honiden> <http://www.w3.org/2000/01/rdf-schema#label> "Shinichi Honiden" .
+<http://data.semanticweb.org/person/shinichi-honiden> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Japan> .
+<http://data.semanticweb.org/person/shinichi-honiden> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> .
+<http://data.semanticweb.org/person/shinichi-honiden> <http://xmlns.com/foaf/0.1/name> "Shinichi Honiden" .
+<http://data.semanticweb.org/person/simone-braun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/simone-braun> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> .
+<http://data.semanticweb.org/person/simone-braun> <http://www.w3.org/2000/01/rdf-schema#label> "Simone Braun" .
+<http://data.semanticweb.org/person/simone-braun> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/simone-braun> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> .
+<http://data.semanticweb.org/person/simone-braun> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "126a93c041c139a245c725a26927b0372861f01a" .
+<http://data.semanticweb.org/person/simone-braun> <http://xmlns.com/foaf/0.1/name> "Simone Braun" .
+<http://data.semanticweb.org/person/sinuhe-arroyo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/sinuhe-arroyo> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/sinuhe-arroyo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-alcala-de-henares> .
+<http://data.semanticweb.org/person/sinuhe-arroyo> <http://www.w3.org/2000/01/rdf-schema#label> "Sinuhe Arroyo" .
+<http://data.semanticweb.org/person/sinuhe-arroyo> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Spain> .
+<http://data.semanticweb.org/person/sinuhe-arroyo> <http://xmlns.com/foaf/0.1/name> "Sinuhe Arroyo" .
+<http://data.semanticweb.org/person/tabin-hasan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/tabin-hasan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-trento-italy> .
+<http://data.semanticweb.org/person/tabin-hasan> <http://www.w3.org/2000/01/rdf-schema#label> "Tabin Hasan" .
+<http://data.semanticweb.org/person/tabin-hasan> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/tabin-hasan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> .
+<http://data.semanticweb.org/person/tabin-hasan> <http://xmlns.com/foaf/0.1/name> "Tabin Hasan" .
+<http://data.semanticweb.org/person/tania-tudorache> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/tania-tudorache> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/tania-tudorache> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/stanford-university> .
+<http://data.semanticweb.org/person/tania-tudorache> <http://www.w3.org/2000/01/rdf-schema#label> "Tania Tudorache" .
+<http://data.semanticweb.org/person/tania-tudorache> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/USA> .
+<http://data.semanticweb.org/person/tania-tudorache> <http://xmlns.com/foaf/0.1/name> "Tania Tudorache" .
+<http://data.semanticweb.org/person/tom-heath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/tom-heath> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/tom-heath> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/talis-information-limited> .
+<http://data.semanticweb.org/person/tom-heath> <http://www.w3.org/2000/01/rdf-schema#label> "Tom Heath" .
+<http://data.semanticweb.org/person/tom-heath> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/UK> .
+<http://data.semanticweb.org/person/tom-heath> <http://xmlns.com/foaf/0.1/name> "Tom Heath" .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://www.w3.org/2000/01/rdf-schema#label> "Valentin Zacharias" .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "641d33ac81d5e4afddca5102950a76ee177b4f88" .
+<http://data.semanticweb.org/person/valentin-zacharias> <http://xmlns.com/foaf/0.1/name> "Valentin Zacharias" .
+<http://data.semanticweb.org/person/valentina-presutti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/valentina-presutti> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/person/valentina-presutti> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cnr-istc-italy> .
+<http://data.semanticweb.org/person/valentina-presutti> <http://www.w3.org/2000/01/rdf-schema#label> "Valentina Presutti" .
+<http://data.semanticweb.org/person/valentina-presutti> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/valentina-presutti> <http://xmlns.com/foaf/0.1/name> "Valentina Presutti" .
+<http://data.semanticweb.org/person/yukino-baba> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yukino-baba> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-tokyo> .
+<http://data.semanticweb.org/person/yukino-baba> <http://www.w3.org/2000/01/rdf-schema#label> "Yukino Baba" .
+<http://data.semanticweb.org/person/yukino-baba> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Japan> .
+<http://data.semanticweb.org/person/yukino-baba> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> .
+<http://data.semanticweb.org/person/yukino-baba> <http://xmlns.com/foaf/0.1/name> "Yukino Baba" .
+<http://data.semanticweb.org/workshop/insemtive/2008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/workshop/insemtive/2008> <http://data.semanticweb.org/ns/swc/ontology#completeGraph> <http://data.semanticweb.org/workshop/insemtive/2008/complete> .
+<http://data.semanticweb.org/workshop/insemtive/2008> <http://data.semanticweb.org/ns/swc/ontology#hasAcronym> "INSEMTIVE2008" .
+<http://data.semanticweb.org/workshop/insemtive/2008> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/insemtive/2008/proceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/workshop/insemtive/2008> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> .
+<http://data.semanticweb.org/workshop/insemtive/2008> <http://www.w3.org/2000/01/rdf-schema#label> "INSEMTIVE" .
+<http://data.semanticweb.org/workshop/insemtive/2008> <http://www.w3.org/2002/12/cal/ical#dtend> _:node1dfqj7bdsx1 .
+_:node1dfqj7bdsx1 <http://www.w3.org/2002/12/cal/ical#date> "2008-10-27" .
+_:node1dfqj7bdsx1 <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+1" .
+<http://data.semanticweb.org/workshop/insemtive/2008> <http://www.w3.org/2002/12/cal/ical#dtstart> _:node1dfqj7bdsx2 .
+_:node1dfqj7bdsx2 <http://www.w3.org/2002/12/cal/ical#date> "2008-10-27" .
+_:node1dfqj7bdsx2 <http://www.w3.org/2002/12/cal/ical#tzid> "GMT+1" .
+<http://data.semanticweb.org/workshop/insemtive/2008> <http://www.w3.org/2002/12/cal/ical#url> <http://www.insemtives.org/insemtive08.php> .
+<http://data.semanticweb.org/workshop/insemtive/2008> <http://xmlns.com/foaf/0.1/homepage> <http://www.insemtives.org/insemtive08.php> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/chair/organisingcommitteemember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#OrganisingCommitteeMember> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/denny-vrandecic> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/elena-paslaru-bontas-simperl> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/katharina-siorpaes> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/chair/organisingcommitteemember> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/insemtive/2008> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PCMember> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/andreas-schmidt> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/carlos-pedrinaci> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/christian-bizer> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/dan-brickley> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/eyal-oren> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/hideaki-takeda> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/ilya-zaihrayeu> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/marta-sabou> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/nicholas-john-kings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/peter-haase> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/sebastian-schaffert> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/sinuhe-arroyo> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/tania-tudorache> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/tom-heath> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/valentin-zacharias> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/valentina-presutti> .
+<http://data.semanticweb.org/workshop/insemtive/2008/main/pcmember> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/insemtive/2008> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/insemtive/2008/proceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/chide-groenouwe> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jan-top> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://purl.org/dc/elements/1.1/title> "Towards a Constitution Based Game for Fostering Fluency in \u201CSemanticWeb Writing\u201D" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://swrc.ontoware.org/ontology#abstract> "The Semantic Web (SW) is still far from realising its full potential,partly because it is still lacking enough high quality SW representations of information.We argue that a step in the right direction is fostering people\u2019s capability to fluently create high quality SW representations of the information they generate during problem solving processes. To foster such a capability, we propose a game in which teams compete in creating the best translations of texts into SW representations. Although playing the game is in itself already a way to foster such a capability, we moreover pursue learning from the game which are the most successful translation strategies (embodied by \u201Cconstitutions\u201D) so that they can also be used by people outside a game setting." .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/chide-groenouwe> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jan-top> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7bdsx3 .
+_:node1dfqj7bdsx3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/chide-groenouwe> .
+_:node1dfqj7bdsx3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/jan-top> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://www.w3.org/2000/01/rdf-schema#label> "Towards a Constitution Based Game for Fostering Fluency in \u201CSemanticWeb Writing\u201D" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/chide-groenouwe> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jan-top> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/insemtive/2008/proceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/tabin-hasan> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://purl.org/dc/elements/1.1/subject> "Basic Graph Pattern Optimization" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://purl.org/dc/elements/1.1/subject> "Query Optimization" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://purl.org/dc/elements/1.1/subject> "SPARQL" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://purl.org/dc/elements/1.1/subject> "Semantic Web" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://purl.org/dc/elements/1.1/title> "Bridging the Motivation Gap for Individual Annotators: What Can We Learn From Photo Annotation Systems?" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://swrc.ontoware.org/ontology#abstract> "The importance of incentives and socially based motivation for metadata generation should not distract attention entirely from the need to design tools for metadata generation that use every means available to maximize the efficiency and intrinsic motivation of the individual annotator. The popular application domain of (individual) photo management has recently given rise to a number of strategies and methods that can serve as a source of inspiration for the design of metadata generation support for the semantic web. This position paper offers a brief synthesis of relevant work that is intended to serve as a basis for the representation of this perspective at the Insemtive 2008 workshop." .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/tabin-hasan> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7bdsx4 .
+_:node1dfqj7bdsx4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/tabin-hasan> .
+_:node1dfqj7bdsx4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://www.w3.org/2000/01/rdf-schema#label> "Bridging the Motivation Gap for Individual Annotators: What Can We Learn From Photo Annotation Systems?" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/anthony-jameson> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/tabin-hasan> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/insemtive/2008/proceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/hans-joerg-happel> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> <http://purl.org/dc/elements/1.1/title> "Growing the Semantic Web with Inverse Semantic Search" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> <http://swrc.ontoware.org/ontology#abstract> "Many use cases for the SemanticWeb assume the availability of public metadata. However, research has not yet addressed in a satisfactory manner why and how metadata is published on the Semantic Web. We analyze several reasons and barriers for creating and sharing semantic metadata. In particular, we address the issue of how metadata from private spaces can diffuse into the public Semantic Web. Therefore we introduce the concept of inverse semantic search \u2013 an approach which aggregates information needs to motivate information providers to share private metadata." .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/hans-joerg-happel> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7bdsx5 .
+_:node1dfqj7bdsx5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/hans-joerg-happel> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> <http://www.w3.org/2000/01/rdf-schema#label> "Growing the Semantic Web with Inverse Semantic Search" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/hans-joerg-happel> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/insemtive/2008/proceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/simone-braun> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/valentin-zacharias> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://purl.org/dc/elements/1.1/subject> "People Powered Search" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://purl.org/dc/elements/1.1/subject> "Semantic Web" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://purl.org/dc/elements/1.1/subject> "Semantic Wikis" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://purl.org/dc/elements/1.1/subject> "collaborative knowledge formalization" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://purl.org/dc/elements/1.1/subject> "web 2.0" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://purl.org/dc/elements/1.1/title> "Tackling the Curse of Prepayment \u2013 Collaborative Knowledge Formalization Beyond Lightweight" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://swrc.ontoware.org/ontology#abstract> "This paper argues for collaborative incremental augmentation of text retrieval as an approach that can be used to immediately show the benefits of relatively heavyweight knowledge formalization in the context of Web 2.0 style collaborative knowledge formalization. Such an approach helps to overcome the \u201CCurse of Prepayment\u201D; i.e. the hitherto necessary very large initial investment in formalization tasks before any benefit of Semantic Web technologies is visible. Some initial ideas about the architecture of such a system are presented and it is placed within the overall emerging trend of \u201Cpeople powered search\u201D." .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/simone-braun> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/valentin-zacharias> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7bdsx6 .
+_:node1dfqj7bdsx6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/valentin-zacharias> .
+_:node1dfqj7bdsx6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/simone-braun> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://www.w3.org/2000/01/rdf-schema#label> "Tackling the Curse of Prepayment \u2013 Collaborative Knowledge Formalization Beyond Lightweight" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/simone-braun> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/valentin-zacharias> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/insemtive/2008/proceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/goeran-falkman> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/marie-gustafsson> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/mats-jontell> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/olof-torgersson> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://purl.org/dc/elements/1.1/title> "Case Sharing and Ontology Structuring in an Online Oral Medicine Community" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://swrc.ontoware.org/ontology#abstract> "The Swedish Oral Medicine Web (SOMWeb) is an online system built to support knowledge sharing between oral medicine practitioners who hold monthly telephone conferences to discuss difficult and interesting cases. Semantic Web technologies are used to model the templates used for case entry, the ontology of values used in filling in cases, and community data. To study the practitioners\u2019 use and perceptions of the collaboration and the SOMWeb system, we have used observations of teleconferences, interviews with participants, and an online questionnaire.These are analyzed to provide a picture of the participants\u2019 opinions about the structured case entry and why they contribute or do not contribute cases. This is followed by a discussion on future work where the value ontology is made available for community editing and structuring, and incentives for user contributions to this process." .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/goeran-falkman> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/marie-gustafsson> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/mats-jontell> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/olof-torgersson> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7bdsx7 .
+_:node1dfqj7bdsx7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/marie-gustafsson> .
+_:node1dfqj7bdsx7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/goeran-falkman> .
+_:node1dfqj7bdsx7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/olof-torgersson> .
+_:node1dfqj7bdsx7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/mats-jontell> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://www.w3.org/2000/01/rdf-schema#label> "Case Sharing and Ontology Structuring in an Online Oral Medicine Community" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/goeran-falkman> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/marie-gustafsson> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/mats-jontell> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/olof-torgersson> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/insemtive/2008/proceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/fuyuki-ishikawa> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/shinichi-honiden> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/yukino-baba> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://purl.org/dc/elements/1.1/title> "Extracting Time and Location Concepts Related to Tags" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://swrc.ontoware.org/ontology#abstract> "Folksonomy is a method of classifying content, and it iswidely used in some web services. It allows users to choose tags (keywords or terms assigned to specific content) freely and to search content by referring to the tags. Compared to existing classification methods, folksonomy reflects the users\u2019 intention more directly because of its unlimited vocabulary and multiple tags for one content item. Moreover, it has a useful characteristic where tags represent the description of the content. Although tags are intended to be a rich semantic description of web content, machines cannot understand what the tags mean because they are just keywords. We describe a method to extract the concept related to the tag in a machine-understandable way by focusing on the features of content annotated with each tag. In particular, we target the problem of extracting the temporal and spatial concepts of the tags on Flickr, a popular photo sharing service by looking at the date and location distributions of photos for each tag. We evaluated the concept extracting method on a snapshot of actual Flickr data and show that it can identify a tags\u2019 concept in a manner similar to the way a person can." .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/fuyuki-ishikawa> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/shinichi-honiden> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/yukino-baba> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7bdsx8 .
+_:node1dfqj7bdsx8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/yukino-baba> .
+_:node1dfqj7bdsx8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/fuyuki-ishikawa> .
+_:node1dfqj7bdsx8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/shinichi-honiden> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://www.w3.org/2000/01/rdf-schema#label> "Extracting Time and Location Concepts Related to Tags" .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/fuyuki-ishikawa> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/shinichi-honiden> .
+<http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/yukino-baba> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#Proceedings> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/2> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/3> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/4> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/6> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/insemtive/2008> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://swrc.ontoware.org/ontology#booktitle> "Proceedings of the INSEMTIVE Workshop at ISWC2008, October 26-30, 2008" .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/denny-vrandecic> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/elena-paslaru-bontas-simperl> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/katharina-siorpaes> .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://swrc.ontoware.org/ontology#month> "October" .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://swrc.ontoware.org/ontology#year> "2008" .
+<http://data.semanticweb.org/workshop/insemtive/2008/proceedings> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#editorList> _:node1dfqj7bdsx9 .
+_:node1dfqj7bdsx9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/elena-paslaru-bontas-simperl> .
+_:node1dfqj7bdsx9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/katharina-siorpaes> .
+_:node1dfqj7bdsx9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/denny-vrandecic> .

@@ -1,0 +1,490 @@
+<http://data.semanticweb.org/conference/iswc-aswc/2007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent> .
+<http://data.semanticweb.org/conference/iswc-aswc/2007> <http://data.semanticweb.org/ns/swc/ontology#isSuperEventOf> <http://data.semanticweb.org/workshop/semwebdesign/2007> .
+<http://data.semanticweb.org/organization/boston-architectural-college> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/boston-architectural-college> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Boston_Architectural_College> .
+<http://data.semanticweb.org/organization/boston-architectural-college> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Boston_Architectural_College> .
+<http://data.semanticweb.org/organization/boston-architectural-college> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7g8vx1 .
+_:node1dfqj7g8vx1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7g8vx1 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "42.348792" .
+_:node1dfqj7g8vx1 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-71.085641" .
+<http://data.semanticweb.org/organization/boston-architectural-college> <http://xmlns.com/foaf/0.1/homepage> <http://www.the-bac.edu/> .
+<http://data.semanticweb.org/organization/boston-architectural-college> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/sotirios-kotsopoulos> .
+<http://data.semanticweb.org/organization/boston-architectural-college> <http://xmlns.com/foaf/0.1/name> "Boston Architectural College" .
+<http://data.semanticweb.org/organization/boston-architectural-college> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/boston-architectural-college/html> .
+<http://data.semanticweb.org/organization/cambridge-university> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/cambridge-university> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Cambridge_University> .
+<http://data.semanticweb.org/organization/cambridge-university> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Cambridge_University> .
+<http://data.semanticweb.org/organization/cambridge-university> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7g8vx2 .
+_:node1dfqj7g8vx2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7g8vx2 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "52.202702" .
+_:node1dfqj7g8vx2 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "0.119884" .
+<http://data.semanticweb.org/organization/cambridge-university> <http://xmlns.com/foaf/0.1/homepage> <http://www.cam.ac.uk/> .
+<http://data.semanticweb.org/organization/cambridge-university> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/sanghee-kim> .
+<http://data.semanticweb.org/organization/cambridge-university> <http://xmlns.com/foaf/0.1/name> "Cambridge University" .
+<http://data.semanticweb.org/organization/cambridge-university> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/cambridge-university/html> .
+<http://data.semanticweb.org/organization/creativity-cognition-studios> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/creativity-cognition-studios> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Creativity_Cognition_Studios> .
+<http://data.semanticweb.org/organization/creativity-cognition-studios> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Creativity_Cognition_Studios> .
+<http://data.semanticweb.org/organization/creativity-cognition-studios> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7g8vx3 .
+_:node1dfqj7g8vx3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7g8vx3 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-33.883901" .
+_:node1dfqj7g8vx3 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "151.199791" .
+<http://data.semanticweb.org/organization/creativity-cognition-studios> <http://xmlns.com/foaf/0.1/homepage> <http://www.creativityandcognition.com/> .
+<http://data.semanticweb.org/organization/creativity-cognition-studios> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/alastair-weakley> .
+<http://data.semanticweb.org/organization/creativity-cognition-studios> <http://xmlns.com/foaf/0.1/name> "Creativity & Cognition Studios" .
+<http://data.semanticweb.org/organization/creativity-cognition-studios> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/creativity-cognition-studios/html> .
+<http://data.semanticweb.org/organization/osaka-university-japan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/osaka-university-japan> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Osaka_University> .
+<http://data.semanticweb.org/organization/osaka-university-japan> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Osaka_University> .
+<http://data.semanticweb.org/organization/osaka-university-japan> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7g8vx4 .
+_:node1dfqj7g8vx4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7g8vx4 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "34.860651" .
+_:node1dfqj7g8vx4 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "135.629482" .
+<http://data.semanticweb.org/organization/osaka-university-japan> <http://xmlns.com/foaf/0.1/homepage> <http://www.osaka-u.ac.jp/> .
+<http://data.semanticweb.org/organization/osaka-university-japan> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/kikuo-fujita> .
+<http://data.semanticweb.org/organization/osaka-university-japan> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/yutaka-nomaguchi> .
+<http://data.semanticweb.org/organization/osaka-university-japan> <http://xmlns.com/foaf/0.1/name> "Osaka University" .
+<http://data.semanticweb.org/organization/osaka-university-japan> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/osaka-university/html> .
+<http://data.semanticweb.org/organization/rmit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/rmit> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/RMIT> .
+<http://data.semanticweb.org/organization/rmit> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/RMIT> .
+<http://data.semanticweb.org/organization/rmit> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7g8vx5 .
+_:node1dfqj7g8vx5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7g8vx5 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.814251" .
+_:node1dfqj7g8vx5 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.963169" .
+<http://data.semanticweb.org/organization/rmit> <http://xmlns.com/foaf/0.1/homepage> <http://www.rmit.edu.au/> .
+<http://data.semanticweb.org/organization/rmit> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/jeremy-yuille> .
+<http://data.semanticweb.org/organization/rmit> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/keith-deverell> .
+<http://data.semanticweb.org/organization/rmit> <http://xmlns.com/foaf/0.1/name> "RMIT" .
+<http://data.semanticweb.org/organization/rmit> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/rmit/html> .
+<http://data.semanticweb.org/organization/university-of-baath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-baath> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/University_of_Baath> .
+<http://data.semanticweb.org/organization/university-of-baath> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/University_of_Baath> .
+<http://data.semanticweb.org/organization/university-of-baath> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7g8vx6 .
+_:node1dfqj7g8vx6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7g8vx6 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "34.718193" .
+_:node1dfqj7g8vx6 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "36.724205" .
+<http://data.semanticweb.org/organization/university-of-baath> <http://xmlns.com/foaf/0.1/homepage> <http://www.albaath-univ.edu.sy/> .
+<http://data.semanticweb.org/organization/university-of-baath> <http://xmlns.com/foaf/0.1/name> "University of Baath" .
+<http://data.semanticweb.org/organization/university-of-baath> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/university-of-baath/html> .
+<http://data.semanticweb.org/organization/university-of-bath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-bath> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/University_of_Bath> .
+<http://data.semanticweb.org/organization/university-of-bath> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/University_of_Bath> .
+<http://data.semanticweb.org/organization/university-of-bath> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7g8vx7 .
+_:node1dfqj7g8vx7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7g8vx7 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "51.386888" .
+_:node1dfqj7g8vx7 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-2.323008" .
+<http://data.semanticweb.org/organization/university-of-bath> <http://xmlns.com/foaf/0.1/homepage> <http://www.bath.ac.uk/> .
+<http://data.semanticweb.org/organization/university-of-bath> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/chris-mcmahon> .
+<http://data.semanticweb.org/organization/university-of-bath> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/injae-shin> .
+<http://data.semanticweb.org/organization/university-of-bath> <http://xmlns.com/foaf/0.1/name> "University of Bath" .
+<http://data.semanticweb.org/organization/university-of-bath> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/university-of-bath/html> .
+<http://data.semanticweb.org/organization/university-of-jyvaeskylae> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-jyvaeskylae> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/University_of_Jyvaeskylae> .
+<http://data.semanticweb.org/organization/university-of-jyvaeskylae> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/University_of_Jyvaeskylae> .
+<http://data.semanticweb.org/organization/university-of-jyvaeskylae> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7g8vx8 .
+_:node1dfqj7g8vx8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7g8vx8 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "62.24263" .
+_:node1dfqj7g8vx8 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "25.740023" .
+<http://data.semanticweb.org/organization/university-of-jyvaeskylae> <http://xmlns.com/foaf/0.1/homepage> <http://www.jyu.fi/> .
+<http://data.semanticweb.org/organization/university-of-jyvaeskylae> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/pertti-saariluoma> .
+<http://data.semanticweb.org/organization/university-of-jyvaeskylae> <http://xmlns.com/foaf/0.1/name> "University of Jyv\u00E4skyl\u00E4" .
+<http://data.semanticweb.org/organization/university-of-jyvaeskylae> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/university-of-jyvaeskylae/html> .
+<http://data.semanticweb.org/organization/university-of-oulu-finland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-oulu-finland> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/University_of_Oulu_Finland> .
+<http://data.semanticweb.org/organization/university-of-oulu-finland> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/University_of_Oulu_Finland> .
+<http://data.semanticweb.org/organization/university-of-oulu-finland> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7g8vx9 .
+_:node1dfqj7g8vx9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7g8vx9 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "65.063772" .
+_:node1dfqj7g8vx9 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "25.470686" .
+<http://data.semanticweb.org/organization/university-of-oulu-finland> <http://xmlns.com/foaf/0.1/homepage> <http://www.oulu.fi/> .
+<http://data.semanticweb.org/organization/university-of-oulu-finland> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/kalevi-nevala> .
+<http://data.semanticweb.org/organization/university-of-oulu-finland> <http://xmlns.com/foaf/0.1/name> "University of Oulu, Finland" .
+<http://data.semanticweb.org/organization/university-of-oulu-finland> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/university-of-oulu-finland/html> .
+<http://data.semanticweb.org/organization/university-of-southampton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-southampton> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/University_of_Southampton> .
+<http://data.semanticweb.org/organization/university-of-southampton> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/University_of_Southampton> .
+<http://data.semanticweb.org/organization/university-of-southampton> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7g8vx10 .
+_:node1dfqj7g8vx10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7g8vx10 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "50.934038" .
+_:node1dfqj7g8vx10 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-1.396307" .
+<http://data.semanticweb.org/organization/university-of-southampton> <http://xmlns.com/foaf/0.1/homepage> <http://www.soton.ac.uk/> .
+<http://data.semanticweb.org/organization/university-of-southampton> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/gary-wills> .
+<http://data.semanticweb.org/organization/university-of-southampton> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/nigel-r-shadbolt> .
+<http://data.semanticweb.org/organization/university-of-southampton> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/pooja-jadlhav> .
+<http://data.semanticweb.org/organization/university-of-southampton> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/richard-crowder> .
+<http://data.semanticweb.org/organization/university-of-southampton> <http://xmlns.com/foaf/0.1/name> "University of Southampton" .
+<http://data.semanticweb.org/organization/university-of-southampton> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/university-of-southampton/html> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/University_of_Tokyo> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/University_of_Tokyo> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/based_near> _:node1dfqj7g8vx11 .
+_:node1dfqj7g8vx11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:node1dfqj7g8vx11 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "35.669998" .
+_:node1dfqj7g8vx11 <http://www.w3.org/2003/01/geo/wgs84_pos#long> "139.770004" .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/homepage> <http://www.u-tokyo.ac.jp/> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/person/hideaki-takeda> .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/name> "University of Tokyo" .
+<http://data.semanticweb.org/organization/university-of-tokyo> <http://xmlns.com/foaf/0.1/page> <http://data.semanticweb.org/organization/university-of-tokyo/html> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/creativity-cognition-studios> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Alastair_Weakley> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Alastair_Weakley> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "33cf536864263aece06dc1fdf511b9109807458c" .
+<http://data.semanticweb.org/person/alastair-weakley> <http://xmlns.com/foaf/0.1/name> "Alastair Weakley" .
+<http://data.semanticweb.org/person/alastair-weakley> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Alastair_Weakley> .
+<http://data.semanticweb.org/person/chris-mcmahon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/chris-mcmahon> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-baath> .
+<http://data.semanticweb.org/person/chris-mcmahon> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Chris_McMahon> .
+<http://data.semanticweb.org/person/chris-mcmahon> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Chris_McMahon> .
+<http://data.semanticweb.org/person/chris-mcmahon> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> .
+<http://data.semanticweb.org/person/chris-mcmahon> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "5b75df49ef8a87654fcb57f50eefea687728fe19" .
+<http://data.semanticweb.org/person/chris-mcmahon> <http://xmlns.com/foaf/0.1/name> "Chris McMahon" .
+<http://data.semanticweb.org/person/chris-mcmahon> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Chris_McMahon> .
+<http://data.semanticweb.org/person/dean-allemang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/dean-allemang> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> .
+<http://data.semanticweb.org/person/dean-allemang> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "7f1f0e180c29d551c6b96d6e3a31177da4e7db0c" .
+<http://data.semanticweb.org/person/dean-allemang> <http://xmlns.com/foaf/0.1/name> "Dean Allemang" .
+<http://data.semanticweb.org/person/fabio-ciravegna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/fabio-ciravegna> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> .
+<http://data.semanticweb.org/person/fabio-ciravegna> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "464d09b4ca82f5a8e391511cd3d86c2bda719baa" .
+<http://data.semanticweb.org/person/fabio-ciravegna> <http://xmlns.com/foaf/0.1/name> "Fabio Ciravegna" .
+<http://data.semanticweb.org/person/gary-wills> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/gary-wills> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-southampton> .
+<http://data.semanticweb.org/person/gary-wills> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Gary_Wills> .
+<http://data.semanticweb.org/person/gary-wills> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Gary_Wills> .
+<http://data.semanticweb.org/person/gary-wills> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> .
+<http://data.semanticweb.org/person/gary-wills> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d68fa2ffdef3d0cf9ffa1e6a56eeb6e83e6f247d" .
+<http://data.semanticweb.org/person/gary-wills> <http://xmlns.com/foaf/0.1/name> "Gary Wills" .
+<http://data.semanticweb.org/person/gary-wills> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Gary_Wills> .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-tokyo> .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Hideaki_Takeda> .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Hideaki_Takeda> .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d2d472ef928860ee0f9ca92cafadf7e5dbaea062" .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://xmlns.com/foaf/0.1/name> "Hideaki Takeda" .
+<http://data.semanticweb.org/person/hideaki-takeda> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Hideaki_Takeda> .
+<http://data.semanticweb.org/person/injae-shin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/injae-shin> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-bath> .
+<http://data.semanticweb.org/person/injae-shin> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Injae_Shin> .
+<http://data.semanticweb.org/person/injae-shin> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Injae_Shin> .
+<http://data.semanticweb.org/person/injae-shin> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> .
+<http://data.semanticweb.org/person/injae-shin> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "fb8e0ddae39d00b045668f86f8425e19b85c754a" .
+<http://data.semanticweb.org/person/injae-shin> <http://xmlns.com/foaf/0.1/name> "Injae Shin" .
+<http://data.semanticweb.org/person/injae-shin> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Injae_Shin> .
+<http://data.semanticweb.org/person/jeremy-yuille> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/jeremy-yuille> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/rmit> .
+<http://data.semanticweb.org/person/jeremy-yuille> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Jeremy_Yuille> .
+<http://data.semanticweb.org/person/jeremy-yuille> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Jeremy_Yuille> .
+<http://data.semanticweb.org/person/jeremy-yuille> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> .
+<http://data.semanticweb.org/person/jeremy-yuille> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d6a9c0685cff9e38f22997d16f0c1b1984269842" .
+<http://data.semanticweb.org/person/jeremy-yuille> <http://xmlns.com/foaf/0.1/name> "Jeremy Yuille" .
+<http://data.semanticweb.org/person/jeremy-yuille> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Jeremy_Yuille> .
+<http://data.semanticweb.org/person/kalevi-nevala> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/kalevi-nevala> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-oulu-finland> .
+<http://data.semanticweb.org/person/kalevi-nevala> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Kalevi_Nevala> .
+<http://data.semanticweb.org/person/kalevi-nevala> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Kalevi_Nevala> .
+<http://data.semanticweb.org/person/kalevi-nevala> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> .
+<http://data.semanticweb.org/person/kalevi-nevala> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "a6782d0a84bc490eb82ad250aa1a8366d3d791ce" .
+<http://data.semanticweb.org/person/kalevi-nevala> <http://xmlns.com/foaf/0.1/name> "Kalevi Nevala" .
+<http://data.semanticweb.org/person/kalevi-nevala> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Kalevi_Nevala> .
+<http://data.semanticweb.org/person/keith-deverell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/keith-deverell> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/rmit> .
+<http://data.semanticweb.org/person/keith-deverell> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Keith_Deverell> .
+<http://data.semanticweb.org/person/keith-deverell> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Keith_Deverell> .
+<http://data.semanticweb.org/person/keith-deverell> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> .
+<http://data.semanticweb.org/person/keith-deverell> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "41cedbc2827f1069a0974a0a5bd31d21c7d70077" .
+<http://data.semanticweb.org/person/keith-deverell> <http://xmlns.com/foaf/0.1/name> "Keith Deverell" .
+<http://data.semanticweb.org/person/keith-deverell> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Keith_Deverell> .
+<http://data.semanticweb.org/person/kikuo-fujita> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/kikuo-fujita> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/osaka-university-japan> .
+<http://data.semanticweb.org/person/kikuo-fujita> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Kikuo_Fujita> .
+<http://data.semanticweb.org/person/kikuo-fujita> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Kikuo_Fujita> .
+<http://data.semanticweb.org/person/kikuo-fujita> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> .
+<http://data.semanticweb.org/person/kikuo-fujita> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "f896037bd15226522220c90b5f091e77b5d3e219" .
+<http://data.semanticweb.org/person/kikuo-fujita> <http://xmlns.com/foaf/0.1/name> "Kikuo Fujita" .
+<http://data.semanticweb.org/person/kikuo-fujita> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Kikuo_Fujita> .
+<http://data.semanticweb.org/person/nigel-r-shadbolt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/nigel-r-shadbolt> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-southampton> .
+<http://data.semanticweb.org/person/nigel-r-shadbolt> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Nigel_Shadbolt> .
+<http://data.semanticweb.org/person/nigel-r-shadbolt> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Nigel_Shadbolt> .
+<http://data.semanticweb.org/person/nigel-r-shadbolt> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> .
+<http://data.semanticweb.org/person/nigel-r-shadbolt> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "e966302104bd52f060f0e4545e8299f2d54ee3ae" .
+<http://data.semanticweb.org/person/nigel-r-shadbolt> <http://xmlns.com/foaf/0.1/name> "Nigel Shadbolt" .
+<http://data.semanticweb.org/person/nigel-r-shadbolt> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Nigel_Shadbolt> .
+<http://data.semanticweb.org/person/pertti-saariluoma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/pertti-saariluoma> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-jyvaeskylae> .
+<http://data.semanticweb.org/person/pertti-saariluoma> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Pertti_Saariluoma> .
+<http://data.semanticweb.org/person/pertti-saariluoma> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Pertti_Saariluoma> .
+<http://data.semanticweb.org/person/pertti-saariluoma> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> .
+<http://data.semanticweb.org/person/pertti-saariluoma> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "a80dcb5327934177bd3a713310d8855ce8d165e4" .
+<http://data.semanticweb.org/person/pertti-saariluoma> <http://xmlns.com/foaf/0.1/name> "Pertti Saariluoma" .
+<http://data.semanticweb.org/person/pertti-saariluoma> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Pertti_Saariluoma> .
+<http://data.semanticweb.org/person/pooja-jadlhav> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/pooja-jadlhav> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-southampton> .
+<http://data.semanticweb.org/person/pooja-jadlhav> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Pooja_Jadlhav> .
+<http://data.semanticweb.org/person/pooja-jadlhav> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Pooja_Jadlhav> .
+<http://data.semanticweb.org/person/pooja-jadlhav> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> .
+<http://data.semanticweb.org/person/pooja-jadlhav> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "26d91b25908e607e038dd00e9de679539befb0e6" .
+<http://data.semanticweb.org/person/pooja-jadlhav> <http://xmlns.com/foaf/0.1/name> "Pooja Jadlhav" .
+<http://data.semanticweb.org/person/pooja-jadlhav> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Pooja_Jadlhav> .
+<http://data.semanticweb.org/person/richard-crowder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/richard-crowder> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-southampton> .
+<http://data.semanticweb.org/person/richard-crowder> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Richard_Crowder> .
+<http://data.semanticweb.org/person/richard-crowder> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Richard_Crowder> .
+<http://data.semanticweb.org/person/richard-crowder> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> .
+<http://data.semanticweb.org/person/richard-crowder> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "2cc635a5f0edaee0f88a1c5f8b14c38ea34f9d35" .
+<http://data.semanticweb.org/person/richard-crowder> <http://xmlns.com/foaf/0.1/name> "Richard Crowder" .
+<http://data.semanticweb.org/person/richard-crowder> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Richard_Crowder> .
+<http://data.semanticweb.org/person/rob-h-bracewell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/rob-h-bracewell> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> .
+<http://data.semanticweb.org/person/rob-h-bracewell> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "045a62de29ca81efe8ba0b863c8225b110953fe1" .
+<http://data.semanticweb.org/person/rob-h-bracewell> <http://xmlns.com/foaf/0.1/name> "Rob H. Bracewell" .
+<http://data.semanticweb.org/person/sanghee-kim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/sanghee-kim> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> .
+<http://data.semanticweb.org/person/sanghee-kim> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cambridge-university> .
+<http://data.semanticweb.org/person/sanghee-kim> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Sanghee_Kim> .
+<http://data.semanticweb.org/person/sanghee-kim> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Sanghee_Kim> .
+<http://data.semanticweb.org/person/sanghee-kim> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> .
+<http://data.semanticweb.org/person/sanghee-kim> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "7835a42d2d31f5e531b6ae76d6687feea9930dbe" .
+<http://data.semanticweb.org/person/sanghee-kim> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "a986f2df14d4a170a74a92d0d84e854ff42dfb62" .
+<http://data.semanticweb.org/person/sanghee-kim> <http://xmlns.com/foaf/0.1/name> "Sanghee Kim" .
+<http://data.semanticweb.org/person/sanghee-kim> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Sanghee_Kim> .
+<http://data.semanticweb.org/person/sotirios-kotsopoulos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/sotirios-kotsopoulos> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/boston-architectural-college> .
+<http://data.semanticweb.org/person/sotirios-kotsopoulos> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Sotirios_Kotsopoulos> .
+<http://data.semanticweb.org/person/sotirios-kotsopoulos> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Sotirios_Kotsopoulos> .
+<http://data.semanticweb.org/person/sotirios-kotsopoulos> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> .
+<http://data.semanticweb.org/person/sotirios-kotsopoulos> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "b807584e6f5cc34a6d430fce2b8d7aeee538b98f" .
+<http://data.semanticweb.org/person/sotirios-kotsopoulos> <http://xmlns.com/foaf/0.1/name> "Sotirios Kotsopoulos" .
+<http://data.semanticweb.org/person/sotirios-kotsopoulos> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Sotirios_Kotsopoulos> .
+<http://data.semanticweb.org/person/yong-se-kim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yong-se-kim> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> .
+<http://data.semanticweb.org/person/yong-se-kim> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "35074bd81e6a5922997476ac3106181381357a30" .
+<http://data.semanticweb.org/person/yong-se-kim> <http://xmlns.com/foaf/0.1/name> "Yong Se Kim" .
+<http://data.semanticweb.org/person/yoshinobu-kitamura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yoshinobu-kitamura> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> .
+<http://data.semanticweb.org/person/yoshinobu-kitamura> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "46de6791f7e7e7d0b6a843c91cf8875be88baa19" .
+<http://data.semanticweb.org/person/yoshinobu-kitamura> <http://xmlns.com/foaf/0.1/name> "Yoshinobu Kitamura" .
+<http://data.semanticweb.org/person/yutaka-nomaguchi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/yutaka-nomaguchi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/osaka-university-japan> .
+<http://data.semanticweb.org/person/yutaka-nomaguchi> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Yutaka_Nomaguchi> .
+<http://data.semanticweb.org/person/yutaka-nomaguchi> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Yutaka_Nomaguchi> .
+<http://data.semanticweb.org/person/yutaka-nomaguchi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> .
+<http://data.semanticweb.org/person/yutaka-nomaguchi> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "63d00c96d29af71c8ad2769494e0ccef38382d8c" .
+<http://data.semanticweb.org/person/yutaka-nomaguchi> <http://xmlns.com/foaf/0.1/name> "Yutaka Nomaguchi" .
+<http://data.semanticweb.org/person/yutaka-nomaguchi> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Yutaka_Nomaguchi> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007> <http://data.semanticweb.org/ns/swc/ontology#hasRole> <http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/conference/iswc-aswc/2007> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Web and Web 2.0 in Architectural, Product, Engineering Design Workshop" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007> <http://www.w3.org/2002/12/cal/ical#summary> "Semantic Web and Web 2.0 in Architectural, Product, Engineering Design Workshop" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007> <http://www.w3.org/2002/12/cal/ical#url> <http://www-edc.eng.cam.ac.uk/~shk32/ws.html> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007> <http://data.semanticweb.org/ns/swc/ontology#completeGraph> <http://data.semanticweb.org/workshop/semwebdesign/2007/complete> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007> <http://data.semanticweb.org/ns/swc/ontology#hasAcronym> "SWinDESIGN2007" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/semwebdesign/2007/talks/493> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/hideaki-takeda> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://purl.org/dc/elements/1.1/title> "Some considerations on openness of design information (position paper)" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://www.w3.org/2000/01/rdf-schema#label> "Some considerations on openness of design information (position paper)" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://swrc.ontoware.org/ontology#abstract> "Towards a sustainable society, design of artifacts must be optimized with limited resources on the earth while keeping our life. In order to realize it, I emphasize openness of design information. In this paper, I discuss needs for openness of design information and methods to realize it. I argue why design information should be open and what benefits will result by opening and sharing design information. Opening design information looks difficult considering the current structure of the industries, but I show some possibilities from two aspects of design activities. In software design, open source software is getting accepted as a way of developing software products. I overview it and analyze how it can be applied to artifact design. Then I discuss how such an environment can be built. Identification, representation, and sharing mechanism are crucial. Lastly I summarize discussion with people in the design community. Many people disagree with opening design information, but I dispute with their objections." .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/hideaki-takeda> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://swrc.ontoware.org/ontology#title> "Some considerations on openness of design information (position paper)" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7g8vx12 .
+_:node1dfqj7g8vx12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/hideaki-takeda> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/semwebdesign-2007-paper-493-some-considerations> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/hideaki-takeda> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/semwebdesign/2007/talks/509> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/kikuo-fujita> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/yutaka-nomaguchi> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://purl.org/dc/elements/1.1/title> "DRIFT: A Framework for Ontology-based Design Support Systems" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://www.w3.org/2000/01/rdf-schema#label> "DRIFT: A Framework for Ontology-based Design Support Systems" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://swrc.ontoware.org/ontology#abstract> "This paper proposes a framework for ontology-based design support systems, called DRIFT (Design Rationale Integration Framework of Three layers), which records, structures and retrieves reflective operations and their relationships in design process. Although an ontology can provide concepts of constant knowledge, such as knowledge about first principles of physical phenomena or prescription of successful design cases, a dynamic aspect of design process is usually out of ontology support. DRIFT automatically captures and manages the whole design argumentation through tracking design operations over an ontology-based design support system. This paper states our position and demonstrates a prototype system of DRIFT to show its performances and effectiveness." .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/kikuo-fujita> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/yutaka-nomaguchi> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://swrc.ontoware.org/ontology#title> "DRIFT: A Framework for Ontology-based Design Support Systems" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7g8vx13 .
+_:node1dfqj7g8vx13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/yutaka-nomaguchi> .
+_:node1dfqj7g8vx13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/kikuo-fujita> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/semwebdesign-2007-paper-509-drift-a> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/kikuo-fujita> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/yutaka-nomaguchi> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/semwebdesign/2007/talks/511> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/alastair-weakley> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/jeremy-yuille> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/keith-deverell> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://purl.org/dc/elements/1.1/title> "WEB 2.0 in Support of Sketching in Architectural Practice" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://www.w3.org/2000/01/rdf-schema#label> "WEB 2.0 in Support of Sketching in Architectural Practice" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://swrc.ontoware.org/ontology#abstract> "This position paper describes Scribblr, a web-based system to support remote, shared annotation of architectural images and plans. The paper describes the current work practice of our clients, a large engineering firm in collaboration with an architect in another country. In particular we are concerned with sketching activities which are important in their work. We describe how, by employing Web-2.0 technologies in the development of Scribblr, we have been able to meet the requirements of a traditional paper-based sketching environment, and indeed to add new capabilities. The paper describes the rationale behind our application of modern Web technologies in this prototype." .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/alastair-weakley> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/jeremy-yuille> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/keith-deverell> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://swrc.ontoware.org/ontology#title> "WEB 2.0 in Support of Sketching in Architectural Practice" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7g8vx14 .
+_:node1dfqj7g8vx14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/alastair-weakley> .
+_:node1dfqj7g8vx14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/keith-deverell> .
+_:node1dfqj7g8vx14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/jeremy-yuille> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/semwebdesign-2007-paper-511-web-20> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/alastair-weakley> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/jeremy-yuille> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/keith-deverell> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/semwebdesign/2007/talks/522> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/kalevi-nevala> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/pertti-saariluoma> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://purl.org/dc/elements/1.1/title> "From Concepts to Design Ontologies" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://www.w3.org/2000/01/rdf-schema#label> "From Concepts to Design Ontologies" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://swrc.ontoware.org/ontology#abstract> "The research on engineering knowledge systems is continually evolving. Knowledge is conveyed through the thought processes of engineers. For a resourceful support of engineering design the thought processes must be understood. The aim of this paper is to discuss how to transform conceptual knowledge to design ontologies. We suggest a procedure termed Cartesian reasoning to explicate some intuitive steps in engineering thinking and put them under scrutiny." .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/kalevi-nevala> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/pertti-saariluoma> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://swrc.ontoware.org/ontology#title> "From Concepts to Design Ontologies" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7g8vx15 .
+_:node1dfqj7g8vx15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/pertti-saariluoma> .
+_:node1dfqj7g8vx15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/kalevi-nevala> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/semwebdesign-2007-paper-522-from-concepts> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/kalevi-nevala> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/pertti-saariluoma> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/semwebdesign/2007/talks/526> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/sotirios-kotsopoulos> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://purl.org/dc/elements/1.1/title> "Design Concepts in Architecture: the porosity paradigm" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://www.w3.org/2000/01/rdf-schema#label> "Design Concepts in Architecture: the porosity paradigm" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://swrc.ontoware.org/ontology#abstract> "Presented is a paradigm of how a design concept can be converted into a system of  production rules to generate designs. The rules are expressed by the means of shape grammar formalism. The paradigm demonstrates how porosity a concept transferred from biology, medicine and organic chemistry was implemented by architect Steven Holl and his team in designing the 350-unit student residence Simmons Hall at MIT. In the presentation, spatial algebras, rule schemata and shape rules are used to capture Holl\u2019s version of porosity. It is also provided a discussion on how the semantic web may contribute in communicating design concepts." .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/sotirios-kotsopoulos> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://swrc.ontoware.org/ontology#title> "Design Concepts in Architecture: the porosity paradigm" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7g8vx16 .
+_:node1dfqj7g8vx16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/sotirios-kotsopoulos> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/semwebdesign-2007-paper-526-design-concepts> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/sotirios-kotsopoulos> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/semwebdesign/2007/talks/528> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/chris-mcmahon> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/injae-shin> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/sanghee-kim> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://purl.org/dc/elements/1.1/title> "An Approach to Capture Design-induced Error Using an Ontology" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://www.w3.org/2000/01/rdf-schema#label> "An Approach to Capture Design-induced Error Using an Ontology" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://swrc.ontoware.org/ontology#abstract> "As current engineered systems (e.g. aviation systems) have been equipped with automated and computer-based artifacts, human-system interaction has been an important issue. Understanding the infleunce of design on human performance requires phycological theories that explain human behaviour and cognition. One of the challenges of modelling such theories is to identify complex relations between systems and humans including different task perspectives. To address this problem, we have developed an ontology that specifies which relations are better comprehended when assisted with the theories and have used it to model human errors induced by designs. This paper presents the results of developing the ontology using a supporting tool, i.e. PCPACK." .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/chris-mcmahon> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/injae-shin> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/sanghee-kim> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://swrc.ontoware.org/ontology#title> "An Approach to Capture Design-induced Error Using an Ontology" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7g8vx17 .
+_:node1dfqj7g8vx17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/injae-shin> .
+_:node1dfqj7g8vx17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/sanghee-kim> .
+_:node1dfqj7g8vx17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/chris-mcmahon> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/semwebdesign-2007-paper-528-an-approach> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/chris-mcmahon> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/injae-shin> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/sanghee-kim> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#InProceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://data.semanticweb.org/ns/swc/ontology#isPartOf> <http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/semwebdesign/2007/talks/536> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/gary-wills> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/nigel-r-shadbolt> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/pooja-jadlhav> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://purl.org/dc/elements/1.1/creator> <http://data.semanticweb.org/person/richard-crowder> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://purl.org/dc/elements/1.1/title> "Data Mining to Support Engineering Design Decision" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://www.w3.org/2000/01/rdf-schema#label> "Data Mining to Support Engineering Design Decision" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://swrc.ontoware.org/ontology#abstract> "The design and maintenance of an aero-engine generates a significant amount of documentation. When designing new engines, engineers must obtain knowledge gained from maintenance of existing engines to identify possible areas of concern. Firstly, this paper investigate the use of advanced business intelligence tenchniques to solve the problem of knowledge transfer from maintenance to design of aeroengines. Based on data availability and quality, various models were deployed. An association model was used to uncover hidden trends among parts involved in maintenance events. Classification techniques comprising of various algorithms was employed to determine severity of events. Causes of high severity events that lead to major financial loss was traced with the help of summarization techniques. Secondly this paper compares and evaluates the business intelligence approach to solve the problem of knowledge transfer with solutions available from the Semantic Web. The results obtained provide a compelling need to have data mining support on RDF/OWL-based warehoused data." .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/gary-wills> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/nigel-r-shadbolt> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/pooja-jadlhav> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://swrc.ontoware.org/ontology#author> <http://data.semanticweb.org/person/richard-crowder> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://swrc.ontoware.org/ontology#title> "Data Mining to Support Engineering Design Decision" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> _:node1dfqj7g8vx18 .
+_:node1dfqj7g8vx18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/gary-wills> .
+_:node1dfqj7g8vx18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/richard-crowder> .
+_:node1dfqj7g8vx18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/nigel-r-shadbolt> .
+_:node1dfqj7g8vx18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/pooja-jadlhav> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://www.w3.org/2002/07/owl#sameAs> <http://revyu.com/things/semwebdesign-2007-paper-536-data-mining> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/gary-wills> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/nigel-r-shadbolt> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/pooja-jadlhav> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> <http://xmlns.com/foaf/0.1/maker> <http://data.semanticweb.org/person/richard-crowder> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#Proceedings> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#hasPart> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> <http://data.semanticweb.org/workshop/semwebdesign/2007> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://swrc.ontoware.org/ontology#booktitle> "Proceedings of the Workshop on Semantic Web and Web 2.0 in Architectural, Product, Engineering Design 2007 at ISWC/ASWC2007, Busan, South Korea" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/dean-allemang> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/fabio-ciravegna> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/rob-h-bracewell> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/sanghee-kim> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/yong-se-kim> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://swrc.ontoware.org/ontology#editor> <http://data.semanticweb.org/person/yoshinobu-kitamua> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://swrc.ontoware.org/ontology#month> "November" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://swrc.ontoware.org/ontology#year> "2007" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/proceedings> <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#editorList> _:node1dfqj7g8vx19 .
+_:node1dfqj7g8vx19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://data.semanticweb.org/person/fabio-ciravegna> .
+_:node1dfqj7g8vx19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://data.semanticweb.org/person/dean-allemang> .
+_:node1dfqj7g8vx19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://data.semanticweb.org/person/sanghee-kim> .
+_:node1dfqj7g8vx19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://data.semanticweb.org/person/yoshinobu-kitamua> .
+_:node1dfqj7g8vx19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://data.semanticweb.org/person/yong-se-kim> .
+_:node1dfqj7g8vx19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#_6> <http://data.semanticweb.org/person/rob-h-bracewell> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/493> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/493> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/493> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/493> <http://www.w3.org/2000/01/rdf-schema#label> "Some considerations on openness of design information (position paper)" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/493> <http://www.w3.org/2002/12/cal/ical#summary> "Some considerations on openness of design information (position paper)" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/509> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/509> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/509> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/509> <http://www.w3.org/2000/01/rdf-schema#label> "DRIFT: A Framework for Ontology-based Design Support Systems" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/509> <http://www.w3.org/2002/12/cal/ical#summary> "DRIFT: A Framework for Ontology-based Design Support Systems" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/511> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/511> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/511> <http://www.w3.org/2000/01/rdf-schema#label> "WEB 2.0 in Support of Sketching in Architectural Practice" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/511> <http://www.w3.org/2002/12/cal/ical#summary> "WEB 2.0 in Support of Sketching in Architectural Practice" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/522> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/522> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/522> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/522> <http://www.w3.org/2000/01/rdf-schema#label> "From Concepts to Design Ontologies" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/522> <http://www.w3.org/2002/12/cal/ical#summary> "From Concepts to Design Ontologies" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/526> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/526> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/526> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/526> <http://www.w3.org/2000/01/rdf-schema#label> "Design Concepts in Architecture: the porosity paradigm" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/526> <http://www.w3.org/2002/12/cal/ical#summary> "Design Concepts in Architecture: the porosity paradigm" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/528> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/528> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/528> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/528> <http://www.w3.org/2000/01/rdf-schema#label> "An Approach to Capture Design-induced Error Using an Ontology" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/528> <http://www.w3.org/2002/12/cal/ical#summary> "An Approach to Capture Design-induced Error Using an Ontology" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/536> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#PaperPresentation> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/536> <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/536> <http://www.w3.org/2000/01/rdf-schema#label> "Data Mining to Support Engineering Design Decision" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/talks/536> <http://www.w3.org/2002/12/cal/ical#summary> "Data Mining to Support Engineering Design Decision" .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopOrganiser> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/dean-allemang> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/fabio-ciravegna> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/rob-h-bracewell> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/sanghee-kim> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/yong-se-kim> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/person/yoshinobu-kitamura> .
+<http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> <http://data.semanticweb.org/workshop/semwebdesign/2007> .

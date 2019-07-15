@@ -96,8 +96,8 @@ func (in *KobeExperimentSpec) DeepCopyInto(out *KobeExperimentSpec) {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
 	}
-	if in.ClientCommand != nil {
-		in, out := &in.ClientCommand, &out.ClientCommand
+	if in.EvalCommands != nil {
+		in, out := &in.EvalCommands, &out.EvalCommands
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}

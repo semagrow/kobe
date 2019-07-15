@@ -1,0 +1,884 @@
+
+<!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
+<!--     using base file:///Users/knud/Projekte/dogfood-svn/easyChair2RDF/output-terra_cognita-conference-data.rdf-->
+
+
+<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:ical="http://www.w3.org/2002/12/cal/ical#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swc="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:swrc="http://swrc.ontoware.org/ontology#"
+    xmlns:swrc_ext="http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#">
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/advanced-systems-group">
+        <rdfs:label>Advanced Systems Group</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/lemonia-ragia"/>
+        <name>Advanced Systems Group</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/bbn-technologies">
+        <rdfs:label>BBN Technologies</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/dave-kolas"/>
+        <member rdf:resource="http://data.semanticweb.org/person/mike-dean"/>
+        <name>BBN Technologies</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/deri-nui-galway">
+        <rdfs:label>DERI, National University of Ireland</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/laurentiu-vasiliu"/>
+        <member rdf:resource="http://data.semanticweb.org/person/raluca-zaharia"/>
+        <name>DERI, National University of Ireland</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/engineering-management-integration-usa">
+        <rdfs:label>Engineering Management &#38; Integration, USA</rdfs:label>
+        <rdfs:label>Engineering Management and Integration</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/gary-berg-cross"/>
+        <name>Engineering Management &#38; Integration, USA</name>
+        <name>Engineering Management and Integration</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/european-commission-dg-joint-research-center">
+        <rdfs:label>European Commission-DG Joint Research Center</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/michael-lutz"/>
+        <name>European Commission-DG Joint Research Center</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/fraunhofer-institute-for-computer-graphics-research">
+        <rdfs:label>Fraunhofer Institute for Computer Graphics Research</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/eva-klien"/>
+        <name>Fraunhofer Institute for Computer Graphics Research</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/ilc-cnr">
+        <rdfs:label>ILC, CNR</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/emiliano-giovannetti"/>
+        <name>ILC, CNR</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/imagematters">
+        <rdfs:label>ImageMatters</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/harry-chen"/>
+        <name>ImageMatters</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/isi-hec-unil-university-of-lausanne">
+        <rdfs:label>ISI-HEC, UNIL - University of Lausanne</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/christine-parent"/>
+        <member rdf:resource="http://data.semanticweb.org/person/stefano-spaccapietra"/>
+        <name>ISI-HEC, UNIL - University of Lausanne</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/kddlab-isti-cnr">
+        <rdfs:label>KDDLab ISTI,CNR</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/chiara-renso"/>
+        <member rdf:resource="http://data.semanticweb.org/person/laura-spinsanti"/>
+        <member rdf:resource="http://data.semanticweb.org/person/maria-masserotti"/>
+        <name>KDDLab ISTI,CNR</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/laboratory-of-distributed-multimedia-information-systems-and-applications">
+        <rdfs:label>Laboratory of Distributed Multimedia Information Systems and Applications</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/michalis-foukarakis"/>
+        <member rdf:resource="http://data.semanticweb.org/person/stavros-christodoulakis"/>
+        <name>Laboratory of Distributed Multimedia Information Systems and Applications</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/lbd-ic-epfl-ecole-polytechnique-federale-de-lausanne">
+        <rdfs:label>LBD-IC, EPFL - Ecole Polytechnique Federale de Lausanne</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/jose-macedo"/>
+        <member rdf:resource="http://data.semanticweb.org/person/zhixian-yan"/>
+        <name>LBD-IC, EPFL - Ecole Polytechnique Federale de Lausanne</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/national-geospatial-intelligence-agency">
+        <rdfs:label>National Geospatial-Intelligence Agency</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/beth-driver"/>
+        <name>National Geospatial-Intelligence Agency</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/northrop-grumman">
+        <rdfs:label>Northrop Grumman</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/james-ressler"/>
+        <name>Northrop Grumman</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/ordnance-survey-of-great-britain">
+        <rdfs:label>Ordnance Survey</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/catherine-dolbear"/>
+        <member rdf:resource="http://data.semanticweb.org/person/glen-hart"/>
+        <member rdf:resource="http://data.semanticweb.org/person/john-goodwin"/>
+        <name>Ordnance Survey</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/sap-research">
+        <rdfs:label>SAP Research</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/joerg-hoffman"/>
+        <name>SAP Research</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/scitor-corp">
+        <rdfs:label>Scitor Corp</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/dan-adams"/>
+        <name>Scitor Corp</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/systems-lab-ricoh-co-ltd">
+        <rdfs:label>Systems Lab, Ricoh Co, LTD</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/hiroaki-uchiyama"/>
+        <member rdf:resource="http://data.semanticweb.org/person/takuya-imai"/>
+        <name>Systems Lab, Ricoh Co, LTD</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/traverse-technologies">
+        <rdfs:label>Traverse Technologies</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/josh-lieberman"/>
+        <name>Traverse Technologies</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-illinois-at-chicago">
+        <rdfs:label>University of Illinois at Chicago</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/isabel-cruz"/>
+        <name>University of Illinois at Chicago</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-iowa">
+        <rdfs:label>University of Iowa</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/kathleen-hornsby"/>
+        <name>University of Iowa</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-laquila">
+        <rdfs:label>University of L'Aquila</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/eliseo-clementini"/>
+        <member rdf:resource="http://data.semanticweb.org/person/francesco-tarquini"/>
+        <name>University of L'Aquila</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-maine">
+        <rdfs:label>University of Maine</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/max-egenhofer"/>
+        <name>University of Maine</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-muenster">
+        <rdfs:label>University of Münster</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/werner-kuhn"/>
+        <name>University of Münster</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-osnabrueck">
+        <rdfs:label>University of Osnabrück</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/angela-schwering"/>
+        <name>University of Osnabrück</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-pisa">
+        <rdfs:label>University of Pisa</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/miriam-baglioni"/>
+        <name>University of Pisa</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-texas-at-el-paso">
+        <rdfs:label>University of Texas at El Paso</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/alejandro-castaneda"/>
+        <member rdf:resource="http://data.semanticweb.org/person/nicholas-del-rio"/>
+        <member rdf:resource="http://data.semanticweb.org/person/paulo-pinheiro-da-silva"/>
+        <member rdf:resource="http://data.semanticweb.org/person/vladik-kreinovich"/>
+        <name>University of Texas at El Paso</name>
+    </Organization>
+
+    <Organization rdf:about="http://data.semanticweb.org/organization/university-of-wisconsin-madison">
+        <rdfs:label>University of Wisconsin - Madison</rdfs:label>
+        <rdfs:label>University of Wisconsin-Madison</rdfs:label>
+        <member rdf:resource="http://data.semanticweb.org/person/nancy-wiegand"/>
+        <name>University of Wisconsin - Madison</name>
+        <name>University of Wisconsin-Madison</name>
+    </Organization>
+
+    <Person rdf:about="http://data.semanticweb.org/person/alejandro-castaneda">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-texas-at-el-paso"/>
+        <rdfs:label>Alejandro Castaneda</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/7"/>
+        <mbox_sha1sum>de472d917e7ecdb6db1763c9c9ebdc92e2561f45</mbox_sha1sum>
+        <name>Alejandro Castaneda</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/angela-schwering">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-osnabrueck"/>
+        <rdfs:label>Angela Schwering</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <mbox_sha1sum>8dc2492cfe8e58028e9730c84462cefd93596081</mbox_sha1sum>
+        <name>Angela Schwering</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/beth-driver">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/national-geospatial-intelligence-agency"/>
+        <rdfs:label>Beth Driver</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <mbox_sha1sum>1cecc34c75a239b61778c126643094d9b7f4266f</mbox_sha1sum>
+        <name>Beth Driver</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/catherine-dolbear">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ordnance-survey-of-great-britain"/>
+        <rdfs:label>Catherine Dolbear</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_Kingdom"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/2"/>
+        <mbox_sha1sum>5c2c07a1bb0a0ce4c63fd62714ea306794cc68d4</mbox_sha1sum>
+        <name>Catherine Dolbear</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/chiara-renso">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/kddlab-isti-cnr"/>
+        <rdfs:label>Chiara Renso</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/5"/>
+        <mbox_sha1sum>5fcb00267c18a255f0738a791e7fce3c3f67159f</mbox_sha1sum>
+        <name>Chiara Renso</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/christine-parent">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/isi-hec-unil-university-of-lausanne"/>
+        <rdfs:label>Christine Parent</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Switzerland"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/6"/>
+        <mbox_sha1sum>c23ac5c0e8afd147d9a257400568d09cb6b87edd</mbox_sha1sum>
+        <name>Christine Parent</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dan-adams">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/scitor-corp"/>
+        <rdfs:label>Dan Adams</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <mbox_sha1sum>dea2a7d9db7cc8d506be1f5897c4b7e13b8b32f1</mbox_sha1sum>
+        <name>Dan Adams</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/dave-kolas">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/chair/organisingcommitteemember"/>
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/bbn-technologies"/>
+        <rdfs:label>Dave Kolas</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/1"/>
+        <mbox_sha1sum>cd8d54e1c3da5e7fb726ea5be6a9ea981fcdd554</mbox_sha1sum>
+        <name>Dave Kolas</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/eliseo-clementini">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-laquila"/>
+        <rdfs:label>Eliseo Clementini</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/3"/>
+        <mbox_sha1sum>48625e1c35297ae3eba23e08d82a834e55751863</mbox_sha1sum>
+        <name>Eliseo Clementini</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/emiliano-giovannetti">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ilc-cnr"/>
+        <rdfs:label>Emiliano Giovannetti</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/5"/>
+        <mbox_sha1sum>4c9f3163cf5ade62f7b6e7ab171e71cefaaab04f</mbox_sha1sum>
+        <name>Emiliano Giovannetti</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/eva-klien">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/fraunhofer-institute-for-computer-graphics-research"/>
+        <rdfs:label>Eva Klien</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/4"/>
+        <mbox_sha1sum>c809069c30118fe9c165e48079ee75a01581c528</mbox_sha1sum>
+        <name>Eva Klien</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/francesco-tarquini">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-laquila"/>
+        <rdfs:label>Francesco Tarquini</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/3"/>
+        <mbox_sha1sum>7138902b23d8133e2c1f2ea6e6d013951cdd6452</mbox_sha1sum>
+        <name>Francesco Tarquini</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/gary-berg-cross">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/chair/organisingcommitteemember"/>
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/engineering-management-integration-usa"/>
+        <rdfs:label>Gary Berg-Cross</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <mbox_sha1sum>8dd42769398b53b1cb558d91f70c01e2ba91f5e5</mbox_sha1sum>
+        <name>Gary Berg-Cross</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/glen-hart">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ordnance-survey-of-great-britain"/>
+        <rdfs:label>Glen Hart</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_Kingdom"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/2"/>
+        <mbox_sha1sum>20e382d981f723a765ea9f9541b24b22aad4ab64</mbox_sha1sum>
+        <name>Glen Hart</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/harry-chen">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/imagematters"/>
+        <rdfs:label>Harry Chen</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <mbox_sha1sum>80368445d942c6e207c6694353355c3bd37f3e7a</mbox_sha1sum>
+        <name>Harry Chen</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/hiroaki-uchiyama">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/systems-lab-ricoh-co-ltd"/>
+        <rdfs:label>Hiroaki Uchiyama</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Japan"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/8"/>
+        <mbox_sha1sum>b3be77a5f14aaed9d86d6065b9d3b6a900b8cf6f</mbox_sha1sum>
+        <name>Hiroaki Uchiyama</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/isabel-cruz">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-illinois-at-chicago"/>
+        <rdfs:label>Isabel Cruz</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <mbox_sha1sum>450162ac52a51c1ed888fa843c004bbc77d8e757</mbox_sha1sum>
+        <name>Isabel Cruz</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/james-ressler">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/northrop-grumman"/>
+        <rdfs:label>James Ressler</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <mbox_sha1sum>bd9ac8aa30c1ddd0a2bf700a97961bdabd0240ca</mbox_sha1sum>
+        <name>James Ressler</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/joerg-hoffman">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/sap-research"/>
+        <rdfs:label>Jörg Hoffman</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/4"/>
+        <mbox_sha1sum>2e0f3c5c74774ab6a08d9a39717f4c3dc944d78f</mbox_sha1sum>
+        <name>Jörg Hoffman</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/john-goodwin">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/ordnance-survey-of-great-britain"/>
+        <rdfs:label>John Goodwin</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_Kingdom"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/2"/>
+        <mbox_sha1sum>4e6e5f3e9ee7afb2826133bbc3c6695d19674cc4</mbox_sha1sum>
+        <name>John Goodwin</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/jose-macedo">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/lbd-ic-epfl-ecole-polytechnique-federale-de-lausanne"/>
+        <rdfs:label>Jose Macedo</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Switzerland"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/6"/>
+        <mbox_sha1sum>6337fd05696e92c1a3a52612e437c83f4fead878</mbox_sha1sum>
+        <name>Jose Macedo</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/josh-lieberman">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/traverse-technologies"/>
+        <rdfs:label>Josh Lieberman</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <mbox_sha1sum>7496033cfd4ba3747fdec41ca9a489e30e4da269</mbox_sha1sum>
+        <name>Josh Lieberman</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/kathleen-hornsby">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-iowa"/>
+        <rdfs:label>Kathleen  Hornsby</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <mbox_sha1sum>fb680aef3e8e2ebd9354859699ea1db2221f02a5</mbox_sha1sum>
+        <name>Kathleen  Hornsby</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/laura-spinsanti">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/kddlab-isti-cnr"/>
+        <rdfs:label>Laura Spinsanti</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/5"/>
+        <mbox_sha1sum>c6fb6716e5ea43e61c6105f53a55dc566f373c6e</mbox_sha1sum>
+        <name>Laura Spinsanti</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/laurentiu-vasiliu">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <rdfs:label>Laurentiu Vasiliu</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Ireland"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/4"/>
+        <mbox_sha1sum>58c0e3d72b002b21231abbb9d803de035dfe3023</mbox_sha1sum>
+        <name>Laurentiu Vasiliu</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/lemonia-ragia">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/advanced-systems-group"/>
+        <rdfs:label>Lemonia Ragia</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Switzerland"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/8"/>
+        <mbox_sha1sum>e1ee864957c466ee73246921d4be73e4e8489164</mbox_sha1sum>
+        <name>Lemonia Ragia</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/maria-masserotti">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/kddlab-isti-cnr"/>
+        <rdfs:label>Maria Masserotti</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/5"/>
+        <mbox_sha1sum>3c75cbd8681ce39e42b4acc0a334cf235ed032d9</mbox_sha1sum>
+        <name>Maria Masserotti</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/max-egenhofer">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-maine"/>
+        <rdfs:label>Max Egenhofer</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <mbox_sha1sum>102c446b2de82962ce190a751971ba6a95eb3942</mbox_sha1sum>
+        <name>Max Egenhofer</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/michael-lutz">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/european-commission-dg-joint-research-center"/>
+        <rdfs:label>Michael Lutz</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <mbox_sha1sum>6b4169e940b49b0f8892e9e598b2b7b0ab633d1d</mbox_sha1sum>
+        <name>Michael Lutz</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/michalis-foukarakis">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/laboratory-of-distributed-multimedia-information-systems-and-applications"/>
+        <rdfs:label>Michalis Foukarakis</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Greece"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/8"/>
+        <mbox_sha1sum>a82a7e3d8dfa2785b6714ea17bd69ba501b2db62</mbox_sha1sum>
+        <name>Michalis Foukarakis</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/mike-dean">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/bbn-technologies"/>
+        <rdfs:label>Mike Dean</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <mbox_sha1sum>6006a914f7d645142fadf08d9a4e33aee98416d0</mbox_sha1sum>
+        <name>Mike Dean</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/miriam-baglioni">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-pisa"/>
+        <rdfs:label>Miriam Baglioni</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/5"/>
+        <mbox_sha1sum>c5c17af5aa25b9f5fd539a7f342b77094b098082</mbox_sha1sum>
+        <name>Miriam Baglioni</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nancy-wiegand">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/chair/organisingcommitteemember"/>
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-wisconsin-madison"/>
+        <rdfs:label>Nancy Wiegand</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <mbox_sha1sum>e8118a298ce1fad96098f13a97181f0d72b8376c</mbox_sha1sum>
+        <name>Nancy Wiegand</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/nicholas-del-rio">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-texas-at-el-paso"/>
+        <rdfs:label>Nicholas Del Rio</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/7"/>
+        <mbox_sha1sum>9fbb20cd0da82247f71efaec8a3131b778f16eff</mbox_sha1sum>
+        <name>Nicholas Del Rio</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/paulo-pinheiro-da-silva">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-texas-at-el-paso"/>
+        <rdfs:label>Paulo Pinheiro da Silva</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/7"/>
+        <mbox_sha1sum>b6a3c19dcba51220bd64fb820607884193dbd16c</mbox_sha1sum>
+        <name>Paulo Pinheiro da Silva</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/raluca-zaharia">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <rdfs:label>Raluca Zaharia</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Ireland"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/4"/>
+        <mbox_sha1sum>954610edc52be10c4de121b41c41f03022c315b0</mbox_sha1sum>
+        <name>Raluca Zaharia</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/stavros-christodoulakis">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/laboratory-of-distributed-multimedia-information-systems-and-applications"/>
+        <rdfs:label>Stavros Christodoulakis</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Greece"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/8"/>
+        <mbox_sha1sum>fdda2b740a8ae200b71c4cde681b910879b58177</mbox_sha1sum>
+        <name>Stavros Christodoulakis</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/stefano-spaccapietra">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/isi-hec-unil-university-of-lausanne"/>
+        <rdfs:label>Stefano Spaccapietra</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Switzerland"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/6"/>
+        <mbox_sha1sum>39b5ebe6d8defd6dc5058b43cd7c70f0ee6496eb</mbox_sha1sum>
+        <name>Stefano Spaccapietra</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/takuya-imai">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/systems-lab-ricoh-co-ltd"/>
+        <rdfs:label>Takuya Imai</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Japan"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/8"/>
+        <mbox_sha1sum>8bec7af20e991cb905d58fbc94fb1dd64b6b4c44</mbox_sha1sum>
+        <name>Takuya Imai</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/vladik-kreinovich">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-texas-at-el-paso"/>
+        <rdfs:label>Vladik Kreinovich</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/7"/>
+        <mbox_sha1sum>cbe31f898e1067701852f81a81e1d1a094c3659d</mbox_sha1sum>
+        <name>Vladik Kreinovich</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/werner-kuhn">
+        <swc:holdsRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-muenster"/>
+        <rdfs:label>Werner Kuhn</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+        <mbox_sha1sum>9307d2a32965f1fce1eec99566f860b93c0941a1</mbox_sha1sum>
+        <name>Werner Kuhn</name>
+    </Person>
+
+    <Person rdf:about="http://data.semanticweb.org/person/zhixian-yan">
+        <swrc:affiliation rdf:resource="http://data.semanticweb.org/organization/lbd-ic-epfl-ecole-polytechnique-federale-de-lausanne"/>
+        <rdfs:label>Zhixian Yan</rdfs:label>
+        <based_near rdf:resource="http://dbpedia.org/resource/Switzerland"/>
+        <made rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/6"/>
+        <mbox_sha1sum>19c997b045379f0d60e0f898b3b6b460332c6027</mbox_sha1sum>
+        <name>Zhixian Yan</name>
+    </Person>
+
+    <swc:WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008">
+        <swc:completeGraph rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/complete"/>
+        <swc:hasAcronym>Terra Cognita 2008</swc:hasAcronym>
+        <swc:hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/proceedings"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/chair/organisingcommitteemember"/>
+        <swc:hasRole rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember"/>
+        <rdfs:label>Terra Cognita</rdfs:label>
+        <ical:dtend rdf:parseType="Resource">
+            <ical:date>2008-10-26</ical:date>
+            <ical:tzid>GMT+1</ical:tzid>
+        </ical:dtend>
+        <ical:dtstart rdf:parseType="Resource">
+            <ical:date>2008-10-26</ical:date>
+            <ical:tzid>GMT+1</ical:tzid>
+        </ical:dtstart>
+        <ical:url rdf:resource="http://asio.bbn.com/terracognita2008/"/>
+        <homepage rdf:resource="http://asio.bbn.com/terracognita2008/"/>
+    </swc:WorkshopEvent>
+
+    <swc:OrganisingCommitteeMember rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008/main/chair/organisingcommitteemember">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/dave-kolas"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/gary-berg-cross"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/nancy-wiegand"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008"/>
+    </swc:OrganisingCommitteeMember>
+
+    <swc:PCMember rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008/main/pcmember">
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/angela-schwering"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/beth-driver"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/catherine-dolbear"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/dan-adams"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/dave-kolas"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/gary-berg-cross"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/harry-chen"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/isabel-cruz"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/james-ressler"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/josh-lieberman"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/kathleen-hornsby"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/max-egenhofer"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/michael-lutz"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/mike-dean"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/nancy-wiegand"/>
+        <swc:heldBy rdf:resource="http://data.semanticweb.org/person/werner-kuhn"/>
+        <swc:isRoleAt rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008"/>
+    </swc:PCMember>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/1">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/dave-kolas"/>
+        <dc:subject>SPARQL</dc:subject>
+        <dc:subject>query language</dc:subject>
+        <dc:subject>spatial</dc:subject>
+        <dc:title>Supporting Spatial Semantics with SPARQL</dc:title>
+        <swrc:abstract>Though the intersection of spatial data and semantic web technologies holds significant promise, there are still many challenges before this promise can be realized.  One of these challenges is query representation.  History suggests that an appropriate solution is a specialized query language for spatial data; however, with a broad interpretation of the SPARQL specification and extensions that would be useful outside the spatial realm, one can use SPARQL to query spatial concepts effectively.  This paper establishes a set of desiderata for a query language capable of dealing with spatial Semantic Web-based data, discusses the challenges facing such a query language, and addresses these challenges with straightforward solutions that are broadly applicable.  The effectiveness of these extensions is demonstrated using example queries.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/dave-kolas"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/dave-kolas"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Supporting Spatial Semantics with SPARQL</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/dave-kolas"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/2">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/catherine-dolbear"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/glen-hart"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/john-goodwin"/>
+        <dc:subject>RDF</dc:subject>
+        <dc:subject>Semantic Web</dc:subject>
+        <dc:subject>administrative geography</dc:subject>
+        <dc:subject>geographic data</dc:subject>
+        <dc:subject>linked data</dc:subject>
+        <dc:title>Geographical Linked Data: The Administrative Geography of Great Britain on the Semantic Web</dc:title>
+        <swrc:abstract>The national mapping agency of Great Britain, Ordnance Survey, is investigating how semantic web technologies assist its role as a geographical information provider. A major part of this work involves the development of prototype products and datasets in RDF. This paper discusses the production of an example dataset for the administrative of Great Britain demonstrating the benefits of explicitly encoding topological relations between geographic entities over traditional spatial queries. We also outline how this data can be linked to other datasets on the Linked Data Web and some of the challenges that this produces.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/catherine-dolbear"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/glen-hart"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/john-goodwin"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/john-goodwin"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/catherine-dolbear"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/glen-hart"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Geographical Linked Data: The Administrative Geography of Great Britain on the Semantic Web</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/catherine-dolbear"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/glen-hart"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/john-goodwin"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/3">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/eliseo-clementini"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/francesco-tarquini"/>
+        <dc:subject>class relations</dc:subject>
+        <dc:subject>integrity constraints</dc:subject>
+        <dc:subject>spatial ontology</dc:subject>
+        <dc:subject>user spatial relations</dc:subject>
+        <dc:title>Spatial Relations between Classes as Integrity Constraints</dc:title>
+        <swrc:abstract>The quality and integrity of spatial data is very important to support interoperability among different systems. To reach this aim integrity rules defined by the application play an important role (for example, constraints between object classes). In the paper, we propose a methodology to define integrity constraints using user level spatial relations between classes of individuals. We will also provide mapping rules from user level relations to geometric level operators to allow the computation of relations.  As a case study, we will define the constraints for the class of rivers and some of its specializations.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/eliseo-clementini"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/francesco-tarquini"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/francesco-tarquini"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/eliseo-clementini"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Spatial Relations between Classes as Integrity Constraints</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/eliseo-clementini"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/francesco-tarquini"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/4">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/eva-klien"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/joerg-hoffman"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/laurentiu-vasiliu"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/raluca-zaharia"/>
+        <dc:subject>Abstract State Machines</dc:subject>
+        <dc:subject>Geospatial applications</dc:subject>
+        <dc:subject>Semantic Web Services</dc:subject>
+        <dc:subject>Semantic execution</dc:subject>
+        <dc:subject>WSMO/WSML/WSMX</dc:subject>
+        <dc:title>Semantic Execution Meets Geospatial Web Services: A Pilot Application</dc:title>
+        <swrc:abstract>Geospatial web services can be enhanced with semantic web service techniques in order to solve the existing interoperability issues in the geospatial domain. Therefore a large number of services can be composed to provide meaningful results to complex geospatial queries, but as the complexity grows, the users face serious performance problems. On top of existing geospatial web services we adopt the WSMOLX framework which provides a model to define machine and human-understandable semantic descriptions, full support for mediation and a simple language to choreograph the execution of a composition of several geospatial web services. Our research focus is on the semantic execution and its performance inside the WSMX platform. Our core contributions are a) providing a solution for automated semantic execution of geospatial queries and b) providing a combination of techniques and improvements to the efficiency aspect.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/eva-klien"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/joerg-hoffman"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/laurentiu-vasiliu"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/raluca-zaharia"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/raluca-zaharia"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/laurentiu-vasiliu"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/joerg-hoffman"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/eva-klien"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Semantic Execution Meets Geospatial Web Services: A Pilot Application</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/eva-klien"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/joerg-hoffman"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/laurentiu-vasiliu"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/raluca-zaharia"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/5">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/chiara-renso"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/emiliano-giovannetti"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/laura-spinsanti"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/maria-masserotti"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/miriam-baglioni"/>
+        <dc:subject>GeoOntology</dc:subject>
+        <dc:subject>Geographic Information System</dc:subject>
+        <dc:subject>Geographical Database</dc:subject>
+        <dc:subject>Natural Language Querying System</dc:subject>
+        <dc:title>Ontology-supported Querying of Geographical Databases</dc:title>
+        <swrc:abstract>Natural language interface offers a good solution to the problem of querying geographical information systems from non expert users. Queries over geographical data are characterized by requests of localization and typically they use implicit spatial relations between objects. Furthermore, users can be interested in referring to some domain concept not explicitly represented in data. To handle such semantic geospatial queries, we present a methodology that translates natural language queries into spatial SQL statements on a database. This approach is driven by an ontology built upon the spatial database and enriched by general domain concepts and properties to deal with localization of objects. Some examples of the use of the methodology in the urban domain are presented.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/chiara-renso"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/emiliano-giovannetti"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/laura-spinsanti"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/maria-masserotti"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/miriam-baglioni"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/miriam-baglioni"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/emiliano-giovannetti"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/maria-masserotti"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/chiara-renso"/>
+            <rdf:_5 rdf:resource="http://data.semanticweb.org/person/laura-spinsanti"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Ontology-supported Querying of Geographical Databases</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/chiara-renso"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/emiliano-giovannetti"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/laura-spinsanti"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/maria-masserotti"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/miriam-baglioni"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/6">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/christine-parent"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/jose-macedo"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/stefano-spaccapietra"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/zhixian-yan"/>
+        <dc:subject>spatiotemporal</dc:subject>
+        <dc:subject>trajectory ontology</dc:subject>
+        <dc:title>Trajectory Ontologies</dc:title>
+        <swrc:abstract>Trajectory data play an important role in analyzing real world applications that involve with movement features, especially those complex natural and social phenomena such as \emph{bird migration}, \emph{transportation management}, \emph{urban planning} and \emph{tourism}. Traditional trajectory modeling mostly focuses on the geometric information, ignoring the concealed semantic geographic and domain knowledge.  As an explicit specification of a shared conceptualization, ontology becomes a popular model to provide formal data semantics for information sharing and reusing. By means of designing a set of ontologies, this paper explores a semantic methodology for modeling and querying trajectory data, to extract the hidden geographic and domain knowledge. The definition of trajectory ontologies can be given at different abstraction levels, including domain-independent geometric ones and application-specific semantic ones. In addition, we propose an evaluation framework to verify the practicability and usability of the proposed trajectory ontologies.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/christine-parent"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/jose-macedo"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/stefano-spaccapietra"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/zhixian-yan"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/zhixian-yan"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/jose-macedo"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/christine-parent"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/stefano-spaccapietra"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Trajectory Ontologies</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/christine-parent"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/jose-macedo"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/stefano-spaccapietra"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/zhixian-yan"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/7">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/alejandro-castaneda"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/nicholas-del-rio"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/paulo-pinheiro-da-silva"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/vladik-kreinovich"/>
+        <dc:subject>map understanding</dc:subject>
+        <dc:subject>provenance</dc:subject>
+        <dc:subject>recommendation</dc:subject>
+        <dc:subject>trust</dc:subject>
+        <dc:title>TrustMap: Trust Recommendations for Maps</dc:title>
+        <swrc:abstract>The web is a rich environment for exchanging spatial information. When spatial information is shared in the form of images, i.e., maps, these images almost never come with meta-information about how they were generated. This kind of meta-information is often called knowledge provenance and access to this information may facilitate users to make informed decisions about the quality of maps. In this paper, we propose TrustMap, a new approach for enhancing maps with trust recommendations. For a given map, TrustMap can generate recommendations from the knowledge provenance and a network of trust relations between sources of information used to derive the map. The paper describes a TrustMap implementation as well as a qualitative evaluation of the current implementation.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/alejandro-castaneda"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/nicholas-del-rio"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/paulo-pinheiro-da-silva"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/vladik-kreinovich"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/paulo-pinheiro-da-silva"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/nicholas-del-rio"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/vladik-kreinovich"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/alejandro-castaneda"/>
+        </swrc_ext:authorList>
+        <rdfs:label>TrustMap: Trust Recommendations for Maps</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/alejandro-castaneda"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/nicholas-del-rio"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/paulo-pinheiro-da-silva"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/vladik-kreinovich"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/8">
+        <swc:isPartOf rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/proceedings"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/hiroaki-uchiyama"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/lemonia-ragia"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/michalis-foukarakis"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/stavros-christodoulakis"/>
+        <dc:creator rdf:resource="http://data.semanticweb.org/person/takuya-imai"/>
+        <dc:subject>context</dc:subject>
+        <dc:subject>ontology</dc:subject>
+        <dc:subject>semantic</dc:subject>
+        <dc:subject>spatial</dc:subject>
+        <dc:title>Geospatial Semantic Context Capturing for Picture Annotation, Retrieval and Visualization in SPIM</dc:title>
+        <swrc:abstract>Cameras can be very powerful sensors, enabling new user interaction metaphors and functionalities. They are not independent devices anymore and they can interoperate with external resources and services like user personal libraries, GIS systems, semantic GIS applications, semantic RFIDs, digital libraries, etc. In this paper, we present a Framework for the management of Semantic image information related to geospatial context and a system that has been built based on this Framework. Digital picture contents in the digital library can be interrelated with, and understood based on, contextual semantic geospatial information in the form of ontologies that the system manages. We describe the integrated camera system, the calculation and visualization of the contextual parameters, and the management of the semantics of the spatial objects. Finally, we present the implementation of SPIM, a picture management system that exploits spatial semantic contextual knowledge, its retrieval functionality and the visual user interfaces.</swrc:abstract>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/hiroaki-uchiyama"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/lemonia-ragia"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/michalis-foukarakis"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/stavros-christodoulakis"/>
+        <swrc:author rdf:resource="http://data.semanticweb.org/person/takuya-imai"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:authorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/stavros-christodoulakis"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/michalis-foukarakis"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/lemonia-ragia"/>
+            <rdf:_4 rdf:resource="http://data.semanticweb.org/person/hiroaki-uchiyama"/>
+            <rdf:_5 rdf:resource="http://data.semanticweb.org/person/takuya-imai"/>
+        </swrc_ext:authorList>
+        <rdfs:label>Geospatial Semantic Context Capturing for Picture Annotation, Retrieval and Visualization in SPIM</rdfs:label>
+        <maker rdf:resource="http://data.semanticweb.org/person/hiroaki-uchiyama"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/lemonia-ragia"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/michalis-foukarakis"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/stavros-christodoulakis"/>
+        <maker rdf:resource="http://data.semanticweb.org/person/takuya-imai"/>
+    </swrc:InProceedings>
+
+    <swrc:Proceedings rdf:about="http://data.semanticweb.org/workshop/terra_cognita/2008/proceedings">
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/1"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/2"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/3"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/4"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/5"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/6"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/7"/>
+        <swc:hasPart rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/8"/>
+        <swc:relatedToEvent rdf:resource="http://data.semanticweb.org/workshop/terra_cognita/2008"/>
+        <swrc:booktitle>Proceedings of the Terra Cognita Workshop at ISWC2008, October 26-30, 2008</swrc:booktitle>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/dave-kolas"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/gary-berg-cross"/>
+        <swrc:editor rdf:resource="http://data.semanticweb.org/person/nancy-wiegand"/>
+        <swrc:month>October</swrc:month>
+        <swrc:year>2008</swrc:year>
+        <swrc_ext:editorList rdf:parseType="Resource">
+            <rdf:_1 rdf:resource="http://data.semanticweb.org/person/nancy-wiegand"/>
+            <rdf:_2 rdf:resource="http://data.semanticweb.org/person/dave-kolas"/>
+            <rdf:_3 rdf:resource="http://data.semanticweb.org/person/gary-berg-cross"/>
+        </swrc_ext:editorList>
+    </swrc:Proceedings>
+</rdf:RDF>

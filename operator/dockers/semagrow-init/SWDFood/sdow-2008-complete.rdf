@@ -1,0 +1,417 @@
+
+<!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
+<!--     using base file:///Users/knud/Projekte/dogfood-svn/intermediate_data/sdow2008/-->
+
+
+<rdf:RDF xmlns="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:cfp="http://sw.deri.org/2005/08/conf/cfp.owl#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:ical="http://www.w3.org/2002/12/cal/ical#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rss="http://purl.org/rss/1.0/"
+    xmlns:sioc="http://rdfs.org/sioc/ns#"
+    xmlns:swc="http://data.semanticweb.org/ns/swc/ontology#"
+    xmlns:swrc="http://swrc.ontoware.org/ontology#"
+    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#">
+
+    <ConferenceEvent rdf:about="http://data.semanticweb.org/conference/iswc/2008">
+        <hasAcronym xml:lang="en">ISWC2008</hasAcronym>
+        <rdfs:label xml:lang="en">7th International Semantic Web Conference</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.semanticweb.org/conference/iswc/2008/rdf"/>
+        <foaf:homepage rdf:resource="http://iswc2008.semanticweb.org/"/>
+    </ConferenceEvent>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/alexandre-passant">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/lalic"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/chair/workshopchair"/>
+        <rdfs:seeAlso rdf:resource="http://apassant.net/foaf.rdf"/>
+        <owl:sameAs rdf:resource="http://apassant.net/foaf.rdf#alex"/>
+        <foaf:homepage rdf:resource="http://apassant.net/"/>
+        <foaf:name xml:lang="en">Alexandre Passant</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/benjamin-nowack">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/semsol"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Benjamin Nowack</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/christian-bizer">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/freie-universitaet-berlin"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Chris Bizer</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/christoph-gorn">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/b4mad.net-network"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Christoph Görn</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/dan-brickley">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/foaf-project"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Dan Brickley</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/denny-vrandecic">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/institut-aifb-universitaet-karlsruhe"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Denny Vrandecic</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/diego-berrueta">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/fundacion-ctic"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Diego Berrueta</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/eric-prudhommeaux">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/mit-csail"/>
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/w3c"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Eric Prud'hommeaux</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/eyal-oren">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Eyal Oren</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/fabien-gandon">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/inria-rhone-alpes"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Fabien Gandon</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/frederick-giasson">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/zitgist"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Frederick Giasson</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/harry-halpin">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-edinburgh"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Harry Halpin</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/ivan-herman">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/cwi-amsterdam"/>
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/w3c"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Ivan Herman</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/jie-bao">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/rensselaer-polytechnic-institute"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Jie Bao</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/john-breslin">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/chair/workshopchair"/>
+        <rdfs:seeAlso rdf:resource="http://www.johnbreslin.com/foaf/foaf.rdf"/>
+        <owl:sameAs rdf:resource="http://www.johnbreslin.com/foaf/foaf.rdf#cloud"/>
+        <foaf:homepage rdf:resource="http://www.johnbreslin.org/"/>
+        <foaf:name xml:lang="en">John Breslin</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/jose-emilio-labra">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/university-of-oviedo"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Jose E. Labra</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/li-ding">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/rensselaer-polytechnic-institute"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Li Ding</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/martin-dzbor">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/kmi-the-open-university-uk"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Martin Dzbor</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/michael-hausenblas">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/joanneum-research"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Michael Hausenblas</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/paul-miller">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/talis-information-limited"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Paul Miller</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/richard-cyganiak">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Richard Cyganiak</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/sebastian-dietzold">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/universitaet-leipzig"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Sebastian Dietzold</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/sergio-fernandez">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/fundacion-ctic"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/chair/workshopchair"/>
+        <rdfs:seeAlso rdf:resource="http://www.wikier.org/foaf.rdf"/>
+        <owl:sameAs rdf:resource="http://www.wikier.org/foaf#wikier"/>
+        <foaf:homepage rdf:resource="http://www.wikier.org/"/>
+        <foaf:name xml:lang="en">Sergio Fernández</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/soeren-auer">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/universitaet-leipzig"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Sören Auer</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/sofia-angeletou">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/kmi-the-open-university-uk"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Sofia Angeletou</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/stefan-decker">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Stefan Decker</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/steve-harris">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/garlik"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Steve Harris</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/susie-stephens">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/eli-lilly"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Susie M. Stephens</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/tom-heath">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/talis-information-limited"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <foaf:name xml:lang="en">Tom Heath</foaf:name>
+    </foaf:Person>
+
+    <foaf:Person rdf:about="http://data.semanticweb.org/person/uldis-bojars">
+        <affiliation rdf:resource="http://data.semanticweb.org/organization/deri-nui-galway"/>
+        <holdsRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/chair/workshopchair"/>
+        <rdfs:seeAlso rdf:resource="http://captsolo.net/semweb/foaf-captsolo.rdf"/>
+        <owl:sameAs rdf:resource="http://captsolo.net/semweb/foaf-captsolo.rdf#Uldis_Bojars"/>
+        <foaf:homepage rdf:resource="http://captsolo.net/"/>
+        <foaf:name xml:lang="en">Uldis Bojārs</foaf:name>
+    </foaf:Person>
+
+    <WorkshopEvent rdf:about="http://data.semanticweb.org/workshop/sdow/2008">
+        <completeGraph rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/complete"/>
+        <hasAcronym xml:lang="en">SDoW2008</hasAcronym>
+        <hasLogo rdf:resource="http://sdow2008.semanticweb.org/resources/images/sdow.png"/>
+        <hasRelatedDocument rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <hasRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/chair/workshopchair"/>
+        <hasRole rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember"/>
+        <isSubEventOf rdf:resource="http://data.semanticweb.org/conference/iswc/2008"/>
+        <cfp:involved rdf:resource="http://data.semanticweb.org/person/alexandre-passant"/>
+        <cfp:involved rdf:resource="http://data.semanticweb.org/person/john-breslin"/>
+        <cfp:involved rdf:resource="http://data.semanticweb.org/person/sergio-fernandez"/>
+        <cfp:involved rdf:resource="http://data.semanticweb.org/person/uldis-bojars"/>
+        <cfp:takesplace xml:lang="en">Karlsruhe (Germany)</cfp:takesplace>
+        <rdfs:label xml:lang="en">1st Social Data on the Web workshop</rdfs:label>
+        <ical:dtend rdf:parseType="Resource">
+            <ical:date>2008-10-27</ical:date>
+            <ical:tzid>GMT+1</ical:tzid>
+        </ical:dtend>
+        <ical:dtstart rdf:parseType="Resource">
+            <ical:date>2008-10-27</ical:date>
+            <ical:tzid>GMT+1</ical:tzid>
+        </ical:dtstart>
+        <foaf:based_near rdf:resource="http://dbpedia.org/resource/Karlsruhe"/>
+        <foaf:depiction rdf:resource="http://sdow2008.semanticweb.org/resources/images/sdow.png"/>
+        <foaf:homepage rdf:resource="http://sdow2008.semanticweb.org/"/>
+    </WorkshopEvent>
+
+    <WorkshopChair rdf:about="http://data.semanticweb.org/workshop/sdow/2008/chair/workshopchair">
+    </WorkshopChair>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/paper/1">
+        <isPartOf rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/alessandra-toninelli"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/deepali-khushraj"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/ora-lassila"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/rebecca-montanari"/>
+        <dct:title xml:lang="en">Towards Socially Aware Mobile Phones</dct:title>
+        <rdfs:label xml:lang="en">Towards Socially Aware Mobile Phones</rdfs:label>
+        <swrc:url rdf:resource="http://ceur-ws.org/Vol-405/paper1.pdf"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/paper/10">
+        <isPartOf rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/michael-hausenblas"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/selver-softic"/>
+        <dct:title xml:lang="en">Towards Opinion Mining Through Tracing Discussions on the Web</dct:title>
+        <rdfs:label xml:lang="en">Towards Opinion Mining Through Tracing Discussions on the Web</rdfs:label>
+        <swrc:url rdf:resource="http://ceur-ws.org/Vol-405/paper10.pdf"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/paper/11">
+        <isPartOf rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/sergio-fernandez"/>
+        <dct:title xml:lang="en">RDFohloh, a RDF wrapper of Ohloh</dct:title>
+        <rdfs:label xml:lang="en">RDFohloh, a RDF wrapper of Ohloh</rdfs:label>
+        <swrc:url rdf:resource="http://ceur-ws.org/Vol-405/paper11.pdf"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/paper/2">
+        <isPartOf rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/alexandre-passant"/>
+        <dct:title xml:lang="en">LODr -- A Linking Open Data Tagging System</dct:title>
+        <rdfs:label xml:lang="en">LODr -- A Linking Open Data Tagging System</rdfs:label>
+        <swrc:url rdf:resource="http://ceur-ws.org/Vol-405/paper2.pdf"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/paper/3">
+        <isPartOf rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/alexandre-passant"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/yves-raimond"/>
+        <dct:title xml:lang="en">Combining Social Music and Semantic Web for music-related recommender systems</dct:title>
+        <rdfs:label xml:lang="en">Combining Social Music and Semantic Web for music-related recommender systems</rdfs:label>
+        <swrc:url rdf:resource="http://ceur-ws.org/Vol-405/paper3.pdf"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/paper/4">
+        <isPartOf rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/christoph-lange"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/john-breslin"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/siegfried-handschuh"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/tudor-groza"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/uldis-bojars"/>
+        <dct:title xml:lang="en">Expressing Argumentative Discussions in Social Media Sites</dct:title>
+        <rdfs:label xml:lang="en">Expressing Argumentative Discussions in Social Media Sites</rdfs:label>
+        <swrc:url rdf:resource="http://ceur-ws.org/Vol-405/paper4.pdf"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/paper/5">
+        <isPartOf rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/fabien-gandon"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/guillaume-ereteo"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/michel-buffa"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/mylene-leitzelman"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/patrick-grohan"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/peter-sander"/>
+        <dct:title xml:lang="en">A state of the art on Social Network Analysis and its applications on a semantic web</dct:title>
+        <rdfs:label xml:lang="en">A state of the art on Social Network Analysis and its applications on a semantic web</rdfs:label>
+        <swrc:url rdf:resource="http://ceur-ws.org/Vol-405/paper5.pdf"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/paper/6">
+        <isPartOf rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/kotaro-nakayama"/>
+        <dct:title xml:lang="en">Wikipedia Mining for Triple Extraction Enhanced by Co-reference Resolution</dct:title>
+        <rdfs:label xml:lang="en">Wikipedia Mining for Triple Extraction Enhanced by Co-reference Resolution</rdfs:label>
+        <swrc:url rdf:resource="http://ceur-ws.org/Vol-405/paper6.pdf"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/paper/7">
+        <isPartOf rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/fabio-ciravegna"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/matthew-rowe"/>
+        <dct:title xml:lang="en">Getting to Me – Exporting Semantic Social Network from Facebook</dct:title>
+        <rdfs:label xml:lang="en">Getting to Me – Exporting Semantic Social Network from Facebook</rdfs:label>
+        <swrc:url rdf:resource="http://ceur-ws.org/Vol-405/paper7.pdf"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/paper/8">
+        <isPartOf rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/andrea-marchetti"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/francesco-ronzano"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/maurizio-tesconi"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/salvatore-minutoli"/>
+        <dct:title xml:lang="en">Semantify del.icio.us: automatically turn your tags into senses</dct:title>
+        <rdfs:label xml:lang="en">Semantify del.icio.us: automatically turn your tags into senses</rdfs:label>
+        <swrc:url rdf:resource="http://ceur-ws.org/Vol-405/paper8.pdf"/>
+    </swrc:InProceedings>
+
+    <swrc:InProceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/paper/9">
+        <isPartOf rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/proceedings"/>
+        <dct:creator rdf:resource="http://data.semanticweb.org/person/milan-stankovic"/>
+        <dct:title xml:lang="en">Modeling Online Presence</dct:title>
+        <rdfs:label xml:lang="en">Modeling Online Presence</rdfs:label>
+        <swrc:url rdf:resource="http://ceur-ws.org/Vol-405/paper9.pdf"/>
+    </swrc:InProceedings>
+
+    <ProgrammeCommitteeMember rdf:about="http://data.semanticweb.org/workshop/sdow/2008/pc/pcmember">
+    </ProgrammeCommitteeMember>
+
+    <swrc:Proceedings rdf:about="http://data.semanticweb.org/workshop/sdow/2008/proceedings">
+        <hasPart rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/paper/1"/>
+        <hasPart rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/paper/10"/>
+        <hasPart rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/paper/11"/>
+        <hasPart rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/paper/2"/>
+        <hasPart rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/paper/3"/>
+        <hasPart rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/paper/4"/>
+        <hasPart rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/paper/5"/>
+        <hasPart rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/paper/6"/>
+        <hasPart rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/paper/7"/>
+        <hasPart rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/paper/8"/>
+        <hasPart rdf:resource="http://data.semanticweb.org/workshop/sdow/2008/paper/9"/>
+        <swrc:url rdf:resource="http://sdow2008.semanticweb.org/pub/SDoW2008-proceedings.pdf"/>
+        <rdfs:label xml:lang="en">Proceedings of the 1st Social Data on the Web workshop (SDoW2008)</rdfs:label>
+        <foaf:page rdf:resource="http://ceur-ws.org/Vol-405/"/>
+    </swrc:Proceedings>
+
+    <sioc:Site rdf:about="http://sdow2008.semanticweb.org/">
+        <dct:creator rdf:resource="http://www.wikier.org/foaf#wikier"/>
+        <dct:title xml:lang="en">Social Data on the Web (SDoW2008) - Workshop at the 7th International Semantic Web Conference</dct:title>
+        <rdfs:label xml:lang="en">Social Data on the Web (SDoW2008) - Workshop at the 7th International Semantic Web Conference</rdfs:label>
+        <xhv:alternate rdf:resource="http://sdow2008.semanticweb.org/feed"/>
+        <xhv:alternate rdf:resource="http://www.w3.org/2007/08/pyRdfa/extract?uri=http://sdow2008.semanticweb.org/"/>
+        <xhv:icon rdf:resource="http://sdow2008.semanticweb.org/resources/images/favicon.png"/>
+        <xhv:stylesheet rdf:resource="http://sdow2008.semanticweb.org/resources/style.css"/>
+        <foaf:primaryTopic rdf:resource="http://data.semanticweb.org/workshop/sdow/2008"/>
+    </sioc:Site>
+
+    <cfp:CallForPapers rdf:about="http://sdow2008.semanticweb.org/#cfp">
+        <sioc:topic xml:lang="en">Creating RDF-based knowledge using social media services</sioc:topic>
+        <sioc:topic xml:lang="en">Data Portability and Social Network Portability</sioc:topic>
+        <sioc:topic xml:lang="en">Emerging semantic platforms for the Social Web</sioc:topic>
+        <sioc:topic xml:lang="en">Enriching Social Web with semantic data: RDFa, microformats and other approaches</sioc:topic>
+        <sioc:topic xml:lang="en">Linked Data on the Social Web: providing linked data from social media sites</sioc:topic>
+        <sioc:topic xml:lang="en">Ontologies for the Social Web: developing, using and extending lightweight ontologies for social media sites</sioc:topic>
+        <sioc:topic xml:lang="en">Policies, authentication, security, and trust within collaborative scenarios</sioc:topic>
+        <sioc:topic xml:lang="en">Producing Semantic Web data from social software applications</sioc:topic>
+        <sioc:topic xml:lang="en">Querying and mining social semantic data</sioc:topic>
+        <sioc:topic xml:lang="en">Reasoning for Social Web applications</sioc:topic>
+        <sioc:topic xml:lang="en">Semantic blogging, wikis and social networks</sioc:topic>
+        <sioc:topic xml:lang="en">Semantically-Interlinked Online Communities (SIOC)</sioc:topic>
+        <sioc:topic xml:lang="en">Social Semantic Web: combining Web 2.0 and Semantic Web strategies and technologies</sioc:topic>
+        <sioc:topic xml:lang="en">Social and semantic bookmarking, tagging and annotation</sioc:topic>
+        <cfp:deadline xml:lang="en">Aug 04, 2008</cfp:deadline>
+        <cfp:for rdf:resource="http://data.semanticweb.org/workshop/sdow/2008"/>
+    </cfp:CallForPapers>
+
+    <rss:channel rdf:about="http://sdow2008.semanticweb.org/feed">
+    </rss:channel>
+
+    <foaf:Image rdf:about="http://sdow2008.semanticweb.org/resources/images/sdow.png">
+        <dct:creator rdf:resource="http://www.johnbreslin.com/foaf/foaf.rdf#cloud"/>
+        <dct:format xml:lang="en">img/png</dct:format>
+        <dct:title xml:lang="en">SDoW2008 logo</dct:title>
+        <rdfs:label xml:lang="en">SDoW2008 logo</rdfs:label>
+    </foaf:Image>
+</rdf:RDF>

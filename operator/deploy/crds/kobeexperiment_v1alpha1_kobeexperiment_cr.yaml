@@ -9,10 +9,11 @@ spec:
       image: nginx
       imagePullPolicy: Always
       port: 80
-      confFromFileImage: kostbabis/testinit
-      inputFileDir: inputdirexample
-      outputFileDir: outdirexample
-      ConfImage: nginx
+      confFromFileImage: kostbabis/semagrow-init
+      inputFileDir: /sevod-scraper/input
+      outputFileDir: /sevod-scraper/output
+      confImage: nginx 
+      timesToRun: 2
   runFlag: false
-  clientImage: perl
-  clientCommand: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+  evalImage: perl
+  evalCommands: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
