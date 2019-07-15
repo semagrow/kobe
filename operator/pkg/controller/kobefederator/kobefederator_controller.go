@@ -224,9 +224,10 @@ func (r *ReconcileKobeFederator) newDeploymentForFederator(m *kobefederatorv1alp
 	//create init containers definitions that make one config file for federator per dataset
 	initContainers := []corev1.Container{}
 	volumes := []corev1.Volume{}
+	//initContainers = append(initContainers, corev1.Container{Image: "busybox", Name: "firstcont", Command: []string{"mkdir"}, Args: []string{"/" + m.Name}})
 	for i, datasetname := range m.Spec.DatasetNames {
 		//each init container is given DATASET_NAME and DATASET_ENDPOINT environment variables to work with)
-		//also inputfiledir and outputfiledir both point to exports/<datasetname>dumps and exports/dataset respectively to nfs server
+		//also inputfiledir and outputfiledir both point to exports/<datasetname>/dumps/ and exports/dataset/<federator>/ respectively to nfs server
 		vmounts := []corev1.VolumeMount{}
 		envs := []corev1.EnvVar{}
 		env := corev1.EnvVar{Name: "DATASET_NAME", Value: datasetname}
