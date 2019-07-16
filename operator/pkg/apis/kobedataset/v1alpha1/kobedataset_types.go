@@ -16,7 +16,6 @@ type KobeDatasetSpec struct {
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
 	Image           string           `json:"image"`
 	ToDownload      bool             `json:"toDownload"`
-	DumpDirectory   string           `json:"dumbDirectory"`
 	DownloadFrom    string           `json:"downloadFrom"`
 	ImagePullPolicy types.PullPolicy `json:"imagePullPolicy"`
 	Count           int32            `json:"count"`

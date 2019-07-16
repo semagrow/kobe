@@ -13,7 +13,7 @@ spec:
       inputFileDir: /sevod-scraper/input
       outputFileDir: /sevod-scraper/output
       confImage: nginx 
-      timesToRun: 2
+  timesToRun: 2
   runFlag: false
   evalImage: perl
   evalCommands: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]

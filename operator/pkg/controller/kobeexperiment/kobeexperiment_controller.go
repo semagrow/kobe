@@ -136,7 +136,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		}
 
 		//create a list of the sparql endpoints
-		endpoints = append(endpoints, foundDataset.Name+"."+foundDataset.Namespace+".svc.cluster-domain.example")
+		endpoints = append(endpoints, foundDataset.Name+"."+foundDataset.Namespace+".svc.cluster.local")
 		datasets = append(datasets, foundDataset.Name)
 	}
 
@@ -145,12 +145,14 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		FedCR := r.newFederatorForExperiment(instance, kobeFedSpec, endpoints, datasets)
 		err := r.client.Create(context.TODO(), FedCR)
 		if err != nil {
-			reqLogger.Info("Failed to create the kobe federator %s to run the experiment ")
+			reqLogger.Info("Failed to create the kobe federator to run the experiment ")
 			return reconcile.Result{RequeueAfter: 5}, err
 		}
 
 	}
 	//check if the pods of the federators exist and have a status of running before proceeding
+	var fedEndpoint string
+	var fedName string
 	for _, kobeFedSpec := range instance.Spec.Federators {
 		foundFed := &kobefederatorv1alpha1.KobeFederator{}
 		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: kobeFedSpec.Name}, foundFed)
@@ -158,6 +160,8 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 			reqLogger.Info("Failed to get kobe federator that the experiment will use")
 			return reconcile.Result{RequeueAfter: 5}, nil
 		}
+		fedEndpoint = foundFed.Name + ".svc.cluster.local"
+		fedName = foundFed.Name
 		for _, podname := range foundFed.Status.PodNames {
 			foundPod := &corev1.Pod{}
 			err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: podname}, foundPod)
@@ -188,11 +192,17 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 			reqLogger.Info("All past jobs are done /n")
 			identifier++
 		}
-		experimentJob := r.newJobForExperiment(instance, identifier)
+		experimentJob := r.newJobForExperiment(instance, identifier, fedEndpoint, fedName)
 		reqLogger.Info("Creating a new job to run the experiment for this setup")
 		err = r.client.Create(context.TODO(), experimentJob)
 		if err != nil {
 			reqLogger.Info("FAILED to create the job to run this expriment  %s/%s\n", experimentJob.Name, experimentJob.Namespace)
+			return reconcile.Result{}, err
+		}
+		instance.Spec.TimesToRun = instance.Spec.TimesToRun - 1
+		err = r.client.Update(context.TODO(), instance)
+		if err != nil {
+			reqLogger.Info("Failed to update the times to run of the experiment")
 			return reconcile.Result{}, err
 		}
 		reqLogger.Info("Reached the end of the reconciling loop for the kobe Experiment %s/%s\n", instance.Name, instance.Namespace)
@@ -202,10 +212,16 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 
 //----------------------functions that create native kubernetes objects--------------------------------------
 //create the job that will run the evaluation program
-func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.KobeExperiment, i int) *batchv1.Job {
+func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.KobeExperiment, i int, fedendpoint string, fedname string) *batchv1.Job {
 	times := int32(1)
 	parallelism := int32(1)
 	//labels := map[string]string{"name": m.Name}
+	envs := []corev1.EnvVar{}
+	env := corev1.EnvVar{Name: "FEDERATOR_NAME", Value: fedname}
+	envs = append(envs, env)
+	env = corev1.EnvVar{Name: "FEDERATOR_ENDPOINT", Value: fedendpoint}
+	envs = append(envs, env)
+
 	job := &batchv1.Job{
 		TypeMeta: metav1.TypeMeta{
 			Kind:       "Job",
