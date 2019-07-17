@@ -18,7 +18,9 @@ WORKDIR /sevod-scraper/assembly/target
 
 RUN tar xzvf sevod-scraper-1.0-SNAPSHOT-dist.tar.gz
 
-WORKDIR /sevod-scraper
+RUN mkdir /sevod-scraper/input
+
+WORKDIR /sevod-scraper/input
 COPY log4j.properties /sevod-scraper/target/classes/
 
 RUN mkdir /sevod-scraper/output

@@ -1,12 +1,26 @@
 apiVersion: kobedataset.kobe.com/v1alpha1
 kind: KobeDataset
 metadata:
-  name: ffs
+  name: swdfood
 spec:
   # Add fields here
   image: kostbabis/virtuoso
   toDownload: true
-  dumbDirectory: /data/
+  downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/SWDFood.tar.gz
+  imagePullPolicy: Always
+  count: 1
+  group: kobe
+  port: 8890
+
+---
+apiVersion: kobedataset.kobe.com/v1alpha1
+kind: KobeDataset
+metadata:
+  name: asimplenginx
+spec:
+  # Add fields here
+  image: nginx
+  toDownload: true
   downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/SWDFood.tar.gz
   imagePullPolicy: Always
   count: 1

@@ -142,11 +142,15 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 
 	//create each federator from the spec defined in the kobeexperiment yaml.Also provide each of the feds with lists of endpoints and dataset names
 	for _, kobeFedSpec := range instance.Spec.Federators {
-		FedCR := r.newFederatorForExperiment(instance, kobeFedSpec, endpoints, datasets)
-		err := r.client.Create(context.TODO(), FedCR)
-		if err != nil {
-			reqLogger.Info("Failed to create the kobe federator to run the experiment ")
-			return reconcile.Result{RequeueAfter: 5}, err
+		foundFed := &kobefederatorv1alpha1.KobeFederator{}
+		err := r.client.Get(context.TODO(), types.NamespacedName{Name: kobeFedSpec.Name, Namespace: instance.Namespace}, foundFed)
+		if err != nil && errors.IsNotFound(err) {
+			FedCR := r.newFederatorForExperiment(instance, kobeFedSpec, endpoints, datasets)
+			err = r.client.Create(context.TODO(), FedCR)
+			if err != nil {
+				reqLogger.Info("Failed to create the kobe federator to run the experiment ")
+				return reconcile.Result{RequeueAfter: 5}, err
+			}
 		}
 
 	}
@@ -158,7 +162,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: kobeFedSpec.Name}, foundFed)
 		if err != nil && errors.IsNotFound(err) {
 			reqLogger.Info("Failed to get kobe federator that the experiment will use")
-			return reconcile.Result{RequeueAfter: 5}, nil
+			return reconcile.Result{RequeueAfter: 5}, err
 		}
 		fedEndpoint = foundFed.Name + ".svc.cluster.local"
 		fedName = foundFed.Name

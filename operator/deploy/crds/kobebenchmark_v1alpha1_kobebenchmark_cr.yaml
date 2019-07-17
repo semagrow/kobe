@@ -4,10 +4,7 @@ metadata:
   name: kobebenchmark1
 spec:
   datasets:
-    #- name: nodownload
-    #  image: nginx
-    #  downloadFrom: "something changed"
-    - name: ffs
+    - name: swdfood
   queries:
     - name: q1
       language: sparql

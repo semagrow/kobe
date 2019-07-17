@@ -1,5 +1,5 @@
 #FROM java:7-jdk
-FROM xqdocker/ubuntu-openjdk:jdk-7
+FROM xqdocker/ubuntu-openjdk:jdk-8
 
 MAINTAINER Yiannis Mouchakis <gmouchakis@iit.demokritos.gr>
 
@@ -24,7 +24,10 @@ RUN mkdir /sevod-scraper/input
 WORKDIR /sevod-scraper/input
 
 COPY log4j.properties /sevod-scraper/target/classes/
-COPY rdf2rdf-1.0.1-2.3.1.jar /sevod-scraper/
+
+# COPY rdf2rdf-1.0.1-2.3.1.jar /sevod-scraper/
+COPY ont-converter.jar /sevod-scraper/
+
 COPY init.sh /sevod-scraper/
 
 RUN ["chmod", "+x", "/sevod-scraper/init.sh"]

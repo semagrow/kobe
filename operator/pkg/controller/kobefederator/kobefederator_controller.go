@@ -232,16 +232,16 @@ func (r *ReconcileKobeFederator) newDeploymentForFederator(m *kobefederatorv1alp
 		envs := []corev1.EnvVar{}
 		env := corev1.EnvVar{Name: "DATASET_NAME", Value: datasetname}
 		envs = append(envs, env)
-		env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: m.Spec.Endpoints[i]}
+		env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: "http://" + m.Spec.Endpoints[i] + ":" + "8890"}
 		envs = append(envs, env)
 
-		volume1 := corev1.Volume{Name: "nfs-in-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/dump"}}}
-		volume2 := corev1.Volume{Name: "nfs-out-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/"}}}
-		volumes = append(volumes, volume1, volume2)
+		volumeIn := corev1.Volume{Name: "nfs-in-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/dump"}}}
+		volumeOut := corev1.Volume{Name: "nfs-out-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/"}}}
+		volumes = append(volumes, volumeIn, volumeOut)
 
-		vmountin := corev1.VolumeMount{Name: "nfs-in-" + datasetname, MountPath: m.Spec.InputFileDir}
-		vmountout := corev1.VolumeMount{Name: "nfs-out-" + datasetname, MountPath: m.Spec.OutputFileDir}
-		vmounts = append(vmounts, vmountin, vmountout)
+		vmountIn := corev1.VolumeMount{Name: "nfs-in-" + datasetname, MountPath: m.Spec.InputFileDir}
+		vmountOut := corev1.VolumeMount{Name: "nfs-out-" + datasetname, MountPath: m.Spec.OutputFileDir}
+		vmounts = append(vmounts, vmountIn, vmountOut)
 
 		container := corev1.Container{
 			Image:        m.Spec.ConfFromFileImage,
@@ -252,6 +252,28 @@ func (r *ReconcileKobeFederator) newDeploymentForFederator(m *kobefederatorv1alp
 		initContainers = append(initContainers, container)
 	}
 
+	//create the initcontainer that will run the image that combines many configs (1 per dataset) to one config for the experiment
+	envs := []corev1.EnvVar{}
+	vmounts := []corev1.VolumeMount{}
+	for i, datasetname := range m.Spec.DatasetNames {
+		env := corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: datasetname}
+		envs = append(envs, env)
+		env = corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: "http://" + m.Spec.Endpoints[i] + ":" + "8890"}
+		envs = append(envs, env)
+	}
+	volumeFinal := corev1.Volume{Name: "nfs-final", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/"}}}
+	volumes = append(volumes, volumeFinal)
+
+	vmountFinal := corev1.VolumeMount{Name: "nfs-final", MountPath: "/"}
+	vmounts = append(vmounts, vmountFinal)
+
+	container := corev1.Container{
+		Image:        m.Spec.ConfImage,
+		Name:         "initcontainer" + "Final",
+		Env:          envs,
+		VolumeMounts: vmounts,
+	}
+	initContainers = append(initContainers, container)
 	dep := &appsv1.Deployment{
 		TypeMeta: metav1.TypeMeta{
 			APIVersion: "apps/v1",
