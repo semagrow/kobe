@@ -11,41 +11,8 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1.Dataset":             schema_pkg_apis_kobebenchmark_v1alpha1_Dataset(ref),
 		"github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmark":       schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmark(ref),
 		"github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkStatus": schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmarkStatus(ref),
-	}
-}
-
-func schema_pkg_apis_kobebenchmark_v1alpha1_Dataset(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "KobeBenchmarkSpec defines the desired state of KobeBenchmark",
-				Properties: map[string]spec.Schema{
-					"name": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"image": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"downloadFrom": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"name", "image", "downloadFrom"},
-			},
-		},
-		Dependencies: []string{},
 	}
 }
 

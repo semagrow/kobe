@@ -87,3 +87,9 @@ rules:
   - '*'
   verbs:
   - '*'
+- apiGroups:
+  - kobefederation.kobe.com
+  resources:
+  - '*'
+  verbs:
+  - '*'

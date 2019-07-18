@@ -255,7 +255,8 @@ func (r *ReconcileKobeUtil) newPodForNfs(m *kobeutilv1alpha1.KobeUtil) *corev1.P
 	volumes := []corev1.Volume{}
 	volumes = append(volumes, volume)
 
-	volume1 := corev1.Volume{Name: "nfs-server-config", VolumeSource: corev1.VolumeSource{ConfigMap: &corev1.ConfigMapVolumeSource{LocalObjectReference: corev1.LocalObjectReference{Name: "nfsconfig"}}}}
+	volume1 := corev1.Volume{Name: "nfs-server-config",
+		VolumeSource: corev1.VolumeSource{ConfigMap: &corev1.ConfigMapVolumeSource{LocalObjectReference: corev1.LocalObjectReference{Name: "nfsconfig"}}}}
 	volumes = append(volumes, volume1)
 
 	pod := &corev1.Pod{

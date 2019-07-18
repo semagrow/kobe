@@ -9,10 +9,13 @@ spec:
       image: nginx
       imagePullPolicy: Always
       port: 80
+      
       confFromFileImage: kostbabis/semagrow-init
       inputFileDir: /sevod-scraper/input
       outputFileDir: /sevod-scraper/output
+
       confImage: nginx 
+
   timesToRun: 2
   runFlag: true
   evalImage: perl

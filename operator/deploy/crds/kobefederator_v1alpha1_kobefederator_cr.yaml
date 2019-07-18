@@ -1,14 +1,13 @@
 apiVersion: kobefederator.kobe.com/v1alpha1
 kind: KobeFederator
 metadata:
-  name: kobefederator1
+  name: semagrow
 spec:
   # Add fields here
   image: nginx
-  imagePullPolicy: IfNotPresent
-  port: 80
-  initContainer:
-  - name: container
-    image: ubuntu
-    imagePullPolicy: IfNotPresent
-    command: ['sh', '-c', 'sleep 30']
+  imagePullPolicy: Always
+  port: 80    
+  confFromFileImage: kostbabis/semagrow-init
+  inputFileDir: /sevod-scraper/input
+  outputFileDir: /sevod-scraper/output
+  confImage: busybox

@@ -8,13 +8,12 @@ import (
 // EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
 // NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
 
-// KobeFederatorSpec defines the desired state of KobeFederator
+// KobeFederationSpec defines the desired state of KobeFederation
 // +k8s:openapi-gen=true
-type KobeFederatorSpec struct {
+type KobeFederationSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
-	//InitContainers    []corev1.Container `json:"initContainer"` //obsolete
 	Image             string           `json:"image"`
 	ImagePullPolicy   types.PullPolicy `json:"imagePullPolicy"`
 	Affinity          types.Affinity   `json:"affinity"` //choose which nodes the fed likes to run in
@@ -23,11 +22,13 @@ type KobeFederatorSpec struct {
 	InputFileDir      string           `json:"inputFileDir"`      //where the above image expects the dump to be(if from dump)
 	OutputFileDir     string           `json:"outputFileDir"`     //where the above image will place its result config file
 	ConfImage         string           `json:"initImage"`         //image that makes one init file from multiple init files
+	Endpoints         []string         `json:"endpoints"`
+	DatasetNames      []string         `json:"datasetNames"`
 }
 
-// KobeFederatorStatus defines the observed state of KobeFederator
+// KobeFederationStatus defines the observed state of KobeFederation
 // +k8s:openapi-gen=true
-type KobeFederatorStatus struct {
+type KobeFederationStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
@@ -36,26 +37,26 @@ type KobeFederatorStatus struct {
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeFederator is the Schema for the kobefederators API
+// KobeFederation is the Schema for the kobefederations API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
-type KobeFederator struct {
+type KobeFederation struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   KobeFederatorSpec   `json:"spec,omitempty"`
-	Status KobeFederatorStatus `json:"status,omitempty"`
+	Spec   KobeFederationSpec   `json:"spec,omitempty"`
+	Status KobeFederationStatus `json:"status,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeFederatorList contains a list of KobeFederator
-type KobeFederatorList struct {
+// KobeFederationList contains a list of KobeFederation
+type KobeFederationList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []KobeFederator `json:"items"`
+	Items           []KobeFederation `json:"items"`
 }
 
 func init() {
-	SchemeBuilder.Register(&KobeFederator{}, &KobeFederatorList{})
+	SchemeBuilder.Register(&KobeFederation{}, &KobeFederationList{})
 }
