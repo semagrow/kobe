@@ -22,7 +22,7 @@ type KobeFederatorSpec struct {
 	ConfFromFileImage string           `json:"confFromFileImage"` //image that makes init file from dump or endpoint
 	InputFileDir      string           `json:"inputFileDir"`      //where the above image expects the dump to be(if from dump)
 	OutputFileDir     string           `json:"outputFileDir"`     //where the above image will place its result config file
-	ConfImage         string           `json:"initImage"`         //image that makes one init file from multiple init files
+	ConfImage         string           `json:"confImage"`         //image that makes one init file from multiple init files
 }
 
 // KobeFederatorStatus defines the observed state of KobeFederator

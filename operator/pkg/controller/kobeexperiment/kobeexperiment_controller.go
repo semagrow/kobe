@@ -160,6 +160,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 
 	//check if federators with the name defined in kobe experiment exist .
 	for _, kobeFed := range instance.Spec.Federator {
+		reqLogger.Info("\n\n HEYHEYHEYHEYHEYHEYHEYHYEHYUEHYEHYEHYEYHEYHEy \n\n ")
 		foundFed := &kobefederatorv1alpha1.KobeFederator{}
 		err := r.client.Get(context.TODO(), types.NamespacedName{Name: kobeFed.Name, Namespace: instance.Namespace}, foundFed)
 		if err != nil && errors.IsNotFound(err) {
@@ -174,6 +175,8 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 
 	//for each of the federators chosen create a federation based on the datasets chosen for this experiment
 	for i, kobeFed := range instance.Spec.Federator {
+		reqLogger.Info("\n\n HEYHEYHEYHEYHEYHEYHEYHYEHYUEHYEHYEHYEYHEYHEy \n\n ")
+
 		foundFederator := &kobefederatorv1alpha1.KobeFederator{}
 		err := r.client.Get(context.TODO(), types.NamespacedName{Name: kobeFed.Name, Namespace: instance.Namespace}, foundFederator)
 		if err != nil {

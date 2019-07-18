@@ -4,19 +4,9 @@ metadata:
   name: kobeexp1
 spec:
   benchmark: kobebenchmark1
-  federators: 
-    - name: notsemagrow
-      image: nginx
-      imagePullPolicy: Always
-      port: 80
-      
-      confFromFileImage: kostbabis/semagrow-init
-      inputFileDir: /sevod-scraper/input
-      outputFileDir: /sevod-scraper/output
-
-      confImage: nginx 
-
+  federator: 
+    - name: semagrow
   timesToRun: 2
-  runFlag: true
+  runFlag: false
   evalImage: perl
   evalCommands: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]

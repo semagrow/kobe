@@ -34,7 +34,7 @@ type KobeExperimentSpec struct {
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
 	Benchmark    string   `json:"benchmark"`
-	Federator    []Fed    `jsons:"federator"`
+	Federator    []Fed    `json:"federator"`
 	RunFlag      bool     `json:"runFlag"`
 	TimesToRun   int      `json:"timesToRun"`
 	EvalImage    string   `json:"evalImage"`
