@@ -22,6 +22,11 @@ type Federator struct {
 	ConfImage         string           `json:"confImage"`
 }
 
+//Fed is something
+type Fed struct {
+	Name string `json:"name"`
+}
+
 // KobeExperimentSpec defines the desired state of KobeExperiment
 // +k8s:openapi-gen=true
 type KobeExperimentSpec struct {
@@ -29,7 +34,7 @@ type KobeExperimentSpec struct {
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
 	Benchmark    string   `json:"benchmark"`
-	Federator    []string `jsons:"federator"`
+	Federator    []Fed    `jsons:"federator"`
 	RunFlag      bool     `json:"runFlag"`
 	TimesToRun   int      `json:"timesToRun"`
 	EvalImage    string   `json:"evalImage"`
