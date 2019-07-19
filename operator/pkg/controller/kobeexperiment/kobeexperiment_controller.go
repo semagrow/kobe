@@ -353,7 +353,7 @@ func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobeexperimentv1
 			Kind:       "KobeFederator",
 		},
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      fed.Name + strconv.Itoa(i),
+			Name:      m.Name + strconv.Itoa(i),
 			Namespace: fed.Namespace,
 		},
 		Spec: kobefederationv1alpha1.KobeFederationSpec{
@@ -365,8 +365,11 @@ func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobeexperimentv1
 			InputFileDir:      fed.Spec.InputFileDir,
 			OutputFileDir:     fed.Spec.OutputFileDir,
 			ConfImage:         fed.Spec.ConfImage,
-			Endpoints:         endpoints,
-			DatasetNames:      datasetnames,
+			InputDir:          fed.Spec.InputDir,
+			OutputDir:         fed.Spec.OutputDir,
+
+			Endpoints:    endpoints,
+			DatasetNames: datasetnames,
 		},
 	}
 	controllerutil.SetControllerReference(m, federation, r.scheme)

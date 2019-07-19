@@ -22,8 +22,11 @@ type KobeFederationSpec struct {
 	InputFileDir      string           `json:"inputFileDir"`      //where the above image expects the dump to be(if from dump)
 	OutputFileDir     string           `json:"outputFileDir"`     //where the above image will place its result config file
 	ConfImage         string           `json:"confImage"`         //image that makes one init file from multiple init files
-	Endpoints         []string         `json:"endpoints"`
-	DatasetNames      []string         `json:"datasetNames"`
+	InputDir          string           `json:"inputDir"`
+	OutputDir         string           `json:"outputDir"`
+
+	Endpoints    []string `json:"endpoints"`
+	DatasetNames []string `json:"datasetNames"`
 }
 
 // KobeFederationStatus defines the observed state of KobeFederation

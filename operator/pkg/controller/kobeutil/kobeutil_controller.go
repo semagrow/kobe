@@ -160,7 +160,7 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 			reqLogger.Info("Failed to create the persistent volume that the datasets will use to retain their data if they shutdown and restarted")
 			return reconcile.Result{}, err
 		}
-		return reconcile.Result{RequeueAfter: 5}, nil
+		return reconcile.Result{RequeueAfter: 10}, nil
 
 	}
 	//--------------------------------------------Persistent volume claim  health check---------------------------------------------

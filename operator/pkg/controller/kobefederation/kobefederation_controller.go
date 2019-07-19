@@ -246,7 +246,7 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 		}
 		initContainers = append(initContainers, container)
 	}
-
+	//FIXES NEEDED BELOW
 	//create the initcontainer that will run the image that combines many configs (1 per dataset) to one config for the experiment
 	envs := []corev1.EnvVar{}
 	vmounts := []corev1.VolumeMount{}
@@ -259,7 +259,7 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 	volumeFinal := corev1.Volume{Name: "nfs-final", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/"}}}
 	volumes = append(volumes, volumeFinal)
 
-	vmountFinal := corev1.VolumeMount{Name: "nfs-final", MountPath: "/"}
+	vmountFinal := corev1.VolumeMount{Name: "nfs-final", MountPath: m.Spec.InputDir}
 	vmounts = append(vmounts, vmountFinal)
 
 	container := corev1.Container{
