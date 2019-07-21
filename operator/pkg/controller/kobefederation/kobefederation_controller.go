@@ -7,6 +7,7 @@ import (
 
 	kobefederationv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederation/v1alpha1"
 	appsv1 "k8s.io/api/apps/v1"
+	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -113,6 +114,7 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 		// Error reading the object - requeue the request.
 		return reconcile.Result{}, err
 	}
+	//create a job that will create the necessary directories to save the config files for future caching
 
 	found := &appsv1.Deployment{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, found)
@@ -222,12 +224,13 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 	//initContainers = append(initContainers, corev1.Container{Image: "busybox", Name: "firstcont", Command: []string{"mkdir"}, Args: []string{"/" + m.Name}})
 	for i, datasetname := range m.Spec.DatasetNames {
 		//each init container is given DATASET_NAME and DATASET_ENDPOINT environment variables to work with)
-		//also inputfiledir and outputfiledir both point to exports/<datasetname>/dumps/ and exports/dataset/<federation>/ respectively to nfs server
+		//also inputfiledir and outputfiledir both point to exports/<datasetname>/dumps/ and exports/dataset/<datasetname>/<federation>/ respectively to nfs server
 		vmounts := []corev1.VolumeMount{}
 		envs := []corev1.EnvVar{}
 		env := corev1.EnvVar{Name: "DATASET_NAME", Value: datasetname}
 		envs = append(envs, env)
-		env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: "http://" + m.Spec.Endpoints[i] + ":" + "8890"}
+		//env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: "http://" + m.Spec.Endpoints[i] + ":" + "8890"}
+		env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: m.Spec.Endpoints[i]}
 		envs = append(envs, env)
 
 		volumeIn := corev1.Volume{Name: "nfs-in-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/dump"}}}
@@ -253,7 +256,7 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 	for i, datasetname := range m.Spec.DatasetNames {
 		env := corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: datasetname}
 		envs = append(envs, env)
-		env = corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: "http://" + m.Spec.Endpoints[i] + ":" + "8890"}
+		env = corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: m.Spec.Endpoints[i]}
 		envs = append(envs, env)
 	}
 	volumeFinal := corev1.Volume{Name: "nfs-final", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/"}}}
@@ -337,5 +340,58 @@ func (r *ReconcileKobeFederation) newServiceForFederation(m *kobefederationv1alp
 	}
 	controllerutil.SetControllerReference(m, service, r.scheme)
 	return service
+
+}
+
+func (r *ReconcileKobeFederation) newJobForExperiment(m *kobefederationv1alpha1.KobeFederation) *batchv1.Job {
+	times := int32(1)
+	parallelism := int32(1)
+	volumes := []corev1.Volume{}
+	vmounts := []corev1.VolumeMount{}
+
+	nfsPodFound := &corev1.Pod{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
+	if err != nil && errors.IsNotFound(err) {
+		return nil
+	}
+	nfsip := nfsPodFound.Status.PodIP
+
+	volume := corev1.Volume{Name: "nfs-job", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/"}}}
+	volumes = append(volumes, volume)
+
+	vmountFinal := corev1.VolumeMount{Name: "nfs-job", MountPath: "/kobe/"}
+	vmounts = append(vmounts, vmountFinal)
+
+	job := &batchv1.Job{
+		TypeMeta: metav1.TypeMeta{
+			Kind:       "Job",
+			APIVersion: "v1",
+		},
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      m.Name + "job",
+			Namespace: m.Namespace,
+		},
+		Spec: batchv1.JobSpec{
+			Parallelism: &parallelism,
+			Completions: &times,
+			Template: corev1.PodTemplateSpec{
+				metav1.ObjectMeta{},
+				corev1.PodSpec{
+					Containers: []corev1.Container{{
+						Image:           "busybox",
+						Name:            m.Name + "-job",
+						ImagePullPolicy: corev1.PullIfNotPresent,
+						VolumeMounts:    vmounts,
+						Command:         []string{"/bin/bash"},
+						Args:            []string{"for d in */; do   cd $d;  mkdir " + m.Spec.FederatorName + "; done"},
+					}},
+					RestartPolicy: corev1.RestartPolicyOnFailure,
+					Volumes:       volumes,
+				},
+			},
+		},
+	}
+	controllerutil.SetControllerReference(m, job, r.scheme)
+	return job
 
 }

@@ -33,8 +33,9 @@ type KobeExperimentSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
-	Benchmark    string   `json:"benchmark"`
-	Federator    []Fed    `json:"federator"`
+	Benchmark string `json:"benchmark"`
+	//Federator    []Fed    `json:"federator"`
+	Federator    string   `json:"federator"`
 	RunFlag      bool     `json:"runFlag"`
 	TimesToRun   int      `json:"timesToRun"`
 	EvalImage    string   `json:"evalImage"`

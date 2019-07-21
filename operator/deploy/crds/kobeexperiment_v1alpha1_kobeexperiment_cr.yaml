@@ -4,8 +4,7 @@ metadata:
   name: kobeexp1
 spec:
   benchmark: kobebenchmark1
-  federator: 
-    - name: semagrow
+  federator: semagrow
   timesToRun: 2
   runFlag: false
   evalImage: perl

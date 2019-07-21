@@ -25,8 +25,9 @@ type KobeFederationSpec struct {
 	InputDir          string           `json:"inputDir"`
 	OutputDir         string           `json:"outputDir"`
 
-	Endpoints    []string `json:"endpoints"`
-	DatasetNames []string `json:"datasetNames"`
+	FederatorName string   `json:"federatorName"`
+	Endpoints     []string `json:"endpoints"`
+	DatasetNames  []string `json:"datasetNames"`
 }
 
 // KobeFederationStatus defines the observed state of KobeFederation
