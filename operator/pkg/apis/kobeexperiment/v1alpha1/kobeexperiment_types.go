@@ -38,7 +38,7 @@ type KobeExperimentSpec struct {
 	Federator    string `json:"federator"`
 	RunFlag      bool   `json:"runFlag"`
 	TimesToRun   int    `json:"timesToRun"`
-	ForceNewInit bool   `json:"forceNewInit`
+	ForceNewInit bool   `json:"forceNewInit"`
 
 	EvalImage    string   `json:"evalImage"`
 	EvalCommands []string `json:"evalCommands"`

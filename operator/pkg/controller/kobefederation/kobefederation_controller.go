@@ -294,7 +294,7 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 		env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: m.Spec.Endpoints[i]}
 		envs = append(envs, env)
 
-		if m.Spec.ForceNewInit {
+		if m.Spec.ForceNewInit == true {
 			env = corev1.EnvVar{Name: "INITIALIZE", Value: "yes"}
 			envs = append(envs, env)
 		}

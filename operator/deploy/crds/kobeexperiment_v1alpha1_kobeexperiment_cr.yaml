@@ -7,5 +7,5 @@ spec:
   federator: semagrow
   timesToRun: 2
   runFlag: false
-  forceNewInit: true
+  forceNewInit: false
   evalImage: perl
