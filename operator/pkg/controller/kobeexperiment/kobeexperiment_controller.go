@@ -345,7 +345,7 @@ func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.
 							ContainerPort: int32(8890), //client endpoint
 							Name:          "client",
 						}},
-						Command:      m.Spec.EvalCommands,
+						//Command:      m.Spec.EvalCommands,
 						VolumeMounts: vmounts,
 					}},
 					RestartPolicy: corev1.RestartPolicyOnFailure,
@@ -385,6 +385,8 @@ func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobeexperimentv1
 			InputDir:          fed.Spec.InputDir,
 			OutputDir:         fed.Spec.OutputDir,
 
+			ForceNewInit:  m.Spec.ForceNewInit,
+			Init:          true,
 			FederatorName: fed.Name,
 			Endpoints:     endpoints,
 			DatasetNames:  datasetnames,

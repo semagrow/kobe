@@ -25,6 +25,8 @@ type KobeFederationSpec struct {
 	InputDir          string           `json:"inputDir"`
 	OutputDir         string           `json:"outputDir"`
 
+	ForceNewInit  bool     `json:"forceNewInit"`
+	Init          bool     `json:"init"`
 	FederatorName string   `json:"federatorName"`
 	Endpoints     []string `json:"endpoints"`
 	DatasetNames  []string `json:"datasetNames"`

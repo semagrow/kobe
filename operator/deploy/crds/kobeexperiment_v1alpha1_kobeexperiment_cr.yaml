@@ -7,5 +7,5 @@ spec:
   federator: semagrow
   timesToRun: 2
   runFlag: false
+  forceNewInit: true
   evalImage: perl
-  evalCommands: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]

@@ -298,7 +298,7 @@ func (r *ReconcileKobeUtil) newPodForNfs(m *kobeutilv1alpha1.KobeUtil) *corev1.P
 //PERSISTENT VOLUME
 func (r *ReconcileKobeUtil) newPvForKobe(m *kobeutilv1alpha1.KobeUtil, ip string) *corev1.PersistentVolume {
 
-	capacity := resource.MustParse("5Gi")
+	capacity := resource.MustParse("50Gi")
 	rmap := corev1.ResourceList{}
 	rmap["storage"] = capacity
 
@@ -329,7 +329,7 @@ func (r *ReconcileKobeUtil) newPvForKobe(m *kobeutilv1alpha1.KobeUtil, ip string
 func (r *ReconcileKobeUtil) newPvcForKobe(m *kobeutilv1alpha1.KobeUtil) *corev1.PersistentVolumeClaim {
 	s := ""
 	accessmodes := []corev1.PersistentVolumeAccessMode{"ReadWriteMany"}
-	capacity := resource.MustParse("4Gi")
+	capacity := resource.MustParse("49Gi")
 	rmap := corev1.ResourceList{}
 	rmap["storage"] = capacity
 	pvc := &corev1.PersistentVolumeClaim{

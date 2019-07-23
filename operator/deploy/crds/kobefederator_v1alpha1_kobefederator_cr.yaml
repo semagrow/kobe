@@ -6,8 +6,9 @@ spec:
   # Add fields here
   image: nginx
   imagePullPolicy: Always
-  port: 80    
+  port: 8080
   confFromFileImage: kostbabis/semagrow-init
   inputFileDir: /sevod-scraper/input
   outputFileDir: /sevod-scraper/output
-  confImage: busybox
+  confImage: kostbabis/semagrow-init-all
+

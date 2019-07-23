@@ -35,9 +35,11 @@ type KobeExperimentSpec struct {
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
 	Benchmark string `json:"benchmark"`
 	//Federator    []Fed    `json:"federator"`
-	Federator    string   `json:"federator"`
-	RunFlag      bool     `json:"runFlag"`
-	TimesToRun   int      `json:"timesToRun"`
+	Federator    string `json:"federator"`
+	RunFlag      bool   `json:"runFlag"`
+	TimesToRun   int    `json:"timesToRun"`
+	ForceNewInit bool   `json:"forceNewInit`
+
 	EvalImage    string   `json:"evalImage"`
 	EvalCommands []string `json:"evalCommands"`
 }

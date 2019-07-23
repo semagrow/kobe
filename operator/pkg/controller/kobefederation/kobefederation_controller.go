@@ -76,6 +76,13 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	if err != nil {
 		return err
 	}
+	err = c.Watch(&source.Kind{Type: &batchv1.Job{}}, &handler.EnqueueRequestForOwner{
+		IsController: true,
+		OwnerType:    &kobefederationv1alpha1.KobeFederation{},
+	})
+	if err != nil {
+		return err
+	}
 	return nil
 }
 
@@ -114,10 +121,67 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 		// Error reading the object - requeue the request.
 		return reconcile.Result{}, err
 	}
-	//create a job that will create the necessary directories to save the config files for future caching
+	//create a job that will make the necessary directories to save the config files for future caching
+	if instance.Spec.Init == true {
+		foundJob := &batchv1.Job{}
+		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundJob)
+		if err != nil && errors.IsNotFound(err) {
+			job := r.newJobForFederation(instance)
+			err = r.client.Create(context.TODO(), job)
+			if err != nil {
+				reqLogger.Info("Failed to create the init job that will make the directories in the server for caching")
+				return reconcile.Result{}, err
+			}
 
-	found := &appsv1.Deployment{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, found)
+		} else if err != nil {
+			reqLogger.Info("Failed to retrieve the job that makes the directories")
+			return reconcile.Result{}, err
+		}
+
+		if &foundJob.Status.Succeeded == nil || foundJob.Status.Succeeded == 0 {
+			return reconcile.Result{}, nil
+		}
+		podList := &corev1.PodList{}
+		labelSelector := labels.SelectorFromSet(map[string]string{"job-name": instance.Name})
+		listOps := &client.ListOptions{Namespace: instance.Namespace, LabelSelector: labelSelector}
+		err = r.client.List(context.TODO(), listOps, podList)
+		if err != nil {
+			reqLogger.Info("Failed to list pods: %v", err)
+			return reconcile.Result{}, err
+		}
+		podNames := getPodNames(podList.Items)
+
+		for _, podname := range podNames {
+			pod := &corev1.Pod{}
+			err = r.client.Get(context.TODO(), types.NamespacedName{Name: podname, Namespace: instance.Namespace}, pod)
+			if err != nil {
+				reqLogger.Info("Failed to get the pod of the federation job")
+				return reconcile.Result{}, err
+			}
+			err = r.client.Delete(context.TODO(), pod)
+			if err != nil {
+				reqLogger.Info("Failed to delete the pod of the federation job ")
+				return reconcile.Result{}, err
+			}
+		}
+
+		err = r.client.Delete(context.TODO(), foundJob)
+		if err != nil {
+			reqLogger.Info("Failed to delete the federation job from the cluster")
+			return reconcile.Result{}, err
+		}
+		instance.Spec.Init = false
+		err = r.client.Update(context.TODO(), instance)
+		if err != nil {
+			reqLogger.Info("Failed to update the init flag")
+			return reconcile.Result{}, err
+		}
+
+	}
+
+	//check the healthiness of federation deployment
+	foundDep := &appsv1.Deployment{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundDep)
 
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Creating a new deployment for kobefederation", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
@@ -157,9 +221,9 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 	//update kobe federation affinity
 	if instance.Spec.Affinity.NodeAffinity != nil || instance.Spec.Affinity.PodAffinity != nil || instance.Spec.Affinity.PodAntiAffinity != nil {
 		affinity := instance.Spec.Affinity
-		if *found.Spec.Template.Spec.Affinity != affinity {
-			found.Spec.Template.Spec.Affinity = &affinity
-			err = r.client.Update(context.TODO(), found)
+		if *foundDep.Spec.Template.Spec.Affinity != affinity {
+			foundDep.Spec.Template.Spec.Affinity = &affinity
+			err = r.client.Update(context.TODO(), foundDep)
 			if err != nil {
 				reqLogger.Info("Failed to update Deployment: %v\n", err)
 				return reconcile.Result{}, err
@@ -207,7 +271,7 @@ func labelsForKobeFederation(name string) map[string]string {
 }
 
 func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1alpha1.KobeFederation) *appsv1.Deployment {
-	labels := labelsForKobeFederation(m.Name)
+	labels := labelsForKobeFederation(m.Name + "-job")
 
 	//-------------------------------------------------------crap--------------------------------------------
 	nfsPodFound := &corev1.Pod{}
@@ -221,7 +285,6 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 	//create init containers definitions that make one config file for federation per dataset
 	initContainers := []corev1.Container{}
 	volumes := []corev1.Volume{}
-	//initContainers = append(initContainers, corev1.Container{Image: "busybox", Name: "firstcont", Command: []string{"mkdir"}, Args: []string{"/" + m.Name}})
 	for i, datasetname := range m.Spec.DatasetNames {
 		//each init container is given DATASET_NAME and DATASET_ENDPOINT environment variables to work with)
 		//also inputfiledir and outputfiledir both point to exports/<datasetname>/dumps/ and exports/dataset/<datasetname>/<federation>/ respectively to nfs server
@@ -229,12 +292,16 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 		envs := []corev1.EnvVar{}
 		env := corev1.EnvVar{Name: "DATASET_NAME", Value: datasetname}
 		envs = append(envs, env)
-		//env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: "http://" + m.Spec.Endpoints[i] + ":" + "8890"}
+
 		env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: m.Spec.Endpoints[i]}
 		envs = append(envs, env)
 
+		if m.Spec.ForceNewInit {
+			env = corev1.EnvVar{Name: "INITIALIZE", Value: "yes"}
+			envs = append(envs, env)
+		}
 		volumeIn := corev1.Volume{Name: "nfs-in-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/dump"}}}
-		volumeOut := corev1.Volume{Name: "nfs-out-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/"}}}
+		volumeOut := corev1.Volume{Name: "nfs-out-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/" + m.Spec.FederatorName}}}
 		volumes = append(volumes, volumeIn, volumeOut)
 
 		vmountIn := corev1.VolumeMount{Name: "nfs-in-" + datasetname, MountPath: m.Spec.InputFileDir}
@@ -249,20 +316,31 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 		}
 		initContainers = append(initContainers, container)
 	}
-	//FIXES NEEDED BELOW
-	//create the initcontainer that will run the image that combines many configs (1 per dataset) to one config for the experiment
+
+	//create the initcontainer that will run the image that combines many configs (1 per dataset) to one config for the experiment/federation
 	envs := []corev1.EnvVar{}
 	vmounts := []corev1.VolumeMount{}
+	count := 0
 	for i, datasetname := range m.Spec.DatasetNames {
 		env := corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: datasetname}
 		envs = append(envs, env)
-		env = corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: m.Spec.Endpoints[i]}
+		env = corev1.EnvVar{Name: "DATASET_ENDPOINT_" + strconv.Itoa(i), Value: m.Spec.Endpoints[i]}
 		envs = append(envs, env)
+		count++
 	}
-	volumeFinal := corev1.Volume{Name: "nfs-final", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/"}}}
+	env := corev1.EnvVar{Name: "N", Value: strconv.Itoa(count - 1)}
+	envs = append(envs, env)
+
+	env = corev1.EnvVar{Name: "FEDERATION_NAME", Value: m.Name}
+	envs = append(envs, env)
+
+	env = corev1.EnvVar{Name: "FEDERATOR_NAME", Value: m.Spec.FederatorName}
+	envs = append(envs, env)
+
+	volumeFinal := corev1.Volume{Name: "nfs-final", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports"}}}
 	volumes = append(volumes, volumeFinal)
 
-	vmountFinal := corev1.VolumeMount{Name: "nfs-final", MountPath: m.Spec.InputDir}
+	vmountFinal := corev1.VolumeMount{Name: "nfs-final", MountPath: "/kobe"}
 	vmounts = append(vmounts, vmountFinal)
 
 	container := corev1.Container{
@@ -343,7 +421,7 @@ func (r *ReconcileKobeFederation) newServiceForFederation(m *kobefederationv1alp
 
 }
 
-func (r *ReconcileKobeFederation) newJobForExperiment(m *kobefederationv1alpha1.KobeFederation) *batchv1.Job {
+func (r *ReconcileKobeFederation) newJobForFederation(m *kobefederationv1alpha1.KobeFederation) *batchv1.Job {
 	times := int32(1)
 	parallelism := int32(1)
 	volumes := []corev1.Volume{}
@@ -368,7 +446,7 @@ func (r *ReconcileKobeFederation) newJobForExperiment(m *kobefederationv1alpha1.
 			APIVersion: "v1",
 		},
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      m.Name + "job",
+			Name:      m.Name,
 			Namespace: m.Namespace,
 		},
 		Spec: batchv1.JobSpec{
@@ -379,11 +457,11 @@ func (r *ReconcileKobeFederation) newJobForExperiment(m *kobefederationv1alpha1.
 				corev1.PodSpec{
 					Containers: []corev1.Container{{
 						Image:           "busybox",
-						Name:            m.Name + "-job",
+						Name:            m.Name,
 						ImagePullPolicy: corev1.PullIfNotPresent,
 						VolumeMounts:    vmounts,
-						Command:         []string{"/bin/bash"},
-						Args:            []string{"for d in */; do   cd $d;  mkdir " + m.Spec.FederatorName + "; done"},
+						Command:         []string{"sh", "-c"},
+						Args:            []string{"cd kobe ; for d in */; do   cd $d;  mkdir " + m.Spec.FederatorName + "; cd .. ; done"},
 					}},
 					RestartPolicy: corev1.RestartPolicyOnFailure,
 					Volumes:       volumes,
