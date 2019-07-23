@@ -295,7 +295,7 @@ func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha
 					Containers: []corev1.Container{{
 						Image:           m.Spec.Image,
 						Name:            m.Name,
-						ImagePullPolicy: m.Spec.ImagePullPolicy,
+						ImagePullPolicy: corev1.PullPolicy("Always"),
 						Ports: []corev1.ContainerPort{{
 							ContainerPort: m.Spec.Port,
 							Name:          m.Name,

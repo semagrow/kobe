@@ -271,16 +271,14 @@ func labelsForKobeFederation(name string) map[string]string {
 }
 
 func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1alpha1.KobeFederation) *appsv1.Deployment {
-	labels := labelsForKobeFederation(m.Name + "-job")
+	labels := labelsForKobeFederation(m.Name)
 
-	//-------------------------------------------------------crap--------------------------------------------
 	nfsPodFound := &corev1.Pod{}
 	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
 		return nil
 	}
 	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes
-	//-------------------------------------------------------/crap------------------------------------
 
 	//create init containers definitions that make one config file for federation per dataset
 	initContainers := []corev1.Container{}

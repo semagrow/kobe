@@ -13,6 +13,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
@@ -130,7 +131,9 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 				reqLogger.Info("Failed to get the pod of the kobe dataset that experiment will use")
 				return reconcile.Result{RequeueAfter: 5}, nil
 			}
-			if foundPod.Status.Phase != "Running" {
+			var test string
+			test = string(foundPod.Status.Phase)
+			if test != "Running" {
 				reqLogger.Info("Kobe dataset pod is not ready so experiment needs to wait")
 				return reconcile.Result{RequeueAfter: 5}, nil
 			}
@@ -259,19 +262,37 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	//check if the pods of the federators exist and have a status of running before proceeding and get fed name and endpoint for the eval job
 	fedEndpoint := "http://" + foundFederation.Name + ".svc.cluster.local" + ":" + strconv.Itoa(int(foundFederation.Spec.Port))
 	fedName := foundFederation.Name
-	for _, podname := range foundFederation.Status.PodNames {
+
+	podList := &corev1.PodList{}
+	labelSelector := labels.SelectorFromSet(map[string]string{"kobeoperator_cr": instance.Name})
+	listOps := &client.ListOptions{Namespace: instance.Namespace, LabelSelector: labelSelector}
+	err = r.client.List(context.TODO(), listOps, podList)
+	if err != nil {
+		reqLogger.Info("Failed to list pods: %v", err)
+		return reconcile.Result{}, err
+	}
+	podNames := getPodNames(podList.Items)
+	//for _, podname := range foundFederation.Status.PodNames {
+	for _, podname := range podNames {
 		foundPod := &corev1.Pod{}
 		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: podname}, foundPod)
 		if err != nil && errors.IsNotFound(err) {
 			reqLogger.Info("Failed to get the pod of the kobe federation that experiment will use")
 			return reconcile.Result{RequeueAfter: 5}, nil
 		}
-		if foundPod.Status.Phase != "Running" {
+		var test string
+		test = string(foundPod.Status.Phase)
+		if test != "Running" {
 			reqLogger.Info("Kobe federation pod is not ready so experiment needs to wait")
 			return reconcile.Result{RequeueAfter: 5}, nil
 		}
-	}
+		reqLogger.Info(" IM UP AND RUNNING HEHEHEHEHEHEHEHEHEEHEHEHEHEHEHEHEHEHEHEH")
 
+	}
+	//if foundFederation.Status.PodNames == nil || len(foundFederation.Status.PodNames) == 0 {
+	//	return reconcile.Result{RequeueAfter: 5}, nil
+
+	//}
 	//Everything is healthy and ready for the experiment.
 	if instance.Spec.RunFlag == false { //dont run just yet just have it defined
 		return reconcile.Result{}, nil
@@ -394,4 +415,12 @@ func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobeexperimentv1
 	}
 	controllerutil.SetControllerReference(m, federation, r.scheme)
 	return federation
+}
+
+func getPodNames(pods []corev1.Pod) []string {
+	var podNames []string
+	for _, pod := range pods {
+		podNames = append(podNames, pod.Name)
+	}
+	return podNames
 }

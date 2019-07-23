@@ -7,7 +7,6 @@ spec:
   image: kostbabis/virtuoso
   toDownload: true
   downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/DBPedia-Subset.tar.gz
-  imagePullPolicy: Always
   count: 1
   group: kobe
   port: 8890
