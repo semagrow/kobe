@@ -12,7 +12,7 @@ if [ ! -f "$FILE" ] || [ "$INITIALIZE" ]; then
         echo "not removing"
     fi
     done
-
+    rm $DATASET_NAME.nt
     ls *.nt | xargs cat | sort -k 2 > $DATASET_NAME.nt
 
     /sevod-scraper/assembly/target/bin/sevod-scraper.sh rdfdump "$DATASET_NAME.nt" "$DATASET_ENDPOINT" -sp  "/sevod-scraper/output/$DATASET_NAME.ttl"

@@ -213,11 +213,11 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 			reqLogger.Info("Kobe federation pod is not ready so experiment needs to wait")
 			return reconcile.Result{RequeueAfter: 5}, nil
 		}
-		if podNames == nil || len(podNames) == 0 {
-			reqLogger.Info("Experiment waits for components initialization")
-			return reconcile.Result{RequeueAfter: 5}, nil
+	}
+	if podNames == nil || len(podNames) == 0 {
+		reqLogger.Info("Experiment waits for components initialization")
+		return reconcile.Result{RequeueAfter: 5}, nil
 
-		}
 	}
 
 	//Everything is healthy and ready for the experiment.
@@ -332,6 +332,7 @@ func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobeexperimentv1
 			ConfImage:         fed.Spec.ConfImage,
 			InputDir:          fed.Spec.InputDir,
 			OutputDir:         fed.Spec.OutputDir,
+			FedConfDir:        fed.Spec.FedConfDir,
 
 			ForceNewInit:  m.Spec.ForceNewInit,
 			Init:          true,

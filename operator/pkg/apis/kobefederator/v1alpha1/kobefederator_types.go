@@ -25,6 +25,7 @@ type KobeFederatorSpec struct {
 	ConfImage         string           `json:"confImage"`         //image that makes one init file from multiple init files
 	InputDir          string           `json:"inputDir"`
 	OutputDir         string           `json:"outputDir"`
+	FedConfDir        string           `json:"fedConfDir"` //which directory the federator needs the metadata config files in order to find them
 }
 
 // KobeFederatorStatus defines the observed state of KobeFederator

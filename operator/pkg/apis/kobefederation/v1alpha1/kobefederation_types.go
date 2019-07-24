@@ -25,6 +25,7 @@ type KobeFederationSpec struct {
 	InputDir          string           `json:"inputDir"`
 	OutputDir         string           `json:"outputDir"`
 
+	FedConfDir    string   `json:"fedConfDir"` //which directory the federator needs the metadata config files to find them
 	ForceNewInit  bool     `json:"forceNewInit"`
 	Init          bool     `json:"init"`
 	FederatorName string   `json:"federatorName"`

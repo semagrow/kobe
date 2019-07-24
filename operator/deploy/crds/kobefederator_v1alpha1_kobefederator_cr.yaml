@@ -4,11 +4,12 @@ metadata:
   name: semagrow
 spec:
   # Add fields here
-  image: nginx
+  image: semagrow/semagrow
   imagePullPolicy: Always
   port: 8080
   confFromFileImage: kostbabis/semagrow-init
   inputFileDir: /sevod-scraper/input
   outputFileDir: /sevod-scraper/output
   confImage: kostbabis/semagrow-init-all
+  fedConfDir: /etc/default/semagrow
 

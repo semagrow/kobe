@@ -350,6 +350,11 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 	initContainers = append(initContainers, container)
 
 	//create the deployment of the federation .
+	//mount the config files to where the federator needs
+	volumeConf := corev1.Volume{Name: "volumeConf", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + m.Name}}}
+	volumes = append(volumes, volumeConf)
+
+	mountConf := corev1.VolumeMount{Name: "nfs-final", MountPath: m.Spec.FedConfDir}
 	dep := &appsv1.Deployment{
 		TypeMeta: metav1.TypeMeta{
 			APIVersion: "apps/v1",
@@ -377,6 +382,7 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 							ContainerPort: m.Spec.Port,
 							Name:          m.Name,
 						}},
+						VolumeMounts: []corev1.VolumeMount{mountConf},
 					}},
 					Volumes: volumes,
 				},
