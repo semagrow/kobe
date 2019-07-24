@@ -351,10 +351,11 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 
 	//create the deployment of the federation .
 	//mount the config files to where the federator needs
-	volumeConf := corev1.Volume{Name: "volumeConf", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + m.Name}}}
+	volumeConf := corev1.Volume{Name: "volumeconf", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + m.Name + "/"}}}
 	volumes = append(volumes, volumeConf)
 
-	mountConf := corev1.VolumeMount{Name: "nfs-final", MountPath: m.Spec.FedConfDir}
+	mountConf := corev1.VolumeMount{Name: "volumeconf", MountPath: m.Spec.FedConfDir}
+
 	dep := &appsv1.Deployment{
 		TypeMeta: metav1.TypeMeta{
 			APIVersion: "apps/v1",
@@ -465,7 +466,7 @@ func (r *ReconcileKobeFederation) newJobForFederation(m *kobefederationv1alpha1.
 						ImagePullPolicy: corev1.PullIfNotPresent,
 						VolumeMounts:    vmounts,
 						Command:         []string{"sh", "-c"},
-						Args:            []string{"cd kobe ; for d in */; do   cd $d;  mkdir " + m.Spec.FederatorName + "; cd .. ; done"},
+						Args:            []string{"cd kobe ; " + "mkdir " + m.Name + " ; " + "for d in */; do   cd $d;  mkdir " + m.Spec.FederatorName + "; cd .. ; done"},
 					}},
 					RestartPolicy: corev1.RestartPolicyOnFailure,
 					Volumes:       volumes,

@@ -1,0 +1,13 @@
+apiVersion: kobedataset.kobe.com/v1alpha1
+kind: KobeDataset
+metadata:
+  name: swdfood
+spec:
+  # Add fields here
+  image: kostbabis/virtuoso
+  toDownload: true
+  downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/SWDFood.tar.gz
+  count: 1
+  group: kobe
+  port: 8890
+

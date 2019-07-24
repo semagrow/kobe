@@ -25,7 +25,8 @@ type KobeFederatorSpec struct {
 	ConfImage         string           `json:"confImage"`         //image that makes one init file from multiple init files
 	InputDir          string           `json:"inputDir"`
 	OutputDir         string           `json:"outputDir"`
-	FedConfDir        string           `json:"fedConfDir"` //which directory the federator needs the metadata config files in order to find them
+	FedConfDir        string           `json:"fedConfDir"`   //which directory the federator needs the metadata config files in order to find them
+	SparqlEnding      string           `json:"sparqlEnding"` //suffix to be added to endpoint of federator f.e ../SemaGrow/sparql
 }
 
 // KobeFederatorStatus defines the observed state of KobeFederator

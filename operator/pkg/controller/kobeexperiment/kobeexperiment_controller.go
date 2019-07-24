@@ -187,7 +187,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	}
 
 	//check if the pods of the federators exist and have a status of running before proceeding and get fed name and endpoint for the eval job
-	fedEndpoint := "http://" + foundFederation.Name + ".svc.cluster.local" + ":" + strconv.Itoa(int(foundFederation.Spec.Port))
+	fedEndpoint := "http://" + foundFederation.Name + ".svc.cluster.local" + ":" + strconv.Itoa(int(foundFederation.Spec.Port)) + foundFederation.Spec.SparqlEnding
 	fedName := foundFederation.Name
 
 	podList := &corev1.PodList{}
@@ -265,6 +265,8 @@ func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.
 	envs = append(envs, env)
 	env = corev1.EnvVar{Name: "FEDERATION_ENDPOINT", Value: fedendpoint}
 	envs = append(envs, env)
+	env = corev1.EnvVar{Name: "ENDPOINT", Value: fedendpoint}
+	envs = append(envs, env)
 
 	volumes := []corev1.Volume{corev1.Volume{Name: "queries",
 		VolumeSource: corev1.VolumeSource{ConfigMap: &corev1.ConfigMapVolumeSource{LocalObjectReference: corev1.LocalObjectReference{Name: m.Spec.Benchmark}}}}}
@@ -295,6 +297,7 @@ func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.
 						}},
 						//Command:      m.Spec.EvalCommands,
 						VolumeMounts: vmounts,
+						Env:          envs,
 					}},
 					RestartPolicy: corev1.RestartPolicyOnFailure,
 					Volumes:       volumes,
@@ -333,6 +336,7 @@ func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobeexperimentv1
 			InputDir:          fed.Spec.InputDir,
 			OutputDir:         fed.Spec.OutputDir,
 			FedConfDir:        fed.Spec.FedConfDir,
+			SparqlEnding:      fed.Spec.SparqlEnding,
 
 			ForceNewInit:  m.Spec.ForceNewInit,
 			Init:          true,

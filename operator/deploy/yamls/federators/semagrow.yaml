@@ -3,7 +3,6 @@ kind: KobeFederator
 metadata:
   name: semagrow
 spec:
-  # Add fields here
   image: semagrow/semagrow
   imagePullPolicy: Always
   port: 8080
