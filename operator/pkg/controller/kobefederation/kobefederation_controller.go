@@ -99,8 +99,6 @@ type ReconcileKobeFederation struct {
 
 // Reconcile reads that state of the cluster for a KobeFederation object and makes changes based on the state read
 // and what is in the KobeFederation.Spec
-// TODO(user): Modify this Reconcile function to implement your Controller logic.  This example creates
-// a Pod as an example
 // Note:
 // The Controller will requeue the Request to be processed again if the returned error is non-nil or
 // Result.Requeue is true, otherwise upon completion it will remove the work from the queue.
@@ -141,6 +139,7 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 		if &foundJob.Status.Succeeded == nil || foundJob.Status.Succeeded == 0 {
 			return reconcile.Result{}, nil
 		}
+		//force delete the job from kubernetes if its done (can also be done with cascading delete)
 		podList := &corev1.PodList{}
 		labelSelector := labels.SelectorFromSet(map[string]string{"job-name": instance.Name})
 		listOps := &client.ListOptions{Namespace: instance.Namespace, LabelSelector: labelSelector}
@@ -170,6 +169,8 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 			reqLogger.Info("Failed to delete the federation job from the cluster")
 			return reconcile.Result{}, err
 		}
+
+		//never rerun the init job even if the user changes an attribute of the federation object
 		instance.Spec.Init = false
 		err = r.client.Update(context.TODO(), instance)
 		if err != nil {
@@ -179,7 +180,7 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 
 	}
 
-	//check the healthiness of federation deployment
+	//check the healthiness of federation deployment and create it if it doesnt exist
 	foundDep := &appsv1.Deployment{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundDep)
 
@@ -218,7 +219,7 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 		}
 	}
 
-	//update kobe federation affinity
+	//update kobe federation affinity if needed
 	if instance.Spec.Affinity.NodeAffinity != nil || instance.Spec.Affinity.PodAffinity != nil || instance.Spec.Affinity.PodAntiAffinity != nil {
 		affinity := instance.Spec.Affinity
 		if *foundDep.Spec.Template.Spec.Affinity != affinity {
@@ -233,7 +234,7 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 
 		}
 	}
-	//check the healthiness of the federation service
+	//check the healthiness of the federation service that is used for name resolving
 	foundService := &corev1.Service{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
 	if err != nil && errors.IsNotFound(err) {
@@ -270,6 +271,7 @@ func labelsForKobeFederation(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
 
+//creates a new federation deployment
 func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1alpha1.KobeFederation) *appsv1.Deployment {
 	labels := labelsForKobeFederation(m.Name)
 
@@ -280,12 +282,12 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 	}
 	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes
 
-	//create init containers definitions that make one config file for federation per dataset
+	//create init containers  that make one config file for federation per dataset dump /if not needed then these can be set to do nothing
 	initContainers := []corev1.Container{}
 	volumes := []corev1.Volume{}
 	for i, datasetname := range m.Spec.DatasetNames {
-		//each init container is given DATASET_NAME and DATASET_ENDPOINT environment variables to work with)
-		//also inputfiledir and outputfiledir both point to exports/<datasetname>/dumps/ and exports/dataset/<datasetname>/<federation>/ respectively to nfs server
+		//each init container is given DATASET_NAME and DATASET_ENDPOINT environment variables to work with(needed if they create the files from quering the database directly)
+		//also inputfiledir and outputfiledir both point to exports/<datasetname>/dumps/ and exports/dataset/<datasetname>/<federation>/ respectively to nfs server(needed if they make the config files from the dumps)
 		vmounts := []corev1.VolumeMount{}
 		envs := []corev1.EnvVar{}
 		env := corev1.EnvVar{Name: "DATASET_NAME", Value: datasetname}
@@ -294,7 +296,7 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 		env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: m.Spec.Endpoints[i]}
 		envs = append(envs, env)
 
-		if m.Spec.ForceNewInit == true {
+		if m.Spec.ForceNewInit == true { //optional variable to skip creating the files if they already exist in /exports/<dataset-name>/<federator-name>.Is passed by the experiment yaml
 			env = corev1.EnvVar{Name: "INITIALIZE", Value: "yes"}
 			envs = append(envs, env)
 		}
@@ -314,8 +316,7 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 		}
 		initContainers = append(initContainers, container)
 	}
-
-	//create the initcontainer that will run the image that combines many configs (1 per dataset) to one config for the experiment/federation
+	//create a helper init container that will choose the config files for this set of datasets only and move them in a temps directory
 	envs := []corev1.EnvVar{}
 	vmounts := []corev1.VolumeMount{}
 	count := 0
@@ -335,11 +336,37 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 	env = corev1.EnvVar{Name: "FEDERATOR_NAME", Value: m.Spec.FederatorName}
 	envs = append(envs, env)
 
-	volumeFinal := corev1.Volume{Name: "nfs-final", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports"}}}
-	volumes = append(volumes, volumeFinal)
+	volumeHouse := corev1.Volume{Name: "nfs-housekeep", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports"}}}
+	volumes = append(volumes, volumeHouse)
 
-	vmountFinal := corev1.VolumeMount{Name: "nfs-final", MountPath: "/kobe"}
-	vmounts = append(vmounts, vmountFinal)
+	vmountHouse := corev1.VolumeMount{Name: "nfs-housekeep", MountPath: "/kobe"}
+	vmounts = append(vmounts, vmountHouse)
+
+	containerHouse := corev1.Container{
+		Image:        "kostbabis/housekeeping",
+		Name:         "inithouse",
+		Env:          envs,
+		VolumeMounts: vmounts,
+	}
+	initContainers = append(initContainers, containerHouse)
+
+	//create the initcontainer that will run the image that combines many configs from the above temp directory and make appropriate config for the whole experiment/federation
+	vmounts = []corev1.VolumeMount{}
+	path := "/exports/temp-" + m.Name
+
+	volumeInFinal := corev1.Volume{Name: "nfs-final-in", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: path}}}
+	volumes = append(volumes, volumeInFinal)
+
+	vmountInFinal := corev1.VolumeMount{Name: "nfs-final-in", MountPath: m.Spec.InputDir}
+	vmounts = append(vmounts, vmountInFinal)
+
+	path = "/exports/" + m.Name
+
+	volumeOutFinal := corev1.Volume{Name: "nfs-final-out", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: path}}}
+	volumes = append(volumes, volumeOutFinal)
+
+	vmountOutFinal := corev1.VolumeMount{Name: "nfs-final-out", MountPath: m.Spec.OutputDir}
+	vmounts = append(vmounts, vmountOutFinal)
 
 	container := corev1.Container{
 		Image:        m.Spec.ConfImage,
@@ -350,7 +377,7 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 	initContainers = append(initContainers, container)
 
 	//create the deployment of the federation .
-	//mount the config files to where the federator needs
+	//mount the config files to where the federator needs (for example etc/default/semagrow) -->passed by the yaml of federator
 	volumeConf := corev1.Volume{Name: "volumeconf", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + m.Name + "/"}}}
 	volumes = append(volumes, volumeConf)
 
@@ -466,7 +493,8 @@ func (r *ReconcileKobeFederation) newJobForFederation(m *kobefederationv1alpha1.
 						ImagePullPolicy: corev1.PullIfNotPresent,
 						VolumeMounts:    vmounts,
 						Command:         []string{"sh", "-c"},
-						Args:            []string{"cd kobe ; " + "mkdir " + m.Name + " ; " + "for d in */; do   cd $d;  mkdir " + m.Spec.FederatorName + "; cd .. ; done"},
+						Args: []string{"cd /kobe ;rm -r " + m.Name + " ; rm -r" + " temp-" + m.Name + " ; for d in */; do   cd $d;  mkdir " + m.Spec.FederatorName +
+							"; cd /kobe ; done ;" + " mkdir " + m.Name + " ; mkdir " + "temp-" + m.Name},
 					}},
 					RestartPolicy: corev1.RestartPolicyOnFailure,
 					Volumes:       volumes,

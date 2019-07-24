@@ -11,6 +11,8 @@ spec:
   inputFileDir: /sevod-scraper/input
   outputFileDir: /sevod-scraper/output
   confImage: kostbabis/semagrow-init-all
+  inputDir: /kobe/input
+  outputDir: /kobe/output
   fedConfDir: /etc/default/semagrow
   sparqlEnding: /SemaGrow/sparql
 
