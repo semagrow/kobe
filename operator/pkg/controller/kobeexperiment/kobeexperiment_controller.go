@@ -288,11 +288,11 @@ func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.
 				metav1.ObjectMeta{},
 				corev1.PodSpec{
 					Containers: []corev1.Container{{
-						Image:           m.Spec.EvalImage, //this is gonna be the image of client program
+						Image:           m.Spec.EvalImage, //this is the image of the eval program
 						Name:            "job" + "-" + strconv.Itoa(i),
 						ImagePullPolicy: corev1.PullIfNotPresent,
 						Ports: []corev1.ContainerPort{{
-							ContainerPort: int32(8890), //client endpoint
+							ContainerPort: int32(8890), //eval endpoint
 							Name:          "client",
 						}},
 						//Command:      m.Spec.EvalCommands,

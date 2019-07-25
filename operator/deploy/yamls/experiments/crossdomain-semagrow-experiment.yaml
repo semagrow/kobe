@@ -7,5 +7,5 @@ spec:
   federator: semagrow
   timesToRun: 1
   runFlag: true
-  forceNewInit: false
+  forceNewInit: false #needs to be true for the eval program to run after init
   evalImage: perl
