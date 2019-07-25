@@ -1,11 +1,11 @@
-#Kobe Benchmark operator in Kubernetes #
+##Kobe Benchmark operator in Kubernetes ##
 The kobe benchmark operator extends the kobe benchmarking tool so one can setup it easily 
 in a cluster that runs kubernetes.
 It is a kubernetes operator that allows the user to define the benchmarkexperiment by applying a set of yaml files 
 that desrcibe new kubernetes custom resources which are explained below.The kobe-operator will use those resources to create 
 and mantain the necessary components in kubernetes without the user having to specifically define them.
 
-#Deployment of the operator in kubernetes# 
+##Deployment of the operator in kubernetes## 
 To build the operator go to operator/build and use the command docker build -t <operator-image-name> . Push that image to a public registry so that 
 it can be found in kubernetes.Alterative just use the already made up image kostbabis/kobe-operator.
 
