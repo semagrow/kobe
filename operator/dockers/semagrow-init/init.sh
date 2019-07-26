@@ -12,6 +12,18 @@ if [ ! -f "$FILE" ] || [ "$INITIALIZE" ]; then
         echo "not removing"
     fi
     done
+
+    for file in *.n3
+    do
+    java -jar /sevod-scraper/rdf2rdf-1.0.1-2.3.1.jar ${file} ${file}.nt
+    #java -jar /sevod-scraper/ont-converter.jar -i ${file} -if rdf -o ${file}.nt -of nt
+    if [ $? != 0 ] ; then
+        rm ${file}.nt && echo "removing it now "
+    else 
+        echo "not removing"
+    fi
+    done
+    
     rm $DATASET_NAME.nt
     ls *.nt | xargs cat | sort -k 2 > $DATASET_NAME.nt
 

@@ -25,7 +25,7 @@ WORKDIR /sevod-scraper/input
 
 COPY log4j.properties /sevod-scraper/target/classes/
 
-# COPY rdf2rdf-1.0.1-2.3.1.jar /sevod-scraper/
+COPY rdf2rdf-1.0.1-2.3.1.jar /sevod-scraper/
 COPY ont-converter.jar /sevod-scraper/
 
 COPY init.sh /sevod-scraper/

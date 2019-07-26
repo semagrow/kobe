@@ -156,7 +156,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		}
 
 		//create a list of the sparql endpoints
-		endpoints = append(endpoints, "http://"+foundDataset.Name+"."+foundDataset.Namespace+".svc.cluster.local"+":"+strconv.Itoa(int(foundDataset.Spec.Port)))
+		endpoints = append(endpoints, "http://"+foundDataset.Name+"."+foundDataset.Namespace+".svc.cluster.local"+":"+strconv.Itoa(int(foundDataset.Spec.Port))+"/sparql")
 		datasets = append(datasets, foundDataset.Name)
 	}
 
@@ -187,7 +187,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	}
 
 	//check if the pods of the federators exist and have a status of running before proceeding and get fed name and endpoint for the eval job
-	fedEndpoint := "http://" + foundFederation.Name + ".svc.cluster.local" + ":" + strconv.Itoa(int(foundFederation.Spec.Port)) + foundFederation.Spec.SparqlEnding
+	fedEndpoint := "http://" + foundFederation.Name + "." + foundFederation.Namespace + ".svc.cluster.local" + ":" + strconv.Itoa(int(foundFederation.Spec.Port)) + foundFederation.Spec.SparqlEnding
 	fedName := foundFederation.Name
 
 	podList := &corev1.PodList{}
@@ -267,10 +267,12 @@ func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.
 	envs = append(envs, env)
 	env = corev1.EnvVar{Name: "ENDPOINT", Value: fedendpoint}
 	envs = append(envs, env)
+	env = corev1.EnvVar{Name: "EVAL_RUN", Value: "1"}
+	envs = append(envs, env)
 
 	volumes := []corev1.Volume{corev1.Volume{Name: "queries",
 		VolumeSource: corev1.VolumeSource{ConfigMap: &corev1.ConfigMapVolumeSource{LocalObjectReference: corev1.LocalObjectReference{Name: m.Spec.Benchmark}}}}}
-	vmounts := []corev1.VolumeMount{corev1.VolumeMount{Name: "queries", MountPath: "/etc/querySet"}}
+	vmounts := []corev1.VolumeMount{corev1.VolumeMount{Name: "queries", MountPath: "/queries"}}
 
 	job := &batchv1.Job{
 		TypeMeta: metav1.TypeMeta{
@@ -288,9 +290,9 @@ func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.
 				metav1.ObjectMeta{},
 				corev1.PodSpec{
 					Containers: []corev1.Container{{
-						Image:           m.Spec.EvalImage, //this is the image of the eval program
+						Image:           m.Spec.EvalImage, //this is the image of the eval
 						Name:            "job" + "-" + strconv.Itoa(i),
-						ImagePullPolicy: corev1.PullIfNotPresent,
+						ImagePullPolicy: corev1.PullAlways,
 						Ports: []corev1.ContainerPort{{
 							ContainerPort: int32(8890), //eval endpoint
 							Name:          "client",
