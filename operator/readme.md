@@ -1,9 +1,9 @@
 ## Kobe Benchmark operator in Kubernetes ##
 The kobe benchmark operator extends the kobe benchmarking tool so one can setup it easily 
 in a cluster that runs kubernetes.
-It is a kubernetes operator that allows the user to define the benchmarkexperiment by applying a set of yaml files 
-that desrcibe new kubernetes custom resources which are explained below.The kobe-operator will use those resources to create 
-and mantain the necessary components in kubernetes without the user having to specifically define them.
+It is a kubernetes operator that allows the user to define the benchmark experiment by applying a set of yaml files 
+that desrcibe new kubernetes custom resources .The kobe-operator will use those resources to create 
+and mantain the necessary components in kubernetes without the user having to worry about them.
 
 ## Deployment of the operator in kubernetes## 
 To build the operator go to operator/build and use the command 'docker build -t <operator-image-name>' . 
@@ -39,32 +39,26 @@ This will set the operator running in your kubernetes cluster and needs to be do
 The KobeDataset custom resource defines a dataset that could be used in an experiment.
 The operator will create and mantain a pod that runs a virtuoso instance with that dataset. It will also cache the db file and dump files for future retrieval if the pod dies and restarts or if the user deletes the kobedataset and want to redefine it. The yaml archetype is the following:
 
-apiVersion: kobedataset.kobe.com/v1alpha1
-
+```apiVersion: kobedataset.kobe.com/v1alpha1
 kind: KobeDataset
-
 metadata:
-
-  name: dbpedia #the name of the
-  
+  name: dbpedia               #the name of the dataset (must be small letters and <15 chars)
 spec:
-
-  image: kostbabis/virtuoso
-  
-  toDownload: true
-  
-  downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/DBPedia-Subset.tar.gz
-  
-  count: 1
-  
-  port: 8890 
-
-
+  image: kostbabis/virtuoso   
+  toDownload: true            #if false it will skip downloading and data loading and fetch the db/dump files
+                              #if they exist (the dataset was loaded earlier)
+  downloadFrom:  http://...   #the dump location 
+  count: 1                    #how many instances of this database you want in your cluster (under same service)
+  port: 8890                  #the port it listens to (optional default is 8890)
+```
+After writing the yaml of the dataset in the above format apply it 
+`kubectl apply -f my-kobe-dataset.yaml`
+Define many of these datasets depending on the experiments you want to run.One dataset can be used in many experiments and needs to only be defined once.
 
 ## KobeBenchmark ## 
-A KobeBenchmark resource defines a benchmark. A benchmark consists of a set of datasets (chosen by name ) 
-that must already be defined with KobeDataset resources. It also contains the definition of 1 or more sparql queries.In order for
-the benchmark to be meaningfull the set of datasets should suffice for those queries.
+A KobeBenchmark custom resource defines a benchmark in kobe. 
+A benchmark consists of a set of datasets (chosen by name) that must be already  defined with the KobeDataset resources 
+like its described above. It also contains the definition of one or more sparql queries.In order for the benchmark to be meaningfull the set of datasets should suffice for those queries.
 
 
 ## KobeFederator ##
