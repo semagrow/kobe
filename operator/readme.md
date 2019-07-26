@@ -9,23 +9,56 @@ and mantain the necessary components in kubernetes without the user having to sp
 To build the operator go to operator/build and use the command 'docker build -t <operator-image-name>' . 
 Push that image to a public registry.Alternative just use the already made image kostbabis/kobe-operator.
 
-To deploy the operator first go to operator/deploy/init/cluster and use kubectl apply -f  to all the contents of the folder.
-'kubectl create -f cluster_role.yaml'
-'kubectl create -f cluster_role_binding.yaml'
-Then go to operator/deploy/init/crds and again use kubectl apply -f to the contents of the folder.These are the definitions of the custom resources that 
-the operator handles.
-Finally go to operator/deploy/init/operator-deploy change the image to <operator-image-name> (skip this if you won't build the operator and use preexisting
-kostbabis/kobe-operator image) 
-Use kubectl apply -f operator-yaml which will set the deployment of the operator.
-To define the components of an experiment you need to set the following resources. The example yamls describe a setup for reference.
+To deploy the operator first go to *operator/deploy/init/cluster* and use 
+`kubectl create -f clusterrole.yaml`
 
+`kubectl create -f cluster_role_binding.yaml`
+
+`kubectl create -f service_account.yaml `
+
+Then go to *operator/deploy/init/crds* and use 
+`kubectl create -f kobedataset_v1alpha1_kobedataset_crd.yaml`
+
+`kubectl create -f kobebenchmark_v1alpha1_kobebenchmark_crd.yaml `
+
+`kubectl create -f kobefederator_v1alpha1_kobefederator_crd.yaml `
+
+`kubectl create -f kobefederation_v1alpha1_kobefederation_crd.yaml`
+
+`kubectl create -f kobeexperiment_v1alpha1_kobeexperiment_crd.yaml  `
+
+`kubectl create -f kobeutil_v1alpha1_kobeutil_crd.yaml  `
+
+
+Finally go to *operator/deploy/init/operator-deploy* and use 
+`kubectl create -f operator.yaml`
+
+This will set the operator running in your kubernetes cluster and needs to be done only once.
 
 ## KobeDataset ##
-KobeDataset definition defines a dataset that could be used in an experiment.
-The operator will get the information from this custom resource and will create and mantain a pod that runs
-a virtuoso instance with that dataset. It will also cache the db file and dump file so that if the user
-deletes the dataset resource and in the future redefines it (with same name) , it will skip the database loading altogether. 
-The dump file can also be used for metadata extraction (see kobefederator)
+The KobeDataset custom resource defines a dataset that could be used in an experiment.
+The operator will create and mantain a pod that runs a virtuoso instance with that dataset. It will also cache the db file and dump files for future retrieval if the pod dies and restarts or if the user deletes the kobedataset and want to redefine it. The yaml archetype is the following:
+
+apiVersion: kobedataset.kobe.com/v1alpha1
+
+kind: KobeDataset
+
+metadata:
+
+  name: dbpedia #the name of the
+  
+spec:
+
+  image: kostbabis/virtuoso
+  
+  toDownload: true
+  
+  downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/DBPedia-Subset.tar.gz
+  
+  count: 1
+  
+  port: 8890 
+
 
 
 ## KobeBenchmark ## 
