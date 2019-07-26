@@ -6,10 +6,12 @@ that desrcibe new kubernetes custom resources which are explained below.The kobe
 and mantain the necessary components in kubernetes without the user having to specifically define them.
 
 ## Deployment of the operator in kubernetes## 
-To build the operator go to operator/build and use the command docker build -t <operator-image-name> . Push that image to a public registry so that 
-it can be found in kubernetes.Alterative just use the already made up image kostbabis/kobe-operator.
+To build the operator go to operator/build and use the command 'docker build -t <operator-image-name>' . 
+Push that image to a public registry.Alternative just use the already made image kostbabis/kobe-operator.
 
-To deploy the operator first go to operator/deploy/init/cluster-role and use kubectl apply -f  to all the contents of the folder.
+To deploy the operator first go to operator/deploy/init/cluster and use kubectl apply -f  to all the contents of the folder.
+'kubectl create -f cluster_role.yaml'
+'kubectl create -f cluster_role_binding.yaml'
 Then go to operator/deploy/init/crds and again use kubectl apply -f to the contents of the folder.These are the definitions of the custom resources that 
 the operator handles.
 Finally go to operator/deploy/init/operator-deploy change the image to <operator-image-name> (skip this if you won't build the operator and use preexisting
