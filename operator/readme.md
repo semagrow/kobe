@@ -45,11 +45,11 @@ metadata:
   name: dbpedia               #the name of the dataset (must be small letters and <15 chars)
 spec:
   image: kostbabis/virtuoso   
-  toDownload: true            #if false it will skip downloading and data loading and fetch the db/dump files
-                              #if they exist (the dataset was loaded earlier)
+  forceLoad: true             #if false it will skip downloading and data loading and fetch the db/dump files
+                              #if they exist (f.e the dataset was loaded earlier)
   downloadFrom:  http://...   #the dump location 
   count: 1                    #how many instances of this database you want in your cluster (under same service)
-  port: 8890                  #the port it listens to (optional default is 8890)
+  port: 8890                  #the port it listens to (it defaults to 8890)
 ```
 After writing the yaml of the dataset in the above format apply it 
 `kubectl apply -f my-kobe-dataset.yaml`
@@ -59,31 +59,105 @@ Define many of these datasets depending on the experiments you want to run.One d
 A KobeBenchmark custom resource defines a benchmark in kobe. 
 A benchmark consists of a set of datasets (chosen by name) that must be already  defined with the KobeDataset resources 
 like its described above. It also contains the definition of one or more sparql queries.In order for the benchmark to be meaningfull the set of datasets should suffice for those queries.
+The yaml is the following:
+```
+apiVersion: kobebenchmark.kobe.com/v1alpha1
+kind: KobeBenchmark
+metadata:
+  name: cross-domain
+spec:
+  datasets:
+    - name: swdfood           #these are kobedataset resources!
+    - name: dbpedia
+    - name: jamendo
+    - name: nyt
+    - name: geonames
+    - name: lmdb
+  queries:
+    - name: q1
+      language: sparql
+      queryString: "SELECT ?predicate ?object WHERE { ............"
+```
 
 
 ## KobeFederator ##
-A KobeFederator resource defines a federator. For semagrow the yaml is already supplied.
-For other federators the following need to be provided in the yaml.
+A KobeFederator resource defines a federator. For semagrow the yaml is already supplied here.
+For a federator in general in order to be "kobe ready"  some things need to supplied that will be described in detail.
+The yaml archetype is the following. 
 
--The name of an image that deploys the federator.Also sparql port needs to be provided in the yaml .
+```
+apiVersion: kobefederator.kobe.com/v1alpha1
+kind: KobeFederator
+metadata:
+  name: semagrow
+spec:
+  image: semagrow/semagrow
+  port: 8080
+  sparqlEnding: /SemaGrow/sparql
+  imagePullPolicy: Always
+  fedConfDir: /etc/default/semagrow
+  
+  confFromFileImage: kostbabis/semagrow-init #matadata file image from dump or endpoint
+  inputDumpDir: /sevod-scraper/input
+  outputDumpDir: /sevod-scraper/output
+  
+  confImage: kostbabis/semagrow-init-all #init image metadata from many
+  inputDir: /kobe/input
+  outputDir: /kobe/output
+ 
+```
 
--The name of an image that does the following job.It reads from a dataset dump and create a metadata config file .
-User can set the input and output directories that his image might use f.e /sevod-scraper/input in the yaml and the operator will match those
-to the real paths to the dumps and output folders.No further action needs to be taken by the user as to where those files are stored.
-If the initialize happens from quering the dataset endpoint then the user should provide instead the name of
-an image that does exaclty that, and the operator will provide it with the dataset sparql endpoint in an enviroment variable with the name DATASET_ENDPOINT.
+-Under _spec.image_ you must define an image that deploys your federator on a server.  
 
--The name of an image that expects to find a set of config files and combine them to one config file .Again user can set input and output directories that
-his image expects to read the small config files from and to write the combined file.
+-Under _spec.port_ you must define the port your federator's endpoint listens to 
 
--The path that the federator needs its config files to be f.e etc/default/semagrow.The operator will make sure the above metadata file is reside at that path on the container
-of the federeator
--The suffix of the federator's sparql endpoing f.e <endpoint>:<port>/SemaGrow/sparql .
-The <endpoint>:<port> is provided by the operator based on the internal networking but the rest should be provided in the yaml since it is different based on the federator.
+-Under _spec.sparqlEnding_ you must provide the suffixe of your federators sparql endpoint .
+ For example for semagrow which listens to `<internal-endpoint>:<port>/SemaGrow/sparql` 
+ then `sparqlEnding: /SemaGrow/sparql `
+ 
+ -Under the _spec.fedConfDir_ you must specify the directory your federator expects to find its metadata files 
+ in order to operate properly.For semagrow that is _/etc/default/semagrow_
+ 
+ -Under _spec.confFromFileImage_ you must provide the name of an image that does the following.
+ It reads from /kobe/input dump files of a dataset and writes at /kobe/output metadata configuration files for that dataset.
+ It can also instead query the database endpoint to create the metadata file since we provide the init container 
+ with thes environment variable END_POINT=".."
+ The read and write directories of your image can be changed from the following 2 fields in the yaml
+ _spec.inputDumpDir_ and _spec.outputDumpDir_ if its convenient.They automatically default to /kobe/input , /kobe/output
+
+ -Under _spec.ConfImage_ you must provide the name of an image that does the following.
+ It read from /kobe/input a set of different metadata files and combines them to one big configuration file of metadata for
+ the experiment. For semagrow we just need to turn each dataset metadata from ttl to nt then cat them and turn them back to   .ttl. Again you can change the input and output directories your image expects to find the files and write to ,with the 
+ following fields _.spec.inputDir_ and _.spec.outputDir_ .
+ 
+ If the above are specified as described after the init process the federator will have the correct metadata file
+ in the directory it expects it.
 
 ## KobeExperiment ##
 A Kobe experiment resource defines the actual experiment. It consists of a federator (a KobeFederator resource) that will get benchmarked.
 Also it requires the name of a benchmark that will be used (a KobeBenchmark resource).
-The operator will first create a federation based on the set of datasets and the federator and will try to initialize everything
-before creating a job that will run the standard kobe evaluation program (as many times as specified by the user in the yaml). If metadata files need to be created then this can take 
-a lot based on datasets' sizes but operator makes sure the job will run after everything else is done.
+The yaml archetype is the following:
+```
+apiVersion: kobeexperiment.kobe.com/v1alpha1
+kind: KobeExperiment
+metadata:
+  name: kobeexp1
+spec:
+  benchmark: cross-domain  # a kobe benchmark resource
+  federator: semagrow      # a kobe federator resource
+  timesToRun: 1            
+  dryRun: true
+  forceNewInit: false 
+  evalImage: kostbabis/kobe-evaluator  #the eval image for kobe-operator
+ 
+```
+-Under _spec.timesToRun_ : define the number of times you want the benchmark experiment to repeat.
+
+-Under _spec.dryRun_ : if set to true the federation will be created and the federator initialized and the health checks 
+will also happen but the experiment will hang there and no eval job will run till this flag is changed.
+
+-Under _forceNewInit_ : if set to true it will always try to run the init image that create a metadata file from a dataset.
+If set to false it will check and use preexisting metadata files if they exist for a pair of dataset -federator.
+It can be used to save time since metadata extraction for big dataset take a long time and makes sense to not repeat this process.
+This affects only the first init process with the image that makes a metadata file from a dataset dump or endpoint.
+The second init process that combines many init files to one will always run again before init complete.
