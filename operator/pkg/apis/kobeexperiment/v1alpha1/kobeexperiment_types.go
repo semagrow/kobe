@@ -36,7 +36,7 @@ type KobeExperimentSpec struct {
 	Benchmark string `json:"benchmark"`
 	//Federator    []Fed    `json:"federator"`
 	Federator    string `json:"federator"`
-	RunFlag      bool   `json:"runFlag"`
+	DryRun       bool   `json:"dryRun"`
 	TimesToRun   int    `json:"timesToRun"`
 	ForceNewInit bool   `json:"forceNewInit"`
 

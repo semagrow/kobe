@@ -3,14 +3,13 @@ kind: KobeFederator
 metadata:
   name: semagrow
 spec:
-  # Add fields here
   image: semagrow/semagrow
   imagePullPolicy: Always
   port: 8080
-  confFromFileImage: kostbabis/semagrow-init
-  inputFileDir: /sevod-scraper/input
-  outputFileDir: /sevod-scraper/output
-  confImage: kostbabis/semagrow-init-all
+  confFromFileImage: kostbabis/semagrow-init #matadata file image from dump or endpoint
+  inputDumpDir: /sevod-scraper/input
+  outputDumpDir: /sevod-scraper/output
+  confImage: kostbabis/semagrow-init-all #init image metadata from many
   inputDir: /kobe/input
   outputDir: /kobe/output
   fedConfDir: /etc/default/semagrow

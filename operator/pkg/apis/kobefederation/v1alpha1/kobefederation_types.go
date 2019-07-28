@@ -19,8 +19,8 @@ type KobeFederationSpec struct {
 	Affinity          types.Affinity   `json:"affinity"` //choose which nodes the fed likes to run in
 	Port              int32            `json:"port"`
 	ConfFromFileImage string           `json:"confFromFileImage"` //image that makes init file from dump or endpoint
-	InputFileDir      string           `json:"inputFileDir"`      //where the above image expects the dump to be(if from dump)
-	OutputFileDir     string           `json:"outputFileDir"`     //where the above image will place its result config file
+	InputDumpDir      string           `json:"inputDumpDir"`      //where the above image expects the dump to be(if from dump)
+	OutputDumpDir     string           `json:"outputDumpDir"`     //where the above image will place its result config file
 	ConfImage         string           `json:"confImage"`         //image that makes one init file from multiple init files
 	InputDir          string           `json:"inputDir"`
 	OutputDir         string           `json:"outputDir"`

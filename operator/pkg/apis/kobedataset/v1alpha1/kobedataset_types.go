@@ -15,7 +15,7 @@ type KobeDatasetSpec struct {
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
 	Image           string           `json:"image"`
-	ToDownload      bool             `json:"toDownload"`
+	ForceLoad       bool             `json:"forceLoad"`
 	DownloadFrom    string           `json:"downloadFrom"`
 	ImagePullPolicy types.PullPolicy `json:"imagePullPolicy"`
 	Count           int32            `json:"count"`

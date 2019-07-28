@@ -6,6 +6,6 @@ spec:
   benchmark: cross-domain
   federator: semagrow
   timesToRun: 1
-  runFlag: true
+  dryRun: true
   forceNewInit: false 
   evalImage: kostbabis/kobe-evaluator

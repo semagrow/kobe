@@ -6,6 +6,6 @@ spec:
   benchmark: kobebenchmark1
   federator: semagrow
   timesToRun: 1
-  runFlag: false
-  forceNewInit: true
-  evalImage: kostbabis/kobe-evaluator
+  dryRun: true
+  forceNewInit: false
+  evalImage: nginx

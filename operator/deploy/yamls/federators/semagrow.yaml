@@ -7,8 +7,8 @@ spec:
   imagePullPolicy: Always
   port: 8080
   confFromFileImage: kostbabis/semagrow-init #matadata file image from dump or endpoint
-  inputFileDir: /sevod-scraper/input
-  outputFileDir: /sevod-scraper/output
+  inputDumpDir: /sevod-scraper/input
+  outputDumpDir: /sevod-scraper/output
   confImage: kostbabis/semagrow-init-all #init image metadata from many
   inputDir: /kobe/input
   outputDir: /kobe/output

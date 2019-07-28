@@ -3,12 +3,12 @@
 cd /data
 
 mkdir -p dumps
-if [ "$DOWNLOAD_URL" ] &&  [ -d "/kobe/dataset/$DATASET_NAME" ]; then
+if [ "$FORCE_LOAD" ] &&  [ -d "/kobe/dataset/$DATASET_NAME" ]; then
     echo "removing old files completely"   
     rm -r /kobe/dataset/$DATASET_NAME
 fi
 
-if  [ "$DATASET_NAME" ] &&[ ! -f "/kobe/dataset/$DATASET_NAME/.data_loaded" ]  ;
+if  [ "$DATASET_NAME" ] && [ ! -f "/kobe/dataset/$DATASET_NAME/.data_loaded" ]  ;
 then
 
     if [ "$DOWNLOAD_URL" ]; then

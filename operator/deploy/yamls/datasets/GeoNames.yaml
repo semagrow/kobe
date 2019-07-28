@@ -5,9 +5,8 @@ metadata:
 spec:
   # Add fields here
   image: kostbabis/virtuoso
-  toDownload: true
+  forceLoad: false
   downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/GeoNames.tar.gz
   count: 1
-  group: kobe
   port: 8890
 

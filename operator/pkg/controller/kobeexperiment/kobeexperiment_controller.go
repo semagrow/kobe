@@ -221,7 +221,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	}
 
 	//Everything is healthy and ready for the experiment.
-	if instance.Spec.RunFlag == false { //dont run just yet just have it defined
+	if instance.Spec.DryRun == true { //dont run just yet just have it defined
 		return reconcile.Result{}, nil
 	}
 
@@ -332,8 +332,8 @@ func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobeexperimentv1
 			Affinity:          fed.Spec.Affinity,
 			Port:              fed.Spec.Port,
 			ConfFromFileImage: fed.Spec.ConfFromFileImage,
-			InputFileDir:      fed.Spec.InputFileDir,
-			OutputFileDir:     fed.Spec.OutputFileDir,
+			InputDumpDir:      fed.Spec.InputDumpDir,
+			OutputDumpDir:     fed.Spec.OutputDumpDir,
 			ConfImage:         fed.Spec.ConfImage,
 			InputDir:          fed.Spec.InputDir,
 			OutputDir:         fed.Spec.OutputDir,
