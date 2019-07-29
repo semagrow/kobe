@@ -196,6 +196,8 @@ After your define the experiment apply it again with
 To see the progress you can use `kubectl get pods` .The federation (that is the federator initialized with a set of datasets) will be the pod with a name same as the KobeExperiment.metadata.name .You can see there the stage of the init containers that run the init process .
 You can also use `kubectl logs <federation-pod> -c initcontainer{0..x} ` to check the process of each one of the init containers as well.
 Keep in mind that if forceNewInit is false only init containers that correspond to federator-dataset pairs that haven't initialized in the past will spawn.
+To see the logs of the second init image of your federator use the 
+`kubectl logs <federation-pod> -c initfinal `
 
 After the init process is done a set of jobs will spawn sequentially based on timesToRun number that will run the eval program. The previous job needs to end before the next will start.
 Currently to get the result of your benchmark you have to see the logs of these jobs using
