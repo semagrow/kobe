@@ -7,6 +7,10 @@ and mantain the necessary components in kubernetes without the user having to wo
 
 ## Deployment of the operator in kubernetes ## 
 First clone this project and get in the kobe/operator directory and checkout the feat-k8s-operator branch. 
+`git clone https://github.com/kostbabis/kobe` 
+
+`git checkout feat-k8s-operator`
+
 To build the operator go to operator/build and use the command `docker build -t <operator-image-name> . ` . 
 Push that image to a public registry.Alternative just use the already made image kostbabis/kobe-operator.
 
