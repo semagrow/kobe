@@ -38,7 +38,7 @@ Then go to *operator/deploy/init/crds* and use
 
 Finally go to *operator/deploy/init/operator-deploy* and use 
 `kubectl create -f operator.yaml`
-You will get a confirmation male that each resource has successfully been created.
+You will get a confirmation message that each resource has successfully been created.
 
 This will set the operator running in your kubernetes cluster and needs to be done only once.
 
