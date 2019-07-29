@@ -199,6 +199,7 @@ Keep in mind that if forceNewInit is false only init containers that correspond 
 To see the logs of the second init image of your federator use the 
 `kubectl logs <federation-pod> -c initfinal `
 
-After the init process is done a set of jobs will spawn sequentially based on timesToRun number that will run the eval program. The previous job needs to end before the next will start.
+After the init process is done a set of jobs will spawn sequentially based on timesToRun number.Those jobs  will run the evaluation program. The previous job needs to end before the next will start and the experiments will not run in parallel..
 Currently to get the result of your benchmark you have to see the logs of these jobs using
 `kubectl logs <federation-<job_number>-<job hash> > `. This will print the result to your screen.
+To find the jobs pod name you can use `kubectl get pods`
