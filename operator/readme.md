@@ -7,6 +7,7 @@ and mantain the necessary components in kubernetes without the user having to wo
 
 ## Deployment of the operator in kubernetes ## 
 First clone this project and get in the kobe/operator directory and checkout the feat-k8s-operator branch. 
+
 `git clone https://github.com/kostbabis/kobe` 
 
 `git checkout feat-k8s-operator`
