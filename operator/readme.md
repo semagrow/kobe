@@ -37,7 +37,7 @@ You will get a confirmation male that each resource has successfully been create
 
 This will set the operator running in your kubernetes cluster and needs to be done only once.
 
-**You might also need to install nfs-common to every node in your cluster if it doesn't already exists else the mounts to the nfs server used for caching will not work. F.e use apt install nfs-common**
+**You might also need to install nfs-common to every node in your cluster if it doesn't already exists else the mounts to the nfs server used for caching will not work. For example in ubuntu use apt install nfs-common**
 
 The general procedure of running an experiment is this. First you create a set of datasets by defining new **KobeDatasets** 
 recources.Then you define one or more **KobeBenchmark** resources and one or more **KobeFederators** .At last you define a **KobeExperiment**. Everything is explained below.
