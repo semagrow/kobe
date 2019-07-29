@@ -61,8 +61,8 @@ spec:
 After writing the yaml of the dataset in the above format apply it 
 `kubectl apply -f my-kobe-dataset.yaml`.
 You will get a confirmation message. You can also check the progress of the dataset creation by using
-`kubectl get pods ` and `kubectl logs <kobedataset-podname> `
-Define many of these datasets depending on the experiments you want to run.One dataset can be used in many experiments and needs to only be defined once.
+`kubectl get pods ` and `kubectl logs <kobedataset-podname> `. 
+Define many of these datasets depending on the experiments you want to run. One dataset can be used in many experiments and needs to only be defined once.
 You can also find already made dataset definition under _operator/deploy/yamls/datasets/_  for a few datasets including a subset of dbpedia.
 
 
@@ -122,35 +122,35 @@ spec:
   outputDir: /kobe/output
  
 ```
-Specifically 
-- Under _spec.image_: here you must define an image that deploys your federator. For example in tha above yaml the semagrow/semagrow image deploys semagrow on a tomcat server
+Specifically define these:
+- Under _spec.image_: here you must define an image that deploys your federator. For example in the above yaml the semagrow/semagrow image deploys semagrow on a tomcat server
 
-- Under _spec.port_: here you must define the port that your federator's endpoint listens to 
+- Under _spec.port_: here you must define the port that your federator's endpoint listens to.
 
 - Under _spec.sparqlEnding_: you must provide the suffixe of your federators sparql endpoint .
  For example for semagrow which listens to `<internal-endpoint>:<port>/SemaGrow/sparql` then `sparqlEnding: /SemaGrow/sparql ` .The `<internal-endpoint>:<port>` will be provided by the operator to where its needed and you dont have to set this    anywhere.
  
  - Under the _spec.fedConfDir_ you must specify the directory your federator expects to find its metadata files 
- in order to operate properly.For semagrow that is _/etc/default/semagrow_
+ in order to operate properly. For semagrow that is _/etc/default/semagrow_ .
  
  - Under _spec.confFromFileImage_ you must provide the name of an image that does the following.
  It creates a container thatreads from _/kobe/input_ dump files of a dataset and writes at _/kobe/output_ metadata configuration files for that dataset.
- It can also instead query dircetly the database sparql endpoint to create the metadata file since we provide the init container with an environment variable called `END_POINT` which contains the full url of the sparql endpoint of the dataset
+ It can also instead query directly the database sparql endpoint to create the metadata file since we provide the init container with an environment variable called `END_POINT` which contains the full url of the sparql endpoint of the dataset
  
- The image should be oblivious of what dataset it makes the metadata for and incorporate only the necessary logic to make   that file. For example with semagrow we provide the image that uses the sevod-scraper (check it under semagrow in github) 
+ The image should be oblivious of what dataset it makes the metadata for and incorporate only the necessary logic to make   that file. For example with semagrow we provide an image that uses the sevod-scraper (check it under semagrow in github) 
  to process the dump files of a dataset (f.e dbpedia) and return a dbpedia.ttl file for this specific set.
  The read and write directories of your image can be changed from the following 2 fields in the yaml
  _spec.inputDumpDir_ and _spec.outputDumpDir_ if its convenient.
  They automatically default to _/kobe/input_ , _/kobe/output_
 
  -Under _spec.ConfImage_ you must provide the name of an image that does the following.
- It reads from _/kobe/input_ a set of different metadata files and combines them to one big configuration file of metadata for the experiment.
+ It reads from _/kobe/input_ a set of different metadata files and combines them to one big configuration file of metadata for the benchmark.
 Your image should not care about what datasets the files belong to and only do the union of them .
 For example, with semagrow we just need to turn each dataset metadata from .ttl to .nt then concatenate them and turn them back to .ttl. 
-Again if you want you can change the input and output directories your image expects to find the files and write to ,with the following fields _.spec.inputDir_ and _.spec.outputDir_ .
+Again if you want to change the input and output directories your image expects to find the files and write to , you can with the following fields _.spec.inputDir_ and _.spec.outputDir_ .
  
- If the above are specified as described after the init process the federator will have the correct metadata file
- in the directory it expects it.
+ If the above are specified as described ,after the init process the federator will have the correct metadata file
+ in the directory it expects to.
  
  Apply the federator yaml again with
  `kubectl apply -f my-kobe-federator.yaml`
@@ -182,10 +182,10 @@ you defined earlier.
 
 - Under _spec.timesToRun_ : define the number of times you want the benchmark experiment to repeat.
 
-- Under _spec.dryRun_ : if set to true the federation will be created and the federator initialized and the health checks 
-will also happen but the experiment will hang there and no eval job will run till this flag is changed.
+- Under _spec.dryRun_ : if set to true the federation will be created and the federator initialized . The health checks 
+will also happen but the experiment will hang there and no evaluation job will run till this flag is changed.
 
-- Under _forceNewInit_ : if set to true it will always try to run the init image that create a metadata file from a dataset.
+- Under _forceNewInit_ : if set to true it will always try to run the init image that create a metadata file from a dataset for this federator.
 If set to false it will check and use preexisting metadata files if they exist for a pair of dataset - federator.
 It can be used to save time since metadata extraction for big dataset take a long time and makes sense to not repeat this process.
 This affects only the first init process with the image that makes a metadata file from a dataset dump or endpoint.
@@ -193,10 +193,10 @@ The second init process that combines many init files to one will always run aga
 
 After your define the experiment apply it again with
 `kubectl apply -f my-kobe-experimen.yaml ` 
-To see the progress you can use `kubectl get pods` .The federation (that is the federator initialized with a set of datasets) will be the pod with a name same as the KobeExperiment.metadata.name .You can see the stage of the init containers that run the init process .
-You can also use `kubectl logs <federation-pod> -c initcontainer{0..x} ` to check the process of each one of them as well.
+To see the progress you can use `kubectl get pods` .The federation (that is the federator initialized with a set of datasets) will be the pod with a name same as the KobeExperiment.metadata.name .You can see there the stage of the init containers that run the init process .
+You can also use `kubectl logs <federation-pod> -c initcontainer{0..x} ` to check the process of each one of the init containers as well.
 Keep in mind that if forceNewInit is false only init containers that correspond to federator-dataset pairs that haven't initialized in the past will spawn.
 
-After the init process is done a set of jobs will spawn sequentially based on timesToRun number that will run the eval program. 
+After the init process is done a set of jobs will spawn sequentially based on timesToRun number that will run the eval program. The previous job needs to end before the next will start.
 Currently to get the result of your benchmark you have to see the logs of these jobs using
 `kubectl logs <federation-<job_number>-<job hash> > `. This will print the result to your screen.
