@@ -96,8 +96,9 @@ spec:
 ```
 - Under _spec.datasets.name[*]_ you must write down the name of the datasets your benchmark will include. The names must
 be the same as the metadata.name of the KobeDataset custom resources defined above.
-- Under _spec.queries[*]_ you must write down the queries of your benchmark. Query name is the name of the query .Language 
-for now should always be sparql and queryString should be the string that contains your query.
+- Under _spec.queries[*]_ you must write down the queries of your benchmark. Query name is the name of the query . 
+Language for now should always be set to sparql and queryString should be the string that contains your query.
+Define as many queries as you want here.
 Apply the yaml again by issuing `kubectl apply -f my-kobe-benchmark.yaml`.
 You will get a message that the resource has been created
 
