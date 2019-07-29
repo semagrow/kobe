@@ -205,18 +205,18 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: podname}, foundPod)
 		if err != nil && errors.IsNotFound(err) {
 			reqLogger.Info("Failed to get the pod of the kobe federation that experiment will use")
-			return reconcile.Result{RequeueAfter: 5}, nil
+			return reconcile.Result{RequeueAfter: 25}, nil
 		}
 		var test string
 		test = string(foundPod.Status.Phase)
 		if test != "Running" {
 			reqLogger.Info("Kobe federation pod is not ready so experiment needs to wait")
-			return reconcile.Result{RequeueAfter: 5}, nil
+			return reconcile.Result{RequeueAfter: 25}, nil
 		}
 	}
 	if podNames == nil || len(podNames) == 0 {
 		reqLogger.Info("Experiment waits for components initialization")
-		return reconcile.Result{RequeueAfter: 5}, nil
+		return reconcile.Result{RequeueAfter: 25}, nil
 
 	}
 

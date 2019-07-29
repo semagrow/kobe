@@ -237,7 +237,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 	}
 
 	if podNames == nil && len(podNames) == 0 {
-		return reconcile.Result{RequeueAfter: 15}, nil
+		return reconcile.Result{RequeueAfter: 25}, nil
 	}
 	if podNames != nil && len(podNames) > 0 {
 		instance.Spec.ForceLoad = false
