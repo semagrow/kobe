@@ -35,6 +35,8 @@ Finally go to *operator/deploy/init/operator-deploy* and use
 
 This will set the operator running in your kubernetes cluster and needs to be done only once.
 
+**You might also need to install nfs-common to every node in your cluster if the kobe datasets cant mount from the nfs server (their pods fail to get created )**
+
 ## KobeDataset ##
 The KobeDataset custom resource defines a dataset that could be used in an experiment.
 The operator will create and mantain a pod that runs a virtuoso instance with that dataset. It will also cache the db file and dump files for future retrieval if the pod dies and restarts or if the user deletes the kobedataset and want to redefine it. The yaml archetype is the following:
