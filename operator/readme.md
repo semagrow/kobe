@@ -10,6 +10,8 @@ First clone this project and get in the kobe/operator directory and checkout the
 
 `git clone https://github.com/kostbabis/kobe` 
 
+`cd kobe/operator`
+
 `git checkout feat-k8s-operator`
 
 To build the operator go to operator/build and use the command `docker build -t <operator-image-name> . ` . 
