@@ -98,7 +98,7 @@ You will get a message that the resource has been created
 
 ## KobeFederator ##
 A KobeFederator resource defines a federator. For semagrow the yaml is already supplied under _operator/deploy/yamls/federators_.
-For a federator in general in order to be able to get benchmarked with kobe some things need to supplied that will be described in detail in a bit.
+For a federator in general in order to be able to get benchmarked with kobe some things need to be supplied.Those will be described in detail in a bit.
 The yaml archetype is the following. 
 
 ```
