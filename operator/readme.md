@@ -5,7 +5,7 @@ It is a kubernetes operator that allows the user to define the benchmark experim
 that desrcibe new kubernetes custom resources .The kobe-operator will use those resources to create 
 and mantain the necessary components in kubernetes without the user having to worry about them.
 
-## Deployment of the operator in kubernetes## 
+## Deployment of the operator in kubernetes ## 
 First clone this project and get in the kobe/operator directory and checkout the feat-k8s-operator branch. 
 To build the operator go to operator/build and use the command `docker build -t <operator-image-name> . ` . 
 Push that image to a public registry.Alternative just use the already made image kostbabis/kobe-operator.
