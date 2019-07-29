@@ -6,7 +6,8 @@ that desrcibe new kubernetes custom resources .The kobe-operator will use those 
 and mantain the necessary components in kubernetes without the user having to worry about them.
 
 ## Deployment of the operator in kubernetes## 
-To build the operator go to operator/build and use the command 'docker build -t <operator-image-name>' . 
+First clone this project and get in the kobe/operator directory and checkout the feat-k8s-operator branch. 
+To build the operator go to operator/build and use the command `docker build -t <operator-image-name> . ` . 
 Push that image to a public registry.Alternative just use the already made image kostbabis/kobe-operator.
 
 To deploy the operator first go to *operator/deploy/init/cluster* and use 
@@ -32,14 +33,18 @@ Then go to *operator/deploy/init/crds* and use
 
 Finally go to *operator/deploy/init/operator-deploy* and use 
 `kubectl create -f operator.yaml`
+You will get a confirmation male that each resource has successfully been created.
 
 This will set the operator running in your kubernetes cluster and needs to be done only once.
 
-**You might also need to install nfs-common to every node in your cluster if the kobe datasets cant mount from the nfs server (their pods fail to get created )**
+**You might also need to install nfs-common to every node in your cluster if it doesn't already exists else the mounts to the nfs server used for caching will not work. F.e use apt install nfs-common**
+
+The general procedure of running an experiment is this. First you create a set of datasets by defining new **KobeDatasets** 
+recources.Then you define one or more **KobeBenchmark** resources and one or more **KobeFederators** .At last you define a **KobeExperiment**. Everything is explained below.
 
 ## KobeDataset ##
 The KobeDataset custom resource defines a dataset that could be used in an experiment.
-The operator will create and mantain a pod that runs a virtuoso instance with that dataset. It will also cache the db file and dump files for future retrieval if the pod dies and restarts or if the user deletes the kobedataset and want to redefine it. The yaml archetype is the following:
+The operator will create and mantain a pod that runs a virtuoso instance with that dataset. It will also cache the db file and dump files for future retrieval if the pod dies and restarts or if the user deletes the kobedataset and want to redefine it . The yaml archetype is the following:
 
 ```apiVersion: kobedataset.kobe.com/v1alpha1
 kind: KobeDataset
@@ -54,13 +59,17 @@ spec:
   port: 8890                  #the port it listens to (it defaults to 8890)
 ```
 After writing the yaml of the dataset in the above format apply it 
-`kubectl apply -f my-kobe-dataset.yaml`
+`kubectl apply -f my-kobe-dataset.yaml`.
+You will get a confirmation message. You can also check the progress of the dataset creation by using
+`kubectl get pods ` and `kubectl logs <kobedataset-podname> `
 Define many of these datasets depending on the experiments you want to run.One dataset can be used in many experiments and needs to only be defined once.
+You can also find already made dataset definition under _operator/deploy/yamls/datasets/_  for a few datasets including a subset of dbpedia.
 
-## KobeBenchmark ## 
+
+## KobeBenchmark ##
 A KobeBenchmark custom resource defines a benchmark in kobe. 
-A benchmark consists of a set of datasets (chosen by name) that must be already  defined with the KobeDataset resources 
-like its described above. It also contains the definition of one or more sparql queries.In order for the benchmark to be meaningfull the set of datasets should suffice for those queries.
+A benchmark consists of a set of datasets that must be already  defined with the KobeDataset resources 
+like its described above. It also contains the definition of one or more sparql queries that are gonna get tested against the datasets in the benchmark.
 The yaml is the following:
 ```
 apiVersion: kobebenchmark.kobe.com/v1alpha1
@@ -80,11 +89,16 @@ spec:
       language: sparql
       queryString: "SELECT ?predicate ?object WHERE { ............"
 ```
-
+- Under _spec.datasets.name[*]_ you must write down the name of the datasets your benchmark will include. The names must
+be the same as the metadata.name of the KobeDataset custom resources defined above.
+- Under _spec.queries[*]_ you must write down the queries of your benchmark. Query name is the name of the query .Language 
+for now should always be sparql and queryString should be the string that contains your query.
+Apply the yaml again by issuing `kubectl apply -f my-kobe-benchmark.yaml`.
+You will get a message that the resource has been created
 
 ## KobeFederator ##
-A KobeFederator resource defines a federator. For semagrow the yaml is already supplied here.
-For a federator in general in order to be "kobe ready"  some things need to supplied that will be described in detail.
+A KobeFederator resource defines a federator. For semagrow the yaml is already supplied under _operator/deploy/yamls/federators_.
+For a federator in general in order to be able to get benchmarked with kobe some things need to supplied that will be described in detail in a bit.
 The yaml archetype is the following. 
 
 ```
@@ -108,28 +122,32 @@ spec:
   outputDir: /kobe/output
  
 ```
+Specifically 
+- Under _spec.image_: here you must define an image that deploys your federator. For example in tha above yaml the semagrow/semagrow image deploys semagrow on a tomcat server
 
--Under _spec.image_ you must define an image that deploys your federator on a server.  
+- Under _spec.port_: here you must define the port that your federator's endpoint listens to 
 
--Under _spec.port_ you must define the port your federator's endpoint listens to 
-
--Under _spec.sparqlEnding_ you must provide the suffixe of your federators sparql endpoint .
+- Under _spec.sparqlEnding_: you must provide the suffixe of your federators sparql endpoint .
  For example for semagrow which listens to `<internal-endpoint>:<port>/SemaGrow/sparql` 
- then `sparqlEnding: /SemaGrow/sparql `
+ then `sparqlEnding: /SemaGrow/sparql ` .The `<internal-endpoint>:<port>` will be provided by the operator to where 
+ its needed and you dont have to set this anywhere.
  
- -Under the _spec.fedConfDir_ you must specify the directory your federator expects to find its metadata files 
+ - Under the _spec.fedConfDir_ you must specify the directory your federator expects to find its metadata files 
  in order to operate properly.For semagrow that is _/etc/default/semagrow_
  
- -Under _spec.confFromFileImage_ you must provide the name of an image that does the following.
- It reads from /kobe/input dump files of a dataset and writes at /kobe/output metadata configuration files for that dataset.
- It can also instead query the database endpoint to create the metadata file since we provide the init container 
- with thes environment variable END_POINT=".."
+ - Under _spec.confFromFileImage_ you must provide the name of an image that does the following.
+ It creates a container thatreads from _/kobe/input_ dump files of a dataset and writes at _/kobe/output_ metadata configuration files for that dataset.
+ It can also instead query dircetly the database sparql endpoint to create the metadata file since we provide the init container with an environment variable called `END_POINT` which contains the full url of the sparql endpoint of the dataset
+ 
+ The image should be oblivious of what dataset it makes the metadata for and incorporate only the necessary logic to make that file. For example with semagrow we provide the image that uses the sevod-scraper (check it under semagrow in github) 
+ to process the dump files of a dataset (f.e dbpedia) and return a dbpedia.ttl file for this specific set.
  The read and write directories of your image can be changed from the following 2 fields in the yaml
- _spec.inputDumpDir_ and _spec.outputDumpDir_ if its convenient.They automatically default to /kobe/input , /kobe/output
+ _spec.inputDumpDir_ and _spec.outputDumpDir_ if its convenient.
+ They automatically default to _/kobe/input_ , _/kobe/output_
 
  -Under _spec.ConfImage_ you must provide the name of an image that does the following.
- It read from /kobe/input a set of different metadata files and combines them to one big configuration file of metadata for
- the experiment. For semagrow we just need to turn each dataset metadata from ttl to nt then cat them and turn them back to   .ttl. Again you can change the input and output directories your image expects to find the files and write to ,with the 
+ It read from `/kobe/input` a set of different metadata files and combines them to one big configuration file of metadata forthe experiment. 
+For semagrow we just need to turn each dataset metadata from .ttl to .nt then concatenate them and turn them back to .ttl. Again you can change the input and output directories your image expects to find the files and write to ,with the 
  following fields _.spec.inputDir_ and _.spec.outputDir_ .
  
  If the above are specified as described after the init process the federator will have the correct metadata file
