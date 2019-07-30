@@ -1,53 +1,80 @@
-## Kobe Benchmark operator in Kubernetes ##
-The kobe benchmark operator extends the kobe benchmarking tool so one can setup it easily 
-in a cluster that runs kubernetes.
-It is a kubernetes operator that allows the user to define the benchmark experiment by applying a set of yaml files 
-that desrcibe new kubernetes custom resources .The kobe-operator will use those resources to create 
-and mantain the necessary components in kubernetes without the user having to worry about them.
+# KOBE operator
 
-## Deployment of the operator in kubernetes ## 
-First clone this project and get in the kobe/operator directory and checkout the feat-k8s-operator branch. 
+The KOBE operator acts as the orchestrator of the different components 
+needed for a KOBE experiment to be deployed in a cluster of machines.
 
-`git clone https://github.com/kostbabis/kobe` 
+In order to achieve this, the KOBE operator integrates tightly with [Kubernetes](https://kubernetes.io/).
+In particular it is a Kubernetes [operator](https://coreos.com/operators/) 
+that allows the user to apply KOBE-specific resources to a Kubernetes cluster.
+Such resources are 
+[KobeDataset](docs/api.md#kobedataset), 
+[KobeFederator](docs/api.md#kobefederator), 
+[KobeBenchmark](docs/api.md#kobebenchmark) and 
+[KobeExperiment](docs/api.md#kobeexperiment).
 
-`cd kobe/operator`
+The KOBE operator implements the custom logic needed to react in those
+KOBE-specific resources changes and maintain the necessary services in Kubernetes.
 
-`git checkout feat-k8s-operator`
+Once installed, the KOBE operator provides the following features:
+* feature 1
+* feature 2
+* feature 3
 
-To build the operator go to operator/build and use the command `docker build -t <operator-image-name> . ` . 
-Push that image to a public registry.Alternative just use the already made image kostbabis/kobe-operator.
+## Prerequisites
 
-To deploy the operator first go to *operator/deploy/init/cluster* and use 
-`kubectl create -f clusterrole.yaml`
+The KOBE operator requires a Kubernetes cluster of version `>=1.8.0`.
+If you are just starting out with the KOBE, it is recommended to use the 
+latest version.
 
-`kubectl create -f cluster_role_binding.yaml`
+The KOBE operator also requires `nfs-common` to be installed in every node
+in your cluster. For example, in Ubuntu you can use `apt-get install nfs-common`.
 
-`kubectl create -f service_account.yaml `
+## CustomResourceDefinitions
 
-Then go to *operator/deploy/init/crds* and use 
-`kubectl create -f kobedataset_v1alpha1_kobedataset_crd.yaml`
+The operator acts on the following customr resource definitions (CRDs):
 
-`kubectl create -f kobebenchmark_v1alpha1_kobebenchmark_crd.yaml `
+* `KobeDataset` which defines a dataset that could be used in an experiment. 
+* `KobeFederator` which defines a federator that could be used in an experiment.
+* `KobeBenchmark` which defines a benchmark in KOBE, that is essentially the set of datasets and the set of queries.
+* `KobeExperiment` which defines an experiment, that is, a benchmark, a federator to be benchmarked and a query evaluator.
 
-`kubectl create -f kobefederator_v1alpha1_kobefederator_crd.yaml `
+To learn more about the CRDs have a look at the [API doc](docs/api.md).
 
-`kubectl create -f kobefederation_v1alpha1_kobefederation_crd.yaml`
+## Quickstart
 
-`kubectl create -f kobeexperiment_v1alpha1_kobeexperiment_crd.yaml  `
+To quickly install the KOBE operator in a Kubernetes cluster, run the
+following commands:
+```
+kubectl apply -f operator/deploy/init/cluster
+kubectl apply -f operator/deploy/init/crds
+kubectl apply -f operator/deploy/init/operator-deploy/operator.yaml
+```
 
-`kubectl create -f kobeutil_v1alpha1_kobeutil_crd.yaml  `
-
-
-Finally go to *operator/deploy/init/operator-deploy* and use 
-`kubectl create -f operator.yaml`
 You will get a confirmation message that each resource has successfully been created.
 
 This will set the operator running in your kubernetes cluster and needs to be done only once.
 
-**You might also need to install nfs-common to every node in your cluster if it doesn't already exists else the mounts to the nfs server used for caching will not work. For example in ubuntu use apt install nfs-common**
+## Removal
 
-The general procedure of running an experiment is this. First you create a set of datasets by defining new **KobeDatasets** 
-recources.Then you define one or more **KobeBenchmark** resources and one or more **KobeFederators** . At last you define a **KobeExperiment**. Everything is explained below.
+TBA
+
+## Example
+
+The typical workflow of defining a KOBE experiment is the following.
+1. Create a set of datasets by defining new [KobeDatasets](docs/api.md#kobedataset)
+2. Define one or more [KobeBenchmark](docs/api.md#kobebenchmark)
+   and one or more [KobeFederators](docs/api.md#kobefederator).
+3. Define a [KobeExperiment](docs/api.md#kobeexperiment).
+
+A simple example can be found in the `examples` directory.
+
+## Developing
+
+### Prerequisites
+* golang environment
+* docker (used to create container images, etc)
+
+# To be removed eventually
 
 ## KobeDataset ##
 The KobeDataset custom resource defines a dataset that could be used in an experiment.
