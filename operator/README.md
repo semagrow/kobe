@@ -61,12 +61,12 @@ TBA
 ## Example
 
 The typical workflow of defining a KOBE experiment is the following.
-1. Create a set of datasets by defining new [KobeDatasets](docs/api.md#kobedataset)
+1. Create a set of datasets by defining new [KobeDataset](docs/api.md#kobedataset)s
 2. Define one or more [KobeBenchmark](docs/api.md#kobebenchmark)
-   and one or more [KobeFederators](docs/api.md#kobefederator).
+   and one or more [KobeFederator](docs/api.md#kobefederator)s.
 3. Define a [KobeExperiment](docs/api.md#kobeexperiment).
 
-A simple example can be found in the `examples` directory.
+A simple example can be found in the [examples](examples/) directory.
 
 ## Developing
 
