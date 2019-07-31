@@ -80,7 +80,8 @@ A simple example can be found in the [examples](examples/) directory.
 The KobeDataset custom resource defines a dataset that could be used in an experiment.
 The operator will create and mantain a pod that runs a virtuoso instance with that dataset. It will also cache the db file and dump files for future retrieval if the pod dies and restarts or if the user deletes the kobedataset and want to redefine it . The yaml archetype is the following:
 
-```apiVersion: kobedataset.kobe.com/v1alpha1
+```yaml
+apiVersion: kobedataset.kobe.com/v1alpha1
 kind: KobeDataset
 metadata:
   name: dbpedia               #the name of the dataset (must be small letters and <15 chars)
@@ -105,7 +106,7 @@ A KobeBenchmark custom resource defines a benchmark in kobe.
 A benchmark consists of a set of datasets that must be already  defined with the KobeDataset resources 
 like its described above. It also contains the definition of one or more sparql queries that are gonna get tested against the datasets in the benchmark.
 The yaml is the following:
-```
+```yaml
 apiVersion: kobebenchmark.kobe.com/v1alpha1
 kind: KobeBenchmark
 metadata:
@@ -134,9 +135,9 @@ You will get a message that the resource has been created
 ## KobeFederator ##
 A KobeFederator resource defines a federator. For semagrow the yaml is already supplied under _operator/deploy/yamls/federators_.
 For a federator in general in order to be able to get benchmarked with kobe some things need to be supplied.Those will be described in detail in a bit.
-The yaml archetype is the following. 
+The yaml archetype is the following.
 
-```
+```yaml
 apiVersion: kobefederator.kobe.com/v1alpha1
 kind: KobeFederator
 metadata:
@@ -155,7 +156,6 @@ spec:
   confImage: kostbabis/semagrow-init-all #init image metadata from many
   inputDir: /kobe/input
   outputDir: /kobe/output
- 
 ```
 Specifically define these:
 - Under _spec.image_: here you must define an image that deploys your federator. For example in the above yaml the semagrow/semagrow image deploys semagrow on a tomcat server
@@ -195,7 +195,7 @@ Again if you want to change the input and output directories your image expects 
 A Kobe experiment resource defines the actual experiment. It consists of a federator (a KobeFederator resource) that will get benchmarked.
 Also it requires the name of a benchmark that will be used (a KobeBenchmark resource).
 The yaml archetype is the following:
-```
+```yaml
 apiVersion: kobeexperiment.kobe.com/v1alpha1
 kind: KobeExperiment
 metadata:
@@ -207,7 +207,6 @@ spec:
   dryRun: true
   forceNewInit: false 
   evalImage: kostbabis/kobe-evaluator  #the eval image for kobe-operator
- 
 ```
 - Under _spec.benchark_: here you place the benchmark name. It must be the same as the name of a KobeBenchmark resource
 you defined earlier.
