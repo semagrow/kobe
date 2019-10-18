@@ -16,7 +16,7 @@ spec:
       containers:
         - name: operator
           # Replace this with the built image name
-          image: kostbabis/kobe-operator
+          image: antru6/kobe-operator:latest
           command:
           - operator
           imagePullPolicy: Always

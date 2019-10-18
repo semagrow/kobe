@@ -21,6 +21,7 @@ type KobeDatasetSpec struct {
 	Count           int32            `json:"count"`
 	Group           string           `json:"group"`
 	Port            int32            `json:"port"`
+	SparqlEnding    string           `json:"sparqlEnding"`
 }
 
 // KobeDatasetStatus defines the observed state of KobeDataset

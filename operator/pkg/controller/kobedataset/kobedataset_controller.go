@@ -128,6 +128,9 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 	if instance.Spec.Image == "" {
 		instance.Spec.Image = "kostbabis/virtuoso"
 	}
+	if instance.Spec.SparqlEnding == "" {
+    instance.Spec.SparqlEnding = "/sparql"
+  }
 	//check  if a KobeUtil instance exists for this namespace and if not create it
 	kobeUtil := &kobeutilv1alpha1.KobeUtil{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobeutil", Namespace: instance.Namespace}, kobeUtil)
