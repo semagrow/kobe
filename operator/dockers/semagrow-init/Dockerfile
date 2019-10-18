@@ -33,7 +33,3 @@ COPY init.sh /sevod-scraper/
 RUN ["chmod", "+x", "/sevod-scraper/init.sh"]
 
 ENTRYPOINT ["/sevod-scraper/init.sh"]
-
-#CMD sleep 3600
-#CMD /sevod-scraper/assembly/target/bin/sevod-scraper.sh rdfdump /dump/cold-2010-complete.rdf.nt http://hi.com -spovj  out.n3 && tail -f /dev/null
-#ENTRYPOINT ["/sevod-scraper/assembly/target/bin/sevod-scraper.sh"]
