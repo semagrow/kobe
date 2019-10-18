@@ -9,4 +9,3 @@ spec:
   downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/GeoNames.tar.gz
   count: 1
   port: 8890
-

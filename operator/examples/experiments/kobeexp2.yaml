@@ -1,0 +1,11 @@
+apiVersion: kobeexperiment.kobe.com/v1alpha1
+kind: KobeExperiment
+metadata:
+  name: kobeexp2
+spec:
+  benchmark: life-science
+  federator: semagrow
+  timesToRun: 1
+  dryRun: false
+  forceNewInit: false 
+  evalImage: kostbabis/kobe-evaluator

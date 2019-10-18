@@ -1,16 +1,16 @@
 apiVersion: kobefederator.kobe.com/v1alpha1
 kind: KobeFederator
 metadata:
-  name: semagrow
+  name: fedx
 spec:
-  image: semagrow/semagrow
+  image: semagrow/fedx-server
   imagePullPolicy: Always
   port: 8080
-  confFromFileImage: antru6/semagrow-init
+  confFromFileImage: antru6/fedx-init
   inputDumpDir: /sevod-scraper/input
   outputDumpDir: /sevod-scraper/output
-  confImage: antru6/semagrow-init-all
+  confImage: antru6/fedx-init-all
   inputDir: /kobe/input
   outputDir: /kobe/output
-  fedConfDir: /etc/default/semagrow
-  sparqlEnding: /SemaGrow/sparql
+  fedConfDir: /etc/fedx
+  sparqlEnding: /fedx-3.1/repositories/sparql

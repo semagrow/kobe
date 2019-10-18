@@ -5,8 +5,7 @@ metadata:
 spec:
   # Add fields here
   image: kostbabis/virtuoso
-  forceLoad: fasle
+  forceLoad: false
   downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/KEGG.tar.gz
   count: 1
   port: 8890
-
