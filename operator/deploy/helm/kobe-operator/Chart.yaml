@@ -1,0 +1,14 @@
+name: kobe-operator
+version: 0.1.0
+appVersion: 0.1.0
+description: Kubernetes operator for KOBE
+home: https://github.com/semagrow/kobe
+keywords:
+- kobe
+- benchmark
+- federated
+- sparql
+- operator
+sources:
+- https://github.com/semagrow/kobe
+maintainers:

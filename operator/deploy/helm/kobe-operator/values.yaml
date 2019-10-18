@@ -1,0 +1,65 @@
+## Deploy kobe-operator
+##
+enabled: true
+
+## Provide a name in place of prometheus-operator for `app:` labels
+##
+nameOverride: ""
+
+## Provide a name to substitute for the full names of resources
+##
+fullnameOverride: ""
+
+global:
+
+  rbac: 
+    create: true
+
+  ## Reference to one or more secrets to be used when pulling images
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+  ##
+  imagePullSecrets: []
+
+## Deploy CRDs used by KOBE Operator.
+##
+createCustomResource: true
+
+## Customize CRDs API Group
+crdApiGroup: kobe.semagrow.org
+
+## Remove CRDs before instaling, created for use on CI environment.
+cleanupCustomResourceBeforeInstall: false
+
+## Attempt to clean up CRDs created by KOBE Operator.
+##
+cleanupCustomResource: false
+
+replicaCount: 1
+
+## Image of kobe-operator
+##
+image:
+  registry: docker.io
+  repository: kostbabis/kobe-operator
+  tag: latest
+  pullPolicy: IfNotPresent
+
+## Service account for kobe-operator to use.
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+##
+serviceAccount:
+  create: true
+  name: 
+
+## Resource limits & requests
+##
+resources: {}
+
+
+annotations: []
+podLabels: []
+podAnnotations: []
+
+nodeSelector: {}
+affinity: {}
+tolerations: []

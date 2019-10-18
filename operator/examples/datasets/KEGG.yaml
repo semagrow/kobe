@@ -1,0 +1,12 @@
+apiVersion: kobedataset.kobe.com/v1alpha1
+kind: KobeDataset
+metadata:
+  name: kegg
+spec:
+  # Add fields here
+  image: kostbabis/virtuoso
+  forceLoad: fasle
+  downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/KEGG.tar.gz
+  count: 1
+  port: 8890
+

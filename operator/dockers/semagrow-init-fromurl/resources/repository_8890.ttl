@@ -1,0 +1,1115 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:DatasetRoot rdf:type void:Dataset .
+_:Dataset1
+  rdf:type void:Dataset ;
+  void:sparqlEndpoint <http://172.17.0.2:8890/sparql> ;
+  void:properties 220 ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+    void:triples 10289 ;
+    void:distinctSubjects 10220 ;
+    void:distinctObjects 121 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#version> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+    void:triples 7 ;
+    void:distinctSubjects 7 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#item> ;
+    void:triples 131 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 131 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+    void:triples 5 ;
+    void:distinctSubjects 5 ;
+    void:distinctObjects 5 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+    void:triples 126 ;
+    void:distinctSubjects 126 ;
+    void:distinctObjects 126 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 6 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+    void:triples 45 ;
+    void:distinctSubjects 45 ;
+    void:distinctObjects 25 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+    void:triples 53 ;
+    void:distinctSubjects 53 ;
+    void:distinctObjects 26 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 7 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 4 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 5 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 4 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 5 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+    void:triples 45 ;
+    void:distinctSubjects 45 ;
+    void:distinctObjects 26 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+    void:triples 53 ;
+    void:distinctSubjects 53 ;
+    void:distinctObjects 26 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 15 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 5 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+    void:triples 39 ;
+    void:distinctSubjects 39 ;
+    void:distinctObjects 9 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+    void:triples 57 ;
+    void:distinctSubjects 57 ;
+    void:distinctObjects 20 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+    void:triples 45 ;
+    void:distinctSubjects 45 ;
+    void:distinctObjects 15 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+    void:triples 53 ;
+    void:distinctSubjects 53 ;
+    void:distinctObjects 25 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 17 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 14 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 19 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 8 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+    void:triples 65 ;
+    void:distinctSubjects 65 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+    void:triples 40 ;
+    void:distinctSubjects 40 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+    void:triples 65 ;
+    void:distinctSubjects 65 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+    void:triples 8 ;
+    void:distinctSubjects 8 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+    void:triples 4 ;
+    void:distinctSubjects 4 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+    void:triples 57 ;
+    void:distinctSubjects 57 ;
+    void:distinctObjects 6 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+    void:triples 57 ;
+    void:distinctSubjects 57 ;
+    void:distinctObjects 12 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+    void:triples 57 ;
+    void:distinctSubjects 57 ;
+    void:distinctObjects 12 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 3 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+    void:triples 232 ;
+    void:distinctSubjects 108 ;
+    void:distinctObjects 8 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+    void:triples 57 ;
+    void:distinctSubjects 57 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+    void:triples 126 ;
+    void:distinctSubjects 126 ;
+    void:distinctObjects 126 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> ;
+    void:triples 1924 ;
+    void:distinctSubjects 1921 ;
+    void:distinctObjects 1443 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> ;
+    void:triples 1676 ;
+    void:distinctSubjects 1675 ;
+    void:distinctObjects 1285 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> ;
+    void:triples 1245 ;
+    void:distinctSubjects 1245 ;
+    void:distinctObjects 971 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+    void:triples 95 ;
+    void:distinctSubjects 95 ;
+    void:distinctObjects 53 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+    void:triples 80 ;
+    void:distinctSubjects 79 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> ;
+    void:triples 689 ;
+    void:distinctSubjects 689 ;
+    void:distinctObjects 555 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> ;
+    void:triples 352 ;
+    void:distinctSubjects 352 ;
+    void:distinctObjects 299 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+    void:triples 19 ;
+    void:distinctSubjects 19 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+    void:triples 6 ;
+    void:distinctSubjects 6 ;
+    void:distinctObjects 3 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+    void:triples 6 ;
+    void:distinctSubjects 6 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+    void:triples 22 ;
+    void:distinctSubjects 22 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+    void:triples 4 ;
+    void:distinctSubjects 4 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+    void:triples 7 ;
+    void:distinctSubjects 7 ;
+    void:distinctObjects 7 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+    void:triples 30 ;
+    void:distinctSubjects 30 ;
+    void:distinctObjects 14 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+    void:triples 8 ;
+    void:distinctSubjects 8 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+    void:triples 8 ;
+    void:distinctSubjects 8 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+    void:triples 8 ;
+    void:distinctSubjects 8 ;
+    void:distinctObjects 8 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+    void:triples 8 ;
+    void:distinctSubjects 8 ;
+    void:distinctObjects 3 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+    void:triples 8 ;
+    void:distinctSubjects 8 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+    void:triples 8 ;
+    void:distinctSubjects 8 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+    void:triples 8 ;
+    void:distinctSubjects 8 ;
+    void:distinctObjects 8 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+    void:triples 3 ;
+    void:distinctSubjects 3 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+    void:triples 3 ;
+    void:distinctSubjects 3 ;
+    void:distinctObjects 3 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://purl.org/dc/terms/created> ;
+    void:triples 738 ;
+    void:distinctSubjects 738 ;
+    void:distinctObjects 3 ] ;
+  void:propertyPartition [ 
+    void:property  <http://purl.org/dc/terms/modified> ;
+    void:triples 738 ;
+    void:distinctSubjects 738 ;
+    void:distinctObjects 3 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+    void:triples 738 ;
+    void:distinctSubjects 738 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://purl.org/dc/terms/extent> ;
+    void:triples 725 ;
+    void:distinctSubjects 725 ;
+    void:distinctObjects 667 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2000/01/rdf-schema#label> ;
+    void:triples 8261 ;
+    void:distinctSubjects 7564 ;
+    void:distinctObjects 7619 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/07/owl#complementOf> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/07/owl#unionOf> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2000/01/rdf-schema#domain> ;
+    void:triples 21 ;
+    void:distinctSubjects 21 ;
+    void:distinctObjects 7 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2000/01/rdf-schema#range> ;
+    void:triples 20 ;
+    void:distinctSubjects 20 ;
+    void:distinctObjects 8 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/07/owl#imports> ;
+    void:triples 10 ;
+    void:distinctSubjects 10 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> ;
+    void:triples 4 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 4 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2000/01/rdf-schema#comment> ;
+    void:triples 9 ;
+    void:distinctSubjects 8 ;
+    void:distinctObjects 9 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/07/owl#versionInfo> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/07/owl#priorVersion> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2000/01/rdf-schema#subClassOf> ;
+    void:triples 13 ;
+    void:distinctSubjects 13 ;
+    void:distinctObjects 5 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2000/01/rdf-schema#seeAlso> ;
+    void:triples 702 ;
+    void:distinctSubjects 656 ;
+    void:distinctObjects 702 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#hasTopic> ;
+    void:triples 1028 ;
+    void:distinctSubjects 434 ;
+    void:distinctObjects 80 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/12/cal/ical#description> ;
+    void:triples 29 ;
+    void:distinctSubjects 29 ;
+    void:distinctObjects 28 ] ;
+  void:propertyPartition [ 
+    void:property  <http://purl.org/dc/elements/1.1/subject> ;
+    void:triples 2273 ;
+    void:distinctSubjects 777 ;
+    void:distinctObjects 1457 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#uuid> ;
+    void:triples 212 ;
+    void:distinctSubjects 212 ;
+    void:distinctObjects 212 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#keywords> ;
+    void:triples 859 ;
+    void:distinctSubjects 248 ;
+    void:distinctObjects 583 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/12/cal/ical#dateTime> ;
+    void:triples 139 ;
+    void:distinctSubjects 139 ;
+    void:distinctObjects 119 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#affiliation> ;
+    void:triples 557 ;
+    void:distinctSubjects 512 ;
+    void:distinctObjects 336 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/family_name> ;
+    void:triples 1735 ;
+    void:distinctSubjects 1714 ;
+    void:distinctObjects 1438 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/firstName> ;
+    void:triples 1735 ;
+    void:distinctSubjects 1714 ;
+    void:distinctObjects 1250 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+    void:triples 286 ;
+    void:distinctSubjects 286 ;
+    void:distinctObjects 285 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/07/owl#sameAs> ;
+    void:triples 1630 ;
+    void:distinctSubjects 1375 ;
+    void:distinctObjects 1630 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/ns/sparql-service-description#feature> ;
+    void:triples 2 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+    void:triples 8 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 8 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/ns/sparql-service-description#url> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://purl.org/dc/elements/1.1/creator> ;
+    void:triples 4273 ;
+    void:distinctSubjects 1331 ;
+    void:distinctObjects 2704 ] ;
+  void:propertyPartition [ 
+    void:property  <http://purl.org/dc/elements/1.1/title> ;
+    void:triples 1555 ;
+    void:distinctSubjects 1555 ;
+    void:distinctObjects 1549 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#heldBy> ;
+    void:triples 1899 ;
+    void:distinctSubjects 290 ;
+    void:distinctObjects 1001 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#author> ;
+    void:triples 4208 ;
+    void:distinctSubjects 1290 ;
+    void:distinctObjects 2639 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#authorList> ;
+    void:triples 1580 ;
+    void:distinctSubjects 1580 ;
+    void:distinctObjects 1580 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/12/cal/ical#url> ;
+    void:triples 199 ;
+    void:distinctSubjects 196 ;
+    void:distinctObjects 195 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+    void:triples 369 ;
+    void:distinctSubjects 363 ;
+    void:distinctObjects 298 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/member> ;
+    void:triples 3830 ;
+    void:distinctSubjects 972 ;
+    void:distinctObjects 3382 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#completeGraph> ;
+    void:triples 41 ;
+    void:distinctSubjects 41 ;
+    void:distinctObjects 41 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#hasAcronym> ;
+    void:triples 139 ;
+    void:distinctSubjects 137 ;
+    void:distinctObjects 138 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#hasLogo> ;
+    void:triples 20 ;
+    void:distinctSubjects 20 ;
+    void:distinctObjects 20 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#hasPart> ;
+    void:triples 1631 ;
+    void:distinctSubjects 44 ;
+    void:distinctObjects 1631 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#hasRelatedDocument> ;
+    void:triples 641 ;
+    void:distinctSubjects 636 ;
+    void:distinctObjects 617 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#hasRole> ;
+    void:triples 469 ;
+    void:distinctSubjects 227 ;
+    void:distinctObjects 397 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#holdsRole> ;
+    void:triples 2075 ;
+    void:distinctSubjects 1064 ;
+    void:distinctObjects 472 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#isPartOf> ;
+    void:triples 1593 ;
+    void:distinctSubjects 1593 ;
+    void:distinctObjects 44 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#isRoleAt> ;
+    void:triples 583 ;
+    void:distinctSubjects 583 ;
+    void:distinctObjects 141 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> ;
+    void:triples 932 ;
+    void:distinctSubjects 905 ;
+    void:distinctObjects 198 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#isSuperEventOf> ;
+    void:triples 1023 ;
+    void:distinctSubjects 204 ;
+    void:distinctObjects 988 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#relatedToEvent> ;
+    void:triples 369 ;
+    void:distinctSubjects 366 ;
+    void:distinctObjects 315 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#abstract> ;
+    void:triples 1722 ;
+    void:distinctSubjects 1722 ;
+    void:distinctObjects 1694 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#affiliation> ;
+    void:triples 3817 ;
+    void:distinctSubjects 3381 ;
+    void:distinctObjects 972 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#booktitle> ;
+    void:triples 36 ;
+    void:distinctSubjects 36 ;
+    void:distinctObjects 36 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#editor> ;
+    void:triples 147 ;
+    void:distinctSubjects 33 ;
+    void:distinctObjects 116 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#month> ;
+    void:triples 1585 ;
+    void:distinctSubjects 1585 ;
+    void:distinctObjects 7 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#title> ;
+    void:triples 193 ;
+    void:distinctSubjects 193 ;
+    void:distinctObjects 192 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#year> ;
+    void:triples 1585 ;
+    void:distinctSubjects 1585 ;
+    void:distinctObjects 5 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#editorList> ;
+    void:triples 32 ;
+    void:distinctSubjects 30 ;
+    void:distinctObjects 32 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/12/cal/ical#summary> ;
+    void:triples 648 ;
+    void:distinctSubjects 646 ;
+    void:distinctObjects 629 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+    void:triples 369 ;
+    void:distinctSubjects 363 ;
+    void:distinctObjects 298 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/based_near> ;
+    void:triples 2313 ;
+    void:distinctSubjects 2118 ;
+    void:distinctObjects 447 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/homepage> ;
+    void:triples 1193 ;
+    void:distinctSubjects 1070 ;
+    void:distinctObjects 1168 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/made> ;
+    void:triples 5866 ;
+    void:distinctSubjects 3506 ;
+    void:distinctObjects 1787 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/maker> ;
+    void:triples 4898 ;
+    void:distinctSubjects 1529 ;
+    void:distinctObjects 2946 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/mbox_sha1sum> ;
+    void:triples 3100 ;
+    void:distinctSubjects 2713 ;
+    void:distinctObjects 3065 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/name> ;
+    void:triples 5861 ;
+    void:distinctSubjects 5049 ;
+    void:distinctObjects 5829 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/page> ;
+    void:triples 690 ;
+    void:distinctSubjects 656 ;
+    void:distinctObjects 690 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/12/cal/ical#date> ;
+    void:triples 413 ;
+    void:distinctSubjects 413 ;
+    void:distinctObjects 142 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/12/cal/ical#tzid> ;
+    void:triples 552 ;
+    void:distinctSubjects 552 ;
+    void:distinctObjects 10 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#url> ;
+    void:triples 1423 ;
+    void:distinctSubjects 1208 ;
+    void:distinctObjects 1421 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/12/cal/ical#dtend> ;
+    void:triples 423 ;
+    void:distinctSubjects 409 ;
+    void:distinctObjects 230 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/12/cal/ical#dtstart> ;
+    void:triples 717 ;
+    void:distinctSubjects 702 ;
+    void:distinctObjects 473 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_10> ;
+    void:triples 11 ;
+    void:distinctSubjects 11 ;
+    void:distinctObjects 10 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_11> ;
+    void:triples 5 ;
+    void:distinctSubjects 5 ;
+    void:distinctObjects 5 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_12> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_13> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_6> ;
+    void:triples 136 ;
+    void:distinctSubjects 136 ;
+    void:distinctObjects 122 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_7> ;
+    void:triples 60 ;
+    void:distinctSubjects 60 ;
+    void:distinctObjects 58 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_8> ;
+    void:triples 30 ;
+    void:distinctSubjects 30 ;
+    void:distinctObjects 29 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_9> ;
+    void:triples 14 ;
+    void:distinctSubjects 14 ;
+    void:distinctObjects 13 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2004/02/skos/core#broader> ;
+    void:triples 38 ;
+    void:distinctSubjects 38 ;
+    void:distinctObjects 9 ] ;
+  void:propertyPartition [ 
+    void:property  <http://purl.org/ontology/bibo/editorList> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#hasProgramme> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#hasRelatedArtefact> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 31 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#isLocationFor> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#partOf> ;
+    void:triples 51 ;
+    void:distinctSubjects 51 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#url> ;
+    void:triples 31 ;
+    void:distinctSubjects 31 ;
+    void:distinctObjects 31 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#address> ;
+    void:triples 5 ;
+    void:distinctSubjects 5 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#series> ;
+    void:triples 5 ;
+    void:distinctSubjects 5 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/topic> ;
+    void:triples 555 ;
+    void:distinctSubjects 153 ;
+    void:distinctObjects 90 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/workplaceHomepage> ;
+    void:triples 155 ;
+    void:distinctSubjects 155 ;
+    void:distinctObjects 132 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/xhtml/vocab#meta> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://purl.org/dc/terms/creator> ;
+    void:triples 32 ;
+    void:distinctSubjects 14 ;
+    void:distinctObjects 31 ] ;
+  void:propertyPartition [ 
+    void:property  <http://purl.org/dc/terms/title> ;
+    void:triples 224 ;
+    void:distinctSubjects 224 ;
+    void:distinctObjects 224 ] ;
+  void:propertyPartition [ 
+    void:property  <http://purl.org/ontology/bibo/authorList> ;
+    void:triples 205 ;
+    void:distinctSubjects 205 ;
+    void:distinctObjects 205 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#hasLocation> ;
+    void:triples 171 ;
+    void:distinctSubjects 171 ;
+    void:distinctObjects 32 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/primaryTopic> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#givesKeynoteTalk> ;
+    void:triples 19 ;
+    void:distinctSubjects 19 ;
+    void:distinctObjects 18 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#hasRelatedEvent> ;
+    void:triples 193 ;
+    void:distinctSubjects 193 ;
+    void:distinctObjects 193 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#isPanelistAt> ;
+    void:triples 42 ;
+    void:distinctSubjects 40 ;
+    void:distinctObjects 9 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#moderates> ;
+    void:triples 9 ;
+    void:distinctSubjects 9 ;
+    void:distinctObjects 9 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#moderator> ;
+    void:triples 9 ;
+    void:distinctSubjects 9 ;
+    void:distinctObjects 9 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#panelist> ;
+    void:triples 42 ;
+    void:distinctSubjects 9 ;
+    void:distinctObjects 40 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#speaker> ;
+    void:triples 19 ;
+    void:distinctSubjects 18 ;
+    void:distinctObjects 19 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#isbn> ;
+    void:triples 2 ;
+    void:distinctSubjects 2 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#pages> ;
+    void:triples 332 ;
+    void:distinctSubjects 332 ;
+    void:distinctObjects 332 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#publisher> ;
+    void:triples 3 ;
+    void:distinctSubjects 3 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/2002/12/cal/ical#duration> ;
+    void:triples 283 ;
+    void:distinctSubjects 282 ;
+    void:distinctObjects 9 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#editorList> ;
+    void:triples 3 ;
+    void:distinctSubjects 3 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#hasSponsorship> ;
+    void:triples 10 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 10 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#isProvidedBy> ;
+    void:triples 11 ;
+    void:distinctSubjects 10 ;
+    void:distinctObjects 11 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#paperList> ;
+    void:triples 28 ;
+    void:distinctSubjects 28 ;
+    void:distinctObjects 28 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/status> ;
+    void:triples 613 ;
+    void:distinctSubjects 613 ;
+    void:distinctObjects 3 ] ;
+  void:propertyPartition [ 
+    void:property  <http://data.semanticweb.org/ns/swc/ontology#homepage> ;
+    void:triples 16 ;
+    void:distinctSubjects 16 ;
+    void:distinctObjects 16 ] ;
+  void:propertyPartition [ 
+    void:property  <http://swrc.ontoware.org/ontology#volume> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://purl.org/dc/terms/format> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://xmlns.com/foaf/0.1/depiction> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/xhtml/vocab#alternate> ;
+    void:triples 2 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 2 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/xhtml/vocab#icon> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://www.w3.org/1999/xhtml/vocab#stylesheet> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://rdfs.org/sioc/ns#topic> ;
+    void:triples 14 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 14 ] ;
+  void:propertyPartition [ 
+    void:property  <http://sw.deri.org/2005/08/conf/cfp.owl#deadline> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://sw.deri.org/2005/08/conf/cfp.owl#for> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:propertyPartition [ 
+    void:property  <http://sw.deri.org/2005/08/conf/cfp.owl#involved> ;
+    void:triples 4 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 4 ] ;
+  void:propertyPartition [ 
+    void:property  <http://sw.deri.org/2005/08/conf/cfp.owl#takesplace> ;
+    void:triples 1 ;
+    void:distinctSubjects 1 ;
+    void:distinctObjects 1 ] ;
+  void:triples 109347 ;
+  void:distinctSubjects 13068 ;
+  void:distinctObjects 38983 ;
+  void:subset _:DatasetRoot .
+

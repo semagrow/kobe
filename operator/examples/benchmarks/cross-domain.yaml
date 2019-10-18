@@ -1,0 +1,39 @@
+apiVersion: kobebenchmark.kobe.com/v1alpha1
+kind: KobeBenchmark
+metadata:
+  name: cross-domain
+spec:
+  datasets:
+    - name: swdfood
+    - name: dbpedia
+    - name: jamendo
+    - name: nyt
+    - name: geonames
+    - name: lmdb
+  queries:
+    - name: q1
+      language: sparql
+      queryString: "SELECT ?predicate ?object WHERE {
+   { <http://dbpedia.org/resource/Barack_Obama> ?predicate ?object }
+   UNION    
+   { ?subject <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .
+     ?subject ?predicate ?object } 
+}"
+    - name: q2
+      language: sparql
+      queryString: "SELECT ?party ?page  WHERE {
+   <http://dbpedia.org/resource/Barack_Obama> <http://dbpedia.org/ontology/party> ?party .
+   ?x <http://data.nytimes.com/elements/topicPage> ?page .
+   ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .
+}"
+    - name: q3
+      language: sparql
+      queryString: "SELECT ?president ?party ?page WHERE {
+   ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .
+   ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .
+   ?president <http://dbpedia.org/ontology/party> ?party .
+   ?x <http://data.nytimes.com/elements/topicPage> ?page .
+   ?x <http://www.w3.org/2002/07/owl#sameAs> ?president .
+}"
+
+

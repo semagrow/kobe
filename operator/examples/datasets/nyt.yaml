@@ -1,0 +1,12 @@
+apiVersion: kobedataset.kobe.com/v1alpha1
+kind: KobeDataset
+metadata:
+  name: nyt
+spec:
+  # Add fields here
+  image: kostbabis/virtuoso
+  forceLoad: false
+  downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/NYT.tar.gz
+  count: 1
+  port: 8890
+
