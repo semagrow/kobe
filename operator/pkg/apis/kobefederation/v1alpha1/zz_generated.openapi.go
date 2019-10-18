@@ -11,17 +11,17 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"./pkg/apis/kobefederator/v1alpha1.KobeFederator":       schema_pkg_apis_kobefederator_v1alpha1_KobeFederator(ref),
-		"./pkg/apis/kobefederator/v1alpha1.KobeFederatorSpec":   schema_pkg_apis_kobefederator_v1alpha1_KobeFederatorSpec(ref),
-		"./pkg/apis/kobefederator/v1alpha1.KobeFederatorStatus": schema_pkg_apis_kobefederator_v1alpha1_KobeFederatorStatus(ref),
+		"./pkg/apis/kobefederation/v1alpha1.KobeFederation":       schema_pkg_apis_kobefederation_v1alpha1_KobeFederation(ref),
+		"./pkg/apis/kobefederation/v1alpha1.KobeFederationSpec":   schema_pkg_apis_kobefederation_v1alpha1_KobeFederationSpec(ref),
+		"./pkg/apis/kobefederation/v1alpha1.KobeFederationStatus": schema_pkg_apis_kobefederation_v1alpha1_KobeFederationStatus(ref),
 	}
 }
 
-func schema_pkg_apis_kobefederator_v1alpha1_KobeFederator(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_kobefederation_v1alpha1_KobeFederation(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "KobeFederator is the Schema for the kobefederators API",
+				Description: "KobeFederation is the Schema for the kobefederations API",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
@@ -45,32 +45,32 @@ func schema_pkg_apis_kobefederator_v1alpha1_KobeFederator(ref common.ReferenceCa
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("./pkg/apis/kobefederator/v1alpha1.KobeFederatorSpec"),
+							Ref: ref("./pkg/apis/kobefederation/v1alpha1.KobeFederationSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("./pkg/apis/kobefederator/v1alpha1.KobeFederatorStatus"),
+							Ref: ref("./pkg/apis/kobefederation/v1alpha1.KobeFederationStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"./pkg/apis/kobefederator/v1alpha1.KobeFederatorSpec", "./pkg/apis/kobefederator/v1alpha1.KobeFederatorStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"./pkg/apis/kobefederation/v1alpha1.KobeFederationSpec", "./pkg/apis/kobefederation/v1alpha1.KobeFederationStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
-func schema_pkg_apis_kobefederator_v1alpha1_KobeFederatorSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_kobefederation_v1alpha1_KobeFederationSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "KobeFederatorSpec defines the desired state of KobeFederator",
+				Description: "KobeFederationSpec defines the desired state of KobeFederation",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"image": {
 						SchemaProps: spec.SchemaProps{
-							Description: "INSERT ADDITIONAL SPEC FIELDS - desired state of cluster Important: Run \"operator-sdk generate k8s\" to regenerate code after modifying this file Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html InitContainers    []corev1.Container `json:\"initContainer\"` //obsolete",
+							Description: "INSERT ADDITIONAL SPEC FIELDS - desired state of cluster Important: Run \"operator-sdk generate k8s\" to regenerate code after modifying this file Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -133,21 +133,65 @@ func schema_pkg_apis_kobefederator_v1alpha1_KobeFederatorSpec(ref common.Referen
 							Format: "",
 						},
 					},
+					"sparqlEnding": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"string"},
+							Format: "",
+						},
+					},
 					"fedConfDir": {
 						SchemaProps: spec.SchemaProps{
 							Type:   []string{"string"},
 							Format: "",
 						},
 					},
-					"sparqlEnding": {
+					"forceNewInit": {
 						SchemaProps: spec.SchemaProps{
 							Description: "which directory the federator needs the metadata config files in order to find them",
-							Type:        []string{"string"},
+							Type:        []string{"boolean"},
 							Format:      "",
 						},
 					},
+					"init": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"boolean"},
+							Format: "",
+						},
+					},
+					"federatorName": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"string"},
+							Format: "",
+						},
+					},
+					"endpoints": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
+						},
+					},
+					"datasetNames": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
+						},
+					},
 				},
-				Required: []string{"image", "imagePullPolicy", "affinity", "port", "confFromFileImage", "inputDumpDir", "outputDumpDir", "confImage", "inputDir", "outputDir", "fedConfDir", "sparqlEnding"},
+				Required: []string{"image", "imagePullPolicy", "affinity", "port", "confFromFileImage", "inputDumpDir", "outputDumpDir", "confImage", "inputDir", "outputDir", "sparqlEnding", "fedConfDir", "forceNewInit", "init", "federatorName", "endpoints", "datasetNames"},
 			},
 		},
 		Dependencies: []string{
@@ -155,11 +199,11 @@ func schema_pkg_apis_kobefederator_v1alpha1_KobeFederatorSpec(ref common.Referen
 	}
 }
 
-func schema_pkg_apis_kobefederator_v1alpha1_KobeFederatorStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_kobefederation_v1alpha1_KobeFederationStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "KobeFederatorStatus defines the observed state of KobeFederator",
+				Description: "KobeFederationStatus defines the observed state of KobeFederation",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"podnames": {

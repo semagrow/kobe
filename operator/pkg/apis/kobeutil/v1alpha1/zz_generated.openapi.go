@@ -11,16 +11,17 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"./pkg/apis/kobebenchmark/v1alpha1.KobeBenchmark":       schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmark(ref),
-		"./pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkStatus": schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmarkStatus(ref),
+		"./pkg/apis/kobeutil/v1alpha1.KobeUtil":       schema_pkg_apis_kobeutil_v1alpha1_KobeUtil(ref),
+		"./pkg/apis/kobeutil/v1alpha1.KobeUtilSpec":   schema_pkg_apis_kobeutil_v1alpha1_KobeUtilSpec(ref),
+		"./pkg/apis/kobeutil/v1alpha1.KobeUtilStatus": schema_pkg_apis_kobeutil_v1alpha1_KobeUtilStatus(ref),
 	}
 }
 
-func schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmark(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_kobeutil_v1alpha1_KobeUtil(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "KobeBenchmark is the Schema for the kobebenchmarks API",
+				Description: "KobeUtil is the Schema for the kobeutils API",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
@@ -44,27 +45,38 @@ func schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmark(ref common.ReferenceCa
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("./pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkSpec"),
+							Ref: ref("./pkg/apis/kobeutil/v1alpha1.KobeUtilSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("./pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkStatus"),
+							Ref: ref("./pkg/apis/kobeutil/v1alpha1.KobeUtilStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"./pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkSpec", "./pkg/apis/kobebenchmark/v1alpha1.KobeBenchmarkStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"./pkg/apis/kobeutil/v1alpha1.KobeUtilSpec", "./pkg/apis/kobeutil/v1alpha1.KobeUtilStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
-func schema_pkg_apis_kobebenchmark_v1alpha1_KobeBenchmarkStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_kobeutil_v1alpha1_KobeUtilSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "KobeBenchmarkStatus defines the observed state of KobeBenchmark",
+				Description: "KobeUtilSpec defines the desired state of KobeUtil",
+				Type:        []string{"object"},
+			},
+		},
+	}
+}
+
+func schema_pkg_apis_kobeutil_v1alpha1_KobeUtilStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "KobeUtilStatus defines the observed state of KobeUtil",
 				Type:        []string{"object"},
 			},
 		},

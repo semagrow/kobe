@@ -1,0 +1,83 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: kobebenchmarks.kobebenchmark.kobe.com
+spec:
+  group: kobebenchmark.kobe.com
+  names:
+    kind: KobeBenchmark
+    listKind: KobeBenchmarkList
+    plural: kobebenchmarks
+    singular: kobebenchmark
+  scope: ""
+  subresources:
+    status: {}
+  validation:
+    openAPIV3Schema:
+      description: KobeBenchmark is the Schema for the kobebenchmarks API
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: KobeBenchmarkSpec defines the components for this benchmark
+            setup
+          properties:
+            datasets:
+              description: 'INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
+                Important: Run "operator-sdk generate k8s" to regenerate code after
+                modifying this file Add custom validation using kubebuilder tags:
+                https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html'
+              items:
+                description: Dataset contains the dataset info
+                properties:
+                  downloadFrom:
+                    type: string
+                  image:
+                    type: string
+                  name:
+                    type: string
+                required:
+                - downloadFrom
+                - image
+                - name
+                type: object
+              type: array
+            queries:
+              items:
+                description: Query contains the query info
+                properties:
+                  language:
+                    type: string
+                  name:
+                    type: string
+                  queryString:
+                    type: string
+                required:
+                - language
+                - name
+                - queryString
+                type: object
+              type: array
+          required:
+          - datasets
+          - queries
+          type: object
+        status:
+          description: KobeBenchmarkStatus defines the observed state of KobeBenchmark
+          type: object
+      type: object
+  version: v1alpha1
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
