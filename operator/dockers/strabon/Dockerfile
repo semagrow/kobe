@@ -23,9 +23,6 @@ ENV STRABON_HOME=/tomcat/webapps/strabon
 RUN mkdir /resources \
  && unzip -d $STRABON_HOME /Strabon/endpoint/target/strabon-endpoint-3.3.2-SNAPSHOT.war
 
-ENV STRABON_CONNECTION_hostname postgis
-ENV STRABON_CONNECTION_port 5432
-
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
 

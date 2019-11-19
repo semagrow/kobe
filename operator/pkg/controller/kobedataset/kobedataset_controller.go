@@ -288,7 +288,12 @@ func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha
 		env = corev1.EnvVar{Name: "FORCE_LOAD", Value: "YES"}
 		envs = append(envs, env)
 	}
-
+	
+  for _, envVariable := range m.Spec.EnvVariables {
+    env = corev1.EnvVar{Name: envVariable.EnvVariableName, Value: envVariable.EnvVariableValue}
+		envs = append(envs, env)
+  }
+  
 	volume := corev1.Volume{Name: "nfs", VolumeSource: corev1.VolumeSource{PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
 	volumes := []corev1.Volume{}
 	volumes = append(volumes, volume)
@@ -352,6 +357,11 @@ func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobedatasetv1alpha1.KobeD
 		env = corev1.EnvVar{Name: "FORCE_LOAD", Value: "YES"}
 		envs = append(envs, env)
 	}
+	
+	for _, envVariable := range m.Spec.EnvVariables {
+    env = corev1.EnvVar{Name: envVariable.EnvVariableName, Value: envVariable.EnvVariableValue}
+		envs = append(envs, env)
+  }
 
 	volume := corev1.Volume{Name: "nfs", VolumeSource: corev1.VolumeSource{PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
 	volumes := []corev1.Volume{}
