@@ -29,13 +29,28 @@ spec:
         metadata:
           type: object
         spec:
-          description: KobeDatasetSpec defines the desired state of KobeDataset
           properties:
             count:
               format: int32
               type: integer
             downloadFrom:
               type: string
+            env:
+              items:
+                properties:
+                  name:
+                    description: 'INSERT ADDITIONAL STATUS FIELD - define observed
+                      state of cluster Important: Run "operator-sdk generate k8s"
+                      to regenerate code after modifying this file Add custom validation
+                      using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html'
+                    type: string
+                  value:
+                    type: string
+                required:
+                - name
+                - value
+                type: object
+              type: array
             forceLoad:
               type: boolean
             group:
@@ -58,6 +73,7 @@ spec:
           required:
           - count
           - downloadFrom
+          - env
           - forceLoad
           - group
           - image

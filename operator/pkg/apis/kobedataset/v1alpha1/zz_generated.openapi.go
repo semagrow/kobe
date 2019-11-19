@@ -12,7 +12,6 @@ import (
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
 		"./pkg/apis/kobedataset/v1alpha1.KobeDataset":       schema_pkg_apis_kobedataset_v1alpha1_KobeDataset(ref),
-		"./pkg/apis/kobedataset/v1alpha1.KobeDatasetSpec":   schema_pkg_apis_kobedataset_v1alpha1_KobeDatasetSpec(ref),
 		"./pkg/apis/kobedataset/v1alpha1.KobeDatasetStatus": schema_pkg_apis_kobedataset_v1alpha1_KobeDatasetStatus(ref),
 	}
 }
@@ -58,69 +57,6 @@ func schema_pkg_apis_kobedataset_v1alpha1_KobeDataset(ref common.ReferenceCallba
 		},
 		Dependencies: []string{
 			"./pkg/apis/kobedataset/v1alpha1.KobeDatasetSpec", "./pkg/apis/kobedataset/v1alpha1.KobeDatasetStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
-	}
-}
-
-func schema_pkg_apis_kobedataset_v1alpha1_KobeDatasetSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "KobeDatasetSpec defines the desired state of KobeDataset",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"image": {
-						SchemaProps: spec.SchemaProps{
-							Description: "INSERT ADDITIONAL SPEC FIELDS - desired state of cluster Important: Run \"operator-sdk generate k8s\" to regenerate code after modifying this file Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"forceLoad": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"boolean"},
-							Format: "",
-						},
-					},
-					"downloadFrom": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"imagePullPolicy": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"count": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-					"group": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"port": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-					"sparqlEnding": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"image", "forceLoad", "downloadFrom", "imagePullPolicy", "count", "group", "port", "sparqlEnding"},
-			},
-		},
 	}
 }
 
