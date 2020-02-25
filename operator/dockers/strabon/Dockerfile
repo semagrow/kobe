@@ -15,6 +15,7 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
+ADD settings.xml /etc/maven/settings.xml
 RUN hg clone 'http://hg.strabon.di.uoa.gr/Strabon/' \
  && cd Strabon \
  && mvn clean package
