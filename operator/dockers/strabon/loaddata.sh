@@ -6,6 +6,9 @@ do
   sleep 2
 done
 
+mkdir /kobe
+mkdir /kobe/dataset
+
 if [ "$DATASET_NAME" ] && [ ! -f "/kobe/dataset/$DATASET_NAME/.data_loaded" ]
 then
   
