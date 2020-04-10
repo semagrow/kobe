@@ -57,6 +57,7 @@ type KobeExperimentStatus struct {
 // KobeExperiment is the Schema for the kobeexperiments API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
+//+kubebuilder:resource:path=kobeexperiments,scope=Namespaced
 type KobeExperiment struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

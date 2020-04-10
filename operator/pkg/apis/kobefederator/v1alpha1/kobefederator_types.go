@@ -43,6 +43,7 @@ type KobeFederatorStatus struct {
 // KobeFederator is the Schema for the kobefederators API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
+// +kubebuilder:resource:path=kobefederators,scope=Namespaced
 type KobeFederator struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

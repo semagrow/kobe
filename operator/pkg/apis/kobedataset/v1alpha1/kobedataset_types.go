@@ -49,6 +49,7 @@ type KobeDatasetStatus struct {
 // KobeDataset is the Schema for the kobedatasets API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
+// +kubebuilder:resource:path=kobedatasets,scope=Namespaced
 type KobeDataset struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

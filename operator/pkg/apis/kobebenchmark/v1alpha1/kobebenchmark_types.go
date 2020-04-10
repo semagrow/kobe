@@ -43,6 +43,7 @@ type KobeBenchmarkStatus struct {
 // KobeBenchmark is the Schema for the kobebenchmarks API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
+// +kubebuilder:resource:path=kobebenchmarks,scope=Namespaced
 type KobeBenchmark struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

@@ -11,7 +11,6 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/intstr"
@@ -21,7 +20,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/handler"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
+	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 )
 
@@ -189,9 +188,11 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 			}
 			//fetch the pod of the init - job for this dataset to check its status
 			podList := &corev1.PodList{}
-			labelSelector := labels.SelectorFromSet(map[string]string{"job-name": dataset})
-			listOps := &client.ListOptions{Namespace: instance.Namespace, LabelSelector: labelSelector}
-			err = r.client.List(context.TODO(), listOps, podList)
+			listOps := []client.ListOption{
+				client.InNamespace(instance.Namespace),
+				client.MatchingLabels{"job-name": dataset},
+			}
+			err = r.client.List(context.TODO(), podList, listOps...)
 			if err != nil {
 				reqLogger.Info("Failed to list pods: %v", err)
 				return reconcile.Result{}, err
@@ -271,9 +272,11 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 
 	//check for status changes
 	podList := &corev1.PodList{}
-	labelSelector := labels.SelectorFromSet(labelsForKobeFederation(instance.Name))
-	listOps := &client.ListOptions{Namespace: instance.Namespace, LabelSelector: labelSelector}
-	err = r.client.List(context.TODO(), listOps, podList)
+	listOps := []client.ListOption{
+		client.InNamespace(instance.Namespace),
+		client.MatchingLabels(labelsForKobeFederation(instance.Name)),
+	}
+	err = r.client.List(context.TODO(), podList, listOps...)
 	if err != nil {
 		reqLogger.Info("Failed to list pods: %v", err)
 		return reconcile.Result{}, err

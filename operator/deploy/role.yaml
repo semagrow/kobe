@@ -17,7 +17,13 @@ rules:
   - jobs
   - persistentvolumes
   verbs:
-  - '*'
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
 - apiGroups:
   - apps
   resources:
@@ -59,7 +65,13 @@ rules:
   resources:
   - '*'
   verbs:
-  - '*'
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
 - apiGroups:
   - ""
   - extensions
@@ -68,34 +80,70 @@ rules:
   resources:
   - '*'
   verbs:
-  - '*'
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
 - apiGroups:
   - kobebenchmark.kobe.com
   resources:
   - '*'
   verbs:
-  - '*'
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
 - apiGroups:
   - kobefederator.kobe.com
   resources:
   - '*'
   verbs:
-  - '*'
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
 - apiGroups:
   - kobeexperiment.kobe.com
   resources:
   - '*'
   verbs:
-  - '*'
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
 - apiGroups:
   - kobeutil.kobe.com
   resources:
   - '*'
   verbs:
-  - '*'
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
 - apiGroups:
   - kobefederation.kobe.com
   resources:
   - '*'
   verbs:
-  - '*'
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
