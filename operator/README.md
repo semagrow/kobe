@@ -34,30 +34,46 @@ in your cluster. For example, in Ubuntu you can use `apt-get install nfs-common`
 The operator acts on the following customr resource definitions (CRDs):
 
 * `KobeDataset` which defines a dataset that could be used in an experiment. 
+
 * `KobeFederator` which defines a federator that could be used in an experiment.
-* `KobeBenchmark` which defines a benchmark in KOBE, that is essentially the set of datasets and the set of queries.
-* `KobeExperiment` which defines an experiment, that is, a benchmark, a federator to be benchmarked and a query evaluator.
+
+* `KobeBenchmark` which defines a benchmark in KOBE, that is essentially the set
+  of datasets and the set of queries.
+
+* `KobeExperiment` which defines an experiment, that is, a benchmark, a
+  federator to be benchmarked and a query evaluator.
 
 To learn more about the CRDs have a look at the [API doc](docs/api.md).
 
 ## Quickstart
 
-To quickly install the KOBE operator in a Kubernetes cluster, run the
-following commands:
+To quickly install the KOBE operator in a Kubernetes cluster, run the following
+commands:
 ```
-kubectl apply -f operator/deploy/init/cluster
-kubectl apply -f operator/deploy/init/crds
-kubectl apply -f operator/deploy/init/operator-deploy/operator.yaml
+kubectl apply -f deploy/crds
+kubectl apply -f deploy/service_account.yaml
+kubectl apply -f deploy/clusterrole.yaml
+kubectl apply -f deploy/clusterrole_binding.yaml
+kubectl apply -f deploy/role.yaml
+kubectl apply -f deploy/operator.yaml
 ```
 
-You will get a confirmation message that each resource has successfully been created.
+You will get a confirmation message that each resource has successfully been
+created.
 
-This will set the operator running in your kubernetes cluster and needs to be done only once.
+This will set the operator running in your kubernetes cluster and needs to be
+done only once.
 
 ## Removal
 
-TBA
-
+```
+kubectl delete -f deploy/operator.yaml
+kubectl delete -f deploy/role.yaml
+kubectl delete -f deploy/clusterrole_binding.yaml
+kubectl delete -f deploy/clusterrole.yaml
+kubectl delete -f deploy/service_account.yaml
+kubectl delete -f deploy/crds
+```
 ## Example
 
 The typical workflow of defining a KOBE experiment is the following.
