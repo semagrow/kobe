@@ -46,7 +46,6 @@ spec:
             evalImage:
               type: string
             federator:
-              description: Federator    []Fed    `json:"federator"`
               type: string
             forceNewInit:
               type: boolean

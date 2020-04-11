@@ -188,7 +188,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	}
 
 	//check if the pods of the federators exist and have a status of running before proceeding and get fed name and endpoint for the eval job
-	fedEndpoint := "http://" + foundFederation.Name + "." + foundFederation.Namespace + ".svc.cluster.local" + ":" + strconv.Itoa(int(foundFederation.Spec.Port)) + foundFederation.Spec.SparqlEnding
+	fedEndpoint := "http://" + foundFederation.Name + "." + foundFederation.Namespace + ".svc.cluster.local" + ":" + strconv.Itoa(int(foundFederation.Spec.Port)) + foundFederation.Spec.Path
 	fedName := foundFederation.Name
 
 	podList := &corev1.PodList{}
@@ -343,7 +343,7 @@ func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobeexperimentv1
 			InputDir:          fed.Spec.InputDir,
 			OutputDir:         fed.Spec.OutputDir,
 			FedConfDir:        fed.Spec.FedConfDir,
-			SparqlEnding:      fed.Spec.SparqlEnding,
+			Path:		       fed.Spec.Path,
 
 			ForceNewInit:  m.Spec.ForceNewInit,
 			Init:          true,

@@ -757,9 +757,9 @@ spec:
         status:
           description: KobeDatasetStatus defines the observed state of KobeDataset
           properties:
-            appgroup:
+            appGroup:
               type: string
-            podnames:
+            podNames:
               description: 'INSERT ADDITIONAL STATUS FIELD - define observed state
                 of cluster Important: Run "operator-sdk generate k8s" to regenerate
                 code after modifying this file Add custom validation using kubebuilder
@@ -768,8 +768,8 @@ spec:
                 type: string
               type: array
           required:
-          - appgroup
-          - podnames
+          - appGroup
+          - podNames
           type: object
       type: object
   version: v1alpha1

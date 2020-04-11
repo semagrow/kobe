@@ -32,7 +32,7 @@ spec:
           description: KobeFederationSpec defines the desired state of KobeFederation
           properties:
             affinity:
-              description: Affinity is a group of affinity scheduling rules.
+              description: If specified, the pod's scheduling constraints
               properties:
                 nodeAffinity:
                   description: Describes node affinity scheduling rules for the pod.
@@ -641,13 +641,31 @@ spec:
               type: string
             outputDumpDir:
               type: string
+            path:
+              type: string
             port:
               format: int32
               type: integer
-            sparqlEnding:
-              type: string
+            resources:
+              description: Resources are not allowed for ephemeral containers. Ephemeral
+                containers use spare resources already allocated to the pod.
+              properties:
+                limits:
+                  additionalProperties:
+                    type: string
+                  description: 'Limits describes the maximum amount of compute resources
+                    allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/'
+                  type: object
+                requests:
+                  additionalProperties:
+                    type: string
+                  description: 'Requests describes the minimum amount of compute resources
+                    required. If Requests is omitted for a container, it defaults
+                    to Limits if that is explicitly specified, otherwise to an implementation-defined
+                    value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/'
+                  type: object
+              type: object
           required:
-          - affinity
           - confFromFileImage
           - confImage
           - datasetNames
@@ -662,13 +680,13 @@ spec:
           - inputDumpDir
           - outputDir
           - outputDumpDir
+          - path
           - port
-          - sparqlEnding
           type: object
         status:
           description: KobeFederationStatus defines the observed state of KobeFederation
           properties:
-            podnames:
+            podNames:
               description: 'INSERT ADDITIONAL STATUS FIELD - define observed state
                 of cluster Important: Run "operator-sdk generate k8s" to regenerate
                 code after modifying this file Add custom validation using kubebuilder
@@ -677,7 +695,7 @@ spec:
                 type: string
               type: array
           required:
-          - podnames
+          - podNames
           type: object
       type: object
   version: v1alpha1

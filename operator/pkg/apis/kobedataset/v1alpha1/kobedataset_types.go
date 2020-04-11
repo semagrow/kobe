@@ -16,10 +16,10 @@ type KobeDatasetSpec struct {
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
 	Image           string           `json:"image"`
-	ForceLoad       bool             `json:"forceLoad"`
-	DownloadFrom    string           `json:"downloadFrom"`
 	ImagePullPolicy types.PullPolicy `json:"imagePullPolicy"`
 	Replicas        int32            `json:"replicas"`
+	ForceLoad       bool             `json:"forceLoad"`
+	DownloadFrom    string           `json:"downloadFrom"`
 	Group           string           `json:"group"`
 	Port            int32            `json:"port"`
 	Path            string           `json:"path"`
@@ -46,8 +46,8 @@ type KobeDatasetStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
-	PodNames []string `json:"podnames"`
-	AppGroup string   `json:"appgroup"`
+	PodNames []string `json:"podNames"`
+	AppGroup string   `json:"appGroup"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object

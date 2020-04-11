@@ -96,11 +96,13 @@ type ReconcileKobeFederation struct {
 	scheme *runtime.Scheme
 }
 
-// Reconcile reads that state of the cluster for a KobeFederation object and makes changes based on the state read
-// and what is in the KobeFederation.Spec
+// Reconcile reads that state of the cluster for a KobeFederation object and
+// makes changes based on the state read and what is in the KobeFederation.Spec
+//
 // Note:
-// The Controller will requeue the Request to be processed again if the returned error is non-nil or
-// Result.Requeue is true, otherwise upon completion it will remove the work from the queue.
+// The Controller will requeue the Request to be processed again if the returned
+// error is non-nil or Result.Requeue is true, otherwise upon completion it will
+// remove the work from the queue.
 func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcile.Result, error) {
 	reqLogger := log.WithValues("Request.Namespace", request.Namespace, "Request.Name", request.Name)
 	reqLogger.Info("Reconciling KobeFederation")
@@ -153,13 +155,17 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 			return reconcile.Result{}, err
 		}
 
-		//hang till it finishes successfully (this controller listens to job changes so he will awake if the job status changes /no need to requeue)
+		//hang till it finishes successfully (this controller listens to job
+		//changes so he will awake if the job status changes /no need to
+		//requeue)
 		if &foundJob.Status.Succeeded == nil || foundJob.Status.Succeeded == 0 {
 			return reconcile.Result{}, nil
 		}
 
 		//----------------------experimental jobs-------------------------------------
-		//create jobs for the federation datasets that will check if those datasets have init files for this federator already by either failing or succeeding
+		//create jobs for the federation datasets that will check if those
+		//datasets have init files for this federator already by either failing
+		//or succeeding
 		for _, dataset := range instance.Spec.DatasetNames {
 			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset, Namespace: instance.Namespace}, foundJob)
 			if err != nil && errors.IsNotFound(err) {
@@ -175,9 +181,12 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 			}
 		}
 
-		//wait till they all finish either with error or successfully and collect a list with those that errored ->which means they didnt find init files
-		//if forcenewinit is true then the list contains all the datasets since we will initialize for all of them again
-		//if forcenewinit is false only those that errored will get passed to the list to make init containers
+		//wait till they all finish either with error or successfully and
+		//collect a list with those that errored ->which means they didnt find
+		//init files if forcenewinit is true then the list contains all the
+		//datasets since we will initialize for all of them again if
+		//forcenewinit is false only those that errored will get passed to the
+		//list to make init containers
 		for i, dataset := range instance.Spec.DatasetNames { //loop through all datasets of this federation
 			foundJob := &batchv1.Job{}
 			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset, Namespace: instance.Namespace}, foundJob)
@@ -449,10 +458,22 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 
 	//create the deployment of the federation .
 	//mount the config files to where the federator needs (for example etc/default/semagrow) -->passed by the yaml of federator
-	volumeConf := corev1.Volume{Name: "volumeconf", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + m.Name + "/"}}}
+	volumeConf := corev1.Volume{
+		Name: "volumeconf", 
+		VolumeSource: corev1.VolumeSource{
+			NFS: &corev1.NFSVolumeSource{
+				Server: nfsip, 
+				Path: "/exports/" + m.Name + "/",
+			},
+		},
+	}
+
 	volumes = append(volumes, volumeConf)
 
-	mountConf := corev1.VolumeMount{Name: "volumeconf", MountPath: m.Spec.FedConfDir}
+	mountConf := corev1.VolumeMount{
+		Name: "volumeconf", 
+		MountPath: m.Spec.FedConfDir,
+	}
 
 	dep := &appsv1.Deployment{
 		TypeMeta: metav1.TypeMeta{
@@ -482,8 +503,10 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 							Name:          m.Name,
 						}},
 						VolumeMounts: []corev1.VolumeMount{mountConf},
+						Resources: m.Spec.Resources,
 					}},
 					Volumes: volumes,
+					Affinity: m.Spec.Affinity,
 				},
 			},
 		},
