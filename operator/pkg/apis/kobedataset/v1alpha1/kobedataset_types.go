@@ -19,19 +19,25 @@ type KobeDatasetSpec struct {
 	ForceLoad       bool             `json:"forceLoad"`
 	DownloadFrom    string           `json:"downloadFrom"`
 	ImagePullPolicy types.PullPolicy `json:"imagePullPolicy"`
-	Count           int32            `json:"count"`
+	Replicas        int32            `json:"replicas"`
 	Group           string           `json:"group"`
 	Port            int32            `json:"port"`
-	SparqlEnding    string           `json:"sparqlEnding"`
-	EnvVariables    []EnvVariable    `json:"env"`
-}
-
-type EnvVariable struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
-	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
-	EnvVariableName  string `json:"name"`
-	EnvVariableValue string `json:"value"`
+	Path            string           `json:"path"`
+	
+	// List of environment variables to set in the container.
+    // Cannot be updated.
+    // +optional
+    // +patchMergeKey=name
+    // +patchStrategy=merge
+    Env 			[]types.EnvVar	 `json:"env,omitempty"`
+	
+	// If specified, the pod's scheduling constraints
+    // +optional
+	Affinity 		*types.Affinity  `json:"affinity,omitempty"`
+	// Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources
+    // already allocated to the pod.
+    // +optional
+    Resources 		types.ResourceRequirements   `json:"resources,omitempty"`
 }
 
 // KobeDatasetStatus defines the observed state of KobeDataset

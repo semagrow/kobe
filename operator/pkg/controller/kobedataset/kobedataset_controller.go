@@ -121,14 +121,14 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 	if instance.Spec.Group == "" {
 		instance.Spec.Group = "kobe"
 	}
-	if instance.Spec.Count < 1 {
-		instance.Spec.Count = 1
+	if instance.Spec.Replicas < 1 {
+		instance.Spec.Replicas = 1
 	}
 	if instance.Spec.Image == "" {
 		instance.Spec.Image = "kostbabis/virtuoso"
 	}
-	if instance.Spec.SparqlEnding == "" {
-    instance.Spec.SparqlEnding = "/sparql"
+	if instance.Spec.Path == "" {
+    instance.Spec.Path = "/sparql"
   }
 	//check  if a KobeUtil instance exists for this namespace and if not create it
 	kobeUtil := &kobeutilv1alpha1.KobeUtil{}
@@ -163,7 +163,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 
 	//----------------------------From here do the actual work to set up the pod and service for the dataset--------------
 	// health check for the pods of dataset
-	for i := 0; i < int(instance.Spec.Count); i++ {
+	for i := 0; i < int(instance.Spec.Replicas); i++ {
 		foundPod := &corev1.Pod{}
 		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name + "-kobedataset-" + strconv.Itoa(i), Namespace: instance.Namespace}, foundPod)
 		if err != nil && errors.IsNotFound(err) {
@@ -213,7 +213,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 	}
 	podForDelete := &corev1.Pod{}
 	for i, podName := range podNames {
-		if i >= int(instance.Spec.Count) { //check if we need to scale down the pods if user has changed count to lower number and delete if needed
+		if i >= int(instance.Spec.Replicas) { //check if we need to scale down the pods if user has changed count to lower number and delete if needed
 			err = r.client.Get(context.TODO(), types.NamespacedName{Name: podName, Namespace: instance.Namespace}, podForDelete)
 			err = r.client.Delete(context.TODO(), podForDelete, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
 			if err != nil {
@@ -275,7 +275,7 @@ func labelsForKobeDataset(name string) map[string]string {
 //--------tied to a dataset------
 func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha1.KobeDataset) *appsv1.Deployment {
 	labels := labelsForKobeDataset(m.Name)
-	replicas := m.Spec.Count
+	replicas := m.Spec.Replicas
 
 	envs := []corev1.EnvVar{}
 
@@ -290,10 +290,10 @@ func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha
 		envs = append(envs, env)
 	}
 	
-  for _, envVariable := range m.Spec.EnvVariables {
-    env = corev1.EnvVar{Name: envVariable.EnvVariableName, Value: envVariable.EnvVariableValue}
-		envs = append(envs, env)
-  }
+	for _, v := range m.Spec.Env {
+		env = corev1.EnvVar{Name: v.Name, Value: v.Value}
+			envs = append(envs, env)
+	}
   
 	volume := corev1.Volume{Name: "nfs", VolumeSource: corev1.VolumeSource{PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
 	volumes := []corev1.Volume{}
@@ -359,10 +359,10 @@ func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobedatasetv1alpha1.KobeD
 		envs = append(envs, env)
 	}
 	
-	for _, envVariable := range m.Spec.EnvVariables {
-    env = corev1.EnvVar{Name: envVariable.EnvVariableName, Value: envVariable.EnvVariableValue}
+	for _, v := range m.Spec.Env {
+    	env = corev1.EnvVar{Name: v.Name, Value: v.Value}
 		envs = append(envs, env)
-  }
+  	}
 
 	volume := corev1.Volume{Name: "nfs", VolumeSource: corev1.VolumeSource{PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
 	volumes := []corev1.Volume{}
@@ -394,8 +394,10 @@ func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobedatasetv1alpha1.KobeD
 				}},
 				Env:          envs,
 				VolumeMounts: volumemounts,
+				Resources: m.Spec.Resources,
 			}},
 			Volumes: volumes,
+			Affinity: m.Spec.Affinity,
 		},
 	}
 	controllerutil.SetControllerReference(m, pod, r.scheme)

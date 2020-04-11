@@ -192,7 +192,7 @@ func (r *ReconcileKobeBenchmark) newKobeDataset(dataset *kobebenchmarkv1alpha1.D
 			Image:           dataset.Image,
 			DownloadFrom:    dataset.DownloadFrom,
 			ImagePullPolicy: "Always",
-			Count:           1,
+			Replicas:        1,
 			Group:           "kobedataset.kobe.com",
 			Port:            80,
 		},

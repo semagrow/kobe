@@ -157,7 +157,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		}
 
 		//create a list of the sparql endpoints
-		endpoints = append(endpoints, "http://"+foundDataset.Name+"."+foundDataset.Namespace+".svc.cluster.local"+":"+strconv.Itoa(int(foundDataset.Spec.Port))+foundDataset.Spec.SparqlEnding)
+		endpoints = append(endpoints, "http://"+foundDataset.Name+"."+foundDataset.Namespace+".svc.cluster.local"+":"+strconv.Itoa(int(foundDataset.Spec.Port))+foundDataset.Spec.Path)
 		datasets = append(datasets, foundDataset.Name)
 	}
 
