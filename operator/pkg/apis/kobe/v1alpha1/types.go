@@ -83,6 +83,21 @@ type KobeDataset struct {
 	Status KobeDatasetStatus `json:"status,omitempty"`
 }
 
+func (r *KobeDataset) SetDefaults() bool {
+	changed := false
+	rs := &r.Spec
+	if rs.Replicas == nil {
+		var replicas int32 = 1
+		rs.Replicas = &replicas
+		changed = true
+	}
+	if rs.Path == "" {
+		rs.Path = "/sparql"
+		changed = true
+	}
+	return changed
+}
+
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // KobeDatasetList contains a list of KobeDataset
@@ -241,6 +256,28 @@ type KobeFederationSpec struct {
 	FederatorName string   `json:"federatorName"`
 	Endpoints     []string `json:"endpoints"`
 	DatasetNames  []string `json:"datasetNames"`
+}
+
+func (r *KobeFederation) SetDefaults() bool {
+	changed := false
+	rs := &r.Spec;
+	if rs.InputDumpDir == "" {
+		rs.InputDumpDir = "/kobe/input"
+		changed = true
+	}
+	if rs.OutputDumpDir == "" {
+		rs.OutputDumpDir = "/kobe/output"
+		changed = true
+	}
+	if rs.InputDir == "" {
+		rs.InputDir = "/kobe/input"
+		changed = true
+	}
+	if rs.OutputDir == "" {
+		rs.OutputDir = "/kobe/output"
+		changed = true
+	}
+	return changed
 }
 
 // KobeFederationStatus defines the observed state of KobeFederation

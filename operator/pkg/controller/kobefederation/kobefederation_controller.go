@@ -127,18 +127,8 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 		return reconcile.Result{}, err
 	}
 	//setting fields internally to default if not present
-	if instance.Spec.InputDumpDir == "" {
-		instance.Spec.InputDumpDir = "/kobe/input"
-	}
-	if instance.Spec.OutputDumpDir == "" {
-		instance.Spec.OutputDumpDir = "/kobe/output"
-	}
-	if instance.Spec.InputDir == "" {
-		instance.Spec.InputDir = "/kobe/input"
-	}
-	if instance.Spec.OutputDir == "" {
-		instance.Spec.OutputDir = "/kobe/output"
-	}
+	instance.SetDefaults()
+
 	datasetsForInit := []string{}  //here we will collect only datasets that get init containers for metadata creation
 	endpointsForInit := []string{} //here we will collect the endpoints that correspond to the selected datasets in the above slice
 
@@ -356,235 +346,6 @@ func labelsForKobeFederation(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
 
-/*
-func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1alpha1.KobeFederation, datasets []string) *appsv1.Deployment {
-	labels := labelsForKobeFederation(m.Name)
-
-	// First, find the pod that NFS server is running
-	nfsPodFound := &corev1.Pod{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
-	if err != nil && errors.IsNotFound(err) {
-		return nil
-	}
-
-	// it seems we need this cause dns for service of the nfs doesn't work in Kubernetes
-	nfsip := nfsPodFound.Status.PodIP
-
-	// create init containers  that make one config file for federation per
-	// dataset dump. if not needed then these can be set to do nothing
-	initContainers := []corev1.Container{}
-	volumes := []corev1.Volume{}
-	for i, datasetname := range datasets {
-		// each init container is given DATASET_NAME and DATASET_ENDPOINT
-		// environment variables to work with (needed if they create the files
-		// from quering the database directly) also `inputfiledir` and
-		// `outputfiledir` both point to `exports/<datasetname>/dumps/` and
-		// `exports/dataset/<datasetname>/<federation>/` respectively to nfs
-		// server (needed if they make the config files from the dumps)
-		vmounts := []corev1.VolumeMount{}
-		envs := []corev1.EnvVar{}
-		env := corev1.EnvVar{Name: "DATASET_NAME", Value: datasetname}
-		envs = append(envs, env)
-
-		env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: m.Spec.Endpoints[i]}
-		envs = append(envs, env)
-
-		// optional variable to skip creating the files if they already exist in
-		// `/exports/<dataset-name>/<federator-name>`. Is passed by the experiment
-		// yaml
-		if m.Spec.ForceNewInit == true {
-			env = corev1.EnvVar{Name: "INITIALIZE", Value: "yes"}
-			envs = append(envs, env)
-		}
-
-		volumeIn := corev1.Volume{
-			Name: "nfs-in-" + datasetname,
-			VolumeSource: corev1.VolumeSource{
-				NFS: &corev1.NFSVolumeSource{
-					Server: nfsip,
-					Path:   "/exports/" + datasetname + "/dump"}}}
-
-		vmountIn := corev1.VolumeMount{
-			Name:      "nfs-in-" + datasetname,
-			MountPath: m.Spec.InputDumpDir}
-
-		volumeOut := corev1.Volume{
-			Name: "nfs-out-" + datasetname,
-			VolumeSource: corev1.VolumeSource{
-				NFS: &corev1.NFSVolumeSource{
-					Server: nfsip,
-					Path:   "/exports/" + datasetname + "/" + m.Spec.FederatorName}}}
-
-		vmountOut := corev1.VolumeMount{
-			Name:      "nfs-out-" + datasetname,
-			MountPath: m.Spec.OutputDumpDir}
-
-		volumes = append(volumes, volumeIn, volumeOut)
-		vmounts = append(vmounts, vmountIn, vmountOut)
-
-		container := corev1.Container{
-			Image:        m.Spec.ConfFromFileImage,
-			Name:         "initcontainer" + strconv.Itoa(i),
-			Env:          envs,
-			VolumeMounts: vmounts,
-		}
-		initContainers = append(initContainers, container)
-	}
-
-	// create a helper init container that will choose the config files for this
-	// set of datasets only and move them in a temps directory
-	envs := []corev1.EnvVar{}
-	vmounts := []corev1.VolumeMount{}
-	count := 0
-	for i, datasetname := range m.Spec.DatasetNames {
-		env := corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: datasetname}
-		envs = append(envs, env)
-		env = corev1.EnvVar{Name: "DATASET_ENDPOINT_" + strconv.Itoa(i), Value: m.Spec.Endpoints[i]}
-		envs = append(envs, env)
-		count++
-	}
-	env := corev1.EnvVar{Name: "N", Value: strconv.Itoa(count - 1)}
-	envs = append(envs, env)
-
-	env = corev1.EnvVar{Name: "FEDERATION_NAME", Value: m.Name}
-	envs = append(envs, env)
-
-	env = corev1.EnvVar{Name: "FEDERATOR_NAME", Value: m.Spec.FederatorName}
-	envs = append(envs, env)
-
-	volumeHouse := corev1.Volume{
-		Name: "nfs-housekeep",
-		VolumeSource: corev1.VolumeSource{
-			NFS: &corev1.NFSVolumeSource{
-				Server: nfsip,
-				Path:   "/exports"}}}
-
-	vmountHouse := corev1.VolumeMount{
-		Name:      "nfs-housekeep",
-		MountPath: "/kobe"}
-
-	volumes = append(volumes, volumeHouse)
-	vmounts = append(vmounts, vmountHouse)
-
-	containerHouse := corev1.Container{
-		Image:        "kostbabis/housekeeping",
-		Name:         "inithouse",
-		Env:          envs,
-		VolumeMounts: vmounts,
-	}
-	initContainers = append(initContainers, containerHouse)
-
-	// create the initcontainer that will run the image that combines many
-	// configs from the above temp directory and make appropriate config for the
-	// whole experiment/federation
-	vmounts = []corev1.VolumeMount{}
-
-	path := "/exports/temp-" + m.Name
-
-	volumeInFinal := corev1.Volume{
-		Name: "nfs-final-in",
-		VolumeSource: corev1.VolumeSource{
-			NFS: &corev1.NFSVolumeSource{
-				Server: nfsip,
-				Path:   path}}}
-
-	vmountInFinal := corev1.VolumeMount{
-		Name:      "nfs-final-in",
-		MountPath: m.Spec.InputDir}
-
-	volumes = append(volumes, volumeInFinal)
-	vmounts = append(vmounts, vmountInFinal)
-
-	path = "/exports/" + m.Name
-
-	volumeOutFinal := corev1.Volume{
-		Name: "nfs-final-out",
-		VolumeSource: corev1.VolumeSource{
-			NFS: &corev1.NFSVolumeSource{
-				Server: nfsip,
-				Path:   path}}}
-
-	vmountOutFinal := corev1.VolumeMount{
-		Name:      "nfs-final-out",
-		MountPath: m.Spec.OutputDir}
-
-	volumes = append(volumes, volumeOutFinal)
-	vmounts = append(vmounts, vmountOutFinal)
-
-	container := corev1.Container{
-		Image:        m.Spec.ConfImage,
-		Name:         "init" + "final",
-		Env:          envs,
-		VolumeMounts: vmounts,
-	}
-
-	initContainers = append(initContainers, container)
-	// initContainers should be:
-	// m.Spec.ConfFromFileImage for each dataset
-	// kostbabis/housekeeping
-	// m.Spec.ConfImage - that initializes the federator engine
-
-	// create the deployment of the federation. mount the config files to where
-	// the federator needs (for example, `etc/default/semagrow`) --> passed by
-	// the yaml of federator
-	volumeConf := corev1.Volume{
-		Name: "volumeconf",
-		VolumeSource: corev1.VolumeSource{
-			NFS: &corev1.NFSVolumeSource{
-				Server: nfsip,
-				Path:   "/exports/" + m.Name + "/",
-			},
-		},
-	}
-
-	mountConf := corev1.VolumeMount{
-		Name:      "volumeconf",
-		MountPath: m.Spec.FedConfDir,
-	}
-
-	volumes = append(volumes, volumeConf)
-
-	dep := &appsv1.Deployment{
-		TypeMeta: metav1.TypeMeta{
-			APIVersion: "apps/v1",
-			Kind:       "Deployment",
-		},
-		ObjectMeta: metav1.ObjectMeta{
-			Name:      m.Name,
-			Namespace: m.Namespace,
-		},
-		Spec: appsv1.DeploymentSpec{
-			Selector: &metav1.LabelSelector{
-				MatchLabels: labels,
-			},
-			Template: corev1.PodTemplateSpec{
-				ObjectMeta: metav1.ObjectMeta{
-					Labels: labels,
-				},
-				Spec: corev1.PodSpec{
-					InitContainers: initContainers,
-					Containers: []corev1.Container{{
-						Image:           m.Spec.Image,
-						Name:            m.Name,
-						ImagePullPolicy: m.Spec.ImagePullPolicy,
-						Ports: []corev1.ContainerPort{{
-							ContainerPort: m.Spec.Port,
-							Name:          m.Name,
-						}},
-						VolumeMounts: []corev1.VolumeMount{mountConf},
-						Resources:    m.Spec.Resources,
-					}},
-					Volumes:  volumes,
-					Affinity: m.Spec.Affinity,
-				},
-			},
-		},
-	}
-	controllerutil.SetControllerReference(m, dep, r.scheme)
-	return dep
-}
-*/
-
 // a service to find the federation by name internally in the cluster.
 func (r *ReconcileKobeFederation) newServiceForFederation(m *kobev1alpha1.KobeFederation) *corev1.Service {
 	service := &corev1.Service{
@@ -747,15 +508,12 @@ func (r *ReconcileKobeFederation) newPodForFederation(m *kobev1alpha1.KobeFedera
 		//each init container is given DATASET_NAME and DATASET_ENDPOINT environment variables to work with(needed if they create the files from quering the database directly)
 		//also inputfiledir and outputfiledir both point to exports/<datasetname>/dumps/ and exports/dataset/<datasetname>/<federation>/ respectively to nfs server(needed if they make the config files from the dumps)
 		vmounts := []corev1.VolumeMount{}
-		envs := []corev1.EnvVar{}
-		env := corev1.EnvVar{Name: "DATASET_NAME", Value: datasetname}
-		envs = append(envs, env)
-
-		env = corev1.EnvVar{Name: "DATASET_ENDPOINT", Value: endpoints[i]}
-		envs = append(envs, env)
+		envs := []corev1.EnvVar{
+			{Name: "DATASET_NAME", Value: datasetname},
+			{Name: "DATASET_ENDPOINT", Value: endpoints[i]}}
 
 		if m.Spec.ForceNewInit == true { //optional variable to skip creating the files if they already exist in /exports/<dataset-name>/<federator-name>.Is passed by the experiment yaml
-			env = corev1.EnvVar{Name: "INITIALIZE", Value: "yes"}
+			env := corev1.EnvVar{Name: "INITIALIZE", Value: "yes"}
 			envs = append(envs, env)
 		}
 		volumeIn := corev1.Volume{Name: "nfs-in-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/dump"}}}

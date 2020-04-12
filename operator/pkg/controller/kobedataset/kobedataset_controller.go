@@ -116,16 +116,9 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 		// Error reading the object - requeue the request.
 		return reconcile.Result{}, err
 	}
-	if instance.Spec.Replicas == nil {
-		var replicas int32 = 1
-		instance.Spec.Replicas = &replicas
-	}
-	if instance.Spec.Image == "" {
-		instance.Spec.Image = "kostbabis/virtuoso"
-	}
-	if instance.Spec.Path == "" {
-		instance.Spec.Path = "/sparql"
-	}
+	
+	instance.SetDefaults();
+
 	//check  if a KobeUtil instance exists for this namespace and if not create it
 	kobeUtil := &kobev1alpha1.KobeUtil{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobeutil", Namespace: instance.Namespace}, kobeUtil)
