@@ -588,11 +588,6 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 // a service to find the federation by name internally in the cluster.
 func (r *ReconcileKobeFederation) newServiceForFederation(m *kobev1alpha1.KobeFederation) *corev1.Service {
 	service := &corev1.Service{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "Service",
-			APIVersion: "v1",
-		},
-
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
 			Namespace: m.Namespace,
@@ -847,10 +842,6 @@ func (r *ReconcileKobeFederation) newPodForFederation(m *kobev1alpha1.KobeFedera
 	mountConf := corev1.VolumeMount{Name: "volumeconf", MountPath: m.Spec.FedConfDir}
 
 	pod := &corev1.Pod{
-		TypeMeta: metav1.TypeMeta{
-			APIVersion: "v1",
-			Kind:       "Pod",
-		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
 			Namespace: m.Namespace,

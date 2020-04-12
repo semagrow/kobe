@@ -161,16 +161,10 @@ func labelsForKobeBenchmark(name string) map[string]string {
 }
 func (r *ReconcileKobeBenchmark) newConfigMapForQueries(m *kobev1alpha1.KobeBenchmark, querymap map[string]string) *corev1.ConfigMap {
 	configmap := &corev1.ConfigMap{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "ConfigMap",
-			APIVersion: "v1",
-		},
-
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
 			Namespace: m.Namespace,
 		},
-
 		Data: querymap,
 	}
 	controllerutil.SetControllerReference(m, configmap, r.scheme)
@@ -179,10 +173,6 @@ func (r *ReconcileKobeBenchmark) newConfigMapForQueries(m *kobev1alpha1.KobeBenc
 func (r *ReconcileKobeBenchmark) newKobeDataset(dataset *kobev1alpha1.Dataset, m *kobev1alpha1.KobeBenchmark) *kobev1alpha1.KobeDataset {
 
 	data := &kobev1alpha1.KobeDataset{
-		TypeMeta: metav1.TypeMeta{
-			APIVersion: "kobedataset.kobe.com/v1alpha1",
-			Kind:       "KobeDataset",
-		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      dataset.Name,
 			Namespace: m.Namespace,

@@ -284,10 +284,6 @@ func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobev1alpha1.KobeExperi
 	vmounts := []corev1.VolumeMount{corev1.VolumeMount{Name: "queries", MountPath: "/queries"}}
 
 	job := &batchv1.Job{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "Job",
-			APIVersion: "v1",
-		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name + "-" + strconv.Itoa(i),
 			Namespace: m.Namespace,
@@ -327,10 +323,6 @@ func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobev1alpha1.Kob
 	fed *kobev1alpha1.KobeFederator, endpoints []string, datasetnames []string) *kobev1alpha1.KobeFederation {
 
 	federation := &kobev1alpha1.KobeFederation{
-		TypeMeta: metav1.TypeMeta{
-			APIVersion: "kobefederator.kobe.com/v1alpha1",
-			Kind:       "KobeFederator",
-		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
 			Namespace: fed.Namespace,

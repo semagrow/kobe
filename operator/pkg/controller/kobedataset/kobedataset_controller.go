@@ -363,10 +363,6 @@ func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobev1alpha1.KobeDataset,
 	volumemounts = append(volumemounts, volumemount)
 
 	pod := &corev1.Pod{
-		TypeMeta: metav1.TypeMeta{
-			APIVersion: "v1",
-			Kind:       "Pod",
-		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      podName,
 			Namespace: m.Namespace,
@@ -396,11 +392,6 @@ func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobev1alpha1.KobeDataset,
 
 func (r *ReconcileKobeDataset) newServiceForDataset(m *kobev1alpha1.KobeDataset) *corev1.Service {
 	service := &corev1.Service{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "Service",
-			APIVersion: "v1",
-		},
-
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
 			Namespace: m.Namespace,
@@ -426,11 +417,6 @@ func (r *ReconcileKobeDataset) newServiceForDataset(m *kobev1alpha1.KobeDataset)
 
 func (r *ReconcileKobeDataset) newKobeUtility(m *kobev1alpha1.KobeDataset) *kobev1alpha1.KobeUtil {
 	kutil := &kobev1alpha1.KobeUtil{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "KobeUtil",
-			APIVersion: "kobeutil.kobe.com/v1alpha1",
-		},
-
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "kobeutil",
 			Namespace: m.Namespace,

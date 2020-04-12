@@ -183,11 +183,6 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 //NFS SERVICE (its actually useless cause nfs service dns bug)
 func (r *ReconcileKobeUtil) newServiceForNfs(m *kobev1alpha1.KobeUtil) *corev1.Service {
 	service := &corev1.Service{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "Service",
-			APIVersion: "v1",
-		},
-
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "kobenfs",
 			Namespace: m.Namespace,
@@ -221,10 +216,6 @@ func (r *ReconcileKobeUtil) newServiceForNfs(m *kobev1alpha1.KobeUtil) *corev1.S
 //NFS CONFIG
 func (r *ReconcileKobeUtil) newNfsConfig(m *kobev1alpha1.KobeUtil) *corev1.ConfigMap {
 	cmap := &corev1.ConfigMap{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "ConfigMap",
-			APIVersion: "v1",
-		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "nfsconfig",
 			Namespace: m.Namespace,
@@ -260,11 +251,6 @@ func (r *ReconcileKobeUtil) newPodForNfs(m *kobev1alpha1.KobeUtil) *corev1.Pod {
 	volumes = append(volumes, volume1)
 
 	pod := &corev1.Pod{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "Pod",
-			APIVersion: "v1",
-		},
-
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "kobenfs",
 			Namespace: m.Namespace,
@@ -307,10 +293,6 @@ func (r *ReconcileKobeUtil) newPvForKobe(m *kobev1alpha1.KobeUtil, ip string) *c
 	nfs := &corev1.NFSVolumeSource{Server: ip, Path: "/"}
 
 	pv := &corev1.PersistentVolume{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "PersistentVolume",
-			APIVersion: "v1",
-		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name: "kobepv",
 		},
@@ -333,10 +315,6 @@ func (r *ReconcileKobeUtil) newPvcForKobe(m *kobev1alpha1.KobeUtil) *corev1.Pers
 	rmap := corev1.ResourceList{}
 	rmap["storage"] = capacity
 	pvc := &corev1.PersistentVolumeClaim{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "PersistentVolumeClaim",
-			APIVersion: "v1",
-		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "kobepvc",
 			Namespace: m.Namespace,
