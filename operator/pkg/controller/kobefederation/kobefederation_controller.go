@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"strconv"
 
-	kobefederationv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederation/v1alpha1"
+	kobev1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	appsv1 "k8s.io/api/apps/v1"
 	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
@@ -45,7 +45,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	}
 
 	// Watch for changes to primary resource KobeFederator
-	err = c.Watch(&source.Kind{Type: &kobefederationv1alpha1.KobeFederation{}}, &handler.EnqueueRequestForObject{})
+	err = c.Watch(&source.Kind{Type: &kobev1alpha1.KobeFederation{}}, &handler.EnqueueRequestForObject{})
 	if err != nil {
 		return err
 	}
@@ -54,7 +54,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	// Watch for changes to secondary resource Pods and requeue the owner KobeFederator
 	err = c.Watch(&source.Kind{Type: &appsv1.Deployment{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobefederationv1alpha1.KobeFederation{},
+		OwnerType:    &kobev1alpha1.KobeFederation{},
 	})
 
 	if err != nil {
@@ -63,7 +63,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 
 	err = c.Watch(&source.Kind{Type: &corev1.Service{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobefederationv1alpha1.KobeFederation{},
+		OwnerType:    &kobev1alpha1.KobeFederation{},
 	})
 
 	if err != nil {
@@ -74,7 +74,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	// Watch for changes to secondary resource Pods and requeue the owner KobeDataset
 	err = c.Watch(&source.Kind{Type: &corev1.Pod{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobefederationv1alpha1.KobeFederation{},
+		OwnerType:    &kobev1alpha1.KobeFederation{},
 	})
 
 	if err != nil {
@@ -83,7 +83,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 
 	err = c.Watch(&source.Kind{Type: &batchv1.Job{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobefederationv1alpha1.KobeFederation{},
+		OwnerType:    &kobev1alpha1.KobeFederation{},
 	})
 	if err != nil {
 		return err
@@ -114,7 +114,7 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 	reqLogger.Info("Reconciling KobeFederation")
 
 	// fetch the KobeFederation instance
-	instance := &kobefederationv1alpha1.KobeFederation{}
+	instance := &kobev1alpha1.KobeFederation{}
 	err := r.client.Get(context.TODO(), request.NamespacedName, instance)
 	if err != nil {
 		if errors.IsNotFound(err) {
@@ -586,7 +586,7 @@ func (r *ReconcileKobeFederation) newDeploymentForFederation(m *kobefederationv1
 */
 
 // a service to find the federation by name internally in the cluster.
-func (r *ReconcileKobeFederation) newServiceForFederation(m *kobefederationv1alpha1.KobeFederation) *corev1.Service {
+func (r *ReconcileKobeFederation) newServiceForFederation(m *kobev1alpha1.KobeFederation) *corev1.Service {
 	service := &corev1.Service{
 		TypeMeta: metav1.TypeMeta{
 			Kind:       "Service",
@@ -617,7 +617,7 @@ func (r *ReconcileKobeFederation) newServiceForFederation(m *kobefederationv1alp
 }
 
 // A job that remove the (temporary) files and create some dirs...
-func (r *ReconcileKobeFederation) newJobForFederation(m *kobefederationv1alpha1.KobeFederation) *batchv1.Job {
+func (r *ReconcileKobeFederation) newJobForFederation(m *kobev1alpha1.KobeFederation) *batchv1.Job {
 	times := int32(1)
 	parallelism := int32(1)
 	volumes := []corev1.Volume{}
@@ -680,7 +680,7 @@ func (r *ReconcileKobeFederation) newJobForFederation(m *kobefederationv1alpha1.
 }
 
 //------------------------ job that checks if init file exists for this dataset/federator by failing or succeeding
-func (r *ReconcileKobeFederation) newJobForDataset(m *kobefederationv1alpha1.KobeFederation, dataset string) *batchv1.Job {
+func (r *ReconcileKobeFederation) newJobForDataset(m *kobev1alpha1.KobeFederation, dataset string) *batchv1.Job {
 	times := int32(1)
 	parallelism := int32(1)
 	volumes := []corev1.Volume{}
@@ -735,7 +735,7 @@ func (r *ReconcileKobeFederation) newJobForDataset(m *kobefederationv1alpha1.Kob
 
 // creates a new federation deployment
 // This is the deployment that runs the federator image
-func (r *ReconcileKobeFederation) newPodForFederation(m *kobefederationv1alpha1.KobeFederation, datasets []string, endpoints []string) *corev1.Pod {
+func (r *ReconcileKobeFederation) newPodForFederation(m *kobev1alpha1.KobeFederation, datasets []string, endpoints []string) *corev1.Pod {
 	labels := labelsForKobeFederation(m.Name)
 
 	nfsPodFound := &corev1.Pod{}
@@ -875,5 +875,4 @@ func (r *ReconcileKobeFederation) newPodForFederation(m *kobefederationv1alpha1.
 
 	controllerutil.SetControllerReference(m, pod, r.scheme)
 	return pod
-
 }

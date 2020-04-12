@@ -3,8 +3,7 @@ package kobebenchmark
 import (
 	"context"
 
-	kobebenchmarkv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1"
-	kobedatasetv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1"
+	kobev1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -14,9 +13,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/handler"
+	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 )
 
@@ -47,7 +46,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	}
 
 	// Watch for changes to primary resource KobeBenchmark
-	err = c.Watch(&source.Kind{Type: &kobebenchmarkv1alpha1.KobeBenchmark{}}, &handler.EnqueueRequestForObject{})
+	err = c.Watch(&source.Kind{Type: &kobev1alpha1.KobeBenchmark{}}, &handler.EnqueueRequestForObject{})
 	if err != nil {
 		return err
 	}
@@ -56,15 +55,15 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	// Watch for changes to secondary resource Pods and requeue the owner KobeBenchmark
 	err = c.Watch(&source.Kind{Type: &corev1.Pod{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobebenchmarkv1alpha1.KobeBenchmark{},
+		OwnerType:    &kobev1alpha1.KobeBenchmark{},
 	})
 	if err != nil {
 		return err
 	}
 
-	err = c.Watch(&source.Kind{Type: &kobedatasetv1alpha1.KobeDataset{}}, &handler.EnqueueRequestForOwner{
+	err = c.Watch(&source.Kind{Type: &kobev1alpha1.KobeDataset{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobebenchmarkv1alpha1.KobeBenchmark{},
+		OwnerType:    &kobev1alpha1.KobeBenchmark{},
 	})
 	if err != nil {
 		return err
@@ -96,7 +95,7 @@ func (r *ReconcileKobeBenchmark) Reconcile(request reconcile.Request) (reconcile
 	reqLogger.Info("Reconciling KobeBenchmark")
 
 	// Fetch the KobeBenchmark instance
-	instance := &kobebenchmarkv1alpha1.KobeBenchmark{}
+	instance := &kobev1alpha1.KobeBenchmark{}
 	err := r.client.Get(context.TODO(), request.NamespacedName, instance)
 	if err != nil {
 		if errors.IsNotFound(err) {
@@ -110,7 +109,7 @@ func (r *ReconcileKobeBenchmark) Reconcile(request reconcile.Request) (reconcile
 	}
 
 	//check if the datasets exist else create a very basic version of those that dont
-	foundDataset := &kobedatasetv1alpha1.KobeDataset{}
+	foundDataset := &kobev1alpha1.KobeDataset{}
 	for _, dataset := range instance.Spec.Datasets {
 
 		err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Name, Namespace: instance.Namespace}, foundDataset)
@@ -160,7 +159,7 @@ func (r *ReconcileKobeBenchmark) Reconcile(request reconcile.Request) (reconcile
 func labelsForKobeBenchmark(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
-func (r *ReconcileKobeBenchmark) newConfigMapForQueries(m *kobebenchmarkv1alpha1.KobeBenchmark, querymap map[string]string) *corev1.ConfigMap {
+func (r *ReconcileKobeBenchmark) newConfigMapForQueries(m *kobev1alpha1.KobeBenchmark, querymap map[string]string) *corev1.ConfigMap {
 	configmap := &corev1.ConfigMap{
 		TypeMeta: metav1.TypeMeta{
 			Kind:       "ConfigMap",
@@ -177,9 +176,9 @@ func (r *ReconcileKobeBenchmark) newConfigMapForQueries(m *kobebenchmarkv1alpha1
 	controllerutil.SetControllerReference(m, configmap, r.scheme)
 	return configmap
 }
-func (r *ReconcileKobeBenchmark) newKobeDataset(dataset *kobebenchmarkv1alpha1.Dataset, m *kobebenchmarkv1alpha1.KobeBenchmark) *kobedatasetv1alpha1.KobeDataset {
+func (r *ReconcileKobeBenchmark) newKobeDataset(dataset *kobev1alpha1.Dataset, m *kobev1alpha1.KobeBenchmark) *kobev1alpha1.KobeDataset {
 
-	data := &kobedatasetv1alpha1.KobeDataset{
+	data := &kobev1alpha1.KobeDataset{
 		TypeMeta: metav1.TypeMeta{
 			APIVersion: "kobedataset.kobe.com/v1alpha1",
 			Kind:       "KobeDataset",
@@ -188,12 +187,10 @@ func (r *ReconcileKobeBenchmark) newKobeDataset(dataset *kobebenchmarkv1alpha1.D
 			Name:      dataset.Name,
 			Namespace: m.Namespace,
 		},
-		Spec: kobedatasetv1alpha1.KobeDatasetSpec{
+		Spec: kobev1alpha1.KobeDatasetSpec{
 			Image:           dataset.Image,
 			DownloadFrom:    dataset.DownloadFrom,
 			ImagePullPolicy: "Always",
-			Replicas:        1,
-			Group:           "kobedataset.kobe.com",
 			Port:            80,
 		},
 	}

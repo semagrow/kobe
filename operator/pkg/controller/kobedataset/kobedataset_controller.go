@@ -5,8 +5,7 @@ import (
 	"reflect"
 	"strconv"
 
-	kobedatasetv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1"
-	kobeutilv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobeutil/v1alpha1"
+	kobev1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -51,21 +50,21 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	}
 
 	// Watch for changes to primary resource KobeDataset
-	err = c.Watch(&source.Kind{Type: &kobedatasetv1alpha1.KobeDataset{}}, &handler.EnqueueRequestForObject{})
+	err = c.Watch(&source.Kind{Type: &kobev1alpha1.KobeDataset{}}, &handler.EnqueueRequestForObject{})
 	if err != nil {
 		return err
 	}
 
 	err = c.Watch(&source.Kind{Type: &appsv1.Deployment{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobedatasetv1alpha1.KobeDataset{},
+		OwnerType:    &kobev1alpha1.KobeDataset{},
 	})
 	if err != nil {
 		return err
 	}
 	err = c.Watch(&source.Kind{Type: &corev1.Service{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobedatasetv1alpha1.KobeDataset{},
+		OwnerType:    &kobev1alpha1.KobeDataset{},
 	})
 	if err != nil {
 		return err
@@ -74,7 +73,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	// Watch for changes to secondary resource Pods and requeue the owner KobeDataset
 	err = c.Watch(&source.Kind{Type: &corev1.Pod{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobedatasetv1alpha1.KobeDataset{},
+		OwnerType:    &kobev1alpha1.KobeDataset{},
 	})
 	if err != nil {
 		return err
@@ -105,7 +104,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 	reqLogger.Info("Reconciling KobeDataset")
 
 	// Fetch the KobeDataset instance
-	instance := &kobedatasetv1alpha1.KobeDataset{}
+	instance := &kobev1alpha1.KobeDataset{}
 	err := r.client.Get(context.TODO(), request.NamespacedName, instance)
 	if err != nil {
 		if errors.IsNotFound(err) {
@@ -117,12 +116,9 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 		// Error reading the object - requeue the request.
 		return reconcile.Result{}, err
 	}
-	// if following fields are not present in yaml then set the defaults
-	if instance.Spec.Group == "" {
-		instance.Spec.Group = "kobe"
-	}
-	if instance.Spec.Replicas < 1 {
-		instance.Spec.Replicas = 1
+	if instance.Spec.Replicas == nil {
+		var replicas int32 = 1
+		instance.Spec.Replicas = &replicas
 	}
 	if instance.Spec.Image == "" {
 		instance.Spec.Image = "kostbabis/virtuoso"
@@ -131,7 +127,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 		instance.Spec.Path = "/sparql"
 	}
 	//check  if a KobeUtil instance exists for this namespace and if not create it
-	kobeUtil := &kobeutilv1alpha1.KobeUtil{}
+	kobeUtil := &kobev1alpha1.KobeUtil{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobeutil", Namespace: instance.Namespace}, kobeUtil)
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Creating the kobe utility custom resource")
@@ -163,7 +159,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 
 	//----------------------------From here do the actual work to set up the pod and service for the dataset--------------
 	// health check for the pods of dataset
-	for i := 0; i < int(instance.Spec.Replicas); i++ {
+	for i := 0; i < int(*instance.Spec.Replicas); i++ {
 		foundPod := &corev1.Pod{}
 		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name + "-kobedataset-" + strconv.Itoa(i), Namespace: instance.Namespace}, foundPod)
 		if err != nil && errors.IsNotFound(err) {
@@ -202,18 +198,9 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 		}
 	}
 
-	// Update AppGroup status
-	if instance.Spec.Group != instance.Status.AppGroup {
-		instance.Status.AppGroup = instance.Spec.Group
-		err := r.client.Update(context.TODO(), instance)
-		if err != nil {
-			reqLogger.Info("failed to update group status: %v", err)
-			return reconcile.Result{}, err
-		}
-	}
 	podForDelete := &corev1.Pod{}
 	for i, podName := range podNames {
-		if i >= int(instance.Spec.Replicas) { //check if we need to scale down the pods if user has changed count to lower number and delete if needed
+		if i >= int(*instance.Spec.Replicas) { //check if we need to scale down the pods if user has changed count to lower number and delete if needed
 			err = r.client.Get(context.TODO(), types.NamespacedName{Name: podName, Namespace: instance.Namespace}, podForDelete)
 			err = r.client.Delete(context.TODO(), podForDelete, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
 			if err != nil {
@@ -247,14 +234,13 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 		instance.Spec.ForceLoad = false
 		err := r.client.Update(context.TODO(), instance)
 		if err != nil {
-			reqLogger.Info("failed to update the dataset forcedownload flag ")
+			reqLogger.Info("failed to update the dataset forcedownload flag")
 			return reconcile.Result{}, err
 		}
 	}
 	// -------------------------------finishing line everything should be fine here---------------------------------
 	reqLogger.Info("Loop for a kobedataset went through the end for reconciling kobedataset\n")
 	return reconcile.Result{}, nil
-
 }
 
 //------------------status update and retrieval to check actual pods besides deployment.Can be used to delay experiment for kobeexperiment till everything is up
@@ -345,7 +331,7 @@ func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha
 }
 */
 
-func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobedatasetv1alpha1.KobeDataset, podName string) *corev1.Pod {
+func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobev1alpha1.KobeDataset, podName string) *corev1.Pod {
 	labels := labelsForKobeDataset(m.Name)
 
 	envs := []corev1.EnvVar{
@@ -408,7 +394,7 @@ func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobedatasetv1alpha1.KobeD
 	return pod
 }
 
-func (r *ReconcileKobeDataset) newServiceForDataset(m *kobedatasetv1alpha1.KobeDataset) *corev1.Service {
+func (r *ReconcileKobeDataset) newServiceForDataset(m *kobev1alpha1.KobeDataset) *corev1.Service {
 	service := &corev1.Service{
 		TypeMeta: metav1.TypeMeta{
 			Kind:       "Service",
@@ -436,11 +422,10 @@ func (r *ReconcileKobeDataset) newServiceForDataset(m *kobedatasetv1alpha1.KobeD
 	}
 	controllerutil.SetControllerReference(m, service, r.scheme)
 	return service
-
 }
 
-func (r *ReconcileKobeDataset) newKobeUtility(m *kobedatasetv1alpha1.KobeDataset) *kobeutilv1alpha1.KobeUtil {
-	kutil := &kobeutilv1alpha1.KobeUtil{
+func (r *ReconcileKobeDataset) newKobeUtility(m *kobev1alpha1.KobeDataset) *kobev1alpha1.KobeUtil {
+	kutil := &kobev1alpha1.KobeUtil{
 		TypeMeta: metav1.TypeMeta{
 			Kind:       "KobeUtil",
 			APIVersion: "kobeutil.kobe.com/v1alpha1",
@@ -451,7 +436,7 @@ func (r *ReconcileKobeDataset) newKobeUtility(m *kobedatasetv1alpha1.KobeDataset
 			Namespace: m.Namespace,
 		},
 
-		Spec: kobeutilv1alpha1.KobeUtilSpec{},
+		Spec: kobev1alpha1.KobeUtilSpec{},
 	}
 	return kutil
 }

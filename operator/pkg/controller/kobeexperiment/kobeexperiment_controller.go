@@ -4,11 +4,7 @@ import (
 	"context"
 	"strconv"
 
-	kobebenchmarkv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobebenchmark/v1alpha1"
-	kobedatasetv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobedataset/v1alpha1"
-	kobeexperimentv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobeexperiment/v1alpha1"
-	kobefederationv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederation/v1alpha1"
-	kobefederatorv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederator/v1alpha1"
+	kobev1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -48,14 +44,14 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	}
 
 	// Watch for changes to primary resource KobeExperiment
-	err = c.Watch(&source.Kind{Type: &kobeexperimentv1alpha1.KobeExperiment{}}, &handler.EnqueueRequestForObject{})
+	err = c.Watch(&source.Kind{Type: &kobev1alpha1.KobeExperiment{}}, &handler.EnqueueRequestForObject{})
 	if err != nil {
 		return err
 	}
 
 	err = c.Watch(&source.Kind{Type: &batchv1.Job{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobeexperimentv1alpha1.KobeExperiment{},
+		OwnerType:    &kobev1alpha1.KobeExperiment{},
 	})
 	if err != nil {
 		return err
@@ -63,7 +59,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 
 	err = c.Watch(&source.Kind{Type: &corev1.Pod{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobeexperimentv1alpha1.KobeExperiment{},
+		OwnerType:    &kobev1alpha1.KobeExperiment{},
 	})
 	if err != nil {
 		return err
@@ -90,7 +86,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	reqLogger.Info("Reconciling KobeExperiment")
 
 	// Fetch the KobeExperiment instance
-	instance := &kobeexperimentv1alpha1.KobeExperiment{}
+	instance := &kobev1alpha1.KobeExperiment{}
 	err := r.client.Get(context.TODO(), request.NamespacedName, instance)
 	if err != nil {
 		if errors.IsNotFound(err) {
@@ -109,7 +105,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 
 	// Check if there exist a kobe benchmark with this name in Kubernetes.
 	// If not its an error.
-	foundBenchmark := &kobebenchmarkv1alpha1.KobeBenchmark{}
+	foundBenchmark := &kobev1alpha1.KobeBenchmark{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Spec.Benchmark, Namespace: instance.Namespace}, foundBenchmark)
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Did not found a kobebenchmark resource with this name please define that first")
@@ -121,7 +117,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	// Check if every kobedataset of the benchmark is healthy.
 	// Create a list of the endpoints and of the names of the datasets
 	for _, datasetInfo := range foundBenchmark.Spec.Datasets {
-		foundDataset := &kobedatasetv1alpha1.KobeDataset{}
+		foundDataset := &kobev1alpha1.KobeDataset{}
 		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: foundBenchmark.Namespace, Name: datasetInfo.Name}, foundDataset)
 		if err != nil {
 			reqLogger.Info("Failed to find a specific dataset from the list of datasets of this benchmark")
@@ -168,7 +164,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		datasets = append(datasets, foundDataset.Name)
 	}
 
-	foundFederator := &kobefederatorv1alpha1.KobeFederator{}
+	foundFederator := &kobev1alpha1.KobeFederator{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Spec.Federator, Namespace: instance.Namespace}, foundFederator)
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("No federator with this name is defined in the cluster")
@@ -179,7 +175,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		return reconcile.Result{}, err
 	}
 
-	foundFederation := &kobefederationv1alpha1.KobeFederation{}
+	foundFederation := &kobev1alpha1.KobeFederation{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundFederation)
 	if err != nil && errors.IsNotFound(err) {
 		newFederation := r.newFederationForExperiment(instance, foundFederator, endpoints, datasets)
@@ -267,7 +263,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 
 //----------------------functions that create native kubernetes objects--------------------------------------
 //create the job that will run the evaluation program
-func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.KobeExperiment, i int, fedendpoint string, fedname string) *batchv1.Job {
+func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobev1alpha1.KobeExperiment, i int, fedendpoint string, fedname string) *batchv1.Job {
 	times := int32(1)
 	parallelism := int32(1)
 	//labels := map[string]string{"name": m.Name}
@@ -327,10 +323,10 @@ func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.
 
 //function that creates a new kobefederation custom resource from the federator and benchmark  in kobeexperiment.
 //The native objects that kobefederation needs are created by kobefederation controller .
-func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobeexperimentv1alpha1.KobeExperiment,
-	fed *kobefederatorv1alpha1.KobeFederator, endpoints []string, datasetnames []string) *kobefederationv1alpha1.KobeFederation {
+func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobev1alpha1.KobeExperiment,
+	fed *kobev1alpha1.KobeFederator, endpoints []string, datasetnames []string) *kobev1alpha1.KobeFederation {
 
-	federation := &kobefederationv1alpha1.KobeFederation{
+	federation := &kobev1alpha1.KobeFederation{
 		TypeMeta: metav1.TypeMeta{
 			APIVersion: "kobefederator.kobe.com/v1alpha1",
 			Kind:       "KobeFederator",
@@ -339,7 +335,7 @@ func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobeexperimentv1
 			Name:      m.Name,
 			Namespace: fed.Namespace,
 		},
-		Spec: kobefederationv1alpha1.KobeFederationSpec{
+		Spec: kobev1alpha1.KobeFederationSpec{
 			Image:             fed.Spec.Image,
 			ImagePullPolicy:   fed.Spec.ImagePullPolicy,
 			Affinity:          fed.Spec.Affinity,

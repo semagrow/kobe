@@ -1,20 +1,20 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: kobefederations.kobefederation.kobe.com
+  name: kobefederators.kobe.semagrow.org
 spec:
-  group: kobefederation.kobe.com
+  group: kobe.semagrow.org
   names:
-    kind: KobeFederation
-    listKind: KobeFederationList
-    plural: kobefederations
-    singular: kobefederation
+    kind: KobeFederator
+    listKind: KobeFederatorList
+    plural: kobefederators
+    singular: kobefederator
   scope: Namespaced
   subresources:
     status: {}
   validation:
     openAPIV3Schema:
-      description: KobeFederation is the Schema for the kobefederations API
+      description: KobeFederator is the Schema for the kobefederators API
       properties:
         apiVersion:
           description: 'APIVersion defines the versioned schema of this representation
@@ -29,7 +29,7 @@ spec:
         metadata:
           type: object
         spec:
-          description: KobeFederationSpec defines the desired state of KobeFederation
+          description: KobeFederatorSpec defines the desired state of KobeFederator
           properties:
             affinity:
               description: If specified, the pod's scheduling constraints
@@ -607,32 +607,19 @@ spec:
               type: string
             confImage:
               type: string
-            datasetNames:
-              items:
-                type: string
-              type: array
-            endpoints:
-              items:
-                type: string
-              type: array
             fedConfDir:
               type: string
-            federatorName:
-              type: string
-            forceNewInit:
-              type: boolean
             image:
               description: 'INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
                 Important: Run "operator-sdk generate k8s" to regenerate code after
                 modifying this file Add custom validation using kubebuilder tags:
-                https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html'
+                https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
+                InitContainers    []corev1.Container `json:"initContainer"` //obsolete'
               type: string
             imagePullPolicy:
               description: PullPolicy describes a policy for if/when to pull a container
                 image
               type: string
-            init:
-              type: boolean
             inputDir:
               type: string
             inputDumpDir:
@@ -652,13 +639,21 @@ spec:
               properties:
                 limits:
                   additionalProperties:
-                    type: string
+                    anyOf:
+                    - type: integer
+                    - type: string
+                    pattern: ^(\+|-)?(([0-9]+(\.[0-9]*)?)|(\.[0-9]+))(([KMGTPE]i)|[numkMGTPE]|([eE](\+|-)?(([0-9]+(\.[0-9]*)?)|(\.[0-9]+))))?$
+                    x-kubernetes-int-or-string: true
                   description: 'Limits describes the maximum amount of compute resources
                     allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/'
                   type: object
                 requests:
                   additionalProperties:
-                    type: string
+                    anyOf:
+                    - type: integer
+                    - type: string
+                    pattern: ^(\+|-)?(([0-9]+(\.[0-9]*)?)|(\.[0-9]+))(([KMGTPE]i)|[numkMGTPE]|([eE](\+|-)?(([0-9]+(\.[0-9]*)?)|(\.[0-9]+))))?$
+                    x-kubernetes-int-or-string: true
                   description: 'Requests describes the minimum amount of compute resources
                     required. If Requests is omitted for a container, it defaults
                     to Limits if that is explicitly specified, otherwise to an implementation-defined
@@ -668,14 +663,9 @@ spec:
           required:
           - confFromFileImage
           - confImage
-          - datasetNames
-          - endpoints
           - fedConfDir
-          - federatorName
-          - forceNewInit
           - image
           - imagePullPolicy
-          - init
           - inputDir
           - inputDumpDir
           - outputDir
@@ -684,7 +674,7 @@ spec:
           - port
           type: object
         status:
-          description: KobeFederationStatus defines the observed state of KobeFederation
+          description: KobeFederatorStatus defines the observed state of KobeFederator
           properties:
             podNames:
               description: 'INSERT ADDITIONAL STATUS FIELD - define observed state

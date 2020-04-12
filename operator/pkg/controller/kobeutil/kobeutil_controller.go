@@ -3,7 +3,7 @@ package kobeutil
 import (
 	"context"
 
-	kobeutilv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobeutil/v1alpha1"
+	kobev1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/resource"
@@ -14,9 +14,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/handler"
+	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 )
 
@@ -46,14 +46,14 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	}
 
 	// Watch for changes to primary resource KobeUtil
-	err = c.Watch(&source.Kind{Type: &kobeutilv1alpha1.KobeUtil{}}, &handler.EnqueueRequestForObject{})
+	err = c.Watch(&source.Kind{Type: &kobev1alpha1.KobeUtil{}}, &handler.EnqueueRequestForObject{})
 	if err != nil {
 		return err
 	}
 
 	err = c.Watch(&source.Kind{Type: &corev1.Pod{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobeutilv1alpha1.KobeUtil{},
+		OwnerType:    &kobev1alpha1.KobeUtil{},
 	})
 	if err != nil {
 		return err
@@ -61,7 +61,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 
 	err = c.Watch(&source.Kind{Type: &corev1.PersistentVolume{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobeutilv1alpha1.KobeUtil{},
+		OwnerType:    &kobev1alpha1.KobeUtil{},
 	})
 	if err != nil {
 		return err
@@ -69,7 +69,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 
 	err = c.Watch(&source.Kind{Type: &corev1.PersistentVolumeClaim{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobeutilv1alpha1.KobeUtil{},
+		OwnerType:    &kobev1alpha1.KobeUtil{},
 	})
 	if err != nil {
 		return err
@@ -99,7 +99,7 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 	reqLogger.Info("Reconciling KobeUtil")
 
 	// Fetch the KobeUtil instance
-	instance := &kobeutilv1alpha1.KobeUtil{}
+	instance := &kobev1alpha1.KobeUtil{}
 	err := r.client.Get(context.TODO(), request.NamespacedName, instance)
 	if err != nil {
 		if errors.IsNotFound(err) {
@@ -181,7 +181,7 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 //-------------------functions that create native kubernetes that are controlled by utility controller-----------------------
 
 //NFS SERVICE (its actually useless cause nfs service dns bug)
-func (r *ReconcileKobeUtil) newServiceForNfs(m *kobeutilv1alpha1.KobeUtil) *corev1.Service {
+func (r *ReconcileKobeUtil) newServiceForNfs(m *kobev1alpha1.KobeUtil) *corev1.Service {
 	service := &corev1.Service{
 		TypeMeta: metav1.TypeMeta{
 			Kind:       "Service",
@@ -219,7 +219,7 @@ func (r *ReconcileKobeUtil) newServiceForNfs(m *kobeutilv1alpha1.KobeUtil) *core
 }
 
 //NFS CONFIG
-func (r *ReconcileKobeUtil) newNfsConfig(m *kobeutilv1alpha1.KobeUtil) *corev1.ConfigMap {
+func (r *ReconcileKobeUtil) newNfsConfig(m *kobev1alpha1.KobeUtil) *corev1.ConfigMap {
 	cmap := &corev1.ConfigMap{
 		TypeMeta: metav1.TypeMeta{
 			Kind:       "ConfigMap",
@@ -236,7 +236,7 @@ func (r *ReconcileKobeUtil) newNfsConfig(m *kobeutilv1alpha1.KobeUtil) *corev1.C
 }
 
 //NFS POD
-func (r *ReconcileKobeUtil) newPodForNfs(m *kobeutilv1alpha1.KobeUtil) *corev1.Pod {
+func (r *ReconcileKobeUtil) newPodForNfs(m *kobev1alpha1.KobeUtil) *corev1.Pod {
 	var priv bool
 	priv = true
 
@@ -296,7 +296,7 @@ func (r *ReconcileKobeUtil) newPodForNfs(m *kobeutilv1alpha1.KobeUtil) *corev1.P
 }
 
 //PERSISTENT VOLUME
-func (r *ReconcileKobeUtil) newPvForKobe(m *kobeutilv1alpha1.KobeUtil, ip string) *corev1.PersistentVolume {
+func (r *ReconcileKobeUtil) newPvForKobe(m *kobev1alpha1.KobeUtil, ip string) *corev1.PersistentVolume {
 
 	capacity := resource.MustParse("50Gi")
 	rmap := corev1.ResourceList{}
@@ -326,7 +326,7 @@ func (r *ReconcileKobeUtil) newPvForKobe(m *kobeutilv1alpha1.KobeUtil, ip string
 }
 
 //PERSISTENT VOLUME CLAIM
-func (r *ReconcileKobeUtil) newPvcForKobe(m *kobeutilv1alpha1.KobeUtil) *corev1.PersistentVolumeClaim {
+func (r *ReconcileKobeUtil) newPvcForKobe(m *kobev1alpha1.KobeUtil) *corev1.PersistentVolumeClaim {
 	s := ""
 	accessmodes := []corev1.PersistentVolumeAccessMode{"ReadWriteMany"}
 	capacity := resource.MustParse("49Gi")

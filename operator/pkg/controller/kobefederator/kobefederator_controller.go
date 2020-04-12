@@ -3,15 +3,15 @@ package kobefederator
 import (
 	"context"
 
-	kobefederatorv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobefederator/v1alpha1"
+	kobev1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 	"sigs.k8s.io/controller-runtime/pkg/handler"
+	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 )
 
@@ -42,7 +42,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	}
 
 	// Watch for changes to primary resource KobeFederator
-	err = c.Watch(&source.Kind{Type: &kobefederatorv1alpha1.KobeFederator{}}, &handler.EnqueueRequestForObject{})
+	err = c.Watch(&source.Kind{Type: &kobev1alpha1.KobeFederator{}}, &handler.EnqueueRequestForObject{})
 	if err != nil {
 		return err
 	}
@@ -74,7 +74,7 @@ func (r *ReconcileKobeFederator) Reconcile(request reconcile.Request) (reconcile
 	reqLogger.Info("Reconciling KobeFederator")
 
 	// Fetch the KobeFederator instance
-	instance := &kobefederatorv1alpha1.KobeFederator{}
+	instance := &kobev1alpha1.KobeFederator{}
 	err := r.client.Get(context.TODO(), request.NamespacedName, instance)
 	if err != nil {
 		if errors.IsNotFound(err) {
