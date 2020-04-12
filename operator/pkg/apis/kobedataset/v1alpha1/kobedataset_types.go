@@ -15,7 +15,14 @@ type KobeDatasetSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
-	Image           string           `json:"image"`
+	Image string `json:"image"`
+
+	// Image pull policy.
+	// One of Always, Never, IfNotPresent.
+	// Defaults to Always if :latest tag is specified, or IfNotPresent otherwise.
+	// Cannot be updated.
+	// More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
+	// +optional
 	ImagePullPolicy types.PullPolicy `json:"imagePullPolicy"`
 	Replicas        int32            `json:"replicas"`
 	ForceLoad       bool             `json:"forceLoad"`
@@ -23,21 +30,21 @@ type KobeDatasetSpec struct {
 	Group           string           `json:"group"`
 	Port            int32            `json:"port"`
 	Path            string           `json:"path"`
-	
+
 	// List of environment variables to set in the container.
-    // Cannot be updated.
-    // +optional
-    // +patchMergeKey=name
-    // +patchStrategy=merge
-    Env 			[]types.EnvVar	 `json:"env,omitempty"`
-	
+	// Cannot be updated.
+	// +optional
+	// +patchMergeKey=name
+	// +patchStrategy=merge
+	Env []types.EnvVar `json:"env,omitempty"`
+
 	// If specified, the pod's scheduling constraints
-    // +optional
-	Affinity 		*types.Affinity  `json:"affinity,omitempty"`
+	// +optional
+	Affinity *types.Affinity `json:"affinity,omitempty"`
 	// Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources
-    // already allocated to the pod.
-    // +optional
-    Resources 		types.ResourceRequirements   `json:"resources,omitempty"`
+	// already allocated to the pod.
+	// +optional
+	Resources types.ResourceRequirements `json:"resources,omitempty"`
 }
 
 // KobeDatasetStatus defines the observed state of KobeDataset
