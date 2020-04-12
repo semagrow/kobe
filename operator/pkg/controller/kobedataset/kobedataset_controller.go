@@ -18,9 +18,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/handler"
+	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 )
 
@@ -128,8 +128,8 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 		instance.Spec.Image = "kostbabis/virtuoso"
 	}
 	if instance.Spec.Path == "" {
-    instance.Spec.Path = "/sparql"
-  }
+		instance.Spec.Path = "/sparql"
+	}
 	//check  if a KobeUtil instance exists for this namespace and if not create it
 	kobeUtil := &kobeutilv1alpha1.KobeUtil{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobeutil", Namespace: instance.Namespace}, kobeUtil)
@@ -273,6 +273,7 @@ func labelsForKobeDataset(name string) map[string]string {
 
 //------------------Functions that define native kubernetes object to create that are all controlled by the kobedataset custom resource-----------------------
 //--------tied to a dataset------
+/*
 func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha1.KobeDataset) *appsv1.Deployment {
 	labels := labelsForKobeDataset(m.Name)
 	replicas := m.Spec.Replicas
@@ -289,12 +290,12 @@ func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha
 		env = corev1.EnvVar{Name: "FORCE_LOAD", Value: "YES"}
 		envs = append(envs, env)
 	}
-	
+
 	for _, v := range m.Spec.Env {
 		env = corev1.EnvVar{Name: v.Name, Value: v.Value}
 			envs = append(envs, env)
 	}
-  
+
 	volume := corev1.Volume{Name: "nfs", VolumeSource: corev1.VolumeSource{PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
 	volumes := []corev1.Volume{}
 	volumes = append(volumes, volume)
@@ -342,33 +343,36 @@ func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha
 	return dep
 
 }
+*/
 
 func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobedatasetv1alpha1.KobeDataset, podName string) *corev1.Pod {
 	labels := labelsForKobeDataset(m.Name)
 
-	envs := []corev1.EnvVar{}
-
-	env := corev1.EnvVar{Name: "DOWNLOAD_URL", Value: m.Spec.DownloadFrom}
-	envs = append(envs, env)
-
-	env = corev1.EnvVar{Name: "DATASET_NAME", Value: m.Name}
-	envs = append(envs, env)
+	envs := []corev1.EnvVar{
+		{Name: "DOWNLOAD_URL", Value: m.Spec.DownloadFrom},
+		{Name: "DATASET_NAME", Value: m.Name},
+	}
 
 	if m.Spec.ForceLoad == true {
-		env = corev1.EnvVar{Name: "FORCE_LOAD", Value: "YES"}
-		envs = append(envs, env)
+		envs = append(envs, corev1.EnvVar{Name: "FORCE_LOAD", Value: "YES"})
 	}
-	
-	for _, v := range m.Spec.Env {
-    	env = corev1.EnvVar{Name: v.Name, Value: v.Value}
-		envs = append(envs, env)
-  	}
 
-	volume := corev1.Volume{Name: "nfs", VolumeSource: corev1.VolumeSource{PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
+	for _, v := range m.Spec.Env {
+		envs = append(envs, corev1.EnvVar{Name: v.Name, Value: v.Value})
+	}
+
+	volume := corev1.Volume{
+		Name: "nfs",
+		VolumeSource: corev1.VolumeSource{
+			PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
+
 	volumes := []corev1.Volume{}
 	volumes = append(volumes, volume)
 
-	volumemount := corev1.VolumeMount{Name: "nfs", MountPath: "/kobe/dataset"}
+	volumemount := corev1.VolumeMount{
+		Name:      "nfs",
+		MountPath: "/kobe/dataset"}
+
 	volumemounts := []corev1.VolumeMount{}
 	volumemounts = append(volumemounts, volumemount)
 
@@ -394,15 +398,14 @@ func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobedatasetv1alpha1.KobeD
 				}},
 				Env:          envs,
 				VolumeMounts: volumemounts,
-				Resources: m.Spec.Resources,
+				Resources:    m.Spec.Resources,
 			}},
-			Volumes: volumes,
+			Volumes:  volumes,
 			Affinity: m.Spec.Affinity,
 		},
 	}
 	controllerutil.SetControllerReference(m, pod, r.scheme)
 	return pod
-
 }
 
 func (r *ReconcileKobeDataset) newServiceForDataset(m *kobedatasetv1alpha1.KobeDataset) *corev1.Service {

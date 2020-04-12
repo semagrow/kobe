@@ -19,9 +19,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/handler"
+	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 )
 
@@ -102,9 +102,13 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		// Error reading the object - requeue the request.
 		return reconcile.Result{}, err
 	}
-	//normally i have to check for finishing initialization not just if they exist.Federator for example could be initiliazing with its init container .very important
 
-	//check if there exist a kobe benchmark with this name in kubernetes.If not its an error .
+	// Normally I have to check for finishing initialization not just if they
+	// exist. Federator for example could be initiliazing with its init container.
+	// very important
+
+	// Check if there exist a kobe benchmark with this name in Kubernetes.
+	// If not its an error.
 	foundBenchmark := &kobebenchmarkv1alpha1.KobeBenchmark{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Spec.Benchmark, Namespace: instance.Namespace}, foundBenchmark)
 	if err != nil && errors.IsNotFound(err) {
@@ -114,7 +118,8 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	endpoints := []string{}
 	datasets := []string{}
 
-	//check if every kobedataset of the benchmark is healthy.Create a list of the endpoints and of the names of the datasets
+	// Check if every kobedataset of the benchmark is healthy.
+	// Create a list of the endpoints and of the names of the datasets
 	for _, datasetInfo := range foundBenchmark.Spec.Datasets {
 		foundDataset := &kobedatasetv1alpha1.KobeDataset{}
 		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: foundBenchmark.Namespace, Name: datasetInfo.Name}, foundDataset)
@@ -122,8 +127,8 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 			reqLogger.Info("Failed to find a specific dataset from the list of datasets of this benchmark")
 			return reconcile.Result{RequeueAfter: 5}, err
 		}
-		//check for the healthiness of the individual pods of the kobe dataset
 
+		// Check for the healthiness of the individual pods of the kobe dataset
 		podList := &corev1.PodList{}
 		listOps := []client.ListOption{
 			client.InNamespace(instance.Namespace),
@@ -134,6 +139,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 			reqLogger.Info("Failed to list pods: %v", err)
 			return reconcile.Result{}, err
 		}
+
 		podNames := getPodNames(podList.Items)
 		for _, podname := range podNames {
 			foundPod := &corev1.Pod{}
@@ -150,13 +156,14 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 			}
 
 		}
+
 		if podNames == nil || len(podNames) == 0 {
 			reqLogger.Info("Experiment waits for components initialization")
 			return reconcile.Result{RequeueAfter: 5}, nil
 
 		}
 
-		//create a list of the sparql endpoints
+		// Create a list of the SPARQL endpoints
 		endpoints = append(endpoints, "http://"+foundDataset.Name+"."+foundDataset.Namespace+".svc.cluster.local"+":"+strconv.Itoa(int(foundDataset.Spec.Port))+foundDataset.Spec.Path)
 		datasets = append(datasets, foundDataset.Name)
 	}
@@ -187,7 +194,8 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 		return reconcile.Result{}, err
 	}
 
-	//check if the pods of the federators exist and have a status of running before proceeding and get fed name and endpoint for the eval job
+	// Check if the pods of the federators exist and have a status of running
+	// before proceeding and get fed name and endpoint for the eval job
 	fedEndpoint := "http://" + foundFederation.Name + "." + foundFederation.Namespace + ".svc.cluster.local" + ":" + strconv.Itoa(int(foundFederation.Spec.Port)) + foundFederation.Spec.Path
 	fedName := foundFederation.Name
 
@@ -220,15 +228,15 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 	if podNames == nil || len(podNames) == 0 {
 		reqLogger.Info("Experiment waits for components initialization")
 		return reconcile.Result{RequeueAfter: 25}, nil
-
 	}
 
-	//Everything is healthy and ready for the experiment.
-	if instance.Spec.DryRun == true { //dont run just yet just have it defined
+	// Everything is healthy and ready for the experiment.
+	if instance.Spec.DryRun == true {
+		// dont run just yet just have it defined
 		return reconcile.Result{}, nil
 	}
 
-	//Create the new job that will run the EVAL client for this experiment
+	// Create the new job that will run the EVAL client for this experiment
 	if instance.Spec.TimesToRun > 0 {
 		foundJob := &batchv1.Job{}
 		err = r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: instance.Name + "-" + strconv.Itoa(identifier)}, foundJob)
@@ -236,14 +244,14 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 			if &foundJob.Status.Succeeded == nil || foundJob.Status.Succeeded == 0 {
 				return reconcile.Result{}, nil
 			}
-			reqLogger.Info("All past jobs are done /n")
+			reqLogger.Info("All past jobs are done\n")
 			identifier++
 		}
 		experimentJob := r.newJobForExperiment(instance, identifier, fedEndpoint, fedName)
 		reqLogger.Info("Creating a new job to run the experiment for this setup")
 		err = r.client.Create(context.TODO(), experimentJob)
 		if err != nil {
-			reqLogger.Info("FAILED to create the job to run this expriment  %s/%s\n", experimentJob.Name, experimentJob.Namespace)
+			reqLogger.Info("FAILED to create the job to run this experiment  %s/%s\n", experimentJob.Name, experimentJob.Namespace)
 			return reconcile.Result{}, err
 		}
 		instance.Spec.TimesToRun = 0 //instance.Spec.TimesToRun - 1
@@ -343,7 +351,7 @@ func (r *ReconcileKobeExperiment) newFederationForExperiment(m *kobeexperimentv1
 			InputDir:          fed.Spec.InputDir,
 			OutputDir:         fed.Spec.OutputDir,
 			FedConfDir:        fed.Spec.FedConfDir,
-			Path:		       fed.Spec.Path,
+			Path:              fed.Spec.Path,
 
 			ForceNewInit:  m.Spec.ForceNewInit,
 			Init:          true,
