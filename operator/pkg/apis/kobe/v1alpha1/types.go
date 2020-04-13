@@ -155,11 +155,9 @@ type KobeBenchmarkList struct {
 	Items           []KobeBenchmark `json:"items"`
 }
 
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-// NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
-
 // Federator is helper struct
 // +k8s:openapi-gen=true
+/*
 type Federator struct {
 	Name              string        `json:"name"`
 	Image             string        `json:"image"`
@@ -171,6 +169,7 @@ type Federator struct {
 	OutputFileDir     string        `json:"outputFileDir"`     //where the above image will place its result config file
 	ConfImage         string        `json:"confImage"`
 }
+*/
 
 // KobeExperimentSpec defines the desired state of KobeExperiment
 // +k8s:openapi-gen=true
@@ -179,12 +178,17 @@ type KobeExperimentSpec struct {
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
 	Benchmark    string `json:"benchmark"`
+	
 	Federator    string `json:"federator"`
+	
 	DryRun       bool   `json:"dryRun"`
+	
 	TimesToRun   int    `json:"timesToRun"`
+	
 	ForceNewInit bool   `json:"forceNewInit"`
 
 	EvalImage    string   `json:"evalImage"`
+	
 	EvalCommands []string `json:"evalCommands"`
 }
 
@@ -219,15 +223,10 @@ type KobeExperimentList struct {
 	Items           []KobeExperiment `json:"items"`
 }
 
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-// NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
-
 // KobeFederationSpec defines the desired state of KobeFederation
 // +k8s:openapi-gen=true
 type KobeFederationSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
-	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
+
 	Image           string        `json:"image"`
 	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy"`
 
@@ -312,16 +311,12 @@ type KobeFederationList struct {
 	Items           []KobeFederation `json:"items"`
 }
 
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-// NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
-
 // KobeFederatorSpec defines the desired state of KobeFederator
 // +k8s:openapi-gen=true
 type KobeFederatorSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
-	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
+
 	//InitContainers    []corev1.Container `json:"initContainer"` //obsolete
+
 	Image           string        `json:"image"`
 	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy"`
 
@@ -377,9 +372,6 @@ type KobeFederatorList struct {
 	metav1.ListMeta `json:"metadata,omitempty"`
 	Items           []KobeFederator `json:"items"`
 }
-
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-// NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
 
 // KobeUtilSpec defines the desired state of KobeUtil
 // +k8s:openapi-gen=true
