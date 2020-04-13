@@ -604,28 +604,43 @@ spec:
                   type: object
               type: object
             confFromFileImage:
+              description: The Docker image that receives a compressed dataset and
+                may produce configuration needed from the federator to federate this
+                specific dataset This container will run one time for each dataset
+                in the federation
               type: string
             confImage:
+              description: The Docker image that initializes the federator (equivalent
+                to initContainers)
               type: string
             fedConfDir:
+              description: which directory the federator needs the metadata config
+                files in order to find them
               type: string
             image:
+              description: 'Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images'
               type: string
             imagePullPolicy:
-              description: PullPolicy describes a policy for if/when to pull a container
-                image
+              description: 'Image pull policy. One of Always, Never, IfNotPresent.
+                Defaults to Always if :latest tag is specified, or IfNotPresent otherwise.
+                Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images'
               type: string
             inputDir:
               type: string
             inputDumpDir:
+              description: where the above image expects the dump to be (if from dump)
               type: string
             outputDir:
               type: string
             outputDumpDir:
+              description: where the above image will place its result config file
               type: string
             path:
+              description: suffix to be added to endpoint of federator f.e ../SemaGrow/sparql
               type: string
             port:
+              description: Number of port to expose on the host. If specified, this
+                must be a valid port number, 0 < x < 65536.
               format: int32
               type: integer
             resources:
@@ -659,23 +674,16 @@ spec:
           - confFromFileImage
           - confImage
           - fedConfDir
-          - image
-          - imagePullPolicy
           - inputDir
           - inputDumpDir
           - outputDir
           - outputDumpDir
-          - path
           - port
           type: object
         status:
           description: KobeFederatorStatus defines the observed state of KobeFederator
           properties:
             podNames:
-              description: 'INSERT ADDITIONAL STATUS FIELD - define observed state
-                of cluster Important: Run "operator-sdk generate k8s" to regenerate
-                code after modifying this file Add custom validation using kubebuilder
-                tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html'
               items:
                 type: string
               type: array

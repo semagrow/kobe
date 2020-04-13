@@ -414,8 +414,6 @@ func (r *ReconcileKobeDataset) newKobeUtility(m *kobev1alpha1.KobeDataset) *kobe
 			Name:      "kobeutil",
 			Namespace: m.Namespace,
 		},
-
-		Spec: kobev1alpha1.KobeUtilSpec{},
 	}
 	return kutil
 }

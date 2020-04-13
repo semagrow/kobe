@@ -770,8 +770,6 @@ spec:
         status:
           description: KobeDatasetStatus defines the observed state of KobeDataset
           properties:
-            appGroup:
-              type: string
             podNames:
               description: 'INSERT ADDITIONAL STATUS FIELD - define observed state
                 of cluster Important: Run "operator-sdk generate k8s" to regenerate
@@ -781,7 +779,6 @@ spec:
                 type: string
               type: array
           required:
-          - appGroup
           - podNames
           type: object
       type: object
