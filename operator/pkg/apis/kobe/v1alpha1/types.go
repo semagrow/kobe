@@ -7,29 +7,22 @@ import (
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeBenchmark is the Schema for the kobebenchmarks API
+// Benchmark is the Schema for the benchmarks API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
-// +kubebuilder:resource:path=kobebenchmarks,scope=Namespaced
-type KobeBenchmark struct {
+// +kubebuilder:resource:path=benchmarks,scope=Namespaced
+type Benchmark struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   KobeBenchmarkSpec   `json:"spec,omitempty"`
-	Status KobeBenchmarkStatus `json:"status,omitempty"`
+	Spec   BenchmarkSpec   `json:"spec,omitempty"`
+	Status BenchmarkStatus `json:"status,omitempty"`
 }
 
-//KobeBenchmarkSpec defines the components for this benchmark setup
-type KobeBenchmarkSpec struct {
-	Datasets []Dataset `json:"datasets"`
-	Queries  []Query   `json:"queries"`
-}
-
-// Dataset contains the dataset info
-type Dataset struct {
-	Name         string `json:"name"`
-	Image        string `json:"image"`
-	DownloadFrom string `json:"downloadFrom"`
+// BenchmarkSpec defines the components for this benchmark setup
+type BenchmarkSpec struct {
+	Datasets []string `json:"datasets"`
+	Queries  []Query  `json:"queries"`
 }
 
 //Query contains the query info
@@ -39,41 +32,41 @@ type Query struct {
 	QueryString string `json:"queryString"`
 }
 
-// KobeBenchmarkStatus defines the observed state of KobeBenchmark
+// BenchmarkStatus defines the observed state of Benchmark
 // +k8s:openapi-gen=true
-type KobeBenchmarkStatus struct {
+type BenchmarkStatus struct {
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeBenchmarkList contains a list of KobeBenchmark
-type KobeBenchmarkList struct {
+// BenchmarkList contains a list of Benchmark
+type BenchmarkList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []KobeBenchmark `json:"items"`
+	Items           []Benchmark `json:"items"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeExperiment is the Schema for the kobeexperiments API
+// Experiment is the Schema for the experiments API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
-//+kubebuilder:resource:path=kobeexperiments,scope=Namespaced
-type KobeExperiment struct {
+// +kubebuilder:resource:path=experiments,scope=Namespaced
+type Experiment struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   KobeExperimentSpec   `json:"spec,omitempty"`
-	Status KobeExperimentStatus `json:"status,omitempty"`
+	Spec   ExperimentSpec   `json:"spec,omitempty"`
+	Status ExperimentStatus `json:"status,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeExperimentList contains a list of KobeExperiment
-type KobeExperimentList struct {
+// ExperimentList contains a list of Experiment
+type ExperimentList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []KobeExperiment `json:"items"`
+	Items           []Experiment `json:"items"`
 }
 
 type ExperimentPhase string
@@ -97,7 +90,8 @@ const (
 
 // Evaluator defines the
 type Evaluator struct {
-	Image           string        `json:"image"`
+	Image string `json:"image"`
+
 	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy"`
 
 	Command []string `json:"command"`
@@ -105,9 +99,9 @@ type Evaluator struct {
 	Parallelism int32 `json:"parallelism"`
 }
 
-// KobeExperimentSpec defines the desired state of KobeExperiment
+// ExperimentSpec defines the desired state of Experiment
 // +k8s:openapi-gen=true
-type KobeExperimentSpec struct {
+type ExperimentSpec struct {
 	Benchmark string `json:"benchmark"`
 
 	Federator string `json:"federator"`
@@ -123,9 +117,9 @@ type KobeExperimentSpec struct {
 	Evaluator Evaluator `json:"evaluator"`
 }
 
-// KobeExperimentStatus defines the observed state of KobeExperiment
+// ExperimentStatus defines the observed state of Experiment
 // +k8s:openapi-gen=true
-type KobeExperimentStatus struct {
+type ExperimentStatus struct {
 
 	// Time at which this workflow started
 	StartTime metav1.Time `json:"startTime,omitempty"`
@@ -141,9 +135,9 @@ type KobeExperimentStatus struct {
 	Phase ExperimentPhase `json:"phase"`
 }
 
-// KobeFederationSpec defines the desired state of KobeFederation
+// FederationSpec defines the desired state of Federation
 // +k8s:openapi-gen=true
-type KobeFederationSpec struct {
+type FederationSpec struct {
 	FederatorName string `json:"federatorName"`
 
 	Template FederatorTemplate `json:"template"`
@@ -155,15 +149,9 @@ type KobeFederationSpec struct {
 	Init         bool `json:"init"`
 }
 
-// SetDefaults set the defaults of a federation
-func (r *KobeFederation) SetDefaults() bool {
-	changed := false
-	return changed
-}
-
 // KobeFederationStatus defines the observed state of KobeFederation
 // +k8s:openapi-gen=true
-type KobeFederationStatus struct {
+type FederationStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
@@ -172,30 +160,36 @@ type KobeFederationStatus struct {
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeFederation is the Schema for the kobefederations API
+// Federation is the Schema for the federations API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
-// +kubebuilder:resource:path=kobefederations,scope=Namespaced
-type KobeFederation struct {
+// +kubebuilder:resource:path=federations,scope=Namespaced
+type Federation struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   KobeFederationSpec   `json:"spec,omitempty"`
-	Status KobeFederationStatus `json:"status,omitempty"`
+	Spec   FederationSpec   `json:"spec,omitempty"`
+	Status FederationStatus `json:"status,omitempty"`
+}
+
+// SetDefaults set the defaults of a federation
+func (r *Federation) SetDefaults() bool {
+	changed := false
+	return changed
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeFederationList contains a list of KobeFederation
-type KobeFederationList struct {
+// FederationList contains a list of Federation
+type FederationList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []KobeFederation `json:"items"`
+	Items           []Federation `json:"items"`
 }
 
-// KobeFederatorSpec defines the desired state of KobeFederator
+// FederatorSpec defines the desired state of Federator
 // +k8s:openapi-gen=true
-type KobeFederatorSpec struct {
+type FederatorSpec struct {
 	FederatorTemplate `json:",inline"`
 }
 
@@ -255,18 +249,18 @@ type FederatorTemplate struct {
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeFederator is the Schema for the kobefederators API
+// Federator is the Schema for the federators API
 // +k8s:openapi-gen=true
-// +kubebuilder:resource:path=kobefederators,scope=Namespaced
-type KobeFederator struct {
+// +kubebuilder:resource:path=federators,scope=Namespaced
+type Federator struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec KobeFederatorSpec `json:"spec,omitempty"`
+	Spec FederatorSpec `json:"spec,omitempty"`
 }
 
 // SetDefaults set the defaults of a federation
-func (r *KobeFederator) SetDefaults() bool {
+func (r *Federator) SetDefaults() bool {
 	changed := false
 	rs := &r.Spec
 	if rs.InputDumpDir == "" {
@@ -290,16 +284,16 @@ func (r *KobeFederator) SetDefaults() bool {
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeFederatorList contains a list of KobeFederator
-type KobeFederatorList struct {
+// FederatorList contains a list of Federator
+type FederatorList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []KobeFederator `json:"items"`
+	Items           []Federator `json:"items"`
 }
 
-// KobeDatasetSpec defines the desired state of KobeDataset
+// DatasetSpec defines the desired state of Dataset
 // +k8s:openapi-gen=true
-type KobeDatasetSpec struct {
+type DatasetSpec struct {
 
 	// Docker image name.
 	// More info: https://kubernetes.io/docs/concepts/containers/images
@@ -351,12 +345,9 @@ type KobeDatasetSpec struct {
 	Resources v1.ResourceRequirements `json:"resources,omitempty"`
 }
 
-// KobeDatasetStatus defines the observed state of KobeDataset
+// DatasetStatus defines the observed state of Dataset
 // +k8s:openapi-gen=true
-type KobeDatasetStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
-	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
+type DatasetStatus struct {
 	PodNames []string `json:"podNames"`
 }
 
@@ -365,17 +356,17 @@ type KobeDatasetStatus struct {
 // KobeDataset is the Schema for the kobedatasets API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
-// +kubebuilder:resource:path=kobedatasets,scope=Namespaced
-type KobeDataset struct {
+// +kubebuilder:resource:path=datasets,scope=Namespaced
+type Dataset struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   KobeDatasetSpec   `json:"spec,omitempty"`
-	Status KobeDatasetStatus `json:"status,omitempty"`
+	Spec   DatasetSpec   `json:"spec,omitempty"`
+	Status DatasetStatus `json:"status,omitempty"`
 }
 
 // SetDefaults sets the defaults of the KobeDatasetSpec
-func (r *KobeDataset) SetDefaults() bool {
+func (r *Dataset) SetDefaults() bool {
 	changed := false
 	rs := &r.Spec
 	if rs.Replicas == nil {
@@ -392,11 +383,11 @@ func (r *KobeDataset) SetDefaults() bool {
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeDatasetList contains a list of KobeDataset
-type KobeDatasetList struct {
+// DatasetList contains a list of KobeDataset
+type DatasetList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []KobeDataset `json:"items"`
+	Items           []Dataset `json:"items"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -419,10 +410,10 @@ type KobeUtilList struct {
 }
 
 func init() {
-	SchemeBuilder.Register(&KobeDataset{}, &KobeDatasetList{})
-	SchemeBuilder.Register(&KobeBenchmark{}, &KobeBenchmarkList{})
-	SchemeBuilder.Register(&KobeExperiment{}, &KobeExperimentList{})
-	SchemeBuilder.Register(&KobeFederation{}, &KobeFederationList{})
-	SchemeBuilder.Register(&KobeFederator{}, &KobeFederatorList{})
+	SchemeBuilder.Register(&Dataset{}, &DatasetList{})
+	SchemeBuilder.Register(&Benchmark{}, &BenchmarkList{})
+	SchemeBuilder.Register(&Experiment{}, &ExperimentList{})
+	SchemeBuilder.Register(&Federation{}, &FederationList{})
+	SchemeBuilder.Register(&Federator{}, &FederatorList{})
 	SchemeBuilder.Register(&KobeUtil{}, &KobeUtilList{})
 }

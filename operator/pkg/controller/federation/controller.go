@@ -1,11 +1,11 @@
-package kobefederation
+package federation
 
 import (
 	"context"
 	"reflect"
 	"strconv"
 
-	kobev1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
+	api "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	appsv1 "k8s.io/api/apps/v1"
 	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
@@ -24,28 +24,28 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/source"
 )
 
-var log = logf.Log.WithName("controller_kobefederation")
+var log = logf.Log.WithName("controller_federation")
 
-// Add creates a new KobeFederation Controller and adds it to the Manager. The Manager will set fields on the Controller
+// Add creates a new Federation Controller and adds it to the Manager. The Manager will set fields on the Controller
 func Add(mgr manager.Manager) error {
 	return add(mgr, newReconciler(mgr))
 }
 
 // newReconciler returns a new reconcile.Reconciler
 func newReconciler(mgr manager.Manager) reconcile.Reconciler {
-	return &ReconcileKobeFederation{client: mgr.GetClient(), scheme: mgr.GetScheme()}
+	return &ReconcileFederation{client: mgr.GetClient(), scheme: mgr.GetScheme()}
 }
 
 // add adds a new Controller to mgr with r as the reconcile.Reconciler
 func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	// Create a new controller
-	c, err := controller.New("kobefederation-controller", mgr, controller.Options{Reconciler: r})
+	c, err := controller.New("federation-controller", mgr, controller.Options{Reconciler: r})
 	if err != nil {
 		return err
 	}
 
 	// Watch for changes to primary resource KobeFederator
-	err = c.Watch(&source.Kind{Type: &kobev1alpha1.KobeFederation{}}, &handler.EnqueueRequestForObject{})
+	err = c.Watch(&source.Kind{Type: &api.Federation{}}, &handler.EnqueueRequestForObject{})
 	if err != nil {
 		return err
 	}
@@ -54,7 +54,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	// Watch for changes to secondary resource Pods and requeue the owner KobeFederator
 	err = c.Watch(&source.Kind{Type: &appsv1.Deployment{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobev1alpha1.KobeFederation{},
+		OwnerType:    &api.Federation{},
 	})
 
 	if err != nil {
@@ -63,7 +63,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 
 	err = c.Watch(&source.Kind{Type: &corev1.Service{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobev1alpha1.KobeFederation{},
+		OwnerType:    &api.Federation{},
 	})
 
 	if err != nil {
@@ -74,7 +74,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	// Watch for changes to secondary resource Pods and requeue the owner KobeDataset
 	err = c.Watch(&source.Kind{Type: &corev1.Pod{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobev1alpha1.KobeFederation{},
+		OwnerType:    &api.Federation{},
 	})
 
 	if err != nil {
@@ -83,7 +83,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 
 	err = c.Watch(&source.Kind{Type: &batchv1.Job{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobev1alpha1.KobeFederation{},
+		OwnerType:    &api.Federation{},
 	})
 	if err != nil {
 		return err
@@ -91,30 +91,30 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	return nil
 }
 
-// blank assignment to verify that ReconcileKobeFederation implements reconcile.Reconciler
-var _ reconcile.Reconciler = &ReconcileKobeFederation{}
+// blank assignment to verify that ReconcileFederation implements reconcile.Reconciler
+var _ reconcile.Reconciler = &ReconcileFederation{}
 
-// ReconcileKobeFederation reconciles a KobeFederation object
-type ReconcileKobeFederation struct {
+// ReconcileFederation reconciles a Federation object
+type ReconcileFederation struct {
 	// This client, initialized using mgr.Client() above, is a split client
 	// that reads objects from the cache and writes to the apiserver
 	client client.Client
 	scheme *runtime.Scheme
 }
 
-// Reconcile reads that state of the cluster for a KobeFederation object and
-// makes changes based on the state read and what is in the KobeFederation.Spec
+// Reconcile reads that state of the cluster for a Federation object and
+// makes changes based on the state read and what is in the Federation.Spec
 //
 // Note:
 // The Controller will requeue the Request to be processed again if the returned
 // error is non-nil or Result.Requeue is true, otherwise upon completion it will
 // remove the work from the queue.
-func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcile.Result, error) {
+func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Result, error) {
 	reqLogger := log.WithValues("Request.Namespace", request.Namespace, "Request.Name", request.Name)
-	reqLogger.Info("Reconciling KobeFederation")
+	reqLogger.Info("Reconciling Federation")
 
-	// fetch the KobeFederation instance
-	instance := &kobev1alpha1.KobeFederation{}
+	// fetch the Federation instance
+	instance := &api.Federation{}
 	err := r.client.Get(context.TODO(), request.NamespacedName, instance)
 	if err != nil {
 		if errors.IsNotFound(err) {
@@ -274,7 +274,7 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 	foundPod := &corev1.Pod{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundPod)
 	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Making a new pod for kobefederation", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+		reqLogger.Info("Making a new pod for federation", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
 		pod := r.newPodForFederation(instance, datasetsForInit, endpointsForInit)
 		err = r.client.Create(context.TODO(), pod)
 		if err != nil {
@@ -290,7 +290,7 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 	podList := &corev1.PodList{}
 	listOps := []client.ListOption{
 		client.InNamespace(instance.Namespace),
-		client.MatchingLabels(labelsForKobeFederation(instance.Name)),
+		client.MatchingLabels(labelsForFederation(instance.Name)),
 	}
 	err = r.client.List(context.TODO(), podList, listOps...)
 	if err != nil {
@@ -342,12 +342,12 @@ func getPodNames(pods []corev1.Pod) []string {
 	return podNames
 }
 
-func labelsForKobeFederation(name string) map[string]string {
+func labelsForFederation(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
 
 // a service to find the federation by name internally in the cluster.
-func (r *ReconcileKobeFederation) newServiceForFederation(m *kobev1alpha1.KobeFederation) *corev1.Service {
+func (r *ReconcileFederation) newServiceForFederation(m *api.Federation) *corev1.Service {
 	service := &corev1.Service{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
@@ -373,7 +373,7 @@ func (r *ReconcileKobeFederation) newServiceForFederation(m *kobev1alpha1.KobeFe
 }
 
 // A job that remove the (temporary) files and create some dirs...
-func (r *ReconcileKobeFederation) newJobForFederation(m *kobev1alpha1.KobeFederation) *batchv1.Job {
+func (r *ReconcileFederation) newJobForFederation(m *api.Federation) *batchv1.Job {
 	times := int32(1)
 	parallelism := int32(1)
 	volumes := []corev1.Volume{}
@@ -436,7 +436,7 @@ func (r *ReconcileKobeFederation) newJobForFederation(m *kobev1alpha1.KobeFedera
 }
 
 //------------------------ job that checks if init file exists for this dataset/federator by failing or succeeding
-func (r *ReconcileKobeFederation) newJobForDataset(m *kobev1alpha1.KobeFederation, dataset string) *batchv1.Job {
+func (r *ReconcileFederation) newJobForDataset(m *api.Federation, dataset string) *batchv1.Job {
 	times := int32(1)
 	parallelism := int32(1)
 	volumes := []corev1.Volume{}
@@ -491,8 +491,8 @@ func (r *ReconcileKobeFederation) newJobForDataset(m *kobev1alpha1.KobeFederatio
 
 // creates a new federation deployment
 // This is the deployment that runs the federator image
-func (r *ReconcileKobeFederation) newPodForFederation(m *kobev1alpha1.KobeFederation, datasets []string, endpoints []string) *corev1.Pod {
-	labels := labelsForKobeFederation(m.Name)
+func (r *ReconcileFederation) newPodForFederation(m *api.Federation, datasets []string, endpoints []string) *corev1.Pod {
+	labels := labelsForFederation(m.Name)
 
 	nfsPodFound := &corev1.Pod{}
 	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)

@@ -1,11 +1,11 @@
-package kobedataset
+package dataset
 
 import (
 	"context"
 	"reflect"
 	"strconv"
 
-	kobev1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
+	api "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -23,14 +23,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/source"
 )
 
-var log = logf.Log.WithName("controller_kobedataset")
+var log = logf.Log.WithName("controller_dataset")
 
-/**
-* USER ACTION REQUIRED: This is a scaffold file intended for the user to modify with their own Controller
-* business logic.  Delete these comments after modifying this file.*
- */
-
-// Add creates a new KobeDataset Controller and adds it to the Manager. The Manager will set fields on the Controller
+// Add creates a new Dataset Controller and adds it to the Manager. The Manager will set fields on the Controller
 // and Start it when the Manager is Started.
 func Add(mgr manager.Manager) error {
 	return add(mgr, newReconciler(mgr))
@@ -38,42 +33,42 @@ func Add(mgr manager.Manager) error {
 
 // newReconciler returns a new reconcile.Reconciler
 func newReconciler(mgr manager.Manager) reconcile.Reconciler {
-	return &ReconcileKobeDataset{client: mgr.GetClient(), scheme: mgr.GetScheme()}
+	return &ReconcileDataset{client: mgr.GetClient(), scheme: mgr.GetScheme()}
 }
 
 // add adds a new Controller to mgr with r as the reconcile.Reconciler
 func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	// Create a new controller
-	c, err := controller.New("kobedataset-controller", mgr, controller.Options{Reconciler: r})
+	c, err := controller.New("dataset-controller", mgr, controller.Options{Reconciler: r})
 	if err != nil {
 		return err
 	}
 
-	// Watch for changes to primary resource KobeDataset
-	err = c.Watch(&source.Kind{Type: &kobev1alpha1.KobeDataset{}}, &handler.EnqueueRequestForObject{})
+	// Watch for changes to primary resource Dataset
+	err = c.Watch(&source.Kind{Type: &api.Dataset{}}, &handler.EnqueueRequestForObject{})
 	if err != nil {
 		return err
 	}
 
 	err = c.Watch(&source.Kind{Type: &appsv1.Deployment{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobev1alpha1.KobeDataset{},
+		OwnerType:    &api.Dataset{},
 	})
 	if err != nil {
 		return err
 	}
 	err = c.Watch(&source.Kind{Type: &corev1.Service{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobev1alpha1.KobeDataset{},
+		OwnerType:    &api.Dataset{},
 	})
 	if err != nil {
 		return err
 	}
 	// TODO(user): Modify this to be the types you create that are owned by the primary resource
-	// Watch for changes to secondary resource Pods and requeue the owner KobeDataset
+	// Watch for changes to secondary resource Pods and requeue the owner Dataset
 	err = c.Watch(&source.Kind{Type: &corev1.Pod{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobev1alpha1.KobeDataset{},
+		OwnerType:    &api.Dataset{},
 	})
 	if err != nil {
 		return err
@@ -82,29 +77,29 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	return nil
 }
 
-// blank assignment to verify that ReconcileKobeDataset implements reconcile.Reconciler
-var _ reconcile.Reconciler = &ReconcileKobeDataset{}
+// blank assignment to verify that ReconcileDataset implements reconcile.Reconciler
+var _ reconcile.Reconciler = &ReconcileDataset{}
 
-// ReconcileKobeDataset reconciles a KobeDataset object
-type ReconcileKobeDataset struct {
+// ReconcileDataset reconciles a Dataset object
+type ReconcileDataset struct {
 	// This client, initialized using mgr.Client() above, is a split client
 	// that reads objects from the cache and writes to the apiserver
 	client client.Client
 	scheme *runtime.Scheme
 }
 
-// Reconcile reads that state of the cluster for a KobeDataset object and makes changes based on the state read
-// and what is in the KobeDataset.Spec
+// Reconcile reads that state of the cluster for a Dataset object and makes changes based on the state read
+// and what is in the Dataset.Spec
 // Note:
 // The Controller will requeue the Request to be processed again if the returned error is non-nil or
 // Result.Requeue is true, otherwise upon completion it will remove the work from the queue.
 //-----------------------------------------reconciling-----------------------------------------
-func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.Result, error) {
+func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Result, error) {
 	reqLogger := log.WithValues("Request.Namespace", request.Namespace, "Request.Name", request.Name)
-	reqLogger.Info("Reconciling KobeDataset")
+	reqLogger.Info("Reconciling Dataset")
 
-	// Fetch the KobeDataset instance
-	instance := &kobev1alpha1.KobeDataset{}
+	// Fetch the Dataset instance
+	instance := &api.Dataset{}
 	err := r.client.Get(context.TODO(), request.NamespacedName, instance)
 	if err != nil {
 		if errors.IsNotFound(err) {
@@ -116,11 +111,11 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 		// Error reading the object - requeue the request.
 		return reconcile.Result{}, err
 	}
-	
-	instance.SetDefaults();
+
+	instance.SetDefaults()
 
 	//check  if a KobeUtil instance exists for this namespace and if not create it
-	kobeUtil := &kobev1alpha1.KobeUtil{}
+	kobeUtil := &api.KobeUtil{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobeutil", Namespace: instance.Namespace}, kobeUtil)
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Creating the kobe utility custom resource")
@@ -154,10 +149,10 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 	// health check for the pods of dataset
 	for i := 0; i < int(*instance.Spec.Replicas); i++ {
 		foundPod := &corev1.Pod{}
-		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name + "-kobedataset-" + strconv.Itoa(i), Namespace: instance.Namespace}, foundPod)
+		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name + "-Dataset-" + strconv.Itoa(i), Namespace: instance.Namespace}, foundPod)
 		if err != nil && errors.IsNotFound(err) {
-			reqLogger.Info("Making a new pod for kobedataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-			pod := r.newPodForKobeDataset(instance, instance.Name+"-kobedataset-"+strconv.Itoa(i))
+			reqLogger.Info("Making a new pod for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+			pod := r.newPodForDataset(instance, instance.Name+"-dataset-"+strconv.Itoa(i))
 			err = r.client.Create(context.TODO(), pod)
 			if err != nil {
 				reqLogger.Info("Failed to create new Pod: %v\n", err)
@@ -172,7 +167,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 	podList := &corev1.PodList{}
 	listOps := []client.ListOption{
 		client.InNamespace(instance.Namespace),
-		client.MatchingLabels(labelsForKobeDataset(instance.Name)),
+		client.MatchingLabels(labelsForDataset(instance.Name)),
 	}
 	err = r.client.List(context.TODO(), podList, listOps...)
 	if err != nil {
@@ -206,7 +201,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 	foundService := &corev1.Service{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
 	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Making a new service for kobedataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+		reqLogger.Info("Making a new service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
 		service := r.newServiceForDataset(instance)
 		reqLogger.Info("Creating a new Service %s/%s\n", service.Namespace, service.Name)
 		err = r.client.Create(context.TODO(), service)
@@ -232,7 +227,7 @@ func (r *ReconcileKobeDataset) Reconcile(request reconcile.Request) (reconcile.R
 		}
 	}
 	// -------------------------------finishing line everything should be fine here---------------------------------
-	reqLogger.Info("Loop for a kobedataset went through the end for reconciling kobedataset\n")
+	reqLogger.Info("Loop for a dataset went through the end for reconciling dataset\n")
 	return reconcile.Result{}, nil
 }
 
@@ -246,15 +241,15 @@ func getPodNames(pods []corev1.Pod) []string {
 }
 
 //helper function
-func labelsForKobeDataset(name string) map[string]string {
+func labelsForDataset(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
 
-//------------------Functions that define native kubernetes object to create that are all controlled by the kobedataset custom resource-----------------------
+//------------------Functions that define native kubernetes object to create that are all controlled by the dataset custom resource-----------------------
 //--------tied to a dataset------
 /*
-func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha1.KobeDataset) *appsv1.Deployment {
-	labels := labelsForKobeDataset(m.Name)
+func (r *ReconcileDataset) newDeploymentForDataset(m *datasetv1alpha1.Dataset) *appsv1.Deployment {
+	labels := labelsForDataset(m.Name)
 	replicas := m.Spec.Replicas
 
 	envs := []corev1.EnvVar{}
@@ -324,8 +319,8 @@ func (r *ReconcileKobeDataset) newDeploymentForKobeDataset(m *kobedatasetv1alpha
 }
 */
 
-func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobev1alpha1.KobeDataset, podName string) *corev1.Pod {
-	labels := labelsForKobeDataset(m.Name)
+func (r *ReconcileDataset) newPodForDataset(m *api.Dataset, podName string) *corev1.Pod {
+	labels := labelsForDataset(m.Name)
 
 	envs := []corev1.EnvVar{
 		{Name: "DOWNLOAD_URL", Value: m.Spec.DownloadFrom},
@@ -383,7 +378,7 @@ func (r *ReconcileKobeDataset) newPodForKobeDataset(m *kobev1alpha1.KobeDataset,
 	return pod
 }
 
-func (r *ReconcileKobeDataset) newServiceForDataset(m *kobev1alpha1.KobeDataset) *corev1.Service {
+func (r *ReconcileDataset) newServiceForDataset(m *api.Dataset) *corev1.Service {
 	service := &corev1.Service{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
@@ -408,8 +403,8 @@ func (r *ReconcileKobeDataset) newServiceForDataset(m *kobev1alpha1.KobeDataset)
 	return service
 }
 
-func (r *ReconcileKobeDataset) newKobeUtility(m *kobev1alpha1.KobeDataset) *kobev1alpha1.KobeUtil {
-	kutil := &kobev1alpha1.KobeUtil{
+func (r *ReconcileDataset) newKobeUtility(m *api.Dataset) *api.KobeUtil {
+	kutil := &api.KobeUtil{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "kobeutil",
 			Namespace: m.Namespace,

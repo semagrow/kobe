@@ -1,20 +1,20 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: kobebenchmarks.kobe.semagrow.org
+  name: benchmarks.kobe.semagrow.org
 spec:
   group: kobe.semagrow.org
   names:
-    kind: KobeBenchmark
-    listKind: KobeBenchmarkList
-    plural: kobebenchmarks
-    singular: kobebenchmark
+    kind: Benchmark
+    listKind: BenchmarkList
+    plural: benchmarks
+    singular: benchmark
   scope: Namespaced
   subresources:
     status: {}
   validation:
     openAPIV3Schema:
-      description: KobeBenchmark is the Schema for the kobebenchmarks API
+      description: Benchmark is the Schema for the benchmarks API
       properties:
         apiVersion:
           description: 'APIVersion defines the versioned schema of this representation
@@ -29,24 +29,11 @@ spec:
         metadata:
           type: object
         spec:
-          description: KobeBenchmarkSpec defines the components for this benchmark
-            setup
+          description: BenchmarkSpec defines the components for this benchmark setup
           properties:
             datasets:
               items:
-                description: Dataset contains the dataset info
-                properties:
-                  downloadFrom:
-                    type: string
-                  image:
-                    type: string
-                  name:
-                    type: string
-                required:
-                - downloadFrom
-                - image
-                - name
-                type: object
+                type: string
               type: array
             queries:
               items:
@@ -69,7 +56,7 @@ spec:
           - queries
           type: object
         status:
-          description: KobeBenchmarkStatus defines the observed state of KobeBenchmark
+          description: BenchmarkStatus defines the observed state of Benchmark
           type: object
       type: object
   version: v1alpha1

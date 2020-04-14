@@ -1,20 +1,20 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: kobeexperiments.kobe.semagrow.org
+  name: experiments.kobe.semagrow.org
 spec:
   group: kobe.semagrow.org
   names:
-    kind: KobeExperiment
-    listKind: KobeExperimentList
-    plural: kobeexperiments
-    singular: kobeexperiment
+    kind: Experiment
+    listKind: ExperimentList
+    plural: experiments
+    singular: experiment
   scope: Namespaced
   subresources:
     status: {}
   validation:
     openAPIV3Schema:
-      description: KobeExperiment is the Schema for the kobeexperiments API
+      description: Experiment is the Schema for the experiments API
       properties:
         apiVersion:
           description: 'APIVersion defines the versioned schema of this representation
@@ -29,7 +29,7 @@ spec:
         metadata:
           type: object
         spec:
-          description: KobeExperimentSpec defines the desired state of KobeExperiment
+          description: ExperimentSpec defines the desired state of Experiment
           properties:
             benchmark:
               type: string
@@ -74,7 +74,7 @@ spec:
           - timesToRun
           type: object
         status:
-          description: KobeExperimentStatus defines the observed state of KobeExperiment
+          description: ExperimentStatus defines the observed state of Experiment
           properties:
             completionTime:
               description: Time at which this workflow completed
