@@ -1,4 +1,4 @@
-apiVersion: kobeexperiment.kobe.com/v1alpha1
+apiVersion: kobe.semagrow.org/v1alpha1
 kind: KobeExperiment
 metadata:
   name: kobeexp4
@@ -8,4 +8,5 @@ spec:
   timesToRun: 1
   dryRun: false
   forceNewInit: false 
-  evalImage: kostbabis/kobe-evaluator
+  evaluator:
+    image: kostbabis/kobe-evaluator

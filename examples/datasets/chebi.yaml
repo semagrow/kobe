@@ -1,4 +1,4 @@
-apiVersion: kobedataset.kobe.com/v1alpha1
+apiVersion: kobe.semagrow.org/v1alpha1
 kind: KobeDataset
 metadata:
   name: chebi
@@ -7,5 +7,5 @@ spec:
   image: kostbabis/virtuoso
   forceLoad: false
   downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/ChEBI.tar.gz
-  count: 1
+  replicas: 1
   port: 8890

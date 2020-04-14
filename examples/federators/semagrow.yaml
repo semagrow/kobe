@@ -1,4 +1,4 @@
-apiVersion: kobefederator.kobe.com/v1alpha1
+apiVersion: kobe.semagrow.org/v1alpha1
 kind: KobeFederator
 metadata:
   name: semagrow
@@ -13,4 +13,4 @@ spec:
   inputDir: /kobe/input
   outputDir: /kobe/output
   fedConfDir: /etc/default/semagrow
-  sparqlEnding: /SemaGrow/sparql
+  path: /SemaGrow/sparql

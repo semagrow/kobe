@@ -1,4 +1,4 @@
-apiVersion: kobebenchmark.kobe.com/v1alpha1
+apiVersion: kobe.semagrow.org/v1alpha1
 kind: KobeBenchmark
 metadata:
   name: life-science

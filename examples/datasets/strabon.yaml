@@ -1,4 +1,4 @@
-apiVersion: kobedataset.kobe.com/v1alpha1
+apiVersion: kobe.semagrow.org/v1alpha1
 kind: KobeDataset
 metadata:
   name: strabon
@@ -11,6 +11,6 @@ spec:
     value: "5432"
   downloadFrom: http://users.iit.demokritos.gr/~antru/dumps/conc.tar.gz
   forceLoad: true
-  sparqlEnding: /strabon/Query
-  count: 1
+  path: /strabon/Query
   port: 8080
+  replicas: 1
