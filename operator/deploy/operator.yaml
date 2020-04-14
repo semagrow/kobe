@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: operator
+  name: kobe-operator
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: operator
+      name: kobe-operator
   template:
     metadata:
       labels:
-        name: operator
+        name: kobe-operator
     spec:
-      serviceAccountName: operator
+      serviceAccountName: kobe-operator
       containers:
         - name: operator
           # Replace this with the built image name
@@ -30,4 +30,4 @@ spec:
                 fieldRef:
                   fieldPath: metadata.name
             - name: OPERATOR_NAME
-              value: "operator"
+              value: "kobe-operator"

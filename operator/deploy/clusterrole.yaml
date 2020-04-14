@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   creationTimestamp: null
-  name: operator
+  name: kobe-operator
 rules:
 - apiGroups:
   - ""
@@ -55,7 +55,7 @@ rules:
   verbs:
   - get
 - apiGroups:
-  - kobedataset.kobe.com
+  - kobe.semagrow.org
   resources:
   - '*'
   verbs:
@@ -63,33 +63,3 @@ rules:
 - apiGroups: ["", "extensions", "apps", "batch"]
   resources: ["*"]
   verbs: ["*"]
-- apiGroups:
-  - kobebenchmark.kobe.com
-  resources:
-  - '*'
-  verbs:
-  - '*'
-- apiGroups:
-  - kobefederator.kobe.com
-  resources:
-  - '*'
-  verbs:
-  - '*'
-- apiGroups:
-  - kobeexperiment.kobe.com
-  resources:
-  - '*'
-  verbs:
-  - '*'
-- apiGroups:
-  - kobeutil.kobe.com
-  resources:
-  - '*'
-  verbs:
-  - '*'
-- apiGroups:
-  - kobefederation.kobe.com
-  resources:
-  - '*'
-  verbs:
-  - '*'

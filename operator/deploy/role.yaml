@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   creationTimestamp: null
-  name: operator
+  name: kobe-operator
 rules:
 - apiGroups:
   - ""
@@ -61,7 +61,7 @@ rules:
   verbs:
   - get
 - apiGroups:
-  - kobedataset.kobe.com
+  - kobe.semagrow.org
   resources:
   - '*'
   verbs:
@@ -77,66 +77,6 @@ rules:
   - extensions
   - apps
   - batch
-  resources:
-  - '*'
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - kobebenchmark.kobe.com
-  resources:
-  - '*'
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - kobefederator.kobe.com
-  resources:
-  - '*'
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - kobeexperiment.kobe.com
-  resources:
-  - '*'
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - kobeutil.kobe.com
-  resources:
-  - '*'
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - kobefederation.kobe.com
   resources:
   - '*'
   verbs:
