@@ -1,5 +1,5 @@
 apiVersion: kobe.semagrow.org/v1alpha1
-kind: KobeExperiment
+kind: Experiment
 metadata:
   name: kobeexp2
 spec:

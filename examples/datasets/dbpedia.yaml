@@ -1,5 +1,5 @@
 apiVersion: kobe.semagrow.org/v1alpha1
-kind: KobeDataset
+kind: Dataset
 metadata:
   name: dbpedia
 spec:
