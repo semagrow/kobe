@@ -10,8 +10,6 @@ spec:
     plural: kobeutils
     singular: kobeutil
   scope: Namespaced
-  subresources:
-    status: {}
   validation:
     openAPIV3Schema:
       description: KobeUtil is the Schema for the kobeutils API

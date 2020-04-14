@@ -76,6 +76,35 @@ type KobeExperimentList struct {
 	Items           []KobeExperiment `json:"items"`
 }
 
+type ExperimentPhase string
+
+// possible experiment phases
+const (
+	ExperimentNotStarted   ExperimentPhase = "NotStarted"
+	ExperimentInitializing ExperimentPhase = "Initializing"
+	ExperimentRunning      ExperimentPhase = "Running"
+	ExperimentCompleted    ExperimentPhase = "Completed"
+	ExperimentFailed       ExperimentPhase = "Failed"
+)
+
+type RestartPolicy string
+
+// possible restart policies
+const (
+	RestartNever  RestartPolicy = "Never"
+	RestartAlways RestartPolicy = "Always"
+)
+
+// Evaluator defines the
+type Evaluator struct {
+	Image           string        `json:"image"`
+	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy"`
+
+	Command []string `json:"command"`
+
+	Parallelism int32 `json:"parallelism"`
+}
+
 // KobeExperimentSpec defines the desired state of KobeExperiment
 // +k8s:openapi-gen=true
 type KobeExperimentSpec struct {
@@ -89,31 +118,20 @@ type KobeExperimentSpec struct {
 
 	ForceNewInit bool `json:"forceNewInit"`
 
-	EvalImage string `json:"evalImage"`
+	RestartPolicy RestartPolicy `json:"restartPolicy,omitempty"`
 
-	EvalCommands []string `json:"evalCommands"`
+	Evaluator Evaluator `json:"evaluator"`
 }
-
-type ExperimentPhase string
-
-// possible experiment phases
-const (
-	ExperimentNotStarted   ExperimentPhase = "NotStarted"
-	ExperimentInitializing ExperimentPhase = "Initializing"
-	ExperimentRunning      ExperimentPhase = "Running"
-	ExperimentCompleted    ExperimentPhase = "Completed"
-	ExperimentFailed       ExperimentPhase = "Failed"
-)
 
 // KobeExperimentStatus defines the observed state of KobeExperiment
 // +k8s:openapi-gen=true
 type KobeExperimentStatus struct {
 
 	// Time at which this workflow started
-	StartedAt metav1.Time `json:"startedAt,omitempty"`
+	StartTime metav1.Time `json:"startTime,omitempty"`
 
 	// Time at which this workflow completed
-	FinishedAt metav1.Time `json:"finishedAt,omitempty"`
+	CompletionTime metav1.Time `json:"completionTime,omitempty"`
 
 	// The current iteration of the experiment
 	// It should be zero if not started yet
@@ -126,57 +144,20 @@ type KobeExperimentStatus struct {
 // KobeFederationSpec defines the desired state of KobeFederation
 // +k8s:openapi-gen=true
 type KobeFederationSpec struct {
-	Image string `json:"image"`
+	FederatorName string `json:"federatorName"`
 
-	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy"`
+	Template FederatorTemplate `json:"template"`
 
-	// If specified, the pod's scheduling constraints
-	// +optional
-	Affinity *v1.Affinity `json:"affinity,omitempty"`
+	Endpoints []string `json:"endpoints"`
+	Datasets  []string `json:"datasets"`
 
-	// Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources
-	// already allocated to the pod.
-	// +optional
-	Resources v1.ResourceRequirements `json:"resources,omitempty"`
-
-	Port int32  `json:"port"`
-	Path string `json:"path"` //suffix to be added to endpoint of federator f.e ../SemaGrow/sparql
-
-	ConfFromFileImage string `json:"confFromFileImage"` //image that makes init file from dump or endpoint
-	InputDumpDir      string `json:"inputDumpDir"`      //where the above image expects the dump to be(if from dump)
-	OutputDumpDir     string `json:"outputDumpDir"`     //where the above image will place its result config file
-	ConfImage         string `json:"confImage"`         //image that makes one init file from multiple init files
-	InputDir          string `json:"inputDir"`
-	OutputDir         string `json:"outputDir"`
-
-	FedConfDir    string   `json:"fedConfDir"` //which directory the federator needs the metadata config files in order to find them
-	ForceNewInit  bool     `json:"forceNewInit"`
-	Init          bool     `json:"init"`
-	FederatorName string   `json:"federatorName"`
-	Endpoints     []string `json:"endpoints"`
-	DatasetNames  []string `json:"datasetNames"`
+	ForceNewInit bool `json:"forceNewInit"`
+	Init         bool `json:"init"`
 }
 
 // SetDefaults set the defaults of a federation
 func (r *KobeFederation) SetDefaults() bool {
 	changed := false
-	rs := &r.Spec
-	if rs.InputDumpDir == "" {
-		rs.InputDumpDir = "/kobe/input"
-		changed = true
-	}
-	if rs.OutputDumpDir == "" {
-		rs.OutputDumpDir = "/kobe/output"
-		changed = true
-	}
-	if rs.InputDir == "" {
-		rs.InputDir = "/kobe/input"
-		changed = true
-	}
-	if rs.OutputDir == "" {
-		rs.OutputDir = "/kobe/output"
-		changed = true
-	}
 	return changed
 }
 
@@ -215,6 +196,11 @@ type KobeFederationList struct {
 // KobeFederatorSpec defines the desired state of KobeFederator
 // +k8s:openapi-gen=true
 type KobeFederatorSpec struct {
+	FederatorTemplate `json:",inline"`
+}
+
+// FederatorTemplate defines
+type FederatorTemplate struct {
 	// Docker image name.
 	// More info: https://kubernetes.io/docs/concepts/containers/images
 	// +optional
@@ -267,24 +253,16 @@ type KobeFederatorSpec struct {
 	FedConfDir string `json:"fedConfDir"`
 }
 
-// KobeFederatorStatus defines the observed state of KobeFederator
-// +k8s:openapi-gen=true
-type KobeFederatorStatus struct {
-	PodNames []string `json:"podNames"`
-}
-
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // KobeFederator is the Schema for the kobefederators API
 // +k8s:openapi-gen=true
-// +kubebuilder:subresource:status
 // +kubebuilder:resource:path=kobefederators,scope=Namespaced
 type KobeFederator struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   KobeFederatorSpec   `json:"spec,omitempty"`
-	Status KobeFederatorStatus `json:"status,omitempty"`
+	Spec KobeFederatorSpec `json:"spec,omitempty"`
 }
 
 // SetDefaults set the defaults of a federation
@@ -425,7 +403,6 @@ type KobeDatasetList struct {
 
 // KobeUtil is the Schema for the kobeutils API
 // +k8s:openapi-gen=true
-// +kubebuilder:subresource:status
 // +kubebuilder:resource:path=kobeutils,scope=Namespaced
 type KobeUtil struct {
 	metav1.TypeMeta   `json:",inline"`

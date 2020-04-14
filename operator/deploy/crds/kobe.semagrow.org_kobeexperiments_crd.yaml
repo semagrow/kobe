@@ -35,23 +35,40 @@ spec:
               type: string
             dryRun:
               type: boolean
-            evalCommands:
-              items:
-                type: string
-              type: array
-            evalImage:
-              type: string
+            evaluator:
+              description: Evaluator defines the
+              properties:
+                command:
+                  items:
+                    type: string
+                  type: array
+                image:
+                  type: string
+                imagePullPolicy:
+                  description: PullPolicy describes a policy for if/when to pull a
+                    container image
+                  type: string
+                parallelism:
+                  format: int32
+                  type: integer
+              required:
+              - command
+              - image
+              - imagePullPolicy
+              - parallelism
+              type: object
             federator:
               type: string
             forceNewInit:
               type: boolean
+            restartPolicy:
+              type: string
             timesToRun:
               type: integer
           required:
           - benchmark
           - dryRun
-          - evalCommands
-          - evalImage
+          - evaluator
           - federator
           - forceNewInit
           - timesToRun
@@ -59,7 +76,7 @@ spec:
         status:
           description: KobeExperimentStatus defines the observed state of KobeExperiment
           properties:
-            finishedAt:
+            completionTime:
               description: Time at which this workflow completed
               format: date-time
               type: string
@@ -70,7 +87,7 @@ spec:
               description: The current iteration of the experiment It should be zero
                 if not started yet
               type: integer
-            startedAt:
+            startTime:
               description: Time at which this workflow started
               format: date-time
               type: string

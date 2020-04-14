@@ -166,7 +166,7 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 		//create jobs for the federation datasets that will check if those
 		//datasets have init files for this federator already by either failing
 		//or succeeding
-		for _, dataset := range instance.Spec.DatasetNames {
+		for _, dataset := range instance.Spec.Datasets {
 			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset, Namespace: instance.Namespace}, foundJob)
 			if err != nil && errors.IsNotFound(err) {
 				job := r.newJobForDataset(instance, dataset)
@@ -187,7 +187,7 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 		// datasets since we will initialize for all of them again if
 		// forcenewinit is false only those that errored will get passed to the
 		// list to make init containers
-		for i, dataset := range instance.Spec.DatasetNames { //loop through all datasets of this federation
+		for i, dataset := range instance.Spec.Datasets { //loop through all datasets of this federation
 			foundJob := &batchv1.Job{}
 			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset, Namespace: instance.Namespace}, foundJob)
 			if err != nil && errors.IsNotFound(err) {
@@ -234,7 +234,7 @@ func (r *ReconcileKobeFederation) Reconcile(request reconcile.Request) (reconcil
 			}
 		}
 		//clean up the jobs that checked for the files
-		for _, dataset := range instance.Spec.DatasetNames {
+		for _, dataset := range instance.Spec.Datasets {
 			foundJob := &batchv1.Job{}
 			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset, Namespace: instance.Namespace}, foundJob)
 			err = r.client.Delete(context.TODO(), foundJob, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
@@ -360,9 +360,9 @@ func (r *ReconcileKobeFederation) newServiceForFederation(m *kobev1alpha1.KobeFe
 			},
 			Ports: []corev1.ServicePort{
 				{
-					Port: m.Spec.Port,
+					Port: m.Spec.Template.Port,
 					TargetPort: intstr.IntOrString{
-						IntVal: m.Spec.Port,
+						IntVal: m.Spec.Template.Port,
 					},
 				},
 			},
@@ -520,12 +520,12 @@ func (r *ReconcileKobeFederation) newPodForFederation(m *kobev1alpha1.KobeFedera
 		volumeOut := corev1.Volume{Name: "nfs-out-" + datasetname, VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + datasetname + "/" + m.Spec.FederatorName}}}
 		volumes = append(volumes, volumeIn, volumeOut)
 
-		vmountIn := corev1.VolumeMount{Name: "nfs-in-" + datasetname, MountPath: m.Spec.InputDumpDir}
-		vmountOut := corev1.VolumeMount{Name: "nfs-out-" + datasetname, MountPath: m.Spec.OutputDumpDir}
+		vmountIn := corev1.VolumeMount{Name: "nfs-in-" + datasetname, MountPath: m.Spec.Template.InputDumpDir}
+		vmountOut := corev1.VolumeMount{Name: "nfs-out-" + datasetname, MountPath: m.Spec.Template.OutputDumpDir}
 		vmounts = append(vmounts, vmountIn, vmountOut)
 
 		container := corev1.Container{
-			Image:        m.Spec.ConfFromFileImage,
+			Image:        m.Spec.Template.ConfFromFileImage,
 			Name:         "initcontainer" + strconv.Itoa(i),
 			Env:          envs,
 			VolumeMounts: vmounts,
@@ -536,7 +536,7 @@ func (r *ReconcileKobeFederation) newPodForFederation(m *kobev1alpha1.KobeFedera
 	envs := []corev1.EnvVar{}
 	vmounts := []corev1.VolumeMount{}
 	count := 0
-	for i, datasetname := range m.Spec.DatasetNames {
+	for i, datasetname := range m.Spec.Datasets {
 		env := corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: datasetname}
 		envs = append(envs, env)
 		env = corev1.EnvVar{Name: "DATASET_ENDPOINT_" + strconv.Itoa(i), Value: m.Spec.Endpoints[i]}
@@ -573,7 +573,7 @@ func (r *ReconcileKobeFederation) newPodForFederation(m *kobev1alpha1.KobeFedera
 	volumeInFinal := corev1.Volume{Name: "nfs-final-in", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: path}}}
 	volumes = append(volumes, volumeInFinal)
 
-	vmountInFinal := corev1.VolumeMount{Name: "nfs-final-in", MountPath: m.Spec.InputDir}
+	vmountInFinal := corev1.VolumeMount{Name: "nfs-final-in", MountPath: m.Spec.Template.InputDir}
 	vmounts = append(vmounts, vmountInFinal)
 
 	path = "/exports/" + m.Name
@@ -581,11 +581,11 @@ func (r *ReconcileKobeFederation) newPodForFederation(m *kobev1alpha1.KobeFedera
 	volumeOutFinal := corev1.Volume{Name: "nfs-final-out", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: path}}}
 	volumes = append(volumes, volumeOutFinal)
 
-	vmountOutFinal := corev1.VolumeMount{Name: "nfs-final-out", MountPath: m.Spec.OutputDir}
+	vmountOutFinal := corev1.VolumeMount{Name: "nfs-final-out", MountPath: m.Spec.Template.OutputDir}
 	vmounts = append(vmounts, vmountOutFinal)
 
 	container := corev1.Container{
-		Image:        m.Spec.ConfImage,
+		Image:        m.Spec.Template.ConfImage,
 		Name:         "init" + "final",
 		Env:          envs,
 		VolumeMounts: vmounts,
@@ -594,10 +594,18 @@ func (r *ReconcileKobeFederation) newPodForFederation(m *kobev1alpha1.KobeFedera
 
 	//create the deployment of the federation .
 	//mount the config files to where the federator needs (for example etc/default/semagrow) -->passed by the yaml of federator
-	volumeConf := corev1.Volume{Name: "volumeconf", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/" + m.Name + "/"}}}
+	volumeConf := corev1.Volume{
+		Name: "volumeconf",
+		VolumeSource: corev1.VolumeSource{
+			NFS: &corev1.NFSVolumeSource{
+				Server: nfsip,
+				Path:   "/exports/" + m.Name + "/"},
+		}}
 	volumes = append(volumes, volumeConf)
 
-	mountConf := corev1.VolumeMount{Name: "volumeconf", MountPath: m.Spec.FedConfDir}
+	mountConf := corev1.VolumeMount{
+		Name:      "volumeconf",
+		MountPath: m.Spec.Template.FedConfDir}
 
 	pod := &corev1.Pod{
 		ObjectMeta: metav1.ObjectMeta{
@@ -609,11 +617,11 @@ func (r *ReconcileKobeFederation) newPodForFederation(m *kobev1alpha1.KobeFedera
 
 			InitContainers: initContainers,
 			Containers: []corev1.Container{{
-				Image:           m.Spec.Image,
+				Image:           m.Spec.Template.Image,
 				Name:            m.Name,
-				ImagePullPolicy: m.Spec.ImagePullPolicy,
+				ImagePullPolicy: m.Spec.Template.ImagePullPolicy,
 				Ports: []corev1.ContainerPort{{
-					ContainerPort: m.Spec.Port,
+					ContainerPort: m.Spec.Template.Port,
 					Name:          m.Name,
 				}},
 				VolumeMounts: []corev1.VolumeMount{mountConf},
