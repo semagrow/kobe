@@ -14,7 +14,7 @@ spec:
     status: {}
   validation:
     openAPIV3Schema:
-      description: KobeDataset is the Schema for the kobedatasets API
+      description: Dataset is the Schema for the kobedatasets API
       properties:
         apiVersion:
           description: 'APIVersion defines the versioned schema of this representation
@@ -770,11 +770,14 @@ spec:
         status:
           description: DatasetStatus defines the observed state of Dataset
           properties:
+            phase:
+              type: string
             podNames:
               items:
                 type: string
               type: array
           required:
+          - phase
           - podNames
           type: object
       type: object

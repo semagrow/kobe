@@ -149,7 +149,6 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 				reqLogger.Info("Failed to create the init job that will make the directories in the server for caching")
 				return reconcile.Result{}, err
 			}
-
 		} else if err != nil {
 			reqLogger.Info("Failed to retrieve the job that makes the directories")
 			return reconcile.Result{}, err

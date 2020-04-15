@@ -14,9 +14,8 @@ import (
 type Benchmark struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-
-	Spec   BenchmarkSpec   `json:"spec,omitempty"`
-	Status BenchmarkStatus `json:"status,omitempty"`
+	Spec              BenchmarkSpec   `json:"spec,omitempty"`
+	Status            BenchmarkStatus `json:"status,omitempty"`
 }
 
 // BenchmarkSpec defines the components for this benchmark setup
@@ -55,9 +54,8 @@ type BenchmarkList struct {
 type Experiment struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-
-	Spec   ExperimentSpec   `json:"spec,omitempty"`
-	Status ExperimentStatus `json:"status,omitempty"`
+	Spec              ExperimentSpec   `json:"spec,omitempty"`
+	Status            ExperimentStatus `json:"status,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -90,31 +88,22 @@ const (
 
 // Evaluator defines the
 type Evaluator struct {
-	Image string `json:"image"`
-
+	Image           string        `json:"image"`
 	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy"`
-
-	Command []string `json:"command"`
-
-	Parallelism int32 `json:"parallelism"`
+	Command         []string      `json:"command"`
+	Parallelism     int32         `json:"parallelism"`
 }
 
 // ExperimentSpec defines the desired state of Experiment
 // +k8s:openapi-gen=true
 type ExperimentSpec struct {
-	Benchmark string `json:"benchmark"`
-
-	Federator string `json:"federator"`
-
-	DryRun bool `json:"dryRun"`
-
-	TimesToRun int `json:"timesToRun"`
-
-	ForceNewInit bool `json:"forceNewInit"`
-
+	Benchmark     string        `json:"benchmark"`
+	Federator     string        `json:"federator"`
+	Evaluator     Evaluator     `json:"evaluator"`
+	TimesToRun    int           `json:"timesToRun"`
 	RestartPolicy RestartPolicy `json:"restartPolicy,omitempty"`
-
-	Evaluator Evaluator `json:"evaluator"`
+	DryRun        bool          `json:"dryRun"`
+	ForceNewInit  bool          `json:"forceNewInit"`
 }
 
 // ExperimentStatus defines the observed state of Experiment
@@ -138,24 +127,22 @@ type ExperimentStatus struct {
 // FederationSpec defines the desired state of Federation
 // +k8s:openapi-gen=true
 type FederationSpec struct {
-	FederatorName string `json:"federatorName"`
-
-	Template FederatorTemplate `json:"template"`
-
-	Endpoints []string `json:"endpoints"`
-	Datasets  []string `json:"datasets"`
-
-	ForceNewInit bool `json:"forceNewInit"`
-	Init         bool `json:"init"`
+	FederatorName string            `json:"federatorName"`
+	Template      FederatorTemplate `json:"template"`
+	Endpoints     []string          `json:"endpoints"`
+	Datasets      []string          `json:"datasets"` // use v1.LocalObjectReference ?
+	ForceNewInit  bool              `json:"forceNewInit"`
+	Init          bool              `json:"init"`
 }
 
-// KobeFederationStatus defines the observed state of KobeFederation
+// FederationStatus defines the observed state of KobeFederation
 // +k8s:openapi-gen=true
 type FederationStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
 	PodNames []string `json:"podNames"`
+	Phase    string   `json:"phase"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -167,9 +154,8 @@ type FederationStatus struct {
 type Federation struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-
-	Spec   FederationSpec   `json:"spec,omitempty"`
-	Status FederationStatus `json:"status,omitempty"`
+	Spec              FederationSpec   `json:"spec,omitempty"`
+	Status            FederationStatus `json:"status,omitempty"`
 }
 
 // SetDefaults set the defaults of a federation
@@ -291,6 +277,12 @@ type FederatorList struct {
 	Items           []Federator `json:"items"`
 }
 
+type DatasetInitializationPolicy string
+
+const (
+	ForceLoad DatasetInitializationPolicy = "ForceLoad"
+)
+
 // DatasetSpec defines the desired state of Dataset
 // +k8s:openapi-gen=true
 type DatasetSpec struct {
@@ -349,11 +341,13 @@ type DatasetSpec struct {
 // +k8s:openapi-gen=true
 type DatasetStatus struct {
 	PodNames []string `json:"podNames"`
+
+	Phase string `json:"phase"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// KobeDataset is the Schema for the kobedatasets API
+// Dataset is the Schema for the kobedatasets API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:path=datasets,scope=Namespaced

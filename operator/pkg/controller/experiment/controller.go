@@ -151,7 +151,6 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 				reqLogger.Info("Kobe dataset pod is not ready so experiment needs to wait")
 				return reconcile.Result{RequeueAfter: 5}, nil
 			}
-
 		}
 
 		if podNames == nil || len(podNames) == 0 {
@@ -245,7 +244,7 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 			reqLogger.Info("All past jobs are done\n")
 			identifier++
 		}
-		experimentJob := r.newJobForExperiment(instance, identifier, fedEndpoint, fedName)
+		experimentJob := r.createEvaluatorJob(instance, identifier, fedEndpoint, fedName)
 		reqLogger.Info("Creating a new job to run the experiment for this setup")
 		err = r.client.Create(context.TODO(), experimentJob)
 		if err != nil {
@@ -265,7 +264,7 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 
 //----------------------functions that create native kubernetes objects--------------------------------------
 //create the job that will run the evaluation program
-func (r *ReconcileExperiment) newJobForExperiment(m *api.Experiment, i int, fedendpoint string, fedname string) *batchv1.Job {
+func (r *ReconcileExperiment) createEvaluatorJob(m *api.Experiment, i int, fedendpoint string, fedname string) *batchv1.Job {
 	times := int32(1)
 
 	job := &batchv1.Job{

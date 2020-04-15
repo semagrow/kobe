@@ -736,8 +736,10 @@ spec:
           - template
           type: object
         status:
-          description: KobeFederationStatus defines the observed state of KobeFederation
+          description: FederationStatus defines the observed state of KobeFederation
           properties:
+            phase:
+              type: string
             podNames:
               description: 'INSERT ADDITIONAL STATUS FIELD - define observed state
                 of cluster Important: Run "operator-sdk generate k8s" to regenerate
@@ -747,6 +749,7 @@ spec:
                 type: string
               type: array
           required:
+          - phase
           - podNames
           type: object
       type: object
