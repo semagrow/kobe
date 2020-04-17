@@ -410,11 +410,6 @@ func (in *FederationList) DeepCopyObject() runtime.Object {
 func (in *FederationSpec) DeepCopyInto(out *FederationSpec) {
 	*out = *in
 	in.Template.DeepCopyInto(&out.Template)
-	if in.Endpoints != nil {
-		in, out := &in.Endpoints, &out.Endpoints
-		*out = make([]string, len(*in))
-		copy(*out, *in)
-	}
 	if in.Datasets != nil {
 		in, out := &in.Datasets, &out.Datasets
 		*out = make([]string, len(*in))

@@ -2,10 +2,10 @@ package experiment
 
 import (
 	"context"
-	"fmt"
 	"strconv"
 
 	api "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
+	"github.com/semagrow/kobe/operator/pkg/util"
 	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -22,7 +22,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/source"
 )
 
-var log = logf.Log.WithName("controller_experiment")
+const ControllerName = "kobe-experiment-controller"
+
+var log = logf.Log.WithName(ControllerName)
 var identifier = 0
 
 // Add creates a new Experiment Controller and adds it to the Manager. The Manager will set fields on the Controller
@@ -33,13 +35,16 @@ func Add(mgr manager.Manager) error {
 
 // newReconciler returns a new reconcile.Reconciler
 func newReconciler(mgr manager.Manager) reconcile.Reconciler {
-	return &ReconcileExperiment{client: mgr.GetClient(), scheme: mgr.GetScheme()}
+	return &ReconcileExperiment{
+		client: mgr.GetClient(),
+		scheme: mgr.GetScheme(),
+	}
 }
 
 // add adds a new Controller to mgr with r as the reconcile.Reconciler
 func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	// Create a new controller
-	c, err := controller.New("experiment-controller", mgr, controller.Options{Reconciler: r})
+	c, err := controller.New(ControllerName, mgr, controller.Options{Reconciler: r})
 	if err != nil {
 		return err
 	}
@@ -112,11 +117,15 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 		reqLogger.Info("Did not found a kobebenchmark resource with this name please define that first")
 		return reconcile.Result{RequeueAfter: 5}, err
 	}
+
+	/* MOVED TO federation controller
+
 	endpoints := []string{}
 	datasets := []string{}
 
 	// Check if every kobedataset of the benchmark is healthy.
 	// Create a list of the endpoints and of the names of the datasets
+
 	for _, datasetInfo := range foundBenchmark.Spec.Datasets {
 		foundDataset := &api.Dataset{}
 		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: foundBenchmark.Namespace, Name: datasetInfo}, foundDataset)
@@ -153,6 +162,7 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 			}
 		}
 
+
 		if podNames == nil || len(podNames) == 0 {
 			reqLogger.Info("Experiment waits for components initialization")
 			return reconcile.Result{RequeueAfter: 5}, nil
@@ -160,9 +170,10 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 
 		// Create a list of the SPARQL endpoints
 		endpoints = append(endpoints,
-			EndpointURL(foundDataset.Name, foundDataset.Namespace, int(foundDataset.Spec.Port), foundDataset.Spec.Path))
+			util.EndpointURL(foundDataset.Name, foundDataset.Namespace, int(foundDataset.Spec.Port), foundDataset.Spec.Path))
 		datasets = append(datasets, foundDataset.Name)
 	}
+	*/
 
 	foundFederator := &api.Federator{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Spec.Federator, Namespace: instance.Namespace}, foundFederator)
@@ -178,7 +189,7 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 	foundFederation := &api.Federation{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundFederation)
 	if err != nil && errors.IsNotFound(err) {
-		newFederation := r.newFederationForExperiment(instance, foundFederator, endpoints, datasets)
+		newFederation := r.newFederationForExperiment(instance, foundFederator, foundBenchmark.Spec.Datasets)
 		reqLogger.Info("Creating a new federation based on this experiments datasets and federator")
 		err = r.client.Create(context.TODO(), newFederation)
 		if err != nil {
@@ -193,7 +204,7 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 	// Check if the pods of the federators exist and have a status of running
 	// before proceeding and get fed name and endpoint for the eval job
 	fedEndpoint :=
-		EndpointURL(foundFederation.Name, foundFederation.Namespace, int(foundFederation.Spec.Template.Port), foundFederation.Spec.Template.Path)
+		util.EndpointURL(foundFederation.Name, foundFederation.Namespace, int(foundFederation.Spec.Template.Port), foundFederation.Spec.Template.Path)
 	fedName := foundFederation.Name
 
 	podList := &corev1.PodList{}
@@ -215,13 +226,12 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 			reqLogger.Info("Failed to get the pod of the kobe federation that experiment will use")
 			return reconcile.Result{RequeueAfter: 25}, nil
 		}
-		var test string
-		test = string(foundPod.Status.Phase)
-		if test != "Running" {
+		if foundPod.Status.Phase != corev1.PodRunning {
 			reqLogger.Info("Kobe federation pod is not ready so experiment needs to wait")
 			return reconcile.Result{RequeueAfter: 25}, nil
 		}
 	}
+
 	if podNames == nil || len(podNames) == 0 {
 		reqLogger.Info("Experiment waits for components initialization")
 		return reconcile.Result{RequeueAfter: 25}, nil
@@ -317,7 +327,7 @@ func (r *ReconcileExperiment) createEvaluatorJob(m *api.Experiment, i int, feden
 //function that creates a new kobefederation custom resource from the federator and benchmark  in experiment.
 //The native objects that kobefederation needs are created by kobefederation controller .
 func (r *ReconcileExperiment) newFederationForExperiment(m *api.Experiment,
-	fed *api.Federator, endpoints []string, datasetnames []string) *api.Federation {
+	fed *api.Federator, datasetnames []string) *api.Federation {
 
 	federation := &api.Federation{
 		ObjectMeta: metav1.ObjectMeta{
@@ -329,7 +339,6 @@ func (r *ReconcileExperiment) newFederationForExperiment(m *api.Experiment,
 			ForceNewInit:  m.Spec.ForceNewInit,
 			Init:          true,
 			FederatorName: fed.Name,
-			Endpoints:     endpoints,
 			Datasets:      datasetnames,
 		},
 	}
@@ -343,9 +352,4 @@ func getPodNames(pods []corev1.Pod) []string {
 		podNames = append(podNames, pod.Name)
 	}
 	return podNames
-}
-
-func EndpointURL(name, namespace string, port int, path string) string {
-	// "http://"+foundDataset.Name+"."+foundDataset.Namespace+".svc.cluster.local"+":"+strconv.Itoa(int(foundDataset.Spec.Port))+foundDataset.Spec.Path)
-	return fmt.Sprintf("http://%s.%s.svc:%d/%s", name, namespace, port, path)
 }

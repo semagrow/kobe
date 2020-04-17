@@ -129,7 +129,6 @@ type ExperimentStatus struct {
 type FederationSpec struct {
 	FederatorName string            `json:"federatorName"`
 	Template      FederatorTemplate `json:"template"`
-	Endpoints     []string          `json:"endpoints"`
 	Datasets      []string          `json:"datasets"` // use v1.LocalObjectReference ?
 	ForceNewInit  bool              `json:"forceNewInit"`
 	Init          bool              `json:"init"`
