@@ -179,8 +179,8 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		datasets = append(datasets, foundDataset.Name)
 	}
 
-	datasetsForInit := []string{}  //here we will collect only datasets that get init containers for metadata creation
-	endpointsForInit := []string{} //here we will collect the endpoints that correspond to the selected datasets in the above slice
+	datasetsForInit := []string{}  // here we will collect only datasets that get init containers for metadata creation
+	endpointsForInit := []string{} // here we will collect the endpoints that correspond to the selected datasets in the above slice
 
 	// getting plan for metadata creation
 	if instance.Status.Phase == api.FederationInitializing {
@@ -319,59 +319,15 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	// the Pod (and therefore re-execute the initContainers)
 	// check for the healthiness of the federation pod and create it if it
 	// doesn't exist
-	foundPod := &corev1.Pod{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundPod)
-	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Making a new pod for federation", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		pod := r.newPodForFederation(instance, datasetsForInit, endpointsForInit)
-		err = r.client.Create(context.TODO(), pod)
-		if err != nil {
-			reqLogger.Info("Failed to create new Pod: %v\n", err)
-			return reconcile.Result{}, err
-		}
-		return reconcile.Result{Requeue: true}, nil
+	created, err := r.reconcilePod(instance, datasets, endpoints)
+	//created, err := r.reconcilePod(instance, datasetsForInit, endpointsForInit)
+	if created {
+		return reconcile.Result{Requeue: true}, err
 	} else if err != nil {
 		return reconcile.Result{}, err
 	}
 
-	// check for status changes
-	podList := &corev1.PodList{}
-	listOps := []client.ListOption{
-		client.InNamespace(instance.Namespace),
-		client.MatchingLabels(labelsForFederation(instance.Name)),
-	}
-	err = r.client.List(context.TODO(), podList, listOps...)
-	if err != nil {
-		reqLogger.Info("Failed to list pods: %v", err)
-		return reconcile.Result{}, err
-	}
-	podNames := getPodNames(podList.Items)
-
-	// Update status.PodNames if needed
-	if !reflect.DeepEqual(podNames, instance.Status.PodNames) {
-		instance.Status.PodNames = podNames
-		err := r.client.Update(context.TODO(), instance)
-		if err != nil {
-			reqLogger.Info("failed to update node status: %v", err)
-			return reconcile.Result{}, err
-		}
-	}
-
-	//check the healthiness of the federation service that is used for name resolving
-	foundService := &corev1.Service{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
-	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Making a new service for the federation", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		service := r.newServiceForFederation(instance)
-		reqLogger.Info("Creating a new Service %s/%s\n", service.Namespace, service.Name)
-		err = r.client.Create(context.TODO(), service)
-		if err != nil {
-			reqLogger.Info("Failed to create new Service: %v\n", err)
-			return reconcile.Result{}, err
-		}
-
-		return reconcile.Result{Requeue: true}, nil
-	} else if err != nil {
+	if err := r.reconcileSvc(instance); err != nil {
 		return reconcile.Result{}, err
 	}
 
@@ -394,150 +350,58 @@ func labelsForFederation(name string) map[string]string {
 	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
 }
 
-// a service to find the federation by name internally in the cluster.
-func (r *ReconcileFederation) newServiceForFederation(m *api.Federation) *corev1.Service {
-	service := &corev1.Service{
-		ObjectMeta: metav1.ObjectMeta{
-			Name:      m.Name,
-			Namespace: m.Namespace,
-		},
+func (r *ReconcileFederation) reconcilePod(instance *api.Federation, datasets []string, endpoints []string) (bool, error) {
 
-		Spec: corev1.ServiceSpec{
-			Selector: labelsForFederation(m.Name),
-			Ports: []corev1.ServicePort{
-				{
-					Port: m.Spec.Template.Port,
-					TargetPort: intstr.IntOrString{
-						IntVal: m.Spec.Template.Port,
-					},
-				},
-			},
-		},
-	}
-	controllerutil.SetControllerReference(m, service, r.scheme)
-	return service
-}
+	reqLogger := log
 
-// A job that remove the (temporary) files and create some dirs...
-func (r *ReconcileFederation) newJobForFederation(m *api.Federation) *batchv1.Job {
-	times := int32(1)
-	parallelism := int32(1)
-	volumes := []corev1.Volume{}
-	vmounts := []corev1.VolumeMount{}
-
-	nfsPodFound := &corev1.Pod{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
+	// NOTE: We currently use a Pod instead of a Deployment to avoid the respawning of
+	// the Pod (and therefore re-execute the initContainers)
+	// check for the healthiness of the federation pod and create it if it
+	// doesn't exist
+	foundPod := &corev1.Pod{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundPod)
 	if err != nil && errors.IsNotFound(err) {
-		return nil
+		reqLogger.Info("Making a new pod for federation", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+		pod := r.newPod(instance, datasets, endpoints)
+		err = r.client.Create(context.TODO(), pod)
+		if err != nil {
+			reqLogger.Info("Failed to create new Pod: %v\n", err)
+			return false, err
+		}
+		return true, nil
+	} else if err != nil {
+		return false, err
 	}
-	nfsip := nfsPodFound.Status.PodIP
 
-	volume := corev1.Volume{
-		Name: "nfs-job",
-		VolumeSource: corev1.VolumeSource{
-			NFS: &corev1.NFSVolumeSource{
-				Server: nfsip,
-				Path:   "/exports/"}}}
-
-	vmountFinal := corev1.VolumeMount{
-		Name:      "nfs-job",
-		MountPath: "/kobe/"}
-
-	volumes = append(volumes, volume)
-	vmounts = append(vmounts, vmountFinal)
-
-	job := &batchv1.Job{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "Job",
-			APIVersion: "v1",
-		},
-		ObjectMeta: metav1.ObjectMeta{
-			Name:      m.Name,
-			Namespace: m.Namespace,
-		},
-		Spec: batchv1.JobSpec{
-			Parallelism: &parallelism,
-			Completions: &times,
-			Template: corev1.PodTemplateSpec{
-				ObjectMeta: metav1.ObjectMeta{},
-				Spec: corev1.PodSpec{
-					Containers: []corev1.Container{{
-						Image:           "busybox",
-						Name:            m.Name,
-						ImagePullPolicy: corev1.PullIfNotPresent,
-						VolumeMounts:    vmounts,
-						Command:         []string{"sh", "-c"},
-						Args: []string{
-							"cd /kobe ; rm -r " + m.Name + " ; rm -r" + " temp-" + m.Name + " ; for d in */; do   cd $d;  mkdir " + m.Spec.FederatorName +
-								"; cd /kobe ; done ;" + " mkdir " + m.Name + " ; mkdir " + "temp-" + m.Name},
-					}},
-					RestartPolicy: corev1.RestartPolicyOnFailure,
-					Volumes:       volumes,
-				},
-			},
-		},
+	// check for status changes
+	podList := &corev1.PodList{}
+	listOps := []client.ListOption{
+		client.InNamespace(instance.Namespace),
+		client.MatchingLabels(labelsForFederation(instance.Name)),
 	}
-	controllerutil.SetControllerReference(m, job, r.scheme)
-	return job
-}
-
-//------------------------ job that checks if init file exists for this dataset/federator by failing or succeeding
-func (r *ReconcileFederation) newJobForDataset(m *api.Federation, dataset string) *batchv1.Job {
-	times := int32(1)
-	parallelism := int32(1)
-	volumes := []corev1.Volume{}
-	vmounts := []corev1.VolumeMount{}
-
-	nfsPodFound := &corev1.Pod{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
-	if err != nil && errors.IsNotFound(err) {
-		return nil
+	err = r.client.List(context.TODO(), podList, listOps...)
+	if err != nil {
+		reqLogger.Info("Failed to list pods: %v", err)
+		return false, err
 	}
-	nfsip := nfsPodFound.Status.PodIP
+	podNames := getPodNames(podList.Items)
 
-	volume := corev1.Volume{Name: "nfs-job", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/"}}}
-	volumes = append(volumes, volume)
-
-	vmountFinal := corev1.VolumeMount{Name: "nfs-job", MountPath: "/kobe/"}
-	vmounts = append(vmounts, vmountFinal)
-
-	job := &batchv1.Job{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "Job",
-			APIVersion: "v1",
-		},
-		ObjectMeta: metav1.ObjectMeta{
-			Name:      dataset,
-			Namespace: m.Namespace,
-		},
-		Spec: batchv1.JobSpec{
-			Parallelism: &parallelism,
-			Completions: &times,
-			Template: corev1.PodTemplateSpec{
-				metav1.ObjectMeta{},
-				corev1.PodSpec{
-					Containers: []corev1.Container{{
-						Image:           "busybox",
-						Name:            m.Name,
-						ImagePullPolicy: corev1.PullIfNotPresent,
-						VolumeMounts:    vmounts,
-						Command:         []string{"sh", "-c"},
-						Args:            []string{"cat /kobe/" + dataset + "/" + m.Spec.FederatorName + "/*"},
-					}},
-					RestartPolicy: corev1.RestartPolicyNever,
-					Volumes:       volumes,
-				},
-			},
-		},
+	// Update status.PodNames if needed
+	if !reflect.DeepEqual(podNames, instance.Status.PodNames) {
+		instance.Status.PodNames = podNames
+		err := r.client.Update(context.TODO(), instance)
+		if err != nil {
+			reqLogger.Info("failed to update node status: %v", err)
+			return false, err
+		}
 	}
-	controllerutil.SetControllerReference(m, job, r.scheme)
-	return job
 
+	return false, nil
 }
 
 // creates a new federation deployment
 // This is the deployment that runs the federator image
-func (r *ReconcileFederation) newPodForFederation(m *api.Federation, datasets []string, endpoints []string) *corev1.Pod {
+func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpoints []string) *corev1.Pod {
 	labels := labelsForFederation(m.Name)
 
 	nfsPodFound := &corev1.Pod{}
@@ -678,4 +542,167 @@ func (r *ReconcileFederation) newPodForFederation(m *api.Federation, datasets []
 
 	controllerutil.SetControllerReference(m, pod, r.scheme)
 	return pod
+}
+
+func (r *ReconcileFederation) reconcileSvc(instance *api.Federation) error {
+
+	reqLogger := log
+
+	//check the healthiness of the federation service that is used for name resolving
+	foundService := &corev1.Service{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
+	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Making a new service for the federation", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+		service := r.newSvc(instance)
+		reqLogger.Info("Creating a new Service %s/%s\n", service.Namespace, service.Name)
+		err = r.client.Create(context.TODO(), service)
+		if err != nil {
+			reqLogger.Info("Failed to create new Service: %v\n", err)
+			return err
+		}
+		return nil
+	} else if err != nil {
+		return err
+	}
+	return nil
+}
+
+// a service to find the federation by name internally in the cluster.
+func (r *ReconcileFederation) newSvc(m *api.Federation) *corev1.Service {
+	service := &corev1.Service{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      m.Name,
+			Namespace: m.Namespace,
+		},
+
+		Spec: corev1.ServiceSpec{
+			Selector: labelsForFederation(m.Name),
+			Ports: []corev1.ServicePort{
+				{
+					Port: m.Spec.Template.Port,
+					TargetPort: intstr.IntOrString{
+						IntVal: m.Spec.Template.Port,
+					},
+				},
+			},
+		},
+	}
+	controllerutil.SetControllerReference(m, service, r.scheme)
+	return service
+}
+
+// A job that remove the (temporary) files and create some dirs...
+func (r *ReconcileFederation) newJobForFederation(m *api.Federation) *batchv1.Job {
+	times := int32(1)
+	parallelism := int32(1)
+	volumes := []corev1.Volume{}
+	vmounts := []corev1.VolumeMount{}
+
+	nfsPodFound := &corev1.Pod{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
+	if err != nil && errors.IsNotFound(err) {
+		return nil
+	}
+	nfsip := nfsPodFound.Status.PodIP
+
+	volume := corev1.Volume{
+		Name: "nfs-job",
+		VolumeSource: corev1.VolumeSource{
+			NFS: &corev1.NFSVolumeSource{
+				Server: nfsip,
+				Path:   "/exports/"}}}
+
+	vmountFinal := corev1.VolumeMount{
+		Name:      "nfs-job",
+		MountPath: "/kobe/"}
+
+	volumes = append(volumes, volume)
+	vmounts = append(vmounts, vmountFinal)
+
+	job := &batchv1.Job{
+		TypeMeta: metav1.TypeMeta{
+			Kind:       "Job",
+			APIVersion: "v1",
+		},
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      m.Name,
+			Namespace: m.Namespace,
+		},
+		Spec: batchv1.JobSpec{
+			Parallelism: &parallelism,
+			Completions: &times,
+			Template: corev1.PodTemplateSpec{
+				ObjectMeta: metav1.ObjectMeta{},
+				Spec: corev1.PodSpec{
+					Containers: []corev1.Container{{
+						Image:           "busybox",
+						Name:            m.Name,
+						ImagePullPolicy: corev1.PullIfNotPresent,
+						VolumeMounts:    vmounts,
+						Command:         []string{"sh", "-c"},
+						Args: []string{
+							"cd /kobe ; rm -r " + m.Name + " ; rm -r" + " temp-" + m.Name + " ; for d in */; do   cd $d;  mkdir " + m.Spec.FederatorName +
+								"; cd /kobe ; done ;" + " mkdir " + m.Name + " ; mkdir " + "temp-" + m.Name},
+					}},
+					RestartPolicy: corev1.RestartPolicyOnFailure,
+					Volumes:       volumes,
+				},
+			},
+		},
+	}
+	controllerutil.SetControllerReference(m, job, r.scheme)
+	return job
+}
+
+//------------------------ job that checks if init file exists for this dataset/federator by failing or succeeding
+func (r *ReconcileFederation) newJobForDataset(m *api.Federation, dataset string) *batchv1.Job {
+	times := int32(1)
+	parallelism := int32(1)
+	volumes := []corev1.Volume{}
+	vmounts := []corev1.VolumeMount{}
+
+	nfsPodFound := &corev1.Pod{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
+	if err != nil && errors.IsNotFound(err) {
+		return nil
+	}
+	nfsip := nfsPodFound.Status.PodIP
+
+	volume := corev1.Volume{Name: "nfs-job", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/"}}}
+	volumes = append(volumes, volume)
+
+	vmountFinal := corev1.VolumeMount{Name: "nfs-job", MountPath: "/kobe/"}
+	vmounts = append(vmounts, vmountFinal)
+
+	job := &batchv1.Job{
+		TypeMeta: metav1.TypeMeta{
+			Kind:       "Job",
+			APIVersion: "v1",
+		},
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      dataset,
+			Namespace: m.Namespace,
+		},
+		Spec: batchv1.JobSpec{
+			Parallelism: &parallelism,
+			Completions: &times,
+			Template: corev1.PodTemplateSpec{
+				ObjectMeta: metav1.ObjectMeta{},
+				Spec: corev1.PodSpec{
+					Containers: []corev1.Container{{
+						Image:           "busybox",
+						Name:            m.Name,
+						ImagePullPolicy: corev1.PullIfNotPresent,
+						VolumeMounts:    vmounts,
+						Command:         []string{"sh", "-c"},
+						Args:            []string{"cat /kobe/" + dataset + "/" + m.Spec.FederatorName + "/*"},
+					}},
+					RestartPolicy: corev1.RestartPolicyNever,
+					Volumes:       volumes,
+				},
+			},
+		},
+	}
+	controllerutil.SetControllerReference(m, job, r.scheme)
+	return job
 }
