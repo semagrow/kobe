@@ -327,7 +327,7 @@ func (r *ReconcileExperiment) createEvaluatorJob(m *api.Experiment, i int, feden
 //function that creates a new kobefederation custom resource from the federator and benchmark  in experiment.
 //The native objects that kobefederation needs are created by kobefederation controller .
 func (r *ReconcileExperiment) newFederationForExperiment(m *api.Experiment,
-	fed *api.Federator, datasetnames []string) *api.Federation {
+	fed *api.Federator, datasets []string) *api.Federation {
 
 	federation := &api.Federation{
 		ObjectMeta: metav1.ObjectMeta{
@@ -336,10 +336,9 @@ func (r *ReconcileExperiment) newFederationForExperiment(m *api.Experiment,
 		},
 		Spec: api.FederationSpec{
 			Template:      fed.Spec.FederatorTemplate,
-			ForceNewInit:  m.Spec.ForceNewInit,
-			Init:          true,
+			InitPolicy:    api.ForceInit,
 			FederatorName: fed.Name,
-			Datasets:      datasetnames,
+			Datasets:      datasets,
 		},
 	}
 	controllerutil.SetControllerReference(m, federation, r.scheme)

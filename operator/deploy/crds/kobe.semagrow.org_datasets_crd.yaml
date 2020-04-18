@@ -709,9 +709,6 @@ spec:
                 - name
                 type: object
               type: array
-            forceLoad:
-              description: Forces to download and load from dataset file
-              type: boolean
             image:
               description: 'Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images'
               type: string
@@ -719,6 +716,9 @@ spec:
               description: 'Image pull policy. One of Always, Never, IfNotPresent.
                 Defaults to Always if :latest tag is specified, or IfNotPresent otherwise.
                 Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images'
+              type: string
+            initPolicy:
+              description: Forces to download and load from dataset file
               type: string
             path:
               description: Path that the container will listen for queries
@@ -763,7 +763,7 @@ spec:
               type: object
           required:
           - downloadFrom
-          - forceLoad
+          - initPolicy
           - path
           - port
           type: object

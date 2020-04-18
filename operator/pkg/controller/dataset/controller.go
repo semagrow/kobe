@@ -114,6 +114,8 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 
 	instance.SetDefaults()
 
+	// check ForceLoad
+
 	//check  if a KobeUtil instance exists for this namespace and if not create it
 	kobeUtil := &api.KobeUtil{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobeutil", Namespace: instance.Namespace}, kobeUtil)
@@ -219,8 +221,8 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 		return reconcile.Result{RequeueAfter: 25}, nil
 	}
 	if podNames != nil && len(podNames) > 0 {
-		instance.Spec.ForceLoad = false
-		err := r.client.Update(context.TODO(), instance)
+		instance.Status.ForceLoad = false
+		err := r.client.Status().Update(context.TODO(), instance)
 		if err != nil {
 			reqLogger.Info("failed to update the dataset forcedownload flag")
 			return reconcile.Result{}, err
@@ -327,7 +329,7 @@ func (r *ReconcileDataset) newPodForDataset(m *api.Dataset, podName string) *cor
 		{Name: "DATASET_NAME", Value: m.Name},
 	}
 
-	if m.Spec.ForceLoad == true {
+	if m.Status.ForceLoad == true {
 		envs = append(envs, corev1.EnvVar{Name: "FORCE_LOAD", Value: "YES"})
 	}
 

@@ -183,7 +183,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	endpointsForInit := []string{} //here we will collect the endpoints that correspond to the selected datasets in the above slice
 
 	// getting plan for metadata creation
-	if instance.Spec.Init == true {
+	if instance.Status.Phase == api.FederationInitializing {
 		// the federation controller still runs the init loop as long as this
 		// flag is true
 
@@ -268,7 +268,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 				return reconcile.Result{}, err
 			}
 			//decide whether to include this dataset in the initialization based on the status of the job pod  and the forceNewInit flag
-			if instance.Spec.ForceNewInit == false { //we make a choice
+			if instance.Spec.InitPolicy != api.ForceInit { //we make a choice
 				if pod.Status.Phase == corev1.PodRunning {
 
 				} else if pod.Status.Phase == corev1.PodFailed {
@@ -277,7 +277,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 				} else { //pod is still running so we again need to wait for it before seeing if it failed or succeededs
 					return reconcile.Result{RequeueAfter: 5}, nil
 				}
-			} else if instance.Spec.ForceNewInit == true { //we dont make a choice we gather all of them
+			} else if instance.Spec.InitPolicy == api.ForceInit { //we dont make a choice we gather all of them
 				datasetsForInit = append(datasetsForInit, dataset)
 				endpointsForInit = append(endpointsForInit, endpoints[i])
 			}
@@ -301,14 +301,14 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 
 		// Never rerun the init jobs (this whole part of the loop) even if the
 		// user changes an attribute of the federation object unless he redefines
-		// the experiment if this flag change doesnt happen,then every time this
+		// the experiment if this flag change doesn't happen,then every time this
 		// controller reruns to reconcile our federation we will get a repeat of
 		// all the init process of the federation jobs again and again. Also if
 		// federation pod drops and this controller relaunches it ,it will not
 		// recreate the init files per dataset since datasetsToInit will be empty
 		// which means we save time.
-		instance.Spec.Init = false
-		err = r.client.Update(context.TODO(), instance)
+		instance.Status.Phase = api.FederationRunning
+		err = r.client.Status().Update(context.TODO(), instance)
 		if err != nil {
 			reqLogger.Info("Failed to update the init flag")
 			return reconcile.Result{}, err
@@ -459,16 +459,17 @@ func (r *ReconcileFederation) newJobForFederation(m *api.Federation) *batchv1.Jo
 			Parallelism: &parallelism,
 			Completions: &times,
 			Template: corev1.PodTemplateSpec{
-				metav1.ObjectMeta{},
-				corev1.PodSpec{
+				ObjectMeta: metav1.ObjectMeta{},
+				Spec: corev1.PodSpec{
 					Containers: []corev1.Container{{
 						Image:           "busybox",
 						Name:            m.Name,
 						ImagePullPolicy: corev1.PullIfNotPresent,
 						VolumeMounts:    vmounts,
 						Command:         []string{"sh", "-c"},
-						Args: []string{"cd /kobe ;rm -r " + m.Name + " ; rm -r" + " temp-" + m.Name + " ; for d in */; do   cd $d;  mkdir " + m.Spec.FederatorName +
-							"; cd /kobe ; done ;" + " mkdir " + m.Name + " ; mkdir " + "temp-" + m.Name},
+						Args: []string{
+							"cd /kobe ; rm -r " + m.Name + " ; rm -r" + " temp-" + m.Name + " ; for d in */; do   cd $d;  mkdir " + m.Spec.FederatorName +
+								"; cd /kobe ; done ;" + " mkdir " + m.Name + " ; mkdir " + "temp-" + m.Name},
 					}},
 					RestartPolicy: corev1.RestartPolicyOnFailure,
 					Volumes:       volumes,
@@ -478,7 +479,6 @@ func (r *ReconcileFederation) newJobForFederation(m *api.Federation) *batchv1.Jo
 	}
 	controllerutil.SetControllerReference(m, job, r.scheme)
 	return job
-
 }
 
 //------------------------ job that checks if init file exists for this dataset/federator by failing or succeeding
@@ -558,7 +558,7 @@ func (r *ReconcileFederation) newPodForFederation(m *api.Federation, datasets []
 			{Name: "DATASET_NAME", Value: datasetname},
 			{Name: "DATASET_ENDPOINT", Value: endpoints[i]}}
 
-		if m.Spec.ForceNewInit == true { //optional variable to skip creating the files if they already exist in /exports/<dataset-name>/<federator-name>.Is passed by the experiment yaml
+		if m.Spec.InitPolicy == api.ForceInit { //optional variable to skip creating the files if they already exist in /exports/<dataset-name>/<federator-name>.Is passed by the experiment yaml
 			env := corev1.EnvVar{Name: "INITIALIZE", Value: "yes"}
 			envs = append(envs, env)
 		}

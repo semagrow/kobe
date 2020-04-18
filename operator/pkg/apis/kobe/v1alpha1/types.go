@@ -124,24 +124,33 @@ type ExperimentStatus struct {
 	Phase ExperimentPhase `json:"phase"`
 }
 
+type FederationPhase string
+
+const (
+	FederationInitializing FederationPhase = "Initializing"
+	FederationRunning      FederationPhase = "Running"
+)
+
+type InitializationPolicy string
+
+const (
+	ForceInit InitializationPolicy = "ForceInit"
+)
+
 // FederationSpec defines the desired state of Federation
 // +k8s:openapi-gen=true
 type FederationSpec struct {
-	FederatorName string            `json:"federatorName"`
-	Template      FederatorTemplate `json:"template"`
-	Datasets      []string          `json:"datasets"` // use v1.LocalObjectReference ?
-	ForceNewInit  bool              `json:"forceNewInit"`
-	Init          bool              `json:"init"`
+	FederatorName string               `json:"federatorName"`
+	Template      FederatorTemplate    `json:"template"`
+	Datasets      []string             `json:"datasets"` // use v1.LocalObjectReference ?
+	InitPolicy    InitializationPolicy `json:"initPolicy"`
 }
 
 // FederationStatus defines the observed state of KobeFederation
 // +k8s:openapi-gen=true
 type FederationStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
-	// Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html
-	PodNames []string `json:"podNames"`
-	Phase    string   `json:"phase"`
+	PodNames []string        `json:"podNames"`
+	Phase    FederationPhase `json:"phase"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -276,12 +285,6 @@ type FederatorList struct {
 	Items           []Federator `json:"items"`
 }
 
-type DatasetInitializationPolicy string
-
-const (
-	ForceLoad DatasetInitializationPolicy = "ForceLoad"
-)
-
 // DatasetSpec defines the desired state of Dataset
 // +k8s:openapi-gen=true
 type DatasetSpec struct {
@@ -307,7 +310,7 @@ type DatasetSpec struct {
 	Replicas *int32 `json:"replicas"`
 
 	// Forces to download and load from dataset file
-	ForceLoad bool `json:"forceLoad"`
+	InitPolicy InitializationPolicy `json:"initPolicy"`
 
 	// A URL that points to the compressed dataset file
 	DownloadFrom string `json:"downloadFrom"`
@@ -339,9 +342,9 @@ type DatasetSpec struct {
 // DatasetStatus defines the observed state of Dataset
 // +k8s:openapi-gen=true
 type DatasetStatus struct {
-	PodNames []string `json:"podNames"`
-
-	Phase string `json:"phase"`
+	PodNames  []string `json:"podNames"`
+	Phase     string   `json:"phase"`
+	ForceLoad bool     `json:"forceLoad"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
