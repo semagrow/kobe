@@ -113,114 +113,34 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 	}
 
 	instance.SetDefaults()
-
 	// check ForceLoad
 
-	//check  if a KobeUtil instance exists for this namespace and if not create it
-	kobeUtil := &api.KobeUtil{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobeutil", Namespace: instance.Namespace}, kobeUtil)
-	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Creating the kobe utility custom resource")
-		kobeutil := r.newKobeUtility(instance)
-		err = r.client.Create(context.TODO(), kobeutil)
-		if err != nil {
-			reqLogger.Info("Failed to create the kobe utility instance: %v\n", err)
-			return reconcile.Result{}, err
-		}
-		return reconcile.Result{Requeue: true}, nil
-	}
-
-	//check for  the nfs pod if it exist and wait if not
-	nfsPodFound := &corev1.Pod{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: instance.Namespace}, nfsPodFound)
-	if err != nil && errors.IsNotFound(err) {
-		return reconcile.Result{Requeue: true}, nil
-	}
-	//check if the persistent volume claim exist and wait if not
-	pvcFound := &corev1.PersistentVolumeClaim{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobepvc", Namespace: instance.Namespace}, pvcFound)
-	if err != nil && errors.IsNotFound(err) {
-		return reconcile.Result{Requeue: true}, nil
-	}
-	//make sure nfs pod status is running, to take care of racing condition
-	if nfsPodFound.Status.Phase != "Running" {
-		return reconcile.Result{Requeue: true}, nil
-	}
-
-	//----------------------------From here do the actual work to set up the pod and service for the dataset--------------
-	// health check for the pods of dataset
-	for i := 0; i < int(*instance.Spec.Replicas); i++ {
-		foundPod := &corev1.Pod{}
-		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name + "-Dataset-" + strconv.Itoa(i), Namespace: instance.Namespace}, foundPod)
-		if err != nil && errors.IsNotFound(err) {
-			reqLogger.Info("Making a new pod for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-			pod := r.newPodForDataset(instance, instance.Name+"-dataset-"+strconv.Itoa(i))
-			err = r.client.Create(context.TODO(), pod)
-			if err != nil {
-				reqLogger.Info("Failed to create new Pod: %v\n", err)
-				return reconcile.Result{}, err
-			}
-			return reconcile.Result{Requeue: true}, nil
-		} else if err != nil {
-			return reconcile.Result{}, err
-		}
-	}
-
-	podList := &corev1.PodList{}
-	listOps := []client.ListOption{
-		client.InNamespace(instance.Namespace),
-		client.MatchingLabels(labelsForDataset(instance.Name)),
-	}
-	err = r.client.List(context.TODO(), podList, listOps...)
-	if err != nil {
-		reqLogger.Info("Failed to list pods: %v", err)
-		return reconcile.Result{}, err
-	}
-	podNames := getPodNames(podList.Items)
-
-	// Update status.PodNames if needed
-	if !reflect.DeepEqual(podNames, instance.Status.PodNames) {
-		instance.Status.PodNames = podNames
-		err := r.client.Update(context.TODO(), instance)
-		if err != nil {
-			reqLogger.Info("failed to update node status: %v", err)
-			return reconcile.Result{}, err
-		}
-	}
-
-	podForDelete := &corev1.Pod{}
-	for i, podName := range podNames {
-		if i >= int(*instance.Spec.Replicas) { //check if we need to scale down the pods if user has changed count to lower number and delete if needed
-			err = r.client.Get(context.TODO(), types.NamespacedName{Name: podName, Namespace: instance.Namespace}, podForDelete)
-			err = r.client.Delete(context.TODO(), podForDelete, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
-			if err != nil {
-				reqLogger.Info("Failed to delete the federation job from the cluster")
-				return reconcile.Result{}, err
-			}
-		}
-	}
-	//Service health check for the dataset
-	foundService := &corev1.Service{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
-	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Making a new service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		service := r.newServiceForDataset(instance)
-		reqLogger.Info("Creating a new Service %s/%s\n", service.Namespace, service.Name)
-		err = r.client.Create(context.TODO(), service)
-		if err != nil {
-			reqLogger.Info("Failed to create new Service: %v\n", err)
-			return reconcile.Result{}, err
-		}
-
-		return reconcile.Result{Requeue: true}, nil
+	// check  if a KobeUtil instance exists for this namespace and if not create it
+	requeue, err := ensureNFS(r.client, instance.Namespace)
+	if requeue {
+		return reconcile.Result{Requeue: requeue}, err
 	} else if err != nil {
 		return reconcile.Result{}, err
 	}
 
-	if podNames == nil && len(podNames) == 0 {
+	// From here do the actual work to set up the pod and service for the dataset
+
+	created, err := r.reconcilePods(instance)
+	if created {
+		return reconcile.Result{Requeue: true}, err
+	} else if err != nil {
+		return reconcile.Result{}, err
+	}
+
+	//Service health check for the dataset
+	if err := r.reconcileSvc(instance); err != nil {
+		return reconcile.Result{}, err
+	}
+
+	if instance.Status.PodNames == nil && len(instance.Status.PodNames) == 0 {
 		return reconcile.Result{RequeueAfter: 25}, nil
 	}
-	if podNames != nil && len(podNames) > 0 {
+	if instance.Status.PodNames != nil && len(instance.Status.PodNames) > 0 {
 		instance.Status.ForceLoad = false
 		err := r.client.Status().Update(context.TODO(), instance)
 		if err != nil {
@@ -233,7 +153,13 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 	return reconcile.Result{}, nil
 }
 
-//------------------status update and retrieval to check actual pods besides deployment.Can be used to delay experiment for kobeexperiment till everything is up
+//helper function
+func labelsForDataset(name string) map[string]string {
+	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
+}
+
+// status update and retrieval to check actual pods besides deployment.
+// Can be used to delay experiment for Experiment till everything is up
 func getPodNames(pods []corev1.Pod) []string {
 	var podNames []string
 	for _, pod := range pods {
@@ -242,86 +168,89 @@ func getPodNames(pods []corev1.Pod) []string {
 	return podNames
 }
 
-//helper function
-func labelsForDataset(name string) map[string]string {
-	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
+func (r *ReconcileDataset) reconcilePods(instance *api.Dataset) (bool, error) {
+	reqLogger := log
+
+	// health check for the pods of dataset
+	for i := 0; i < int(*instance.Spec.Replicas); i++ {
+		foundPod := &corev1.Pod{}
+		err := r.client.Get(context.TODO(), types.NamespacedName{
+			Name:      instance.Name + "-dataset-" + strconv.Itoa(i),
+			Namespace: instance.Namespace},
+			foundPod)
+		if err != nil && errors.IsNotFound(err) {
+			reqLogger.Info("Making a new pod for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+			pod := r.newPod(instance, instance.Name+"-dataset-"+strconv.Itoa(i))
+			err = r.client.Create(context.TODO(), pod)
+			if err != nil {
+				reqLogger.Info("Failed to create new Pod: %v\n", err)
+				return false, err
+			}
+			return true, nil
+		} else if err != nil {
+			return false, err
+		}
+	}
+
+	podList := &corev1.PodList{}
+	listOps := []client.ListOption{
+		client.InNamespace(instance.Namespace),
+		client.MatchingLabels(labelsForDataset(instance.Name)),
+	}
+	err := r.client.List(context.TODO(), podList, listOps...)
+	if err != nil {
+		reqLogger.Info("Failed to list pods: %v", err)
+		return false, err
+	}
+	podNames := getPodNames(podList.Items)
+
+	// Update status.PodNames if needed
+	if !reflect.DeepEqual(podNames, instance.Status.PodNames) {
+		instance.Status.PodNames = podNames
+		err := r.client.Update(context.TODO(), instance)
+		if err != nil {
+			reqLogger.Info("failed to update node status: %v", err)
+			return false, err
+		}
+	}
+
+	podForDelete := &corev1.Pod{}
+	for i, podName := range podNames {
+		if i >= int(*instance.Spec.Replicas) {
+			//check if we need to scale down the pods if user has changed count to lower number and delete if needed
+			err = r.client.Get(context.TODO(), types.NamespacedName{Name: podName, Namespace: instance.Namespace}, podForDelete)
+			err = r.client.Delete(context.TODO(), podForDelete, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
+			if err != nil {
+				reqLogger.Info("Failed to delete the federation job from the cluster")
+				return false, err
+			}
+		}
+	}
+	return false, nil
 }
 
-//------------------Functions that define native kubernetes object to create that are all controlled by the dataset custom resource-----------------------
-//--------tied to a dataset------
-/*
-func (r *ReconcileDataset) newDeploymentForDataset(m *datasetv1alpha1.Dataset) *appsv1.Deployment {
-	labels := labelsForDataset(m.Name)
-	replicas := m.Spec.Replicas
+func (r *ReconcileDataset) reconcileSvc(instance *api.Dataset) error {
+	reqLogger := log
+	foundService := &corev1.Service{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
 
-	envs := []corev1.EnvVar{}
-
-	env := corev1.EnvVar{Name: "DOWNLOAD_URL", Value: m.Spec.DownloadFrom}
-	envs = append(envs, env)
-
-	env = corev1.EnvVar{Name: "DATASET_NAME", Value: m.Name}
-	envs = append(envs, env)
-
-	if m.Spec.ForceLoad == true {
-		env = corev1.EnvVar{Name: "FORCE_LOAD", Value: "YES"}
-		envs = append(envs, env)
+	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Making a new service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+		service := r.newSvc(instance)
+		reqLogger.Info("Creating a new Service %s/%s\n", service.Namespace, service.Name)
+		err = r.client.Create(context.TODO(), service)
+		if err != nil {
+			reqLogger.Info("Failed to create new Service: %v\n", err)
+			return err
+		}
+		return nil
+	} else if err != nil {
+		return err
 	}
-
-	for _, v := range m.Spec.Env {
-		env = corev1.EnvVar{Name: v.Name, Value: v.Value}
-			envs = append(envs, env)
-	}
-
-	volume := corev1.Volume{Name: "nfs", VolumeSource: corev1.VolumeSource{PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
-	volumes := []corev1.Volume{}
-	volumes = append(volumes, volume)
-
-	volumemount := corev1.VolumeMount{Name: "nfs", MountPath: "/kobe/dataset"}
-	volumemounts := []corev1.VolumeMount{}
-	volumemounts = append(volumemounts, volumemount)
-
-	dep := &appsv1.Deployment{
-		TypeMeta: metav1.TypeMeta{
-			APIVersion: "apps/v1",
-			Kind:       "Deployment",
-		},
-		ObjectMeta: metav1.ObjectMeta{
-			Name:      m.Name,
-			Namespace: m.Namespace,
-		},
-		Spec: appsv1.DeploymentSpec{
-			Replicas: &replicas,
-			Selector: &metav1.LabelSelector{
-				MatchLabels: labels,
-			},
-			Template: corev1.PodTemplateSpec{
-				ObjectMeta: metav1.ObjectMeta{
-					Labels: labels,
-				},
-				Spec: corev1.PodSpec{
-					Containers: []corev1.Container{{
-						Image:           m.Spec.Image,
-						Name:            m.Name,
-						ImagePullPolicy: corev1.PullPolicy("Always"),
-						Ports: []corev1.ContainerPort{{
-							ContainerPort: m.Spec.Port,
-							Name:          m.Name,
-						}},
-						Env:          envs,
-						VolumeMounts: volumemounts,
-					}},
-					Volumes: volumes,
-				},
-			},
-		},
-	}
-	controllerutil.SetControllerReference(m, dep, r.scheme)
-	return dep
-
+	return nil
 }
-*/
 
-func (r *ReconcileDataset) newPodForDataset(m *api.Dataset, podName string) *corev1.Pod {
+func (r *ReconcileDataset) newPod(m *api.Dataset, podName string) *corev1.Pod {
 	labels := labelsForDataset(m.Name)
 
 	envs := []corev1.EnvVar{
@@ -359,11 +288,10 @@ func (r *ReconcileDataset) newPodForDataset(m *api.Dataset, podName string) *cor
 			Labels:    labels,
 		},
 		Spec: corev1.PodSpec{
-
 			Containers: []corev1.Container{{
 				Image:           m.Spec.Image,
 				Name:            m.Name,
-				ImagePullPolicy: corev1.PullPolicy("Always"),
+				ImagePullPolicy: m.Spec.ImagePullPolicy,
 				Ports: []corev1.ContainerPort{{
 					ContainerPort: m.Spec.Port,
 					Name:          m.Name,
@@ -380,7 +308,7 @@ func (r *ReconcileDataset) newPodForDataset(m *api.Dataset, podName string) *cor
 	return pod
 }
 
-func (r *ReconcileDataset) newServiceForDataset(m *api.Dataset) *corev1.Service {
+func (r *ReconcileDataset) newSvc(m *api.Dataset) *corev1.Service {
 	service := &corev1.Service{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
@@ -405,11 +333,50 @@ func (r *ReconcileDataset) newServiceForDataset(m *api.Dataset) *corev1.Service 
 	return service
 }
 
-func (r *ReconcileDataset) newKobeUtility(m *api.Dataset) *api.KobeUtil {
+func ensureNFS(client client.Client, ns string) (bool, error) {
+	reqLogger := log
+
+	// check  if a KobeUtil instance exists for this namespace and if not create it
+	kobeUtil := &api.KobeUtil{}
+
+	err := client.Get(context.TODO(), types.NamespacedName{Name: "kobeutil", Namespace: ns}, kobeUtil)
+
+	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Creating the kobe utility custom resource")
+		kobeutil := newKobeUtility(ns)
+		err = client.Create(context.TODO(), kobeutil)
+		if err != nil {
+			reqLogger.Info("Failed to create the kobe utility instance: %v\n", err)
+			return false, err
+		}
+		return true, nil
+	}
+
+	//check for  the nfs pod if it exist and wait if not
+	nfsPodFound := &corev1.Pod{}
+	err = client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: ns}, nfsPodFound)
+	if err != nil && errors.IsNotFound(err) {
+		return true, nil
+	}
+	//check if the persistent volume claim exist and wait if not
+	pvcFound := &corev1.PersistentVolumeClaim{}
+	err = client.Get(context.TODO(), types.NamespacedName{Name: "kobepvc", Namespace: ns}, pvcFound)
+	if err != nil && errors.IsNotFound(err) {
+		return true, nil
+	}
+	//make sure nfs pod status is running, to take care of racing condition
+	if nfsPodFound.Status.Phase != corev1.PodRunning {
+		return true, nil
+	}
+
+	return false, nil
+}
+
+func newKobeUtility(ns string) *api.KobeUtil {
 	kutil := &api.KobeUtil{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "kobeutil",
-			Namespace: m.Namespace,
+			Namespace: ns,
 		},
 	}
 	return kutil
