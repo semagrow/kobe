@@ -59,7 +59,7 @@ resources that constitute the public API of Kobe are:
   order to initialize and run a federation engine. The software needed is
   expected to be provided in container images. This software include the
   initializer and the service that listen to queries.
-* The *DatasetSystem* template that describes the software that should be used 
+* The *DatasetServer* template that describes the software that should be used 
   to load and serve a dataset. This software include the initializer and the 
   service that listen to queries. 
 * The *Experiment* that describes a specific experiment of a given Benchmark and
@@ -77,16 +77,22 @@ cluster and monitored by (an already deployed) kobe operator.
 
 The sequence of events of a typical flow are:
 1. The `kobe-operator` is deployed in a Kubernetes cluster.
-2. A set of `DatasetSystem`s and `Federator`s are committed.
+2. A set of `DatasetServer`s and `Federator`s are committed.
 3. A `Benchmark` resource is applied in Kubernetes.
 4. An `Experiment` is applied that must reference one of the `Federator`s and
    `Benchmark`s
 
 Upon submission of the `Experiment` a series of actions occur from the
-kobe-operator. The operator checks whether the federator is already defined.
-If so, it creates a `Federation`, an internal resource that instantiates a
-`Federator` template with a specific set of datasets. Datasets are also
-initialized with a specific `DatasetSystem` described in the `Experiment`.
+kobe-operator. 
+
+* The operator checks whether the federator and the dataset servers are already
+  defined.
+* If datasets are not served by the specific `DatasetServer` required by the
+  `Experiment`, then they are initialized.
+* If there is no federation the controller creates a `Federation`, an internal
+  resource that instantiates a `Federator` template with a specific set of
+  datasets. 
+
 When the `Federation` status changed to `Running` the operator starts an 
 evaluator that receives as input the query-set defined in the `Benchmark`
 and the endpoint of the federator. The evaluator completes after a predefined
