@@ -137,7 +137,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	// Create a list of the endpoints and of the names of the datasets
 	for _, datasetInfo := range instance.Spec.Datasets {
 		foundDataset := &api.Dataset{}
-		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: datasetInfo}, foundDataset)
+		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: datasetInfo.Name}, foundDataset)
 		if err != nil {
 			reqLogger.Info("Failed to find a specific dataset from the list of datasets of this benchmark")
 			return reconcile.Result{RequeueAfter: 5}, err
@@ -285,7 +285,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		//clean up the jobs that checked for the files
 		for _, dataset := range instance.Spec.Datasets {
 			foundJob := &batchv1.Job{}
-			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset, Namespace: instance.Namespace}, foundJob)
+			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Name, Namespace: instance.Namespace}, foundJob)
 			err = r.client.Delete(context.TODO(), foundJob, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
 		}
 
@@ -446,8 +446,8 @@ func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpo
 	envs := []corev1.EnvVar{}
 	vmounts := []corev1.VolumeMount{}
 	count := 0
-	for i, datasetname := range m.Spec.Datasets {
-		env := corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: datasetname}
+	for i, dataset := range m.Spec.Datasets {
+		env := corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: dataset.Name}
 		envs = append(envs, env)
 		env = corev1.EnvVar{Name: "DATASET_ENDPOINT_" + strconv.Itoa(i), Value: endpoints[i]}
 		envs = append(envs, env)

@@ -18,10 +18,15 @@ type Benchmark struct {
 	Status            BenchmarkStatus `json:"status,omitempty"`
 }
 
+type DatasetDefinition struct {
+	Name string      `json:"name"`
+	Spec DatasetSpec `json:"spec"`
+}
+
 // BenchmarkSpec defines the components for this benchmark setup
 type BenchmarkSpec struct {
-	Datasets []string `json:"datasets"`
-	Queries  []Query  `json:"queries"`
+	Datasets []DatasetDefinition `json:"datasets"`
+	Queries  []Query             `json:"queries"`
 }
 
 //Query contains the query info
@@ -142,7 +147,7 @@ const (
 type FederationSpec struct {
 	FederatorName string               `json:"federatorName"`
 	Template      FederatorTemplate    `json:"template"`
-	Datasets      []string             `json:"datasets"` // use v1.LocalObjectReference ?
+	Datasets      []DatasetDefinition  `json:"datasets"` // use v1.LocalObjectReference ?
 	InitPolicy    InitializationPolicy `json:"initPolicy"`
 }
 

@@ -306,7 +306,7 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 //function that creates a new kobefederation custom resource from the federator and benchmark  in experiment.
 //The native objects that kobefederation needs are created by kobefederation controller .
 func (r *ReconcileExperiment) newFederation(m *api.Experiment,
-	fed *api.Federator, datasets []string) *api.Federation {
+	fed *api.Federator, datasets []api.DatasetDefinition) *api.Federation {
 
 	federation := &api.Federation{
 		ObjectMeta: metav1.ObjectMeta{

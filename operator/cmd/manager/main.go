@@ -8,13 +8,15 @@ import (
 	"os"
 	"runtime"
 
+	istio "istio.io/client-go/pkg/apis/networking/v1alpha3"
+
 	// Import all Kubernetes client auth plugins (e.g. Azure, GCP, OIDC, etc.)
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
 	"k8s.io/client-go/rest"
 
 	"github.com/semagrow/kobe/operator/pkg/apis"
 	"github.com/semagrow/kobe/operator/pkg/controller"
-        "github.com/semagrow/kobe/operator/version"
+	"github.com/semagrow/kobe/operator/version"
 
 	"github.com/operator-framework/operator-sdk/pkg/k8sutil"
 	kubemetrics "github.com/operator-framework/operator-sdk/pkg/kube-metrics"
@@ -27,8 +29,8 @@ import (
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/util/intstr"
 	"sigs.k8s.io/controller-runtime/pkg/client/config"
-	"sigs.k8s.io/controller-runtime/pkg/manager"
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
+	"sigs.k8s.io/controller-runtime/pkg/manager"
 	"sigs.k8s.io/controller-runtime/pkg/manager/signals"
 )
 
@@ -109,6 +111,11 @@ func main() {
 		log.Error(err, "")
 		os.Exit(1)
 	}
+	// Adding the ISTIO
+	if err := istio.AddToScheme(mgr.GetScheme()); err != nil {
+		log.Error(err, "")
+		os.Exit(1)
+	}
 
 	// Setup all Controllers
 	if err := controller.AddToManager(mgr); err != nil {
@@ -120,7 +127,7 @@ func main() {
 	addMetrics(ctx, cfg)
 
 	log.Info("Starting the Cmd.")
-	
+
 	// Start the Cmd
 	if err := mgr.Start(signals.SetupSignalHandler()); err != nil {
 		log.Error(err, "Manager exited non-zero")

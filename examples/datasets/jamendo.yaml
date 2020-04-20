@@ -5,8 +5,8 @@ metadata:
 spec:
   # Add fields here
   image: kostbabis/virtuoso
-  forceLoad: false
+  initPolicy: sdffdssf
   downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/Jamendo.tar.gz
   replicas: 1
   port: 8890
-
+  path: /strabon/Query

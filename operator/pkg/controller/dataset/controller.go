@@ -6,6 +6,8 @@ import (
 	"strconv"
 
 	api "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
+	istioapi "istio.io/api/networking/v1alpha3"
+	istioclient "istio.io/client-go/pkg/apis/networking/v1alpha3"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -247,6 +249,24 @@ func (r *ReconcileDataset) reconcileSvc(instance *api.Dataset) error {
 	} else if err != nil {
 		return err
 	}
+
+	foundVirtualService := &istioclient.VirtualService{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundVirtualService)
+
+	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Making a new virtual service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+		service := r.newVirtualSvc(instance)
+		reqLogger.Info("Creating a new VRITUAL Service %s/%s\n", service.Namespace, service.Name)
+		err = r.client.Create(context.TODO(), service)
+		if err != nil {
+			reqLogger.Info("Failed to create new Service: %v\n", err)
+			return err
+		}
+		return nil
+	} else if err != nil {
+		return err
+	}
+
 	return nil
 }
 
@@ -331,6 +351,41 @@ func (r *ReconcileDataset) newSvc(m *api.Dataset) *corev1.Service {
 	}
 	controllerutil.SetControllerReference(m, service, r.scheme)
 	return service
+}
+
+func (r *ReconcileDataset) newVirtualSvc(m *api.Dataset) *istioclient.VirtualService {
+	// service := &corev1.Service{
+	// 	ObjectMeta: metav1.ObjectMeta{
+	// 		Name:      m.Name,
+	// 		Namespace: m.Namespace,
+	// 	},
+
+	// 	Spec: corev1.ServiceSpec{
+	// 		Selector: map[string]string{
+	// 			"kobeoperator_cr": m.Name,
+	// 		},
+	// 		Ports: []corev1.ServicePort{
+	// 			{
+	// 				Port: m.Spec.Port,
+	// 				TargetPort: intstr.IntOrString{
+	// 					IntVal: m.Spec.Port,
+	// 				},
+	// 			},
+	// 		},
+	// 	},
+	// }
+	vservice := &istioclient.VirtualService{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      m.Name,
+			Namespace: m.Namespace,
+		},
+		Spec: istioapi.VirtualService{
+			Hosts: []string{m.Name},
+		},
+	}
+
+	controllerutil.SetControllerReference(m, vservice, r.scheme)
+	return vservice
 }
 
 func ensureNFS(client client.Client, ns string) (bool, error) {

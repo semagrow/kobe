@@ -7,5 +7,6 @@ spec:
   image: kostbabis/virtuoso
   forceLoad: false
   downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/ChEBI.tar.gz
+  path: /strabon/Query
   replicas: 1
   port: 8890

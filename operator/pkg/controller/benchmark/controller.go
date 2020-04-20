@@ -107,7 +107,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 	foundDataset := &api.Dataset{}
 	for _, dataset := range instance.Spec.Datasets {
 
-		err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset, Namespace: instance.Namespace}, foundDataset)
+		err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Name, Namespace: instance.Namespace}, foundDataset)
 		if err != nil && errors.IsNotFound(err) {
 			// Define a new deployment
 			/*
