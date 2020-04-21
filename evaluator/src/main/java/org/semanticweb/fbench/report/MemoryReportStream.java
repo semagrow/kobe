@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
+import org.semanticweb.fbench.LogUtils;
 import org.semanticweb.fbench.query.Query;
 
 public abstract class MemoryReportStream implements ReportStream {
@@ -118,7 +119,8 @@ public abstract class MemoryReportStream implements ReportStream {
 				return;
 			}
 		}
-		list.add( new QueryStats(query, duration, run, numberOfResults));		
+		list.add( new QueryStats(query, duration, run, numberOfResults));
+		log.info("[" + LogUtils.getQueryID() + "] Results: " + numberOfResults);
 	}
 
 	@Override

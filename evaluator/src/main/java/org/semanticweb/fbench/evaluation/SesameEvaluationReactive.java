@@ -4,6 +4,7 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.List;
 
+import org.semanticweb.fbench.LogUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.openrdf.query.BindingSet;
@@ -43,7 +44,7 @@ public class SesameEvaluationReactive extends SesameEvaluation {
 			// TODO Auto-generated method stub
 			if (innerHandler != null)
 				innerHandler.endQueryResult();
-		    
+			log.info(LogUtils.getCurrTime() + " [" + LogUtils.getQueryID() + "] Query evaluation End");
 			latch.countDown();
             log.debug("countDown " + latch.getCount());
 		}
@@ -67,6 +68,9 @@ public class SesameEvaluationReactive extends SesameEvaluation {
 		@Override
 		public void handleSolution(BindingSet arg0)
 				throws TupleQueryResultHandlerException {
+			if (resCounter == 0) {
+				log.info(LogUtils.getCurrTime() + " [" + LogUtils.getQueryID() + "] Got first result");
+			}
 			// TODO Auto-generated method stub
 			resCounter++;
 			earlyResults.handleResult(arg0, resCounter);
