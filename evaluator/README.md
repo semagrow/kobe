@@ -3,7 +3,7 @@
 Query evaluator of the KoBE Benchmark Engine.
 
 ### Build
-To build and run this you need Java 7+ and Maven 3+.
+To build and run this you need Java 11+ and Maven 3+.
 
 ```
 mvn clean package
