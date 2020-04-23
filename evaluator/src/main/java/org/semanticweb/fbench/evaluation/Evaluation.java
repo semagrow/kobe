@@ -9,7 +9,6 @@ import org.semanticweb.fbench.report.EarlyResultsMonitor;
 import org.semanticweb.fbench.report.ReportStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.rmi.runtime.Log;
 
 import java.sql.Timestamp;
 
@@ -205,7 +204,9 @@ public abstract class Evaluation {
 			long runStart = System.currentTimeMillis();
 			for (Query q : QueryManager.getQueryManager().getQueries()) {
 				try {
+					LogUtils.setMDC();
 					log.info("Executing query " + q.getIdentifier() + ", run " + run );
+					log.info("Query MD5: " + DigestUtils.md5Hex(q.getQuery()));
 					if (log.isTraceEnabled())
 						log.trace("Query: " + q.getQuery());
 					EvaluationThread eval = new EvaluationThread(this, q, report, earlyResults, run);

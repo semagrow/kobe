@@ -47,14 +47,14 @@ public class EvaluationThread extends Thread {
 	public void run() {
 		try {
 			error = false;
-			log.info("Evaluation of query " + query.getIdentifier() + " in thread " + Thread.currentThread().getName());
+			log.debug("Evaluation of query " + query.getIdentifier() + " in thread " + Thread.currentThread().getName());
 			report.beginQueryEvaluation(query, run);
 			long start = System.currentTimeMillis();
 			earlyResults.nextQuery(query, start);
 			int numberOfResults = evaluator.runQuery(query, run);
 			long duration = System.currentTimeMillis() - start;
 			report.endQueryEvaluation(query, run, duration, numberOfResults);
-			log.info(query.getIdentifier() + " (#" + run + ", duration: " + duration + "ms, results " + numberOfResults + ")");
+			log.debug(query.getIdentifier() + " (#" + run + ", duration: " + duration + "ms, results " + numberOfResults + ")");
 			
 		} catch (IllegalMonitorStateException e) { 
 			// reporting is done in evaluation (finished is still false)
