@@ -5,9 +5,9 @@
 ###
 # querySet:
 #   path to a directory that contains text files, one file per query.
-#   default: /etc/querySet/
+#   default: /queries
 #
-# querySet = ../queries/resources/opfbench/
+# querySet = /queries
 
 
 ###

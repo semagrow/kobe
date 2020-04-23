@@ -99,7 +99,7 @@ public class Config {
      * 	    if none specified, then /etc/querySet/ directory is used
 	 */
 	public String getQuerySetPath() throws IllegalArgumentException {
-        return props.getProperty("querySet", "/etc/querySet/");
+        return props.getProperty("querySet", "/queries");
 	}
 
     public List<String> getQuerySet() {
