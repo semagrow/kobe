@@ -45,6 +45,9 @@ public class QueryUtil {
 		Arrays.sort(listOfFiles);
 		
 		for (File file : listOfFiles) {
+			if (file.getName().startsWith(".")) {
+				continue;
+			}
 			FileReader fin = new FileReader(file);
 			BufferedReader in = new BufferedReader(fin);
 			String tmp;
