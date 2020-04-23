@@ -9,9 +9,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.semanticweb.fbench.evaluation.SesameSparqlEvaluation.RepoInformation;
 import org.semanticweb.fbench.query.Query;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -31,7 +32,7 @@ import org.semanticweb.fbench.query.Query;
  */
 public class SparqlQueryRequestReport {
 	
-	public static Logger log = Logger.getLogger(SparqlQueryRequestReport.class);
+	public static Logger log = LoggerFactory.getLogger(SparqlQueryRequestReport.class);
 
 	protected List<RepoInformation> repoInformation;
 	protected BufferedWriter bout;

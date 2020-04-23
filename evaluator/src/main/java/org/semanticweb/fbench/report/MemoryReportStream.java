@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
-import org.semanticweb.fbench.LogUtils;
 import org.semanticweb.fbench.query.Query;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class MemoryReportStream implements ReportStream {
 
@@ -44,7 +44,7 @@ public abstract class MemoryReportStream implements ReportStream {
 		}		
 	}
 	
-	public static Logger log = Logger.getLogger(MemoryReportStream.class);
+	public static Logger log = LoggerFactory.getLogger(MemoryReportStream.class);
 	
 	protected String evaluationID;
 	protected GregorianCalendar evaluationDate;
@@ -120,7 +120,7 @@ public abstract class MemoryReportStream implements ReportStream {
 			}
 		}
 		list.add( new QueryStats(query, duration, run, numberOfResults));
-		log.info("[" + LogUtils.getQueryID() + "] Results: " + numberOfResults);
+		log.info("Results: " + numberOfResults);
 	}
 
 	@Override

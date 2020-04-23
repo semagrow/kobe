@@ -1,10 +1,10 @@
 package org.semanticweb.fbench.evaluation;
 
-import org.apache.log4j.Logger;
 import org.semanticweb.fbench.query.Query;
 import org.semanticweb.fbench.report.EarlyResultsMonitor;
 import org.semanticweb.fbench.report.ReportStream;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -14,7 +14,7 @@ import org.semanticweb.fbench.report.ReportStream;
  */
 public class EvaluationThread extends Thread {
 	
-	public static Logger log = Logger.getLogger(EvaluationThread.class);
+	public static Logger log = LoggerFactory.getLogger(EvaluationThread.class);
 	
 	protected Evaluation evaluator;
 	protected Query query;

@@ -1,13 +1,15 @@
 package org.semanticweb.fbench.evaluation;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.log4j.Logger;
 import org.semanticweb.fbench.Config;
 import org.semanticweb.fbench.LogUtils;
 import org.semanticweb.fbench.query.Query;
 import org.semanticweb.fbench.query.QueryManager;
 import org.semanticweb.fbench.report.EarlyResultsMonitor;
 import org.semanticweb.fbench.report.ReportStream;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import sun.rmi.runtime.Log;
 
 import java.sql.Timestamp;
 
@@ -23,7 +25,7 @@ import java.sql.Timestamp;
  */
 public abstract class Evaluation {
 
-	public static Logger log = Logger.getLogger(Evaluation.class);
+	public static Logger log = LoggerFactory.getLogger(Evaluation.class);
 	
 	protected ReportStream report;
 	protected EarlyResultsMonitor earlyResults;
@@ -118,10 +120,11 @@ public abstract class Evaluation {
 		
 		for (Query q : QueryManager.getQueryManager().getQueries()) {
 			try {
+				LogUtils.setMDC();
 				log.info("Executing query " + q.getIdentifier() + ", run 1");
+				log.info("Query MD5: " + DigestUtils.md5Hex(q.getQuery()));
 				report.beginQueryEvaluation(q, 1);
 				long start = System.currentTimeMillis();
-				printLogMessage(q, 1);
 				earlyResults.nextQuery(q, start);
 				int numberOfResults = runQueryDebug(q, 1, showResult);
 				long duration = System.currentTimeMillis() - start;
@@ -156,9 +159,10 @@ public abstract class Evaluation {
 			long runStart = System.currentTimeMillis();
 			for (Query q : QueryManager.getQueryManager().getQueries()){
 				try {
+					LogUtils.setMDC();
 					log.info("Executing query " + q.getIdentifier() + ", run " + run);
+					log.info("Query MD5: " + DigestUtils.md5Hex(q.getQuery()));
 					report.beginQueryEvaluation(q, run);
-					printLogMessage(q, run);
 					long start = System.currentTimeMillis();
 					earlyResults.nextQuery(q, start);
 					int numberOfResults = runQuery(q, run);
@@ -250,16 +254,6 @@ public abstract class Evaluation {
 		log.info("Evaluation of queries done.");			
 	}
 
-	private void printLogMessage(Query q, int run) {
-		log.info("[" + LogUtils.getNewQueryID() + "] " +
-						"Executing query " + q.getIdentifier() + ", " +
-						"run " + run + ", " +
-						"with MD5 " + DigestUtils.md5Hex(q.getQuery())
-				);
-		log.info(LogUtils.getCurrTime() + " [" + LogUtils.getQueryID() + "] Query evaluation Start");
-	}
-	
-		
 	/**
 	 * Perform any initializations here, i.e. load repositories, open streams, etc.
 	 * 

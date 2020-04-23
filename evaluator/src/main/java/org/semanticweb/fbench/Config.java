@@ -44,12 +44,13 @@ public class Config {
 	}
 	
 	public static void initialize(String[] args) throws FileNotFoundException, IOException, IllegalArgumentException {
-		
+		/*
 		if (System.getProperty("log4j.configuration")==null) {
 			//System.setProperty("log4j.configuration", "file:config/log4j.properties");
 			System.setProperty("log4j.configuration", "log4j.properties");
 		}
-		
+		*/
+		LogUtils.setMDC();
 		// necessary for RDFXML format, e.g. for Jamendo dataset, to not abort with RDFParseException
 		if (System.getProperty("entityExpansionLimit")==null)
 			System.setProperty("entityExpansionLimit", "10000000");
