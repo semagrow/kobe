@@ -1,4 +1,4 @@
-FROM maven:3-jdk-7
+FROM maven:3-jdk-11
 
 MAINTAINER Yiannis Mouchakis <gmouchakis@iit.demokritos.gr>
 
