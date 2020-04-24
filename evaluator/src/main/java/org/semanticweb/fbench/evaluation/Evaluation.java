@@ -1,6 +1,5 @@
 package org.semanticweb.fbench.evaluation;
 
-import org.apache.commons.codec.digest.DigestUtils;
 import org.semanticweb.fbench.Config;
 import org.semanticweb.fbench.LogUtils;
 import org.semanticweb.fbench.query.Query;
@@ -9,8 +8,6 @@ import org.semanticweb.fbench.report.EarlyResultsMonitor;
 import org.semanticweb.fbench.report.ReportStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.sql.Timestamp;
 
 
 /**
@@ -120,8 +117,7 @@ public abstract class Evaluation {
 		for (Query q : QueryManager.getQueryManager().getQueries()) {
 			try {
 				LogUtils.setMDC();
-				log.info("Executing query " + q.getIdentifier() + ", run 1");
-				log.info("Query MD5: " + DigestUtils.md5Hex(q.getQuery()));
+				log.info("Experiment: " + Config.getConfig().getExperimentName() + " - Query: " + q.getIdentifier() + " - Run: 1");
 				report.beginQueryEvaluation(q, 1);
 				long start = System.currentTimeMillis();
 				earlyResults.nextQuery(q, start);
@@ -159,8 +155,7 @@ public abstract class Evaluation {
 			for (Query q : QueryManager.getQueryManager().getQueries()){
 				try {
 					LogUtils.setMDC();
-					log.info("Executing query " + q.getIdentifier() + ", run " + run);
-					log.info("Query MD5: " + DigestUtils.md5Hex(q.getQuery()));
+					log.info("Experiment: " + Config.getConfig().getExperimentName() + " - Query: " + q.getIdentifier() + " - Run: " + run);
 					report.beginQueryEvaluation(q, run);
 					long start = System.currentTimeMillis();
 					earlyResults.nextQuery(q, start);
@@ -205,8 +200,7 @@ public abstract class Evaluation {
 			for (Query q : QueryManager.getQueryManager().getQueries()) {
 				try {
 					LogUtils.setMDC();
-					log.info("Executing query " + q.getIdentifier() + ", run " + run );
-					log.info("Query MD5: " + DigestUtils.md5Hex(q.getQuery()));
+					log.info("Experiment: " + Config.getConfig().getExperimentName() + " - Query: " + q.getIdentifier() + " - Run: " + run);
 					if (log.isTraceEnabled())
 						log.trace("Query: " + q.getQuery());
 					EvaluationThread eval = new EvaluationThread(this, q, report, earlyResults, run);

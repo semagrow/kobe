@@ -1,4 +1,4 @@
-# !/bin/sh
+#!/bin/sh
 
 ./scripts/dataConfig.sh $1 > dataConfig.ttl
 shift

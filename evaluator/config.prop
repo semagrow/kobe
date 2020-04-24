@@ -36,3 +36,9 @@
 # timeout = 520000
 
 
+###
+# experimentName:
+#   path to a directory that contains text files, one file per query.
+#   default: kobeExperiment
+#
+# experimentName = kobeExperiment

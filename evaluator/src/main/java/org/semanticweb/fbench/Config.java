@@ -284,4 +284,15 @@ public class Config {
 	public boolean isSparqlRequestReport() {
 		return Boolean.parseBoolean(props.getProperty("sparqlRequestReport", "false"));
 	}
+
+	/**
+	 *
+	 * @return
+	 * 		Name of the experiment. Used for logging purposes.
+	 *
+	 *  	default kobeExperiment
+	 */
+	public String getExperimentName() {
+		return props.getProperty("experimentName", "kobeExperiment");
+	}
 }

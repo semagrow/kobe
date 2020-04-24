@@ -4,6 +4,7 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.List;
 
+import org.semanticweb.fbench.LogUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.openrdf.query.BindingSet;
@@ -91,7 +92,9 @@ public class SesameEvaluationReactive extends SesameEvaluation {
 	
 	@Override
 	public int runQuery(Query q, int run) throws Exception {
-		TupleQuery query = conn.prepareTupleQuery(QueryLanguage.SPARQL, q.getQuery());
+
+		String qStr = LogUtils.annotateExperimentQuery(q, Config.getConfig().getExperimentName(), run);
+		TupleQuery query = conn.prepareTupleQuery(QueryLanguage.SPARQL, qStr);
 		
 		final int resCounter = 0; 
 		
@@ -104,9 +107,10 @@ public class SesameEvaluationReactive extends SesameEvaluation {
 
 	@Override
 	public int runQueryDebug(Query q, int run, boolean showResult) throws Exception {
-		TupleQuery query = conn.prepareTupleQuery(QueryLanguage.SPARQL, q.getQuery());
 
-		
+		String qStr = LogUtils.annotateExperimentQuery(q, Config.getConfig().getExperimentName(), run);
+		TupleQuery query = conn.prepareTupleQuery(QueryLanguage.SPARQL, qStr);
+
 		final int resCounter = 0; 
 		
 		MyHandler handler = new MyHandler();
