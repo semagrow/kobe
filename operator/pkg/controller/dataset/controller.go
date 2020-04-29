@@ -109,6 +109,22 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 	instance.SetDefaults()
 	// check ForceLoad
 
+	//check if template in the template field exists. If not try to find a reference template and set that to the template fields .
+	if instance.Spec.Template == nil {
+		foundTemplate := &api.DatasetTemplate{}
+		reqLogger.Info("Finding the template reference specified for " + instance.Name + " %v\n")
+		err := r.client.Get(context.TODO(), types.NamespacedName{
+			Name:      instance.Spec.TemplateRef,
+			Namespace: corev1.NamespaceDefault},
+			foundTemplate)
+		if err != nil && errors.IsNotFound(err) {
+			reqLogger.Info("Failed to create new Service: %v\n", err)
+			return reconcile.Result{}, err
+		}
+
+		instance.Spec.Template = foundTemplate
+	}
+
 	// From here do the actual work to set up the pod and service for the dataset
 	created, err := r.reconcilePods(instance)
 	if created {
@@ -139,8 +155,8 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 }
 
 //helper function
-func labelsForDataset(name string) map[string]string {
-	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
+func labelsForDataset(m *api.EphemeralDataset) map[string]string {
+	return map[string]string{"app": "Kobe-Operator", "datasetName": m.Name, "benchmark": m.Namespace}
 }
 
 // status update and retrieval to check actual pods besides deployment.
@@ -159,12 +175,12 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 	// health check for the pods of dataset
 	foundPod := &corev1.Pod{}
 	err := r.client.Get(context.TODO(), types.NamespacedName{
-		Name:      instance.Name + "-dataset",
+		Name:      instance.Name,
 		Namespace: instance.Namespace},
 		foundPod)
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Making a new pod for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		pod := r.newPod(instance, instance.Name+"-dataset")
+		pod := r.newPod(instance)
 		err = r.client.Create(context.TODO(), pod)
 		if err != nil {
 			reqLogger.Info("Failed to create new Pod: %v\n", err)
@@ -178,7 +194,7 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 	podList := &corev1.PodList{}
 	listOps := []client.ListOption{
 		client.InNamespace(instance.Namespace),
-		client.MatchingLabels(labelsForDataset(instance.Name)),
+		client.MatchingLabels(labelsForDataset(instance)),
 	}
 	err = r.client.List(context.TODO(), podList, listOps...)
 	if err != nil {
@@ -251,11 +267,12 @@ func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) error {
 	return nil
 }
 
-func (r *ReconcileDataset) newPod(m *api.EphemeralDataset, podName string) *corev1.Pod {
-	labels := labelsForDataset(m.Name)
+func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
+	labels := labelsForDataset(m)
+	//reqLogger := log
 
 	envs := []corev1.EnvVar{
-		{Name: "DOWNLOAD_URL", Value: m.Spec.DownloadFrom},
+		{Name: "DOWNLOAD_URL", Value: m.Spec.Files[1].Checksum},
 		{Name: "DATASET_NAME", Value: m.Name},
 	}
 
@@ -271,7 +288,7 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset, podName string) *core
 	volumes := []corev1.Volume{}
 	volumes = append(volumes, volume)
 
-	initContainers := m.Spec.InitContainers
+	initContainers := m.Spec.Template.TemplateSpec.InitContainers
 
 	if m.Status.ForceLoad == true {
 		// add volumemounts to importcontainers
@@ -282,18 +299,18 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset, podName string) *core
 		volumemounts := []corev1.VolumeMount{}
 		volumemounts = append(volumemounts, volumemount)
 
-		initContainers = append(initContainers, m.Spec.ImportContainers...)
+		initContainers = append(initContainers, m.Spec.Template.TemplateSpec.ImportContainers...)
 	}
 
 	pod := &corev1.Pod{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      podName,
+			Name:      m.Name + "-pod",
 			Namespace: m.Namespace,
 			Labels:    labels,
 		},
 		Spec: corev1.PodSpec{
 			InitContainers: initContainers,
-			Containers:     m.Spec.Containers,
+			Containers:     m.Spec.Template.TemplateSpec.Containers,
 			Volumes:        volumes,
 			Affinity:       m.Spec.Affinity,
 		},
@@ -303,6 +320,18 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset, podName string) *core
 }
 
 func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
+	servicePorts := []corev1.ServicePort{}
+	for _, container := range m.Spec.Template.TemplateSpec.Containers {
+		for _, port := range container.Ports {
+			newPort := corev1.ServicePort{
+				Port: port.ContainerPort,
+				TargetPort: intstr.IntOrString{
+					IntVal: port.ContainerPort,
+				},
+			}
+			servicePorts = append(servicePorts, newPort)
+		}
+	}
 	service := &corev1.Service{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
@@ -312,15 +341,9 @@ func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
 		Spec: corev1.ServiceSpec{
 			Selector: map[string]string{
 				"kobeoperator_cr": m.Name,
+				"benchmark":       m.Namespace,
 			},
-			Ports: []corev1.ServicePort{
-				{
-					Port: m.Spec.Port,
-					TargetPort: intstr.IntOrString{
-						IntVal: m.Spec.Port,
-					},
-				},
-			},
+			Ports: servicePorts,
 		},
 	}
 	controllerutil.SetControllerReference(m, service, r.scheme)

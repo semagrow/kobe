@@ -5,42 +5,16 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
-
-// Benchmark is the Schema for the benchmarks API
-// +k8s:openapi-gen=true
-// +kubebuilder:subresource:status
-// +kubebuilder:resource:path=benchmarks,scope=Namespaced
-type Benchmark struct {
-	metav1.TypeMeta   `json:",inline"`
-	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              BenchmarkSpec   `json:"spec,omitempty"`
-	Status            BenchmarkStatus `json:"status,omitempty"`
-}
-
-// BenchmarkSpec defines the components for this benchmark setup
-type BenchmarkSpec struct {
-	Datasets []Dataset `json:"datasets"`
-	Queries  []Query   `json:"queries"`
-}
-
-//Query contains the query info
-type Query struct {
-	Name        string `json:"name"`
-	Language    string `json:"language"`
-	QueryString string `json:"queryString"`
-}
-
 type DatasetFile struct {
 	URL      string `json:"url"`
 	Checksum string `json:"checksum,omitempty"`
 }
 
 type Dataset struct {
-	Name     string              `json:"name"`
-	Files    []DatasetFile       `json:"files"`
-	Template DatasetTemplateSpec `json:"template"` // maybe reference
-
+	Name        string           `json:"name"`
+	Files       []DatasetFile    `json:"files"`
+	Template    *DatasetTemplate `json:"template,omitempty"`
+	TemplateRef string           `json:"templateRef,omitempty"` //  reference
 	// If specified, the pod's scheduling constraints
 	// +optional
 	Affinity *v1.Affinity `json:"affinity,omitempty"`
@@ -68,6 +42,32 @@ type Delay struct {
 type NetworkConnection struct {
 	Destination []string `json:"destination,omitempty"`
 	Delay       Delay    `json:"delay,omitempty"`
+}
+
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+
+// Benchmark is the Schema for the benchmarks API
+// +k8s:openapi-gen=true
+// +kubebuilder:subresource:status
+// +kubebuilder:resource:path=benchmarks,scope=Namespaced
+type Benchmark struct {
+	metav1.TypeMeta   `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,omitempty"`
+	Spec              BenchmarkSpec   `json:"spec,omitempty"`
+	Status            BenchmarkStatus `json:"status,omitempty"`
+}
+
+// BenchmarkSpec defines the components for this benchmark setup
+type BenchmarkSpec struct {
+	Datasets []Dataset `json:"datasets"`
+	Queries  []Query   `json:"queries"`
+}
+
+//Query contains the query info
+type Query struct {
+	Name        string `json:"name"`
+	Language    string `json:"language"`
+	QueryString string `json:"queryString"`
 }
 
 // BenchmarkStatus defines the observed state of Benchmark
@@ -312,21 +312,23 @@ type FederatorList struct {
 	Items           []Federator `json:"items"`
 }
 
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+
 type DatasetTemplate struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Template          DatasetTemplateSpec `json:"template,omitempty"`
+	TemplateSpec      DatasetSpec `json:"template,omitempty"`
 }
 
-type DatasetTemplateSpec struct {
-	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              DatasetSpec `json:"spec,omitempty"`
-}
+// type DatasetTemplateSpec struct {
+// 	metav1.ObjectMeta `json:"metadata,omitempty"`
+// 	Spec              DatasetSpec `json:"spec,omitempty"`
+// }
 
 // DatasetSpec defines the desired state of Dataset
 // +k8s:openapi-gen=true
 type DatasetSpec struct {
-	ImportContainers []v1.Container `json:"importContainers"`
+	ImportContainers []v1.Container `json:"importContainers,omitempty"`
 
 	//List of initialization containers belonging to the pod. Init containers
 	//are executed in order prior to containers being started. If any init
@@ -341,7 +343,7 @@ type DatasetSpec struct {
 	//Init containers cannot currently be added or removed. Cannot be updated.
 	//More info:
 	//https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
-	InitContainers []v1.Container `json:"initContainers",omitempty`
+	InitContainers []v1.Container `json:"initContainers,omitempty"`
 
 	// List of containers belonging to the pod. Containers cannot currently be
 	// added or removed. There must be at least one container in a Pod. Cannot
@@ -377,16 +379,16 @@ type EphemeralDataset struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   DatasetSpec            `json:"spec,omitempty"`
+	Spec   Dataset                `json:"dataset,omitempty"`
 	Status EphemeralDatasetStatus `json:"status,omitempty"`
 }
 
 // SetDefaults sets the defaults of the KobeDatasetSpec
 func (r *EphemeralDataset) SetDefaults() bool {
 	changed := false
-	rs := &r.Spec
-	if rs.Path == "" {
-		rs.Path = "/sparql"
+	rs := r.Spec.Template.TemplateSpec.Path
+	if rs == "" {
+		r.Spec.Template.TemplateSpec.Path = "/sparql"
 		changed = true
 	}
 	return changed

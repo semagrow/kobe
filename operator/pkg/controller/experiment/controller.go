@@ -314,8 +314,8 @@ func (r *ReconcileExperiment) newFederation(m *api.Experiment,
 	for _, d := range datasets {
 		datasetendpoints = append(datasetendpoints, api.DatasetEndpoint{
 			Host: d.Name,
-			Port: d.Template.Spec.Port,
-			Path: d.Template.Spec.Path})
+			Port: d.Template.TemplateSpec.Port,
+			Path: d.Template.TemplateSpec.Path})
 	}
 
 	federation := &api.Federation{

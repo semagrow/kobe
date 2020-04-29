@@ -101,16 +101,17 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		return reconcile.Result{}, err
 	}
 
-	//check if the datasets exist else create a very basic version of those that dont
+	//check if the datasets exist else create them and let dataset controller build the resources
 	foundDataset := &api.EphemeralDataset{}
 	for _, dataset := range instance.Spec.Datasets {
 
-		err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Name, Namespace: instance.Namespace}, foundDataset)
+		err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Name, Namespace: instance.Name}, foundDataset)
 		if err != nil && errors.IsNotFound(err) {
-			// Define a new deployment
+			ed := r.newEphemeralDataset(instance, dataset)
+			err := r.client.Create(context.TODO(), ed)
 			return reconcile.Result{}, err
 		} else if err != nil {
-			reqLogger.Info("Failed to get Dataset with the same name in same namespace: %v\n", err)
+			reqLogger.Info("Failed to get the ephemeral dataset in the namespace of the benchmark: %v\n", err)
 			return reconcile.Result{}, err
 		}
 	}
@@ -203,4 +204,17 @@ func newKobeUtility(ns string) *api.KobeUtil {
 		},
 	}
 	return kutil
+}
+
+func (r *ReconcileBenchmark) newEphemeralDataset(benchmark *api.Benchmark, dataset api.Dataset) *api.EphemeralDataset {
+	ephemeralDataset := &api.EphemeralDataset{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      dataset.Name,
+			Namespace: benchmark.Name,
+		},
+
+		Spec: dataset,
+	}
+	controllerutil.SetControllerReference(benchmark, ephemeralDataset, r.scheme)
+	return ephemeralDataset
 }
