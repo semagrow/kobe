@@ -44,7 +44,6 @@ public class SesameEvaluationReactive extends SesameEvaluation {
 			// TODO Auto-generated method stub
 			if (innerHandler != null)
 				innerHandler.endQueryResult();
-			log.info("Query evaluation end");
 			latch.countDown();
             log.debug("countDown " + latch.getCount());
 		}
@@ -68,9 +67,6 @@ public class SesameEvaluationReactive extends SesameEvaluation {
 		@Override
 		public void handleSolution(BindingSet arg0)
 				throws TupleQueryResultHandlerException {
-			if (resCounter == 0) {
-				log.info("Got first result");
-			}
 			// TODO Auto-generated method stub
 			resCounter++;
 			earlyResults.handleResult(arg0, resCounter);

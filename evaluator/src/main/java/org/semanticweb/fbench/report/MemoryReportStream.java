@@ -120,6 +120,7 @@ public abstract class MemoryReportStream implements ReportStream {
 			}
 		}
 		list.add( new QueryStats(query, duration, run, numberOfResults));
+		log.info("Query evaluation time: " + duration);
 		log.info("Results: " + numberOfResults);
 	}
 
