@@ -4,6 +4,7 @@ go 1.14
 
 require (
 	github.com/go-openapi/spec v0.19.4
+	github.com/gogo/protobuf v1.3.1
 	github.com/operator-framework/operator-sdk v0.16.0
 	github.com/spf13/pflag v1.0.5
 	golang.org/x/tools/gopls v0.4.0 // indirect

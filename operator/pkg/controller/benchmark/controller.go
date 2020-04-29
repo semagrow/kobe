@@ -46,17 +46,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 		return err
 	}
 
-	// TODO(user): Modify this to be the types you create that are owned by the primary resource
-	// Watch for changes to secondary resource Pods and requeue the owner Benchmark
-	err = c.Watch(&source.Kind{Type: &corev1.Pod{}}, &handler.EnqueueRequestForOwner{
-		IsController: true,
-		OwnerType:    &api.Benchmark{},
-	})
-	if err != nil {
-		return err
-	}
-
-	err = c.Watch(&source.Kind{Type: &api.Dataset{}}, &handler.EnqueueRequestForOwner{
+	err = c.Watch(&source.Kind{Type: &api.EphemeralDataset{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
 		OwnerType:    &api.Benchmark{},
 	})
@@ -103,29 +93,25 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		return reconcile.Result{}, err
 	}
 
+	// check  if a KobeUtil instance exists for this namespace and if not create it
+	requeue, err := ensureNFS(r.client, instance.Namespace)
+	if requeue {
+		return reconcile.Result{Requeue: requeue}, err
+	} else if err != nil {
+		return reconcile.Result{}, err
+	}
+
 	//check if the datasets exist else create a very basic version of those that dont
-	foundDataset := &api.Dataset{}
+	foundDataset := &api.EphemeralDataset{}
 	for _, dataset := range instance.Spec.Datasets {
 
 		err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Name, Namespace: instance.Namespace}, foundDataset)
 		if err != nil && errors.IsNotFound(err) {
 			// Define a new deployment
-			/*
-				kobedataset := r.newKobeDataset(&dataset, instance)
-				reqLogger.Info("Creating a new basic Dataset %s/%s\n", kobedataset.Namespace, kobedataset.Name)
-				err = r.client.Create(context.TODO(), kobedataset)
-				if err != nil {
-					reqLogger.Info("Failed to create new Dataset: %v\n", err)
-					return reconcile.Result{}, err
-				}
-				// Kobedataset created successfully - return and requeue
-				return reconcile.Result{Requeue: true}, nil
-			*/
 			return reconcile.Result{}, err
 		} else if err != nil {
 			reqLogger.Info("Failed to get Dataset with the same name in same namespace: %v\n", err)
 			return reconcile.Result{}, err
-
 		}
 	}
 
@@ -170,23 +156,51 @@ func (r *ReconcileBenchmark) newConfigMapForQueries(m *api.Benchmark, querymap m
 	return configmap
 }
 
-/*
-func (r *ReconcileBenchmark) newKobeDataset(dataset *api.Dataset, m *api.Benchmark) *api.Dataset {
+func ensureNFS(client client.Client, ns string) (bool, error) {
+	reqLogger := log
 
-	data := &api.Dataset{
+	// check  if a KobeUtil instance exists for this namespace and if not create it
+	kobeUtil := &api.KobeUtil{}
+
+	err := client.Get(context.TODO(), types.NamespacedName{Name: "kobeutil", Namespace: ns}, kobeUtil)
+
+	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Creating the kobe utility custom resource")
+		kobeutil := newKobeUtility(ns)
+		err = client.Create(context.TODO(), kobeutil)
+		if err != nil {
+			reqLogger.Info("Failed to create the kobe utility instance: %v\n", err)
+			return false, err
+		}
+		return true, nil
+	}
+
+	//check for  the nfs pod if it exist and wait if not
+	nfsPodFound := &corev1.Pod{}
+	err = client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: ns}, nfsPodFound)
+	if err != nil && errors.IsNotFound(err) {
+		return true, nil
+	}
+	//check if the persistent volume claim exist and wait if not
+	pvcFound := &corev1.PersistentVolumeClaim{}
+	err = client.Get(context.TODO(), types.NamespacedName{Name: "kobepvc", Namespace: ns}, pvcFound)
+	if err != nil && errors.IsNotFound(err) {
+		return true, nil
+	}
+	//make sure nfs pod status is running, to take care of racing condition
+	if nfsPodFound.Status.Phase != corev1.PodRunning {
+		return true, nil
+	}
+
+	return false, nil
+}
+
+func newKobeUtility(ns string) *api.KobeUtil {
+	kutil := &api.KobeUtil{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      dataset.Name,
-			Namespace: m.Namespace,
-		},
-		Spec: kobev1alpha1.KobeDatasetSpec{
-			Image:           dataset.Image,
-			DownloadFrom:    dataset.DownloadFrom,
-			ImagePullPolicy: "Always",
-			Port:            80,
+			Name:      "kobeutil",
+			Namespace: ns,
 		},
 	}
-	// Set kobe benchmark instance as the owner and controller
-	controllerutil.SetControllerReference(m, data, r.scheme)
-	return data
+	return kutil
 }
-*/

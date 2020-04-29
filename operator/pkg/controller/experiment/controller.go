@@ -208,12 +208,13 @@ func (r *ReconcileExperiment) createEvaluatorJob(m *api.Experiment, i int, feden
 							Name:      "queries",
 							MountPath: "/queries",
 						}},
-						Env: []corev1.EnvVar{
+						Env: append([]corev1.EnvVar{
 							{Name: "FEDERATION_NAME", Value: fedname},
 							{Name: "FEDERATION_ENDPOINT", Value: fedendpoint},
 							{Name: "ENDPOINT", Value: fedendpoint},
-							{Name: "EVAL_RUN", Value: "1"},
-						},
+							{Name: "EXPERIMENT", Value: m.Name},
+							{Name: "EVAL_RUN", Value: strconv.Itoa(m.Spec.TimesToRun)},
+						}, m.Spec.Evaluator.Env...),
 					}},
 					RestartPolicy: corev1.RestartPolicyOnFailure,
 					Volumes: []corev1.Volume{{
@@ -306,7 +307,16 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 //function that creates a new kobefederation custom resource from the federator and benchmark  in experiment.
 //The native objects that kobefederation needs are created by kobefederation controller .
 func (r *ReconcileExperiment) newFederation(m *api.Experiment,
-	fed *api.Federator, datasets []api.DatasetDefinition) *api.Federation {
+	fed *api.Federator, datasets []api.Dataset) *api.Federation {
+
+	datasetendpoints := []api.DatasetEndpoint{}
+
+	for _, d := range datasets {
+		datasetendpoints = append(datasetendpoints, api.DatasetEndpoint{
+			Host: d.Name,
+			Port: d.Template.Spec.Port,
+			Path: d.Template.Spec.Path})
+	}
 
 	federation := &api.Federation{
 		ObjectMeta: metav1.ObjectMeta{
@@ -314,10 +324,10 @@ func (r *ReconcileExperiment) newFederation(m *api.Experiment,
 			Namespace: fed.Namespace,
 		},
 		Spec: api.FederationSpec{
-			Template:      fed.Spec.FederatorTemplate,
+			Template:      fed.Spec,
 			InitPolicy:    api.ForceInit,
 			FederatorName: fed.Name,
-			Datasets:      datasets,
+			Datasets:      datasetendpoints,
 		},
 	}
 	controllerutil.SetControllerReference(m, federation, r.scheme)

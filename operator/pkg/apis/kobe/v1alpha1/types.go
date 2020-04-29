@@ -18,15 +18,10 @@ type Benchmark struct {
 	Status            BenchmarkStatus `json:"status,omitempty"`
 }
 
-type DatasetDefinition struct {
-	Name string      `json:"name"`
-	Spec DatasetSpec `json:"spec"`
-}
-
 // BenchmarkSpec defines the components for this benchmark setup
 type BenchmarkSpec struct {
-	Datasets []DatasetDefinition `json:"datasets"`
-	Queries  []Query             `json:"queries"`
+	Datasets []Dataset `json:"datasets"`
+	Queries  []Query   `json:"queries"`
 }
 
 //Query contains the query info
@@ -34,6 +29,45 @@ type Query struct {
 	Name        string `json:"name"`
 	Language    string `json:"language"`
 	QueryString string `json:"queryString"`
+}
+
+type DatasetFile struct {
+	URL      string `json:"url"`
+	Checksum string `json:"checksum,omitempty"`
+}
+
+type Dataset struct {
+	Name     string              `json:"name"`
+	Files    []DatasetFile       `json:"files"`
+	Template DatasetTemplateSpec `json:"template"` // maybe reference
+
+	// If specified, the pod's scheduling constraints
+	// +optional
+	Affinity *v1.Affinity `json:"affinity,omitempty"`
+
+	// Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources
+	// already allocated to the pod.
+	// +optional
+	Resources v1.ResourceRequirements `json:"resources,omitempty"`
+
+	// network delays
+	NetworkTopology []NetworkConnection `json:"topology,omitempty"`
+}
+
+type Delay struct {
+	// Add a fixed delay before forwarding the request. Format: 1h/1m/1s/1ms. MUST be >=1ms.
+	FixedDelay *int32 `json:"fixedDelay"`
+
+	// +optional
+	Percentage *int32 `json:"percentage,omitempty"` // `protobuf:"fixed64,1,opt,name=value,proto3" json:"percentage,omitempty"`
+
+	// +optional
+	Percent *int32 `json:"percent,omitempty"`
+}
+
+type NetworkConnection struct {
+	Destination []string `json:"destination,omitempty"`
+	Delay       Delay    `json:"delay,omitempty"`
 }
 
 // BenchmarkStatus defines the observed state of Benchmark
@@ -97,6 +131,7 @@ type Evaluator struct {
 	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy"`
 	Command         []string      `json:"command"`
 	Parallelism     int32         `json:"parallelism"`
+	Env             []v1.EnvVar   `json:"env"`
 }
 
 // ExperimentSpec defines the desired state of Experiment
@@ -142,12 +177,18 @@ const (
 	ForceInit InitializationPolicy = "ForceInit"
 )
 
+type DatasetEndpoint struct {
+	Host string `json:"host"`
+	Port int32  `json:"port"`
+	Path string `json:"path"`
+}
+
 // FederationSpec defines the desired state of Federation
 // +k8s:openapi-gen=true
 type FederationSpec struct {
 	FederatorName string               `json:"federatorName"`
-	Template      FederatorTemplate    `json:"template"`
-	Datasets      []DatasetDefinition  `json:"datasets"` // use v1.LocalObjectReference ?
+	Template      FederatorSpec        `json:"spec"`
+	Datasets      []DatasetEndpoint    `json:"datasets"` // use v1.LocalObjectReference ?
 	InitPolicy    InitializationPolicy `json:"initPolicy"`
 }
 
@@ -188,24 +229,15 @@ type FederationList struct {
 
 // FederatorSpec defines the desired state of Federator
 // +k8s:openapi-gen=true
-type FederatorSpec struct {
-	FederatorTemplate `json:",inline"`
+type FederatorTemplate struct {
+	metav1.ListMeta `json:"metadata,omitempty"`
+	FederatorSpec   `json:"spec,inline"`
 }
 
 // FederatorTemplate defines
-type FederatorTemplate struct {
-	// Docker image name.
-	// More info: https://kubernetes.io/docs/concepts/containers/images
-	// +optional
-	Image string `json:"image"`
-
-	// Image pull policy.
-	// One of Always, Never, IfNotPresent.
-	// Defaults to Always if :latest tag is specified, or IfNotPresent otherwise.
-	// Cannot be updated.
-	// More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
-	// +optional
-	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy"`
+type FederatorSpec struct {
+	InitContainers []v1.Container `json:"initContainers"`
+	Containers     []v1.Container `json:"containers"`
 
 	// Number of port to expose on the host.
 	// If specified, this must be a valid port number, 0 < x < 65536.
@@ -214,15 +246,6 @@ type FederatorTemplate struct {
 	//suffix to be added to endpoint of federator f.e ../SemaGrow/sparql
 	// +optional
 	Path string `json:"path"`
-
-	// If specified, the pod's scheduling constraints
-	// +optional
-	Affinity *v1.Affinity `json:"affinity,omitempty"`
-
-	// Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources
-	// already allocated to the pod.
-	// +optional
-	Resources v1.ResourceRequirements `json:"resources,omitempty"`
 
 	// The Docker image that receives a compressed dataset and may produce
 	// configuration needed from the federator to federate this specific dataset
@@ -254,8 +277,7 @@ type FederatorTemplate struct {
 type Federator struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-
-	Spec FederatorSpec `json:"spec,omitempty"`
+	Spec              FederatorSpec `json:"spec,omitempty"`
 }
 
 // SetDefaults set the defaults of a federation
@@ -290,35 +312,44 @@ type FederatorList struct {
 	Items           []Federator `json:"items"`
 }
 
+type DatasetTemplate struct {
+	metav1.TypeMeta   `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,omitempty"`
+	Template          DatasetTemplateSpec `json:"template,omitempty"`
+}
+
+type DatasetTemplateSpec struct {
+	metav1.ObjectMeta `json:"metadata,omitempty"`
+	Spec              DatasetSpec `json:"spec,omitempty"`
+}
+
 // DatasetSpec defines the desired state of Dataset
 // +k8s:openapi-gen=true
 type DatasetSpec struct {
+	ImportContainers []v1.Container `json:"importContainers"`
 
-	// Docker image name.
-	// More info: https://kubernetes.io/docs/concepts/containers/images
-	// +optional
-	Image string `json:"image"`
+	//List of initialization containers belonging to the pod. Init containers
+	//are executed in order prior to containers being started. If any init
+	//container fails, the pod is considered to have failed and is handled
+	//according to its restartPolicy. The name for an init container or normal
+	//container must be unique among all containers. Init containers may not
+	//have Lifecycle actions, Readiness probes, or Liveness probes. The
+	//resourceRequirements of an init container are taken into account during
+	//scheduling by finding the highest request/limit for each resource type,
+	//and then using the max of of that value or the sum of the normal
+	//containers. Limits are applied to init containers in a similar fashion.
+	//Init containers cannot currently be added or removed. Cannot be updated.
+	//More info:
+	//https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
+	InitContainers []v1.Container `json:"initContainers",omitempty`
 
-	// Image pull policy.
-	// One of Always, Never, IfNotPresent.
-	// Defaults to Always if :latest tag is specified, or IfNotPresent otherwise.
-	// Cannot be updated.
-	// More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
-	// +optional
-	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy"`
-
-	// Replicas is the number of desired replicas.
-	// This is a pointer to distinguish between explicit zero and unspecified.
-	// Defaults to 1.
-	// More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
-	// +optional
-	Replicas *int32 `json:"replicas"`
+	// List of containers belonging to the pod. Containers cannot currently be
+	// added or removed. There must be at least one container in a Pod. Cannot
+	// be updated.
+	Containers []v1.Container `json:"containers"`
 
 	// Forces to download and load from dataset file
 	InitPolicy InitializationPolicy `json:"initPolicy"`
-
-	// A URL that points to the compressed dataset file
-	DownloadFrom string `json:"downloadFrom"`
 
 	// Number of port to expose on the host.
 	// If specified, this must be a valid port number, 0 < x < 65536.
@@ -326,27 +357,11 @@ type DatasetSpec struct {
 
 	// Path that the container will listen for queries
 	Path string `json:"path"`
-
-	// List of environment variables to set in the container.
-	// Cannot be updated.
-	// +optional
-	// +patchMergeKey=name
-	// +patchStrategy=merge
-	Env []v1.EnvVar `json:"env,omitempty"`
-
-	// If specified, the pod's scheduling constraints
-	// +optional
-	Affinity *v1.Affinity `json:"affinity,omitempty"`
-
-	// Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources
-	// already allocated to the pod.
-	// +optional
-	Resources v1.ResourceRequirements `json:"resources,omitempty"`
 }
 
 // DatasetStatus defines the observed state of Dataset
 // +k8s:openapi-gen=true
-type DatasetStatus struct {
+type EphemeralDatasetStatus struct {
 	PodNames  []string `json:"podNames"`
 	Phase     string   `json:"phase"`
 	ForceLoad bool     `json:"forceLoad"`
@@ -354,27 +369,22 @@ type DatasetStatus struct {
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// Dataset is the Schema for the kobedatasets API
+// EphemeralDataset is the Schema for the kobedatasets API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
-// +kubebuilder:resource:path=datasets,scope=Namespaced
-type Dataset struct {
+// +kubebuilder:resource:path=ephemeraldatasets,scope=Namespaced
+type EphemeralDataset struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   DatasetSpec   `json:"spec,omitempty"`
-	Status DatasetStatus `json:"status,omitempty"`
+	Spec   DatasetSpec            `json:"spec,omitempty"`
+	Status EphemeralDatasetStatus `json:"status,omitempty"`
 }
 
 // SetDefaults sets the defaults of the KobeDatasetSpec
-func (r *Dataset) SetDefaults() bool {
+func (r *EphemeralDataset) SetDefaults() bool {
 	changed := false
 	rs := &r.Spec
-	if rs.Replicas == nil {
-		var replicas int32 = 1
-		rs.Replicas = &replicas
-		changed = true
-	}
 	if rs.Path == "" {
 		rs.Path = "/sparql"
 		changed = true
@@ -384,11 +394,11 @@ func (r *Dataset) SetDefaults() bool {
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// DatasetList contains a list of KobeDataset
-type DatasetList struct {
+// EphemeralDatasetList contains a list of EphemeralDataset
+type EphemeralDatasetList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []Dataset `json:"items"`
+	Items           []EphemeralDataset `json:"items"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -411,10 +421,10 @@ type KobeUtilList struct {
 }
 
 func init() {
-	SchemeBuilder.Register(&Dataset{}, &DatasetList{})
 	SchemeBuilder.Register(&Benchmark{}, &BenchmarkList{})
 	SchemeBuilder.Register(&Experiment{}, &ExperimentList{})
 	SchemeBuilder.Register(&Federation{}, &FederationList{})
 	SchemeBuilder.Register(&Federator{}, &FederatorList{})
+	SchemeBuilder.Register(&EphemeralDataset{}, &EphemeralDatasetList{})
 	SchemeBuilder.Register(&KobeUtil{}, &KobeUtilList{})
 }

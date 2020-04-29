@@ -135,50 +135,56 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 
 	// Check if every kobedataset of the benchmark is healthy.
 	// Create a list of the endpoints and of the names of the datasets
-	for _, datasetInfo := range instance.Spec.Datasets {
-		foundDataset := &api.Dataset{}
-		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: datasetInfo.Name}, foundDataset)
-		if err != nil {
-			reqLogger.Info("Failed to find a specific dataset from the list of datasets of this benchmark")
-			return reconcile.Result{RequeueAfter: 5}, err
-		}
+	/*
+		for _, datasetInfo := range instance.Spec.Datasets {
+			foundDataset := &api.Dataset{}
+			err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: datasetInfo.Name}, foundDataset)
+			if err != nil {
+				reqLogger.Info("Failed to find a specific dataset from the list of datasets of this benchmark")
+				return reconcile.Result{RequeueAfter: 5}, err
+			}
 
-		// Check for the healthiness of the individual pods of the kobe dataset
-		podList := &corev1.PodList{}
-		listOps := []client.ListOption{
-			client.InNamespace(instance.Namespace),
-			client.MatchingLabels{"kobeoperator_cr": foundDataset.Name},
-		}
-		err = r.client.List(context.TODO(), podList, listOps...)
-		if err != nil {
-			reqLogger.Info("Failed to list pods: %v", err)
-			return reconcile.Result{}, err
-		}
+			// Check for the healthiness of the individual pods of the kobe dataset
+			podList := &corev1.PodList{}
+			listOps := []client.ListOption{
+				client.InNamespace(instance.Namespace),
+				client.MatchingLabels{"kobeoperator_cr": foundDataset.Name},
+			}
+			err = r.client.List(context.TODO(), podList, listOps...)
+			if err != nil {
+				reqLogger.Info("Failed to list pods: %v", err)
+				return reconcile.Result{}, err
+			}
 
-		podNames := getPodNames(podList.Items)
-		for _, podname := range podNames {
-			foundPod := &corev1.Pod{}
-			err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: podname}, foundPod)
-			if err != nil && errors.IsNotFound(err) {
-				reqLogger.Info("Failed to get the pod of the kobe dataset that experiment will use")
+			podNames := getPodNames(podList.Items)
+			for _, podname := range podNames {
+				foundPod := &corev1.Pod{}
+				err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: podname}, foundPod)
+				if err != nil && errors.IsNotFound(err) {
+					reqLogger.Info("Failed to get the pod of the kobe dataset that experiment will use")
+					return reconcile.Result{RequeueAfter: 5}, nil
+				}
+				if foundPod.Status.Phase != corev1.PodRunning {
+					reqLogger.Info("Kobe dataset pod is not ready so experiment needs to wait")
+					return reconcile.Result{RequeueAfter: 5}, nil
+				}
+			}
+			if podNames == nil || len(podNames) == 0 {
+				reqLogger.Info("Experiment waits for components initialization")
 				return reconcile.Result{RequeueAfter: 5}, nil
 			}
-			if foundPod.Status.Phase != corev1.PodRunning {
-				reqLogger.Info("Kobe dataset pod is not ready so experiment needs to wait")
-				return reconcile.Result{RequeueAfter: 5}, nil
-			}
-		}
-		if podNames == nil || len(podNames) == 0 {
-			reqLogger.Info("Experiment waits for components initialization")
-			return reconcile.Result{RequeueAfter: 5}, nil
-		}
 
-		// Create a list of the SPARQL endpoints
+			// Create a list of the SPARQL endpoints
+			endpoints = append(endpoints,
+				util.EndpointURL(foundDataset.Name, foundDataset.Namespace, int(foundDataset.Spec.Port), foundDataset.Spec.Path))
+			datasets = append(datasets, foundDataset.Name)
+		}
+	*/
+	for _, d := range instance.Spec.Datasets {
 		endpoints = append(endpoints,
-			util.EndpointURL(foundDataset.Name, foundDataset.Namespace, int(foundDataset.Spec.Port), foundDataset.Spec.Path))
-		datasets = append(datasets, foundDataset.Name)
+			util.EndpointURL(d.Host, instance.Namespace, int(d.Port), d.Path))
+		datasets = append(datasets, d.Host)
 	}
-
 	datasetsForInit := []string{}  // here we will collect only datasets that get init containers for metadata creation
 	endpointsForInit := []string{} // here we will collect the endpoints that correspond to the selected datasets in the above slice
 
@@ -285,7 +291,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		//clean up the jobs that checked for the files
 		for _, dataset := range instance.Spec.Datasets {
 			foundJob := &batchv1.Job{}
-			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Name, Namespace: instance.Namespace}, foundJob)
+			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Host, Namespace: instance.Namespace}, foundJob)
 			err = r.client.Delete(context.TODO(), foundJob, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
 		}
 
@@ -412,7 +418,7 @@ func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpo
 	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes
 
 	//create init containers  that make one config file for federation per dataset dump /if not needed then these can be set to do nothing
-	initContainers := []corev1.Container{}
+	initContainers := m.Spec.Template.InitContainers
 	volumes := []corev1.Volume{}
 	for i, datasetname := range datasets {
 		//each init container is given DATASET_NAME and DATASET_ENDPOINT environment variables to work with(needed if they create the files from quering the database directly)
@@ -447,7 +453,7 @@ func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpo
 	vmounts := []corev1.VolumeMount{}
 	count := 0
 	for i, dataset := range m.Spec.Datasets {
-		env := corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: dataset.Name}
+		env := corev1.EnvVar{Name: "DATASET_NAME_" + strconv.Itoa(i), Value: dataset.Host}
 		envs = append(envs, env)
 		env = corev1.EnvVar{Name: "DATASET_ENDPOINT_" + strconv.Itoa(i), Value: endpoints[i]}
 		envs = append(envs, env)
@@ -513,10 +519,6 @@ func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpo
 		}}
 	volumes = append(volumes, volumeConf)
 
-	mountConf := corev1.VolumeMount{
-		Name:      "volumeconf",
-		MountPath: m.Spec.Template.FedConfDir}
-
 	pod := &corev1.Pod{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
@@ -524,19 +526,9 @@ func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpo
 			Labels:    labels,
 		},
 		Spec: corev1.PodSpec{
-
 			InitContainers: initContainers,
-			Containers: []corev1.Container{{
-				Image:           m.Spec.Template.Image,
-				Name:            m.Name,
-				ImagePullPolicy: m.Spec.Template.ImagePullPolicy,
-				Ports: []corev1.ContainerPort{{
-					ContainerPort: m.Spec.Template.Port,
-					Name:          m.Name,
-				}},
-				VolumeMounts: []corev1.VolumeMount{mountConf},
-			}},
-			Volumes: volumes,
+			Containers:     m.Spec.Template.Containers,
+			Volumes:        volumes,
 		},
 	}
 
