@@ -124,6 +124,7 @@ public abstract class MemoryReportStream implements ReportStream {
 
 		String report = "" +
 				"Experiment: " + Config.getConfig().getExperimentName() + " - " +
+                "Date: " + Config.getConfig().getDate() + " - " +
 				"Query: " + query.getIdentifier() + " - " +
 				"Run: " + run + " - " +
 				"Query Evaluation Time: " + duration + " - " +

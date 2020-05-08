@@ -8,7 +8,10 @@ import org.semanticweb.fbench.report.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
@@ -66,9 +69,11 @@ public class Config {
 	
 	
 	private Properties props;
+	private String date;
 	
 	private Config() {
 		props = new Properties();
+		date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 	}
 	
 	public void setProperty(String prop, String value) {
@@ -294,5 +299,15 @@ public class Config {
 	 */
 	public String getExperimentName() {
 		return props.getProperty("experimentName", "kobeExperiment");
+	}
+
+	/**
+	 *
+	 * @return
+	 * 		Date/Time when the experiment was started.
+	 *
+	 */
+	public String getDate() {
+		return date;
 	}
 }
