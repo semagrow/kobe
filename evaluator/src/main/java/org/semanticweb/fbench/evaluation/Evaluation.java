@@ -117,7 +117,7 @@ public abstract class Evaluation {
 		for (Query q : QueryManager.getQueryManager().getQueries()) {
 			try {
 				LogUtils.setMDC();
-				log.info("Experiment: " + Config.getConfig().getExperimentName() + " - Query: " + q.getIdentifier() + " - Run: 1");
+				log.debug("Experiment: " + Config.getConfig().getExperimentName() + " - Query: " + q.getIdentifier() + " - Run: 1");
 				report.beginQueryEvaluation(q, 1);
 				long start = System.currentTimeMillis();
 				earlyResults.nextQuery(q, start);
@@ -155,7 +155,7 @@ public abstract class Evaluation {
 			for (Query q : QueryManager.getQueryManager().getQueries()){
 				try {
 					LogUtils.setMDC();
-					log.info("Experiment: " + Config.getConfig().getExperimentName() + " - Query: " + q.getIdentifier() + " - Run: " + run);
+					log.debug("Experiment: " + Config.getConfig().getExperimentName() + " - Query: " + q.getIdentifier() + " - Run: " + run);
 					report.beginQueryEvaluation(q, run);
 					long start = System.currentTimeMillis();
 					earlyResults.nextQuery(q, start);
@@ -200,7 +200,7 @@ public abstract class Evaluation {
 			for (Query q : QueryManager.getQueryManager().getQueries()) {
 				try {
 					LogUtils.setMDC();
-					log.info("Experiment: " + Config.getConfig().getExperimentName() + " - Query: " + q.getIdentifier() + " - Run: " + run);
+					log.debug("Experiment: " + Config.getConfig().getExperimentName() + " - Query: " + q.getIdentifier() + " - Run: " + run);
 					if (log.isTraceEnabled())
 						log.trace("Query: " + q.getQuery());
 					EvaluationThread eval = new EvaluationThread(this, q, report, earlyResults, run);

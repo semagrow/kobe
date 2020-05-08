@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.semanticweb.fbench.Config;
 import org.semanticweb.fbench.query.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -120,8 +121,15 @@ public abstract class MemoryReportStream implements ReportStream {
 			}
 		}
 		list.add( new QueryStats(query, duration, run, numberOfResults));
-		log.info("Query evaluation time: " + duration);
-		log.info("Results: " + numberOfResults);
+
+		String report = "" +
+				"Experiment: " + Config.getConfig().getExperimentName() + " - " +
+				"Query: " + query.getIdentifier() + " - " +
+				"Run: " + run + " - " +
+				"Query Evaluation Time: " + duration + " - " +
+				"Results: " + numberOfResults;
+
+		log.info(report);
 	}
 
 	@Override
