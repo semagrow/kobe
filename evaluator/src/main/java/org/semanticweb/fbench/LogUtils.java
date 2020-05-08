@@ -14,6 +14,7 @@ public final class LogUtils {
     public static String annotateExperimentQuery(Query query, String experimentName, int run) {
         String annotation = "#kobeQueryDesc " +
                 "Experiment: " + experimentName + " - " +
+                "Date: " + Config.getConfig().getDate() + " - " +
                 "Query: " + query.getIdentifier() + " - " +
                 "Run: " + run + "\n";
         return annotation + query.getQuery();
