@@ -30,18 +30,18 @@ type Dataset struct {
 
 type Delay struct {
 	// Add a fixed delay before forwarding the request. Format: 1h/1m/1s/1ms. MUST be >=1ms.
-	FixedDelay *int32 `json:"fixedDelay"`
+	FixedDelay *int64 `json:"fixedDelay"`
 
 	// +optional
-	Percentage *int32 `json:"percentage,omitempty"` // `protobuf:"fixed64,1,opt,name=value,proto3" json:"percentage,omitempty"`
+	Percentage *int64 `json:"percentage,omitempty"` // `protobuf:"fixed64,1,opt,name=value,proto3" json:"percentage,omitempty"`
 
 	// +optional
-	Percent *int32 `json:"percent,omitempty"`
+	Percent *int64 `json:"percent,omitempty"`
 }
 
 type NetworkConnection struct {
-	Destination []string `json:"destination,omitempty"`
-	Delay       Delay    `json:"delay,omitempty"`
+	Source []string `json:"destination,omitempty"`
+	Delay  Delay    `json:"delay,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -178,9 +178,10 @@ const (
 )
 
 type DatasetEndpoint struct {
-	Host string `json:"host"`
-	Port int32  `json:"port"`
-	Path string `json:"path"`
+	Host      string `json:"host"`
+	Namespace string `json:"namespace"`
+	Port      uint32 `json:"port"`
+	Path      string `json:"path"`
 }
 
 // FederationSpec defines the desired state of Federation
@@ -317,7 +318,7 @@ type FederatorList struct {
 type DatasetTemplate struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	TemplateSpec      DatasetSpec `json:"template,omitempty"`
+	TemplateSpec      DatasetSpec `json:"spec,omitempty"`
 }
 
 // type DatasetTemplateSpec struct {
@@ -355,7 +356,7 @@ type DatasetSpec struct {
 
 	// Number of port to expose on the host.
 	// If specified, this must be a valid port number, 0 < x < 65536.
-	Port int32 `json:"port"`
+	Port uint32 `json:"port"`
 
 	// Path that the container will listen for queries
 	Path string `json:"path"`

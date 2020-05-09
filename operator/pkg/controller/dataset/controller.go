@@ -4,6 +4,7 @@ import (
 	"context"
 	"reflect"
 
+	findypes "github.com/gogo/protobuf/types"
 	api "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	istioapi "istio.io/api/networking/v1alpha3"
 	istioclient "istio.io/client-go/pkg/apis/networking/v1alpha3"
@@ -118,7 +119,7 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 			Namespace: corev1.NamespaceDefault},
 			foundTemplate)
 		if err != nil && errors.IsNotFound(err) {
-			reqLogger.Info("Failed to create new Service: %v\n", err)
+			reqLogger.Info("Failed to find the requested dataset template: %v\n", err)
 			return reconcile.Result{}, err
 		}
 
@@ -228,45 +229,6 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 	return false, nil
 }
 
-func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) error {
-	reqLogger := log
-	foundService := &corev1.Service{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
-
-	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Making a new service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		service := r.newSvc(instance)
-		reqLogger.Info("Creating a new Service %s/%s\n", service.Namespace, service.Name)
-		err = r.client.Create(context.TODO(), service)
-		if err != nil {
-			reqLogger.Info("Failed to create new Service: %v\n", err)
-			return err
-		}
-		return nil
-	} else if err != nil {
-		return err
-	}
-
-	foundVirtualService := &istioclient.VirtualService{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundVirtualService)
-
-	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Making a new virtual service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		service := r.newVirtualSvc(instance)
-		reqLogger.Info("Creating a new VRITUAL Service %s/%s\n", service.Namespace, service.Name)
-		err = r.client.Create(context.TODO(), service)
-		if err != nil {
-			reqLogger.Info("Failed to create new Service: %v\n", err)
-			return err
-		}
-		return nil
-	} else if err != nil {
-		return err
-	}
-
-	return nil
-}
-
 func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	labels := labelsForDataset(m)
 	//reqLogger := log
@@ -319,6 +281,45 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	return pod
 }
 
+func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) error {
+	reqLogger := log
+	foundService := &corev1.Service{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
+
+	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Making a new service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+		service := r.newSvc(instance)
+		reqLogger.Info("Creating a new Service %s/%s\n", service.Namespace, service.Name)
+		err = r.client.Create(context.TODO(), service)
+		if err != nil {
+			reqLogger.Info("Failed to create new Service: %v\n", err)
+			return err
+		}
+		return nil
+	} else if err != nil {
+		return err
+	}
+
+	foundVirtualService := &istioclient.VirtualService{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundVirtualService)
+
+	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Making a new virtual service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+		service := r.newVirtualSvc(instance)
+		reqLogger.Info("Creating a new VRITUAL Service %s/%s\n", service.Namespace, service.Name)
+		err = r.client.Create(context.TODO(), service)
+		if err != nil {
+			reqLogger.Info("Failed to create new Service: %v\n", err)
+			return err
+		}
+		return nil
+	} else if err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
 	servicePorts := []corev1.ServicePort{}
 	for _, container := range m.Spec.Template.TemplateSpec.Containers {
@@ -351,6 +352,43 @@ func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
 }
 
 func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.VirtualService {
+	http := []*istioapi.HTTPRoute{}
+	for i, incoming := range m.Spec.NetworkTopology {
+
+		httpMatchRequests := []*istioapi.HTTPMatchRequest{}
+		match := istioapi.HTTPMatchRequest{
+			SourceLabels: map[string]string{"datasetName": incoming.Source[i], "benchmark": m.Namespace},
+		}
+		httpMatchRequests = append(httpMatchRequests, &match)
+
+		route := []*istioapi.HTTPRouteDestination{
+			{
+				Destination: &istioapi.Destination{
+					Host: m.Name,
+					Port: &istioapi.PortSelector{
+						Number: m.Spec.Template.TemplateSpec.Port,
+					},
+				},
+			},
+		}
+
+		fault := &istioapi.HTTPFaultInjection{
+			Delay: &istioapi.HTTPFaultInjection_Delay{
+				HttpDelayType: &istioapi.HTTPFaultInjection_Delay_FixedDelay{
+					FixedDelay: &findypes.Duration{
+						Seconds: *incoming.Delay.FixedDelay,
+					},
+				},
+			},
+		}
+		httpRoute := istioapi.HTTPRoute{
+			Match: httpMatchRequests,
+			Route: route,
+			Fault: fault,
+		}
+		http = append(http, &httpRoute)
+	}
+
 	vsvc := &istioclient.VirtualService{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
@@ -358,6 +396,7 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 		},
 		Spec: istioapi.VirtualService{
 			Hosts: []string{m.Name},
+			Http:  http,
 		},
 	}
 

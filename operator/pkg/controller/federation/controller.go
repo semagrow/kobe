@@ -182,7 +182,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	*/
 	for _, d := range instance.Spec.Datasets {
 		endpoints = append(endpoints,
-			util.EndpointURL(d.Host, instance.Namespace, int(d.Port), d.Path))
+			util.EndpointURL(d.Host, d.Namespace, int(d.Port), d.Path))
 		datasets = append(datasets, d.Host)
 	}
 	datasetsForInit := []string{}  // here we will collect only datasets that get init containers for metadata creation

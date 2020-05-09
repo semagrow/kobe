@@ -1,0 +1,14 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: DatasetTemplate
+metadata:
+  name: virtuosotemplate
+spec:
+  # Add fields here
+  containers:
+    - name: maincontainer
+      image: kostbabis/virtuoso
+
+  port: 8890
+  path: sparql
+  initPolicy: ForceInit
+
