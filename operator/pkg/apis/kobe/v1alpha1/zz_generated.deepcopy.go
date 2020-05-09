@@ -122,11 +122,7 @@ func (in *Dataset) DeepCopyInto(out *Dataset) {
 		*out = make([]DatasetFile, len(*in))
 		copy(*out, *in)
 	}
-	if in.SystemSpec != nil {
-		in, out := &in.SystemSpec, &out.SystemSpec
-		*out = new(SystemDatasetSpec)
-		(*in).DeepCopyInto(*out)
-	}
+	in.SystemSpec.DeepCopyInto(&out.SystemSpec)
 	if in.Affinity != nil {
 		in, out := &in.Affinity, &out.Affinity
 		*out = new(v1.Affinity)

@@ -11,10 +11,10 @@ type DatasetFile struct {
 }
 
 type Dataset struct {
-	Name        string             `json:"name"`
-	Files       []DatasetFile      `json:"files"`
-	SystemSpec  *SystemDatasetSpec `json:"systemspec,omitempty"`
-	TemplateRef string             `json:"templateRef,omitempty"` //  reference
+	Name        string            `json:"name"`
+	Files       []DatasetFile     `json:"files"`
+	SystemSpec  SystemDatasetSpec `json:"systemspec,omitempty"`
+	TemplateRef string            `json:"templateRef,omitempty"` //  reference
 	// If specified, the pod's scheduling constraints
 	// +optional
 	Affinity *v1.Affinity `json:"affinity,omitempty"`
@@ -316,6 +316,7 @@ type FederatorList struct {
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // +kubebuilder:resource:path=datasettemplates,scope=Namespaced
+// +k8s:openapi-gen=true
 type DatasetTemplate struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
@@ -337,7 +338,6 @@ type DatasetTemplateList struct {
 // }
 
 // DatasetSpec defines the desired state of Dataset
-// +k8s:openapi-gen=true
 type SystemDatasetSpec struct {
 	ImportContainers []v1.Container `json:"importContainers,omitempty"`
 
@@ -440,4 +440,5 @@ func init() {
 	SchemeBuilder.Register(&Federator{}, &FederatorList{})
 	SchemeBuilder.Register(&EphemeralDataset{}, &EphemeralDatasetList{})
 	SchemeBuilder.Register(&KobeUtil{}, &KobeUtilList{})
+	SchemeBuilder.Register(&DatasetTemplate{}, &DatasetTemplateList{})
 }

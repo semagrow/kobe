@@ -108,7 +108,7 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 	}
 
 	//check if template in the template field exists. If not try to find a reference template and set that to the template fields .
-	if instance.Spec.SystemSpec == nil {
+	if instance.Spec.SystemSpec.Containers == nil {
 		foundTemplate := &api.DatasetTemplate{}
 		reqLogger.Info("Finding the template reference specified for " + instance.Name + " %v\n")
 		err := r.client.Get(context.TODO(), types.NamespacedName{
@@ -116,11 +116,11 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 			Namespace: corev1.NamespaceDefault},
 			foundTemplate)
 		if err != nil && errors.IsNotFound(err) {
-			reqLogger.Info("Failed to find the requested dataset template: %v\n", err)
+			reqLogger.Info("Failed to find the requested dataset template: ", err)
 			return reconcile.Result{}, err
 		}
 		reqLogger.Info("POUTSES: " + foundTemplate.Name)
-		instance.Spec.SystemSpec = &foundTemplate.Spec
+		instance.Spec.SystemSpec = foundTemplate.Spec
 		err = r.client.Update(context.TODO(), instance)
 		if err != nil {
 			reqLogger.Info("failed to update the template of the dataset: %v", instance.Spec.Name)
@@ -247,10 +247,23 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 		envs = append(envs, corev1.EnvVar{Name: "FORCE_LOAD", Value: "YES"})
 	}
 
-	volume := corev1.Volume{
-		Name: "nfs",
-		VolumeSource: corev1.VolumeSource{
-			PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
+	//add the env vars from above taken at the dataset level to the existing variables for each container (for now)
+	for i, container := range m.Spec.SystemSpec.Containers {
+		m.Spec.SystemSpec.Containers[i].Env = append(container.Env, envs...)
+	}
+	//remove the pv claim cause it doesnt work from different namespaces and add the mount directly
+
+	// volume := corev1.Volume{
+	// 	Name: "nfs",
+	// 	VolumeSource: corev1.VolumeSource{
+	// 		PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
+	nfsPodFound := &corev1.Pod{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: corev1.NamespaceDefault}, nfsPodFound)
+	if err != nil && errors.IsNotFound(err) {
+		return nil
+	}
+	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes
+	volume := corev1.Volume{Name: "cache", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/"}}}
 
 	volumes := []corev1.Volume{}
 	volumes = append(volumes, volume)
