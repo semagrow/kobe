@@ -4,11 +4,10 @@ metadata:
   name: cross-domain
 spec:
   datasets:
-    - name: dbpedia
-    - name: geonames
     - name: jamendo
-    - name: lmdb
-    - name: nyt
+      files:
+        -url: http://users.iit.demokritos.gr/~gmouchakis/dumps/Jamendo.tar.gz
+      templateRef: virtuosotemplate
   queries:
     - name: cd1
       language: sparql
