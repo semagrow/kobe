@@ -25,7 +25,7 @@ spec:
           type: string
         metadata:
           type: object
-        spec:
+        templatespec:
           description: DatasetSpec defines the desired state of Dataset
           properties:
             containers:

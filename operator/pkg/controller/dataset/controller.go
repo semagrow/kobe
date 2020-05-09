@@ -107,11 +107,8 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 		return reconcile.Result{}, err
 	}
 
-	instance.SetDefaults()
-	// check ForceLoad
-
 	//check if template in the template field exists. If not try to find a reference template and set that to the template fields .
-	if instance.Spec.Template == nil {
+	if instance.Spec.SystemSpec == nil {
 		foundTemplate := &api.DatasetTemplate{}
 		reqLogger.Info("Finding the template reference specified for " + instance.Name + " %v\n")
 		err := r.client.Get(context.TODO(), types.NamespacedName{
@@ -122,9 +119,17 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 			reqLogger.Info("Failed to find the requested dataset template: %v\n", err)
 			return reconcile.Result{}, err
 		}
-
-		instance.Spec.Template = foundTemplate
+		reqLogger.Info("POUTSES: " + foundTemplate.Name)
+		instance.Spec.SystemSpec = &foundTemplate.Spec
+		err = r.client.Update(context.TODO(), instance)
+		if err != nil {
+			reqLogger.Info("failed to update the template of the dataset: %v", instance.Spec.Name)
+			return reconcile.Result{}, err
+		}
 	}
+
+	instance.SetDefaults()
+	// check ForceLoad
 
 	// From here do the actual work to set up the pod and service for the dataset
 	created, err := r.reconcilePods(instance)
@@ -234,7 +239,7 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	//reqLogger := log
 
 	envs := []corev1.EnvVar{
-		{Name: "DOWNLOAD_URL", Value: m.Spec.Files[1].Checksum},
+		{Name: "DOWNLOAD_URL", Value: m.Spec.Files[0].URL},
 		{Name: "DATASET_NAME", Value: m.Name},
 	}
 
@@ -250,7 +255,7 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	volumes := []corev1.Volume{}
 	volumes = append(volumes, volume)
 
-	initContainers := m.Spec.Template.TemplateSpec.InitContainers
+	initContainers := m.Spec.SystemSpec.InitContainers
 
 	if m.Status.ForceLoad == true {
 		// add volumemounts to importcontainers
@@ -261,7 +266,7 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 		volumemounts := []corev1.VolumeMount{}
 		volumemounts = append(volumemounts, volumemount)
 
-		initContainers = append(initContainers, m.Spec.Template.TemplateSpec.ImportContainers...)
+		initContainers = append(initContainers, m.Spec.SystemSpec.ImportContainers...)
 	}
 
 	pod := &corev1.Pod{
@@ -272,7 +277,7 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 		},
 		Spec: corev1.PodSpec{
 			InitContainers: initContainers,
-			Containers:     m.Spec.Template.TemplateSpec.Containers,
+			Containers:     m.Spec.SystemSpec.Containers,
 			Volumes:        volumes,
 			Affinity:       m.Spec.Affinity,
 		},
@@ -322,7 +327,7 @@ func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) error {
 
 func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
 	servicePorts := []corev1.ServicePort{}
-	for _, container := range m.Spec.Template.TemplateSpec.Containers {
+	for _, container := range m.Spec.SystemSpec.Containers {
 		for _, port := range container.Ports {
 			newPort := corev1.ServicePort{
 				Port: port.ContainerPort,
@@ -366,7 +371,7 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 				Destination: &istioapi.Destination{
 					Host: m.Name,
 					Port: &istioapi.PortSelector{
-						Number: m.Spec.Template.TemplateSpec.Port,
+						Number: m.Spec.SystemSpec.Port,
 					},
 				},
 			},

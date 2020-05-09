@@ -9,6 +9,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
+	"k8s.io/client-go/kubernetes"
+	"k8s.io/client-go/tools/clientcmd"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
@@ -101,6 +103,26 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		return reconcile.Result{}, err
 	}
 
+	//create the new namespace
+
+	ns := &corev1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: instance.Name}}
+	config, err := clientcmd.BuildConfigFromFlags("", "")
+	if err != nil {
+		reqLogger.Info("Failed client connection: %v\n", err)
+		//return reconcile.Result{Requeue: requeue}, err
+	}
+
+	clientset, err := kubernetes.NewForConfig(config)
+	if err != nil {
+		reqLogger.Info("Failed client connection: %v\n", err)
+		//return reconcile.Result{Requeue: requeue}, err
+	}
+	_, err = clientset.CoreV1().Namespaces().Create(ns)
+	if err != nil {
+		reqLogger.Info("Failed client connection: %v\n", err)
+		//return reconcile.Result{Requeue: requeue}, err
+	}
+
 	//check if the datasets exist else create them and let dataset controller build the resources
 	foundDataset := &api.EphemeralDataset{}
 	for _, dataset := range instance.Spec.Datasets {
@@ -137,7 +159,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		}
 		return reconcile.Result{Requeue: true}, nil
 	}
-
+	reqLogger.Info("FINISHED RECONCILING LOOP FOR BENCHMARK SUCCESSFULLY")
 	return reconcile.Result{}, nil
 }
 

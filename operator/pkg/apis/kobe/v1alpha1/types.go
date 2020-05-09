@@ -11,10 +11,10 @@ type DatasetFile struct {
 }
 
 type Dataset struct {
-	Name        string           `json:"name"`
-	Files       []DatasetFile    `json:"files"`
-	Template    *DatasetTemplate `json:"template,omitempty"`
-	TemplateRef string           `json:"templateRef,omitempty"` //  reference
+	Name        string             `json:"name"`
+	Files       []DatasetFile      `json:"files"`
+	SystemSpec  *SystemDatasetSpec `json:"systemspec,omitempty"`
+	TemplateRef string             `json:"templateRef,omitempty"` //  reference
 	// If specified, the pod's scheduling constraints
 	// +optional
 	Affinity *v1.Affinity `json:"affinity,omitempty"`
@@ -318,7 +318,16 @@ type FederatorList struct {
 type DatasetTemplate struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	TemplateSpec      DatasetSpec `json:"spec,omitempty"`
+	Spec              SystemDatasetSpec `json:"templatespec,omitempty"`
+}
+
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+
+// FederatorList contains a list of Federator
+type DatasetTemplateList struct {
+	metav1.TypeMeta `json:",inline"`
+	metav1.ListMeta `json:"metadata,omitempty"`
+	Items           []DatasetTemplate `json:"items"`
 }
 
 // type DatasetTemplateSpec struct {
@@ -328,7 +337,7 @@ type DatasetTemplate struct {
 
 // DatasetSpec defines the desired state of Dataset
 // +k8s:openapi-gen=true
-type DatasetSpec struct {
+type SystemDatasetSpec struct {
 	ImportContainers []v1.Container `json:"importContainers,omitempty"`
 
 	//List of initialization containers belonging to the pod. Init containers
@@ -380,18 +389,18 @@ type EphemeralDataset struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   Dataset                `json:"dataset,omitempty"`
+	Spec   Dataset                `json:"spec,omitempty"`
 	Status EphemeralDatasetStatus `json:"status,omitempty"`
 }
 
 // SetDefaults sets the defaults of the KobeDatasetSpec
 func (r *EphemeralDataset) SetDefaults() bool {
 	changed := false
-	rs := r.Spec.Template.TemplateSpec.Path
-	if rs == "" {
-		r.Spec.Template.TemplateSpec.Path = "/sparql"
-		changed = true
-	}
+	// rs := r.Spec.Template.TemplateSpec.Path
+	// if rs == "" {
+	// 	r.Spec.Template.TemplateSpec.Path = "/sparql"
+	// 	changed = true
+	// }
 	return changed
 }
 
