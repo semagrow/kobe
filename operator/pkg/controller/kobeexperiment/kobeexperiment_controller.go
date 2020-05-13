@@ -243,7 +243,7 @@ func (r *ReconcileKobeExperiment) Reconcile(request reconcile.Request) (reconcil
 			reqLogger.Info("FAILED to create the job to run this expriment  %s/%s\n", experimentJob.Name, experimentJob.Namespace)
 			return reconcile.Result{}, err
 		}
-		instance.Spec.TimesToRun = instance.Spec.TimesToRun - 1
+		instance.Spec.TimesToRun = 0 //instance.Spec.TimesToRun - 1
 		err = r.client.Update(context.TODO(), instance)
 		if err != nil {
 			reqLogger.Info("Failed to update the times to run of the experiment")
@@ -267,7 +267,9 @@ func (r *ReconcileKobeExperiment) newJobForExperiment(m *kobeexperimentv1alpha1.
 	envs = append(envs, env)
 	env = corev1.EnvVar{Name: "ENDPOINT", Value: fedendpoint}
 	envs = append(envs, env)
-	env = corev1.EnvVar{Name: "EVAL_RUN", Value: "1"}
+  env = corev1.EnvVar{Name: "EXPERIMENT", Value: m.Name}
+	envs = append(envs, env)
+	env = corev1.EnvVar{Name: "EVAL_RUNS", Value: strconv.Itoa(m.Spec.TimesToRun)}
 	envs = append(envs, env)
 
 	volumes := []corev1.Volume{corev1.Volume{Name: "queries",
