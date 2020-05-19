@@ -104,24 +104,24 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 	}
 
 	//create the new namespace
-
-	ns := &corev1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: instance.Name}}
+	//istio label for the namespace
+	ns := &corev1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: instance.Name, Labels: map[string]string{"istio-injection": "enabled"}}}
 	config, err := clientcmd.BuildConfigFromFlags("", "")
-	if err != nil {
-		reqLogger.Info("Failed client connection: %v\n", err)
-		//return reconcile.Result{Requeue: requeue}, err
-	}
+	// if err != nil {
+	// 	reqLogger.Info("Failed client connection: %v\n", err)
+	// 	//return reconcile.Result{Requeue: requeue}, err
+	// }
 
 	clientset, err := kubernetes.NewForConfig(config)
-	if err != nil {
-		reqLogger.Info("Failed client connection: %v\n", err)
-		//return reconcile.Result{Requeue: requeue}, err
-	}
+	// if err != nil {
+	// 	reqLogger.Info("Failed client connection: %v\n", err)
+	// 	//return reconcile.Result{Requeue: requeue}, err
+	// }
 	_, err = clientset.CoreV1().Namespaces().Create(ns)
-	if err != nil {
-		reqLogger.Info("Failed client connection: %v\n", err)
-		//return reconcile.Result{Requeue: requeue}, err
-	}
+	// if err != nil {
+	// 	reqLogger.Info("Failed client connection: %v\n", err)
+	// 	//return reconcile.Result{Requeue: requeue}, err
+	// }
 
 	//check if the datasets exist else create them and let dataset controller build the resources
 	foundDataset := &api.EphemeralDataset{}

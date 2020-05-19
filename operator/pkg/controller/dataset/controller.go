@@ -108,7 +108,7 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 	}
 
 	//check if template in the template field exists. If not try to find a reference template and set that to the template fields .
-	if instance.Spec.SystemSpec.Containers == nil {
+	if instance.Spec.SystemSpec == nil {
 		foundTemplate := &api.DatasetTemplate{}
 		reqLogger.Info("Finding the template reference specified for " + instance.Name + " %v\n")
 		err := r.client.Get(context.TODO(), types.NamespacedName{
@@ -120,7 +120,7 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 			return reconcile.Result{}, err
 		}
 		reqLogger.Info("POUTSES: " + foundTemplate.Name)
-		instance.Spec.SystemSpec = foundTemplate.Spec
+		instance.Spec.SystemSpec = &foundTemplate.Spec
 		err = r.client.Update(context.TODO(), instance)
 		if err != nil {
 			reqLogger.Info("failed to update the template of the dataset: %v", instance.Spec.Name)
@@ -181,7 +181,7 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 	// health check for the pods of dataset
 	foundPod := &corev1.Pod{}
 	err := r.client.Get(context.TODO(), types.NamespacedName{
-		Name:      instance.Name,
+		Name:      instance.Name + "-pod",
 		Namespace: instance.Namespace},
 		foundPod)
 	if err != nil && errors.IsNotFound(err) {

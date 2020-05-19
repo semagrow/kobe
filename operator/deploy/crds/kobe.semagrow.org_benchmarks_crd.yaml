@@ -9,7 +9,7 @@ spec:
     listKind: BenchmarkList
     plural: benchmarks
     singular: benchmark
-  scope: Namespaced
+  scope: Cluster
   subresources:
     status: {}
   validation:

@@ -11,10 +11,10 @@ type DatasetFile struct {
 }
 
 type Dataset struct {
-	Name        string            `json:"name"`
-	Files       []DatasetFile     `json:"files"`
-	SystemSpec  SystemDatasetSpec `json:"systemspec,omitempty"`
-	TemplateRef string            `json:"templateRef,omitempty"` //  reference
+	Name        string             `json:"name"`
+	Files       []DatasetFile      `json:"files"`
+	SystemSpec  *SystemDatasetSpec `json:"systemspec,omitempty"`
+	TemplateRef string             `json:"templateRef,omitempty"` //  reference
 	// If specified, the pod's scheduling constraints
 	// +optional
 	Affinity *v1.Affinity `json:"affinity,omitempty"`

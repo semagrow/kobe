@@ -7,6 +7,8 @@ spec:
   containers:
     - name: maincontainer
       image: kostbabis/virtuoso
+      ports:
+      - containerPort: 8890
   port: 8890
   path: sparql
   initPolicy: ForceInit

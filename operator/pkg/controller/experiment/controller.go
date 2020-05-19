@@ -238,7 +238,7 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 	foundFederation := &api.Federation{}
 	err := r.client.Get(context.TODO(), types.NamespacedName{
 		Name:      instance.Name,
-		Namespace: instance.Namespace}, foundFederation)
+		Namespace: instance.Spec.Benchmark}, foundFederation)
 
 	if err != nil && errors.IsNotFound(err) {
 		foundBenchmark := &api.Benchmark{}

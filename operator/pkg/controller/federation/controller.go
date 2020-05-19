@@ -338,7 +338,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	}
 
 	//all checks are completed successfully
-	reqLogger.Info("Loop went through the end for reconciling kobedataset")
+	reqLogger.Info("Loop went through the end for reconciling this federation")
 
 	return reconcile.Result{}, nil
 }
