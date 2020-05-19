@@ -83,7 +83,10 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 
 	// Fetch the KobeBenchmark instance
 	instance := &api.Benchmark{}
-	err := r.client.Get(context.TODO(), request.NamespacedName, instance)
+	err := r.client.Get(context.TODO(), types.NamespacedName{
+		Name:      instance.Name,
+		Namespace: ""},
+		instance)
 	if err != nil {
 		if errors.IsNotFound(err) {
 			// Request object not found, could have been deleted after reconcile request.
@@ -96,7 +99,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 	}
 
 	// check  if a KobeUtil instance exists for this namespace and if not create it
-	requeue, err := ensureNFS(r.client, instance.Namespace)
+	requeue, err := ensureNFS(r.client, corev1.NamespaceDefault)
 	if requeue {
 		return reconcile.Result{Requeue: requeue}, err
 	} else if err != nil {
@@ -122,6 +125,38 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 	// 	reqLogger.Info("Failed client connection: %v\n", err)
 	// 	//return reconcile.Result{Requeue: requeue}, err
 	// }
+
+	//add finalizer to the resource . If the benchmark gets deleted the finalizer logic deletes the entire benchmark
+	nsFinalizer := "delete.the.fking.ns.kobe"
+
+	// examine DeletionTimestamp to determine if object is under deletion
+	if instance.ObjectMeta.DeletionTimestamp.IsZero() {
+		// The object is not being deleted, so if it does not have our finalizer,
+		// then lets add the finalizer and update the object. This is equivalent
+		// registering our finalizer.
+		if !containsString(instance.ObjectMeta.Finalizers, nsFinalizer) {
+			instance.ObjectMeta.Finalizers = append(instance.ObjectMeta.Finalizers, nsFinalizer)
+			if err := r.client.Update(context.Background(), instance); err != nil {
+				return reconcile.Result{}, err
+			}
+		}
+	} else {
+		// The object is being deleted
+		if containsString(instance.ObjectMeta.Finalizers, nsFinalizer) {
+			// our finalizer is present, so lets handle any external dependency
+			propagation := metav1.DeletePropagationBackground
+			err = clientset.CoreV1().Namespaces().Delete(ns.Name, &metav1.DeleteOptions{PropagationPolicy: &propagation})
+
+			// remove our finalizer from the list and update it.
+			instance.ObjectMeta.Finalizers = removeString(instance.ObjectMeta.Finalizers, nsFinalizer)
+			if err := r.client.Update(context.Background(), instance); err != nil {
+				return reconcile.Result{}, err
+			}
+		}
+
+		// Stop reconciliation as the item is being deleted
+		return reconcile.Result{}, nil
+	}
 
 	//check if the datasets exist else create them and let dataset controller build the resources
 	foundDataset := &api.EphemeralDataset{}
@@ -239,4 +274,23 @@ func (r *ReconcileBenchmark) newEphemeralDataset(benchmark *api.Benchmark, datas
 	}
 	controllerutil.SetControllerReference(benchmark, ephemeralDataset, r.scheme)
 	return ephemeralDataset
+}
+
+func containsString(slice []string, s string) bool {
+	for _, item := range slice {
+		if item == s {
+			return true
+		}
+	}
+	return false
+}
+
+func removeString(slice []string, s string) (result []string) {
+	for _, item := range slice {
+		if item == s {
+			continue
+		}
+		result = append(result, item)
+	}
+	return
 }
