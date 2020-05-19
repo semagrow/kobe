@@ -83,10 +83,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 
 	// Fetch the KobeBenchmark instance
 	instance := &api.Benchmark{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{
-		Name:      instance.Name,
-		Namespace: ""},
-		instance)
+	err := r.client.Get(context.TODO(), request.NamespacedName, instance)
 	if err != nil {
 		if errors.IsNotFound(err) {
 			// Request object not found, could have been deleted after reconcile request.

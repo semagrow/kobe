@@ -21,8 +21,10 @@ rules:
 - apiGroups:
   - apps
   resources:
-  - deployments
   - daemonsets
+  - deployments
+  - deployments/finalizers
+  - ingresses
   - replicasets
   - statefulsets
   verbs:
@@ -63,3 +65,39 @@ rules:
 - apiGroups: ["", "extensions", "apps", "batch"]
   resources: ["*"]
   verbs: ["*"]
+- apiGroups:
+  - authentication.istio.io
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - config.istio.io
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - install.istio.io
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - networking.istio.io
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - rbac.istio.io
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - security.istio.io
+  resources:
+  - '*'
+  verbs:
+  - '*'
