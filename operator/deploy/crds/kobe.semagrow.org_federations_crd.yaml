@@ -55,7 +55,8 @@ spec:
             initPolicy:
               type: string
             spec:
-              description: FederatorTemplate defines
+              description: FederatorSpec contains all necessary information for a
+                federator
               properties:
                 confFromFileImage:
                   description: The Docker image that receives a compressed dataset
@@ -2246,17 +2247,44 @@ spec:
               - confImage
               - containers
               - fedConfDir
-              - initContainers
               - inputDir
               - inputDumpDir
               - outputDir
               - outputDumpDir
               - port
               type: object
+            topology:
+              items:
+                properties:
+                  datasetSource:
+                    type: string
+                  delayInjection:
+                    properties:
+                      fixedDelayMSec:
+                        description: 'Add a fixed delay before forwarding the request.
+                          Format: 1h/1m/1s/1ms. MUST be >=1ms.'
+                        format: int32
+                        type: integer
+                      fixedDelaySec:
+                        description: 'Add a fixed delay before forwarding the request.
+                          Format: 1h/1m/1s/1ms. MUST be >=1ms.'
+                        format: int64
+                        type: integer
+                      percent:
+                        format: int32
+                        type: integer
+                      percentage:
+                        format: int32
+                        type: integer
+                    required:
+                    - fixedDelayMSec
+                    - fixedDelaySec
+                    type: object
+                type: object
+              type: array
           required:
           - datasets
           - federatorName
-          - initPolicy
           - spec
           type: object
         status:

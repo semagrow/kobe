@@ -34,6 +34,33 @@ spec:
             datasets:
               items:
                 properties:
+                  FederatorDelay:
+                    properties:
+                      datasetSource:
+                        type: string
+                      delayInjection:
+                        properties:
+                          fixedDelayMSec:
+                            description: 'Add a fixed delay before forwarding the
+                              request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
+                            format: int32
+                            type: integer
+                          fixedDelaySec:
+                            description: 'Add a fixed delay before forwarding the
+                              request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
+                            format: int64
+                            type: integer
+                          percent:
+                            format: int32
+                            type: integer
+                          percentage:
+                            format: int32
+                            type: integer
+                        required:
+                        - fixedDelayMSec
+                        - fixedDelaySec
+                        type: object
+                    type: object
                   affinity:
                     description: If specified, the pod's scheduling constraints
                     properties:
@@ -4125,26 +4152,30 @@ spec:
                     description: network delays
                     items:
                       properties:
-                        delay:
+                        datasetSource:
+                          type: string
+                        delayInjection:
                           properties:
-                            fixedDelay:
+                            fixedDelayMSec:
+                              description: 'Add a fixed delay before forwarding the
+                                request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
+                              format: int32
+                              type: integer
+                            fixedDelaySec:
                               description: 'Add a fixed delay before forwarding the
                                 request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
                               format: int64
                               type: integer
                             percent:
-                              format: int64
+                              format: int32
                               type: integer
                             percentage:
-                              format: int64
+                              format: int32
                               type: integer
                           required:
-                          - fixedDelay
+                          - fixedDelayMSec
+                          - fixedDelaySec
                           type: object
-                        destination:
-                          items:
-                            type: string
-                          type: array
                       type: object
                     type: array
                 required:

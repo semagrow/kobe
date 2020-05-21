@@ -133,53 +133,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	endpoints := []string{}
 	datasets := []string{}
 
-	// Check if every kobedataset of the benchmark is healthy.
-	// Create a list of the endpoints and of the names of the datasets
-	/*
-		for _, datasetInfo := range instance.Spec.Datasets {
-			foundDataset := &api.Dataset{}
-			err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: datasetInfo.Name}, foundDataset)
-			if err != nil {
-				reqLogger.Info("Failed to find a specific dataset from the list of datasets of this benchmark")
-				return reconcile.Result{RequeueAfter: 5}, err
-			}
-
-			// Check for the healthiness of the individual pods of the kobe dataset
-			podList := &corev1.PodList{}
-			listOps := []client.ListOption{
-				client.InNamespace(instance.Namespace),
-				client.MatchingLabels{"kobeoperator_cr": foundDataset.Name},
-			}
-			err = r.client.List(context.TODO(), podList, listOps...)
-			if err != nil {
-				reqLogger.Info("Failed to list pods: %v", err)
-				return reconcile.Result{}, err
-			}
-
-			podNames := getPodNames(podList.Items)
-			for _, podname := range podNames {
-				foundPod := &corev1.Pod{}
-				err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: podname}, foundPod)
-				if err != nil && errors.IsNotFound(err) {
-					reqLogger.Info("Failed to get the pod of the kobe dataset that experiment will use")
-					return reconcile.Result{RequeueAfter: 5}, nil
-				}
-				if foundPod.Status.Phase != corev1.PodRunning {
-					reqLogger.Info("Kobe dataset pod is not ready so experiment needs to wait")
-					return reconcile.Result{RequeueAfter: 5}, nil
-				}
-			}
-			if podNames == nil || len(podNames) == 0 {
-				reqLogger.Info("Experiment waits for components initialization")
-				return reconcile.Result{RequeueAfter: 5}, nil
-			}
-
-			// Create a list of the SPARQL endpoints
-			endpoints = append(endpoints,
-				util.EndpointURL(foundDataset.Name, foundDataset.Namespace, int(foundDataset.Spec.Port), foundDataset.Spec.Path))
-			datasets = append(datasets, foundDataset.Name)
-		}
-	*/
+	//collect the endpoints and the dataset names to provide to the federation
 	for _, d := range instance.Spec.Datasets {
 		endpoints = append(endpoints,
 			util.EndpointURL(d.Host, d.Namespace, int(d.Port), d.Path))
@@ -203,7 +157,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 			err = r.client.Create(context.TODO(), job)
 			if err != nil {
 				reqLogger.Info("Failed to create the init job that will make the directories in the server for caching")
-				return reconcile.Result{}, err
+				return reconcile.Result{RequeueAfter: 1000000000}, err
 			}
 		} else if err != nil {
 			reqLogger.Info("Failed to retrieve the job that makes the directories")
@@ -214,7 +168,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		//changes so he will awake if the job status changes /no need to
 		//requeue)
 		if &foundJob.Status.Succeeded == nil || foundJob.Status.Succeeded == 0 {
-			return reconcile.Result{}, nil
+			return reconcile.Result{RequeueAfter: 1000000000}, nil
 		}
 
 		//----------------------experimental jobs-------------------------------------
@@ -248,7 +202,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 			if err != nil && errors.IsNotFound(err) {
 				return reconcile.Result{Requeue: true}, nil
 			} else if err != nil { //some other error
-				return reconcile.Result{RequeueAfter: 10}, err
+				return reconcile.Result{RequeueAfter: 1000000000}, err
 			}
 			//fetch the pod of the init - job for this dataset to check its status
 			podList := &corev1.PodList{}
@@ -264,7 +218,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 			//if the job-pod doesn't exist yet then requeue (we got here faster than we should and must wait)
 			podNames := getPodNames(podList.Items)
 			if podNames == nil || len(podNames) == 0 {
-				return reconcile.Result{RequeueAfter: 15}, nil
+				return reconcile.Result{RequeueAfter: 1000000000}, nil
 
 			}
 			pod := &corev1.Pod{}
@@ -275,13 +229,13 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 			}
 			//decide whether to include this dataset in the initialization based on the status of the job pod  and the forceNewInit flag
 			if instance.Spec.InitPolicy != api.ForceInit { //we make a choice
-				if pod.Status.Phase == corev1.PodRunning {
+				if pod.Status.Phase == corev1.PodSucceeded {
 
 				} else if pod.Status.Phase == corev1.PodFailed {
 					datasetsForInit = append(datasetsForInit, dataset)
 					endpointsForInit = append(endpointsForInit, endpoints[i])
 				} else { //pod is still running so we again need to wait for it before seeing if it failed or succeededs
-					return reconcile.Result{RequeueAfter: 5}, nil
+					return reconcile.Result{RequeueAfter: 1000000000}, nil
 				}
 			} else if instance.Spec.InitPolicy == api.ForceInit { //we dont make a choice we gather all of them
 				datasetsForInit = append(datasetsForInit, dataset)
@@ -352,8 +306,8 @@ func getPodNames(pods []corev1.Pod) []string {
 	return podNames
 }
 
-func labelsForFederation(name string) map[string]string {
-	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": name}
+func labelsForFederation(m *api.Federation) map[string]string {
+	return map[string]string{"app": "Kobe-Operator", "kobeoperator_cr": m.Name, "kobe-resource": "federation"}
 }
 
 func (r *ReconcileFederation) reconcilePod(instance *api.Federation, datasets []string, endpoints []string) (bool, error) {
@@ -383,7 +337,7 @@ func (r *ReconcileFederation) reconcilePod(instance *api.Federation, datasets []
 	podList := &corev1.PodList{}
 	listOps := []client.ListOption{
 		client.InNamespace(instance.Namespace),
-		client.MatchingLabels(labelsForFederation(instance.Name)),
+		client.MatchingLabels(labelsForFederation(instance)),
 	}
 	err = r.client.List(context.TODO(), podList, listOps...)
 	if err != nil {
@@ -405,10 +359,10 @@ func (r *ReconcileFederation) reconcilePod(instance *api.Federation, datasets []
 	return false, nil
 }
 
-// creates a new federation deployment
-// This is the deployment that runs the federator image
+// creates a new federation pod
+// This is the pod that runs the federator image
 func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpoints []string) *corev1.Pod {
-	labels := labelsForFederation(m.Name)
+	labels := labelsForFederation(m)
 
 	nfsPodFound := &corev1.Pod{}
 	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
@@ -519,6 +473,11 @@ func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpo
 		}}
 	volumes = append(volumes, volumeConf)
 
+	//supply every container in the main federation pod with a mount to the configuration files that are inside the nfs.
+	mountConf := corev1.VolumeMount{Name: "volumeconf", MountPath: m.Spec.Template.FedConfDir}
+	for i := range m.Spec.Template.Containers {
+		m.Spec.Template.Containers[i].VolumeMounts = append(m.Spec.Template.Containers[i].VolumeMounts, mountConf)
+	}
 	pod := &corev1.Pod{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
@@ -568,7 +527,7 @@ func (r *ReconcileFederation) newSvc(m *api.Federation) *corev1.Service {
 		},
 
 		Spec: corev1.ServiceSpec{
-			Selector: labelsForFederation(m.Name),
+			Selector: labelsForFederation(m),
 			Ports: []corev1.ServicePort{
 				{
 					Port: m.Spec.Template.Port,
@@ -591,7 +550,7 @@ func (r *ReconcileFederation) newJobForFederation(m *api.Federation) *batchv1.Jo
 	vmounts := []corev1.VolumeMount{}
 
 	nfsPodFound := &corev1.Pod{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: corev1.NamespaceDefault}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
 		return nil
 	}

@@ -25,23 +25,27 @@ type Dataset struct {
 	Resources v1.ResourceRequirements `json:"resources,omitempty"`
 
 	// network delays
-	NetworkTopology []NetworkConnection `json:"topology,omitempty"`
+	NetworkTopology     []NetworkConnection `json:"topology,omitempty"`
+	FederatorConnection *NetworkConnection  `json:"FederatorDelay,omitempty"`
 }
 
 type Delay struct {
 	// Add a fixed delay before forwarding the request. Format: 1h/1m/1s/1ms. MUST be >=1ms.
-	FixedDelay *int64 `json:"fixedDelay"`
+	FixedDelaySec *int64 `json:"fixedDelaySec"`
+
+	// Add a fixed delay before forwarding the request. Format: 1h/1m/1s/1ms. MUST be >=1ms.
+	FixedDelayMSec *int32 `json:"fixedDelayMSec"`
 
 	// +optional
-	Percentage *int64 `json:"percentage,omitempty"` // `protobuf:"fixed64,1,opt,name=value,proto3" json:"percentage,omitempty"`
+	Percentage *int32 `json:"percentage,omitempty"` // `protobuf:"fixed64,1,opt,name=value,proto3" json:"percentage,omitempty"`
 
 	// +optional
-	Percent *int64 `json:"percent,omitempty"`
+	Percent *int32 `json:"percent,omitempty"`
 }
 
 type NetworkConnection struct {
-	Source []string `json:"destination,omitempty"`
-	Delay  Delay    `json:"delay,omitempty"`
+	Source         *string `json:"datasetSource,omitempty"`
+	DelayInjection Delay   `json:"delayInjection,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -137,13 +141,15 @@ type Evaluator struct {
 // ExperimentSpec defines the desired state of Experiment
 // +k8s:openapi-gen=true
 type ExperimentSpec struct {
-	Benchmark     string        `json:"benchmark"`
-	Federator     string        `json:"federator"`
-	Evaluator     Evaluator     `json:"evaluator"`
-	TimesToRun    int           `json:"timesToRun"`
-	RestartPolicy RestartPolicy `json:"restartPolicy,omitempty"`
-	DryRun        bool          `json:"dryRun"`
-	ForceNewInit  bool          `json:"forceNewInit"`
+	Benchmark            string         `json:"benchmark"`
+	FederatorName        string         `json:"federatorName"`
+	FederatorSpec        *FederatorSpec `json:"federatorSpec"`
+	FederatorTemplateRef string         `json:"federatorTemplateRef"`
+	Evaluator            Evaluator      `json:"evaluator"`
+	TimesToRun           int            `json:"timesToRun"`
+	RestartPolicy        RestartPolicy  `json:"restartPolicy,omitempty"`
+	DryRun               bool           `json:"dryRun"`
+	ForceNewInit         bool           `json:"forceNewInit"`
 }
 
 // ExperimentStatus defines the observed state of Experiment
@@ -187,10 +193,11 @@ type DatasetEndpoint struct {
 // FederationSpec defines the desired state of Federation
 // +k8s:openapi-gen=true
 type FederationSpec struct {
-	FederatorName string               `json:"federatorName"`
-	Template      FederatorSpec        `json:"spec"`
-	Datasets      []DatasetEndpoint    `json:"datasets"` // use v1.LocalObjectReference ?
-	InitPolicy    InitializationPolicy `json:"initPolicy"`
+	FederatorName   string               `json:"federatorName"`
+	Template        FederatorSpec        `json:"spec"`
+	Datasets        []DatasetEndpoint    `json:"datasets"` // use v1.LocalObjectReference ?
+	NetworkTopology []NetworkConnection  `json:"topology,omitempty"`
+	InitPolicy      InitializationPolicy `json:"initPolicy,omitempty"`
 }
 
 // FederationStatus defines the observed state of KobeFederation
@@ -228,16 +235,26 @@ type FederationList struct {
 	Items           []Federation `json:"items"`
 }
 
-// FederatorSpec defines the desired state of Federator
+// FederatorTemplate defines a federator and its components that it needs to be installed.
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +kubebuilder:resource:path=federatortemplates,scope=Namespaced
 // +k8s:openapi-gen=true
 type FederatorTemplate struct {
-	metav1.ListMeta `json:"metadata,omitempty"`
-	FederatorSpec   `json:"spec,inline"`
+	metav1.TypeMeta   `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,omitempty"`
+	Spec              FederatorSpec `json:"spec,inline"`
 }
 
-// FederatorTemplate defines
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+type FederationTemplateList struct {
+	metav1.TypeMeta `json:",inline"`
+	metav1.ListMeta `json:"metadata,omitempty"`
+	Items           []FederatorTemplate `json:"items"`
+}
+
+// FederatorSpec contains all necessary information for a federator
 type FederatorSpec struct {
-	InitContainers []v1.Container `json:"initContainers"`
+	InitContainers []v1.Container `json:"initContainers,omitempty"`
 	Containers     []v1.Container `json:"containers"`
 
 	// Number of port to expose on the host.
@@ -441,4 +458,5 @@ func init() {
 	SchemeBuilder.Register(&EphemeralDataset{}, &EphemeralDatasetList{})
 	SchemeBuilder.Register(&KobeUtil{}, &KobeUtilList{})
 	SchemeBuilder.Register(&DatasetTemplate{}, &DatasetTemplateList{})
+	SchemeBuilder.Register(&FederatorTemplate{}, &FederationTemplateList{})
 }

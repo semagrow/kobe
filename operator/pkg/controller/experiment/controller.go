@@ -113,13 +113,29 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 		return reconcile.Result{}, err
 	}
 
-	// Normally I have to check for finishing initialization not just if they
-	// exist. Federator for example could be initiliazing with its init container.
-	// very important
-
-	requeue, err := r.reconcileFederation(instance)
+	//check if the assosciated benchmark component exists in the experiment namespace
+	foundBenchmark := &api.Benchmark{}
+	err = r.client.Get(context.TODO(), request.NamespacedName, foundBenchmark)
+	if err != nil {
+		if errors.IsNotFound(err) {
+			reqLogger.Info("The benchmark of this experiment does not exist")
+			return reconcile.Result{}, nil
+		}
+		// Error reading the object - requeue the request.
+		return reconcile.Result{}, err
+	}
+	//check if all datasets for the experiment are up and running
+	requeue, err := r.reconcileDatasets(instance, *foundBenchmark)
 	if requeue {
-		return reconcile.Result{Requeue: true}, err
+		reqLogger.Info("Datasets are not up yet. Wait 10 sec and recheck!\n")
+		return reconcile.Result{RequeueAfter: 10000000000}, err
+	} else if err != nil {
+		return reconcile.Result{}, err
+	}
+	//reconcile federation also ensures federator is up and running
+	requeue, err = r.reconcileFederation(instance)
+	if requeue {
+		return reconcile.Result{RequeueAfter: 2000000000}, err
 	} else if err != nil {
 		return reconcile.Result{}, err
 	}
@@ -128,55 +144,55 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 	if instance.Spec.DryRun != true {
 		foundFederation := &api.Federation{}
 		err = r.client.Get(context.TODO(), types.NamespacedName{
-			Name:      instance.Name,
-			Namespace: instance.Namespace}, foundFederation)
+			Name:      instance.Spec.FederatorName,
+			Namespace: instance.Spec.Benchmark}, foundFederation)
 		if err != nil {
 			return reconcile.Result{}, err
 		}
 
-		if err := r.reconcileEvaluatorJob(instance, foundFederation); err != nil {
-			return reconcile.Result{}, err
+		if ok, err := r.reconcileEvaluatorJob(instance, foundFederation); ok != false {
+			return reconcile.Result{RequeueAfter: 5000000000}, err
 		}
 	}
 	reqLogger.Info("Reached the end of the reconciling loop for the kobe Experiment %s/%s\n", instance.Name, instance.Namespace)
 	return reconcile.Result{}, nil
 }
 
-func (r *ReconcileExperiment) reconcileEvaluatorJob(instance *api.Experiment, fed *api.Federation) error {
+func (r *ReconcileExperiment) reconcileEvaluatorJob(instance *api.Experiment, fed *api.Federation) (bool, error) {
 	reqLogger := log
 	fedEndpoint :=
 		util.EndpointURL(fed.Name, fed.Namespace, int(fed.Spec.Template.Port), fed.Spec.Template.Path)
 	fedName := fed.Name
 
 	// Create the new job that will run the EVAL client for this experiment
-	if instance.Status.CurrentRun <= instance.Spec.TimesToRun {
-		foundJob := &batchv1.Job{}
-		err := r.client.Get(context.TODO(), types.NamespacedName{
-			Namespace: instance.Namespace,
-			Name:      instance.Name + "-" + strconv.Itoa(identifier)},
-			foundJob)
 
-		if err == nil {
-			if &foundJob.Status.Succeeded == nil || foundJob.Status.Succeeded == 0 {
-				return nil
-			}
-			reqLogger.Info("All past jobs are done\n")
-			identifier++
+	foundJob := &batchv1.Job{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{
+		Namespace: instance.Namespace,
+		Name:      instance.Name + "-evaluationJob"},
+		foundJob)
+
+	if err == nil {
+		if &foundJob.Status.Succeeded == nil || foundJob.Status.Succeeded == 0 {
+			return true, nil
 		}
-		experimentJob := r.createEvaluatorJob(instance, identifier, fedEndpoint, fedName)
-		reqLogger.Info("Creating a new job to run the experiment for this setup")
-		if err := r.client.Create(context.TODO(), experimentJob); err != nil {
-			reqLogger.Info("FAILED to create the job to run this experiment  %s/%s\n", experimentJob.Name, experimentJob.Namespace)
-			return err
-		}
-		instance.Status.CurrentRun = instance.Status.CurrentRun + 1
-		err = r.client.Status().Update(context.TODO(), instance)
-		if err != nil {
-			reqLogger.Info("Failed to update the times to run of the experiment")
-			return err
-		}
+		reqLogger.Info("The job is done\n")
+		return false, nil
 	}
-	return nil
+	experimentJob := r.createEvaluatorJob(instance, identifier, fedEndpoint, fedName)
+	reqLogger.Info("Creating a new job to run the experiment for this setup")
+	if err := r.client.Create(context.TODO(), experimentJob); err != nil {
+		reqLogger.Info("FAILED to create the job to run this experiment  %s/%s\n", experimentJob.Name, experimentJob.Namespace)
+		return true, err
+	}
+	//instance.Status.CurrentRun = instance.Status.CurrentRun + 1
+	// err = r.client.Status().Update(context.TODO(), instance)
+	// if err != nil {
+	// 	reqLogger.Info("Failed to update the times to run of the experiment")
+	// 	return err
+	// }
+
+	return true, nil
 }
 
 //----------------------functions that create native kubernetes objects--------------------------------------
@@ -249,21 +265,27 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 			reqLogger.Info("Did not found a kobebenchmark resource with this name please define that first")
 			return true, err
 		}
-
-		foundFederator := &api.Federator{}
-		err = r.client.Get(context.TODO(), types.NamespacedName{
-			Name:      instance.Spec.Federator,
-			Namespace: instance.Namespace}, foundFederator)
-		if err != nil && errors.IsNotFound(err) {
-			reqLogger.Info("No federator with this name is defined in the cluster")
-			return false, err
+		if instance.Spec.FederatorSpec == nil {
+			foundTemplate := &api.FederatorTemplate{}
+			reqLogger.Info("Finding the federatpr template reference specified for the experiment " + instance.Name + " %v\n")
+			err := r.client.Get(context.TODO(), types.NamespacedName{
+				Name:      instance.Spec.FederatorTemplateRef,
+				Namespace: corev1.NamespaceDefault},
+				foundTemplate)
+			if err != nil && errors.IsNotFound(err) {
+				reqLogger.Info("Failed to find the requested dataset template: ", err)
+				return true, err
+			}
+			instance.Spec.FederatorSpec = &foundTemplate.Spec
+			err = r.client.Update(context.TODO(), instance)
+			if err != nil {
+				reqLogger.Info("failed to update the template spec of the federation: %v", instance.Spec.FederatorName)
+				return true, err
+			}
+			return true, nil
 		}
-		if err != nil {
-			reqLogger.Info("Error at getting this federator resource from the cluster.")
-			return false, err
-		}
 
-		newFederation := r.newFederation(instance, foundFederator, foundBenchmark.Spec.Datasets)
+		newFederation := r.newFederation(instance, foundBenchmark)
 		reqLogger.Info("Creating a new federation based on this experiments datasets and federator")
 		err = r.client.Create(context.TODO(), newFederation)
 		if err != nil {
@@ -277,8 +299,8 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 
 	podList := &corev1.PodList{}
 	listOps := []client.ListOption{
-		client.InNamespace(instance.Namespace),
-		client.MatchingLabels{"kobeoperator_cr": instance.Name},
+		client.InNamespace(instance.Spec.Benchmark),
+		client.MatchingLabels{"kobeoperator_cr": instance.Spec.FederatorName},
 	}
 	err = r.client.List(context.TODO(), podList, listOps...)
 	if err != nil {
@@ -306,29 +328,31 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 
 //function that creates a new kobefederation custom resource from the federator and benchmark  in experiment.
 //The native objects that kobefederation needs are created by kobefederation controller .
-func (r *ReconcileExperiment) newFederation(m *api.Experiment,
-	fed *api.Federator, datasets []api.Dataset) *api.Federation {
-
+func (r *ReconcileExperiment) newFederation(m *api.Experiment, benchmark *api.Benchmark) *api.Federation {
+	networktopology := []api.NetworkConnection{}
 	datasetendpoints := []api.DatasetEndpoint{}
 
-	for _, d := range datasets {
+	for _, d := range benchmark.Spec.Datasets {
 		datasetendpoints = append(datasetendpoints, api.DatasetEndpoint{
 			Host:      d.Name,
-			Namespace: m.Spec.Benchmark,
+			Namespace: benchmark.Name,
 			Port:      d.SystemSpec.Port,
 			Path:      d.SystemSpec.Path})
+
+		networktopology = append(networktopology, api.NetworkConnection{Source: &d.Name, DelayInjection: d.FederatorConnection.DelayInjection})
 	}
 
 	federation := &api.Federation{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      m.Name,
-			Namespace: fed.Namespace,
+			Name:      m.Spec.FederatorName,
+			Namespace: benchmark.Name,
 		},
 		Spec: api.FederationSpec{
-			Template:      fed.Spec,
-			InitPolicy:    api.ForceInit,
-			FederatorName: fed.Name,
-			Datasets:      datasetendpoints,
+			Template:        *m.Spec.FederatorSpec,
+			InitPolicy:      api.ForceInit, //???????????????
+			FederatorName:   m.Spec.FederatorName,
+			Datasets:        datasetendpoints,
+			NetworkTopology: networktopology,
 		},
 	}
 	controllerutil.SetControllerReference(m, federation, r.scheme)
@@ -341,4 +365,52 @@ func getPodNames(pods []corev1.Pod) []string {
 		podNames = append(podNames, pod.Name)
 	}
 	return podNames
+}
+
+func (r *ReconcileExperiment) reconcileDatasets(instance *api.Experiment, benchmark api.Benchmark) (bool, error) {
+	reqLogger := log
+
+	// Check if every kobedataset of the benchmark is healthy.
+	// Create a list of the endpoints and of the names of the datasets
+	for _, datasetInfo := range benchmark.Spec.Datasets {
+		foundDataset := &api.EphemeralDataset{}
+		err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: benchmark.Name, Name: datasetInfo.Name}, foundDataset)
+		if err != nil {
+			reqLogger.Info("Failed to find a specific dataset from the list of datasets of this benchmark")
+			return true, err
+		}
+
+		// Check for the healthiness of the individual pods of the kobe dataset
+		podList := &corev1.PodList{}
+		listOps := []client.ListOption{
+			client.InNamespace(benchmark.Name),
+			client.MatchingLabels{"datasetName": foundDataset.Name},
+		}
+		err = r.client.List(context.TODO(), podList, listOps...)
+		if err != nil {
+			reqLogger.Info("Failed to list pods: %v", err)
+			return true, err
+		}
+
+		podNames := getPodNames(podList.Items)
+		for _, podname := range podNames {
+			foundPod := &corev1.Pod{}
+			err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: podname}, foundPod)
+			if err != nil && errors.IsNotFound(err) {
+				reqLogger.Info("Failed to get the pod of the kobe dataset that experiment will use")
+				return true, nil
+			}
+			if foundPod.Status.Phase != corev1.PodRunning {
+				reqLogger.Info("Kobe dataset pod is not ready so experiment needs to wait")
+				return true, nil
+			}
+		}
+		if podNames == nil || len(podNames) == 0 {
+			reqLogger.Info("Experiment waits for components initialization")
+			return true, nil
+		}
+
+	}
+	return false, nil
+
 }

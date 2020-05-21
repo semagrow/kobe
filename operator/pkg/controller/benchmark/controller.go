@@ -98,7 +98,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 	// check  if a KobeUtil instance exists for this namespace and if not create it
 	requeue, err := ensureNFS(r.client, corev1.NamespaceDefault)
 	if requeue {
-		return reconcile.Result{Requeue: requeue}, err
+		return reconcile.Result{RequeueAfter: 10000000000}, err
 	} else if err != nil {
 		return reconcile.Result{}, err
 	}
@@ -123,7 +123,9 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 	// 	//return reconcile.Result{Requeue: requeue}, err
 	// }
 
-	//add finalizer to the resource . If the benchmark gets deleted the finalizer logic deletes the entire benchmark
+	//add finalizer to the resource . If the benchmark gets deleted the finalizer logic deletes the entire benchmark namespace
+	//this automatically collects EVERYTHING related to this benchmark including any running federators from experiments.
+	//it leaves experiments
 	nsFinalizer := "delete.the.fking.ns.kobe"
 
 	// examine DeletionTimestamp to determine if object is under deletion

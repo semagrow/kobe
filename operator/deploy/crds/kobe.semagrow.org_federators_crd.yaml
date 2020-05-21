@@ -27,7 +27,7 @@ spec:
         metadata:
           type: object
         spec:
-          description: FederatorTemplate defines
+          description: FederatorSpec contains all necessary information for a federator
           properties:
             confFromFileImage:
               description: The Docker image that receives a compressed dataset and
@@ -2166,7 +2166,6 @@ spec:
           - confImage
           - containers
           - fedConfDir
-          - initContainers
           - inputDir
           - inputDumpDir
           - outputDir

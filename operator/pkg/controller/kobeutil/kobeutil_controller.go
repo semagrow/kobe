@@ -140,7 +140,7 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: instance.Namespace}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
 		pod := r.newPodForNfs(instance)
-		err = r.client.Create(context.TODO(), pod)
+		err := r.client.Create(context.TODO(), pod)
 		if err != nil {
 			reqLogger.Info("Failed to create the kobe nfs Pod: %v\n", err)
 			return reconcile.Result{}, err
@@ -154,12 +154,12 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobepv"}, pvFound)
 	if err != nil && errors.IsNotFound(err) {
 		pv := r.newPvForKobe(instance, nfsip)
-		err = r.client.Create(context.TODO(), pv)
+		err := r.client.Create(context.TODO(), pv)
 		if err != nil {
 			reqLogger.Info("Failed to create the persistent volume that the datasets will use to retain their data if they shutdown and restarted")
 			return reconcile.Result{}, err
 		}
-		return reconcile.Result{RequeueAfter: 10}, nil
+		return reconcile.Result{RequeueAfter: 1000000000}, nil
 
 	}
 	//--------------------------------------------Persistent volume claim  health check---------------------------------------------
@@ -172,7 +172,7 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 			reqLogger.Info("Failed to create the single persistent volume claim that all the datasets gonna use to mount their data directories to nfs")
 			return reconcile.Result{}, err
 		}
-		return reconcile.Result{RequeueAfter: 5}, nil
+		return reconcile.Result{RequeueAfter: 1000000000}, nil
 	}
 	return reconcile.Result{}, nil
 }

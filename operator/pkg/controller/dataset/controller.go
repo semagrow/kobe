@@ -131,17 +131,17 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 	instance.SetDefaults()
 	// check ForceLoad
 
+	//Service health check for the dataset
+	if err := r.reconcileSvc(instance); err != nil {
+		return reconcile.Result{}, err
+	}
+
 	// From here do the actual work to set up the pod and service for the dataset
 	created, err := r.reconcilePods(instance)
 	if created {
 		return reconcile.Result{Requeue: true}, err
 	} else if err != nil {
-		return reconcile.Result{}, err
-	}
-
-	//Service health check for the dataset
-	if err := r.reconcileSvc(instance); err != nil {
-		return reconcile.Result{}, err
+		return reconcile.Result{RequeueAfter: 10000000000}, err
 	}
 
 	if instance.Status.PodNames == nil && len(instance.Status.PodNames) == 0 {
@@ -187,6 +187,10 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Making a new pod for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
 		pod := r.newPod(instance)
+		if pod == nil {
+			reqLogger.Info("Pod was not created. Nfs is not up (yet)! Requeue after waiting for 10 seconds\n")
+			return true, nil
+		}
 		err = r.client.Create(context.TODO(), pod)
 		if err != nil {
 			reqLogger.Info("Failed to create new Pod: %v\n", err)
@@ -226,7 +230,7 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 			err = r.client.Get(context.TODO(), types.NamespacedName{Name: podName, Namespace: instance.Namespace}, podForDelete)
 			err = r.client.Delete(context.TODO(), podForDelete, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
 			if err != nil {
-				reqLogger.Info("Failed to delete the federation job from the cluster")
+				reqLogger.Info("Failed to delete the federation job from the cluster\n")
 				return false, err
 			}
 		}
@@ -371,11 +375,24 @@ func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
 
 func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.VirtualService {
 	http := []*istioapi.HTTPRoute{}
-	for i, incoming := range m.Spec.NetworkTopology {
+	if m.Spec.FederatorConnection != nil {
+		m.Spec.FederatorConnection.Source = nil
+		m.Spec.NetworkTopology = append(m.Spec.NetworkTopology, *m.Spec.FederatorConnection)
+	}
+
+	//add the fault injection based on network topology in the dataset virtual service
+	for _, incoming := range m.Spec.NetworkTopology {
 
 		httpMatchRequests := []*istioapi.HTTPMatchRequest{}
-		match := istioapi.HTTPMatchRequest{
-			SourceLabels: map[string]string{"datasetName": incoming.Source[i], "benchmark": m.Namespace},
+		match := istioapi.HTTPMatchRequest{}
+		if incoming.Source == nil {
+			match = istioapi.HTTPMatchRequest{
+				SourceLabels: map[string]string{"kobe-resource": "federation"},
+			}
+		} else {
+			match = istioapi.HTTPMatchRequest{
+				SourceLabels: map[string]string{"datasetName": *incoming.Source, "benchmark": m.Namespace},
+			}
 		}
 		httpMatchRequests = append(httpMatchRequests, &match)
 
@@ -394,9 +411,11 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 			Delay: &istioapi.HTTPFaultInjection_Delay{
 				HttpDelayType: &istioapi.HTTPFaultInjection_Delay_FixedDelay{
 					FixedDelay: &findypes.Duration{
-						Seconds: *incoming.Delay.FixedDelay,
+						Seconds: *incoming.DelayInjection.FixedDelaySec,
+						Nanos:   *incoming.DelayInjection.FixedDelayMSec,
 					},
 				},
+				Percentage: &istioapi.Percent{Value: float64(*incoming.DelayInjection.Percentage)},
 			},
 		}
 		httpRoute := istioapi.HTTPRoute{
@@ -404,8 +423,12 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 			Route: route,
 			Fault: fault,
 		}
+
 		http = append(http, &httpRoute)
 	}
+
+	//append dummy http so its not empty. Do not remove this!
+	http = append(http, &istioapi.HTTPRoute{})
 
 	vsvc := &istioclient.VirtualService{
 		ObjectMeta: metav1.ObjectMeta{
