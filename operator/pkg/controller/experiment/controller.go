@@ -339,7 +339,9 @@ func (r *ReconcileExperiment) newFederation(m *api.Experiment, benchmark *api.Be
 			Port:      d.SystemSpec.Port,
 			Path:      d.SystemSpec.Path})
 
-		networktopology = append(networktopology, api.NetworkConnection{Source: &d.Name, DelayInjection: d.FederatorConnection.DelayInjection})
+		if d.FederatorConnection != nil {
+			networktopology = append(networktopology, api.NetworkConnection{Source: &d.Name, DelayInjection: d.FederatorConnection.DelayInjection})
+		}
 	}
 
 	federation := &api.Federation{

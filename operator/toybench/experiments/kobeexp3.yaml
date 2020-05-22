@@ -1,0 +1,12 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Experiment
+metadata:
+  name: kobeexp4
+spec:
+  benchmark: cross-domain
+  federator: fedx
+  timesToRun: 1
+  dryRun: false
+  forceNewInit: false 
+  evaluator:
+    image: kostbabis/kobe-evaluator

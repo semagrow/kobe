@@ -25,8 +25,8 @@ type Dataset struct {
 	Resources v1.ResourceRequirements `json:"resources,omitempty"`
 
 	// network delays
-	NetworkTopology     []NetworkConnection `json:"topology,omitempty"`
-	FederatorConnection *NetworkConnection  `json:"FederatorDelay,omitempty"`
+	NetworkTopology     []NetworkConnection `json:"networkTopology,omitempty"`
+	FederatorConnection *NetworkConnection  `json:"federatorConnection,omitempty"`
 }
 
 type Delay struct {
@@ -144,7 +144,7 @@ type ExperimentSpec struct {
 	Benchmark            string         `json:"benchmark"`
 	FederatorName        string         `json:"federatorName"`
 	FederatorSpec        *FederatorSpec `json:"federatorSpec"`
-	FederatorTemplateRef string         `json:"federatorTemplateRef"`
+	FederatorTemplateRef string         `json:"federatorTemplateRef,omitempty"`
 	Evaluator            Evaluator      `json:"evaluator"`
 	TimesToRun           int            `json:"timesToRun"`
 	RestartPolicy        RestartPolicy  `json:"restartPolicy,omitempty"`

@@ -1,7 +1,7 @@
 apiVersion: kobe.semagrow.org/v1alpha1
 kind: FederatorTemplate
 metadata:
-  name: semagrow
+  name: semagrowtemplate
 spec:
   containers:
     - name: maincontainer 

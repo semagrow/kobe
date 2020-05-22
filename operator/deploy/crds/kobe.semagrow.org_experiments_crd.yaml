@@ -2378,7 +2378,6 @@ spec:
           - evaluator
           - federatorName
           - federatorSpec
-          - federatorTemplateRef
           - forceNewInit
           - timesToRun
           type: object

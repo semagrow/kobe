@@ -1,0 +1,13 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Experiment
+metadata:
+  name: toyexp
+spec:
+  benchmark: toybench
+  federatorName: semagrow
+  federatorTemplateRef: semagrow
+  evaluator:
+    image: kostbabis/kobe-evaluator
+  timesToRun: 1
+  dryRun: false
+  forceNewInit: false 

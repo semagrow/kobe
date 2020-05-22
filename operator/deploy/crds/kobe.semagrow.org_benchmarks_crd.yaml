@@ -34,33 +34,6 @@ spec:
             datasets:
               items:
                 properties:
-                  FederatorDelay:
-                    properties:
-                      datasetSource:
-                        type: string
-                      delayInjection:
-                        properties:
-                          fixedDelayMSec:
-                            description: 'Add a fixed delay before forwarding the
-                              request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
-                            format: int32
-                            type: integer
-                          fixedDelaySec:
-                            description: 'Add a fixed delay before forwarding the
-                              request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
-                            format: int64
-                            type: integer
-                          percent:
-                            format: int32
-                            type: integer
-                          percentage:
-                            format: int32
-                            type: integer
-                        required:
-                        - fixedDelayMSec
-                        - fixedDelaySec
-                        type: object
-                    type: object
                   affinity:
                     description: If specified, the pod's scheduling constraints
                     properties:
@@ -678,6 +651,33 @@ spec:
                             type: array
                         type: object
                     type: object
+                  federatorConnection:
+                    properties:
+                      datasetSource:
+                        type: string
+                      delayInjection:
+                        properties:
+                          fixedDelayMSec:
+                            description: 'Add a fixed delay before forwarding the
+                              request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
+                            format: int32
+                            type: integer
+                          fixedDelaySec:
+                            description: 'Add a fixed delay before forwarding the
+                              request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
+                            format: int64
+                            type: integer
+                          percent:
+                            format: int32
+                            type: integer
+                          percentage:
+                            format: int32
+                            type: integer
+                        required:
+                        - fixedDelayMSec
+                        - fixedDelaySec
+                        type: object
+                    type: object
                   files:
                     items:
                       properties:
@@ -691,6 +691,36 @@ spec:
                     type: array
                   name:
                     type: string
+                  networkTopology:
+                    description: network delays
+                    items:
+                      properties:
+                        datasetSource:
+                          type: string
+                        delayInjection:
+                          properties:
+                            fixedDelayMSec:
+                              description: 'Add a fixed delay before forwarding the
+                                request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
+                              format: int32
+                              type: integer
+                            fixedDelaySec:
+                              description: 'Add a fixed delay before forwarding the
+                                request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
+                              format: int64
+                              type: integer
+                            percent:
+                              format: int32
+                              type: integer
+                            percentage:
+                              format: int32
+                              type: integer
+                          required:
+                          - fixedDelayMSec
+                          - fixedDelaySec
+                          type: object
+                      type: object
+                    type: array
                   resources:
                     description: Resources are not allowed for ephemeral containers.
                       Ephemeral containers use spare resources already allocated to
@@ -4148,36 +4178,6 @@ spec:
                     type: object
                   templateRef:
                     type: string
-                  topology:
-                    description: network delays
-                    items:
-                      properties:
-                        datasetSource:
-                          type: string
-                        delayInjection:
-                          properties:
-                            fixedDelayMSec:
-                              description: 'Add a fixed delay before forwarding the
-                                request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
-                              format: int32
-                              type: integer
-                            fixedDelaySec:
-                              description: 'Add a fixed delay before forwarding the
-                                request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
-                              format: int64
-                              type: integer
-                            percent:
-                              format: int32
-                              type: integer
-                            percentage:
-                              format: int32
-                              type: integer
-                          required:
-                          - fixedDelayMSec
-                          - fixedDelaySec
-                          type: object
-                      type: object
-                    type: array
                 required:
                 - files
                 - name

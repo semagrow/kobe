@@ -5,8 +5,11 @@ import (
 	"reflect"
 	"strconv"
 
+	findypes "github.com/gogo/protobuf/types"
 	api "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	"github.com/semagrow/kobe/operator/pkg/util"
+	istioapi "istio.io/api/networking/v1alpha3"
+	istioclient "istio.io/client-go/pkg/apis/networking/v1alpha3"
 	appsv1 "k8s.io/api/apps/v1"
 	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
@@ -275,6 +278,11 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		}
 	}
 
+	//Csheck for the health of service and virtual service
+	if err := r.reconcileSvc(instance); err != nil {
+		return reconcile.Result{}, err
+	}
+
 	// NOTE: We currently use a Pod instead of a Deployment to avoid the respawning of
 	// the Pod (and therefore re-execute the initContainers)
 	// check for the healthiness of the federation pod and create it if it
@@ -362,10 +370,9 @@ func (r *ReconcileFederation) reconcilePod(instance *api.Federation, datasets []
 // creates a new federation pod
 // This is the pod that runs the federator image
 func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpoints []string) *corev1.Pod {
-	labels := labelsForFederation(m)
 
 	nfsPodFound := &corev1.Pod{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: corev1.NamespaceDefault}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
 		return nil
 	}
@@ -482,7 +489,7 @@ func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpo
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
 			Namespace: m.Namespace,
-			Labels:    labels,
+			Labels:    labelsForFederation(m),
 		},
 		Spec: corev1.PodSpec{
 			InitContainers: initContainers,
@@ -495,53 +502,7 @@ func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpo
 	return pod
 }
 
-func (r *ReconcileFederation) reconcileSvc(instance *api.Federation) error {
-
-	reqLogger := log
-
-	//check the healthiness of the federation service that is used for name resolving
-	foundService := &corev1.Service{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
-	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Making a new service for the federation", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		service := r.newSvc(instance)
-		reqLogger.Info("Creating a new Service %s/%s\n", service.Namespace, service.Name)
-		err = r.client.Create(context.TODO(), service)
-		if err != nil {
-			reqLogger.Info("Failed to create new Service: %v\n", err)
-			return err
-		}
-		return nil
-	} else if err != nil {
-		return err
-	}
-	return nil
-}
-
-// a service to find the federation by name internally in the cluster.
-func (r *ReconcileFederation) newSvc(m *api.Federation) *corev1.Service {
-	service := &corev1.Service{
-		ObjectMeta: metav1.ObjectMeta{
-			Name:      m.Name,
-			Namespace: m.Namespace,
-		},
-
-		Spec: corev1.ServiceSpec{
-			Selector: labelsForFederation(m),
-			Ports: []corev1.ServicePort{
-				{
-					Port: m.Spec.Template.Port,
-					TargetPort: intstr.IntOrString{
-						IntVal: m.Spec.Template.Port,
-					},
-				},
-			},
-		},
-	}
-	controllerutil.SetControllerReference(m, service, r.scheme)
-	return service
-}
-
+//JOB FUNCTIONS
 // A job that remove the (temporary) files and create some dirs...
 func (r *ReconcileFederation) newJobForFederation(m *api.Federation) *batchv1.Job {
 	times := int32(1)
@@ -656,4 +617,134 @@ func (r *ReconcileFederation) newJobForDataset(m *api.Federation, dataset string
 	}
 	controllerutil.SetControllerReference(m, job, r.scheme)
 	return job
+}
+
+//SERVICE FUNCTIONS
+func (r *ReconcileFederation) reconcileSvc(instance *api.Federation) error {
+
+	reqLogger := log
+
+	//check the healthiness of the federation service that is used for name resolving
+	foundService := &corev1.Service{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
+	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Making a new service for the federation", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+		service := r.newSvc(instance)
+		reqLogger.Info("Creating a new Service %s/%s\n", service.Namespace, service.Name)
+		err = r.client.Create(context.TODO(), service)
+		if err != nil {
+			reqLogger.Info("Failed to create new Service: %v\n", err)
+			return err
+		}
+		return nil
+	} else if err != nil {
+		return err
+	}
+	foundVirtualService := &istioclient.VirtualService{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundVirtualService)
+
+	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Making a new virtual service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+		service := r.newVirtualSvc(instance)
+		reqLogger.Info("Creating a new VRITUAL Service %s/%s\n", service.Namespace, service.Name)
+		err = r.client.Create(context.TODO(), service)
+		if err != nil {
+			reqLogger.Info("Failed to create new Virtual Service: %v\n", err)
+			return err
+		}
+		return nil
+	} else if err != nil {
+		return err
+	}
+	return nil
+}
+
+// a service to find the federation by name internally in the cluster.
+func (r *ReconcileFederation) newSvc(m *api.Federation) *corev1.Service {
+	service := &corev1.Service{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      m.Name,
+			Namespace: m.Namespace,
+		},
+
+		Spec: corev1.ServiceSpec{
+			Selector: labelsForFederation(m),
+			Ports: []corev1.ServicePort{
+				{
+					Port: m.Spec.Template.Port,
+					TargetPort: intstr.IntOrString{
+						IntVal: m.Spec.Template.Port,
+					},
+				},
+			},
+		},
+	}
+	controllerutil.SetControllerReference(m, service, r.scheme)
+	return service
+}
+
+func (r *ReconcileFederation) newVirtualSvc(m *api.Federation) *istioclient.VirtualService {
+	http := []*istioapi.HTTPRoute{}
+
+	//add the fault injection based on network topology in the federation virtual service
+	for _, incoming := range m.Spec.NetworkTopology {
+
+		httpMatchRequests := []*istioapi.HTTPMatchRequest{}
+		match := istioapi.HTTPMatchRequest{}
+		if incoming.Source == nil {
+
+		} else {
+			match = istioapi.HTTPMatchRequest{
+				SourceLabels: map[string]string{"datasetName": *incoming.Source, "benchmark": m.Namespace},
+			}
+		}
+		httpMatchRequests = append(httpMatchRequests, &match)
+
+		route := []*istioapi.HTTPRouteDestination{
+			{
+				Destination: &istioapi.Destination{
+					Host: m.Name + "." + m.Namespace,
+					Port: &istioapi.PortSelector{
+						Number: uint32(m.Spec.Template.Port),
+					},
+				},
+			},
+		}
+
+		fault := &istioapi.HTTPFaultInjection{
+			Delay: &istioapi.HTTPFaultInjection_Delay{
+				HttpDelayType: &istioapi.HTTPFaultInjection_Delay_FixedDelay{
+					FixedDelay: &findypes.Duration{
+						Seconds: *incoming.DelayInjection.FixedDelaySec,
+						Nanos:   *incoming.DelayInjection.FixedDelayMSec,
+					},
+				},
+				Percentage: &istioapi.Percent{Value: float64(*incoming.DelayInjection.Percentage)},
+			},
+		}
+		httpRoute := istioapi.HTTPRoute{
+			Match: httpMatchRequests,
+			Route: route,
+			Fault: fault,
+		}
+
+		http = append(http, &httpRoute)
+	}
+
+	//append dummy http so its not empty. Do not remove this!
+	http = append(http, &istioapi.HTTPRoute{})
+
+	vsvc := &istioclient.VirtualService{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      m.Name,
+			Namespace: m.Namespace,
+		},
+		Spec: istioapi.VirtualService{
+			Hosts: []string{m.Name},
+			Http:  http,
+		},
+	}
+
+	controllerutil.SetControllerReference(m, vsvc, r.scheme)
+	return vsvc
 }

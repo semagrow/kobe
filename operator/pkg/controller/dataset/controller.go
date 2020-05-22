@@ -331,7 +331,7 @@ func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) error {
 		reqLogger.Info("Creating a new VRITUAL Service %s/%s\n", service.Namespace, service.Name)
 		err = r.client.Create(context.TODO(), service)
 		if err != nil {
-			reqLogger.Info("Failed to create new Service: %v\n", err)
+			reqLogger.Info("Failed to create new Virtual Service: %v\n", err)
 			return err
 		}
 		return nil
@@ -399,7 +399,7 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 		route := []*istioapi.HTTPRouteDestination{
 			{
 				Destination: &istioapi.Destination{
-					Host: m.Name,
+					Host: m.Name + "." + m.Namespace,
 					Port: &istioapi.PortSelector{
 						Number: m.Spec.SystemSpec.Port,
 					},
