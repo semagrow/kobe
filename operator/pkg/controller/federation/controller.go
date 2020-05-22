@@ -715,8 +715,8 @@ func (r *ReconcileFederation) newVirtualSvc(m *api.Federation) *istioclient.Virt
 			Delay: &istioapi.HTTPFaultInjection_Delay{
 				HttpDelayType: &istioapi.HTTPFaultInjection_Delay_FixedDelay{
 					FixedDelay: &findypes.Duration{
-						Seconds: *incoming.DelayInjection.FixedDelaySec,
-						Nanos:   *incoming.DelayInjection.FixedDelayMSec,
+						Seconds: int64(*incoming.DelayInjection.FixedDelaySec),
+						Nanos:   int32(*incoming.DelayInjection.FixedDelayMSec * 1000000),
 					},
 				},
 				Percentage: &istioapi.Percent{Value: float64(*incoming.DelayInjection.Percentage)},

@@ -411,8 +411,8 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 			Delay: &istioapi.HTTPFaultInjection_Delay{
 				HttpDelayType: &istioapi.HTTPFaultInjection_Delay_FixedDelay{
 					FixedDelay: &findypes.Duration{
-						Seconds: *incoming.DelayInjection.FixedDelaySec,
-						Nanos:   *incoming.DelayInjection.FixedDelayMSec,
+						Seconds: int64(*incoming.DelayInjection.FixedDelaySec),
+						Nanos:   int32(*incoming.DelayInjection.FixedDelayMSec * 1000000),
 					},
 				},
 				Percentage: &istioapi.Percent{Value: float64(*incoming.DelayInjection.Percentage)},
@@ -428,7 +428,17 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 	}
 
 	//append dummy http so its not empty. Do not remove this!
-	http = append(http, &istioapi.HTTPRoute{})
+	route := []*istioapi.HTTPRouteDestination{
+		{
+			Destination: &istioapi.Destination{
+				Host: m.Name + "." + m.Namespace,
+				Port: &istioapi.PortSelector{
+					Number: m.Spec.SystemSpec.Port,
+				},
+			},
+		},
+	}
+	http = append(http, &istioapi.HTTPRoute{Route: route})
 
 	vsvc := &istioclient.VirtualService{
 		ObjectMeta: metav1.ObjectMeta{

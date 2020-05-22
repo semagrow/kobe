@@ -31,16 +31,16 @@ type Dataset struct {
 
 type Delay struct {
 	// Add a fixed delay before forwarding the request. Format: 1h/1m/1s/1ms. MUST be >=1ms.
-	FixedDelaySec *int64 `json:"fixedDelaySec"`
+	FixedDelaySec *uint32 `json:"fixedDelaySec,omitempty"`
 
 	// Add a fixed delay before forwarding the request. Format: 1h/1m/1s/1ms. MUST be >=1ms.
-	FixedDelayMSec *int32 `json:"fixedDelayMSec"`
+	FixedDelayMSec *uint32 `json:"fixedDelayMSec,omitempty"`
 
 	// +optional
-	Percentage *int32 `json:"percentage,omitempty"` // `protobuf:"fixed64,1,opt,name=value,proto3" json:"percentage,omitempty"`
+	Percentage *uint32 `json:"percentage,omitempty"` // `protobuf:"fixed64,1,opt,name=value,proto3" json:"percentage,omitempty"`
 
 	// +optional
-	Percent *int32 `json:"percent,omitempty"`
+	Percent *uint32 `json:"percent,omitempty"`
 }
 
 type NetworkConnection struct {

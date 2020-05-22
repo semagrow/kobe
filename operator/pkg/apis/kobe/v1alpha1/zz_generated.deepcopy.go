@@ -255,22 +255,22 @@ func (in *Delay) DeepCopyInto(out *Delay) {
 	*out = *in
 	if in.FixedDelaySec != nil {
 		in, out := &in.FixedDelaySec, &out.FixedDelaySec
-		*out = new(int64)
+		*out = new(uint32)
 		**out = **in
 	}
 	if in.FixedDelayMSec != nil {
 		in, out := &in.FixedDelayMSec, &out.FixedDelayMSec
-		*out = new(int32)
+		*out = new(uint32)
 		**out = **in
 	}
 	if in.Percentage != nil {
 		in, out := &in.Percentage, &out.Percentage
-		*out = new(int32)
+		*out = new(uint32)
 		**out = **in
 	}
 	if in.Percent != nil {
 		in, out := &in.Percent, &out.Percent
-		*out = new(int32)
+		*out = new(uint32)
 		**out = **in
 	}
 	return

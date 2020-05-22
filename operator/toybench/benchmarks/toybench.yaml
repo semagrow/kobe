@@ -10,23 +10,22 @@ spec:
       templateRef: virtuosotemplate
       networkTopology: 
         - datasetSource: toy1
-          delayinjection:
-            fixeDelaySec: 1
+          delayInjection:
+            fixedDelaySec: 1
             percentage: 100
       federatorConnection:
          delayInjection:
            fixedDelaySec: 2
+           fixedDelayMSec: 100
            percentage: 100
-
-    - name: toy2
-      files:
-        -url: http://users.iit.demokritos.gr/~antru/dumps/toy2.tar.gz
-      templateRef: virtuosotemplate
-      federatorConnection:
-         delayInjection:
-           fixedDelaySec: 2
-           percentage: 100
-
+   - name: toy2
+     files:
+       -url: http://users.iit.demokritos.gr/~antru/dumps/toy2.tar.gz
+     templateRef: virtuosotemplate
+     federatorConnection:
+        delayInjection:
+          fixedDelaySec: 2
+          percentage: 100
   queries:
     - name: tq1
       language: sparql
@@ -51,4 +50,3 @@ spec:
 
   OPTIONAL { $drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> $transform . } 
 }"
-
