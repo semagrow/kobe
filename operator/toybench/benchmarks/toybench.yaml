@@ -18,14 +18,14 @@ spec:
            fixedDelaySec: 2
            fixedDelayMSec: 100
            percentage: 100
-   - name: toy2
-     files:
-       -url: http://users.iit.demokritos.gr/~antru/dumps/toy2.tar.gz
-     templateRef: virtuosotemplate
-     federatorConnection:
-        delayInjection:
-          fixedDelaySec: 2
-          percentage: 100
+    - name: toy2
+      files:
+        -url: http://users.iit.demokritos.gr/~antru/dumps/toy2.tar.gz
+      templateRef: virtuosotemplate
+      federatorConnection:
+         delayInjection:
+           fixedDelaySec: 2
+           percentage: 100
   queries:
     - name: tq1
       language: sparql
@@ -46,7 +46,4 @@ spec:
   ?s <http://www.w3.org/2002/07/owl#sameAs> ?o .
   ?o <http://example.org/value> ?v .
   FILTER (?v > 33)
-}"
-
-  OPTIONAL { $drug <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/biotransformation> $transform . } 
 }"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /data
-
+until curl --head localhost:15000 ; do echo "Waiting for Sidecar" ; sleep 3 ; done ; echo Sidecar available;
 mkdir -p dumps
 if [ "$FORCE_LOAD" ] &&  [ -d "/kobe/dataset/$DATASET_NAME" ]; then
     echo "removing old files completely"   

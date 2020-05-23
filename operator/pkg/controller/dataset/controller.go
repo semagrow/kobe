@@ -132,8 +132,8 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 	// check ForceLoad
 
 	//Service health check for the dataset
-	if err := r.reconcileSvc(instance); err != nil {
-		return reconcile.Result{}, err
+	if requeue, err := r.reconcileSvc(instance); requeue == true {
+		return reconcile.Result{RequeueAfter: 5000000000}, err
 	}
 
 	// From here do the actual work to set up the pod and service for the dataset
@@ -145,16 +145,16 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 	}
 
 	if instance.Status.PodNames == nil && len(instance.Status.PodNames) == 0 {
-		return reconcile.Result{RequeueAfter: 25}, nil
+		return reconcile.Result{RequeueAfter: 10000000000}, nil
 	}
-	if instance.Status.PodNames != nil && len(instance.Status.PodNames) > 0 {
-		instance.Status.ForceLoad = false
-		err := r.client.Status().Update(context.TODO(), instance)
-		if err != nil {
-			reqLogger.Info("failed to update the dataset forcedownload flag")
-			return reconcile.Result{}, err
-		}
-	}
+	// if instance.Status.PodNames != nil && len(instance.Status.PodNames) > 0 {
+	// 	instance.Status.ForceLoad = false //????????????/
+	// 	err := r.client.Status().Update(context.TODO(), instance)
+	// 	if err != nil {
+	// 		reqLogger.Info("failed to update the dataset forcedownload flag")
+	// 		return reconcile.Result{}, err
+	// 	}
+	// }
 	// -------------------------------finishing line everything should be fine here---------------------------------
 	reqLogger.Info("Loop for a dataset went through the end for reconciling dataset\n")
 	return reconcile.Result{}, nil
@@ -273,7 +273,15 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	volumes = append(volumes, volume)
 
 	initContainers := m.Spec.SystemSpec.InitContainers
-
+	//test init container
+	// dummyInit := corev1.Container{
+	// 	Image:           "busybox",
+	// 	Name:            m.Name,
+	// 	ImagePullPolicy: corev1.PullIfNotPresent,
+	// 	Command:         []string{"sh", "-c"},
+	// 	Args:            []string{"sleep 120 ; wget http://users.iit.demokritos.gr/~antru/dumps/toy1.tar.gz"},
+	// }
+	//initContainers = append(initContainers, dummyInit)
 	if m.Status.ForceLoad == true {
 		// add volumemounts to importcontainers
 		volumemount := corev1.VolumeMount{
@@ -303,7 +311,7 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	return pod
 }
 
-func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) error {
+func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) (bool, error) {
 	reqLogger := log
 	foundService := &corev1.Service{}
 	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
@@ -315,11 +323,11 @@ func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) error {
 		err = r.client.Create(context.TODO(), service)
 		if err != nil {
 			reqLogger.Info("Failed to create new Service: %v\n", err)
-			return err
+			return true, err
 		}
-		return nil
+		return true, nil
 	} else if err != nil {
-		return err
+		return true, err
 	}
 
 	foundVirtualService := &istioclient.VirtualService{}
@@ -332,14 +340,14 @@ func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) error {
 		err = r.client.Create(context.TODO(), service)
 		if err != nil {
 			reqLogger.Info("Failed to create new Virtual Service: %v\n", err)
-			return err
+			return true, err
 		}
-		return nil
+		return true, nil
 	} else if err != nil {
-		return err
+		return true, err
 	}
 
-	return nil
+	return false, nil
 }
 
 func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
@@ -362,11 +370,8 @@ func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
 		},
 
 		Spec: corev1.ServiceSpec{
-			Selector: map[string]string{
-				"kobeoperator_cr": m.Name,
-				"benchmark":       m.Namespace,
-			},
-			Ports: servicePorts,
+			Selector: labelsForDataset(m),
+			Ports:    servicePorts,
 		},
 	}
 	controllerutil.SetControllerReference(m, service, r.scheme)
@@ -388,10 +393,12 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 		if incoming.Source == nil {
 			match = istioapi.HTTPMatchRequest{
 				SourceLabels: map[string]string{"kobe-resource": "federation"},
+				Port:         m.Spec.SystemSpec.Port,
 			}
 		} else {
 			match = istioapi.HTTPMatchRequest{
 				SourceLabels: map[string]string{"datasetName": *incoming.Source, "benchmark": m.Namespace},
+				Port:         m.Spec.SystemSpec.Port,
 			}
 		}
 		httpMatchRequests = append(httpMatchRequests, &match)
@@ -428,17 +435,22 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 	}
 
 	//append dummy http so its not empty. Do not remove this!
+	// httpMatchRequests := []*istioapi.HTTPMatchRequest{{
+	// 	Name:         "dummy",
+	// 	SourceLabels: map[string]string{"datasetName": "dummy", "benchmark": m.Namespace},
+	// 	Port:         m.Spec.SystemSpec.Port,
+	// }}
 	route := []*istioapi.HTTPRouteDestination{
 		{
 			Destination: &istioapi.Destination{
 				Host: m.Name + "." + m.Namespace,
-				Port: &istioapi.PortSelector{
-					Number: m.Spec.SystemSpec.Port,
-				},
 			},
 		},
 	}
-	http = append(http, &istioapi.HTTPRoute{Route: route})
+	http = append(http, &istioapi.HTTPRoute{
+		Route: route,
+	},
+	)
 
 	vsvc := &istioclient.VirtualService{
 		ObjectMeta: metav1.ObjectMeta{
@@ -446,7 +458,7 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 			Namespace: m.Namespace,
 		},
 		Spec: istioapi.VirtualService{
-			Hosts: []string{m.Name},
+			Hosts: []string{m.Name + "." + m.Namespace},
 			Http:  http,
 		},
 	}

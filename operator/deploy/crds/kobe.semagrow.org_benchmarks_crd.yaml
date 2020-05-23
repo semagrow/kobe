@@ -665,7 +665,7 @@ spec:
                           fixedDelaySec:
                             description: 'Add a fixed delay before forwarding the
                               request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
-                            format: int64
+                            format: int32
                             type: integer
                           percent:
                             format: int32
@@ -673,9 +673,6 @@ spec:
                           percentage:
                             format: int32
                             type: integer
-                        required:
-                        - fixedDelayMSec
-                        - fixedDelaySec
                         type: object
                     type: object
                   files:
@@ -707,7 +704,7 @@ spec:
                             fixedDelaySec:
                               description: 'Add a fixed delay before forwarding the
                                 request. Format: 1h/1m/1s/1ms. MUST be >=1ms.'
-                              format: int64
+                              format: int32
                               type: integer
                             percent:
                               format: int32
@@ -715,9 +712,6 @@ spec:
                             percentage:
                               format: int32
                               type: integer
-                          required:
-                          - fixedDelayMSec
-                          - fixedDelaySec
                           type: object
                       type: object
                     type: array
