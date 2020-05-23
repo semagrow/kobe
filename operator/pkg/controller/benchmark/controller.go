@@ -156,30 +156,15 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		// Stop reconciliation as the item is being deleted
 		return reconcile.Result{}, nil
 	}
-
-	//check if the datasets exist else create them and let dataset controller build the resources
-	foundDataset := &api.EphemeralDataset{}
-	for _, dataset := range instance.Spec.Datasets {
-
-		err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Name, Namespace: instance.Name}, foundDataset)
-		if err != nil && errors.IsNotFound(err) {
-			ed := r.newEphemeralDataset(instance, dataset)
-			err := r.client.Create(context.TODO(), ed)
-			return reconcile.Result{}, err
-		} else if err != nil {
-			reqLogger.Info("Failed to get the ephemeral dataset in the namespace of the benchmark: %v\n", err)
-			return reconcile.Result{}, err
-		}
-	}
-
+	reqLogger.Info("NOW I LL CHECK ABOUT THE CONFIG MAP\n")
 	//check if config map exists else create it
 	//config map contains the queries assosciated with this benchmark setup in seperate files .
 	foundConfig := &corev1.ConfigMap{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundConfig)
 	if err != nil && errors.IsNotFound(err) {
-		if instance.Spec.Queries == nil {
-			return reconcile.Result{}, err
-		}
+		// if instance.Spec.Queries == nil {
+		// 	return reconcile.Result{}, err
+		// }
 		//create a new config map from the queries that are defined in the yaml of this benchmark
 		querymap := map[string]string{}
 		for _, query := range instance.Spec.Queries {
@@ -193,7 +178,23 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		}
 		return reconcile.Result{Requeue: true}, nil
 	}
-	reqLogger.Info("FINISHED RECONCILING LOOP FOR BENCHMARK SUCCESSFULLY")
+
+	//check if the datasets exist else create them and let dataset controller build the resources
+	foundDataset := &api.EphemeralDataset{}
+	for _, dataset := range instance.Spec.Datasets {
+
+		err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Name, Namespace: instance.Name}, foundDataset)
+		if err != nil && errors.IsNotFound(err) {
+			ed := r.newEphemeralDataset(instance, dataset)
+			err := r.client.Create(context.TODO(), ed)
+			return reconcile.Result{RequeueAfter: 1000000000}, err
+		} else if err != nil {
+			reqLogger.Info("Failed to get the ephemeral dataset in the namespace of the benchmark: %v\n", err)
+			return reconcile.Result{}, err
+		}
+	}
+
+	reqLogger.Info("FINISHED RECONCILING LOOP FOR BENCHMARK SUCCESSFULLY\n")
 	return reconcile.Result{}, nil
 }
 

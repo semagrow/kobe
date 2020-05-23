@@ -3,8 +3,9 @@ package dataset
 import (
 	"context"
 	"reflect"
+	"strconv"
 
-	findypes "github.com/gogo/protobuf/types"
+	findtypes "github.com/gogo/protobuf/types"
 	api "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	istioapi "istio.io/api/networking/v1alpha3"
 	istioclient "istio.io/client-go/pkg/apis/networking/v1alpha3"
@@ -351,10 +352,15 @@ func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) (bool, e
 }
 
 func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
+	// servicePorts := []corev1.ServicePort{{
+	// 	Port: int32(m.Spec.SystemSpec.Port),
+	// 	Name: "http",
+	// }}
 	servicePorts := []corev1.ServicePort{}
-	for _, container := range m.Spec.SystemSpec.Containers {
-		for _, port := range container.Ports {
+	for i, container := range m.Spec.SystemSpec.Containers {
+		for j, port := range container.Ports {
 			newPort := corev1.ServicePort{
+				Name: "http-" + strconv.Itoa(i) + "-" + strconv.Itoa(j),
 				Port: port.ContainerPort,
 				TargetPort: intstr.IntOrString{
 					IntVal: port.ContainerPort,
@@ -367,6 +373,7 @@ func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
 			Namespace: m.Namespace,
+			Labels:    labelsForDataset(m),
 		},
 
 		Spec: corev1.ServiceSpec{
@@ -397,7 +404,7 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 			}
 		} else {
 			match = istioapi.HTTPMatchRequest{
-				SourceLabels: map[string]string{"datasetName": *incoming.Source, "benchmark": m.Namespace},
+				SourceLabels: map[string]string{"app": "Kobe-Operator", "datasetName": *incoming.Source, "benchmark": m.Namespace},
 				Port:         m.Spec.SystemSpec.Port,
 			}
 		}
@@ -406,25 +413,29 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 		route := []*istioapi.HTTPRouteDestination{
 			{
 				Destination: &istioapi.Destination{
-					Host: m.Name + "." + m.Namespace,
+					Host: m.Name, // + "." + m.Namespace,
 					Port: &istioapi.PortSelector{
 						Number: m.Spec.SystemSpec.Port,
 					},
 				},
 			},
 		}
-
+		fixedDelay := &findtypes.Duration{}
+		if incoming.DelayInjection.FixedDelaySec != nil {
+			fixedDelay.Seconds = int64(*incoming.DelayInjection.FixedDelaySec)
+		}
+		if incoming.DelayInjection.FixedDelayMSec != nil {
+			fixedDelay.Nanos = int32(*incoming.DelayInjection.FixedDelayMSec * 1000000)
+		}
 		fault := &istioapi.HTTPFaultInjection{
 			Delay: &istioapi.HTTPFaultInjection_Delay{
 				HttpDelayType: &istioapi.HTTPFaultInjection_Delay_FixedDelay{
-					FixedDelay: &findypes.Duration{
-						Seconds: int64(*incoming.DelayInjection.FixedDelaySec),
-						Nanos:   int32(*incoming.DelayInjection.FixedDelayMSec * 1000000),
-					},
+					FixedDelay: fixedDelay,
 				},
 				Percentage: &istioapi.Percent{Value: float64(*incoming.DelayInjection.Percentage)},
 			},
 		}
+
 		httpRoute := istioapi.HTTPRoute{
 			Match: httpMatchRequests,
 			Route: route,
@@ -447,10 +458,20 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 			},
 		},
 	}
+	// fixedDelay := &findtypes.Duration{}
+	// fixedDelay.Seconds = int64(10)
+	// fault := &istioapi.HTTPFaultInjection{
+	// 	Delay: &istioapi.HTTPFaultInjection_Delay{
+	// 		HttpDelayType: &istioapi.HTTPFaultInjection_Delay_FixedDelay{
+	// 			FixedDelay: fixedDelay,
+	// 		},
+	// 		Percentage: &istioapi.Percent{Value: float64(95)},
+	// 	},
+	// }
 	http = append(http, &istioapi.HTTPRoute{
 		Route: route,
-	},
-	)
+		//Fault: fault,
+	})
 
 	vsvc := &istioclient.VirtualService{
 		ObjectMeta: metav1.ObjectMeta{

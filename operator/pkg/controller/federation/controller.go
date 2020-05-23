@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"strconv"
 
-	findypes "github.com/gogo/protobuf/types"
+	findtypes "github.com/gogo/protobuf/types"
 	api "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	"github.com/semagrow/kobe/operator/pkg/util"
 	istioapi "istio.io/api/networking/v1alpha3"
@@ -665,6 +665,7 @@ func (r *ReconcileFederation) newSvc(m *api.Federation) *corev1.Service {
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name,
 			Namespace: m.Namespace,
+			Labels:    labelsForFederation(m),
 		},
 
 		Spec: corev1.ServiceSpec{
@@ -672,6 +673,7 @@ func (r *ReconcileFederation) newSvc(m *api.Federation) *corev1.Service {
 			Ports: []corev1.ServicePort{
 				{
 					Port: m.Spec.Template.Port,
+					Name: "http",
 					TargetPort: intstr.IntOrString{
 						IntVal: m.Spec.Template.Port,
 					},
@@ -711,13 +713,17 @@ func (r *ReconcileFederation) newVirtualSvc(m *api.Federation) *istioclient.Virt
 			},
 		}
 
+		fixedDelay := &findtypes.Duration{}
+		if incoming.DelayInjection.FixedDelaySec != nil {
+			fixedDelay.Seconds = int64(*incoming.DelayInjection.FixedDelaySec)
+		}
+		if incoming.DelayInjection.FixedDelayMSec != nil {
+			fixedDelay.Nanos = int32(*incoming.DelayInjection.FixedDelayMSec * 1000000)
+		}
 		fault := &istioapi.HTTPFaultInjection{
 			Delay: &istioapi.HTTPFaultInjection_Delay{
 				HttpDelayType: &istioapi.HTTPFaultInjection_Delay_FixedDelay{
-					FixedDelay: &findypes.Duration{
-						Seconds: int64(*incoming.DelayInjection.FixedDelaySec),
-						Nanos:   int32(*incoming.DelayInjection.FixedDelayMSec * 1000000),
-					},
+					FixedDelay: fixedDelay,
 				},
 				Percentage: &istioapi.Percent{Value: float64(*incoming.DelayInjection.Percentage)},
 			},
@@ -732,7 +738,18 @@ func (r *ReconcileFederation) newVirtualSvc(m *api.Federation) *istioclient.Virt
 	}
 
 	//append dummy http so its not empty. Do not remove this!
-	http = append(http, &istioapi.HTTPRoute{})
+
+	route := []*istioapi.HTTPRouteDestination{
+		{
+			Destination: &istioapi.Destination{
+				Host: m.Name + "." + m.Namespace,
+			},
+		},
+	}
+	http = append(http, &istioapi.HTTPRoute{
+		Route: route,
+		//Fault: fault,
+	})
 
 	vsvc := &istioclient.VirtualService{
 		ObjectMeta: metav1.ObjectMeta{

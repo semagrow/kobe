@@ -6,21 +6,21 @@ spec:
   datasets:
     - name: toy1
       files:
-        -url: http://users.iit.demokritos.gr/~antru/dumps/toy1.tar.gz
+        - url: http://users.iit.demokritos.gr/~antru/dumps/toy1.tar.gz
       templateRef: virtuosotemplate
       networkTopology: 
-        - datasetSource: toy1
+        - datasetSource: toy2
           delayInjection:
-            fixedDelaySec: 1
-            percentage: 100
+            fixedDelaySec: 3
+            percentage: 50
       federatorConnection:
          delayInjection:
            fixedDelaySec: 2
-           fixedDelayMSec: 100
+           fixedDelayMSec: 150
            percentage: 100
     - name: toy2
       files:
-        -url: http://users.iit.demokritos.gr/~antru/dumps/toy2.tar.gz
+        - url: http://users.iit.demokritos.gr/~antru/dumps/toy2.tar.gz
       templateRef: virtuosotemplate
       federatorConnection:
          delayInjection:
