@@ -2288,7 +2288,7 @@ spec:
           description: FederationStatus defines the observed state of KobeFederation
           properties:
             phase:
-              type: string
+              type: integer
             podNames:
               items:
                 type: string

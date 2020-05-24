@@ -5,9 +5,9 @@ metadata:
 spec:
   benchmark: toybench
   federatorName: semagrow
-  federatorTemplateRef: semagrow
+  federatorTemplateRef: semagrowtemplate
   evaluator:
     image: kostbabis/kobe-evaluator
-  timesToRun: 1
+  timesToRun: 3
   dryRun: false
-  forceNewInit: false 
+  forceNewInit: true 

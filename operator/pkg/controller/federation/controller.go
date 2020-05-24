@@ -146,7 +146,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	endpointsForInit := []string{} // here we will collect the endpoints that correspond to the selected datasets in the above slice
 
 	// getting plan for metadata creation
-	if instance.Status.Phase == api.FederationInitializing {
+	if instance.Status.Phase == 0 {
 		// the federation controller still runs the init loop as long as this
 		// flag is true
 
@@ -259,7 +259,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		err = r.client.Delete(context.TODO(), foundJob, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
 		if err != nil {
 			reqLogger.Info("Failed to delete the federation job from the cluster")
-			return reconcile.Result{}, err
+			return reconcile.Result{Requeue: true}, err
 		}
 
 		// Never rerun the init jobs (this whole part of the loop) even if the
@@ -270,7 +270,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		// federation pod drops and this controller relaunches it ,it will not
 		// recreate the init files per dataset since datasetsToInit will be empty
 		// which means we save time.
-		instance.Status.Phase = api.FederationRunning
+		instance.Status.Phase = 1
 		err = r.client.Status().Update(context.TODO(), instance)
 		if err != nil {
 			reqLogger.Info("Failed to update the init flag")
@@ -279,10 +279,9 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	}
 
 	//Csheck for the health of service and virtual service
-	if err := r.reconcileSvc(instance); err != nil {
-		return reconcile.Result{}, err
+	if requeue, err := r.reconcileSvc(instance); requeue == true {
+		return reconcile.Result{RequeueAfter: 5000000000}, err
 	}
-
 	// NOTE: We currently use a Pod instead of a Deployment to avoid the respawning of
 	// the Pod (and therefore re-execute the initContainers)
 	// check for the healthiness of the federation pod and create it if it
@@ -290,17 +289,13 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	created, err := r.reconcilePod(instance, datasets, endpoints)
 	//created, err := r.reconcilePod(instance, datasetsForInit, endpointsForInit)
 	if created {
-		return reconcile.Result{Requeue: true}, err
+		return reconcile.Result{RequeueAfter: 1000000000}, err
 	} else if err != nil {
-		return reconcile.Result{}, err
-	}
-
-	if err := r.reconcileSvc(instance); err != nil {
-		return reconcile.Result{}, err
+		return reconcile.Result{RequeueAfter: 1000000000}, err
 	}
 
 	//all checks are completed successfully
-	reqLogger.Info("Loop went through the end for reconciling this federation")
+	reqLogger.Info("Loop went through the end for reconciling this federation\n")
 
 	return reconcile.Result{}, nil
 }
@@ -334,11 +329,11 @@ func (r *ReconcileFederation) reconcilePod(instance *api.Federation, datasets []
 		err = r.client.Create(context.TODO(), pod)
 		if err != nil {
 			reqLogger.Info("Failed to create new Pod: %v\n", err)
-			return false, err
+			return true, err
 		}
 		return true, nil
 	} else if err != nil {
-		return false, err
+		return true, err
 	}
 
 	// check for status changes
@@ -350,7 +345,7 @@ func (r *ReconcileFederation) reconcilePod(instance *api.Federation, datasets []
 	err = r.client.List(context.TODO(), podList, listOps...)
 	if err != nil {
 		reqLogger.Info("Failed to list pods: %v", err)
-		return false, err
+		return true, err
 	}
 	podNames := getPodNames(podList.Items)
 
@@ -360,7 +355,7 @@ func (r *ReconcileFederation) reconcilePod(instance *api.Federation, datasets []
 		err := r.client.Update(context.TODO(), instance)
 		if err != nil {
 			reqLogger.Info("failed to update node status: %v", err)
-			return false, err
+			return true, err
 		}
 	}
 
@@ -379,6 +374,7 @@ func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpo
 	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes
 
 	//create init containers  that make one config file for federation per dataset dump /if not needed then these can be set to do nothing
+	//by providing a dummy image in the field that defines the image that creates init file from dump
 	initContainers := m.Spec.Template.InitContainers
 	volumes := []corev1.Volume{}
 	for i, datasetname := range datasets {
@@ -485,9 +481,19 @@ func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpo
 	for i := range m.Spec.Template.Containers {
 		m.Spec.Template.Containers[i].VolumeMounts = append(m.Spec.Template.Containers[i].VolumeMounts, mountConf)
 	}
+	name1 := ""
+	if m.Status.Phase == 0 {
+		name1 = "yeap"
+	}
+	if m.Status.Phase == 1 {
+		name1 = "nope"
+	}
+	if &m.Status.Phase == nil {
+		name1 = "wtf"
+	}
 	pod := &corev1.Pod{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      m.Name,
+			Name:      m.Name + name1,
 			Namespace: m.Namespace,
 			Labels:    labelsForFederation(m),
 		},
@@ -574,7 +580,7 @@ func (r *ReconcileFederation) newJobForDataset(m *api.Federation, dataset string
 	vmounts := []corev1.VolumeMount{}
 
 	nfsPodFound := &corev1.Pod{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: m.Namespace}, nfsPodFound)
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: corev1.NamespaceDefault}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
 		return nil
 	}
@@ -620,7 +626,7 @@ func (r *ReconcileFederation) newJobForDataset(m *api.Federation, dataset string
 }
 
 //SERVICE FUNCTIONS
-func (r *ReconcileFederation) reconcileSvc(instance *api.Federation) error {
+func (r *ReconcileFederation) reconcileSvc(instance *api.Federation) (bool, error) {
 
 	reqLogger := log
 
@@ -634,11 +640,11 @@ func (r *ReconcileFederation) reconcileSvc(instance *api.Federation) error {
 		err = r.client.Create(context.TODO(), service)
 		if err != nil {
 			reqLogger.Info("Failed to create new Service: %v\n", err)
-			return err
+			return true, err
 		}
-		return nil
+		return true, nil
 	} else if err != nil {
-		return err
+		return true, err
 	}
 	foundVirtualService := &istioclient.VirtualService{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundVirtualService)
@@ -650,13 +656,13 @@ func (r *ReconcileFederation) reconcileSvc(instance *api.Federation) error {
 		err = r.client.Create(context.TODO(), service)
 		if err != nil {
 			reqLogger.Info("Failed to create new Virtual Service: %v\n", err)
-			return err
+			return true, err
 		}
-		return nil
+		return true, nil
 	} else if err != nil {
-		return err
+		return true, err
 	}
-	return nil
+	return false, nil
 }
 
 // a service to find the federation by name internally in the cluster.

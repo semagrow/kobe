@@ -14,7 +14,6 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
-	"k8s.io/apimachinery/pkg/util/intstr"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
@@ -268,7 +267,7 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 		return nil
 	}
 	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes
-	volume := corev1.Volume{Name: "cache", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/"}}}
+	volume := corev1.Volume{Name: "nfs", VolumeSource: corev1.VolumeSource{NFS: &corev1.NFSVolumeSource{Server: nfsip, Path: "/exports/"}}}
 
 	volumes := []corev1.Volume{}
 	volumes = append(volumes, volume)
@@ -283,16 +282,20 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	// 	Args:            []string{"sleep 120 ; wget http://users.iit.demokritos.gr/~antru/dumps/toy1.tar.gz"},
 	// }
 	//initContainers = append(initContainers, dummyInit)
-	if m.Status.ForceLoad == true {
-		// add volumemounts to importcontainers
-		volumemount := corev1.VolumeMount{
-			Name:      "nfs",
-			MountPath: "/kobe/dataset"}
+	// add volumemounts to importcontainers
+	volumemount := corev1.VolumeMount{
+		Name:      "nfs",
+		MountPath: "/kobe/dataset"}
 
-		volumemounts := []corev1.VolumeMount{}
-		volumemounts = append(volumemounts, volumemount)
+	volumemounts := []corev1.VolumeMount{}
+	volumemounts = append(volumemounts, volumemount)
 
-		initContainers = append(initContainers, m.Spec.SystemSpec.ImportContainers...)
+	initContainers = append(initContainers, m.Spec.SystemSpec.ImportContainers...)
+
+	//supply all containers with their mount to the nfs
+	//currently we give same mounts to every container in the pod
+	for i := range m.Spec.SystemSpec.Containers {
+		m.Spec.SystemSpec.Containers[i].VolumeMounts = append(m.Spec.SystemSpec.Containers[i].VolumeMounts, volumemounts...)
 	}
 
 	pod := &corev1.Pod{
@@ -352,21 +355,21 @@ func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) (bool, e
 }
 
 func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
-	// servicePorts := []corev1.ServicePort{{
-	// 	Port: int32(m.Spec.SystemSpec.Port),
-	// 	Name: "http",
-	// }}
-	servicePorts := []corev1.ServicePort{}
+	servicePorts := []corev1.ServicePort{{
+		Port: int32(m.Spec.SystemSpec.Port),
+		Name: "http",
+	}}
+
 	for i, container := range m.Spec.SystemSpec.Containers {
 		for j, port := range container.Ports {
-			newPort := corev1.ServicePort{
-				Name: "http-" + strconv.Itoa(i) + "-" + strconv.Itoa(j),
-				Port: port.ContainerPort,
-				TargetPort: intstr.IntOrString{
-					IntVal: port.ContainerPort,
-				},
+			if port.ContainerPort != int32(m.Spec.SystemSpec.Port) {
+
+				newPort := corev1.ServicePort{
+					Name: "http-" + strconv.Itoa(i) + strconv.Itoa(j),
+					Port: port.ContainerPort,
+				}
+				servicePorts = append(servicePorts, newPort)
 			}
-			servicePorts = append(servicePorts, newPort)
 		}
 	}
 	service := &corev1.Service{
@@ -413,7 +416,7 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 		route := []*istioapi.HTTPRouteDestination{
 			{
 				Destination: &istioapi.Destination{
-					Host: m.Name, // + "." + m.Namespace,
+					Host: m.Name, //+ "." + m.Namespace,
 					Port: &istioapi.PortSelector{
 						Number: m.Spec.SystemSpec.Port,
 					},
@@ -454,7 +457,7 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 	route := []*istioapi.HTTPRouteDestination{
 		{
 			Destination: &istioapi.Destination{
-				Host: m.Name + "." + m.Namespace,
+				Host: m.Name, //+ "." + m.Namespace,
 			},
 		},
 	}
@@ -479,7 +482,7 @@ func (r *ReconcileDataset) newVirtualSvc(m *api.EphemeralDataset) *istioclient.V
 			Namespace: m.Namespace,
 		},
 		Spec: istioapi.VirtualService{
-			Hosts: []string{m.Name + "." + m.Namespace},
+			Hosts: []string{m.Name}, //+ "." + m.Namespace},
 			Http:  http,
 		},
 	}

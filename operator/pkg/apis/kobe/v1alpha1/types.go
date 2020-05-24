@@ -132,10 +132,10 @@ const (
 // Evaluator defines the
 type Evaluator struct {
 	Image           string        `json:"image"`
-	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy"`
-	Command         []string      `json:"command"`
-	Parallelism     int32         `json:"parallelism"`
-	Env             []v1.EnvVar   `json:"env"`
+	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy,omitempty"`
+	Command         []string      `json:"command,omitempty"`
+	Parallelism     int32         `json:"parallelism,omitempty"`
+	Env             []v1.EnvVar   `json:"env,omitempty"`
 }
 
 // ExperimentSpec defines the desired state of Experiment
@@ -143,7 +143,7 @@ type Evaluator struct {
 type ExperimentSpec struct {
 	Benchmark            string         `json:"benchmark"`
 	FederatorName        string         `json:"federatorName"`
-	FederatorSpec        *FederatorSpec `json:"federatorSpec"`
+	FederatorSpec        *FederatorSpec `json:"federatorSpec,omitempty"`
 	FederatorTemplateRef string         `json:"federatorTemplateRef,omitempty"`
 	Evaluator            Evaluator      `json:"evaluator"`
 	TimesToRun           int            `json:"timesToRun"`
@@ -203,8 +203,8 @@ type FederationSpec struct {
 // FederationStatus defines the observed state of KobeFederation
 // +k8s:openapi-gen=true
 type FederationStatus struct {
-	PodNames []string        `json:"podNames"`
-	Phase    FederationPhase `json:"phase"`
+	PodNames []string `json:"podNames"`
+	Phase    int      `json:"phase"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -246,7 +246,7 @@ type FederatorTemplate struct {
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
-type FederationTemplateList struct {
+type FederatorTemplateList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
 	Items           []FederatorTemplate `json:"items"`
@@ -389,14 +389,6 @@ type SystemDatasetSpec struct {
 	Path string `json:"path"`
 }
 
-// DatasetStatus defines the observed state of Dataset
-// +k8s:openapi-gen=true
-type EphemeralDatasetStatus struct {
-	PodNames  []string `json:"podNames"`
-	Phase     string   `json:"phase"`
-	ForceLoad bool     `json:"forceLoad"`
-}
-
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // EphemeralDataset is the Schema for the kobedatasets API
@@ -409,6 +401,14 @@ type EphemeralDataset struct {
 
 	Spec   Dataset                `json:"spec,omitempty"`
 	Status EphemeralDatasetStatus `json:"status,omitempty"`
+}
+
+// DatasetStatus defines the observed state of Dataset
+
+type EphemeralDatasetStatus struct {
+	PodNames  []string `json:"podNames"`
+	Phase     string   `json:"phase"`
+	ForceLoad bool     `json:"forceLoad"`
 }
 
 // SetDefaults sets the defaults of the KobeDatasetSpec
@@ -458,5 +458,5 @@ func init() {
 	SchemeBuilder.Register(&EphemeralDataset{}, &EphemeralDatasetList{})
 	SchemeBuilder.Register(&KobeUtil{}, &KobeUtilList{})
 	SchemeBuilder.Register(&DatasetTemplate{}, &DatasetTemplateList{})
-	SchemeBuilder.Register(&FederatorTemplate{}, &FederationTemplateList{})
+	SchemeBuilder.Register(&FederatorTemplate{}, &FederatorTemplateList{})
 }

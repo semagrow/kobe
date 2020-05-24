@@ -115,19 +115,20 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 
 	//check if the assosciated benchmark component exists in the experiment namespace
 	foundBenchmark := &api.Benchmark{}
-	err = r.client.Get(context.TODO(), request.NamespacedName, foundBenchmark)
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Spec.Benchmark, Namespace: instance.Namespace}, foundBenchmark)
 	if err != nil {
 		if errors.IsNotFound(err) {
-			reqLogger.Info("The benchmark of this experiment does not exist")
+			reqLogger.Info("The benchmark of this experiment does not exist" + instance.Spec.Benchmark)
 			return reconcile.Result{}, nil
 		}
 		// Error reading the object - requeue the request.
 		return reconcile.Result{}, err
 	}
 	//check if all datasets for the experiment are up and running
+	//testsetestset
 	requeue, err := r.reconcileDatasets(instance, *foundBenchmark)
 	if requeue {
-		reqLogger.Info("Datasets are not up yet. Wait 10 sec and recheck!\n")
+		reqLogger.Info("Datasets are not up yet. Wait 10 sec and  and then check again!\n")
 		return reconcile.Result{RequeueAfter: 10000000000}, err
 	} else if err != nil {
 		return reconcile.Result{}, err
@@ -137,7 +138,7 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 	if requeue {
 		return reconcile.Result{RequeueAfter: 2000000000}, err
 	} else if err != nil {
-		return reconcile.Result{}, err
+		return reconcile.Result{RequeueAfter: 2000000000}, err
 	}
 
 	// Everything is healthy and ready for the experiment.
@@ -253,7 +254,7 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 
 	foundFederation := &api.Federation{}
 	err := r.client.Get(context.TODO(), types.NamespacedName{
-		Name:      instance.Name,
+		Name:      instance.Spec.FederatorName,
 		Namespace: instance.Spec.Benchmark}, foundFederation)
 
 	if err != nil && errors.IsNotFound(err) {
@@ -276,6 +277,10 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 				reqLogger.Info("Failed to find the requested dataset template: ", err)
 				return true, err
 			}
+			if err != nil {
+				reqLogger.Info("this is the true error ", err)
+				return true, err
+			}
 			instance.Spec.FederatorSpec = &foundTemplate.Spec
 			err = r.client.Update(context.TODO(), instance)
 			if err != nil {
@@ -294,7 +299,7 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 		}
 	}
 	if err != nil {
-		return false, err
+		return true, err
 	}
 
 	podList := &corev1.PodList{}
@@ -305,7 +310,7 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 	err = r.client.List(context.TODO(), podList, listOps...)
 	if err != nil {
 		reqLogger.Info("Failed to list pods: %v", err)
-		return false, err
+		return true, err
 	}
 	podNames := getPodNames(podList.Items)
 	//for _, podname := range foundFederation.Status.PodNames {
@@ -333,11 +338,18 @@ func (r *ReconcileExperiment) newFederation(m *api.Experiment, benchmark *api.Be
 	datasetendpoints := []api.DatasetEndpoint{}
 
 	for _, d := range benchmark.Spec.Datasets {
+		//we need to find each dataset cause in benchmark it is possible that they dont carry the definition for their spec
+		//but just the reference to a template.
+		foundDataset := &api.EphemeralDataset{}
+		err := r.client.Get(context.TODO(), types.NamespacedName{Name: d.Name, Namespace: m.Spec.Benchmark}, foundDataset)
+		if err != nil && errors.IsNotFound(err) {
+			return nil
+		}
 		datasetendpoints = append(datasetendpoints, api.DatasetEndpoint{
-			Host:      d.Name,
+			Host:      foundDataset.Name,
 			Namespace: benchmark.Name,
-			Port:      d.SystemSpec.Port,
-			Path:      d.SystemSpec.Path})
+			Port:      foundDataset.Spec.SystemSpec.Port,
+			Path:      foundDataset.Spec.SystemSpec.Path})
 
 		if d.FederatorConnection != nil {
 			networktopology = append(networktopology, api.NetworkConnection{Source: &d.Name, DelayInjection: d.FederatorConnection.DelayInjection})
@@ -357,6 +369,7 @@ func (r *ReconcileExperiment) newFederation(m *api.Experiment, benchmark *api.Be
 			NetworkTopology: networktopology,
 		},
 	}
+	federation.Status.Phase = 0
 	controllerutil.SetControllerReference(m, federation, r.scheme)
 	return federation
 }
@@ -397,7 +410,7 @@ func (r *ReconcileExperiment) reconcileDatasets(instance *api.Experiment, benchm
 		podNames := getPodNames(podList.Items)
 		for _, podname := range podNames {
 			foundPod := &corev1.Pod{}
-			err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Namespace, Name: podname}, foundPod)
+			err := r.client.Get(context.TODO(), types.NamespacedName{Namespace: instance.Spec.Benchmark, Name: podname}, foundPod)
 			if err != nil && errors.IsNotFound(err) {
 				reqLogger.Info("Failed to get the pod of the kobe dataset that experiment will use")
 				return true, nil

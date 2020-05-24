@@ -3961,7 +3961,6 @@ spec:
           - name
           type: object
         status:
-          description: DatasetStatus defines the observed state of Dataset
           properties:
             forceLoad:
               type: boolean
