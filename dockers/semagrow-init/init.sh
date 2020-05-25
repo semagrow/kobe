@@ -1,82 +1,35 @@
 #!/bin/bash
 
-#!/bin/bash
+mkdir -p /kobe_nt
 
-#
-# environment variables
-#
-# Notice: kobe controller places dump files in /sevod-scraper/input
-# and expects the output metadata file to be placed in /sevod-scraper/output
-# DATASET_NAME and DATASET_ENDPOINT are initialized by kobe controller
-#
+cp *.nt /kobe_nt
 
-INPUT="/sevod-scraper/input"
-OUTPUT="/sevod-scraper/output"
-DUMP="/tmp/dump"
-TEMP="/tmp/temp"
-
-SEVOD_SCRAPER="/sevod-scraper/assembly/target/bin/sevod-scraper.sh"
-
-
-#
-# if the metadata file already exists, simply change the endpoint
-# and don't call sevod scraper
-#
-
-if [ -f $OUTPUT/$DATASET_NAME.ttl ]
-then
-  sed -i \
-    's|void:sparqlEndpoint <[^ ]\+>|void:sparqlEndpoint <'$DATASET_ENDPOINT'>|g' \
-    $OUTPUT/$DATASET_NAME.ttl
-  exit
-fi
-
-#
-# temporary directories
-#
-
-mkdir -p $DUMP
-mkdir -p $TEMP
-
-#
-# convert to ntriples format all dump files
-# we currently support .rdf, .owl, .n3, and .ttl files
-#
-
-for FILE in $INPUT/*.rdf
+for file in *.rdf
 do
-  rapper $FILE > $TEMP/`uuidgen`.nt
+  java -jar /sevod-scraper/ont-converter.jar -i ${file} -if rdf -o ${file}.nt -of nt
+  if [ $? != 0 ] ; then
+    rm ${file}.nt && echo "removing it now "
+  else 
+    echo "not removing"
+  fi
+  cp ${file}.nt /kobe_nt
 done
 
-for FILE in $INPUT/*.owl
+for file in *.n3
 do
-  rapper $FILE > $TEMP/`uuidgen`.nt
+  java -jar /sevod-scraper/rdf2rdf-1.0.1-2.3.1.jar ${file} ${file}.nt
+  if [ $? != 0 ] ; then
+    rm ${file}.nt && echo "removing it now "
+  else 
+    echo "not removing"
+  fi
+  cp ${file}.nt /kobe_nt
 done
+    
+mkdir -p /kobe-temp
 
-for FILE in $INPUT/*.n3
-do
-  serdi  $FILE > $TEMP/`uuidgen`.nt
-done
+cd /kobe_nt
 
-for FILE in $INPUT/*.ttl
-do
-  serdi  $FILE > $TEMP/`uuidgen`.nt
-done
+ls *.nt | xargs cat | sort -k 2 > /kobe-temp/$DATASET_NAME.nt
 
-cp *.nt $TEMP
-
-#
-# merge all converted ntriples files into a single ntriples file
-#
-
-cat $TEMP/*.nt > $DUMP/$DATASET_NAME.nt
-
-#
-# run sevod scraper tool for extracting metadata in rdfdump mode
-#
-
-$SEVOD_SCRAPER --rdfdump \
-        -i $DUMP/$DATASET_NAME.nt \
-        -e $DATASET_ENDPOINT \
-        -o $OUTPUT/$DATASET_NAME.ttl
-
+/sevod-scraper/assembly/target/bin/sevod-scraper.sh rdfdump "/kobe-temp/$DATASET_NAME.nt" "$DATASET_ENDPOINT" -pv  "/sevod-scraper/output/$DATASET_NAME.ttl"
