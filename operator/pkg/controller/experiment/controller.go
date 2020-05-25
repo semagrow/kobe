@@ -113,6 +113,38 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 		return reconcile.Result{}, err
 	}
 
+	//add finalizer to the resource . If the experiments gets deleted the finalizer logic deletes the federation
+	//need this cause it belongs to different namespace and doesnt seem to care that experiment is the father of the federation..
+
+	fedFinalizer := "delete.the.fking.fed.kobe"
+
+	// examine DeletionTimestamp to determine if object is under deletion
+	if instance.ObjectMeta.DeletionTimestamp.IsZero() {
+		if !containsString(instance.ObjectMeta.Finalizers, fedFinalizer) {
+			instance.ObjectMeta.Finalizers = append(instance.ObjectMeta.Finalizers, fedFinalizer)
+			if err := r.client.Update(context.Background(), instance); err != nil {
+				return reconcile.Result{}, err
+			}
+		}
+	} else {
+		if containsString(instance.ObjectMeta.Finalizers, fedFinalizer) {
+			foundFederation := &api.Federation{}
+			err := r.client.Get(context.TODO(), types.NamespacedName{
+				Name:      instance.Spec.FederatorName,
+				Namespace: instance.Spec.Benchmark}, foundFederation)
+
+			if err == nil {
+				err = r.client.Delete(context.TODO(), foundFederation, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
+			}
+			instance.ObjectMeta.Finalizers = removeString(instance.ObjectMeta.Finalizers, fedFinalizer)
+			if err := r.client.Update(context.Background(), instance); err != nil {
+				return reconcile.Result{}, err
+			}
+		}
+
+		// Stop reconciliation as the item is being deleted
+		return reconcile.Result{}, nil
+	}
 	//check if the assosciated benchmark component exists in the experiment namespace
 	foundBenchmark := &api.Benchmark{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Spec.Benchmark, Namespace: instance.Namespace}, foundBenchmark)
@@ -170,7 +202,7 @@ func (r *ReconcileExperiment) reconcileEvaluatorJob(instance *api.Experiment, fe
 	foundJob := &batchv1.Job{}
 	err := r.client.Get(context.TODO(), types.NamespacedName{
 		Namespace: instance.Namespace,
-		Name:      instance.Name + "-evaluationJob"},
+		Name:      instance.Name + "-evaluationjob"},
 		foundJob)
 
 	if err == nil {
@@ -180,7 +212,7 @@ func (r *ReconcileExperiment) reconcileEvaluatorJob(instance *api.Experiment, fe
 		reqLogger.Info("The job is done\n")
 		return false, nil
 	}
-	experimentJob := r.createEvaluatorJob(instance, identifier, fedEndpoint, fedName)
+	experimentJob := r.createEvaluatorJob(instance, fedEndpoint, fedName)
 	reqLogger.Info("Creating a new job to run the experiment for this setup")
 	if err := r.client.Create(context.TODO(), experimentJob); err != nil {
 		reqLogger.Info("FAILED to create the job to run this experiment  %s/%s\n", experimentJob.Name, experimentJob.Namespace)
@@ -198,25 +230,25 @@ func (r *ReconcileExperiment) reconcileEvaluatorJob(instance *api.Experiment, fe
 
 //----------------------functions that create native kubernetes objects--------------------------------------
 //create the job that will run the evaluation program
-func (r *ReconcileExperiment) createEvaluatorJob(m *api.Experiment, i int, fedendpoint string, fedname string) *batchv1.Job {
+func (r *ReconcileExperiment) createEvaluatorJob(m *api.Experiment, fedendpoint string, fedname string) *batchv1.Job {
 	times := int32(1)
-
+	parallelism := int32(1) //hardcoded cause if not set it defaults to 0 and no pod is ever created/need defaulting asap
 	job := &batchv1.Job{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      m.Name + "-" + strconv.Itoa(i),
+			Name:      m.Name + "-evaluationjob",
 			Namespace: m.Namespace,
 		},
 		Spec: batchv1.JobSpec{
-			Parallelism: &m.Spec.Evaluator.Parallelism,
+			Parallelism: &parallelism,
 			Completions: &times,
 			Template: corev1.PodTemplateSpec{
 				ObjectMeta: metav1.ObjectMeta{},
 				Spec: corev1.PodSpec{
 					Containers: []corev1.Container{{
 						Image:           m.Spec.Evaluator.Image, //this is the image of the eval
-						ImagePullPolicy: m.Spec.Evaluator.ImagePullPolicy,
-						Name:            "job" + "-" + strconv.Itoa(i),
-						Command:         m.Spec.Evaluator.Command,
+						ImagePullPolicy: corev1.PullAlways,
+						Name:            "job",
+						//Command:         m.Spec.Evaluator.Command,
 						Ports: []corev1.ContainerPort{{
 							ContainerPort: int32(8890), //eval endpoint
 							Name:          "client",
@@ -268,7 +300,7 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 		}
 		if instance.Spec.FederatorSpec == nil {
 			foundTemplate := &api.FederatorTemplate{}
-			reqLogger.Info("Finding the federatpr template reference specified for the experiment " + instance.Name + " %v\n")
+			reqLogger.Info("Finding the federator template reference specified for the experiment " + instance.Name + " %v\n")
 			err := r.client.Get(context.TODO(), types.NamespacedName{
 				Name:      instance.Spec.FederatorTemplateRef,
 				Namespace: corev1.NamespaceDefault},
@@ -439,4 +471,23 @@ func (r *ReconcileExperiment) reconcileDatasets(instance *api.Experiment, benchm
 	}
 	return false, nil
 
+}
+
+func containsString(slice []string, s string) bool {
+	for _, item := range slice {
+		if item == s {
+			return true
+		}
+	}
+	return false
+}
+
+func removeString(slice []string, s string) (result []string) {
+	for _, item := range slice {
+		if item == s {
+			continue
+		}
+		result = append(result, item)
+	}
+	return
 }
