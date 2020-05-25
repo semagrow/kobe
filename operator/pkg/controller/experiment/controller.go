@@ -312,6 +312,7 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 		reqLogger.Info("Failed to list pods: %v", err)
 		return true, err
 	}
+
 	podNames := getPodNames(podList.Items)
 	//for _, podname := range foundFederation.Status.PodNames {
 	for _, podname := range podNames {
@@ -327,6 +328,10 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 			reqLogger.Info("Kobe federation pod is not ready so experiment needs to wait")
 			return true, nil
 		}
+	}
+	if podNames == nil || len(podNames) == 0 {
+		reqLogger.Info("Experiment waits for FEDERATOR initialization")
+		return true, nil
 	}
 	return false, nil
 }
@@ -369,7 +374,8 @@ func (r *ReconcileExperiment) newFederation(m *api.Experiment, benchmark *api.Be
 			NetworkTopology: networktopology,
 		},
 	}
-	federation.Status.Phase = 0
+	federation.Status.Phase = 1
+	federation.Spec.Phase = 1
 	controllerutil.SetControllerReference(m, federation, r.scheme)
 	return federation
 }

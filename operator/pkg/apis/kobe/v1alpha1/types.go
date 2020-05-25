@@ -198,6 +198,7 @@ type FederationSpec struct {
 	Datasets        []DatasetEndpoint    `json:"datasets"` // use v1.LocalObjectReference ?
 	NetworkTopology []NetworkConnection  `json:"topology,omitempty"`
 	InitPolicy      InitializationPolicy `json:"initPolicy,omitempty"`
+	Phase           int                  `json:"phase"`
 }
 
 // FederationStatus defines the observed state of KobeFederation

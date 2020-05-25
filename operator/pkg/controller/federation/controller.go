@@ -146,7 +146,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	endpointsForInit := []string{} // here we will collect the endpoints that correspond to the selected datasets in the above slice
 
 	// getting plan for metadata creation
-	if instance.Status.Phase == 0 {
+	if instance.Spec.Phase == 1 {
 		// the federation controller still runs the init loop as long as this
 		// flag is true
 
@@ -171,7 +171,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		//changes so he will awake if the job status changes /no need to
 		//requeue)
 		if &foundJob.Status.Succeeded == nil || foundJob.Status.Succeeded == 0 {
-			return reconcile.Result{RequeueAfter: 1000000000}, nil
+			return reconcile.Result{}, nil
 		}
 
 		//----------------------experimental jobs-------------------------------------
@@ -255,7 +255,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		//------------------------------/experimental jobs------------------------------------------------------------
 
 		//clean up the job that made the necessary directories to safe keep the init files
-		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundJob)
+		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name + "helper", Namespace: instance.Namespace}, foundJob)
 		err = r.client.Delete(context.TODO(), foundJob, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
 		if err != nil {
 			reqLogger.Info("Failed to delete the federation job from the cluster")
@@ -270,11 +270,11 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		// federation pod drops and this controller relaunches it ,it will not
 		// recreate the init files per dataset since datasetsToInit will be empty
 		// which means we save time.
-		instance.Status.Phase = 1
+		instance.Spec.Phase = 0
 		err = r.client.Status().Update(context.TODO(), instance)
 		if err != nil {
 			reqLogger.Info("Failed to update the init flag")
-			return reconcile.Result{}, err
+			return reconcile.Result{RequeueAfter: 1000000000}, err
 		}
 	}
 
@@ -543,7 +543,7 @@ func (r *ReconcileFederation) newJobForFederation(m *api.Federation) *batchv1.Jo
 			APIVersion: "v1",
 		},
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      m.Name,
+			Name:      m.Name + "helper",
 			Namespace: m.Namespace,
 		},
 		Spec: batchv1.JobSpec{
