@@ -146,7 +146,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	endpointsForInit := []string{} // here we will collect the endpoints that correspond to the selected datasets in the above slice
 
 	// getting plan for metadata creation
-	if instance.Spec.Phase == 1 {
+	if instance.Status.Phase == api.FederationInitializing {
 		// the federation controller still runs the init loop as long as this
 		// flag is true
 
@@ -154,7 +154,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		// config files for future caching ( in dataset-name/federator/ for all
 		// datasets)
 		foundJob := &batchv1.Job{}
-		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundJob)
+		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name + "helper", Namespace: corev1.NamespaceDefault}, foundJob)
 		if err != nil && errors.IsNotFound(err) {
 			job := r.newJobForFederation(instance)
 			err = r.client.Create(context.TODO(), job)
@@ -164,14 +164,14 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 			}
 		} else if err != nil {
 			reqLogger.Info("Failed to retrieve the job that makes the directories")
-			return reconcile.Result{}, err
+			return reconcile.Result{RequeueAfter: 10000000000}, err
 		}
 
 		//hang till it finishes successfully (this controller listens to job
 		//changes so he will awake if the job status changes /no need to
 		//requeue)
 		if &foundJob.Status.Succeeded == nil || foundJob.Status.Succeeded == 0 {
-			return reconcile.Result{}, nil
+			return reconcile.Result{RequeueAfter: 1000000000}, nil
 		}
 
 		//----------------------experimental jobs-------------------------------------
@@ -179,7 +179,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		//datasets have init files for this federator already by either failing
 		//or succeeding
 		for _, dataset := range datasets {
-			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset, Namespace: instance.Namespace}, foundJob)
+			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset, Namespace: corev1.NamespaceDefault}, foundJob)
 			if err != nil && errors.IsNotFound(err) {
 				job := r.newJobForDataset(instance, dataset)
 				err = r.client.Create(context.TODO(), job)
@@ -201,7 +201,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		// list to make init containers
 		for i, dataset := range datasets { //loop through all datasets of this federation
 			foundJob := &batchv1.Job{}
-			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset, Namespace: instance.Namespace}, foundJob)
+			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset, Namespace: corev1.NamespaceDefault}, foundJob)
 			if err != nil && errors.IsNotFound(err) {
 				return reconcile.Result{Requeue: true}, nil
 			} else if err != nil { //some other error
@@ -210,7 +210,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 			//fetch the pod of the init - job for this dataset to check its status
 			podList := &corev1.PodList{}
 			listOps := []client.ListOption{
-				client.InNamespace(instance.Namespace),
+				client.InNamespace(corev1.NamespaceDefault),
 				client.MatchingLabels{"job-name": dataset},
 			}
 			err = r.client.List(context.TODO(), podList, listOps...)
@@ -225,7 +225,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 
 			}
 			pod := &corev1.Pod{}
-			err = r.client.Get(context.TODO(), types.NamespacedName{Name: podNames[0], Namespace: instance.Namespace}, pod) //fetch the pod
+			err = r.client.Get(context.TODO(), types.NamespacedName{Name: podNames[0], Namespace: corev1.NamespaceDefault}, pod) //fetch the pod
 			if err != nil {
 				reqLogger.Info("Failed to get the pod that checks if config file for dataset exist")
 				return reconcile.Result{}, err
@@ -248,14 +248,14 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		//clean up the jobs that checked for the files
 		for _, dataset := range instance.Spec.Datasets {
 			foundJob := &batchv1.Job{}
-			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Host, Namespace: instance.Namespace}, foundJob)
+			err = r.client.Get(context.TODO(), types.NamespacedName{Name: dataset.Host, Namespace: corev1.NamespaceDefault}, foundJob)
 			err = r.client.Delete(context.TODO(), foundJob, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
 		}
 
 		//------------------------------/experimental jobs------------------------------------------------------------
 
 		//clean up the job that made the necessary directories to safe keep the init files
-		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name + "helper", Namespace: instance.Namespace}, foundJob)
+		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name + "helper", Namespace: corev1.NamespaceDefault}, foundJob)
 		err = r.client.Delete(context.TODO(), foundJob, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
 		if err != nil {
 			reqLogger.Info("Failed to delete the federation job from the cluster")
@@ -270,7 +270,7 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 		// federation pod drops and this controller relaunches it ,it will not
 		// recreate the init files per dataset since datasetsToInit will be empty
 		// which means we save time.
-		instance.Spec.Phase = 0
+		instance.Status.Phase = api.FederationRunning
 		err = r.client.Status().Update(context.TODO(), instance)
 		if err != nil {
 			reqLogger.Info("Failed to update the init flag")
@@ -481,19 +481,10 @@ func (r *ReconcileFederation) newPod(m *api.Federation, datasets []string, endpo
 	for i := range m.Spec.Template.Containers {
 		m.Spec.Template.Containers[i].VolumeMounts = append(m.Spec.Template.Containers[i].VolumeMounts, mountConf)
 	}
-	name1 := ""
-	if m.Status.Phase == 0 {
-		name1 = "yeap"
-	}
-	if m.Status.Phase == 1 {
-		name1 = "nope"
-	}
-	if &m.Status.Phase == nil {
-		name1 = "wtf"
-	}
+
 	pod := &corev1.Pod{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      m.Name + name1,
+			Name:      m.Name,
 			Namespace: m.Namespace,
 			Labels:    labelsForFederation(m),
 		},
@@ -544,7 +535,7 @@ func (r *ReconcileFederation) newJobForFederation(m *api.Federation) *batchv1.Jo
 		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      m.Name + "helper",
-			Namespace: m.Namespace,
+			Namespace: corev1.NamespaceDefault,
 		},
 		Spec: batchv1.JobSpec{
 			Parallelism: &parallelism,
@@ -599,7 +590,7 @@ func (r *ReconcileFederation) newJobForDataset(m *api.Federation, dataset string
 		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      dataset,
-			Namespace: m.Namespace,
+			Namespace: corev1.NamespaceDefault,
 		},
 		Spec: batchv1.JobSpec{
 			Parallelism: &parallelism,

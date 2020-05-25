@@ -198,14 +198,14 @@ type FederationSpec struct {
 	Datasets        []DatasetEndpoint    `json:"datasets"` // use v1.LocalObjectReference ?
 	NetworkTopology []NetworkConnection  `json:"topology,omitempty"`
 	InitPolicy      InitializationPolicy `json:"initPolicy,omitempty"`
-	Phase           int                  `json:"phase"`
+	//Phase           int                  `json:"phase"`
 }
 
 // FederationStatus defines the observed state of KobeFederation
 // +k8s:openapi-gen=true
 type FederationStatus struct {
-	PodNames []string `json:"podNames"`
-	Phase    int      `json:"phase"`
+	PodNames []string        `json:"podNames"`
+	Phase    FederationPhase `json:"phase"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object

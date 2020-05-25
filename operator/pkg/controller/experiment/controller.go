@@ -297,6 +297,13 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 			reqLogger.Info("Failed to create the federation")
 			return false, err
 		}
+		newFederation.Status.Phase = api.FederationInitializing
+		newFederation.Status.PodNames = []string{}
+		err = r.client.Status().Update(context.TODO(), newFederation)
+		if err != nil {
+			reqLogger.Info("Failed to update the federation")
+			return false, err
+		}
 	}
 	if err != nil {
 		return true, err
@@ -318,7 +325,7 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 	for _, podname := range podNames {
 		foundPod := &corev1.Pod{}
 		err := r.client.Get(context.TODO(), types.NamespacedName{
-			Namespace: instance.Namespace,
+			Namespace: instance.Spec.Benchmark,
 			Name:      podname}, foundPod)
 		if err != nil && errors.IsNotFound(err) {
 			reqLogger.Info("Failed to get the pod of the kobe federation that experiment will use")
@@ -374,8 +381,6 @@ func (r *ReconcileExperiment) newFederation(m *api.Experiment, benchmark *api.Be
 			NetworkTopology: networktopology,
 		},
 	}
-	federation.Status.Phase = 1
-	federation.Spec.Phase = 1
 	controllerutil.SetControllerReference(m, federation, r.scheme)
 	return federation
 }

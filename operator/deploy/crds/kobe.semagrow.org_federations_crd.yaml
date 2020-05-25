@@ -54,8 +54,6 @@ spec:
               type: string
             initPolicy:
               type: string
-            phase:
-              type: integer
             spec:
               description: FederatorSpec contains all necessary information for a
                 federator
@@ -2284,14 +2282,13 @@ spec:
           required:
           - datasets
           - federatorName
-          - phase
           - spec
           type: object
         status:
           description: FederationStatus defines the observed state of KobeFederation
           properties:
             phase:
-              type: integer
+              type: string
             podNames:
               items:
                 type: string
