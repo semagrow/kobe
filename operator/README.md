@@ -75,13 +75,16 @@ kubectl apply -f deploy/efk-config/kobe-kibana-configuration.yaml
 ```
 
 These result in the simplest setup of an one-node Elasticsearch that does not persist data across pod recreation, a Fluentd DaemonSet and a Kibana node that exposes an NodePort. 
+
 After all pods are in Running state Kibana dashboards can be accessed at 
 `http://<NODE-IP>:<NODEPORT>/app/kibana#/dashboard/` where `<NODE-IP>` the IP of any of the Kubernetes cluster nodes and `<NODEPORT>` the result of `kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services kibana-kibana`.
 
 The setup can be customized by changing the configuration parameters of each helm chart. Please check the corresponding documentation of each chart for more info:
 
 [Elasticsearch](https://github.com/elastic/helm-charts/blob/master/elasticsearch)
+
 [Kibana](https://github.com/elastic/helm-charts/tree/master/kibana)
+
 [Fluentd](https://github.com/kiwigrid/helm-charts/tree/master/charts/fluentd-elasticsearch) 
 
 ## Removal
