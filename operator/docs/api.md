@@ -1,99 +1,308 @@
+
 # API Docs
 
-This Document documents the types introduced by the KOBE Operator to be consumed by users.
+This Document documents the types introduced by the Kobe Operator to be consumed by users.
+
+> Note this document is generated from code comments. When contributing a change to this document please do so by changing the code comments.
 
 ## Table of Contents
-* [KobeDataset](#kobedataset)
-* [KobeBenchmark](#kobebenchmark)
-* [KobeFederator](#kobefederator)
-* [KobeExperiment](#kobeexperiment)
+* [Benchmark](#benchmark)
+* [BenchmarkList](#benchmarklist)
+* [BenchmarkSpec](#benchmarkspec)
+* [Dataset](#dataset)
+* [DatasetList](#datasetlist)
+* [DatasetSpec](#datasetspec)
+* [DatasetStatus](#datasetstatus)
+* [Evaluator](#evaluator)
+* [Experiment](#experiment)
+* [ExperimentList](#experimentlist)
+* [ExperimentSpec](#experimentspec)
+* [ExperimentStatus](#experimentstatus)
+* [Federation](#federation)
+* [FederationList](#federationlist)
+* [FederationSpec](#federationspec)
+* [FederationStatus](#federationstatus)
+* [Federator](#federator)
+* [FederatorList](#federatorlist)
+* [FederatorTemplate](#federatortemplate)
+* [KobeUtil](#kobeutil)
+* [KobeUtilList](#kobeutillist)
+* [Query](#query)
 
-## KobeDataset
+## Benchmark
 
-KobeDataset defines a dataset that could be used in an experiment.
+Benchmark is the Schema for the benchmarks API
 
 | Field | Description | Scheme | Required |
 | ----- | ----------- | ------ | -------- |
-| image | Image of the database system. Currently fixed to kostbabis/virtuoso | string | true |
-| forceLoad | Forces to download and load from dump files | boolean | false |
-| downloadFrom | the dump location. | url | true |
-| count | how many instances of this database you want in your cluster (under same service). | integer | false |
+| metadata |  | [metav1.ObjectMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta) | false |
+| spec |  | [BenchmarkSpec](#benchmarkspec) | false |
+| status |  | [BenchmarkStatus](#benchmarkstatus) | false |
 
 [Back to TOC](#table-of-contents)
 
-## KobeBenchmark
+## BenchmarkList
 
-KobeBenchmark defines a benchmark in kobe.
-A benchmark consists of a set of datasets that must be already defined with the [KobeDataset](#kobedataset). 
-It also contains the definition of one or more [SPARQL](https://www.w3.org/TR/sparql11-query/) queries 
-that are going to get tested against the datasets in the benchmark.
+BenchmarkList contains a list of Benchmark
 
 | Field | Description | Scheme | Required |
 | ----- | ----------- | ------ | -------- |
-| datasets | Datasets to be used for the benchmark | [][KobeDataset](#kobedataset) | true |
-| queries | Query set | []Query | true |
-
-- Under `spec.datasets.name[*]` you must write down the name of the datasets your benchmark will include. 
-  The names must be the same as the `metadata.name` of the KobeDataset custom resources defined above.
-- Under `spec.queries[*]` you must write down the queries of your benchmark. Query name is the name of the query. 
-  The field `language` for now should always be set to `sparql` and `queryString` should be the string that contains your query.
+| metadata |  | [metav1.ListMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta) | false |
+| items |  | [][Benchmark](#benchmark) | true |
 
 [Back to TOC](#table-of-contents)
 
-## KobeFederator
+## BenchmarkSpec
 
-KobeFederator defines a federator.
+BenchmarkSpec defines the components for this benchmark setup
 
 | Field | Description | Scheme | Required |
 | ----- | ----------- | ------ | -------- |
-| image | Image of the federator. | string | true |
-| imagePullPolicy | Image pull policy of pulling the image. One of Always, Never, IfNotPresent. | string | true |
-| port | Number of port to expose on the host. | [ContainerPort](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.11/#containerport-v1-core) | true |
-| sparqlEnding | The suffix of your federators sparql endpoint | string | true |
-| fedConfDir | The directory your federator expects to find its metadata files in order to operate properly. | string | true |
-| confFromFileImage | The image that configures the federator. | string | true |
-| inputDumpDir | | string | true |
-| outputDumpDir |  | string | true |
-| confImage |  | string | true |
+| datasets |  | []string | true |
+| queries |  | [][Query](#query) | true |
+
+[Back to TOC](#table-of-contents)
+
+## Dataset
+
+Dataset is the Schema for the kobedatasets API
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| metadata |  | [metav1.ObjectMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta) | false |
+| spec |  | [DatasetSpec](#datasetspec) | false |
+| status |  | [DatasetStatus](#datasetstatus) | false |
+
+[Back to TOC](#table-of-contents)
+
+## DatasetList
+
+DatasetList contains a list of KobeDataset
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| metadata |  | [metav1.ListMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta) | false |
+| items |  | [][Dataset](#dataset) | true |
+
+[Back to TOC](#table-of-contents)
+
+## DatasetSpec
+
+DatasetSpec defines the desired state of Dataset
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| image | Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images | string | true |
+| imagePullPolicy | Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images | v1.PullPolicy | true |
+| replicas | Replicas is the number of desired replicas. This is a pointer to distinguish between explicit zero and unspecified. Defaults to 1. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller | *int32 | true |
+| forceLoad | Forces to download and load from dataset file | bool | true |
+| downloadFrom | A URL that points to the compressed dataset file | string | true |
+| port | Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. | int32 | true |
+| path | Path that the container will listen for queries | string | true |
+| env | List of environment variables to set in the container. Cannot be updated. | [][v1.EnvVar](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#envvar-v1-core) | false |
+| affinity | If specified, the pod's scheduling constraints | *[v1.Affinity](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#affinity-v1-core) | false |
+| resources | Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod. | [v1.ResourceRequirements](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#resourcerequirements-v1-core) | false |
+
+[Back to TOC](#table-of-contents)
+
+## DatasetStatus
+
+DatasetStatus defines the observed state of Dataset
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| podNames |  | []string | true |
+| phase |  | string | true |
+
+[Back to TOC](#table-of-contents)
+
+## Evaluator
+
+Evaluator defines the
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| image |  | string | true |
+| imagePullPolicy |  | v1.PullPolicy | true |
+| command |  | []string | true |
+| parallelism |  | int32 | true |
+
+[Back to TOC](#table-of-contents)
+
+## Experiment
+
+Experiment is the Schema for the experiments API
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| metadata |  | [metav1.ObjectMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta) | false |
+| spec |  | [ExperimentSpec](#experimentspec) | false |
+| status |  | [ExperimentStatus](#experimentstatus) | false |
+
+[Back to TOC](#table-of-contents)
+
+## ExperimentList
+
+ExperimentList contains a list of Experiment
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| metadata |  | [metav1.ListMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta) | false |
+| items |  | [][Experiment](#experiment) | true |
+
+[Back to TOC](#table-of-contents)
+
+## ExperimentSpec
+
+ExperimentSpec defines the desired state of Experiment
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| benchmark |  | string | true |
+| federator |  | string | true |
+| evaluator |  | [Evaluator](#evaluator) | true |
+| timesToRun |  | int | true |
+| restartPolicy |  | RestartPolicy | false |
+| dryRun |  | bool | true |
+| forceNewInit |  | bool | true |
+
+[Back to TOC](#table-of-contents)
+
+## ExperimentStatus
+
+ExperimentStatus defines the observed state of Experiment
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| startTime | Time at which this workflow started | [metav1.Time](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#time-v1-meta) | false |
+| completionTime | Time at which this workflow completed | [metav1.Time](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#time-v1-meta) | false |
+| run | The current iteration of the experiment It should be zero if not started yet | int | false |
+| phase | The phase of the experiment | ExperimentPhase | true |
+
+[Back to TOC](#table-of-contents)
+
+## Federation
+
+Federation is the Schema for the federations API
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| metadata |  | [metav1.ObjectMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta) | false |
+| spec |  | [FederationSpec](#federationspec) | false |
+| status |  | [FederationStatus](#federationstatus) | false |
+
+[Back to TOC](#table-of-contents)
+
+## FederationList
+
+FederationList contains a list of Federation
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| metadata |  | [metav1.ListMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta) | false |
+| items |  | [][Federation](#federation) | true |
+
+[Back to TOC](#table-of-contents)
+
+## FederationSpec
+
+FederationSpec defines the desired state of Federation
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| federatorName |  | string | true |
+| template |  | [FederatorTemplate](#federatortemplate) | true |
+| endpoints |  | []string | true |
+| datasets |  | []string | true |
+| forceNewInit |  | bool | true |
+| init |  | bool | true |
+
+[Back to TOC](#table-of-contents)
+
+## FederationStatus
+
+FederationStatus defines the observed state of KobeFederation
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| podNames | INSERT ADDITIONAL STATUS FIELD - define observed state of cluster Important: Run \"operator-sdk generate k8s\" to regenerate code after modifying this file Add custom validation using kubebuilder tags: https://book-v1.book.kubebuilder.io/beyond_basics/generating_crd.html | []string | true |
+| phase |  | string | true |
+
+[Back to TOC](#table-of-contents)
+
+## Federator
+
+Federator is the Schema for the federators API
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| metadata |  | [metav1.ObjectMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta) | false |
+| spec |  | [FederatorSpec](#federatorspec) | false |
+
+[Back to TOC](#table-of-contents)
+
+## FederatorList
+
+FederatorList contains a list of Federator
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| metadata |  | [metav1.ListMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta) | false |
+| items |  | [][Federator](#federator) | true |
+
+[Back to TOC](#table-of-contents)
+
+## FederatorTemplate
+
+FederatorTemplate defines
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| image | Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images | string | true |
+| imagePullPolicy | Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images | v1.PullPolicy | true |
+| port | Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. | int32 | true |
+| path | suffix to be added to endpoint of federator f.e ../SemaGrow/sparql | string | true |
+| affinity | If specified, the pod's scheduling constraints | *[v1.Affinity](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#affinity-v1-core) | false |
+| resources | Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod. | [v1.ResourceRequirements](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#resourcerequirements-v1-core) | false |
+| confFromFileImage | The Docker image that receives a compressed dataset and may produce configuration needed from the federator to federate this specific dataset This container will run one time for each dataset in the federation | string | true |
+| inputDumpDir | where the above image expects the dump to be (if from dump) | string | true |
+| outputDumpDir | where the above image will place its result config file | string | true |
+| confImage | The Docker image that initializes the federator (equivalent to initContainers) | string | true |
 | inputDir |  | string | true |
 | outputDir |  | string | true |
-
-- Under `spec.confFromFileImage` you must provide the name of an image that does the following.
-  It creates a container that reads from `/kobe/input_dump` files of a dataset and 
-  writes at `/kobe/output_metadata` configuration files for that dataset.
-  It can also instead query directly the database SPARQL endpoint to create 
-  the metadata file since we provide the init container with an environment 
-  variable called `END_POINT` which contains the full url of the SPARQL endpoint of the dataset
-  The image should be oblivious of what dataset it makes the metadata for and incorporate 
-  only the necessary logic to make that file. For example with semagrow we provide an 
-  image that uses the `sevod-scraper` (check it under semagrow in github) to process 
-  the dump files of a dataset (f.e dbpedia) and return a dbpedia.ttl file for this specific set.
-  The read and write directories of your image can be changed from the following two 
-  fields in the yaml `spec.inputDumpDir` and `spec.outputDumpDir` if its convenient.
-  They automatically default to `/kobe/input` and `/kobe/output` respectively.
-- Under `spec.ConfImage` you must provide the name of an image that does the following.
-  It reads from `/kobe/input` a set of different metadata files and combines them 
-  to one big configuration file of metadata for the benchmark. Your image should 
-  not care about what datasets the files belong to and only do the union of them.
-  For example, with semagrow we just need to turn each dataset metadata from `.ttl` to `.nt` 
-  then concatenate them and turn them back to `.ttl`. Again if you want to change 
-  the input and output directories your image expects to find the files and write to, 
-  you can with the following fields `spec.inputDir` and `spec.outputDir`.
+| fedConfDir | which directory the federator needs the metadata config files in order to find them | string | true |
 
 [Back to TOC](#table-of-contents)
 
-## KobeExperiment
+## KobeUtil
 
-KobeExperiment defines the actual experiment. It consists of a [KobeFederator](#kobefederator)
-that will get benchmarked. Also it requires the name of a [KobeBenchmark](#kobebenchmark) that will be used.
+KobeUtil is the Schema for the kobeutils API
 
 | Field | Description | Scheme | Required |
 | ----- | ----------- | ------ | -------- |
-| benchmark | The benchmark name. It must be the same as the name of the [KobeBenchmark](#kobebenchmark). | [KobeBenchmark](#kobebenchmark) | true |
-| federator | The federator name. It must be the same as the name of the [KobeFederator](#kobefederator). | [KobeFederator](#kobefederator) | false |
-| timesToRun | The number of times you want the benchmark experiment to repeat | integer | false |
-| dryRun | If set to true the federation will be created and the federator initialized. The health checks will also happen but the experiment will hang there and no evaluation job will run till this flag is changed. | boolean | false |
-| forceNewInit | if set to true it will always try to run the init image that create a metadata file from a dataset for this federator. If set to false it will check and use pre-existing metadata files if they exist for a pair of dataset and federator. It can be used to save time since metadata extraction for a big dataset take a long time and makes sense to not repeat this process. This affects only the first init process with the image that makes a metadata file from a dataset dump or endpoint. The second init process that combines many init files to one will always run again before init complete. | boolean | false |
-| evalImage | The image of the evaluator | string | false |
+| metadata |  | [metav1.ObjectMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta) | false |
+
+[Back to TOC](#table-of-contents)
+
+## KobeUtilList
+
+KobeUtilList contains a list of KobeUtil
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| metadata |  | [metav1.ListMeta](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta) | false |
+| items |  | [][KobeUtil](#kobeutil) | true |
+
+[Back to TOC](#table-of-contents)
+
+## Query
+
+Query contains the query info
+
+| Field | Description | Scheme | Required |
+| ----- | ----------- | ------ | -------- |
+| name |  | string | true |
+| language |  | string | true |
+| queryString |  | string | true |
 
 [Back to TOC](#table-of-contents)

@@ -1,0 +1,11 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Dataset
+metadata:
+  name: geonames
+spec:
+  # Add fields here
+  image: kostbabis/virtuoso
+  forceLoad: false
+  downloadFrom: http://users.iit.demokritos.gr/~gmouchakis/dumps/GeoNames.tar.gz
+  replicas: 1
+  port: 8890

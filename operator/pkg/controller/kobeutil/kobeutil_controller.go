@@ -3,7 +3,7 @@ package kobeutil
 import (
 	"context"
 
-	kobeutilv1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobeutil/v1alpha1"
+	kobev1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/resource"
@@ -14,9 +14,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/handler"
+	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 )
 
@@ -46,14 +46,14 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	}
 
 	// Watch for changes to primary resource KobeUtil
-	err = c.Watch(&source.Kind{Type: &kobeutilv1alpha1.KobeUtil{}}, &handler.EnqueueRequestForObject{})
+	err = c.Watch(&source.Kind{Type: &kobev1alpha1.KobeUtil{}}, &handler.EnqueueRequestForObject{})
 	if err != nil {
 		return err
 	}
 
 	err = c.Watch(&source.Kind{Type: &corev1.Pod{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobeutilv1alpha1.KobeUtil{},
+		OwnerType:    &kobev1alpha1.KobeUtil{},
 	})
 	if err != nil {
 		return err
@@ -61,7 +61,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 
 	err = c.Watch(&source.Kind{Type: &corev1.PersistentVolume{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobeutilv1alpha1.KobeUtil{},
+		OwnerType:    &kobev1alpha1.KobeUtil{},
 	})
 	if err != nil {
 		return err
@@ -69,7 +69,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 
 	err = c.Watch(&source.Kind{Type: &corev1.PersistentVolumeClaim{}}, &handler.EnqueueRequestForOwner{
 		IsController: true,
-		OwnerType:    &kobeutilv1alpha1.KobeUtil{},
+		OwnerType:    &kobev1alpha1.KobeUtil{},
 	})
 	if err != nil {
 		return err
@@ -99,7 +99,7 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 	reqLogger.Info("Reconciling KobeUtil")
 
 	// Fetch the KobeUtil instance
-	instance := &kobeutilv1alpha1.KobeUtil{}
+	instance := &kobev1alpha1.KobeUtil{}
 	err := r.client.Get(context.TODO(), request.NamespacedName, instance)
 	if err != nil {
 		if errors.IsNotFound(err) {
@@ -140,13 +140,12 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: instance.Namespace}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
 		pod := r.newPodForNfs(instance)
-		err = r.client.Create(context.TODO(), pod)
+		err := r.client.Create(context.TODO(), pod)
 		if err != nil {
 			reqLogger.Info("Failed to create the kobe nfs Pod: %v\n", err)
 			return reconcile.Result{}, err
 		}
 		return reconcile.Result{Requeue: true}, nil
-
 	}
 	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes
 
@@ -155,12 +154,12 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobepv"}, pvFound)
 	if err != nil && errors.IsNotFound(err) {
 		pv := r.newPvForKobe(instance, nfsip)
-		err = r.client.Create(context.TODO(), pv)
+		err := r.client.Create(context.TODO(), pv)
 		if err != nil {
 			reqLogger.Info("Failed to create the persistent volume that the datasets will use to retain their data if they shutdown and restarted")
 			return reconcile.Result{}, err
 		}
-		return reconcile.Result{RequeueAfter: 10}, nil
+		return reconcile.Result{RequeueAfter: 1000000000}, nil
 
 	}
 	//--------------------------------------------Persistent volume claim  health check---------------------------------------------
@@ -173,7 +172,7 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 			reqLogger.Info("Failed to create the single persistent volume claim that all the datasets gonna use to mount their data directories to nfs")
 			return reconcile.Result{}, err
 		}
-		return reconcile.Result{RequeueAfter: 5}, nil
+		return reconcile.Result{RequeueAfter: 1000000000}, nil
 	}
 	return reconcile.Result{}, nil
 }
@@ -181,13 +180,8 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 //-------------------functions that create native kubernetes that are controlled by utility controller-----------------------
 
 //NFS SERVICE (its actually useless cause nfs service dns bug)
-func (r *ReconcileKobeUtil) newServiceForNfs(m *kobeutilv1alpha1.KobeUtil) *corev1.Service {
+func (r *ReconcileKobeUtil) newServiceForNfs(m *kobev1alpha1.KobeUtil) *corev1.Service {
 	service := &corev1.Service{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "Service",
-			APIVersion: "v1",
-		},
-
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "kobenfs",
 			Namespace: m.Namespace,
@@ -219,12 +213,8 @@ func (r *ReconcileKobeUtil) newServiceForNfs(m *kobeutilv1alpha1.KobeUtil) *core
 }
 
 //NFS CONFIG
-func (r *ReconcileKobeUtil) newNfsConfig(m *kobeutilv1alpha1.KobeUtil) *corev1.ConfigMap {
+func (r *ReconcileKobeUtil) newNfsConfig(m *kobev1alpha1.KobeUtil) *corev1.ConfigMap {
 	cmap := &corev1.ConfigMap{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "ConfigMap",
-			APIVersion: "v1",
-		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "nfsconfig",
 			Namespace: m.Namespace,
@@ -236,7 +226,7 @@ func (r *ReconcileKobeUtil) newNfsConfig(m *kobeutilv1alpha1.KobeUtil) *corev1.C
 }
 
 //NFS POD
-func (r *ReconcileKobeUtil) newPodForNfs(m *kobeutilv1alpha1.KobeUtil) *corev1.Pod {
+func (r *ReconcileKobeUtil) newPodForNfs(m *kobev1alpha1.KobeUtil) *corev1.Pod {
 	var priv bool
 	priv = true
 
@@ -260,11 +250,6 @@ func (r *ReconcileKobeUtil) newPodForNfs(m *kobeutilv1alpha1.KobeUtil) *corev1.P
 	volumes = append(volumes, volume1)
 
 	pod := &corev1.Pod{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "Pod",
-			APIVersion: "v1",
-		},
-
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "kobenfs",
 			Namespace: m.Namespace,
@@ -296,7 +281,7 @@ func (r *ReconcileKobeUtil) newPodForNfs(m *kobeutilv1alpha1.KobeUtil) *corev1.P
 }
 
 //PERSISTENT VOLUME
-func (r *ReconcileKobeUtil) newPvForKobe(m *kobeutilv1alpha1.KobeUtil, ip string) *corev1.PersistentVolume {
+func (r *ReconcileKobeUtil) newPvForKobe(m *kobev1alpha1.KobeUtil, ip string) *corev1.PersistentVolume {
 
 	capacity := resource.MustParse("50Gi")
 	rmap := corev1.ResourceList{}
@@ -307,10 +292,6 @@ func (r *ReconcileKobeUtil) newPvForKobe(m *kobeutilv1alpha1.KobeUtil, ip string
 	nfs := &corev1.NFSVolumeSource{Server: ip, Path: "/"}
 
 	pv := &corev1.PersistentVolume{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "PersistentVolume",
-			APIVersion: "v1",
-		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name: "kobepv",
 		},
@@ -326,17 +307,13 @@ func (r *ReconcileKobeUtil) newPvForKobe(m *kobeutilv1alpha1.KobeUtil, ip string
 }
 
 //PERSISTENT VOLUME CLAIM
-func (r *ReconcileKobeUtil) newPvcForKobe(m *kobeutilv1alpha1.KobeUtil) *corev1.PersistentVolumeClaim {
+func (r *ReconcileKobeUtil) newPvcForKobe(m *kobev1alpha1.KobeUtil) *corev1.PersistentVolumeClaim {
 	s := ""
 	accessmodes := []corev1.PersistentVolumeAccessMode{"ReadWriteMany"}
 	capacity := resource.MustParse("49Gi")
 	rmap := corev1.ResourceList{}
 	rmap["storage"] = capacity
 	pvc := &corev1.PersistentVolumeClaim{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "PersistentVolumeClaim",
-			APIVersion: "v1",
-		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "kobepvc",
 			Namespace: m.Namespace,

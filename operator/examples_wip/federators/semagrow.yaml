@@ -1,0 +1,20 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Federator
+metadata:
+  name: semagrow
+spec:
+  containers:
+    - name: maincontainer 
+      image: semagrow/semagrow
+      ports:
+      - containerPort: 8080
+  port: 8080
+  path: /Semagrow/sparql
+  image: semagrow/semagrow
+  confFromFileImage: kostbabis/semagrow-init
+  inputDumpDir: /kobe/input
+  outputDumpDir: /kobe/output
+  confImage: kostbabis/semagrow-init-all
+  inputDir: /kobe/input
+  outputDir: /kobe/output
+  fedConfDir: /etc/default/semagrow

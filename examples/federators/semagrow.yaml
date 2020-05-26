@@ -1,0 +1,16 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Federator
+metadata:
+  name: semagrow
+spec:
+  image: semagrow/semagrow
+  imagePullPolicy: Always
+  port: 8080
+  confFromFileImage: antru6/semagrow-init
+  inputDumpDir: /sevod-scraper/input
+  outputDumpDir: /sevod-scraper/output
+  confImage: antru6/semagrow-init-all
+  inputDir: /kobe/input
+  outputDir: /kobe/output
+  fedConfDir: /etc/default/semagrow
+  path: /SemaGrow/sparql
