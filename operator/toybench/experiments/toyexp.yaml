@@ -7,7 +7,7 @@ spec:
   federatorName: semagrow
   federatorTemplateRef: semagrowtemplate
   evaluator:
-    image: kostbabis/kobe-evaluator
+    image: antru6/kobe-evaluator
   timesToRun: 3
   dryRun: false
   forceNewInit: true 

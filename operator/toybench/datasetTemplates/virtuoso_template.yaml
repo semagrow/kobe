@@ -10,6 +10,6 @@ spec:
       ports:
       - containerPort: 8890
   port: 8890
-  path: sparql
+  path: /sparql
   initPolicy: ForceInit
 
