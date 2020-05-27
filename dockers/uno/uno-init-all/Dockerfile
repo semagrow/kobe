@@ -1,9 +1,9 @@
 FROM alpine:3.7
 
-WORKDIR /uno
+RUN mkdir /uno
+RUN mkdir /uno/input
+RUN mkdir /uno/output
 
 COPY init.sh /uno/init.sh
 
-RUN ["chmod", "+x", "/uno/init.sh"]
-
-ENTRYPOINT ["/uno/init.sh"]
+ENTRYPOINT ["/bin/sh", "/uno/init.sh"]
