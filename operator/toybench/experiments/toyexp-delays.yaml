@@ -1,10 +1,10 @@
 apiVersion: kobe.semagrow.org/v1alpha1
 kind: Experiment
 metadata:
-  name: toyexp
+  name: toyexp-delays
 spec:
-  benchmark: toybench
-  federatorName: semagrow-toy
+  benchmark: toybench-delays
+  federatorName: semagrow-toy-delays
   federatorTemplateRef: semagrowtemplate
   evaluator:
     image: antru6/kobe-evaluator
