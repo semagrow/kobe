@@ -262,7 +262,7 @@ func (r *ReconcileExperiment) createEvaluatorJob(m *api.Experiment, fedendpoint 
 							{Name: "FEDERATION_ENDPOINT", Value: fedendpoint},
 							{Name: "ENDPOINT", Value: fedendpoint},
 							{Name: "EXPERIMENT", Value: m.Name},
-							{Name: "EVAL_RUN", Value: strconv.Itoa(m.Spec.TimesToRun)},
+							{Name: "EVAL_RUNS", Value: strconv.Itoa(m.Spec.TimesToRun)},
 						}, m.Spec.Evaluator.Env...),
 					}},
 					RestartPolicy: corev1.RestartPolicyOnFailure,
