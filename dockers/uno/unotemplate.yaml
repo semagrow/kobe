@@ -1,0 +1,19 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: FederatorTemplate
+metadata:
+  name: unotemplate
+spec:
+  containers:
+    - name: maincontainer 
+      image: antru6/uno
+      ports:
+      - containerPort: 80
+  port: 80
+  path: /
+  confFromFileImage: antru6/uno-init
+  inputDumpDir: /uno/input
+  outputDumpDir: /uno/output
+  confImage: antru6/uno-init-all
+  inputDir: /uno/input
+  outputDir: /uno/output
+  fedConfDir: /uno
