@@ -64,7 +64,7 @@ created.
 This will set the operator running in your kubernetes cluster and needs to be
 done only once.
 
-To enable the logging subsystem, run the following
+To enable the evaluation metrics extraction subsystem, run the following
 ```
 helm repo add elastic https://helm.elastic.co
 helm repo add kiwigrid https://kiwigrid.github.io
@@ -98,7 +98,7 @@ kubectl delete -f deploy/service_account.yaml
 kubectl delete -f deploy/crds
 ```
 
-To remove the logging subsystem run
+To remove the evaluation metrics extraction subsystem run
 
 ```
 helm delete --purge elasticsearch
