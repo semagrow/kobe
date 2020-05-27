@@ -1,0 +1,456 @@
+image:
+  repository: quay.io/fluentd_elasticsearch/fluentd
+## Specify an imagePullPolicy (Required)
+## It's recommended to change this to 'Always' if the image tag is 'latest'
+## ref: http://kubernetes.io/docs/user-guide/images/#updating-images
+  tag: v3.0.1
+  pullPolicy: IfNotPresent
+  ## Optionally specify an array of imagePullSecrets.
+  ## Secrets must be manually created in the namespace.
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+  ##
+  # pullSecrets:
+  #   - myRegistrKeySecretName
+
+## If using AWS Elasticsearch, all requests to ES need to be signed regardless of whether
+## one is using Cognito or not. By setting this to true, this chart will install a sidecar
+## proxy that takes care of signing all requests being sent to the AWS ES Domain.
+awsSigningSidecar:
+  enabled: false
+  resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 500Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 200Mi
+  network:
+    port: 8080
+    address: localhost
+    remoteReadTimeoutSeconds: 15
+  image:
+    repository: abutaha/aws-es-proxy
+    tag: v1.0
+
+# Specify to use specific priorityClass for pods
+# ref: https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/
+# If a Pod cannot be scheduled, the scheduler tries to preempt (evict) lower priority
+# Pods to make scheduling of the pending Pod possible.
+priorityClassName: ""
+
+# Specify where fluentd can find logs
+hostLogDir:
+  varLog: /var/log
+  dockerContainers: /var/lib/docker/containers
+  libSystemdDir: /usr/lib64
+
+## Configure resource requests and limits
+## ref: http://kubernetes.io/docs/user-guide/compute-resources/
+##
+resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 500Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 200Mi
+
+elasticsearch:
+  auth:
+    enabled: false
+    user: "yourUser"
+    password: "yourPass"
+  bufferChunkLimit: "2M"
+  bufferQueueLimit: 8
+  hosts: ["elasticsearch-master:9200"]
+  logstashPrefix: "logstash"
+  path: ""
+  scheme: "http"
+  sslVerify: true
+  sslVersion: "TLSv1_2"
+  outputType: "elasticsearch"
+  typeName: "_doc"
+  logLevel: "info"
+
+
+# If you want to change args of fluentd process
+# by example you can add -vv to launch with trace log
+fluentdArgs: "--no-supervisor -q"
+
+# If you want to add custom environment variables, use the env dict
+# You can then reference these in your config file e.g.:
+#     user "#{ENV['OUTPUT_USER']}"
+env: {}
+  # OUTPUT_USER: my_user
+  # LIVENESS_THRESHOLD_SECONDS: 300
+  # STUCK_THRESHOLD_SECONDS: 900
+
+# If you want to add custom environment variables from secrets, use the secret list
+secret: []
+# - name: ELASTICSEARCH_PASSWORD
+#   secret_name: elasticsearch
+#   secret_key: password
+
+rbac:
+  create: true
+
+serviceAccount:
+  # Specifies whether a ServiceAccount should be created
+  create: true
+  # The name of the ServiceAccount to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+  annotations: {}
+
+## Specify if a Pod Security Policy for node-exporter must be created
+## Ref: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
+##
+podSecurityPolicy:
+  enabled: false
+  annotations: {}
+    ## Specify pod annotations
+    ## Ref: https://kubernetes.io/docs/concepts/policy/pod-security-policy/#apparmor
+    ## Ref: https://kubernetes.io/docs/concepts/policy/pod-security-policy/#seccomp
+    ## Ref: https://kubernetes.io/docs/concepts/policy/pod-security-policy/#sysctl
+    ##
+    # seccomp.security.alpha.kubernetes.io/allowedProfileNames: '*'
+    # seccomp.security.alpha.kubernetes.io/defaultProfileName: 'docker/default'
+    # apparmor.security.beta.kubernetes.io/defaultProfileName: 'runtime/default'
+
+livenessProbe:
+  enabled: true
+  initialDelaySeconds: 600
+  periodSeconds: 60
+  kind:
+    exec:
+      command:
+      # Liveness probe is aimed to help in situations where fluentd
+      # silently hangs for no apparent reasons until manual restart.
+      # The idea of this probe is that if fluentd is not queueing or
+      # flushing chunks for 5 minutes, something is not right. If
+      # you want to change the fluentd configuration, reducing amount of
+      # logs fluentd collects, consider changing the threshold or turning
+      # liveness probe off completely.
+      - '/bin/sh'
+      - '-c'
+      - >
+        LIVENESS_THRESHOLD_SECONDS=${LIVENESS_THRESHOLD_SECONDS:-300};
+        STUCK_THRESHOLD_SECONDS=${STUCK_THRESHOLD_SECONDS:-900};
+        if [ ! -e /var/log/fluentd-buffers ];
+        then
+          exit 1;
+        fi;
+        touch -d "${STUCK_THRESHOLD_SECONDS} seconds ago" /tmp/marker-stuck;
+        if [ -z "$(find /var/log/fluentd-buffers -type d -newer /tmp/marker-stuck -print -quit)" ];
+        then
+          rm -rf /var/log/fluentd-buffers;
+          exit 1;
+        fi;
+        touch -d "${LIVENESS_THRESHOLD_SECONDS} seconds ago" /tmp/marker-liveness;
+        if [ -z "$(find /var/log/fluentd-buffers -type d -newer /tmp/marker-liveness -print -quit)" ];
+        then
+          exit 1;
+        fi;
+
+annotations: {}
+
+podAnnotations: {}
+  # prometheus.io/scrape: "true"
+  # prometheus.io/port: "24231"
+
+## DaemonSet update strategy
+## Ref: https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/
+updateStrategy:
+  type: RollingUpdate
+
+tolerations: []
+  # - key: node-role.kubernetes.io/master
+  #   operator: Exists
+  #   effect: NoSchedule
+
+affinity: {}
+  # nodeAffinity:
+  #   requiredDuringSchedulingIgnoredDuringExecution:
+  #     nodeSelectorTerms:
+  #     - matchExpressions:
+  #       - key: node-role.kubernetes.io/master
+  #         operator: DoesNotExist
+
+nodeSelector: {}
+
+service: {}
+  # ports:
+  #   - name: "monitor-agent"
+  #     type: ClusterIP
+  #     port: 24231
+
+serviceMonitor:
+  ## If true, a ServiceMonitor CRD is created for a prometheus operator
+  ## https://github.com/coreos/prometheus-operator
+  ##
+  enabled: false
+  interval: 10s
+  path: /metrics
+  port: 24231
+  labels: {}
+  metricRelabelings: []
+  relabelings: []
+  jobLabel: "app.kubernetes.io/instance"
+  type: ClusterIP
+
+serviceMetric:
+  ## If true, the metrics service will be created
+  ## Alternative to implicit creation through serviceMonitor.enabled
+  ##
+  enabled: false
+
+prometheusRule:
+  ## If true, a PrometheusRule CRD is created for a prometheus operator
+  ## https://github.com/coreos/prometheus-operator
+  ##
+  enabled: false
+  prometheusNamespace: monitoring
+  labels: {}
+  #  role: alert-rules
+
+configMaps:
+  useDefaults:
+    systemConf: true
+    containersInputConf: false
+    systemInputConf: false
+    forwardInputConf: true
+    monitoringConf: true
+    outputConf: true
+
+# can be used to add new config or overwrite the default configmaps completely after the configmaps default has been disabled above
+extraConfigMaps:
+  containers.input.conf: |-
+    # This configuration file for Fluentd / td-agent is used
+    # to watch changes to Docker log files. The kubelet creates symlinks that
+    # capture the pod name, namespace, container name & Docker container ID
+    # to the docker logs for pods in the /var/log/containers directory on the host.
+    # If running this fluentd configuration in a Docker container, the /var/log
+    # directory should be mounted in the container.
+    #
+    # These logs are then submitted to Elasticsearch which assumes the
+    # installation of the fluent-plugin-elasticsearch & the
+    # fluent-plugin-kubernetes_metadata_filter plugins.
+    # See https://github.com/uken/fluent-plugin-elasticsearch &
+    # https://github.com/fabric8io/fluent-plugin-kubernetes_metadata_filter for
+    # more information about the plugins.
+    #
+    # Example
+    # =======
+    # A line in the Docker log file might look like this JSON:
+    #
+    # {"log":"2014/09/25 21:15:03 Got request with path wombat\n",
+    #  "stream":"stderr",
+    #   "time":"2014-09-25T21:15:03.499185026Z"}
+    #
+    # The time_format specification below makes sure we properly
+    # parse the time format produced by Docker. This will be
+    # submitted to Elasticsearch and should appear like:
+    # $ curl 'http://elasticsearch-logging:9200/_search?pretty'
+    # ...
+    # {
+    #      "_index" : "logstash-2014.09.25",
+    #      "_type" : "fluentd",
+    #      "_id" : "VBrbor2QTuGpsQyTCdfzqA",
+    #      "_score" : 1.0,
+    #      "_source":{"log":"2014/09/25 22:45:50 Got request with path wombat\n",
+    #                 "stream":"stderr","tag":"docker.container.all",
+    #                 "@timestamp":"2014-09-25T22:45:50+00:00"}
+    #    },
+    # ...
+    #
+    # The Kubernetes fluentd plugin is used to write the Kubernetes metadata to the log
+    # record & add labels to the log record if properly configured. This enables users
+    # to filter & search logs on any metadata.
+    # For example a Docker container's logs might be in the directory:
+    #
+    #  /var/lib/docker/containers/997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b
+    #
+    # and in the file:
+    #
+    #  997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b-json.log
+    #
+    # where 997599971ee6... is the Docker ID of the running container.
+    # The Kubernetes kubelet makes a symbolic link to this file on the host machine
+    # in the /var/log/containers directory which includes the pod name and the Kubernetes
+    # container name:
+    #
+    #    synthetic-logger-0.25lps-pod_default_synth-lgr-997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b.log
+    #    ->
+    #    /var/lib/docker/containers/997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b/997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b-json.log
+    #
+    # The /var/log directory on the host is mapped to the /var/log directory in the container
+    # running this instance of Fluentd and we end up collecting the file:
+    #
+    #   /var/log/containers/synthetic-logger-0.25lps-pod_default_synth-lgr-997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b.log
+    #
+    # This results in the tag:
+    #
+    #  var.log.containers.synthetic-logger-0.25lps-pod_default_synth-lgr-997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b.log
+    #
+    # The Kubernetes fluentd plugin is used to extract the namespace, pod name & container name
+    # which are added to the log message as a kubernetes field object & the Docker container ID
+    # is also added under the docker field object.
+    # The final tag is:
+    #
+    #   kubernetes.var.log.containers.synthetic-logger-0.25lps-pod_default_synth-lgr-997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b.log
+    #
+    # And the final log record look like:
+    #
+    # {
+    #   "log":"2014/09/25 21:15:03 Got request with path wombat\n",
+    #   "stream":"stderr",
+    #   "time":"2014-09-25T21:15:03.499185026Z",
+    #   "kubernetes": {
+    #     "namespace": "default",
+    #     "pod_name": "synthetic-logger-0.25lps-pod",
+    #     "container_name": "synth-lgr"
+    #   },
+    #   "docker": {
+    #     "container_id": "997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b"
+    #   }
+    # }
+    #
+    # This makes it easier for users to search for logs by pod name or by
+    # the name of the Kubernetes container regardless of how many times the
+    # Kubernetes pod has been restarted (resulting in a several Docker container IDs).
+    # Json Log Example:
+    # {"log":"[info:2016-02-16T16:04:05.930-08:00] Some log text here\n","stream":"stdout","time":"2016-02-17T00:04:05.931087621Z"}
+    # CRI Log Example:
+    # 2016-02-17T00:04:05.931087621Z stdout F [info:2016-02-16T16:04:05.930-08:00] Some log text here
+    <source>
+      @id fluentd-containers.log
+      @type tail
+      path /var/log/containers/*.log
+      pos_file /var/log/containers.log.pos
+      tag raw.kubernetes.*
+      read_from_head true
+      <parse>
+        @type multi_format
+        <pattern>
+          format json
+          time_key time
+          time_format %Y-%m-%dT%H:%M:%S.%NZ
+        </pattern>
+        <pattern>
+          format /^(?<time>.+) (?<stream>stdout|stderr) [^ ]* (?<log>.*)$/
+          time_format %Y-%m-%dT%H:%M:%S.%N%:z
+        </pattern>
+      </parse>
+    </source>
+
+    # Detect exceptions in the log output and forward them as one log entry.
+    <match raw.kubernetes.**>
+      @id raw.kubernetes
+      @type detect_exceptions
+      remove_tag_prefix raw
+      message log
+      stream stream
+      multiline_flush_interval 5
+      max_bytes 500000
+      max_lines 1000
+    </match>
+
+    # Concatenate multi-line logs
+    <filter **>
+      @id filter_concat
+      @type concat
+      key message
+      multiline_end_regexp /\n$/
+      separator ""
+      timeout_label @NORMAL
+      flush_interval 5
+    </filter>
+
+    # Enriches records with Kubernetes metadata
+    <filter kubernetes.**>
+      @id filter_kubernetes_metadata
+      @type kubernetes_metadata
+    </filter>
+
+    # Fixes json fields in Elasticsearch
+    <filter kubernetes.**>
+      @id filter_parser
+      @type parser
+      key_name log
+      reserve_time true
+      reserve_data true
+      remove_key_name_field true
+      <parse>
+        @type multi_format
+        <pattern>
+          format json
+        </pattern>
+        <pattern>
+          format none
+        </pattern>
+      </parse>
+    </filter>
+
+    <filter kubernetes.**>
+      @type grep
+      <regexp>
+        key message
+        pattern (^I - [^ ]+ [^ ]+ - .{12} - .{20} - [^ ]+ -  - Experiment: (?<experiment>[^ ]+) - Date: (?<date>[^ ]+ [^ ]+) - Query: (?<query>[^ ]+) - Run: (?<run>[0-9]+) - Source Selection Time: (?<source_selection_time>[0-9]+) - Compile Time: (?<compile_time>[0-9]+) - Sources: (?<sources>[0-9]+) - Execution time: (?<execution_time>[0-9]+)$)|(^I - [^ ]+ [^ ]+ - .{12} - .{20} - [^ ]+ - Experiment: (?<experiment>[^ ]+) - Date: (?<date>[^ ]+ [^ ]+) - Query: (?<query>[^ ]+) - Run: (?<run>[0-9]+) - Query Evaluation Time: (?<evaluation_time>[0-9]+) - Results: (?<results>[0-9]+)$)
+      </regexp>
+    </filter>
+
+    <filter kubernetes.**>
+      @type parser
+      key_name message
+      reserve_time true
+      reserve_data true
+      #suppress_parse_error_log true
+      <parse>
+        @type regexp
+        expression ^I - [^ ]+ [^ ]+ - .{12} - .{20} - [^ ]+ -  - Experiment: (?<experiment>[^ ]+) - Date: (?<date>[^ ]+ [^ ]+) - Query: (?<query>[^ ]+) - Run: (?<run>[0-9]+) - Source Selection Time: (?<source_selection_time>[0-9]+) - Compile Time: (?<compile_time>[0-9]+) - Sources: (?<sources>[0-9]+) - Execution time: (?<execution_time>[0-9]+)$
+        types source_selection_time:integer,compile_time:integer,sources:integer,execution_time:integer
+      </parse>
+    </filter>
+
+    <filter kubernetes.**>
+      @type parser
+      key_name message
+      reserve_time true
+      reserve_data true
+      #suppress_parse_error_log true
+      <parse>
+        @type regexp
+        expression ^I - [^ ]+ [^ ]+ - .{12} - .{20} - [^ ]+ - Experiment: (?<experiment>[^ ]+) - Date: (?<date>[^ ]+ [^ ]+) - Query: (?<query>[^ ]+) - Run: (?<run>[0-9]+) - Query Evaluation Time: (?<evaluation_time>[0-9]+) - Results: (?<results>[0-9]+)$
+        types evaluation_time:integer,results:integer
+      </parse>
+    </filter>
+
+    <filter kubernetes.**>
+      @type parser
+      key_name message
+      reserve_time true
+      reserve_data true
+      #suppress_parse_error_log true
+      <parse>
+        @type regexp
+        expression ^I - [^ ]+ [^ ]+ - .{12} - .{20} - [^ ]+ - Experiment: (?<experiment_date>[^ ]+ - Date: [^ ]+ [^ ]+) - Query: (?<query>[^ ]+) - Run: (?<run>[0-9]+) - Query Evaluation Time: (?<evaluation_time>[0-9]+) - Results: (?<results>[0-9]+)$
+        types evaluation_time:integer,results:integer
+      </parse>
+    </filter>
+
+  system.input.conf: |-
+      #none
+
+
+
+extraVolumes: []
+#   - name: es-certs
+#     secret:
+#       defaultMode: 420
+#       secretName: es-certs
+
+extraVolumeMounts: []
+#   - name: es-certs
+#     mountPath: /certs
+#     readOnly: true
+ 
