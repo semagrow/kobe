@@ -6,6 +6,12 @@ do
   sleep 2
 done
 
+until curl --head localhost:15000
+do
+  echo "Waiting for Sidecar"
+  sleep 3
+done
+
 mkdir /kobe
 mkdir /kobe/dataset
 
