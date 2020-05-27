@@ -12,6 +12,8 @@ do
   sleep 3
 done
 
+sleep 10
+
 mkdir /kobe
 mkdir /kobe/dataset
 
