@@ -1,0 +1,14 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Experiment
+metadata:
+  name: semagrow-ls-exp
+spec:
+  benchmark: fedbench-lifescience
+  federatorName: semagrow-ls
+  federatorTemplateRef: semagrowtemplate
+  evaluator:
+    image: semagrow/kobe-sequential-evaluator
+  timesToRun: 3
+  dryRun: false
+  forceNewInit: false 
+

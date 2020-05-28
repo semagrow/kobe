@@ -1,0 +1,84 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Benchmark
+metadata:
+  name: fedbench-crossdomain
+spec:
+  datasets:
+    - name: dbpedia
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/DBPedia-Subset.tar.gz
+      templateRef: virtuosotemplate
+    - name: geonames
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/GeoNames.tar.gz
+      templateRef: virtuosotemplate
+    - name: jamendo
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/Jamendo.tar.gz
+      templateRef: virtuosotemplate
+    - name: lmdb
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/LMDB.tar.gz
+      templateRef: virtuosotemplate
+    - name: nyt
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/NYT.tar.gz
+      templateRef: virtuosotemplate
+  queries:
+    - name: cd1
+      language: sparql
+      queryString: "SELECT ?predicate ?object WHERE {
+        { <http://dbpedia.org/resource/Barack_Obama> ?predicate ?object }
+        UNION    
+        { ?subject <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .
+          ?subject ?predicate ?object } 
+      }"
+    - name: cd2
+      language: sparql
+      queryString: "SELECT ?party ?page  WHERE {
+        <http://dbpedia.org/resource/Barack_Obama> <http://dbpedia.org/ontology/party> ?party .
+        ?x <http://data.nytimes.com/elements/topicPage> ?page .
+        ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .
+      }"
+    - name: cd3
+      language: sparql
+      queryString: "SELECT ?president ?party ?page WHERE {
+        ?president <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President> .
+        ?president <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/United_States> .
+        ?president <http://dbpedia.org/ontology/party> ?party .
+        ?x <http://data.nytimes.com/elements/topicPage> ?page .
+        ?x <http://www.w3.org/2002/07/owl#sameAs> ?president .
+      }"
+    - name: cd4
+      language: sparql
+      queryString: "SELECT ?actor ?news WHERE {
+        ?film <http://purl.org/dc/terms/title> 'Tarzan' .
+        ?film <http://data.linkedmdb.org/resource/movie/actor> ?actor .
+        ?actor <http://www.w3.org/2002/07/owl#sameAs> ?x.
+        ?y <http://www.w3.org/2002/07/owl#sameAs> ?x .
+        ?y <http://data.nytimes.com/elements/topicPage> ?news
+      }"
+    - name: cd5
+      language: sparql
+      queryString: "SELECT ?film ?director ?genre WHERE {
+        ?film <http://dbpedia.org/ontology/director>  ?director .
+        ?director <http://dbpedia.org/ontology/nationality> <http://dbpedia.org/resource/Italy> .
+        ?x <http://www.w3.org/2002/07/owl#sameAs> ?film .
+        ?x <http://data.linkedmdb.org/resource/movie/genre> ?genre .
+      }"
+    - name: cd6
+      language: sparql
+      queryString: "SELECT ?name ?location WHERE {
+        ?artist <http://xmlns.com/foaf/0.1/name> ?name .
+        ?artist <http://xmlns.com/foaf/0.1/based_near> ?location .
+        ?location <http://www.geonames.org/ontology#parentFeature> ?germany . 
+        ?germany <http://www.geonames.org/ontology#name> 'Federal Republic of Germany'
+      }"
+    - name: cd7
+      language: sparql
+      queryString: "SELECT ?location ?news WHERE {
+        ?location <http://www.geonames.org/ontology#parentFeature> ?parent . 
+        ?parent <http://www.geonames.org/ontology#name> 'California' .
+        ?y <http://www.w3.org/2002/07/owl#sameAs> ?location .
+        ?y <http://data.nytimes.com/elements/topicPage> ?news 
+      }"

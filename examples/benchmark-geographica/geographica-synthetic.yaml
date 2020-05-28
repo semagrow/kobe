@@ -1,0 +1,785 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Benchmark
+metadata:
+  name: geographica-synthetic
+spec:
+  datasets:
+    - name: synthetic
+      files:
+        - url: https://users.iit.demokritos.gr/~antru/dumps/geographica-synthetic.tar.gz
+      templateRef: strabontemplate
+  queries:
+    - name: GSQ-00
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+        ?s1 landOwnership:hasGeometry ?s1Geo . 
+        ?s1Geo landOwnership:asWKT ?geo1 . 
+        ?s1 landOwnership:hasTag ?tag1 . 
+        ?tag1 landOwnership:hasKey "1" .  
+        FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 90.0 0.0, 90.0 77.94970848221368, 0.0 77.94970848221368, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-01
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+        ?s1 landOwnership:hasGeometry ?s1Geo . 
+        ?s1Geo landOwnership:asWKT ?geo1 . 
+        ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "512" .  
+          FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 90.0 0.0, 90.0 77.94970848221368, 0.0 77.94970848221368, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-02
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 landOwnership:hasGeometry ?s1Geo . 
+          ?s1Geo landOwnership:asWKT ?geo1 . 
+          ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "1" .  
+          FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 78.0913058119689 0.0, 78.0913058119689 67.60809780677805, 0.0 67.60809780677805, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-03
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 landOwnership:hasGeometry ?s1Geo . 
+          ?s1Geo landOwnership:asWKT ?geo1 . 
+          ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "512" .  
+          FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 78.0913058119689 0.0, 78.0913058119689 67.60809780677805, 0.0 67.60809780677805, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-04
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 landOwnership:hasGeometry ?s1Geo . 
+          ?s1Geo landOwnership:asWKT ?geo1 . 
+          ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "1" .  
+          FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 63.86691556806645 0.0, 63.86691556806645 55.28941450221502, 0.0 55.28941450221502, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-05
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+      ?s1 landOwnership:hasGeometry ?s1Geo . 
+      ?s1Geo landOwnership:asWKT ?geo1 . 
+      ?s1 landOwnership:hasTag ?tag1 . 
+      ?tag1 landOwnership:hasKey "512" .  
+      FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 63.86691556806645 0.0, 63.86691556806645 55.28941450221502, 0.0 55.28941450221502, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-06
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+      ?s1 landOwnership:hasGeometry ?s1Geo . 
+      ?s1Geo landOwnership:asWKT ?geo1 . 
+      ?s1 landOwnership:hasTag ?tag1 . 
+      ?tag1 landOwnership:hasKey "1" .  
+      FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 45.07667166562743 0.0, 45.07667166562743 39.01658593939718, 0.0 39.01658593939718, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-07
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+      ?s1 landOwnership:hasGeometry ?s1Geo . 
+      ?s1Geo landOwnership:asWKT ?geo1 . 
+      ?s1 landOwnership:hasTag ?tag1 . 
+      ?tag1 landOwnership:hasKey "512" .  
+      FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 45.07667166562743 0.0, 45.07667166562743 39.01658593939718, 0.0 39.01658593939718, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-08
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 landOwnership:hasGeometry ?s1Geo . 
+          ?s1Geo landOwnership:asWKT ?geo1 . 
+          ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "1" .  
+          FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 28.569354592456698 0.0, 28.569354592456698 24.72083000570674, 0.0 24.72083000570674, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-09
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 landOwnership:hasGeometry ?s1Geo . 
+          ?s1Geo landOwnership:asWKT ?geo1 . 
+          ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "512" .  
+          FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 28.569354592456698 0.0, 28.569354592456698 24.72083000570674, 0.0 24.72083000570674, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-10
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 landOwnership:hasGeometry ?s1Geo . 
+          ?s1Geo landOwnership:asWKT ?geo1 . 
+          ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "1" .  
+          FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 3.105939958310361 0.0, 3.105939958310361 2.668866065439579, 0.0 2.668866065439579, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-11
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 landOwnership:hasGeometry ?s1Geo . 
+          ?s1Geo landOwnership:asWKT ?geo1 . 
+          ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "512" .  
+          FILTER(geof:sfIntersects(?geo1, "POLYGON ((0.0 0.0, 3.105939958310361 0.0, 3.105939958310361 2.668866065439579, 0.0 2.668866065439579, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-12
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "1" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 90.0 0.0, 90.0 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-13
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "512" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 90.0 0.0, 90.0 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-14
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "1" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 67.53276922660304 0.0, 67.53276922660304 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-15
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "512" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 67.53276922660304 0.0, 67.53276922660304 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-16
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "1" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 45.032769226603044 0.0, 45.032769226603044 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-17
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "512" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 45.032769226603044 0.0, 45.032769226603044 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-18
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "1" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 22.532769226603044 0.0, 22.532769226603044 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-19
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "512" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 22.532769226603044 0.0, 22.532769226603044 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-20
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "1" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 8.997613111238904 0.0, 8.997613111238904 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-21
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "512" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 8.997613111238904 0.0, 8.997613111238904 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-22
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "1" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 0.032769571270841485 0.0, 0.032769571270841485 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-23
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "512" .  
+          FILTER(geof:sfWithin(?geo1, "POLYGON ((0.0 0.0, 0.032769571270841485 0.0, 0.032769571270841485 90.0, 0.0 90.0, 0.0 0.0))"^^geo:wktLiteral)) .
+      }'
+
+    - name: GSQ-24
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+          ?s1 landOwnership:hasGeometry ?s1Geo . 
+          ?s1Geo landOwnership:asWKT ?geo1 . 
+          ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "1" .  
+          ?s2 state:hasGeometry ?s2Geo . 
+          ?s2Geo state:asWKT ?geo2 . 
+          ?s2 state:hasTag ?tag2 . 
+          ?tag2 state:hasKey "1" .  
+          FILTER(geof:sfIntersects(?geo1, ?geo2)) .
+      }'
+
+    - name: GSQ-25
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+          ?s1 landOwnership:hasGeometry ?s1Geo . 
+          ?s1Geo landOwnership:asWKT ?geo1 . 
+          ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "1" .  
+          ?s2 state:hasGeometry ?s2Geo . 
+          ?s2Geo state:asWKT ?geo2 . 
+          ?s2 state:hasTag ?tag2 . 
+          ?tag2 state:hasKey "512" .  
+          FILTER(geof:sfIntersects(?geo1, ?geo2)) .
+      }'
+
+    - name: GSQ-26
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+          ?s2 state:hasGeometry ?s2Geo . 
+          ?s2Geo state:asWKT ?geo2 . 
+          ?s2 state:hasTag ?tag2 . 
+          ?tag2 state:hasKey "1" .  
+          ?s1 landOwnership:hasGeometry ?s1Geo . 
+          ?s1Geo landOwnership:asWKT ?geo1 . 
+          ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "512" .  
+          FILTER(geof:sfIntersects(?geo1, ?geo2)) .
+      }'
+
+    - name: GSQ-27
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX landOwnership: <http://geographica.di.uoa.gr/generator/landOwnership/>
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+          ?s1 landOwnership:hasGeometry ?s1Geo . 
+          ?s1Geo landOwnership:asWKT ?geo1 . 
+          ?s1 landOwnership:hasTag ?tag1 . 
+          ?tag1 landOwnership:hasKey "512" .  
+          ?s2 state:hasGeometry ?s2Geo . 
+          ?s2Geo state:asWKT ?geo2 . 
+          ?s2 state:hasTag ?tag2 . 
+          ?tag2 state:hasKey "512" .  
+          FILTER(geof:sfIntersects(?geo1, ?geo2)) .
+      }'
+
+    - name: GSQ-28
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+          ?s1 state:hasGeometry ?s1Geo . 
+          ?s1Geo state:asWKT ?geo1 . 
+          ?s1 state:hasTag ?tag1 . 
+          ?tag1 state:hasKey "1" .  
+          ?s2 state:hasGeometry ?s2Geo . 
+          ?s2Geo state:asWKT ?geo2 . 
+          ?s2 state:hasTag ?tag2 . 
+          ?tag2 state:hasKey "1" .  
+          FILTER(geof:sfTouches(?geo1, ?geo2)) .
+      }'
+
+    - name: GSQ-29
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+          ?s1 state:hasGeometry ?s1Geo . 
+          ?s1Geo state:asWKT ?geo1 . 
+          ?s1 state:hasTag ?tag1 . 
+          ?tag1 state:hasKey "1" .  
+          ?s2 state:hasGeometry ?s2Geo . 
+          ?s2Geo state:asWKT ?geo2 . 
+          ?s2 state:hasTag ?tag2 . 
+          ?tag2 state:hasKey "512" .  
+          FILTER(geof:sfTouches(?geo1, ?geo2)) .
+      }'
+
+    - name: GSQ-30
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+          ?s2 state:hasGeometry ?s2Geo . 
+          ?s2Geo state:asWKT ?geo2 . 
+          ?s2 state:hasTag ?tag2 . 
+          ?tag2 state:hasKey "1" .  
+          ?s1 state:hasGeometry ?s1Geo . 
+          ?s1Geo state:asWKT ?geo1 . 
+          ?s1 state:hasTag ?tag1 . 
+          ?tag1 state:hasKey "512" .  
+          FILTER(geof:sfTouches(?geo1, ?geo2)) .
+      }'
+
+    - name: GSQ-31
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+          ?s1 state:hasGeometry ?s1Geo . 
+          ?s1Geo state:asWKT ?geo1 . 
+          ?s1 state:hasTag ?tag1 . 
+          ?tag1 state:hasKey "512" .  
+          ?s2 state:hasGeometry ?s2Geo . 
+          ?s2Geo state:asWKT ?geo2 . 
+          ?s2 state:hasTag ?tag2 . 
+          ?tag2 state:hasKey "512" .  
+          FILTER(geof:sfTouches(?geo1, ?geo2)) .
+      }'
+
+    - name: GSQ-32
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "1" .  
+          ?s2 state:hasGeometry ?s2Geo . 
+          ?s2Geo state:asWKT ?geo2 . 
+          ?s2 state:hasTag ?tag2 . 
+          ?tag2 state:hasKey "1" .  
+          FILTER(geof:sfWithin(?geo1, ?geo2)) .
+      }'
+
+    - name: GSQ-33
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "1" .  
+          ?s2 state:hasGeometry ?s2Geo . 
+          ?s2Geo state:asWKT ?geo2 . 
+          ?s2 state:hasTag ?tag2 . 
+          ?tag2 state:hasKey "512" .  
+          FILTER(geof:sfWithin(?geo1, ?geo2)) .
+      }'
+
+    - name: GSQ-34
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+      ?s2 state:hasGeometry ?s2Geo . 
+      ?s2Geo state:asWKT ?geo2 . 
+      ?s2 state:hasTag ?tag2 . 
+      ?tag2 state:hasKey "1" .  
+      ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+      ?s1Geo pointOfInterest:asWKT ?geo1 . 
+      ?s1 pointOfInterest:hasTag ?tag1 . 
+      ?tag1 pointOfInterest:hasKey "512" .  
+      FILTER(geof:sfWithin(?geo1, ?geo2)) .
+      }'
+
+    - name: GSQ-35
+      language: sparql
+      queryString: 'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+      PREFIX strdf: <http://strdf.di.uoa.gr/ontology#> 
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+      PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+      PREFIX state: <http://geographica.di.uoa.gr/generator/state/>
+      PREFIX pointOfInterest: <http://geographica.di.uoa.gr/generator/pointOfInterest/>
+
+      SELECT ?s1 ?s2 
+      WHERE {
+          ?s1 pointOfInterest:hasGeometry ?s1Geo . 
+          ?s1Geo pointOfInterest:asWKT ?geo1 . 
+          ?s1 pointOfInterest:hasTag ?tag1 . 
+          ?tag1 pointOfInterest:hasKey "512" .  
+          ?s2 state:hasGeometry ?s2Geo . 
+          ?s2Geo state:asWKT ?geo2 . 
+          ?s2 state:hasTag ?tag2 . 
+          ?tag2 state:hasKey "512" .  
+          FILTER(geof:sfWithin(?geo1, ?geo2)) .
+      }'

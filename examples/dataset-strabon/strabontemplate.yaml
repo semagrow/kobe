@@ -1,0 +1,24 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: DatasetTemplate
+metadata:
+  name: strabontemplate
+spec:
+  containers:
+    - name: postgis
+      image: bde2020/postgis
+      ports:
+        - containerPort: 5432
+    - name: maincontainer
+      image: antru6/strabon
+      env:
+        - name: STRABON_CONNECTION_hostname
+          value: "localhost"
+        - name: STRABON_CONNECTION_port
+          value: "5432"
+      ports:
+        - containerPort: 8080
+  port: 8080
+  path: /strabon/Query
+  initPolicy: ForceInit
+
+

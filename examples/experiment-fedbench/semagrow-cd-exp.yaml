@@ -1,0 +1,14 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Experiment
+metadata:
+  name: semagrow-cd-exp
+spec:
+  benchmark: fedbench-crossdomain
+  federatorName: semagrow-cd
+  federatorTemplateRef: semagrowtemplate
+  evaluator:
+    image: semagrow/kobe-sequential-evaluator
+  timesToRun: 3
+  dryRun: false
+  forceNewInit: false 
+
