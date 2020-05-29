@@ -128,9 +128,9 @@ rm /var/log/containers.log.pos
 ## Example
 
 The typical workflow of defining a KOBE experiment is the following.
-1. Create a set of datasets by defining new [Dataset](docs/api.md#kobedataset)s
+1. Create a set of datasets by defining new [Datasets](docs/api.md#kobedataset)
 2. Define one or more [Benchmark](docs/api.md#kobebenchmark)
-   and one or more [Federator](docs/api.md#kobefederator)s.
+   and one or more [Federators](docs/api.md#kobefederator).
 3. Define a [Experiment](docs/api.md#kobeexperiment).
 
 A simple example can be found in the [examples](examples/) directory.
