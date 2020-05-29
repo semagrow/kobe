@@ -6,11 +6,11 @@ spec:
   datasets:
     - name: toy1
       files:
-        - url: http://cgi.di.uoa.gr/~antru/dumps/toy1.tar.gz
+        - url: https://users.iit.demokritos.gr/~antru/dumps/toy1.tar.gz
       templateRef: virtuosotemplate
     - name: toy2
       files:
-        - url: http://cgi.di.uoa.gr/~antru/dumps/toy2.tar.gz
+        - url: https://users.iit.demokritos.gr/~antru/dumps/toy2.tar.gz
       templateRef: virtuosotemplate
   queries:
     - name: tq1
