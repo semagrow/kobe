@@ -1,0 +1,13 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Experiment
+metadata:
+  name: toyexp-delays
+spec:
+  benchmark: toybench-delays
+  federatorName: semagrow-toy-delays
+  federatorTemplateRef: semagrowtemplate
+  evaluator:
+    image: semagrow/kobe-sequential-evaluator
+  timesToRun: 3
+  dryRun: false
+  forceNewInit: true 

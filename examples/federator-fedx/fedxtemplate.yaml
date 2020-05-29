@@ -1,0 +1,19 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: FederatorTemplate
+metadata:
+  name: fedxtemplate
+spec:
+  containers:
+    - name: maincontainer 
+      image: image: semagrow/fedx-server
+      ports:
+      - containerPort: 8080
+  port: 8080
+  path: /fedx-3.1/repositories/sparql
+  confFromFileImage: antru6/fedx-init
+  inputDumpDir: /sevod-scraper/input
+  outputDumpDir: /sevod-scraper/output
+  confImage: antru6/fedx-init-all
+  inputDir: /kobe/input
+  outputDir: /kobe/output
+  fedConfDir: /etc/fedx

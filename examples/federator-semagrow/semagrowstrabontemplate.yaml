@@ -1,0 +1,19 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: FederatorTemplate
+metadata:
+  name: semagrowstrabontemplate
+spec:
+  containers:
+    - name: maincontainer 
+      image: antru6/semagrow:kobe-logging
+      ports:
+      - containerPort: 8080
+  port: 8080
+  path: /SemaGrow/sparql
+  confFromFileImage: kostbabis/semagrow-init
+  inputDumpDir: /sevod-scraper/input
+  outputDumpDir: /sevod-scraper/output
+  confImage: antru6/semagrow-init-all-strabon
+  inputDir: /kobe/input
+  outputDir: /kobe/output
+  fedConfDir: /etc/default/semagrow

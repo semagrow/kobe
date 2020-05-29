@@ -145,6 +145,10 @@ func (r *ReconcileFederation) Reconcile(request reconcile.Request) (reconcile.Re
 	datasetsForInit := []string{}  // here we will collect only datasets that get init containers for metadata creation
 	endpointsForInit := []string{} // here we will collect the endpoints that correspond to the selected datasets in the above slice
 
+	// making sure experiment managed to set up this field in status correctly f.e not nil
+	if (instance.Status.Phase != api.FederationInitializing) && (instance.Status.Phase != api.FederationRunning) {
+		return reconcile.Result{RequeueAfter: 1000000000}, nil
+	}
 	// getting plan for metadata creation
 	if instance.Status.Phase == api.FederationInitializing {
 		// the federation controller still runs the init loop as long as this
