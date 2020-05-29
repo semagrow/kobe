@@ -100,6 +100,34 @@ The setup can be customized by changing the configuration parameters
 of each helm chart. Please check the corresponding documentation of
 each chart for more info.
 
+## Example
+
+The typical workflow of defining a KOBE experiment is the following.
+1. Create one [DatasetTemplate](operator/docs/api.md#datasettemplate)
+   for each dataset server you want to use in your benchmark.
+2. Define your [Benchmark](operator/docs/api.md#benchmark),
+   which should contain a list of datasets and a list of queries.
+2. Create one [FederatorTemplate](operator/docs/api.federatortemplate)
+   for the federator engine you want to use in your experiment. 
+3. Define a [Experiment](docs/api.md#experiment) over your previously defined benchmark.
+
+Several examples of the above specifications can be found in the [examples](examples/) directory.
+
+In the following, we show the steps for deploying an experiment on a simple benchmark that comprises of
+a semagrow federation of two viruoso endpoints and three queries.
+
+```
+kubectl apply -f examples/dataset-virtuoso/virtuosotemplate.yaml
+kubectl apply -f examples/benchmark-toybench/toybench-simple.yaml
+```
+Wait a little for the datasets to load and proceed as follows:
+
+```
+kubectl apply -f examples/federator-semagrow/semagrowtemplate.yaml
+kubectl apply -f examples/experiment-toybench/toyexp-simple.yaml
+```
+You can now view the evaluation metrics in the Kibana dashboards.
+
 ## Removal
 
 ```
@@ -125,12 +153,3 @@ rm -rf /var/log/fluentd-buffers/
 rm /var/log/containers.log.pos
 ```
 
-## Example
-
-The typical workflow of defining a KOBE experiment is the following.
-1. Create a set of datasets by defining new [Datasets](docs/api.md#kobedataset)
-2. Define one or more [Benchmark](docs/api.md#kobebenchmark)
-   and one or more [Federators](docs/api.md#kobefederator).
-3. Define a [Experiment](docs/api.md#kobeexperiment).
-
-A simple example can be found in the [examples](examples/) directory.
