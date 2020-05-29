@@ -113,8 +113,8 @@ The typical workflow of defining a KOBE experiment is the following.
 
 Several examples of the above specifications can be found in the [examples](examples/) directory.
 
-In the following, we show the steps for deploying an experiment on a simple benchmark that comprises of
-three queries over a semagrow federation of two viruoso endpoints.
+In the following, we show the steps for deploying an experiment on a simple benchmark that comprises
+three queries over a semagrow federation of two virtuoso endpoints.
 
 ```
 kubectl apply -f examples/dataset-virtuoso/virtuosotemplate.yaml
