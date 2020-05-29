@@ -80,7 +80,7 @@ kubectl apply -f operator/deploy/efk-config/kobe-kibana-configuration.yaml
 ```
 
 These result in the simplest setup of an one-node
-[ElasticSearch](https://github.com/elastic/helm-charts/blob/master/elasticsearch)
+[Elasticsearch](https://github.com/elastic/helm-charts/blob/master/elasticsearch)
 that does not persist data across pod recreation, a
 [Fluentd](https://github.com/kiwigrid/helm-charts/tree/master/charts/fluentd-elasticsearch)
 `DaemonSet` and a
