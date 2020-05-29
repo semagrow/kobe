@@ -109,12 +109,12 @@ The typical workflow of defining a KOBE experiment is the following.
    which should contain a list of datasets and a list of queries.
 2. Create one [FederatorTemplate](operator/docs/api.federatortemplate)
    for the federator engine you want to use in your experiment. 
-3. Define a [Experiment](docs/api.md#experiment) over your previously defined benchmark.
+3. Define an [Experiment](docs/api.md#experiment) over your previously defined benchmark.
 
 Several examples of the above specifications can be found in the [examples](examples/) directory.
 
 In the following, we show the steps for deploying an experiment on a simple benchmark that comprises of
-a semagrow federation of two viruoso endpoints and three queries.
+three queries over a semagrow federation of two viruoso endpoints.
 
 ```
 kubectl apply -f examples/dataset-virtuoso/virtuosotemplate.yaml
