@@ -146,6 +146,8 @@ helm delete --purge kibana
 helm delete --purge fluentd
 helm repo remove elastic
 helm repo remove kiwigrid
+kubectl delete jobs.batch kobe-kibana-configuration
+kubectl delete configmaps kobe-kibana-config
 ```
 and then in each Kubernetes node
 ```
