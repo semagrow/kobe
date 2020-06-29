@@ -1,0 +1,16 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: DatasetTemplate
+metadata:
+  name: postgistemplate
+spec:
+  containers:
+  - name: maincontainer
+    image: antru6/postgis
+    env:
+    - name: POSTGRES_PASSWORD
+      value: postgres
+    ports:
+    - containerPort: 5432
+  port: 5432
+  path: /
+  initPolicy: ForceInit
