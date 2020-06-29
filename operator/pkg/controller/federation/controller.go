@@ -674,7 +674,8 @@ func (r *ReconcileFederation) newSvc(m *api.Federation) *corev1.Service {
 			Ports: []corev1.ServicePort{
 				{
 					Port: m.Spec.Template.Port,
-					Name: "http",
+					//Name: "http",
+                                        Name: "xxx",
 					TargetPort: intstr.IntOrString{
 						IntVal: m.Spec.Template.Port,
 					},
