@@ -6,8 +6,6 @@ spec:
   containers:
     - name: postgis
       image: bde2020/postgis
-      ports:
-        - containerPort: 5432
     - name: maincontainer
       image: antru6/strabon
       env:
