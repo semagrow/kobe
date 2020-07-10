@@ -655,7 +655,7 @@ func (r *ReconcileFederation) reconcileSvc(instance *api.Federation) (bool, erro
 		}
 		return true, nil
 	} else if err != nil {
-		return true, err
+		return false, err
 	}
 	return false, nil
 }

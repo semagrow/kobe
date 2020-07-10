@@ -348,21 +348,18 @@ func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) (bool, e
 		}
 		return true, nil
 	} else if err != nil {
-		return true, err
+		return false, err
 	}
 
 	return false, nil
 }
 
 func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
-	servicePorts := []corev1.ServicePort{{
-		Port: int32(m.Spec.SystemSpec.Port),
-		Name: "http",
-	}}
+	servicePorts := []corev1.ServicePort{}
 
 	for i, container := range m.Spec.SystemSpec.Containers {
 		for j, port := range container.Ports {
-			if port.ContainerPort != int32(m.Spec.SystemSpec.Port) {
+			if &port.Name == nil || port.Name == "" {
 
 				newPort := corev1.ServicePort{
 					Name: "http-" + strconv.Itoa(i) + strconv.Itoa(j),
