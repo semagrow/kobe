@@ -366,6 +366,13 @@ func (r *ReconcileDataset) newSvc(m *api.EphemeralDataset) *corev1.Service {
 					Port: port.ContainerPort,
 				}
 				servicePorts = append(servicePorts, newPort)
+			} else {
+
+				newPort := corev1.ServicePort{
+					Name: port.Name,
+					Port: port.ContainerPort,
+				}
+				servicePorts = append(servicePorts, newPort)
 			}
 		}
 	}
