@@ -107,9 +107,9 @@ The typical workflow of defining a KOBE experiment is the following.
    for each dataset server you want to use in your benchmark.
 2. Define your [Benchmark](operator/docs/api.md#benchmark),
    which should contain a list of datasets and a list of queries.
-2. Create one [FederatorTemplate](operator/docs/api.federatortemplate)
+2. Create one [FederatorTemplate](operator/docs/api.md#federatortemplate)
    for the federator engine you want to use in your experiment. 
-3. Define an [Experiment](docs/api.md#experiment) over your previously defined benchmark.
+3. Define an [Experiment](operator/docs/api.md#experiment) over your previously defined benchmark.
 
 Several examples of the above specifications can be found in the [examples](examples/) directory.
 
