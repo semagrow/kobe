@@ -11,7 +11,7 @@ case $COMMAND in
     USAGE="usage: kobectl apply [configuration_file]"
     CONF_FILE=$2
     
-    if [ -e $CONF_FILE ]
+    if [ -z $CONF_FILE ]
     then
       echo $USAGE
       exit
@@ -29,7 +29,7 @@ case $COMMAND in
     TYPE=$2
     FLAGS="-o custom-columns=NAME:.metadata.name"
     
-    if [ -e $TYPE ]
+    if [ -z $TYPE ]
     then
       echo $USAGE
       exit
@@ -37,16 +37,16 @@ case $COMMAND in
     
     case $TYPE in
       "benchmark" | "benchmarks")
-        kubectl $FLAGS get benchmarks.kobe.semagrow.org
+        kubectl get benchmarks.kobe.semagrow.org $FLAGS
         ;;
       "experiment" | "experiments")
-        kubectl $FLAGS get experiments.kobe.semagrow.org
+        kubectl get experiments.kobe.semagrow.org $FLAGS
         ;;
       "federatortemplate" | "federatortemplates")
-        kubectl $FLAGS get federatortemplates.kobe.semagrow.org
+        kubectl get federatortemplates.kobe.semagrow.org $FLAGS
         ;;
       "datasettemplate" | "datasettemplates")
-        kubectl $FLAGS get datasettemplates.kobe.semagrow.org
+        kubectl get datasettemplates.kobe.semagrow.org $FLAGS
         ;;
       *)
         echo $USAGE
@@ -63,7 +63,7 @@ case $COMMAND in
     TYPE=$2
     RESOURCE=$3
     
-    if [ -e $TYPE ] || [ -e $RESOURCE ]
+    if [ -z $TYPE ] || [ -z $RESOURCE ]
     then
       echo $USAGE
       exit
@@ -97,8 +97,9 @@ case $COMMAND in
     USAGE="usage: kobectl show [resource_type] [resource]"
     TYPE=$2
     RESOURCE=$3
+    FLAGS="-o custom-columns=NAME:.metadata.name"
     
-    if [ -e $TYPE ] || [ -e $RESOURCE ]
+    if [ -z $TYPE ] || [ -z $RESOURCE ]
     then
       echo $USAGE
       exit
@@ -106,7 +107,7 @@ case $COMMAND in
     
     case $TYPE in
       "benchmark" | "benchmarks")
-      
+        
         DATASETS=`kubectl get benchmarks.kobe.semagrow.org $RESOURCE \
                           -o jsonpath="{.spec.datasets[*].name}"`
         
@@ -115,7 +116,13 @@ case $COMMAND in
         for DATASET in $DATASETS
         do
           STATUS=`kubectl get pod $DATASET-pod -n $RESOURCE \
-                          -o custom-columns=:.status.phase --no-headers`
+                          -o custom-columns=:.status.phase --no-headers \
+                  2> /dev/null`
+          
+          if [ -z $STATUS ]
+          then
+            continue
+          fi
           
           if [ $STATUS = "Running" ]
           then
@@ -127,9 +134,9 @@ case $COMMAND in
                       | grep "database system is ready to accept connections" \
                       | wc -l | grep 2`
             
-            if [ -e "$LOADED_S$LOADED_V$LOADED_P" ] 
+            if [ -z "$LOADED_S$LOADED_V$LOADED_P" ]
             then
-              echo STATUS = "Loading"
+              STATUS="Loading"
             fi
           fi
           
@@ -147,21 +154,22 @@ case $COMMAND in
         FEDERATOR=`kubectl get experiments.kobe.semagrow.org $RESOURCE \
                            -o jsonpath="{.spec.federatorName}"`
         FEDSTATUS=`kubectl get pod $FEDERATOR -n $NAMESPACE \
-                           -o custom-columns=:.status.phase --no-headers`
+                           -o custom-columns=:.status.phase --no-headers \
+                   2< /dev/null`
         
         JOBS=`kubectl get pods --no-headers \
                       -o custom-columns=:.metadata.name,:.status.phase \
               | grep $RESOURCE-evaluationjob`
         
         OUTPUT="NAME STATUS\n$FEDERATOR $FEDSTATUS\n$JOBS\n"
-        echo -n $OUTPUT | column -t        
+        echo -n $OUTPUT | column -t
         ;;
       
       "federatortemplate" | "federatortemplates")
-        echo "Invalid resource type. Use the get command."
+        kubectl get federatortemplate.kobe.semagrow.org $RESOURCE $FLAGS
         ;;
       "datasettemplate" | "datasettemplates")
-        echo "Invalid resource type. Use the get command."
+        kubectl get datasettemplate.kobe.semagrow.org $RESOURCE $FLAGS
         ;;
       *)
         echo $USAGE
