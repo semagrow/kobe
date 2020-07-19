@@ -194,7 +194,7 @@ case $COMMAND in
     echo "  federatortemplate(s),"
     echo "  datasettemplate(s)."
     echo ""
-    echo "for more anvanced control options for KOBE, use kubectl."
+    echo "for more advanced control options for KOBE, use kubectl."
     ;;
     
   ##############################################################################
