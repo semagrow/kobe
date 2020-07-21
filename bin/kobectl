@@ -228,7 +228,7 @@ case $COMMAND in
     if [ ! -z $ISTIO ]
     then
       curl -L https://istio.io/downloadIstio | sh -
-      /istio-1.6.?/bin/istioctl manifest apply --set profile=default
+      ./istio-1.6.*/bin/istioctl manifest apply --set profile=default
     fi
     
     if [ ! -z $EFK ]
@@ -252,6 +252,16 @@ case $COMMAND in
   
   "purge")
     
+    USAGE="usage: kobectl purge [kobe-directory]"
+    KOBEDIR=$2
+    
+    if [ -z $KOBEDIR ]
+    then
+      echo $USAGE
+      exit
+    fi
+    
+    cd $KOBEDIR
     echo "This operation will uninstall KOBE from your system."
     echo -n "Proceed (y/n)? "
     read answer
@@ -269,6 +279,10 @@ case $COMMAND in
       kubectl delete -f operator/deploy/clusterrole.yaml
       kubectl delete -f operator/deploy/service_account.yaml
       kubectl delete -f operator/deploy/crds
+      
+      ./istio-1.6.*/bin/istioctl manifest generate --set profile=default \
+        | kubectl delete -f -
+      kubectl delete namespace istio-system
       
       helm delete --purge elasticsearch
       helm delete --purge kibana
@@ -301,7 +315,7 @@ case $COMMAND in
     echo "  kobectl show [resource_type] [resource]"
     echo "  kobectl delete [resource_type] [resource]"
     echo "  kobectl install [component] [kobe-directory]"
-    echo "  kobectl purge"
+    echo "  kobectl purge [kobe-directory]"
     echo ""
     echo "[resource_type] can be any of:"
     echo "  benchmark(s),"
