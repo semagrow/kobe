@@ -180,27 +180,136 @@ case $COMMAND in
   
   ##############################################################################
   
+  "install")
+    
+    USAGE="usage: kobectl install [component] [kobe-directory]"
+    COMPONENT=$2
+    KOBEDIR=$3
+    
+    if [ -z $COMPONENT ] || [ -z $KOBEDIR ]
+    then
+      echo $USAGE
+      exit
+    fi
+    
+    cd $KOBEDIR
+    
+    case $COMPONENT in
+      "operator")
+        OPERATOR="true"
+        ;;
+      "istio")
+        ISTIO="true"
+        ;;
+      "efk")
+        EFK="true"
+        ;;
+      "full")
+        OPERATOR="true"
+        ISTIO="true"
+        EFK="true"
+        ;;
+      *)
+        echo $USAGE
+        exit
+        ;;
+    esac
+    
+    if [ ! -z $OPERATOR ]
+    then
+      kubectl apply -f operator/deploy/crds
+      kubectl apply -f operator/deploy/service_account.yaml
+      kubectl apply -f operator/deploy/clusterrole.yaml
+      kubectl apply -f operator/deploy/clusterrole_binding.yaml
+      kubectl apply -f operator/deploy/role.yaml
+      kubectl apply -f operator/deploy/operator.yaml
+    fi
+    
+    if [ ! -z $ISTIO ]
+    then
+      curl -L https://istio.io/downloadIstio | sh -
+      /istio-1.6.?/bin/istioctl manifest apply --set profile=default
+    fi
+    
+    if [ ! -z $EFK ]
+    then
+      helm repo add elastic https://helm.elastic.co
+      helm repo add kiwigrid https://kiwigrid.github.io
+      helm install elastic/elasticsearch \
+            --name elasticsearch --set persistence.enabled=false \
+            --set replicas=1 --version 7.6.2
+      helm install elastic/kibana \
+            --name kibana --set service.type=NodePort --version 7.6.2
+      helm install \
+            --name fluentd -f operator/deploy/efk-config/fluentd-values.yaml \
+            kiwigrid/fluentd-elasticsearch --version 8.0.1
+      kubectl apply -f operator/deploy/efk-config/kobe-kibana-configuration.yaml
+    fi
+    
+    ;;
+  
+  ##############################################################################
+  
+  "purge")
+    
+    echo "This operation will uninstall KOBE from your system."
+    echo -n "Proceed (y/n)? "
+    read answer
+    
+    if [ "$answer" != "${answer#[Yy]}" ]
+    then
+      kubectl delete experiments.kobe.semagrow.org --all
+      kubectl delete benchmarks.kobe.semagrow.org --all
+      kubectl delete federatortemplates.kobe.semagrow.org --all
+      kubectl delete datasettemplates.kobe.semagrow.org --all
+      
+      kubectl delete -f operator/deploy/operator.yaml
+      kubectl delete -f operator/deploy/role.yaml
+      kubectl delete -f operator/deploy/clusterrole_binding.yaml
+      kubectl delete -f operator/deploy/clusterrole.yaml
+      kubectl delete -f operator/deploy/service_account.yaml
+      kubectl delete -f operator/deploy/crds
+      
+      helm delete --purge elasticsearch
+      helm delete --purge kibana
+      helm delete --purge fluentd
+      helm repo remove elastic
+      helm repo remove kiwigrid
+      kubectl delete jobs.batch kobe-kibana-configuration
+      kubectl delete configmaps kobe-kibana-config
+    fi
+    
+    ;;
+    
+  ##############################################################################
+  
   *)
     echo "kobectl controls the KOBE open benchmarking engine."
     echo ""
     echo "Commands:"
-    echo "  apply   apply a resource using a .yaml configuration file"
-    echo "  get     display all resources of specific type"
-    echo "  show    show the state of a benchmark or an experiment"
-    echo "  delete  delete a resource of specific  type"
-    echo "  help    print this message"
+    echo "  apply    apply a resource using a .yaml configuration file"
+    echo "  get      display all resources of specific type"
+    echo "  show     show the state of a benchmark or an experiment"
+    echo "  delete   delete a resource of specific type"
+    echo "  install  install KOBE components"
+    echo "  purge    uninstall KOBE"
+    echo "  help     print this message"
     echo ""
     echo "Usage:"
     echo "  kobectl apply [configuration_file]"
     echo "  kobectl get [resource_type]"
     echo "  kobectl show [resource_type] [resource]"
     echo "  kobectl delete [resource_type] [resource]"
+    echo "  kobectl install [component] [kobe-directory]"
+    echo "  kobectl purge"
     echo ""
     echo "[resource_type] can be any of:"
     echo "  benchmark(s),"
     echo "  experiment(s),"
     echo "  federatortemplate(s),"
     echo "  datasettemplate(s)."
+    echo ""
+    echo "[component] can be any of: operator, istio, efk, full"
     echo ""
     echo "for more advanced control options for KOBE, use kubectl."
     ;;
