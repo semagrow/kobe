@@ -38,7 +38,15 @@ following objectives in mind:
 
 KOBE needs the Kubernetes operator that needs to be installed in the
 Kubernetes cluster. To quickly install the KOBE operator in a
-Kubernetes cluster, run the following
+Kubernetes cluster, you can use the `kobectl` script found in the
+[bin](bin/) directory:
+
+```
+export PATH=`pwd`/bin:$PATH
+kobectl install operator .
+```
+
+Alternatively, you could run the following commends:
 
 ```
 kubectl apply -f operator/deploy/crds
@@ -57,9 +65,13 @@ needs to be done only once.
 ### Installation of Networking subsystem
 
 KOBE uses istio to support network delays between the different 
-deployments. To install istio you can consult the official 
+deployments. To install istio you can run the following:
+```
+kobectl install istio .
+```
+Alternatively, you can consult the official 
 [installation guide](https://istio.io/docs/setup/getting-started/) 
-or you type the following commands.
+or you can type the following commands.
 
 ```
 curl -L https://istio.io/downloadIstio | sh -
@@ -69,7 +81,11 @@ istioctl manifest apply --set profile=default
 
 ### Installation of the Evaluation Metrics Extraction subsystem
 
-To enable the evaluation metrics extraction subsystem, run the following
+To enable the evaluation metrics extraction subsystem, run
+```
+kobectl install efk .
+```
+or alternatively the following
 ```
 helm repo add elastic https://helm.elastic.co
 helm repo add kiwigrid https://kiwigrid.github.io
@@ -166,6 +182,11 @@ For more advanced control options for KOBE, use [kubectl](https://kubernetes.io/
 
 ## Removal
 
+To remove KOBE from your cluster, go to the run the following command:
+```
+kobectl purge .
+```
+To remove the operator manually, run
 ```
 kubectl delete -f operator/deploy/operator.yaml
 kubectl delete -f operator/deploy/role.yaml
@@ -174,8 +195,12 @@ kubectl delete -f operator/deploy/clusterrole.yaml
 kubectl delete -f operator/deploy/service_account.yaml
 kubectl delete -f operator/deploy/crds
 ```
-
-To remove the evaluation metrics extraction subsystem run
+To remove istio manually, run
+```
+./istio-1.6.0/bin/istioctl manifest generate --set profile=default | kubectl delete -f -
+kubectl delete namespace istio-system
+```
+To remove the evaluation metrics extraction subsystem manually, run
 ```
 helm delete --purge elasticsearch
 helm delete --purge kibana
