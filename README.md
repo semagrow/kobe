@@ -38,7 +38,15 @@ following objectives in mind:
 
 KOBE needs the Kubernetes operator that needs to be installed in the
 Kubernetes cluster. To quickly install the KOBE operator in a
-Kubernetes cluster, run the following
+Kubernetes cluster, you can use the `kobectl` script found in the
+[bin](bin/) directory:
+
+```
+export PATH=`pwd`/bin:$PATH
+kobectl install operator .
+```
+
+Alternatively, you could run the following commends:
 
 ```
 kubectl apply -f operator/deploy/crds
@@ -57,9 +65,13 @@ needs to be done only once.
 ### Installation of Networking subsystem
 
 KOBE uses istio to support network delays between the different 
-deployments. To install istio you can consult the official 
+deployments. To install istio you can run the following:
+```
+kobectl install istio .
+```
+Alternatively, you can consult the official 
 [installation guide](https://istio.io/docs/setup/getting-started/) 
-or you type the following commands.
+or you can type the following commands.
 
 ```
 curl -L https://istio.io/downloadIstio | sh -
@@ -69,7 +81,11 @@ istioctl manifest apply --set profile=default
 
 ### Installation of the Evaluation Metrics Extraction subsystem
 
-To enable the evaluation metrics extraction subsystem, run the following
+To enable the evaluation metrics extraction subsystem, run
+```
+kobectl install efk .
+```
+or alternatively the following
 ```
 helm repo add elastic https://helm.elastic.co
 helm repo add kiwigrid https://kiwigrid.github.io
@@ -114,22 +130,63 @@ The typical workflow of defining a KOBE experiment is the following.
 Several examples of the above specifications can be found in the [examples](examples/) directory.
 
 In the following, we show the steps for deploying an experiment on a simple benchmark that comprises
-three queries over a semagrow federation of two virtuoso endpoints.
+three queries over a Semagrow federation of two Virtuoso endpoints.
+
+You can use the `kobectl` script found in the [bin](bin/) directory for cotrolling your experiments:
 
 ```
-kubectl apply -f examples/dataset-virtuoso/virtuosotemplate.yaml
-kubectl apply -f examples/benchmark-toybench/toybench-simple.yaml
+export PATH=`pwd`/bin:$PATH
+kobectl help
 ```
-Wait a little for the datasets to load and proceed as follows:
+
+First, apply the templates for Virtuoso and Semagrow:
 
 ```
-kubectl apply -f examples/federator-semagrow/semagrowtemplate.yaml
-kubectl apply -f examples/experiment-toybench/toyexp-simple.yaml
+kobectl apply examples/dataset-virtuoso/virtuosotemplate.yaml
+kobectl apply examples/federator-semagrow/semagrowtemplate.yaml
+```
+Then, apply the benchmark.
+
+```
+kobectl apply examples/benchmark-toybench/toybench-simple.yaml
+```
+Before running the experiment, you should verify that the datasets are loaded.
+Use the following command:
+```
+kobectl show benchmark toybench-simple
+```
+When the datasets are loaded, you should get the following output:
+```
+NAME  STATUS
+toy1  Running
+toy2  Running
+```
+Proceed now with the execution of the experiment:
+```
+kobectl apply examples/experiment-toybench/toyexp-simple.yaml
+```
+As perviously, you can review the state of the experiment with the following command:
+```
+kobectl show experiment toyexp-simple
 ```
 You can now view the evaluation metrics in the Kibana dashboards.
 
+For removing all of the above, issue the following commands:
+```
+kobectl delete experiment toyexp-simple
+kobectl delete benchmark toybench-simple
+kobectl delete federatortemplate semagrowtemplate
+kobectl delete datasettemplate virtuosotemplate
+```
+For more advanced control options for KOBE, use [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/).
+
 ## Removal
 
+To remove KOBE from your cluster, go to the run the following command:
+```
+kobectl purge .
+```
+To remove the operator manually, run
 ```
 kubectl delete -f operator/deploy/operator.yaml
 kubectl delete -f operator/deploy/role.yaml
@@ -138,8 +195,12 @@ kubectl delete -f operator/deploy/clusterrole.yaml
 kubectl delete -f operator/deploy/service_account.yaml
 kubectl delete -f operator/deploy/crds
 ```
-
-To remove the evaluation metrics extraction subsystem run
+To remove istio manually, run
+```
+./istio-1.6.0/bin/istioctl manifest generate --set profile=default | kubectl delete -f -
+kubectl delete namespace istio-system
+```
+To remove the evaluation metrics extraction subsystem manually, run
 ```
 helm delete --purge elasticsearch
 helm delete --purge kibana

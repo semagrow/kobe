@@ -1,0 +1,333 @@
+#!/bin/sh
+
+COMMAND=$1
+
+case $COMMAND in
+
+  ##############################################################################
+  
+  "apply")
+  
+    USAGE="usage: kobectl apply [configuration_file]"
+    CONF_FILE=$2
+    
+    if [ -z $CONF_FILE ]
+    then
+      echo $USAGE
+      exit
+    fi
+    
+    kubectl apply -f $CONF_FILE
+    
+    ;;
+    
+  ##############################################################################
+    
+  "get")
+  
+    USAGE="usage: kobectl get [resource_type]"
+    TYPE=$2
+    FLAGS="-o custom-columns=NAME:.metadata.name"
+    
+    if [ -z $TYPE ]
+    then
+      echo $USAGE
+      exit
+    fi
+    
+    case $TYPE in
+      "benchmark" | "benchmarks")
+        kubectl get benchmarks.kobe.semagrow.org $FLAGS
+        ;;
+      "experiment" | "experiments")
+        kubectl get experiments.kobe.semagrow.org $FLAGS
+        ;;
+      "federatortemplate" | "federatortemplates")
+        kubectl get federatortemplates.kobe.semagrow.org $FLAGS
+        ;;
+      "datasettemplate" | "datasettemplates")
+        kubectl get datasettemplates.kobe.semagrow.org $FLAGS
+        ;;
+      *)
+        echo $USAGE
+        ;;
+    esac
+    
+    ;;
+  
+  ##############################################################################
+  
+  "delete")
+    
+    USAGE="usage: kobectl delete [resource_type] [resource]"
+    TYPE=$2
+    RESOURCE=$3
+    
+    if [ -z $TYPE ] || [ -z $RESOURCE ]
+    then
+      echo $USAGE
+      exit
+    fi
+    
+    case $TYPE in
+      "benchmark" | "benchmarks")
+        kubectl delete benchmarks.kobe.semagrow.org $RESOURCE
+        ;;
+      "experiment" | "experiments")
+        kubectl delete experiments.kobe.semagrow.org $RESOURCE
+        ;;
+      "federatortemplate" | "federatortemplates")
+        kubectl delete federatortemplates.kobe.semagrow.org $RESOURCE
+        ;;
+      "datasettemplate" | "datasettemplates")
+        kubectl delete datasettemplates.kobe.semagrow.org $RESOURCE
+        ;;
+      *)
+        echo $USAGE
+        exit
+        ;;
+    esac
+    
+    ;;
+  
+  ##############################################################################
+  
+  "show")
+    
+    USAGE="usage: kobectl show [resource_type] [resource]"
+    TYPE=$2
+    RESOURCE=$3
+    FLAGS="-o custom-columns=NAME:.metadata.name"
+    
+    if [ -z $TYPE ] || [ -z $RESOURCE ]
+    then
+      echo $USAGE
+      exit
+    fi
+    
+    case $TYPE in
+      "benchmark" | "benchmarks")
+        
+        DATASETS=`kubectl get benchmarks.kobe.semagrow.org $RESOURCE \
+                          -o jsonpath="{.spec.datasets[*].name}"`
+        
+        OUTPUT="NAME STATUS\n"
+        
+        for DATASET in $DATASETS
+        do
+          STATUS=`kubectl get pod $DATASET-pod -n $RESOURCE \
+                          -o custom-columns=:.status.phase --no-headers \
+                  2> /dev/null`
+          
+          if [ -z $STATUS ]
+          then
+            continue
+          fi
+          
+          if [ $STATUS = "Running" ]
+          then
+            LOADED_S=`kubectl logs $DATASET-pod -n $RESOURCE -c maincontainer \
+                      | grep "Data stored successfully!"`
+            LOADED_V=`kubectl logs $DATASET-pod -n $RESOURCE -c maincontainer \
+                      | grep "Server online at 1111"`
+            LOADED_P=`kubectl logs $DATASET-pod -n $RESOURCE -c maincontainer \
+                      | grep "database system is ready to accept connections" \
+                      | wc -l | grep 2`
+            
+            if [ -z "$LOADED_S$LOADED_V$LOADED_P" ]
+            then
+              STATUS="Loading"
+            fi
+          fi
+          
+          OUTPUT="$OUTPUT$DATASET $STATUS\n"
+        done
+        
+        echo -n $OUTPUT | column -t
+        
+        ;;
+      
+      "experiment" | "experiments")
+        
+        NAMESPACE=`kubectl get experiments.kobe.semagrow.org $RESOURCE \
+                           -o jsonpath="{.spec.benchmark}"`
+        FEDERATOR=`kubectl get experiments.kobe.semagrow.org $RESOURCE \
+                           -o jsonpath="{.spec.federatorName}"`
+        FEDSTATUS=`kubectl get pod $FEDERATOR -n $NAMESPACE \
+                           -o custom-columns=:.status.phase --no-headers \
+                   2< /dev/null`
+        
+        JOBS=`kubectl get pods --no-headers \
+                      -o custom-columns=:.metadata.name,:.status.phase \
+              | grep $RESOURCE-evaluationjob`
+        
+        OUTPUT="NAME STATUS\n$FEDERATOR $FEDSTATUS\n$JOBS\n"
+        echo -n $OUTPUT | column -t
+        ;;
+      
+      "federatortemplate" | "federatortemplates")
+        kubectl get federatortemplate.kobe.semagrow.org $RESOURCE $FLAGS
+        ;;
+      "datasettemplate" | "datasettemplates")
+        kubectl get datasettemplate.kobe.semagrow.org $RESOURCE $FLAGS
+        ;;
+      *)
+        echo $USAGE
+        ;;
+    esac
+    
+    ;;
+  
+  ##############################################################################
+  
+  "install")
+    
+    USAGE="usage: kobectl install [component] [kobe-directory]"
+    COMPONENT=$2
+    KOBEDIR=$3
+    
+    if [ -z $COMPONENT ] || [ -z $KOBEDIR ]
+    then
+      echo $USAGE
+      exit
+    fi
+    
+    cd $KOBEDIR
+    
+    case $COMPONENT in
+      "operator")
+        OPERATOR="true"
+        ;;
+      "istio")
+        ISTIO="true"
+        ;;
+      "efk")
+        EFK="true"
+        ;;
+      "full")
+        OPERATOR="true"
+        ISTIO="true"
+        EFK="true"
+        ;;
+      *)
+        echo $USAGE
+        exit
+        ;;
+    esac
+    
+    if [ ! -z $OPERATOR ]
+    then
+      kubectl apply -f operator/deploy/crds
+      kubectl apply -f operator/deploy/service_account.yaml
+      kubectl apply -f operator/deploy/clusterrole.yaml
+      kubectl apply -f operator/deploy/clusterrole_binding.yaml
+      kubectl apply -f operator/deploy/role.yaml
+      kubectl apply -f operator/deploy/operator.yaml
+    fi
+    
+    if [ ! -z $ISTIO ]
+    then
+      curl -L https://istio.io/downloadIstio | sh -
+      ./istio-1.6.*/bin/istioctl manifest apply --set profile=default
+    fi
+    
+    if [ ! -z $EFK ]
+    then
+      helm repo add elastic https://helm.elastic.co
+      helm repo add kiwigrid https://kiwigrid.github.io
+      helm install elastic/elasticsearch \
+            --name elasticsearch --set persistence.enabled=false \
+            --set replicas=1 --version 7.6.2
+      helm install elastic/kibana \
+            --name kibana --set service.type=NodePort --version 7.6.2
+      helm install \
+            --name fluentd -f operator/deploy/efk-config/fluentd-values.yaml \
+            kiwigrid/fluentd-elasticsearch --version 8.0.1
+      kubectl apply -f operator/deploy/efk-config/kobe-kibana-configuration.yaml
+    fi
+    
+    ;;
+  
+  ##############################################################################
+  
+  "purge")
+    
+    USAGE="usage: kobectl purge [kobe-directory]"
+    KOBEDIR=$2
+    
+    if [ -z $KOBEDIR ]
+    then
+      echo $USAGE
+      exit
+    fi
+    
+    cd $KOBEDIR
+    echo "This operation will uninstall KOBE from your system."
+    echo -n "Proceed (y/n)? "
+    read answer
+    
+    if [ "$answer" != "${answer#[Yy]}" ]
+    then
+      kubectl delete experiments.kobe.semagrow.org --all
+      kubectl delete benchmarks.kobe.semagrow.org --all
+      kubectl delete federatortemplates.kobe.semagrow.org --all
+      kubectl delete datasettemplates.kobe.semagrow.org --all
+      
+      kubectl delete -f operator/deploy/operator.yaml
+      kubectl delete -f operator/deploy/role.yaml
+      kubectl delete -f operator/deploy/clusterrole_binding.yaml
+      kubectl delete -f operator/deploy/clusterrole.yaml
+      kubectl delete -f operator/deploy/service_account.yaml
+      kubectl delete -f operator/deploy/crds
+      
+      ./istio-1.6.*/bin/istioctl manifest generate --set profile=default \
+        | kubectl delete -f -
+      kubectl delete namespace istio-system
+      
+      helm delete --purge elasticsearch
+      helm delete --purge kibana
+      helm delete --purge fluentd
+      helm repo remove elastic
+      helm repo remove kiwigrid
+      kubectl delete jobs.batch kobe-kibana-configuration
+      kubectl delete configmaps kobe-kibana-config
+    fi
+    
+    ;;
+    
+  ##############################################################################
+  
+  *)
+    echo "kobectl controls the KOBE open benchmarking engine."
+    echo ""
+    echo "Commands:"
+    echo "  apply    apply a resource using a .yaml configuration file"
+    echo "  get      display all resources of specific type"
+    echo "  show     show the state of a benchmark or an experiment"
+    echo "  delete   delete a resource of specific type"
+    echo "  install  install KOBE components"
+    echo "  purge    uninstall KOBE"
+    echo "  help     print this message"
+    echo ""
+    echo "Usage:"
+    echo "  kobectl apply [configuration_file]"
+    echo "  kobectl get [resource_type]"
+    echo "  kobectl show [resource_type] [resource]"
+    echo "  kobectl delete [resource_type] [resource]"
+    echo "  kobectl install [component] [kobe-directory]"
+    echo "  kobectl purge [kobe-directory]"
+    echo ""
+    echo "[resource_type] can be any of:"
+    echo "  benchmark(s),"
+    echo "  experiment(s),"
+    echo "  federatortemplate(s),"
+    echo "  datasettemplate(s)."
+    echo ""
+    echo "[component] can be any of: operator, istio, efk, full"
+    echo ""
+    echo "for more advanced control options for KOBE, use kubectl."
+    ;;
+    
+  ##############################################################################
+    
+esac

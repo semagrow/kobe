@@ -1,7 +1,7 @@
 apiVersion: kobe.semagrow.org/v1alpha1
 kind: Experiment
 metadata:
-  name: toyexp
+  name: toyexp-simple
 spec:
   benchmark: toybench-simple
   federatorName: semagrow-toy-simple
