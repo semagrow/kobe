@@ -317,8 +317,17 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 
 func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) (bool, error) {
 	reqLogger := log
+
+	//find the associated benchmark and check the status field for istio
+	foundBenchmark := &api.Benchmark{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Namespace, Namespace: corev1.NamespaceDefault}, foundBenchmark)
+	if err != nil {
+		reqLogger.Info("Failed to find the Benchmark this Dataset belongs to: %v\n", err)
+		return true, err
+	}
+
 	foundService := &corev1.Service{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
 
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Making a new service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
@@ -334,23 +343,30 @@ func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) (bool, e
 		return true, err
 	}
 
-	foundVirtualService := &istioclient.VirtualService{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundVirtualService)
+	if foundBenchmark.Status.Istio == api.IstioNotUse {
+		return false, nil
+	} else if foundBenchmark.Status.Istio == api.IstioUse {
 
-	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Making a new virtual service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		service := r.newVirtualSvc(instance)
-		reqLogger.Info("Creating a new VRITUAL Service %s/%s\n", service.Namespace, service.Name)
-		err = r.client.Create(context.TODO(), service)
-		if err != nil {
-			reqLogger.Info("Failed to create new Virtual Service: %v\n", err)
+		foundVirtualService := &istioclient.VirtualService{}
+		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundVirtualService)
+
+		if err != nil && errors.IsNotFound(err) {
+			reqLogger.Info("Making a new virtual service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+			service := r.newVirtualSvc(instance)
+			reqLogger.Info("Creating a new VRITUAL Service %s/%s\n", service.Namespace, service.Name)
+			err = r.client.Create(context.TODO(), service)
+			if err != nil {
+				reqLogger.Info("Failed to create new Virtual Service: %v\n", err)
+				return true, err
+			}
+			return true, nil
+		} else if err != nil {
 			return true, err
 		}
+	} else {
+		reqLogger.Info("Flag to use Istio not set")
 		return true, nil
-	} else if err != nil {
-		return true, err
 	}
-
 	return false, nil
 }
 

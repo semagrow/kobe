@@ -103,9 +103,39 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		return reconcile.Result{}, err
 	}
 
-	//create the new namespace
-	//istio label for the namespace
+	//check if the benchmark has already set his status to use or not istio
+	//if not then check if there is no network topology and federation connection set for any dataset in this benchmark
+	//if yes set the status of the benchmark to not use istio
+	//this tells the operator to not use istio injection flag and not create virtual services
+	//this also informs any federation that will be tested on this benchmark to not create it as well
+	if (instance.Status.Istio != api.IstioNotUse) && (instance.Status.Istio != api.IstioUse) {
+		FlagUse := false
+		for _, dataset := range instance.Spec.Datasets {
+			if (dataset.NetworkTopology != nil) || (len(dataset.NetworkTopology) != 0) {
+				FlagUse = true
+			}
+			if dataset.FederatorConnection != nil {
+				FlagUse = true
+			}
+		}
+		if FlagUse == true {
+			instance.Status.Istio = api.IstioUse
+		} else {
+			instance.Status.Istio = api.IstioNotUse
+		}
+		err = r.client.Status().Update(context.TODO(), instance)
+		if err != nil {
+			reqLogger.Info("Failed to update the istio status field")
+			return reconcile.Result{RequeueAfter: 1000000000}, err
+		}
+		return reconcile.Result{RequeueAfter: 1000000000}, nil
+	}
 	ns := &corev1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: instance.Name, Labels: map[string]string{"istio-injection": "enabled"}}}
+	//create the new namespace
+	if instance.Status.Istio == api.IstioNotUse {
+		//istio label for the namespace
+		ns = &corev1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: instance.Name, Labels: map[string]string{"istio-injection": "disabled"}}}
+	}
 	config, err := clientcmd.BuildConfigFromFlags("", "")
 	// if err != nil {
 	// 	reqLogger.Info("Failed client connection: %v\n", err)

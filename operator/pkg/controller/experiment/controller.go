@@ -156,6 +156,12 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 		// Error reading the object - requeue the request.
 		return reconcile.Result{}, err
 	}
+	//check if the benchmark has set his status to use or not istio
+	//federation created by the experiment needs the information to choose if it creates virtual services
+	if (foundBenchmark.Status.Istio != api.IstioNotUse) && (foundBenchmark.Status.Istio != api.IstioUse) {
+		return reconcile.Result{RequeueAfter: 1000000000}, nil
+	}
+
 	//check if all datasets for the experiment are up and running
 	//testsetestset
 	requeue, err := r.reconcileDatasets(instance, *foundBenchmark)

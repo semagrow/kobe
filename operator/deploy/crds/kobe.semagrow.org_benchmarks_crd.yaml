@@ -4293,6 +4293,11 @@ spec:
             type: object
           status:
             description: BenchmarkStatus defines the observed state of Benchmark
+            properties:
+              istio:
+                type: string
+            required:
+            - istio
             type: object
         type: object
     served: true
