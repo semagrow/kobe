@@ -188,7 +188,7 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 		reqLogger.Info("Making a new pod for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
 		pod := r.newPod(instance)
 		if pod == nil {
-			reqLogger.Info("Pod was not created. Nfs is not up (yet)! Requeue after waiting for 10 seconds\n")
+			reqLogger.Info("Pod was not created. Nfs is not up yet or Benchmark didnt set its status fields yet or failed or failed to retrieve the Benchmark ! Requeue after waiting for 10 seconds\n")
 			return true, nil
 		}
 		err = r.client.Create(context.TODO(), pod)
@@ -240,11 +240,25 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 
 func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	labels := labelsForDataset(m)
-	//reqLogger := log
+	reqLogger := log
 
 	envs := []corev1.EnvVar{
 		{Name: "DOWNLOAD_URL", Value: m.Spec.Files[0].URL},
 		{Name: "DATASET_NAME", Value: m.Name},
+	}
+	// fetch the benchmark to check for istio usage
+	foundBenchmark := &api.Benchmark{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: m.Namespace, Namespace: corev1.NamespaceDefault}, foundBenchmark)
+	if err != nil {
+		reqLogger.Info("Failed to find the Benchmark this Dataset belongs to: %v\n", err)
+		return nil
+	}
+	if foundBenchmark.Status.Istio == api.IstioUse {
+		envs = append(envs, corev1.EnvVar{Name: "ISTIO_USE", Value: "YES"})
+	} else if foundBenchmark.Status.Istio == api.IstioNotUse {
+		envs = append(envs, corev1.EnvVar{Name: "ISTIO_USE", Value: "NO"})
+	} else {
+		return nil
 	}
 
 	if m.Status.ForceLoad == true {
@@ -262,7 +276,7 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	// 	VolumeSource: corev1.VolumeSource{
 	// 		PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
 	nfsPodFound := &corev1.Pod{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: corev1.NamespaceDefault}, nfsPodFound)
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: corev1.NamespaceDefault}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
 		return nil
 	}
