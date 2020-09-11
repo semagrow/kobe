@@ -74,9 +74,17 @@ type Query struct {
 	QueryString string `json:"queryString"`
 }
 
+type IstioFlag string
+
+const (
+	IstioUse    IstioFlag = "yes"
+	IstioNotUse IstioFlag = "no"
+)
+
 // BenchmarkStatus defines the observed state of Benchmark
 // +k8s:openapi-gen=true
 type BenchmarkStatus struct {
+	Istio IstioFlag `json:"istio"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object

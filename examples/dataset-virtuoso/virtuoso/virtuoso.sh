@@ -1,9 +1,12 @@
 #!/bin/bash
-
+set -e
 cd /data
-until curl --head localhost:15000 ; do echo "Waiting for Sidecar" ; sleep 3 ; done ; echo "Sidecar available";
+if [ "$USE_ISTIO" == "YES" ]; then
+    until curl --head localhost:15021 ; do echo "Waiting for Sidecar" ; sleep 3 ; done ; echo "Sidecar available" ; #sleep 10 ;
+fi
+
 mkdir -p dumps
-sleep 10
+
 if [ "$FORCE_LOAD" ] &&  [ -d "/kobe/dataset/$DATASET_NAME" ]; then
     echo "removing old files completely"   
     rm -r /kobe/dataset/$DATASET_NAME
