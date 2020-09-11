@@ -188,12 +188,12 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 		reqLogger.Info("Making a new pod for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
 		pod := r.newPod(instance)
 		if pod == nil {
-			reqLogger.Info("Pod was not created. Nfs is not up yet or Benchmark didnt set its status fields yet or failed or failed to retrieve the Benchmark ! Requeue after waiting for 10 seconds\n")
+			reqLogger.Info("Pod was not created. Requeue after waiting for 10 seconds\n")
 			return true, nil
 		}
 		err = r.client.Create(context.TODO(), pod)
 		if err != nil {
-			reqLogger.Info("Failed to create new Pod: %v\n", err)
+			reqLogger.Info("Failed to create new Pod : %v\n", err)
 			return false, err
 		}
 		return true, nil
@@ -218,7 +218,7 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 		instance.Status.PodNames = podNames
 		err := r.client.Update(context.TODO(), instance)
 		if err != nil {
-			reqLogger.Info("failed to update node status: %v", err)
+			reqLogger.Info("Failed to update the Dataset status: %v", err)
 			return false, err
 		}
 	}
@@ -230,7 +230,7 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 			err = r.client.Get(context.TODO(), types.NamespacedName{Name: podName, Namespace: instance.Namespace}, podForDelete)
 			err = r.client.Delete(context.TODO(), podForDelete, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
 			if err != nil {
-				reqLogger.Info("Failed to delete the federation job from the cluster\n")
+				reqLogger.Info("Failed to delete the extra pod from the cluster\n")
 				return false, err
 			}
 		}
@@ -254,10 +254,11 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 		return nil
 	}
 	if foundBenchmark.Status.Istio == api.IstioUse {
-		envs = append(envs, corev1.EnvVar{Name: "ISTIO_USE", Value: "YES"})
+		envs = append(envs, corev1.EnvVar{Name: "USE_ISTIO", Value: "YES"})
 	} else if foundBenchmark.Status.Istio == api.IstioNotUse {
-		envs = append(envs, corev1.EnvVar{Name: "ISTIO_USE", Value: "NO"})
+		envs = append(envs, corev1.EnvVar{Name: "USE_ISTIO", Value: "NO"})
 	} else {
+		reqLogger.Info("Status field for Istio Usage not properly set.\n")
 		return nil
 	}
 
@@ -278,6 +279,7 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	nfsPodFound := &corev1.Pod{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: corev1.NamespaceDefault}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Nfs server is not online yet: %v\n", err)
 		return nil
 	}
 	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes

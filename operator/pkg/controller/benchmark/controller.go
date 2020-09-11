@@ -103,18 +103,15 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		return reconcile.Result{}, err
 	}
 
-	//check if the benchmark has already set his status to use or not istio
-	//if not then check if there is no network topology and federation connection set for any dataset in this benchmark
+	//check if the benchmark has already set its status to use or not istio
+	//if not then check if there is no network topology and federation connection set for all datasets in this benchmark
 	//if yes set the status of the benchmark to not use istio
 	//this tells the operator to not use istio injection flag and not create virtual services
-	//this also informs any federation that will be tested on this benchmark to not create it as well
+	//this also informs any federation that will be tested on this benchmark to not create a virtual service as well
 	if (instance.Status.Istio != api.IstioNotUse) && (instance.Status.Istio != api.IstioUse) {
 		FlagUse := false
 		for _, dataset := range instance.Spec.Datasets {
-			if (dataset.NetworkTopology != nil) || (len(dataset.NetworkTopology) != 0) {
-				FlagUse = true
-			}
-			if dataset.FederatorConnection != nil {
+			if (dataset.NetworkTopology != nil) || (len(dataset.NetworkTopology) != 0) || (dataset.FederatorConnection != nil) {
 				FlagUse = true
 			}
 		}
@@ -130,10 +127,11 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		}
 		return reconcile.Result{RequeueAfter: 1000000000}, nil
 	}
+	// new namespace with istio enabled flag
 	ns := &corev1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: instance.Name, Labels: map[string]string{"istio-injection": "enabled"}}}
 	//create the new namespace
 	if instance.Status.Istio == api.IstioNotUse {
-		//istio label for the namespace
+		//istio label set to disabled for the namespace
 		ns = &corev1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: instance.Name, Labels: map[string]string{"istio-injection": "disabled"}}}
 	}
 	config, err := clientcmd.BuildConfigFromFlags("", "")

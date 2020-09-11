@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 cd /data
-if [ "$ISTIO_USE" == "YES" ]; then
-    until curl --head localhost:15021 ; do echo "Waiting for Sidecar" ; sleep 3 ; done ; echo "Sidecar available" ; sleep 10 ;
+if [ "$USE_ISTIO" == "YES" ]; then
+    until curl --head localhost:15021 ; do echo "Waiting for Sidecar" ; sleep 3 ; done ; echo "Sidecar available" ; #sleep 10 ;
 fi
 
 mkdir -p dumps
