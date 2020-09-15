@@ -49,6 +49,10 @@ If you are using kubernetes version 1.15 and below you should instead use
 ```
 kobectl install operator-v1beta1 
 ```
+To find the version of kubernetes in your cluster you can use the following command
+```
+kobectl version 
+```
 Alternatively, you could run the following commends:
 
 ```
