@@ -43,9 +43,16 @@ Kubernetes cluster, you can use the `kobectl` script found in the
 
 ```
 export PATH=`pwd`/bin:$PATH
-kobectl install operator .
+kobectl install operator 
 ```
-
+If you are using kubernetes version 1.15 and below you should instead use 
+```
+kobectl install operator-v1beta1 
+```
+To find the version of kubernetes in your cluster you can use the following command
+```
+kobectl version 
+```
 Alternatively, you could run the following commends:
 
 ```
@@ -53,8 +60,16 @@ kubectl apply -f operator/deploy/crds
 kubectl apply -f operator/deploy/service_account.yaml
 kubectl apply -f operator/deploy/clusterrole.yaml
 kubectl apply -f operator/deploy/clusterrole_binding.yaml
-kubectl apply -f operator/deploy/role.yaml
 kubectl apply -f operator/deploy/operator.yaml
+```
+For kubernetes version 1.15 and below  swap
+
+```
+kubectl apply -f operator/deploy/crds
+```
+with
+```
+kubectl apply -f operator/deploy/crds-v1beta1
 ```
 
 You will get a confirmation message that each resource has
