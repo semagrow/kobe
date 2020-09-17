@@ -3,13 +3,16 @@ package kobeutil
 import (
 	"context"
 
+	api "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
 	kobev1alpha1 "github.com/semagrow/kobe/operator/pkg/apis/kobe/v1alpha1"
+	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/resource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
+	"k8s.io/apimachinery/pkg/util/intstr"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
@@ -149,6 +152,30 @@ func (r *ReconcileKobeUtil) Reconcile(request reconcile.Request) (reconcile.Resu
 	}
 	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes
 
+	//------------------------------------------------checking for ftp service health---------------------------------------------------
+	ftpServiceFound := &corev1.Service{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobe-ftp", Namespace: corev1.NamespaceDefault}, ftpServiceFound)
+	if err != nil && errors.IsNotFound(err) {
+		service := r.newServiceForFtp(instance)
+		err := r.client.Create(context.TODO(), service)
+		if err != nil {
+			reqLogger.Info("Failed to create the kobe ftp service: %v\n", err)
+			return reconcile.Result{}, err
+		}
+		return reconcile.Result{RequeueAfter: 1000000000}, nil
+	}
+	//------------------------------------------------checking for ftp deployment health---------------------------------------------------
+	ftpDeploymentFound := &appsv1.Deployment{}
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobe-ftp", Namespace: corev1.NamespaceDefault}, ftpDeploymentFound)
+	if err != nil && errors.IsNotFound(err) {
+		deployment := r.newDeploymentForFtp(instance)
+		err := r.client.Create(context.TODO(), deployment)
+		if err != nil {
+			reqLogger.Info("Failed to create the kobe ftp deployment: %v\n", err)
+			return reconcile.Result{}, err
+		}
+		return reconcile.Result{RequeueAfter: 1000000000}, nil
+	}
 	//--------------------------------------------Persistent volume health check-----------------------------------------------
 	pvFound := &corev1.PersistentVolume{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobepv"}, pvFound)
@@ -328,4 +355,95 @@ func (r *ReconcileKobeUtil) newPvcForKobe(m *kobev1alpha1.KobeUtil) *corev1.Pers
 
 	controllerutil.SetControllerReference(m, pvc, r.scheme)
 	return pvc
+}
+
+//create new deployment for ftp server
+func (r *ReconcileKobeUtil) newDeploymentForFtp(m *api.KobeUtil) *appsv1.Deployment {
+	replicas := int32(1)
+
+	volume := corev1.Volume{Name: "data", VolumeSource: corev1.VolumeSource{EmptyDir: &corev1.EmptyDirVolumeSource{}}}
+	volumes := []corev1.Volume{}
+	volumes = append(volumes, volume)
+
+	volume1 := corev1.Volume{Name: "sftp-public-keys",
+		VolumeSource: corev1.VolumeSource{ConfigMap: &corev1.ConfigMapVolumeSource{LocalObjectReference: corev1.LocalObjectReference{Name: "sftp-public-keys"}}}}
+	volumes = append(volumes, volume1)
+
+	volumemount := corev1.VolumeMount{Name: "nfs", MountPath: "/kobe/dataset"}
+	volumemounts := []corev1.VolumeMount{}
+	volumemounts = append(volumemounts, volumemount)
+
+	env := corev1.EnvVar{Name: "PASSWORD",
+		ValueFrom: &corev1.EnvVarSource{
+			SecretKeyRef: &corev1.SecretKeySelector{
+				LocalObjectReference: corev1.LocalObjectReference{Name: "sftp-server-sec"},
+				Key:                  "password"},
+		},
+	}
+	envs := []corev1.EnvVar{}
+	envs = append(envs, env)
+
+	dep := &appsv1.Deployment{
+		TypeMeta: metav1.TypeMeta{
+			APIVersion: "apps/v1",
+			Kind:       "Deployment",
+		},
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "kobe-ftp",
+			Namespace: corev1.NamespaceDefault,
+		},
+		Spec: appsv1.DeploymentSpec{
+			Replicas: &replicas,
+
+			Template: corev1.PodTemplateSpec{
+				ObjectMeta: metav1.ObjectMeta{
+					Labels: map[string]string{"app": "Kobe-Operator", "utility": "ftp-server"},
+				},
+				Spec: corev1.PodSpec{
+					Containers: []corev1.Container{{
+						Image:           "atmoz/sftp:latest",
+						Name:            "kobe-ftp",
+						ImagePullPolicy: corev1.PullAlways,
+						Ports: []corev1.ContainerPort{{
+							ContainerPort: int32(22),
+							Name:          m.Name,
+						}},
+						VolumeMounts: volumemounts,
+						Env:          envs,
+						Args:         []string{"myUser::1001:100:incoming,outgoing"},
+					}},
+					Volumes: volumes,
+				},
+			},
+		},
+	}
+	controllerutil.SetControllerReference(m, dep, r.scheme)
+	return dep
+
+}
+
+func (r *ReconcileKobeUtil) newServiceForFtp(m *kobev1alpha1.KobeUtil) *corev1.Service {
+	service := &corev1.Service{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "kobe-ftp",
+			Namespace: corev1.NamespaceDefault,
+		},
+
+		Spec: corev1.ServiceSpec{
+			Selector: map[string]string{
+				"app":     "Kobe-Operator",
+				"utility": "ftp-server",
+			},
+			Ports: []corev1.ServicePort{
+				{
+					Name:       "ssh",
+					Port:       int32(22),
+					TargetPort: intstr.FromString("22"),
+				},
+			},
+		},
+	}
+
+	controllerutil.SetControllerReference(m, service, r.scheme)
+	return service
 }
