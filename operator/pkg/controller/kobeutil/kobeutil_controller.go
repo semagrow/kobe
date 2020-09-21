@@ -455,15 +455,15 @@ func (r *ReconcileKobeUtil) newDeploymentForFtp(m *api.KobeUtil) *appsv1.Deploym
 	volumes = append(volumes, volume)
 
 	volume1 := corev1.Volume{Name: "sftp-keys",
-		VolumeSource: corev1.VolumeSource{ConfigMap: &corev1.ConfigMapVolumeSource{LocalObjectReference: corev1.LocalObjectReference{Name: "sftp-public-keys"}}}}
+		VolumeSource: corev1.VolumeSource{ConfigMap: &corev1.ConfigMapVolumeSource{LocalObjectReference: corev1.LocalObjectReference{Name: "sftp-keys"}}}}
 	volumes = append(volumes, volume1)
 
 	// volumemount := corev1.VolumeMount{Name: "data", MountPath: "/kobe/dataset"}
 	// volumemounts := []corev1.VolumeMount{}
 	// volumemounts = append(volumemounts, volumemount)
-	volumemount := corev1.VolumeMount{Name: "sftp-public-keys", MountPath: "/home/myUser/.ssh/keys"}
-	volumemounts := []corev1.VolumeMount{}
-	volumemounts = append(volumemounts, volumemount)
+	// volumemount := corev1.VolumeMount{Name: "sftp-keys", MountPath: "/home/kobe/.ssh/keys"}
+	// volumemounts := []corev1.VolumeMount{}
+	// volumemounts = append(volumemounts, volumemount)
 	//maybe create a secret
 	// env := corev1.EnvVar{Name: "PASSWORD",
 	// 	ValueFrom: &corev1.EnvVarSource{
@@ -472,9 +472,17 @@ func (r *ReconcileKobeUtil) newDeploymentForFtp(m *api.KobeUtil) *appsv1.Deploym
 	// 			Key:                  "password"},
 	// 	},
 	// }
-	env := corev1.EnvVar{Name: "PASSWORD", Value: "kobe"}
-	envs := []corev1.EnvVar{}
-	envs = append(envs, env)
+
+	volumemount := corev1.VolumeMount{Name: "data", MountPath: "/kobe/dataset"}
+	volumemounts := []corev1.VolumeMount{}
+	volumemounts = append(volumemounts, volumemount)
+	volumemount = corev1.VolumeMount{Name: "sftp-keys", MountPath: "/etc/ssh/keys"}
+	volumemounts = []corev1.VolumeMount{}
+	volumemounts = append(volumemounts, volumemount)
+
+	// env := corev1.EnvVar{Name: "PASSWORD", Value: "kobe"}
+	// envs := []corev1.EnvVar{}
+	// envs = append(envs, env)
 
 	dep := &appsv1.Deployment{
 		TypeMeta: metav1.TypeMeta{
@@ -502,8 +510,8 @@ func (r *ReconcileKobeUtil) newDeploymentForFtp(m *api.KobeUtil) *appsv1.Deploym
 							Name:          m.Name,
 						}},
 						VolumeMounts: volumemounts,
-						Env:          envs,
-						Args:         []string{"myUser::1001:100:incoming,outgoing"},
+						//Env:          envs,
+						Args: []string{"kobe:kobe:1001:100:incoming,outgoing"},
 						SecurityContext: &corev1.SecurityContext{
 							Capabilities: &corev1.Capabilities{Add: []corev1.Capability{"SYS_ADMIN"}},
 						},
