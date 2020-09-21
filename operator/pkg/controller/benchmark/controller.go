@@ -72,8 +72,6 @@ type ReconcileBenchmark struct {
 
 // Reconcile reads that state of the cluster for a Benchmark object and makes changes based on the state read
 // and what is in the Benchmark.Spec
-// TODO(user): Modify this Reconcile function to implement your Controller logic.  This example creates
-// a Pod as an example
 // Note:
 // The Controller will requeue the Request to be processed again if the returned error is non-nil or
 // Result.Requeue is true, otherwise upon completion it will remove the work from the queue.
@@ -154,7 +152,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 	//add finalizer to the resource . If the benchmark gets deleted the finalizer logic deletes the entire benchmark namespace
 	//this automatically collects EVERYTHING related to this benchmark including any running federators from experiments.
 	//it leaves experiments
-	nsFinalizer := "delete.the.fking.ns.kobe"
+	nsFinalizer := "delete.the.benchmark.ns"
 
 	// examine DeletionTimestamp to determine if object is under deletion
 	if instance.ObjectMeta.DeletionTimestamp.IsZero() {
@@ -184,7 +182,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		// Stop reconciliation as the item is being deleted
 		return reconcile.Result{}, nil
 	}
-	reqLogger.Info("NOW I LL CHECK ABOUT THE CONFIG MAP\n")
+	reqLogger.Info("Checking if the config map exists for the queriess. \n")
 	//check if config map exists else create it
 	//config map contains the queries assosciated with this benchmark setup in seperate files .
 	foundConfig := &corev1.ConfigMap{}
@@ -201,7 +199,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		configMap := r.newConfigMapForQueries(instance, querymap)
 		err := r.client.Create(context.TODO(), configMap)
 		if err != nil {
-			reqLogger.Info("FAILED to create the configmap for this set of queries for the benchmark")
+			reqLogger.Info("Failed to create the configmap for this set of queries for the benchmark")
 			return reconcile.Result{}, err
 		}
 		return reconcile.Result{Requeue: true}, nil
@@ -222,7 +220,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		}
 	}
 
-	reqLogger.Info("FINISHED RECONCILING LOOP FOR BENCHMARK SUCCESSFULLY\n")
+	reqLogger.Info("Finished reconciling loop for this benchmark successfully\n")
 	return reconcile.Result{}, nil
 }
 
@@ -261,7 +259,7 @@ func ensureNFS(client client.Client, ns string) (bool, error) {
 		return true, nil
 	}
 
-	//check for  the nfs pod if it exist and wait if not
+	//check for the nfs pod if it exist and wait if not
 	nfsPodFound := &corev1.Pod{}
 	err = client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: ns}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
