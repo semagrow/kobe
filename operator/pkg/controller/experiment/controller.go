@@ -22,6 +22,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/source"
 )
 
+//ControllerName is exported
 const ControllerName = "kobe-experiment-controller"
 
 var log = logf.Log.WithName(ControllerName)
@@ -114,9 +115,9 @@ func (r *ReconcileExperiment) Reconcile(request reconcile.Request) (reconcile.Re
 	}
 
 	//add finalizer to the resource . If the experiments gets deleted the finalizer logic deletes the federation
-	//need this cause it belongs to different namespace and doesnt seem to care that experiment is the father of the federation..
+	//need this cause federation belongs to different namespace.
 
-	fedFinalizer := "delete.the.fking.fed.kobe"
+	fedFinalizer := "delete.the.kobe.fed"
 
 	// examine DeletionTimestamp to determine if object is under deletion
 	if instance.ObjectMeta.DeletionTimestamp.IsZero() {
@@ -203,7 +204,7 @@ func (r *ReconcileExperiment) reconcileEvaluatorJob(instance *api.Experiment, fe
 		util.EndpointURL(fed.Name, fed.Namespace, int(fed.Spec.Template.Port), fed.Spec.Template.Path)
 	fedName := fed.Name
 
-	// Create the new job that will run the EVAL client for this experiment
+	// Create the new job that will run the Evaluation client for this experiment
 
 	foundJob := &batchv1.Job{}
 	err := r.client.Get(context.TODO(), types.NamespacedName{
@@ -224,13 +225,6 @@ func (r *ReconcileExperiment) reconcileEvaluatorJob(instance *api.Experiment, fe
 		reqLogger.Info("FAILED to create the job to run this experiment  %s/%s\n", experimentJob.Name, experimentJob.Namespace)
 		return true, err
 	}
-	//instance.Status.CurrentRun = instance.Status.CurrentRun + 1
-	// err = r.client.Status().Update(context.TODO(), instance)
-	// if err != nil {
-	// 	reqLogger.Info("Failed to update the times to run of the experiment")
-	// 	return err
-	// }
-
 	return true, nil
 }
 
@@ -322,7 +316,7 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 			instance.Spec.FederatorSpec = &foundTemplate.Spec
 			err = r.client.Update(context.TODO(), instance)
 			if err != nil {
-				reqLogger.Info("failed to update the template spec of the federation: %v", instance.Spec.FederatorName)
+				reqLogger.Info("failed to update the template spec of the federation: "+instance.Spec.FederatorName+"\n", err)
 				return true, err
 			}
 			return true, nil
@@ -339,7 +333,7 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 		newFederation.Status.PodNames = []string{}
 		err = r.client.Status().Update(context.TODO(), newFederation)
 		if err != nil {
-			reqLogger.Info("Failed to update the federation")
+			reqLogger.Info("Failed to update the federation Status and Podlist")
 			return false, err
 		}
 	}
@@ -359,7 +353,6 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 	}
 
 	podNames := getPodNames(podList.Items)
-	//for _, podname := range foundFederation.Status.PodNames {
 	for _, podname := range podNames {
 		foundPod := &corev1.Pod{}
 		err := r.client.Get(context.TODO(), types.NamespacedName{
@@ -375,7 +368,7 @@ func (r *ReconcileExperiment) reconcileFederation(instance *api.Experiment) (boo
 		}
 	}
 	if podNames == nil || len(podNames) == 0 {
-		reqLogger.Info("Experiment waits for FEDERATOR initialization")
+		reqLogger.Info("Experiment waits for Federator initialization")
 		return true, nil
 	}
 	return false, nil

@@ -110,7 +110,7 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 	//check if template in the template field exists. If not try to find a reference template and set that to the template fields .
 	if instance.Spec.SystemSpec == nil {
 		foundTemplate := &api.DatasetTemplate{}
-		reqLogger.Info("Finding the template reference specified for " + instance.Name + " %v\n")
+		reqLogger.Info("Finding the template reference specified for " + instance.Name + "\n")
 		err := r.client.Get(context.TODO(), types.NamespacedName{
 			Name:      instance.Spec.TemplateRef,
 			Namespace: corev1.NamespaceDefault},
@@ -119,11 +119,10 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 			reqLogger.Info("Failed to find the requested dataset template: ", err)
 			return reconcile.Result{}, err
 		}
-		reqLogger.Info("POUTSES: " + foundTemplate.Name)
 		instance.Spec.SystemSpec = &foundTemplate.Spec
 		err = r.client.Update(context.TODO(), instance)
 		if err != nil {
-			reqLogger.Info("failed to update the template of the dataset: %v", instance.Spec.Name)
+			reqLogger.Info("failed to update the template of the dataset"+instance.Spec.Name+": %v", instance.Spec.Name)
 			return reconcile.Result{}, err
 		}
 	}
@@ -270,12 +269,7 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	for i, container := range m.Spec.SystemSpec.Containers {
 		m.Spec.SystemSpec.Containers[i].Env = append(container.Env, envs...)
 	}
-	//remove the pv claim cause it doesnt work from different namespaces and add the mount directly
 
-	// volume := corev1.Volume{
-	// 	Name: "nfs",
-	// 	VolumeSource: corev1.VolumeSource{
-	// 		PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
 	nfsPodFound := &corev1.Pod{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: corev1.NamespaceDefault}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
@@ -289,16 +283,6 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	volumes = append(volumes, volume)
 
 	initContainers := m.Spec.SystemSpec.InitContainers
-	//test init container
-	// dummyInit := corev1.Container{
-	// 	Image:           "busybox",
-	// 	Name:            m.Name,
-	// 	ImagePullPolicy: corev1.PullIfNotPresent,
-	// 	Command:         []string{"sh", "-c"},
-	// 	Args:            []string{"sleep 120 ; wget http://users.iit.demokritos.gr/~antru/dumps/toy1.tar.gz"},
-	// }
-	//initContainers = append(initContainers, dummyInit)
-	// add volumemounts to importcontainers
 	volumemount := corev1.VolumeMount{
 		Name:      "nfs",
 		MountPath: "/kobe/dataset"}
