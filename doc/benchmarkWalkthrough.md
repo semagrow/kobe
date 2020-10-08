@@ -13,7 +13,7 @@ In this walkthrough we assume that you already have already prepared the followi
 * A list of query strings of the benchmark.
 * A [DatasetTemplate](../operator/docs/api.md#datasettemplate) for each dataset server you want to use in your benchmark.
 
-Regarding the third perquisite, we have already prepared several dataset template to use.
+Regarding the third prerequisite, we have already prepared several dataset templates to use.
 If you want to create your own dataset server template, check out [this guide](..).
 
 ## Step 1. Prepare your dataset dumps
@@ -23,7 +23,7 @@ Create a .tar.gz file for each dataset, and upload it on a known location.
 Place all files of the dataset into a directory, put this directory into a tar file and compress it with gzip.
 Even though most dataset engines support the import of several RDF formats (such as RDF/XML, turtle, etc), the most simple format is N-TRIPLES.
 Therefore, we suggest to store your dataset in a single .nt file.
-To prepare a dump.nt file, do the following:
+If you choose to to prepare a dump.nt file, just do the following:
 ```
 mkdir dataset/
 mv dump.nt dataset/
@@ -34,7 +34,7 @@ As an example, we have uploaded the datasets for the FedBench experiment in the 
 
 ## Step 2. Prepare your YAML file
 
-A benchmark is characterized by its *name* and it defined using a list of *datasets* and a set of *queries*.
+A benchmark is characterized by its *name* and is parameterized using a list of *datasets* and a set of *queries*.
 A typical benchmark specification should look like this:
 
 ```yaml
