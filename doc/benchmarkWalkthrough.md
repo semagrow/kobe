@@ -74,7 +74,7 @@ Check the following link in which we illustrate a simple example of the above sp
 
 This benchmark contains three SPARQL queries (namely `tq1`,`tq2`, and `tq3`), and two datasets (namely `toy1` and `toy2`), both of them served by Virtuoso.
 
-## Step 3 - Optional. Inject latency for each source endpoint.
+## Step 3 - Optional. Inject latency for each source endpoint
 
 KOBE allows simulating network traffic for all sources of the benchmark.
 For every source dataset of the benchmark, you can:
@@ -127,7 +127,7 @@ the 50% of the responces from `toy1` to `toy2` are delayed by 3 seconds.
 
 ## Examples
 
-We have already prepared several benchmark specification to experiment with:
+We have already prepared several benchmark specifications to experiment with:
 
 * [benchmark-fedbench](../examples/benchmark-fedbench)
 * [benchmark-geofedbench](../examples/benchmark-geofedbench)
