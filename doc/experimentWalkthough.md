@@ -14,7 +14,7 @@ In this walkthrough we assume that you already have already prepared the followi
 * A [FederatorTemplate](../operator/docs/api.md#federatortemplate) for the federation engine you want to use in your experiment.
 
 We have already prepared several benchmarks and federator templates to use.
-If you want to create your own dataset server template, check out [this guide](./BenchmarkWalkthrough.md).
+If you want to create your own dataset server template, check out [this guide](./benchmarkWalkthrough.md).
 Moreover, if you want to create your own federator template, check out [this guide](..).
 
 ## Step 1. Prepare your YAML file
