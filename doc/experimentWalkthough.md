@@ -45,14 +45,16 @@ spec:
   evaluator:
     image: semagrow/kobe-sequential-evaluator
   
-  # Specify the number of runs of the experiment, i.e. how many times each query
+  # Specify the number of runs of the experiment, i.e. how many times each query 
   # of the benchmark should be executed.
   timesToRun: runs
   
-  # ??
+  # If you set this parameter to true, KOBE will only build the federation 
+  # and will not start the experiment.
   dryRun: false
   
-  # ??
+  # If you set this parameter to false, KOBE will not build the federation
+  # if it was already built in previous executions of this experiment.
   forceNewInit: true 
 ```
 
@@ -62,8 +64,8 @@ Check the following link in which we illustrate a simple example of the above sp
 
 In this example, we define an experiment over the `toybench-simple` benchmark, and we use the Semagrow federation engine.
 The queries of the benchmark are executed in a sequential manner, and each query of the benchmark is executed 3 times.
-Since `toybench-simple` contains the queries `tq1`,`tq2`,`tq3`, in the example experiment the queries will be executed with the following order:
-`tq1`,`tq2`,`tq3`,`tq1`,`tq2`,`tq3`,`tq1`,`tq2`,`tq3`.
+Since `toybench-simple` contains the queries `tq1`, `tq2`, `tq3`, in the example experiment the queries will be executed with the following order:
+`tq1`, `tq2`, `tq3`, `tq1`, `tq2`, `tq3`, `tq1`, `tq2`, `tq3`.
 
 ## Examples
 
