@@ -1,0 +1,13 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Experiment
+metadata:
+  name: lubm-exp
+spec:
+  benchmark: lubm-bench
+  federatorName: uno-lubm
+  federatorTemplateRef: unotemplate
+  evaluator:
+    image: semagrow/kobe-sequential-evaluator
+  timesToRun: 3
+  dryRun: false
+  forceNewInit: false
