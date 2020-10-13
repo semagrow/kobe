@@ -22,7 +22,7 @@ spec:
       language: sparql
       queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
       PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
-      SELECT ?X, ?Y, ?Z
+      SELECT ?X ?Y ?Z
       WHERE
       { ?X rdf:type ub:GraduateStudent .
         ?Y rdf:type ub:University .
@@ -44,7 +44,7 @@ spec:
       language: sparql
       queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
       PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
-      SELECT ?X, ?Y1, ?Y2, ?Y3
+      SELECT ?X ?Y1 ?Y2 ?Y3
       WHERE
       { ?X rdf:type ub:Professor .
         ?X ub:worksFor <http://www.Department0.University0.edu> .
@@ -71,7 +71,7 @@ spec:
       language: sparql
       queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
       PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
-      SELECT ?X, ?Y
+      SELECT ?X ?Y
       WHERE 
       { ?X rdf:type ub:Student .
         ?Y rdf:type ub:Course .
@@ -82,7 +82,7 @@ spec:
       language: sparql
       queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
       PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
-      SELECT ?X, ?Y, ?Z
+      SELECT ?X ?Y ?Z
       WHERE
       { ?X rdf:type ub:Student .
         ?Y rdf:type ub:Department .
@@ -94,7 +94,7 @@ spec:
       language: sparql
       queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
       PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
-      SELECT ?X, ?Y, ?Z
+      SELECT ?X ?Y ?Z
       WHERE
       { ?X rdf:type ub:Student .
         ?Y rdf:type ub:Faculty .
@@ -125,7 +125,7 @@ spec:
       language: sparql
       queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
       PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
-      SELECT ?X, ?Y
+      SELECT ?X ?Y
       WHERE
       { ?X rdf:type ub:Chair .
         ?Y rdf:type ub:Department .
