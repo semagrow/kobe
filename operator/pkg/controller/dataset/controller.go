@@ -270,6 +270,14 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 		m.Spec.SystemSpec.Containers[i].Env = append(container.Env, envs...)
 	}
 
+	for i, container := range m.Spec.SystemSpec.InitContainers {
+		m.Spec.SystemSpec.InitContainers[i].Env = append(container.Env, envs...)
+	}
+
+	for i, container := range m.Spec.SystemSpec.ImportContainers {
+		m.Spec.SystemSpec.InitContainers[i].Env = append(container.Env, envs...)
+	}
+
 	nfsPodFound := &corev1.Pod{}
 	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: corev1.NamespaceDefault}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
