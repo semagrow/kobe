@@ -290,7 +290,6 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	volumes := []corev1.Volume{}
 	volumes = append(volumes, volume)
 
-	initContainers := m.Spec.SystemSpec.InitContainers
 	volumemount := corev1.VolumeMount{
 		Name:      "nfs",
 		MountPath: "/kobe/dataset"}
@@ -298,19 +297,19 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	volumemounts := []corev1.VolumeMount{}
 	volumemounts = append(volumemounts, volumemount)
 
-	initContainers = append(initContainers, m.Spec.SystemSpec.ImportContainers...)
-
 	//supply all containers with their mount to the nfs
 	//currently we give same mounts to every container in the pod
 	for i := range m.Spec.SystemSpec.Containers {
 		m.Spec.SystemSpec.Containers[i].VolumeMounts = append(m.Spec.SystemSpec.Containers[i].VolumeMounts, volumemounts...)
 	}
 	for i := range m.Spec.SystemSpec.InitContainers {
-		m.Spec.SystemSpec.InitContainers[i].VolumeMounts = append(m.Spec.SystemSpec.Containers[i].VolumeMounts, volumemounts...)
+		m.Spec.SystemSpec.InitContainers[i].VolumeMounts = append(m.Spec.SystemSpec.InitContainers[i].VolumeMounts, volumemounts...)
 	}
 	for i := range m.Spec.SystemSpec.ImportContainers {
-		m.Spec.SystemSpec.ImportContainers[i].VolumeMounts = append(m.Spec.SystemSpec.Containers[i].VolumeMounts, volumemounts...)
+		m.Spec.SystemSpec.ImportContainers[i].VolumeMounts = append(m.Spec.SystemSpec.ImportContainers[i].VolumeMounts, volumemounts...)
 	}
+	initContainers := m.Spec.SystemSpec.InitContainers
+	initContainers = append(initContainers, m.Spec.SystemSpec.ImportContainers...)
 
 	pod := &corev1.Pod{
 		ObjectMeta: metav1.ObjectMeta{
