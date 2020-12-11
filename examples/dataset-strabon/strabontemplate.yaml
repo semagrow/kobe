@@ -3,22 +3,16 @@ kind: DatasetTemplate
 metadata:
   name: strabontemplate
 spec:
+  initContainers:
+    - name: initcontainer0
+      image: antru6/url-downloader
+    - name: initcontainer1
+      image: antru6/strabon-init
   containers:
-    - name: postgis
-      image: bde2020/postgis
-      ports:
-        - containerPort: 5432
     - name: maincontainer
-      image: antru6/strabon
-      env:
-        - name: STRABON_CONNECTION_hostname
-          value: "localhost"
-        - name: STRABON_CONNECTION_port
-          value: "5432"
+      image: antru6/strabon-main
       ports:
         - containerPort: 8080
   port: 8080
-  path: /strabon/Query
+  path: /Strabon/Query
   initPolicy: ForceInit
-
-
