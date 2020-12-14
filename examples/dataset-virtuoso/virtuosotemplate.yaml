@@ -3,12 +3,16 @@ kind: DatasetTemplate
 metadata:
   name: virtuosotemplate
 spec:
-  # Add fields here
+  initContainers:
+    - name: initcontainer0
+      image: antru6/url-downloader
+    - name: initcontainer1
+      image: antru6/virtuoso-init
   containers:
     - name: maincontainer
-      image: kostbabis/virtuoso
+      image: antru6/virtuoso-main
       ports:
-      - containerPort: 8890
+        - containerPort: 8890
   port: 8890
   path: /sparql
   initPolicy: ForceInit
