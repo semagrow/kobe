@@ -5,12 +5,12 @@ metadata:
 spec:
   initContainers:
     - name: initcontainer0
-      image: antru6/url-downloader
+      image: semagrow/url-downloader
     - name: initcontainer1
-      image: antru6/virtuoso-init
+      image: semagrow/virtuoso-init
   containers:
     - name: maincontainer
-      image: antru6/virtuoso-main
+      image: semagrow/virtuoso-main
       ports:
         - containerPort: 8890
   port: 8890

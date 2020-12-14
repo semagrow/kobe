@@ -5,12 +5,12 @@ metadata:
 spec:
   initContainers:
     - name: initcontainer0
-      image: antru6/url-downloader
+      image: semagrow/url-downloader
     - name: initcontainer1
-      image: antru6/strabon-init
+      image: semagrow/strabon-init
   containers:
     - name: maincontainer
-      image: antru6/strabon-main
+      image: semagrow/strabon-main
       ports:
         - containerPort: 8080
   port: 8080
