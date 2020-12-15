@@ -83,6 +83,6 @@ We have already prepared several dataset template specifications to experiment w
 * [dataset-strabon](../examples/dataset-strabon)
 
 > Notice: We plan to define more dataset template specifications in the future.
-> We place all benchmark specifications in the [examples/](../examples/) directory
+> We place all dataset template specifications in the [examples/](../examples/) directory
 > under a subdirectory with the prefix `dataset-*`. 
 
