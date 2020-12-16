@@ -14,7 +14,7 @@ In this walkthrough we assume that you already have already prepared the followi
 * A [DatasetTemplate](../operator/docs/api.md#datasettemplate) for each dataset server you want to use in your benchmark.
 
 Regarding the third prerequisite, we have already prepared several dataset templates to use.
-If you want to create your own dataset server template, check out [this guide](..).
+If you want to create your own dataset server template, check out [this guide](DatasetTemplateWalkthough.md).
 
 ## Step 1. Prepare your dataset dumps
 
