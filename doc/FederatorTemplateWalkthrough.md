@@ -81,7 +81,8 @@ spec:
 
 ```
 
-The default URL for the SPARQL endpoint for Virtuoso is `http://localhost:8890/sparql`, hence the port and the path to listen for queries are `8890` and `/sparql` respectively.
+The default URL for the SPARQL endpoint for Virtuoso is `http://localhost:8080/SemaGrow/sparql`,
+hence the port and the path to listen for queries are `8080` and `/SemaGrow/sparql` respectively.
 The input and output directories of the images mentioned previously are configured using the parameters `inputDumpDir`,`outputDumpDir`,`inputDir`,`outputDir`.
 
 ## Examples
