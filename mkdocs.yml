@@ -5,11 +5,16 @@ repo_name: 'GitHub'
 docs_dir: 'docs'
 nav:
   - 'Home': index.md
-  - 'Walkthroughs': 
-     - 'Benchmark': BenchmarkWalkthrough.md
-     - 'DatasetTemplate': DatasetTemplateWalkthrough.md
-     - 'Experiment': ExperimentWalkthrough.md
-     - 'FederatorTemplate': FederatorTemplateWalkthrough.md
+  - 'Getting started':
+     - 'Install': install.md
+  - 'Using KOBE':
+     - 'Create a new experiment': use/experiment.md
+     - 'Create a benchmark': use/benchmark.md 
+  - 'Extending KOBE':
+     - 'Create a data source': extend/datasettemplate.md
+     - 'Create a federator': extend/federator.md
+  - 'References':
+     - 'API': api.md
 
 theme:
   name: readthedocs
