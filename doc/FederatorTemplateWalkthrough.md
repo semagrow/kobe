@@ -9,71 +9,80 @@ Federator templates are used in the [Experiment](../operator/docs/api.md#experim
 ## Prerequisites
 
 In this walkthrough we assume that you already have already prepared a Docker image that provides the SPARQL endpoint of the federation engine (e.g., https://hub.docker.com/r/semagrow/semagrow/).
+Moreover, you should have a piece of software that automatically constructs the configuration requred for your federator to operate (e.g., https://github.com/semagrow/sevod-scraper). 
 
 ## Step 1. Prepare your Docker images
 
-The first step is to provide a set of one or more Docker images that downloads the dataset, loads the data, and starts the dataset server.
-Even though all this functionality can be provided with a single image, we suggest to split the various tasks into three separate images.
-More specifically:
+Usually, a federation engine requires some configuration files that depend on the federated endpoints (e.g., the URLs of the federated SPARQL endpoints).
+Thus, apart from the Docker image with the SPARQL endpoint of the federation engine, you should provide 
+a docker image that constructs any desired configuration for each of the source endpoints,
+and a docker image that initializes the federator that possibly takes into account the configuration files of the source endpoints.
+More specifically, prepare the following images:
 
-* A docker image that downloads a RDF dump from a known URL (found in the variable `$DATASET_URL`) and extracts its contents in the directory `/kobe/dataset/$DATASET/dump`.
-* A docker image that loads the downloaded dump (already present in the directory `/kobe/dataset/$DATASET/dump`) into the dataset server.
-  Optionally, it can back-up the contents of the database in some directory inside `/kobe/dataset/$DATASET` such that the loading process to be executed only once. 
-* A docker image that starts the dataset server and exposes its SPARQL endpoint.
+* A docker image that constructs a configuration file for a source endpoint and places it in an *output directory* of your choice.
+  Assume that the source endpoint and the dataset name are available in the environment variables `$DATASET_NAME` and `$DATASET_URL` respectively,
+  and that the dump file of the dataset is present in an *input directory* of your choice.
+* A docker image that constructs a configuration file for the federation engine and places it in an *output directory* of your choice.
+  Assume that all the configuration files produced ine the previous step are present in an *input directory* of your choice.
+* A docker image that starts the federation engine and exposes its SPARQL endpoint.
 
 The environment variables are initialized by the Kobe operator according to the specification of the benchmark to be executed.
-Moreover, the shared volumes are managed through the Kobe operator too (ref. [here](../operator/docs/storage.md) for details about the shared storage of Kobe).
 
-> In the bechmark walkthrough, we [suggest](benchmarkWalkthrough.md#step-1-prepare-your-dataset-dumps) that the dataset dumps should follow a specific format.
-> Therefore, feel free to use `semagrow/url-donwnloader` (source code [here](../dockers/url-downloader)) as your first image. 
-> However, if you optionally want your template to support more dataset dump formats, you can implement your own url downloader. 
+As an example, we present the images for two federation engines (namely fedx and Semagrow).
 
-As an example, we present the images for two dataset servers (namely Virtuoso and Strabon).
+* Regarding the [Semagrow](http://semagrow.github.io/) federation engine, we use the images
+  `semagrow/semagrow-init` (source code [here](../examples/federator-semagrow/semagrow-init)),
+  `semagrow/semagrow-init-all`, (source code [here](../examples/federator-semagrow/semagrow-init-all)),
+  and `semagrow/semagrow` (see [here](https://hub.docker.com/r/semagrow/semagrow/)).
+  The first image uses the [sevod-scraper](https://github.com/semagrow/sevod-scraper) tool to create a ttl metadata file from the dump file,
+  and the second image concatenates all metadata files of each of the source endpoints into a single metadata file.
 
-* Regarding the [Virtuoso](https://virtuoso.openlinksw.com/) RDF store, we use the images `semagrow/url-donwnloader`,
-`semagrow/virtuoso-init` (source code [here](../examples/dataset-virtuoso/virtuoso-init)), and
-`semagrow/virtuoso-main` (source code [here](../examples/dataset-virtuoso/virtuoso-main)).
-We use the shared storage of Kobe, to keep a backup of the `/database` directory of Virtuoso, which is used to keep all the files used by the database.
-The last two images are built upon `openlink/virtuoso-opensource-7`.
+* Regarding the [fedx](http://iswc2011.semanticweb.org/fileadmin/iswc/Papers/Research_Paper/05/70310592.pdf) federation engine, we use the images
+  `semagrow/fedx-init` (source code [here](../examples/federator-fedx/fedx-init)),
+  `semagrow/fedx-init-all`, (source code [here](../examples/federator-fedx/fedx-init-all)),
+  and `semagrow/fedx-server` (source code [here](https://github.com/semagrow/docker-fedx-server)).
+  Fedx is known for not using any dataset statistics, but it uses only a ttl file that contains only the SPARQL endpoints of the federation.
+  The first image creates a ttl file that defines the SPARQL endpoint of each dataset
+  and the second image concatenates all ttil files of each source endpoints into a single configuration file.
 
-* Regarding the [Strabon](http://strabon.di.uoa.gr/) geospatial RDF store, we use the images `semagrow/url-donwnloader`,
-`semagrow/strabon-init` (source code [here](../examples/dataset-strabon/strabon-init)), and
-`semagrow/strabon-main` (source code [here](../examples/dataset-strabon/strabon-main)).
-We use the shared storage of Kobe, to keep a backup of the PostGIS database (directory `/var/lib/postgresql/9.4/main`)
-which is where the data are kept inside Strabon.
-The last two images are built using the docker file of KR-suite (see http://github.com/GiorgosMandi/KR-Suite-docker)`.
 
 ## Step 2. Prepare your YAML file
 
-Once you have prepared the docker images, creating the dataset template specification for your dataset server is a straightforward task.
-It should look like this (we use as an example the template for Virtuoso):
+Once you have prepared the docker images, creating the federator template specification for your dataset server is a straightforward task.
+It should look like this (we use as an example the template for Semagrow):
 
 ```yaml
 apiVersion: kobe.semagrow.org/v1alpha1
-kind: DatasetTemplate
+kind: FederatorTemplate
 metadata:
-  # Each dataset template can be uniquely identified by its name.
-  name: virtuosotemplate
+  # Each federator template can be uniquely identified by its name.
+  name: semagrowtemplate
 spec:
-  initContainers:
-    # here you put the first two images (that is the images for initializing
-    # your server in the order you want to be executed).
-    - name: initcontainer0
-      image: semagrow/url-downloader
-    - name: initcontainer1
-      image: semagrow/virtuoso-init
   containers:
-    # here you put the last image (that is the image for serving the data)
-    - name: maincontainer
-      image: semagrow/virtuoso-main
+    # here you put the last image (that is the image for the
+    # SPARQL endpoint of the federation engine)
+    - name: maincontainer 
+      image: semagrow/semagrow
       ports:
-        - containerPort: 8890  # port to listen for queries
-  port: 8890     # port to listen for queries
-  path: /sparql  # path to listen for queries
+      - containerPort: 8080             # port to listen for queries
+  port: 8080                            # port to listen for queries
+  path: /SemaGrow/sparql                # path to listen for queries
+  fedConfDir: /etc/default/semagrow     # where the federator expects to find its configuration
+  
+  # federator configuration step 1 (for each dataset):
+  confFromFileImage: semagrow/semagrow-init  # first docker image
+  inputDumpDir: /sevod-scraper/input         # where to find the dump file for the dataset
+  outputDumpDir: /sevod-scraper/output       # where to place the configuration for the dataset
+  
+  # federator configuration step 2 (combination step):
+  confImage: semagrow/semagrow-init-all      # second docker image
+  inputDir: /kobe/input                      # where to find all dataset configurations
+  outputDir: /kobe/output                    # where to place the final (combined) configuration
 
 ```
 
 The default URL for the SPARQL endpoint for Virtuoso is `http://localhost:8890/sparql`, hence the port and the path to listen for queries are `8890` and `/sparql` respectively.
+The input and output directories of the images mentioned previously are configured using the parameters `inputDumpDir`,`outputDumpDir`,`inputDir`,`outputDir`.
 
 ## Examples
 
