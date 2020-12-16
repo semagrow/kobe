@@ -16,7 +16,7 @@ The first step is to provide a set of one or more Docker images that downloads t
 Even though all this functionality can be provided with a single image, we suggest to split the various tasks into three separate images.
 More specifically:
 
-* A docker image that downloads a RDF dump from a known URL (found in the variable `$DATASET_URL`) and extracts its contents in the directory `/kobe/dataset/$DATASET/dump`.
+* A docker image that downloads a RDF dump from a known URL (found in the variable `$DATASET_URL`) and extracts its contents in the directory `/kobe/dataset/$DATASET_NAME/dump`.
 * A docker image that loads the downloaded dump (already present in the directory `/kobe/dataset/$DATASET_NAME/dump`) into the dataset server.
   Optionally, it can back-up the contents of the database in some directory inside `/kobe/dataset/$DATASET_NAME` such that the loading process to be executed only once. 
 * A docker image that starts the dataset server and exposes its SPARQL endpoint.
