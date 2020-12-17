@@ -651,13 +651,15 @@ following:</p>
 <li>Extend your query string parser to parse the first line of the query string
    which follows the according regex pattern:</li>
 </ol>
-<p><code>^\#kobeQueryDesc Experiment: (?&lt;experiment&gt;[^ ]+) - Date: (?&lt;date&gt;[^ ]+ [^ ]+) - Query: (?&lt;query&gt;[^ ]+) - Run: (?&lt;run&gt;[0-9]+)$</code></p>
+<div class="highlight"><pre><span></span><code>^\#kobeQueryDesc Experiment: (?&lt;experiment&gt;[^ ]+) - Date: (?&lt;date&gt;[^ ]+ [^ ]+) - Query: (?&lt;query&gt;[^ ]+) - Run: (?&lt;run&gt;[0-9]+)$
+</code></pre></div>
 <ol>
 <li>Calculate some or all of the metrics discussed previously.</li>
 <li>Provide a log message to output the metrics according to the following regex
    pattern:</li>
 </ol>
-<p><code>^I - [^ ]+ [^ ]+ - .{12} - .{20} - [^ ]+ -  - Experiment: (?&lt;experiment&gt;[^ ]+) - Date: (?&lt;date&gt;[^ ]+ [^ ]+) - Query: (?&lt;query&gt;[^ ]+) - Run: (?&lt;run&gt;[0-9]+) - Source Selection Time: (?&lt;source_selection_time&gt;[0-9]+) - Compile Time: (?&lt;compile_time&gt;[0-9]+) - Sources: (?&lt;sources&gt;[0-9]+) - Execution time: (?&lt;execution_time&gt;[0-9]+)$</code></p>
+<div class="highlight"><pre><span></span><code>^I - [^ ]+ [^ ]+ - .{12} - .{20} - [^ ]+ -  - Experiment: (?&lt;experiment&gt;[^ ]+) - Date: (?&lt;date&gt;[^ ]+ [^ ]+) - Query: (?&lt;query&gt;[^ ]+) - Run: (?&lt;run&gt;[0-9]+) - Source Selection Time: (?&lt;source_selection_time&gt;[0-9]+) - Compile Time: (?&lt;compile_time&gt;[0-9]+) - Sources: (?&lt;sources&gt;[0-9]+) - Execution time: (?&lt;execution_time&gt;[0-9]+)$
+</code></pre></div>
 <p>As an example, consider this <a href="https://github.com/semagrow/semagrow/pull/52">pull request</a>
 which contains the integration needed for KOBE in the case for the Semagrow
 federation engine. </p>
@@ -718,34 +720,33 @@ Semagrow).</p>
 <p>Once you have prepared the docker images, creating the federator template
 specification for your dataset server is a straightforward task. It should look
 like this (we use as an example the template for Semagrow):</p>
-<pre><code class="language-yaml">apiVersion: kobe.semagrow.org/v1alpha1
-kind: FederatorTemplate
-metadata:
-  # Each federator template can be uniquely identified by its name.
-  name: semagrowtemplate
-spec:
-  containers:
-    # here you put the last image (that is the image for the
-    # SPARQL endpoint of the federation engine)
-    - name: maincontainer 
-      image: semagrow/semagrow
-      ports:
-      - containerPort: 8080             # port to listen for queries
-  port: 8080                            # port to listen for queries
-  path: /SemaGrow/sparql                # path to listen for queries
-  fedConfDir: /etc/default/semagrow     # where the federator expects to find its configuration
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kobe.semagrow.org/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">FederatorTemplate</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="c1"># Each federator template can be uniquely identified by its name.</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrowtemplate</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">containers</span><span class="p">:</span>
+    <span class="c1"># here you put the last image (that is the image for the</span>
+    <span class="c1"># SPARQL endpoint of the federation engine)</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">maincontainer</span> 
+      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/semagrow</span>
+      <span class="nt">ports</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>             <span class="c1"># port to listen for queries</span>
+  <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>                            <span class="c1"># port to listen for queries</span>
+  <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/SemaGrow/sparql</span>                <span class="c1"># path to listen for queries</span>
+  <span class="nt">fedConfDir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/etc/default/semagrow</span>     <span class="c1"># where the federator expects to find its configuration</span>
 
-  # federator configuration step 1 (for each dataset):
-  confFromFileImage: semagrow/semagrow-init  # first docker image
-  inputDumpDir: /sevod-scraper/input         # where to find the dump file for the dataset
-  outputDumpDir: /sevod-scraper/output       # where to place the configuration for the dataset
+  <span class="c1"># federator configuration step 1 (for each dataset):</span>
+  <span class="nt">confFromFileImage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/semagrow-init</span>  <span class="c1"># first docker image</span>
+  <span class="nt">inputDumpDir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/sevod-scraper/input</span>         <span class="c1"># where to find the dump file for the dataset</span>
+  <span class="nt">outputDumpDir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/sevod-scraper/output</span>       <span class="c1"># where to place the configuration for the dataset</span>
 
-  # federator configuration step 2 (combination step):
-  confImage: semagrow/semagrow-init-all      # second docker image
-  inputDir: /kobe/input                      # where to find all dataset configurations
-  outputDir: /kobe/output                    # where to place the final (combined) configuration
-
-</code></pre>
+  <span class="c1"># federator configuration step 2 (combination step):</span>
+  <span class="nt">confImage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/semagrow-init-all</span>      <span class="c1"># second docker image</span>
+  <span class="nt">inputDir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/kobe/input</span>                      <span class="c1"># where to find all dataset configurations</span>
+  <span class="nt">outputDir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/kobe/output</span>                    <span class="c1"># where to place the final (combined) configuration</span>
+</code></pre></div>
 <p>The default URL for the SPARQL endpoint for Virtuoso is
 <code>http://localhost:8080/SemaGrow/sparql</code>, hence the port and the path to listen
 for queries are <code>8080</code> and <code>/SemaGrow/sparql</code> respectively. The input and output

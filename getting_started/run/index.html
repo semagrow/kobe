@@ -565,40 +565,40 @@ benchmark that comprises three queries over a Semagrow federation of two
 Virtuoso endpoints.</p>
 <p>You can use the <code>kobectl</code> script found in the <a href="bin/">bin</a> directory for
 cotrolling your experiments:</p>
-<pre><code>export PATH=`pwd`/bin:$PATH
+<div class="highlight"><pre><span></span><code>export PATH=`pwd`/bin:$PATH
 kobectl help
-</code></pre>
+</code></pre></div>
 <p>First, apply the templates for Virtuoso and Semagrow:</p>
-<pre><code>kobectl apply examples/dataset-virtuoso/virtuosotemplate.yaml
+<p><div class="highlight"><pre><span></span><code>kobectl apply examples/dataset-virtuoso/virtuosotemplate.yaml
 kobectl apply examples/federator-semagrow/semagrowtemplate.yaml
-</code></pre>
-<p>Then, apply the benchmark.</p>
-<pre><code>kobectl apply examples/benchmark-toybench/toybench-simple.yaml
-</code></pre>
+</code></pre></div>
+Then, apply the benchmark.</p>
+<div class="highlight"><pre><span></span><code>kobectl apply examples/benchmark-toybench/toybench-simple.yaml
+</code></pre></div>
 <p>Before running the experiment, you should verify that the datasets are loaded.
 Use the following command:</p>
-<pre><code>kobectl show benchmark toybench-simple
-</code></pre>
+<div class="highlight"><pre><span></span><code>kobectl show benchmark toybench-simple
+</code></pre></div>
 <p>When the datasets are loaded, you should get the following output:</p>
-<pre><code>NAME  STATUS
+<div class="highlight"><pre><span></span><code>NAME  STATUS
 toy1  Running
 toy2  Running
-</code></pre>
+</code></pre></div>
 <p>Proceed now with the execution of the experiment:</p>
-<pre><code>kobectl apply examples/experiment-toybench/toyexp-simple.yaml
-</code></pre>
+<div class="highlight"><pre><span></span><code>kobectl apply examples/experiment-toybench/toyexp-simple.yaml
+</code></pre></div>
 <p>As previously, you can review the state of the experiment with the following
 command:</p>
-<pre><code>kobectl show experiment toyexp-simple
-</code></pre>
-<p>You can now view the evaluation metrics in the Kibana dashboards.</p>
-<p>For removing all of the above, issue the following commands:</p>
-<pre><code>kobectl delete experiment toyexp-simple
+<p><div class="highlight"><pre><span></span><code>kobectl show experiment toyexp-simple
+</code></pre></div>
+You can now view the evaluation metrics in the Kibana dashboards.</p>
+<p>For removing all of the above, issue the following commands:
+<div class="highlight"><pre><span></span><code>kobectl delete experiment toyexp-simple
 kobectl delete benchmark toybench-simple
 kobectl delete federatortemplate semagrowtemplate
 kobectl delete datasettemplate virtuosotemplate
-</code></pre>
-<p>For more advanced control options for KOBE, use <a href="https://kubernetes.io/docs/reference/kubectl/overview/">kubectl</a>.</p>
+</code></pre></div>
+For more advanced control options for KOBE, use <a href="https://kubernetes.io/docs/reference/kubectl/overview/">kubectl</a>.</p>
                 
               
               

@@ -623,10 +623,10 @@ file and compress it with gzip. Even though most dataset engines support the
 import of several RDF formats (such as RDF/XML, turtle, etc), the most simple
 format is N-TRIPLES. Therefore, we suggest to store your dataset in a single .nt
 file. If you choose to to prepare a dump.nt file, just do the following:</p>
-<pre><code>mkdir dataset/
+<div class="highlight"><pre><span></span><code>mkdir dataset/
 mv dump.nt dataset/
 tar czvf dataset.tar.gz dataset/
-</code></pre>
+</code></pre></div>
 <p>Finally, upload the .tar.gz file on a known location. As an example, we have
 uploaded the datasets for the FedBench experiment in the following
 <a href="https://users.iit.demokritos.gr/~gmouchakis/dumps/">location</a>.</p>
@@ -634,35 +634,35 @@ uploaded the datasets for the FedBench experiment in the following
 <p>A benchmark is characterized by its <em>name</em> and is parameterized using a list of
 <em>datasets</em> and a set of <em>queries</em>. A typical benchmark specification should look
 like this:</p>
-<pre><code class="language-yaml">apiVersion: kobe.semagrow.org/v1alpha1
-kind: Benchmark
-metadata:
-  # Each benchmark can be uniquely identified by its name.
-  name: mybench
-spec:
-  # Each benchmark consists of a set of dataset specifications.
-  datasets:
-    # Each dataset can be uniquely identified by its name,
-    # and is defined with
-    #   A list of URLs that contain the dump of the dataset to download.
-    #   A specification of the dataset server to use (dataset template).
-    - name: dataset1
-      files:
-        - url: https://path/to/download/the/dataset1.tar.gz
-      templateRef: datasettemplate
-    # ... add more datasets ...
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kobe.semagrow.org/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Benchmark</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="c1"># Each benchmark can be uniquely identified by its name.</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mybench</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="c1"># Each benchmark consists of a set of dataset specifications.</span>
+  <span class="nt">datasets</span><span class="p">:</span>
+    <span class="c1"># Each dataset can be uniquely identified by its name,</span>
+    <span class="c1"># and is defined with</span>
+    <span class="c1">#   A list of URLs that contain the dump of the dataset to download.</span>
+    <span class="c1">#   A specification of the dataset server to use (dataset template).</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dataset1</span>
+      <span class="nt">files</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://path/to/download/the/dataset1.tar.gz</span>
+      <span class="nt">templateRef</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">datasettemplate</span>
+    <span class="c1"># ... add more datasets ...</span>
 
-  # Each benchmark consists of a set of queries.
-  queries:
-    # Each query can be uniquely identified by its name,
-    # and is defined with
-    #    The language in which the query is written (e.g., SPARQL).
-    #    The actual query string to be posed to the federator.
-    - name: query1
-      language: sparql
-      queryString: &quot;SELECT * WHERE ... &quot;
-    # ... add more queries ...
-</code></pre>
+  <span class="c1"># Each benchmark consists of a set of queries.</span>
+  <span class="nt">queries</span><span class="p">:</span>
+    <span class="c1"># Each query can be uniquely identified by its name,</span>
+    <span class="c1"># and is defined with</span>
+    <span class="c1">#    The language in which the query is written (e.g., SPARQL).</span>
+    <span class="c1">#    The actual query string to be posed to the federator.</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">query1</span>
+      <span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sparql</span>
+      <span class="nt">queryString</span><span class="p">:</span> <span class="s">&quot;SELECT</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">WHERE</span><span class="nv"> </span><span class="s">...</span><span class="nv"> </span><span class="s">&quot;</span>
+    <span class="c1"># ... add more queries ...</span>
+</code></pre></div>
 <p>Check the following link in which we illustrate a simple example of the above
 specification:</p>
 <ul>
@@ -697,26 +697,26 @@ for more information.</p>
 </ul>
 <p>You can extend your benchmark specification can be extended in order to define
 the latency of the sources as follows:</p>
-<pre><code class="language-yaml"># In this example we will use two datasets, ds1 and ds2.
-spec:
-  datasets:
-    - name: ds1
-      # adds 1 second of delay before forwarding all responces to the federator
-      federatorConnection:
-         delayInjection:
-           fixedDelaySec: 1
-           percentage: 100
-      networkTopology:
-        # adds 2 sec of delay before forwarding the 50% of responces to the source ds1
-        - datasetSource: ds2
-          delayInjection:
-            fixedDelaySec: 2
-            percentage: 50
-      # ... add remaining parameters for ds1
+<div class="highlight"><pre><span></span><code><span class="c1"># In this example we will use two datasets, ds1 and ds2.</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">datasets</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ds1</span>
+      <span class="c1"># adds 1 second of delay before forwarding all responces to the federator</span>
+      <span class="nt">federatorConnection</span><span class="p">:</span>
+         <span class="nt">delayInjection</span><span class="p">:</span>
+           <span class="nt">fixedDelaySec</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+           <span class="nt">percentage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+      <span class="nt">networkTopology</span><span class="p">:</span>
+        <span class="c1"># adds 2 sec of delay before forwarding the 50% of responces to the source ds1</span>
+        <span class="p p-Indicator">-</span> <span class="nt">datasetSource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ds2</span>
+          <span class="nt">delayInjection</span><span class="p">:</span>
+            <span class="nt">fixedDelaySec</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+            <span class="nt">percentage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+      <span class="c1"># ... add remaining parameters for ds1</span>
 
-    - name: ds2
-      # ... add remaining parameters for ds2
-</code></pre>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ds2</span>
+      <span class="c1"># ... add remaining parameters for ds2</span>
+</code></pre></div>
 <p>Check the following link in which we illustrate a simple working example with
 delays:</p>
 <ul>

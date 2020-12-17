@@ -597,37 +597,37 @@ executes the queries of the benchmark in a sequential manner.</p>
 <p>An experiment is characterized by its <em>name</em> and is parameterized with a
 <em>benchmark</em> to be executed and a <em>federator template</em> to be used. A typical
 experiment specification should look like this:</p>
-<pre><code class="language-yaml">apiVersion: kobe.semagrow.org/v1alpha1
-kind: Experiment
-metadata:
-  # Each experiment can be uniquely identified by its name.
-  name: myexperiment
-spec:
-  # Specify the name of the benchmark to be executed.
-  benchmark: mybench
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kobe.semagrow.org/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Experiment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="c1"># Each experiment can be uniquely identified by its name.</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myexperiment</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="c1"># Specify the name of the benchmark to be executed.</span>
+  <span class="nt">benchmark</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mybench</span>
 
-  # Specify the name of the federation engine of the experiment.
-  federatorName: myfederator
+  <span class="c1"># Specify the name of the federation engine of the experiment.</span>
+  <span class="nt">federatorName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myfederator</span>
 
-  # Specify the name of the federator template to be used.
-  federatorTemplateRef: federatortemplate
+  <span class="c1"># Specify the name of the federator template to be used.</span>
+  <span class="nt">federatorTemplateRef</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">federatortemplate</span>
 
-  # Specify the docker image of the evaluator.
-  evaluator:
-    image: semagrow/kobe-sequential-evaluator
+  <span class="c1"># Specify the docker image of the evaluator.</span>
+  <span class="nt">evaluator</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/kobe-sequential-evaluator</span>
 
-  # Specify the number of runs of the experiment, i.e. how many times each query 
-  # of the benchmark should be executed.
-  timesToRun: runs
+  <span class="c1"># Specify the number of runs of the experiment, i.e. how many times each query </span>
+  <span class="c1"># of the benchmark should be executed.</span>
+  <span class="nt">timesToRun</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">runs</span>
 
-  # If you set this parameter to true, KOBE will only build the federation 
-  # and will not start the experiment.
-  dryRun: false
+  <span class="c1"># If you set this parameter to true, KOBE will only build the federation </span>
+  <span class="c1"># and will not start the experiment.</span>
+  <span class="nt">dryRun</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 
-  # If you set this parameter to false, KOBE will not build the federation
-  # if it was already built in previous executions of this experiment.
-  forceNewInit: true 
-</code></pre>
+  <span class="c1"># If you set this parameter to false, KOBE will not build the federation</span>
+  <span class="c1"># if it was already built in previous executions of this experiment.</span>
+  <span class="nt">forceNewInit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span> 
+</code></pre></div>
 <p>Check the following link in which we illustrate a simple example of the above
 specification:</p>
 <ul>

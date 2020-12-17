@@ -654,29 +654,28 @@ and Strabon).</p>
 <p>Once you have prepared the docker images, creating the dataset template
 specification for your dataset server is a straightforward task. It should look
 like this (we use as an example the template for Virtuoso):</p>
-<pre><code class="language-yaml">apiVersion: kobe.semagrow.org/v1alpha1
-kind: DatasetTemplate
-metadata:
-  # Each dataset template can be uniquely identified by its name.
-  name: virtuosotemplate
-spec:
-  initContainers:
-    # here you put the first two images (that is the images for initializing
-    # your server in the order you want to be executed).
-    - name: initcontainer0
-      image: semagrow/url-downloader
-    - name: initcontainer1
-      image: semagrow/virtuoso-init
-  containers:
-    # here you put the last image (that is the image for serving the data)
-    - name: maincontainer
-      image: semagrow/virtuoso-main
-      ports:
-        - containerPort: 8890  # port to listen for queries
-  port: 8890     # port to listen for queries
-  path: /sparql  # path to listen for queries
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kobe.semagrow.org/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DatasetTemplate</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="c1"># Each dataset template can be uniquely identified by its name.</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">virtuosotemplate</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">initContainers</span><span class="p">:</span>
+    <span class="c1"># here you put the first two images (that is the images for initializing</span>
+    <span class="c1"># your server in the order you want to be executed).</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">initcontainer0</span>
+      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/url-downloader</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">initcontainer1</span>
+      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/virtuoso-init</span>
+  <span class="nt">containers</span><span class="p">:</span>
+    <span class="c1"># here you put the last image (that is the image for serving the data)</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">maincontainer</span>
+      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/virtuoso-main</span>
+      <span class="nt">ports</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8890</span>  <span class="c1"># port to listen for queries</span>
+  <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8890</span>     <span class="c1"># port to listen for queries</span>
+  <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/sparql</span>  <span class="c1"># path to listen for queries</span>
+</code></pre></div>
 <p>The default URL for the SPARQL endpoint for Virtuoso is
 <code>http://localhost:8890/sparql</code>, hence the port and the path to listen for
 queries are <code>8890</code> and <code>/sparql</code> respectively.</p>

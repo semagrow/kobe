@@ -590,44 +590,44 @@
 <p>KOBE needs the Kubernetes operator to be installed in the Kubernetes cluster. To
 quickly install the KOBE operator in a Kubernetes cluster. </p>
 <p>You can use the <code>kobectl</code> script found in the <a href="bin/">bin</a> directory:</p>
-<pre><code>export PATH=`pwd`/bin:$PATH
+<div class="highlight"><pre><span></span><code>export PATH=`pwd`/bin:$PATH
 kobectl install operator .
-</code></pre>
-<p>Alternatively, you could run the following commands:</p>
-<pre><code>kubectl apply -f operator/deploy/crds
+</code></pre></div>
+<p>Alternatively, you could run the following commands:
+<div class="highlight"><pre><span></span><code>kubectl apply -f operator/deploy/crds
 kubectl apply -f operator/deploy/service_account.yaml
 kubectl apply -f operator/deploy/clusterrole.yaml
 kubectl apply -f operator/deploy/clusterrole_binding.yaml
 kubectl apply -f operator/deploy/role.yaml
 kubectl apply -f operator/deploy/operator.yaml
-</code></pre>
+</code></pre></div></p>
 <p>You will get a confirmation message that each resource has successfully been
 created. This will set the operator running in your Kubernetes cluster and needs
 to be done only once.</p>
 <h2 id="installation-of-networking-subsystem">Installation of Networking subsystem</h2>
 <p>KOBE uses istio to support network delays between the different deployments. To
-install istio you can run the following:</p>
-<pre><code>kobectl install istio .
-</code></pre>
-<p>Alternatively, you can consult the official <a href="https://istio.io/docs/setup/getting-started/">installation
+install istio you can run the following:
+<div class="highlight"><pre><span></span><code>kobectl install istio .
+</code></pre></div>
+Alternatively, you can consult the official <a href="https://istio.io/docs/setup/getting-started/">installation
 guide</a> or you can type the
 following commands.</p>
-<pre><code>curl -L https://istio.io/downloadIstio | sh -
+<div class="highlight"><pre><span></span><code>curl -L https://istio.io/downloadIstio | sh -
 export PATH=`pwd`/istio-1.6.0/bin:$PATH
 istioctl manifest apply --set profile=default
-</code></pre>
+</code></pre></div>
 <h2 id="installation-of-the-evaluation-metrics-extraction-subsystem">Installation of the Evaluation Metrics Extraction subsystem</h2>
-<p>To enable the evaluation metrics extraction subsystem, run</p>
-<pre><code>kobectl install efk .
-</code></pre>
-<p>or alternatively the following</p>
-<pre><code>helm repo add elastic https://helm.elastic.co
+<p>To enable the evaluation metrics extraction subsystem, run
+<div class="highlight"><pre><span></span><code>kobectl install efk .
+</code></pre></div>
+or alternatively the following
+<div class="highlight"><pre><span></span><code>helm repo add elastic https://helm.elastic.co
 helm repo add kiwigrid https://kiwigrid.github.io
 helm install elastic/elasticsearch --name elasticsearch --set persistence.enabled=false --set replicas=1 --version 7.6.2
 helm install elastic/kibana --name kibana --set service.type=NodePort --version 7.6.2
 helm install --name fluentd -f operator/deploy/efk-config/fluentd-values.yaml kiwigrid/fluentd-elasticsearch --version 8.0.1
 kubectl apply -f operator/deploy/efk-config/kobe-kibana-configuration.yaml
-</code></pre>
+</code></pre></div></p>
 <p>These result in the simplest setup of an one-node
 <a href="https://github.com/elastic/helm-charts/blob/master/elasticsearch">Elasticsearch</a>
 that does not persist data across pod recreation, a
@@ -635,10 +635,10 @@ that does not persist data across pod recreation, a
 <code>DaemonSet</code> and a
 <a href="https://github.com/elastic/helm-charts/tree/master/kibana">Kibana</a>
 node that exposes a <code>NodePort</code>. </p>
-<p>After all pods are in Running state Kibana dashboards can be accessed at </p>
-<pre><code>http://&lt;NODE-IP&gt;:&lt;NODEPORT&gt;/app/kibana#/dashboard/
-</code></pre>
-<p>where <code>&lt;NODE-IP&gt;</code> the IP of any of the Kubernetes cluster nodes and <code>&lt;NODEPORT&gt;</code>
+<p>After all pods are in Running state Kibana dashboards can be accessed at 
+<div class="highlight"><pre><span></span><code>http://&lt;NODE-IP&gt;:&lt;NODEPORT&gt;/app/kibana#/dashboard/
+</code></pre></div>
+where <code>&lt;NODE-IP&gt;</code> the IP of any of the Kubernetes cluster nodes and <code>&lt;NODEPORT&gt;</code>
 the result of <code>kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services
 kibana-kibana</code>.</p>
 <p>The setup can be customized by changing the configuration parameters of each
