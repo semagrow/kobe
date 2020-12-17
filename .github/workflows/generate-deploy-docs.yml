@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - devel
-
+      - docs
 jobs:
   deploy:
     runs-on: ubuntu-18.04

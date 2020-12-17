@@ -1,4 +1,4 @@
-site_name: KOBE Docs
+site_name: KOBE Benchmark Engine
 site_url: https://semagrow.github.com/kobe/
 repo_url: https://github.com/semagrow/kobe/
 repo_name: 'GitHub'
@@ -13,9 +13,14 @@ nav:
      - 'Create a benchmark': use/benchmark.md 
   - 'Extending KOBE':
      - 'Create a data source': extend/datasettemplate.md
-     - 'Create a federator': extend/federator.md
+     - 'Create a federator': extend/federatortemplate.md
   - 'References':
      - 'API': api.md
 
 theme:
-  name: readthedocs
+  name: material
+  features:
+    - navigation.tabs
+    - search
+    - header.autohide
+
