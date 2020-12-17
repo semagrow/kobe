@@ -24,3 +24,9 @@ theme:
     - search
     - header.autohide
 
+markdown_extensions:
+  - fenced_code
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+
