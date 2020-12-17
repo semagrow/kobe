@@ -1,0 +1,2172 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://semagrow.github.com/kobe/api/">
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>API - KOBE Benchmark Engine</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-docs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://semagrow.github.com/kobe/" title="KOBE Benchmark Engine" class="md-header-nav__button md-logo" aria-label="KOBE Benchmark Engine">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            KOBE Benchmark Engine
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              API
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/semagrow/kobe/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+    
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../getting_started/install/" class="md-tabs__link">
+        Getting started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../use/experiment/" class="md-tabs__link">
+        Using KOBE
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../extend/datasettemplate/" class="md-tabs__link">
+        Extending KOBE
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+        
+      
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        References
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://semagrow.github.com/kobe/" title="KOBE Benchmark Engine" class="md-nav__button md-logo" aria-label="KOBE Benchmark Engine">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    KOBE Benchmark Engine
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/semagrow/kobe/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      Getting started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Getting started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting_started/install/" class="md-nav__link">
+      Install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting_started/run/" class="md-nav__link">
+      Run
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      Using KOBE
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Using KOBE" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Using KOBE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../use/experiment/" class="md-nav__link">
+      Create a new experiment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../use/benchmark/" class="md-nav__link">
+      Create a benchmark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      Extending KOBE
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Extending KOBE" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Extending KOBE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extend/datasettemplate/" class="md-nav__link">
+      Create a data source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../extend/federatortemplate/" class="md-nav__link">
+      Create a federator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    <label class="md-nav__link" for="nav-5">
+      References
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="References" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        References
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      API
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmark" class="md-nav__link">
+    Benchmark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarklist" class="md-nav__link">
+    BenchmarkList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarkspec" class="md-nav__link">
+    BenchmarkSpec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasetendpoint" class="md-nav__link">
+    DatasetEndpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasetfile" class="md-nav__link">
+    DatasetFile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasettemplate" class="md-nav__link">
+    DatasetTemplate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasettemplatelist" class="md-nav__link">
+    DatasetTemplateList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delay" class="md-nav__link">
+    Delay
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ephemeraldataset" class="md-nav__link">
+    EphemeralDataset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ephemeraldatasetlist" class="md-nav__link">
+    EphemeralDatasetList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ephemeraldatasetstatus" class="md-nav__link">
+    EphemeralDatasetStatus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluator" class="md-nav__link">
+    Evaluator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    Experiment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimentlist" class="md-nav__link">
+    ExperimentList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimentspec" class="md-nav__link">
+    ExperimentSpec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimentstatus" class="md-nav__link">
+    ExperimentStatus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federation" class="md-nav__link">
+    Federation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federationlist" class="md-nav__link">
+    FederationList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federationspec" class="md-nav__link">
+    FederationSpec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federationstatus" class="md-nav__link">
+    FederationStatus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federator" class="md-nav__link">
+    Federator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federatorlist" class="md-nav__link">
+    FederatorList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federatorspec" class="md-nav__link">
+    FederatorSpec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federatortemplate" class="md-nav__link">
+    FederatorTemplate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federatortemplatelist" class="md-nav__link">
+    FederatorTemplateList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kobeutil" class="md-nav__link">
+    KobeUtil
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kobeutillist" class="md-nav__link">
+    KobeUtilList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networkconnection" class="md-nav__link">
+    NetworkConnection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemdatasetspec" class="md-nav__link">
+    SystemDatasetSpec
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmark" class="md-nav__link">
+    Benchmark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarklist" class="md-nav__link">
+    BenchmarkList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarkspec" class="md-nav__link">
+    BenchmarkSpec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasetendpoint" class="md-nav__link">
+    DatasetEndpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasetfile" class="md-nav__link">
+    DatasetFile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasettemplate" class="md-nav__link">
+    DatasetTemplate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasettemplatelist" class="md-nav__link">
+    DatasetTemplateList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delay" class="md-nav__link">
+    Delay
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ephemeraldataset" class="md-nav__link">
+    EphemeralDataset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ephemeraldatasetlist" class="md-nav__link">
+    EphemeralDatasetList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ephemeraldatasetstatus" class="md-nav__link">
+    EphemeralDatasetStatus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluator" class="md-nav__link">
+    Evaluator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    Experiment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimentlist" class="md-nav__link">
+    ExperimentList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimentspec" class="md-nav__link">
+    ExperimentSpec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimentstatus" class="md-nav__link">
+    ExperimentStatus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federation" class="md-nav__link">
+    Federation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federationlist" class="md-nav__link">
+    FederationList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federationspec" class="md-nav__link">
+    FederationSpec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federationstatus" class="md-nav__link">
+    FederationStatus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federator" class="md-nav__link">
+    Federator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federatorlist" class="md-nav__link">
+    FederatorList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federatorspec" class="md-nav__link">
+    FederatorSpec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federatortemplate" class="md-nav__link">
+    FederatorTemplate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federatortemplatelist" class="md-nav__link">
+    FederatorTemplateList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kobeutil" class="md-nav__link">
+    KobeUtil
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kobeutillist" class="md-nav__link">
+    KobeUtilList
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networkconnection" class="md-nav__link">
+    NetworkConnection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemdatasetspec" class="md-nav__link">
+    SystemDatasetSpec
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/semagrow/kobe/edit/master/docs/api.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="api-docs">API Docs</h1>
+<p>This Document documents the types introduced by the Kobe Operator to be consumed by users.</p>
+<blockquote>
+<p>Note this document is generated from code comments. When contributing a change to this document please do so by changing the code comments.</p>
+</blockquote>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#benchmark">Benchmark</a></li>
+<li><a href="#benchmarklist">BenchmarkList</a></li>
+<li><a href="#benchmarkspec">BenchmarkSpec</a></li>
+<li><a href="#dataset">Dataset</a></li>
+<li><a href="#datasetendpoint">DatasetEndpoint</a></li>
+<li><a href="#datasetfile">DatasetFile</a></li>
+<li><a href="#datasettemplate">DatasetTemplate</a></li>
+<li><a href="#datasettemplatelist">DatasetTemplateList</a></li>
+<li><a href="#delay">Delay</a></li>
+<li><a href="#ephemeraldataset">EphemeralDataset</a></li>
+<li><a href="#ephemeraldatasetlist">EphemeralDatasetList</a></li>
+<li><a href="#ephemeraldatasetstatus">EphemeralDatasetStatus</a></li>
+<li><a href="#evaluator">Evaluator</a></li>
+<li><a href="#experiment">Experiment</a></li>
+<li><a href="#experimentlist">ExperimentList</a></li>
+<li><a href="#experimentspec">ExperimentSpec</a></li>
+<li><a href="#experimentstatus">ExperimentStatus</a></li>
+<li><a href="#federation">Federation</a></li>
+<li><a href="#federationlist">FederationList</a></li>
+<li><a href="#federationspec">FederationSpec</a></li>
+<li><a href="#federationstatus">FederationStatus</a></li>
+<li><a href="#federator">Federator</a></li>
+<li><a href="#federatorlist">FederatorList</a></li>
+<li><a href="#federatorspec">FederatorSpec</a></li>
+<li><a href="#federatortemplate">FederatorTemplate</a></li>
+<li><a href="#federatortemplatelist">FederatorTemplateList</a></li>
+<li><a href="#kobeutil">KobeUtil</a></li>
+<li><a href="#kobeutillist">KobeUtilList</a></li>
+<li><a href="#networkconnection">NetworkConnection</a></li>
+<li><a href="#query">Query</a></li>
+<li><a href="#systemdatasetspec">SystemDatasetSpec</a></li>
+</ul>
+<h2 id="benchmark">Benchmark</h2>
+<p>Benchmark is the Schema for the benchmarks API</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta">metav1.ObjectMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>spec</td>
+<td></td>
+<td><a href="#benchmarkspec">BenchmarkSpec</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>status</td>
+<td></td>
+<td><a href="#benchmarkstatus">BenchmarkStatus</a></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="benchmarklist">BenchmarkList</h2>
+<p>BenchmarkList contains a list of Benchmark</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta">metav1.ListMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>items</td>
+<td></td>
+<td>[]<a href="#benchmark">Benchmark</a></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="benchmarkspec">BenchmarkSpec</h2>
+<p>BenchmarkSpec defines the components for this benchmark setup</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>datasets</td>
+<td></td>
+<td>[]<a href="#dataset">Dataset</a></td>
+<td>true</td>
+</tr>
+<tr>
+<td>queries</td>
+<td></td>
+<td>[]<a href="#query">Query</a></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="dataset">Dataset</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>files</td>
+<td></td>
+<td>[]<a href="#datasetfile">DatasetFile</a></td>
+<td>true</td>
+</tr>
+<tr>
+<td>systemspec</td>
+<td></td>
+<td>*<a href="#systemdatasetspec">SystemDatasetSpec</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>templateRef</td>
+<td></td>
+<td>string</td>
+<td>false</td>
+</tr>
+<tr>
+<td>affinity</td>
+<td>If specified, the pod's scheduling constraints</td>
+<td>*<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#affinity-v1-core">v1.Affinity</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>resources</td>
+<td>Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.</td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#resourcerequirements-v1-core">v1.ResourceRequirements</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>networkTopology</td>
+<td>network delays</td>
+<td>[]<a href="#networkconnection">NetworkConnection</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>federatorConnection</td>
+<td></td>
+<td>*<a href="#networkconnection">NetworkConnection</a></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="datasetendpoint">DatasetEndpoint</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>namespace</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>port</td>
+<td></td>
+<td>uint32</td>
+<td>true</td>
+</tr>
+<tr>
+<td>path</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="datasetfile">DatasetFile</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>checksum</td>
+<td></td>
+<td>string</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="datasettemplate">DatasetTemplate</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta">metav1.ObjectMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>spec</td>
+<td></td>
+<td><a href="#systemdatasetspec">SystemDatasetSpec</a></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="datasettemplatelist">DatasetTemplateList</h2>
+<p>FederatorList contains a list of Federator</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta">metav1.ListMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>items</td>
+<td></td>
+<td>[]<a href="#datasettemplate">DatasetTemplate</a></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="delay">Delay</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fixedDelaySec</td>
+<td>Add a fixed delay before forwarding the request. Format: 1h/1m/1s/1ms. MUST be &gt;=1ms.</td>
+<td>*uint32</td>
+<td>false</td>
+</tr>
+<tr>
+<td>fixedDelayMSec</td>
+<td>Add a fixed delay before forwarding the request. Format: 1h/1m/1s/1ms. MUST be &gt;=1ms.</td>
+<td>*uint32</td>
+<td>false</td>
+</tr>
+<tr>
+<td>percentage</td>
+<td></td>
+<td>*uint32</td>
+<td>false</td>
+</tr>
+<tr>
+<td>percent</td>
+<td></td>
+<td>*uint32</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="ephemeraldataset">EphemeralDataset</h2>
+<p>EphemeralDataset is the Schema for the kobedatasets API</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta">metav1.ObjectMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>spec</td>
+<td></td>
+<td><a href="#dataset">Dataset</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>status</td>
+<td></td>
+<td><a href="#ephemeraldatasetstatus">EphemeralDatasetStatus</a></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="ephemeraldatasetlist">EphemeralDatasetList</h2>
+<p>EphemeralDatasetList contains a list of EphemeralDataset</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta">metav1.ListMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>items</td>
+<td></td>
+<td>[]<a href="#ephemeraldataset">EphemeralDataset</a></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="ephemeraldatasetstatus">EphemeralDatasetStatus</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>podNames</td>
+<td></td>
+<td>[]string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>phase</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>forceLoad</td>
+<td></td>
+<td>bool</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="evaluator">Evaluator</h2>
+<p>Evaluator defines the</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>imagePullPolicy</td>
+<td></td>
+<td>v1.PullPolicy</td>
+<td>false</td>
+</tr>
+<tr>
+<td>command</td>
+<td></td>
+<td>[]string</td>
+<td>false</td>
+</tr>
+<tr>
+<td>parallelism</td>
+<td></td>
+<td>int32</td>
+<td>false</td>
+</tr>
+<tr>
+<td>env</td>
+<td></td>
+<td>[]<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#envvar-v1-core">v1.EnvVar</a></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="experiment">Experiment</h2>
+<p>Experiment is the Schema for the experiments API</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta">metav1.ObjectMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>spec</td>
+<td></td>
+<td><a href="#experimentspec">ExperimentSpec</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>status</td>
+<td></td>
+<td><a href="#experimentstatus">ExperimentStatus</a></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="experimentlist">ExperimentList</h2>
+<p>ExperimentList contains a list of Experiment</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta">metav1.ListMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>items</td>
+<td></td>
+<td>[]<a href="#experiment">Experiment</a></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="experimentspec">ExperimentSpec</h2>
+<p>ExperimentSpec defines the desired state of Experiment</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>benchmark</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>federatorName</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>federatorSpec</td>
+<td></td>
+<td>*<a href="#federatorspec">FederatorSpec</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>federatorTemplateRef</td>
+<td></td>
+<td>string</td>
+<td>false</td>
+</tr>
+<tr>
+<td>evaluator</td>
+<td></td>
+<td><a href="#evaluator">Evaluator</a></td>
+<td>true</td>
+</tr>
+<tr>
+<td>timesToRun</td>
+<td></td>
+<td>int</td>
+<td>true</td>
+</tr>
+<tr>
+<td>restartPolicy</td>
+<td></td>
+<td>RestartPolicy</td>
+<td>false</td>
+</tr>
+<tr>
+<td>dryRun</td>
+<td></td>
+<td>bool</td>
+<td>true</td>
+</tr>
+<tr>
+<td>forceNewInit</td>
+<td></td>
+<td>bool</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="experimentstatus">ExperimentStatus</h2>
+<p>ExperimentStatus defines the observed state of Experiment</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>startTime</td>
+<td>Time at which this workflow started</td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#time-v1-meta">metav1.Time</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>completionTime</td>
+<td>Time at which this workflow completed</td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#time-v1-meta">metav1.Time</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>run</td>
+<td>The current iteration of the experiment It should be zero if not started yet</td>
+<td>int</td>
+<td>false</td>
+</tr>
+<tr>
+<td>phase</td>
+<td>The phase of the experiment</td>
+<td>ExperimentPhase</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="federation">Federation</h2>
+<p>Federation is the Schema for the federations API</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta">metav1.ObjectMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>spec</td>
+<td></td>
+<td><a href="#federationspec">FederationSpec</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>status</td>
+<td></td>
+<td><a href="#federationstatus">FederationStatus</a></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="federationlist">FederationList</h2>
+<p>FederationList contains a list of Federation</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta">metav1.ListMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>items</td>
+<td></td>
+<td>[]<a href="#federation">Federation</a></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="federationspec">FederationSpec</h2>
+<p>FederationSpec defines the desired state of Federation</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>federatorName</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>spec</td>
+<td></td>
+<td><a href="#federatorspec">FederatorSpec</a></td>
+<td>true</td>
+</tr>
+<tr>
+<td>datasets</td>
+<td></td>
+<td>[]<a href="#datasetendpoint">DatasetEndpoint</a></td>
+<td>true</td>
+</tr>
+<tr>
+<td>topology</td>
+<td></td>
+<td>[]<a href="#networkconnection">NetworkConnection</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>initPolicy</td>
+<td></td>
+<td>InitializationPolicy</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="federationstatus">FederationStatus</h2>
+<p>FederationStatus defines the observed state of KobeFederation</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>podNames</td>
+<td></td>
+<td>[]string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>phase</td>
+<td></td>
+<td>FederationPhase</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="federator">Federator</h2>
+<p>Federator is the Schema for the federators API</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta">metav1.ObjectMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>spec</td>
+<td></td>
+<td><a href="#federatorspec">FederatorSpec</a></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="federatorlist">FederatorList</h2>
+<p>FederatorList contains a list of Federator</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta">metav1.ListMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>items</td>
+<td></td>
+<td>[]<a href="#federator">Federator</a></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="federatorspec">FederatorSpec</h2>
+<p>FederatorSpec contains all necessary information for a federator</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>initContainers</td>
+<td></td>
+<td>[]v1.Container</td>
+<td>false</td>
+</tr>
+<tr>
+<td>containers</td>
+<td></td>
+<td>[]v1.Container</td>
+<td>true</td>
+</tr>
+<tr>
+<td>port</td>
+<td>Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536.</td>
+<td>int32</td>
+<td>true</td>
+</tr>
+<tr>
+<td>path</td>
+<td>suffix to be added to endpoint of federator f.e ../SemaGrow/sparql</td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>confFromFileImage</td>
+<td>The Docker image that receives a compressed dataset and may produce configuration needed from the federator to federate this specific dataset This container will run one time for each dataset in the federation</td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>inputDumpDir</td>
+<td>where the above image expects the dump to be (if from dump)</td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>outputDumpDir</td>
+<td>where the above image will place its result config file</td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>confImage</td>
+<td>The Docker image that initializes the federator (equivalent to initContainers)</td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>inputDir</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>outputDir</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>fedConfDir</td>
+<td>which directory the federator needs the metadata config files in order to find them</td>
+<td>string</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="federatortemplate">FederatorTemplate</h2>
+<p>FederatorTemplate defines a federator and its components that it needs to be installed.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta">metav1.ObjectMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>spec</td>
+<td></td>
+<td><a href="#federatorspec">FederatorSpec</a></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="federatortemplatelist">FederatorTemplateList</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta">metav1.ListMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>items</td>
+<td></td>
+<td>[]<a href="#federatortemplate">FederatorTemplate</a></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="kobeutil">KobeUtil</h2>
+<p>KobeUtil is the Schema for the kobeutils API</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#objectmeta-v1-meta">metav1.ObjectMeta</a></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="kobeutillist">KobeUtilList</h2>
+<p>KobeUtilList contains a list of KobeUtil</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td></td>
+<td><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#listmeta-v1-meta">metav1.ListMeta</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td>items</td>
+<td></td>
+<td>[]<a href="#kobeutil">KobeUtil</a></td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="networkconnection">NetworkConnection</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>datasetSource</td>
+<td></td>
+<td>*string</td>
+<td>false</td>
+</tr>
+<tr>
+<td>delayInjection</td>
+<td></td>
+<td><a href="#delay">Delay</a></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="query">Query</h2>
+<p>Query contains the query info</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>language</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+<tr>
+<td>queryString</td>
+<td></td>
+<td>string</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+<h2 id="systemdatasetspec">SystemDatasetSpec</h2>
+<p>DatasetSpec defines the desired state of Dataset</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Scheme</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>importContainers</td>
+<td></td>
+<td>[]v1.Container</td>
+<td>false</td>
+</tr>
+<tr>
+<td>initContainers</td>
+<td>List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, or Liveness probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/</td>
+<td>[]v1.Container</td>
+<td>false</td>
+</tr>
+<tr>
+<td>containers</td>
+<td>List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated.</td>
+<td>[]v1.Container</td>
+<td>true</td>
+</tr>
+<tr>
+<td>initPolicy</td>
+<td>Forces to download and load from dataset file</td>
+<td>InitializationPolicy</td>
+<td>true</td>
+</tr>
+<tr>
+<td>port</td>
+<td>Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536.</td>
+<td>uint32</td>
+<td>true</td>
+</tr>
+<tr>
+<td>path</td>
+<td>Path that the container will listen for queries</td>
+<td>string</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to TOC</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../extend/federatortemplate/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Create a federator
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.tabs', 'search', 'header.autohide'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
