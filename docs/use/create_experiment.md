@@ -20,13 +20,13 @@ following:
   the queries to the federator.
 
 We have already prepared several benchmarks and federator templates to use. If
-you want to create your own dataset server template, check out [this
+you want to create your own benchmark, check out [this
 guide](./create_benchmark.md). Moreover, if you want to create your own
 federator template, check out [this guide](../extend/add_federator.md).
 Regarding the evaluator, we currently we offer the docker image
 `semagrow/kobe-sequential-evaluator`, which executes the queries of the benchmark
-in a sequential manner. If you want to create your own evaluater, check out
-[this guide](../extend/add_federator.md).
+in a sequential manner. If you want to create your own evaluator, check out
+[this guide](../extend/add_evaluator.md).
 
 ## Step 1. Prepare your YAML file
 
