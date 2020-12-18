@@ -1,3 +1,6 @@
+# Installation
+
+This guide illustrates the steps required to install KOBE in your system.
 
 ## Prerequisites
 
@@ -48,7 +51,7 @@ export PATH=`pwd`/istio-1.6.0/bin:$PATH
 istioctl manifest apply --set profile=default
 ```
 
-## Installation of the Evaluation Metrics Extraction subsystem
+## Installation of the Logging subsystem
 
 To enable the evaluation metrics extraction subsystem, run
 ```
@@ -72,14 +75,4 @@ that does not persist data across pod recreation, a
 [Kibana](https://github.com/elastic/helm-charts/tree/master/kibana)
 node that exposes a `NodePort`. 
 
-After all pods are in Running state Kibana dashboards can be accessed at 
-```
-http://<NODE-IP>:<NODEPORT>/app/kibana#/dashboard/
-``` 
-where `<NODE-IP>` the IP of any of the Kubernetes cluster nodes and `<NODEPORT>`
-the result of `kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services
-kibana-kibana`.
 
-The setup can be customized by changing the configuration parameters of each
-helm chart. Please check the corresponding documentation of each chart for more
-info.
