@@ -13,7 +13,7 @@ nav:
      - 'Create a new benchmark': use/create_benchmark.md
         - 'Add new queries': use/add_queries.md
         - 'Add new datasets': use/add_datasets.md
-     	  - 'Tune network settings': use/tune_network.md
+        - 'Tune network settings': use/tune_network.md
      - 'Create a new experiment': use/create_experiment.md
   - 'Extending KOBE':
      - 'Add a new federator': use/add_federator.md
