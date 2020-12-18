@@ -10,10 +10,10 @@ In this walkthrough we assume that you already have already prepared the
 following:
 
 * A [Benchmark](../references/api.md#benchmark) for the benchmark you want to
-  use in your experiment.
+  change the network parameters.
 
 We have already prepared several benchmarks to use. If
-you want to create a benchmark specification, check out [this
+you want to create your own benchmark specification, check out [this
 guide](./create_benchmark.md).
 
 ## Step 1 - Inject latency for each source endpoint
