@@ -37,7 +37,7 @@ the following information:
 These parameters are passed from the evaluator of Kobe to the federation engine
 via a SPARQL comment that is attached in the query string.
 
-## Step 1. Optonal. Provide support for all evaluation metrics
+## Step 1. Provide support for all evaluation metrics
 
 In order to provide full support for evaluation metrics, you should do the
 following:
