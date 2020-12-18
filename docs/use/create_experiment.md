@@ -1,7 +1,7 @@
-# Experiment Walkthough
+# Create a new experiment
 
 This walkthrough illustrates the steps required from the *experimenter* in order
-to create an [Experiment](../operator/docs/api.md#experiment) specification.
+to create an [Experiment](../references/api.md#experiment) specification.
 
 In KOBE, an experiment is defined over a benchmark and federator. This resource
 provides the necessary parameters for instantiating a federation of querying
@@ -12,19 +12,21 @@ systems.
 In this walkthrough we assume that you already have already prepared the
 following:
 
-* A [Benchmark](../operator/docs/api.md#benchmark) for the benchmark you want to
+* A [Benchmark](../references/api.md#benchmark) for the benchmark you want to
   use in your experiment.
-* A [FederatorTemplate](../operator/docs/api.md#federatortemplate) for the
+* A [FederatorTemplate](../references/api.md#federatortemplate) for the
   federation engine you want to use in your experiment.
 * A docker image of the evaluator, which is a piece of software that will pose
   the queries to the federator.
 
 We have already prepared several benchmarks and federator templates to use. If
 you want to create your own dataset server template, check out [this
-guide](./benchmarkWalkthrough.md). Moreover, if you want to create your own
-federator template, check out [this guide](..). Regarding the evaluator, we
-currently we offer the docker image `semagrow/kobe-sequential-evaluator`, which
-executes the queries of the benchmark in a sequential manner.
+guide](./create_benchmark.md). Moreover, if you want to create your own
+federator template, check out [this guide](../extend/add_federator.md).
+Regarding the evaluator, we currently we offer the docker image
+`semagrow/kobe-sequential-evaluator`, which executes the queries of the benchmark
+in a sequential manner. If you want to create your own evaluater, check out
+[this guide](../extend/add_federator.md).
 
 ## Step 1. Prepare your YAML file
 
@@ -68,7 +70,7 @@ spec:
 Check the following link in which we illustrate a simple example of the above
 specification:
 
-* [experiment-toybench/toyexp-simple.yaml](../examples/experiment-toybench/toyexp-simple.yaml)
+* [experiment-toybench/toyexp-simple.yaml](https://github.com/semagrow/kobe/tree/devel/examples/experiment-toybench/toyexp-simple.yaml)
 
 In this example, we define an experiment over the `toybench-simple` benchmark,
 and we use the Semagrow federation engine. The queries of the benchmark are
@@ -81,11 +83,11 @@ example experiment the queries will be executed with the following order: `tq1`,
 
 We have already prepared several experiment specifications to experiment with:
 
-* [experiment-fedbench](../examples/experiment-fedbench)
-* [experiment-geofedbench](../examples/experiment-geofedbench)
-* [experiment-geographica](../examples/experiment-geographica)
-* [experiment-toybench](../examples/experiment-toybench)
+* [experiment-fedbench](https://github.com/semagrow/kobe/tree/devel//experiment-fedbench)
+* [experiment-geofedbench](https://github.com/semagrow/kobe/tree/devel//experiment-geofedbench)
+* [experiment-geographica](https://github.com/semagrow/kobe/tree/devel//experiment-geographica)
+* [experiment-toybench](https://github.com/semagrow/kobe/tree/devel//experiment-toybench)
 
 > Notice: We plan to define more experiment specifications in the future. We
-> place all experiment specifications in the [examples/](../examples/) directory
+> place all experiment specifications in the [examples/](https://github.com/semagrow/kobe/tree/devel//examples/) directory
 > under a subdirectory with the prefix `experiment-*`. 
