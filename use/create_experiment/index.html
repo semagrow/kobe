@@ -672,13 +672,13 @@ following:</p>
   the queries to the federator.</li>
 </ul>
 <p>We have already prepared several benchmarks and federator templates to use. If
-you want to create your own dataset server template, check out <a href="../create_benchmark/">this
+you want to create your own benchmark, check out <a href="../create_benchmark/">this
 guide</a>. Moreover, if you want to create your own
 federator template, check out <a href="../../extend/add_federator/">this guide</a>.
 Regarding the evaluator, we currently we offer the docker image
 <code>semagrow/kobe-sequential-evaluator</code>, which executes the queries of the benchmark
-in a sequential manner. If you want to create your own evaluater, check out
-<a href="../../extend/add_federator/">this guide</a>.</p>
+in a sequential manner. If you want to create your own evaluator, check out
+<a href="../../extend/add_evaluator/">this guide</a>.</p>
 <h2 id="step-1-prepare-your-yaml-file">Step 1. Prepare your YAML file</h2>
 <p>An experiment is characterized by its <em>name</em> and is parameterized with a
 <em>benchmark</em> to be executed and a <em>federator template</em> to be used. A typical
@@ -728,14 +728,14 @@ example experiment the queries will be executed with the following order: <code>
 <h2 id="examples">Examples</h2>
 <p>We have already prepared several experiment specifications to experiment with:</p>
 <ul>
-<li><a href="https://github.com/semagrow/kobe/tree/devel//experiment-fedbench">experiment-fedbench</a></li>
-<li><a href="https://github.com/semagrow/kobe/tree/devel//experiment-geofedbench">experiment-geofedbench</a></li>
-<li><a href="https://github.com/semagrow/kobe/tree/devel//experiment-geographica">experiment-geographica</a></li>
-<li><a href="https://github.com/semagrow/kobe/tree/devel//experiment-toybench">experiment-toybench</a></li>
+<li><a href="https://github.com/semagrow/kobe/tree/devel/examples/experiment-fedbench">experiment-fedbench</a></li>
+<li><a href="https://github.com/semagrow/kobe/tree/devel/examples/experiment-geofedbench">experiment-geofedbench</a></li>
+<li><a href="https://github.com/semagrow/kobe/tree/devel/examples/experiment-geographica">experiment-geographica</a></li>
+<li><a href="https://github.com/semagrow/kobe/tree/devel/examples/experiment-toybench">experiment-toybench</a></li>
 </ul>
 <blockquote>
 <p>Notice: We plan to define more experiment specifications in the future. We
-place all experiment specifications in the <a href="https://github.com/semagrow/kobe/tree/devel//examples/">examples/</a> directory
+place all experiment specifications in the <a href="https://github.com/semagrow/kobe/tree/devel/examples/">examples/</a> directory
 under a subdirectory with the prefix <code>experiment-*</code>. </p>
 </blockquote>
                 
