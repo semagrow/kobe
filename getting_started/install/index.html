@@ -16,7 +16,7 @@
     
     
       
-        <title>Installation - KOBE Benchmark Engine</title>
+        <title>Installation - KOBE Open Benchmarking Engine</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#prerequisites" class="md-skip">
+        <a href="#installation" class="md-skip">
           Skip to content
         </a>
       
@@ -72,7 +72,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://semagrow.github.com/kobe/" title="KOBE Benchmark Engine" class="md-header-nav__button md-logo" aria-label="KOBE Benchmark Engine">
+    <a href="https://semagrow.github.com/kobe/" title="KOBE Open Benchmarking Engine" class="md-header-nav__button md-logo" aria-label="KOBE Open Benchmarking Engine">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -85,7 +85,7 @@
       
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
-            KOBE Benchmark Engine
+            KOBE Open Benchmarking Engine
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
@@ -235,13 +235,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://semagrow.github.com/kobe/" title="KOBE Benchmark Engine" class="md-nav__button md-logo" aria-label="KOBE Benchmark Engine">
+    <a href="https://semagrow.github.com/kobe/" title="KOBE Open Benchmarking Engine" class="md-nav__button md-logo" aria-label="KOBE Open Benchmarking Engine">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    KOBE Benchmark Engine
+    KOBE Open Benchmarking Engine
   </label>
   
     <div class="md-nav__source">
@@ -304,6 +304,8 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Installation
@@ -317,6 +319,8 @@
       
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -347,8 +351,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-of-the-evaluation-metrics-extraction-subsystem" class="md-nav__link">
-    Installation of the Evaluation Metrics Extraction subsystem
+  <a href="#installation-of-the-logging-subsystem" class="md-nav__link">
+    Installation of the Logging subsystem
   </a>
   
 </li>
@@ -610,6 +614,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -639,8 +645,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-of-the-evaluation-metrics-extraction-subsystem" class="md-nav__link">
-    Installation of the Evaluation Metrics Extraction subsystem
+  <a href="#installation-of-the-logging-subsystem" class="md-nav__link">
+    Installation of the Logging subsystem
   </a>
   
 </li>
@@ -662,9 +668,9 @@
                   </a>
                 
                 
-                  <h1>Installation</h1>
-                
-                <h2 id="prerequisites">Prerequisites</h2>
+                <h1 id="installation">Installation</h1>
+<p>This guide illustrates the steps required to install KOBE in your system.</p>
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li><code>Kubernetes</code> &gt;= 1.8.0</li>
 <li><code>nfs-commons</code> installed in the nodes of the cluster. If in debian or
@@ -700,7 +706,7 @@ following commands.</p>
 export PATH=`pwd`/istio-1.6.0/bin:$PATH
 istioctl manifest apply --set profile=default
 </code></pre></div>
-<h2 id="installation-of-the-evaluation-metrics-extraction-subsystem">Installation of the Evaluation Metrics Extraction subsystem</h2>
+<h2 id="installation-of-the-logging-subsystem">Installation of the Logging subsystem</h2>
 <p>To enable the evaluation metrics extraction subsystem, run
 <div class="highlight"><pre><span></span><code>kobectl install efk .
 </code></pre></div>
@@ -719,12 +725,6 @@ that does not persist data across pod recreation, a
 <code>DaemonSet</code> and a
 <a href="https://github.com/elastic/helm-charts/tree/master/kibana">Kibana</a>
 node that exposes a <code>NodePort</code>. </p>
-<p>After all pods are in Running state Kibana dashboards can be accessed at 
-<div class="highlight"><pre><span></span><code>http://&lt;NODE-IP&gt;:&lt;NODEPORT&gt;/app/kibana#/dashboard/
-</code></pre></div>
-where <code>&lt;NODE-IP&gt;</code> the IP of any of the Kubernetes cluster nodes and <code>&lt;NODEPORT&gt;</code>
-the result of <code>kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services
-kibana-kibana</code>.</p>
 <p>The setup can be customized by changing the configuration parameters of each
 helm chart. Please check the corresponding documentation of each chart for more
 info.</p>
