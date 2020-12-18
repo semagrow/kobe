@@ -124,22 +124,6 @@ case $COMMAND in
             continue
           fi
           
-          if [ $STATUS = "Running" ]
-          then
-            LOADED_S=`kubectl logs $DATASET-pod -n $RESOURCE -c maincontainer \
-                      | grep "Data stored successfully!"`
-            LOADED_V=`kubectl logs $DATASET-pod -n $RESOURCE -c maincontainer \
-                      | grep "Server online at 1111"`
-            LOADED_P=`kubectl logs $DATASET-pod -n $RESOURCE -c maincontainer \
-                      | grep "database system is ready to accept connections" \
-                      | wc -l | grep 2`
-            
-            if [ -z "$LOADED_S$LOADED_V$LOADED_P" ]
-            then
-              STATUS="Loading"
-            fi
-          fi
-          
           OUTPUT="$OUTPUT$DATASET $STATUS\n"
         done
         
