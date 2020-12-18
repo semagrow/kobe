@@ -1,35 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://semagrow.github.com/kobe/</loc>
-     <lastmod>2020-12-17</lastmod>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://semagrow.github.com/kobe/getting_started/install/</loc>
-     <lastmod>2020-12-17</lastmod>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://semagrow.github.com/kobe/getting_started/run/</loc>
-     <lastmod>2020-12-17</lastmod>
+     <loc>https://semagrow.github.com/kobe/getting_started/run_experiment/</loc>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://semagrow.github.com/kobe/use/experiment/</loc>
-     <lastmod>2020-12-17</lastmod>
+     <loc>https://semagrow.github.com/kobe/getting_started/view_results/</loc>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://semagrow.github.com/kobe/use/benchmark/</loc>
-     <lastmod>2020-12-17</lastmod>
+     <loc>https://semagrow.github.com/kobe/use/create_benchmark/</loc>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://semagrow.github.com/kobe/extend/datasettemplate/</loc>
-     <lastmod>2020-12-17</lastmod>
+     <loc>https://semagrow.github.com/kobe/use/tune_network/</loc>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://semagrow.github.com/kobe/extend/federatortemplate/</loc>
-     <lastmod>2020-12-17</lastmod>
+     <loc>https://semagrow.github.com/kobe/use/create_experiment/</loc>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://semagrow.github.com/kobe/api/</loc>
-     <lastmod>2020-12-17</lastmod>
+     <loc>https://semagrow.github.com/kobe/extend/support_metrics/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://semagrow.github.com/kobe/extend/add_metrics/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://semagrow.github.com/kobe/extend/add_evaluator/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://semagrow.github.com/kobe/extend/add_dataset_server/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://semagrow.github.com/kobe/references/components/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://semagrow.github.com/kobe/references/api/</loc>
+     <lastmod>2020-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://semagrow.github.com/kobe/references/kobectl/</loc>
+     <lastmod>2020-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

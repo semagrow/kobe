@@ -16,7 +16,7 @@
     
     
       
-        <title>Create a federator - KOBE Benchmark Engine</title>
+        <title>FederatorTemplate Walkthough - KOBE Benchmark Engine</title>
       
     
     
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Create a federator
+              FederatorTemplate Walkthough
             
           </span>
         </div>
@@ -149,9 +149,7 @@
         
           
 
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -159,7 +157,9 @@
   <li class="md-tabs__item">
     
     
-    <a href="../.." class="md-tabs__link">
+      
+    
+    <a href="../.." class="md-tabs__link md-tabs__link--active">
       Home
     </a>
   </li>
@@ -184,7 +184,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../use/experiment/" class="md-tabs__link">
+      <a href="../../use/create_benchmark/" class="md-tabs__link">
         Using KOBE
       </a>
     </li>
@@ -197,9 +197,7 @@
     <li class="md-tabs__item">
       
       
-        
-      
-      <a href="../datasettemplate/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../use/add_federator.md" class="md-tabs__link">
         Extending KOBE
       </a>
     </li>
@@ -212,7 +210,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../api/" class="md-tabs__link">
+      <a href="../../references/components/" class="md-tabs__link">
         References
       </a>
     </li>
@@ -298,7 +296,7 @@
 
   <li class="md-nav__item">
     <a href="../../getting_started/install/" class="md-nav__link">
-      Install
+      Installation
     </a>
   </li>
 
@@ -309,8 +307,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting_started/run/" class="md-nav__link">
-      Run
+    <a href="../../getting_started/run_experiment/" class="md-nav__link">
+      Perform a benchmark experiment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting_started/view_results/" class="md-nav__link">
+      Evaluate the results
     </a>
   </li>
 
@@ -346,8 +356,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use/experiment/" class="md-nav__link">
-      Create a new experiment
+    <a href="../../use/create_benchmark/" class="md-nav__link">
+      Create a new benchmark
     </a>
   </li>
 
@@ -358,8 +368,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use/benchmark/" class="md-nav__link">
-      Create a benchmark
+    <a href="../../use/tune_network/" class="md-nav__link">
+      Tune network settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../use/create_experiment/" class="md-nav__link">
+      Create a new experiment
     </a>
   </li>
 
@@ -373,12 +395,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Extending KOBE
       <span class="md-nav__icon md-icon"></span>
@@ -397,8 +417,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../datasettemplate/" class="md-nav__link">
-      Create a data source
+    <a href="../../use/add_federator.md" class="md-nav__link">
+      Add a new federator
     </a>
   </li>
 
@@ -407,77 +427,47 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Create a federator
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
-      Create a federator
+  <li class="md-nav__item">
+    <a href="../support_metrics/" class="md-nav__link">
+      Provide metric support
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-optonal-provide-support-for-all-evaluation-metrics" class="md-nav__link">
-    Step 1. Optonal. Provide support for all evaluation metrics
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-prepare-your-docker-images" class="md-nav__link">
-    Step 2. Prepare your Docker images
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-prepare-your-yaml-file" class="md-nav__link">
-    Step 3. Prepare your YAML file
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../add_metrics/" class="md-nav__link">
+      Add new metrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../add_evaluator/" class="md-nav__link">
+      Add a new evaluator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../add_dataset_server/" class="md-nav__link">
+      Add a new dataset server
+    </a>
   </li>
 
         
@@ -512,8 +502,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/" class="md-nav__link">
+    <a href="../../references/components/" class="md-nav__link">
+      Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../references/api/" class="md-nav__link">
       API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../references/kobectl/" class="md-nav__link">
+      Command line
     </a>
   </li>
 
@@ -780,41 +794,6 @@ future. We place all federator template specifications in the
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../datasettemplate/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Create a data source
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../api/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                API
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
