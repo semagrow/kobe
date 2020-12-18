@@ -1,4 +1,8 @@
-##
+# Tune network settings
+
+This walkthrough illustrates the steps required from the *benchmark designer* in
+order to configure the latency of the data sources of a
+[Benchmark](../references/api.md#benchmark) specification.
 
 ## Prerequisites
 
@@ -65,7 +69,7 @@ spec:
 Check the following link in which we illustrate a simple working example with
 delays:
 
-* [benchmark-toybench/toybench-delays.yaml](../examples/benchmark-toybench/toybench-delays.yaml)
+* [benchmark-toybench/toybench-delays.yaml](https://github.com/semagrow/kobe/tree/devel/examples/benchmark-toybench/toybench-delays.yaml)
 
 This benchmark contains three SPARQL queries and two datasets (namely `toy1` and
 `toy2`). All responces from `toy1` to the federator are delayed by 2 seconds and
