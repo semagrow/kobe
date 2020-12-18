@@ -52,7 +52,7 @@ and Strabon).
   the images `semagrow/url-donwnloader`, `semagrow/virtuoso-init` (source code
   [here](https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-init)), and
   `semagrow/virtuoso-main` (source code
-  [here](.https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-main)). We use the shared storage
+  [here](https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-main)). We use the shared storage
   of Kobe, to keep a backup of the `/database` directory of Virtuoso, which is
   used to keep all the files used by the database. The last two images are built
   upon `openlink/virtuoso-opensource-7`.
@@ -107,8 +107,8 @@ queries are `8890` and `/sparql` respectively.
 We have already prepared several dataset template specifications to experiment
 with:
 
-* [dataset-virtuoso](https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso)
-* [dataset-strabon](https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon)
+* [dataset-virtuoso](https://github.com/semagrow/kobe/tree/devel/examples/dataset-virtuoso)
+* [dataset-strabon](https://github.com/semagrow/kobe/tree/devel/examples/dataset-strabon)
 
 > Notice: We plan to define more dataset template specifications in the future.
 > We place all dataset template specifications in the [examples/](https://github.com/semagrow/kobe/tree/devel//examples/)
