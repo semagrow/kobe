@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-RUN apk update && apk upgrade && apk add wget
+RUN apk add --no-cache wget
 
 RUN mkdir -p /kobe/dataset
 
