@@ -118,11 +118,11 @@ parameters `inputDumpDir`,`outputDumpDir`,`inputDir`,`outputDir`.
 We have already prepared several federator template specifications to experiment
 with:
 
-* [federator-fedx](https://github.com/semagrow/kobe/tree/devel//examples/federator-fedx)
-* [federator-semagrow](https://github.com/semagrow/kobe/tree/devel//examples/federator-semagrow)
-* [federator-uno](https://github.com/semagrow/kobe/tree/devel//examples/federator-uno)
+* [federator-fedx](https://github.com/semagrow/kobe/tree/devel/examples/federator-fedx)
+* [federator-semagrow](https://github.com/semagrow/kobe/tree/devel/examples/federator-semagrow)
+* [federator-uno](https://github.com/semagrow/kobe/tree/devel/examples/federator-uno)
 
 > Notice: We plan to define more federator template specifications in the
 > future. We place all federator template specifications in the
-> [examples/](../examples/) directory under a subdirectory with the prefix
+> [examples/](https://github.com/semagrow/kobe/tree/devel/examples/) directory under a subdirectory with the prefix
 > `federator-*`. 
