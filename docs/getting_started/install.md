@@ -75,4 +75,7 @@ that does not persist data across pod recreation, a
 [Kibana](https://github.com/elastic/helm-charts/tree/master/kibana)
 node that exposes a `NodePort`. 
 
+The setup can be customized by changing the configuration parameters of each
+helm chart. Please check the corresponding documentation of each chart for more
+info.
 
