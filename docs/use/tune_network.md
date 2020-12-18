@@ -13,7 +13,7 @@ following:
   use in your experiment.
 
 We have already prepared several benchmarks and federator templates to use. If
-you want to create your own dataset server template, check out [this
+you want to create a benchmark specification, check out [this
 guide](./create_benchmark.md).
 
 ## Step 1 - Inject latency for each source endpoint
