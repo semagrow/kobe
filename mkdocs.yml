@@ -6,16 +6,25 @@ docs_dir: 'docs'
 nav:
   - 'Home': index.md
   - 'Getting started':
-     - 'Install': getting_started/install.md
-     - 'Run': getting_started/run.md
+     - 'Installation': getting_started/install.md
+     - 'Perform a benchmark experiment': getting_started/run_experiment.md
+     - 'Evaluate the results': getting_started/view_results.md
   - 'Using KOBE':
-     - 'Create a new experiment': use/experiment.md
-     - 'Create a benchmark': use/benchmark.md 
+     - 'Create a new benchmark': use/create_benchmark.md
+        - 'Add new queries': use/add_queries.md
+        - 'Add new datasets': use/add_datasets.md
+     	  - 'Tune network settings': use/tune_network.md
+     - 'Create a new experiment': use/create_experiment.md
   - 'Extending KOBE':
-     - 'Create a data source': extend/datasettemplate.md
-     - 'Create a federator': extend/federatortemplate.md
+     - 'Add a new federator': use/add_federator.md
+     - 'Provide metric support': extend/support_metrics.md
+     - 'Add new metrics': extend/add_metrics.md
+     - 'Add a new evaluator': extend/add_evaluator.md
+     - 'Add a new dataset server': extend/add_dataset_server.md
   - 'References':
-     - 'API': api.md
+     - 'Components': references/components.md
+     - 'API': references/api.md
+     - 'Command line': references/kobectl.md
 
 theme:
   name: material
