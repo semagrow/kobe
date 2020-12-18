@@ -13,7 +13,8 @@ This guide illustrates the steps required to install KOBE in your system.
 KOBE needs the Kubernetes operator to be installed in the Kubernetes cluster. To
 quickly install the KOBE operator in a Kubernetes cluster. 
 
-You can use the `kobectl` script found in the [bin](bin/) directory:
+You can use the `kobectl` script found in the
+[bin](https://github.com/semagrow/kobe/tree/devel/bin) directory:
 
 ```
 export PATH=`pwd`/bin:$PATH
