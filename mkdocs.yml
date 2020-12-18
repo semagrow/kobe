@@ -14,7 +14,7 @@ nav:
      - 'Tune network settings': use/tune_network.md
      - 'Create a new experiment': use/create_experiment.md
   - 'Extending KOBE':
-     - 'Add a new federator': use/add_federator.md
+     - 'Add a new federator': extend/add_federator.md
      - 'Provide metric support': extend/support_metrics.md
      - 'Add new metrics': extend/add_metrics.md
      - 'Add a new evaluator': extend/add_evaluator.md

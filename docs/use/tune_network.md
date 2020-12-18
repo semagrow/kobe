@@ -76,3 +76,14 @@ This benchmark contains three SPARQL queries and two datasets (namely `toy1` and
 150 milliseconds, all responces from `toy2` to the federator are delayed by 2
 seconds, and the 50% of the responces from `toy1` to `toy2` are delayed by 3
 seconds.
+
+## Examples
+
+We have already prepared a benchmark specification with delays to experiment with:
+
+* [benchmark-toybench](https://github.com/semagrow/kobe/tree/devel/examples/benchmark-toybench)
+
+> Notice: We plan to define more benchmark specifications with delays in the future. We
+> place all benchmark specifications in the [examples/](https://github.com/semagrow/kobe/tree/devel/examples/) directory
+> under a subdirectory with the prefix `benchmark-*`. 
+
