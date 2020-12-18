@@ -58,6 +58,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#add-a-new-dataset-server" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -194,7 +199,7 @@
       
         
       
-      <a href="../../use/add_federator.md" class="md-tabs__link md-tabs__link--active">
+      <a href="../add_federator/" class="md-tabs__link md-tabs__link--active">
         Extending KOBE
       </a>
     </li>
@@ -416,7 +421,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use/add_federator.md" class="md-nav__link">
+    <a href="../add_federator/" class="md-nav__link">
       Add a new federator
     </a>
   </li>
@@ -469,10 +474,62 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Add a new dataset server
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Add a new dataset server
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-prepare-your-docker-images" class="md-nav__link">
+    Step 1. Prepare your Docker images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-prepare-your-yaml-file" class="md-nav__link">
+    Step 2. Prepare your YAML file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -550,6 +607,57 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-prepare-your-docker-images" class="md-nav__link">
+    Step 1. Prepare your Docker images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-prepare-your-yaml-file" class="md-nav__link">
+    Step 2. Prepare your YAML file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -560,9 +668,113 @@
                   </a>
                 
                 
-                  <h1>Add a new dataset server</h1>
-                
-                <p>Under Construction</p>
+                <h1 id="add-a-new-dataset-server">Add a new dataset server</h1>
+<p>This walkthrough illustrates the steps required from the <em>implementor of a
+dataset server</em> in order to create a
+<a href="../../references/api/#datasettemplate">DatasetTemplate</a> specification.</p>
+<p>In KOBE, a dataset template is defined using a set of Docker images. Additional
+parameters include the port and the path that the container will listen for
+queries. Dataset templates are used in the
+<a href="../../references/api/#benchmark">Benchmark</a> specifications in order to define
+the dataset server of the federated endpoints.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>In this walkthrough we assume that you already have already prepared a Docker
+image that provides the SPARQL endpoint of the dataset server (e.g.,
+https://hub.docker.com/r/openlink/virtuoso-opensource-7).</p>
+<h2 id="step-1-prepare-your-docker-images">Step 1. Prepare your Docker images</h2>
+<p>The first step is to provide a set of one or more Docker images that downloads
+the dataset, loads the data, and starts the dataset server. Even though all this
+functionality can be provided with a single image, we suggest to split the
+various tasks into three separate images. More specifically:</p>
+<ul>
+<li>A docker image that downloads a RDF dump from a known URL (found in the
+  variable <code>$DATASET_URL</code>) and extracts its contents in the directory
+  <code>/kobe/dataset/$DATASET_NAME/dump</code>.</li>
+<li>A docker image that loads the downloaded dump (already present in the
+  directory <code>/kobe/dataset/$DATASET_NAME/dump</code>) into the dataset server.
+  Optionally, it can back-up the contents of the database in some directory
+  inside <code>/kobe/dataset/$DATASET_NAME</code> such that the loading process to be
+  executed only once. </li>
+<li>A docker image that starts the dataset server and exposes its SPARQL endpoint.</li>
+</ul>
+<p>The environment variables are initialized by the Kobe operator according to the
+specification of the benchmark to be executed. Moreover, the shared volumes are
+managed through the Kobe operator too (ref. <a href="https://github.com/semagrow/kobe/tree/devel/operator/docs/storage.md">here</a>
+for details about the shared storage of Kobe).</p>
+<blockquote>
+<p>In the bechmark walkthrough, we
+<a href="../../use/create_benchmark/#step-1-prepare-your-dataset-dumps">suggest</a> that the
+dataset dumps should follow a specific format. Therefore, feel free to use
+<code>semagrow/url-donwnloader</code> (source code <a href="https://github.com/semagrow/kobe/tree/devel/dockers/url-downloader">here</a>) as
+your first image. However, if you optionally want your template to support
+more dataset dump formats, you can implement your own url downloader. </p>
+</blockquote>
+<p>As an example, we present the images for two dataset servers (namely Virtuoso
+and Strabon).</p>
+<ul>
+<li>
+<p>Regarding the <a href="https://virtuoso.openlinksw.com/">Virtuoso</a> RDF store, we use
+  the images <code>semagrow/url-donwnloader</code>, <code>semagrow/virtuoso-init</code> (source code
+  <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-init">here</a>), and
+  <code>semagrow/virtuoso-main</code> (source code
+  <a href=".https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-main">here</a>). We use the shared storage
+  of Kobe, to keep a backup of the <code>/database</code> directory of Virtuoso, which is
+  used to keep all the files used by the database. The last two images are built
+  upon <code>openlink/virtuoso-opensource-7</code>.</p>
+</li>
+<li>
+<p>Regarding the <a href="http://strabon.di.uoa.gr/">Strabon</a> geospatial RDF store, we
+  use the images <code>semagrow/url-donwnloader</code>, <code>semagrow/strabon-init</code> (source
+  code <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-init">here</a>), and
+  <code>semagrow/strabon-main</code> (source code
+  <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-main">here</a>). We use the shared storage
+  of Kobe, to keep a backup of the PostGIS database (directory
+  <code>/var/lib/postgresql/9.4/main</code>) which is where the data are kept inside
+  Strabon. The last two images are built using the docker file of KR-suite (see
+  http://github.com/GiorgosMandi/KR-Suite-docker)`.</p>
+</li>
+</ul>
+<h2 id="step-2-prepare-your-yaml-file">Step 2. Prepare your YAML file</h2>
+<p>Once you have prepared the docker images, creating the dataset template
+specification for your dataset server is a straightforward task. It should look
+like this (we use as an example the template for Virtuoso):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kobe.semagrow.org/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DatasetTemplate</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="c1"># Each dataset template can be uniquely identified by its name.</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">virtuosotemplate</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">initContainers</span><span class="p">:</span>
+    <span class="c1"># here you put the first two images (that is the images for initializing</span>
+    <span class="c1"># your server in the order you want to be executed).</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">initcontainer0</span>
+      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/url-downloader</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">initcontainer1</span>
+      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/virtuoso-init</span>
+  <span class="nt">containers</span><span class="p">:</span>
+    <span class="c1"># here you put the last image (that is the image for serving the data)</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">maincontainer</span>
+      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/virtuoso-main</span>
+      <span class="nt">ports</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8890</span>  <span class="c1"># port to listen for queries</span>
+  <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8890</span>     <span class="c1"># port to listen for queries</span>
+  <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/sparql</span>  <span class="c1"># path to listen for queries</span>
+</code></pre></div>
+<p>The default URL for the SPARQL endpoint for Virtuoso is
+<code>http://localhost:8890/sparql</code>, hence the port and the path to listen for
+queries are <code>8890</code> and <code>/sparql</code> respectively.</p>
+<h2 id="examples">Examples</h2>
+<p>We have already prepared several dataset template specifications to experiment
+with:</p>
+<ul>
+<li><a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso">dataset-virtuoso</a></li>
+<li><a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon">dataset-strabon</a></li>
+</ul>
+<blockquote>
+<p>Notice: We plan to define more dataset template specifications in the future.
+We place all dataset template specifications in the <a href="https://github.com/semagrow/kobe/tree/devel//examples/">examples/</a>
+directory under a subdirectory with the prefix <code>dataset-*</code>. </p>
+</blockquote>
                 
               
               

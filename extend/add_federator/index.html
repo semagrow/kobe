@@ -16,7 +16,7 @@
     
     
       
-        <title>Add federator - KOBE Open Benchmarking Engine</title>
+        <title>Add a new federator - KOBE Open Benchmarking Engine</title>
       
     
     
@@ -58,6 +58,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#add-a-new-federator" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Add federator
+              Add a new federator
             
           </span>
         </div>
@@ -144,7 +149,9 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -152,9 +159,7 @@
   <li class="md-tabs__item">
     
     
-      
-    
-    <a href="../.." class="md-tabs__link md-tabs__link--active">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -192,7 +197,9 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../use/add_federator.md" class="md-tabs__link">
+        
+      
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Extending KOBE
       </a>
     </li>
@@ -390,10 +397,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     <label class="md-nav__link" for="nav-4">
       Extending KOBE
       <span class="md-nav__icon md-icon"></span>
@@ -410,11 +419,70 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../use/add_federator.md" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Add a new federator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Add a new federator
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-prepare-your-docker-images" class="md-nav__link">
+    Step 1. Prepare your Docker images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-prepare-your-yaml-file" class="md-nav__link">
+    Step 2. Prepare your YAML file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -539,6 +607,57 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-prepare-your-docker-images" class="md-nav__link">
+    Step 1. Prepare your Docker images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-prepare-your-yaml-file" class="md-nav__link">
+    Step 2. Prepare your YAML file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -549,9 +668,124 @@
                   </a>
                 
                 
-                  <h1>Add federator</h1>
-                
-                <p>Under Construction</p>
+                <h1 id="add-a-new-federator">Add a new federator</h1>
+<p>This walkthrough illustrates the steps required from the <em>implementor of a
+federation engine</em> in order to create a
+<a href="../../references/api/#federatortemplate">FederatorTemplate</a> specification.</p>
+<p>In KOBE, a federator template is defined using a set of Docker images.
+Additional parameters include the port and the path that the container will
+listen for queries. Federator templates are used in the
+<a href="../../references/api/#experiment">Experiment</a> specifications in order to
+define the federation engine to be benchmarked.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>In this walkthrough we assume that you already have already prepared a Docker
+image that provides the SPARQL endpoint of the federation engine (e.g.,
+https://hub.docker.com/r/semagrow/semagrow/). Moreover, you should have a piece
+of software that automatically constructs the configuration requred for your
+federator to operate (e.g., https://github.com/semagrow/sevod-scraper). </p>
+<h2 id="step-1-prepare-your-docker-images">Step 1. Prepare your Docker images</h2>
+<p>Usually, a federation engine requires some configuration files that depend on
+the federated endpoints (e.g., the URLs of the federated SPARQL endpoints).
+Thus, apart from the Docker image with the SPARQL endpoint of the federation
+engine, you should provide a docker image that constructs any desired
+configuration for each of the source endpoints, and a docker image that
+initializes the federator that possibly takes into account the configuration
+files of the source endpoints. More specifically, prepare the following images:</p>
+<ul>
+<li>A docker image that constructs a configuration file for a source endpoint and
+  places it in an <em>output directory</em> of your choice. Assume that the source
+  endpoint and the dataset name are available in the environment variables
+  <code>$DATASET_NAME</code> and <code>$DATASET_URL</code> respectively, and that the dump file of the
+  dataset is present in an <em>input directory</em> of your choice.</li>
+<li>A docker image that constructs a configuration file for the federation engine
+  and places it in an <em>output directory</em> of your choice. Assume that all the
+  configuration files produced ine the previous step are present in an <em>input
+  directory</em> of your choice.</li>
+<li>A docker image that starts the federation engine and exposes its SPARQL
+  endpoint.</li>
+</ul>
+<p>The environment variables are initialized by the Kobe operator according to the
+specification of the benchmark to be executed.</p>
+<p>As an example, we present the images for two federation engines (namely fedx and
+Semagrow).</p>
+<ul>
+<li>
+<p>Regarding the <a href="http://semagrow.github.io/">Semagrow</a> federation engine, we use
+  the images <code>semagrow/semagrow-init</code> (source code
+  <a href="https://github.com/semagrow/kobe/tree/devel//examples/federator-semagrow/semagrow-init">here</a>),
+  <code>semagrow/semagrow-init-all</code>, (source code
+  <a href="https://github.com/semagrow/kobe/tree/devel//examples/federator-semagrow/semagrow-init-all">here</a>), and
+  <code>semagrow/semagrow</code> (see <a href="https://hub.docker.com/r/semagrow/semagrow/">here</a>).
+  The first image uses the
+  <a href="https://github.com/semagrow/sevod-scraper">sevod-scraper</a> tool to create a
+  ttl metadata file from the dump file, and the second image concatenates all
+  metadata files of each of the source endpoints into a single metadata file.</p>
+</li>
+<li>
+<p>Regarding the
+  <a href="http://iswc2011.semanticweb.org/fileadmin/iswc/Papers/Research_Paper/05/70310592.pdf">fedx</a>
+  federation engine, we use the images <code>semagrow/fedx-init</code> (source code
+  <a href="https://github.com/semagrow/kobe/tree/devel//examples/federator-fedx/fedx-init">here</a>), <code>semagrow/fedx-init-all</code>,
+  (source code <a href="https://github.com/semagrow/kobe/tree/devel//examples/federator-fedx/fedx-init-all">here</a>), and
+  <code>semagrow/fedx-server</code> (source code
+  <a href="https://github.com/semagrow/docker-fedx-server">here</a>). Fedx is known for not
+  using any dataset statistics, but it uses only a ttl file that contains only
+  the SPARQL endpoints of the federation. The first image creates a ttl file
+  that defines the SPARQL endpoint of each dataset and the second image
+  concatenates all ttil files of each source endpoints into a single
+  configuration file.</p>
+</li>
+</ul>
+<h2 id="step-2-prepare-your-yaml-file">Step 2. Prepare your YAML file</h2>
+<p>Once you have prepared the docker images, creating the federator template
+specification for your dataset server is a straightforward task. It should look
+like this (we use as an example the template for Semagrow):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kobe.semagrow.org/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">FederatorTemplate</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="c1"># Each federator template can be uniquely identified by its name.</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrowtemplate</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">containers</span><span class="p">:</span>
+    <span class="c1"># here you put the last image (that is the image for the</span>
+    <span class="c1"># SPARQL endpoint of the federation engine)</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">maincontainer</span> 
+      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/semagrow</span>
+      <span class="nt">ports</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>             <span class="c1"># port to listen for queries</span>
+  <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>                            <span class="c1"># port to listen for queries</span>
+  <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/SemaGrow/sparql</span>                <span class="c1"># path to listen for queries</span>
+  <span class="nt">fedConfDir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/etc/default/semagrow</span>     <span class="c1"># where the federator expects to find its configuration</span>
+
+  <span class="c1"># federator configuration step 1 (for each dataset):</span>
+  <span class="nt">confFromFileImage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/semagrow-init</span>  <span class="c1"># first docker image</span>
+  <span class="nt">inputDumpDir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/sevod-scraper/input</span>         <span class="c1"># where to find the dump file for the dataset</span>
+  <span class="nt">outputDumpDir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/sevod-scraper/output</span>       <span class="c1"># where to place the configuration for the dataset</span>
+
+  <span class="c1"># federator configuration step 2 (combination step):</span>
+  <span class="nt">confImage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/semagrow-init-all</span>      <span class="c1"># second docker image</span>
+  <span class="nt">inputDir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/kobe/input</span>                      <span class="c1"># where to find all dataset configurations</span>
+  <span class="nt">outputDir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/kobe/output</span>                    <span class="c1"># where to place the final (combined) configuration</span>
+</code></pre></div>
+<p>The default URL for the SPARQL endpoint for Virtuoso is
+<code>http://localhost:8080/SemaGrow/sparql</code>, hence the port and the path to listen
+for queries are <code>8080</code> and <code>/SemaGrow/sparql</code> respectively. The input and output
+directories of the images mentioned previously are configured using the
+parameters <code>inputDumpDir</code>,<code>outputDumpDir</code>,<code>inputDir</code>,<code>outputDir</code>.</p>
+<h2 id="examples">Examples</h2>
+<p>We have already prepared several federator template specifications to experiment
+with:</p>
+<ul>
+<li><a href="https://github.com/semagrow/kobe/tree/devel//examples/federator-fedx">federator-fedx</a></li>
+<li><a href="https://github.com/semagrow/kobe/tree/devel//examples/federator-semagrow">federator-semagrow</a></li>
+<li><a href="https://github.com/semagrow/kobe/tree/devel//examples/federator-uno">federator-uno</a></li>
+</ul>
+<blockquote>
+<p>Notice: We plan to define more federator template specifications in the
+future. We place all federator template specifications in the
+<a href="../examples/">examples/</a> directory under a subdirectory with the prefix
+<code>federator-*</code>. </p>
+</blockquote>
                 
               
               
@@ -566,6 +800,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../use/create_experiment/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Create a new experiment
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../support_metrics/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Provide metric support
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
