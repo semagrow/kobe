@@ -83,11 +83,11 @@ example experiment the queries will be executed with the following order: `tq1`,
 
 We have already prepared several experiment specifications to experiment with:
 
-* [experiment-fedbench](https://github.com/semagrow/kobe/tree/devel//experiment-fedbench)
-* [experiment-geofedbench](https://github.com/semagrow/kobe/tree/devel//experiment-geofedbench)
-* [experiment-geographica](https://github.com/semagrow/kobe/tree/devel//experiment-geographica)
-* [experiment-toybench](https://github.com/semagrow/kobe/tree/devel//experiment-toybench)
+* [experiment-fedbench](https://github.com/semagrow/kobe/tree/devel/examples/experiment-fedbench)
+* [experiment-geofedbench](https://github.com/semagrow/kobe/tree/devel/examples/experiment-geofedbench)
+* [experiment-geographica](https://github.com/semagrow/kobe/tree/devel/examples/experiment-geographica)
+* [experiment-toybench](https://github.com/semagrow/kobe/tree/devel/examples/experiment-toybench)
 
 > Notice: We plan to define more experiment specifications in the future. We
-> place all experiment specifications in the [examples/](https://github.com/semagrow/kobe/tree/devel//examples/) directory
+> place all experiment specifications in the [examples/](https://github.com/semagrow/kobe/tree/devel/examples/) directory
 > under a subdirectory with the prefix `experiment-*`. 
