@@ -1,13 +1,13 @@
-# DatasetTemplate Walkthough
+# Add a new dataset server
 
 This walkthrough illustrates the steps required from the *implementor of a
 dataset server* in order to create a
-[DatasetTemplate](../operator/docs/api.md#datasettemplate) specification.
+[DatasetTemplate](../references/api.md#datasettemplate) specification.
 
 In KOBE, a dataset template is defined using a set of Docker images. Additional
 parameters include the port and the path that the container will listen for
 queries. Dataset templates are used in the
-[Benchmark](../operator/docs/api.md#benchmark) specifications in order to define
+[Benchmark](../references/api.md#benchmark) specifications in order to define
 the dataset server of the federated endpoints.
 
 ## Prerequisites
@@ -35,13 +35,13 @@ various tasks into three separate images. More specifically:
 
 The environment variables are initialized by the Kobe operator according to the
 specification of the benchmark to be executed. Moreover, the shared volumes are
-managed through the Kobe operator too (ref. [here](../operator/docs/storage.md)
+managed through the Kobe operator too (ref. [here](https://github.com/semagrow/kobe/tree/devel/operator/docs/storage.md)
 for details about the shared storage of Kobe).
 
 > In the bechmark walkthrough, we
-> [suggest](benchmarkWalkthrough.md#step-1-prepare-your-dataset-dumps) that the
+> [suggest](../use/create_benchmark.md#step-1-prepare-your-dataset-dumps) that the
 > dataset dumps should follow a specific format. Therefore, feel free to use
-> `semagrow/url-donwnloader` (source code [here](../dockers/url-downloader)) as
+> `semagrow/url-donwnloader` (source code [here](https://github.com/semagrow/kobe/tree/devel/dockers/url-downloader)) as
 > your first image. However, if you optionally want your template to support
 > more dataset dump formats, you can implement your own url downloader. 
 
@@ -50,18 +50,18 @@ and Strabon).
 
 * Regarding the [Virtuoso](https://virtuoso.openlinksw.com/) RDF store, we use
   the images `semagrow/url-donwnloader`, `semagrow/virtuoso-init` (source code
-  [here](../examples/dataset-virtuoso/virtuoso-init)), and
+  [here](https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-init)), and
   `semagrow/virtuoso-main` (source code
-  [here](../examples/dataset-virtuoso/virtuoso-main)). We use the shared storage
+  [here](.https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-main)). We use the shared storage
   of Kobe, to keep a backup of the `/database` directory of Virtuoso, which is
   used to keep all the files used by the database. The last two images are built
   upon `openlink/virtuoso-opensource-7`.
 
 * Regarding the [Strabon](http://strabon.di.uoa.gr/) geospatial RDF store, we
   use the images `semagrow/url-donwnloader`, `semagrow/strabon-init` (source
-  code [here](../examples/dataset-strabon/strabon-init)), and
+  code [here](https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-init)), and
   `semagrow/strabon-main` (source code
-  [here](../examples/dataset-strabon/strabon-main)). We use the shared storage
+  [here](https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-main)). We use the shared storage
   of Kobe, to keep a backup of the PostGIS database (directory
   `/var/lib/postgresql/9.4/main`) which is where the data are kept inside
   Strabon. The last two images are built using the docker file of KR-suite (see
@@ -107,10 +107,10 @@ queries are `8890` and `/sparql` respectively.
 We have already prepared several dataset template specifications to experiment
 with:
 
-* [dataset-virtuoso](../examples/dataset-virtuoso)
-* [dataset-strabon](../examples/dataset-strabon)
+* [dataset-virtuoso](https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso)
+* [dataset-strabon](https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon)
 
 > Notice: We plan to define more dataset template specifications in the future.
-> We place all dataset template specifications in the [examples/](../examples/)
+> We place all dataset template specifications in the [examples/](https://github.com/semagrow/kobe/tree/devel//examples/)
 > directory under a subdirectory with the prefix `dataset-*`. 
 
