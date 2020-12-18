@@ -12,7 +12,7 @@ following:
 * A [Benchmark](../references/api.md#benchmark) for the benchmark you want to
   use in your experiment.
 
-We have already prepared several benchmarks and federator templates to use. If
+We have already prepared several benchmarks to use. If
 you want to create a benchmark specification, check out [this
 guide](./create_benchmark.md).
 
