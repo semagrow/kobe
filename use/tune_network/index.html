@@ -58,6 +58,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#tune-network-settings" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -372,10 +377,48 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tune network settings
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Tune network settings
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-inject-latency-for-each-source-endpoint" class="md-nav__link">
+    Step 1 - Inject latency for each source endpoint
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -550,6 +593,43 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-inject-latency-for-each-source-endpoint" class="md-nav__link">
+    Step 1 - Inject latency for each source endpoint
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -560,9 +640,77 @@
                   </a>
                 
                 
-                  <h1>Tune network settings</h1>
-                
-                <p>Under Construction</p>
+                <h1 id="tune-network-settings">Tune network settings</h1>
+<p>This walkthrough illustrates the steps required from the <em>benchmark designer</em> in
+order to configure the latency of the data sources of a
+<a href="../../references/api/#benchmark">Benchmark</a> specification.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>In this walkthrough we assume that you already have already prepared the
+following:</p>
+<ul>
+<li>A <a href="../../references/api/#benchmark">Benchmark</a> for the benchmark you want to
+  use in your experiment.</li>
+</ul>
+<p>We have already prepared several benchmarks and federator templates to use. If
+you want to create your own dataset server template, check out <a href="../create_benchmark/">this
+guide</a>.</p>
+<h2 id="step-1-inject-latency-for-each-source-endpoint">Step 1 - Inject latency for each source endpoint</h2>
+<p>KOBE allows simulating network traffic for all sources of the benchmark. For
+every source dataset of the benchmark, you can:</p>
+<ul>
+<li>inject delay in the connection between the given source endpoint and the
+  <em>federation engine</em>.</li>
+<li>inject delay in the connection between the given source endpoint and <em>another
+  source endpoint</em>.</li>
+</ul>
+<blockquote>
+<p>The reason for injecting delays between the federated sources is the fact that
+every SPARQL endpoint can issue a SPARQL query to every other endpoint using
+the SERVICE SPARQL keyword.</p>
+</blockquote>
+<p>The latency of each source can be configured using the following <a href="../../references/api/#delay">delay
+parameters</a>. The functionality of these
+parameters is offered by Istio. Check this
+<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPFaultInjection-Delay">link</a>
+for more information.</p>
+<ul>
+<li>The <code>fixedDelaySec</code> and <code>fixedDelayMSec</code> are used to indicate the <em>amount of
+  delay</em> in seconds and in milliseconds.</li>
+<li>The <code>percentage</code> field can be used to only delay a certain <em>percentage of
+  requests</em>.</li>
+</ul>
+<p>You can extend your benchmark specification can be extended in order to define
+the latency of the sources as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># In this example we will use two datasets, ds1 and ds2.</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">datasets</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ds1</span>
+      <span class="c1"># adds 1 second of delay before forwarding all responces to the federator</span>
+      <span class="nt">federatorConnection</span><span class="p">:</span>
+         <span class="nt">delayInjection</span><span class="p">:</span>
+           <span class="nt">fixedDelaySec</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+           <span class="nt">percentage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+      <span class="nt">networkTopology</span><span class="p">:</span>
+        <span class="c1"># adds 2 sec of delay before forwarding the 50% of responces to the source ds1</span>
+        <span class="p p-Indicator">-</span> <span class="nt">datasetSource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ds2</span>
+          <span class="nt">delayInjection</span><span class="p">:</span>
+            <span class="nt">fixedDelaySec</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+            <span class="nt">percentage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+      <span class="c1"># ... add remaining parameters for ds1</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ds2</span>
+      <span class="c1"># ... add remaining parameters for ds2</span>
+</code></pre></div>
+<p>Check the following link in which we illustrate a simple working example with
+delays:</p>
+<ul>
+<li><a href="https://github.com/semagrow/kobe/tree/devel/examples/benchmark-toybench/toybench-delays.yaml">benchmark-toybench/toybench-delays.yaml</a></li>
+</ul>
+<p>This benchmark contains three SPARQL queries and two datasets (namely <code>toy1</code> and
+<code>toy2</code>). All responces from <code>toy1</code> to the federator are delayed by 2 seconds and
+150 milliseconds, all responces from <code>toy2</code> to the federator are delayed by 2
+seconds, and the 50% of the responces from <code>toy1</code> to <code>toy2</code> are delayed by 3
+seconds.</p>
                 
               
               

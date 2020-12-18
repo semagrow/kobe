@@ -58,6 +58,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#create-a-new-experiment" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -384,10 +389,55 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Create a new experiment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Create a new experiment
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-prepare-your-yaml-file" class="md-nav__link">
+    Step 1. Prepare your YAML file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -550,6 +600,50 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-prepare-your-yaml-file" class="md-nav__link">
+    Step 1. Prepare your YAML file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -560,9 +654,90 @@
                   </a>
                 
                 
-                  <h1>Create a new experiment</h1>
-                
-                <p>Under Construction</p>
+                <h1 id="create-a-new-experiment">Create a new experiment</h1>
+<p>This walkthrough illustrates the steps required from the <em>experimenter</em> in order
+to create an <a href="../../references/api/#experiment">Experiment</a> specification.</p>
+<p>In KOBE, an experiment is defined over a benchmark and federator. This resource
+provides the necessary parameters for instantiating a federation of querying
+systems.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>In this walkthrough we assume that you already have already prepared the
+following:</p>
+<ul>
+<li>A <a href="../../references/api/#benchmark">Benchmark</a> for the benchmark you want to
+  use in your experiment.</li>
+<li>A <a href="../../references/api/#federatortemplate">FederatorTemplate</a> for the
+  federation engine you want to use in your experiment.</li>
+<li>A docker image of the evaluator, which is a piece of software that will pose
+  the queries to the federator.</li>
+</ul>
+<p>We have already prepared several benchmarks and federator templates to use. If
+you want to create your own dataset server template, check out <a href="../create_benchmark/">this
+guide</a>. Moreover, if you want to create your own
+federator template, check out <a href="../../extend/add_federator/">this guide</a>.
+Regarding the evaluator, we currently we offer the docker image
+<code>semagrow/kobe-sequential-evaluator</code>, which executes the queries of the benchmark
+in a sequential manner. If you want to create your own evaluater, check out
+<a href="../../extend/add_federator/">this guide</a>.</p>
+<h2 id="step-1-prepare-your-yaml-file">Step 1. Prepare your YAML file</h2>
+<p>An experiment is characterized by its <em>name</em> and is parameterized with a
+<em>benchmark</em> to be executed and a <em>federator template</em> to be used. A typical
+experiment specification should look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kobe.semagrow.org/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Experiment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="c1"># Each experiment can be uniquely identified by its name.</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myexperiment</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="c1"># Specify the name of the benchmark to be executed.</span>
+  <span class="nt">benchmark</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mybench</span>
+
+  <span class="c1"># Specify the name of the federation engine of the experiment.</span>
+  <span class="nt">federatorName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myfederator</span>
+
+  <span class="c1"># Specify the name of the federator template to be used.</span>
+  <span class="nt">federatorTemplateRef</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">federatortemplate</span>
+
+  <span class="c1"># Specify the docker image of the evaluator.</span>
+  <span class="nt">evaluator</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">semagrow/kobe-sequential-evaluator</span>
+
+  <span class="c1"># Specify the number of runs of the experiment, i.e. how many times each query </span>
+  <span class="c1"># of the benchmark should be executed.</span>
+  <span class="nt">timesToRun</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">runs</span>
+
+  <span class="c1"># If you set this parameter to true, KOBE will only build the federation </span>
+  <span class="c1"># and will not start the experiment.</span>
+  <span class="nt">dryRun</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+
+  <span class="c1"># If you set this parameter to false, KOBE will not build the federation</span>
+  <span class="c1"># if it was already built in previous executions of this experiment.</span>
+  <span class="nt">forceNewInit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span> 
+</code></pre></div>
+<p>Check the following link in which we illustrate a simple example of the above
+specification:</p>
+<ul>
+<li><a href="https://github.com/semagrow/kobe/tree/devel/examples/experiment-toybench/toyexp-simple.yaml">experiment-toybench/toyexp-simple.yaml</a></li>
+</ul>
+<p>In this example, we define an experiment over the <code>toybench-simple</code> benchmark,
+and we use the Semagrow federation engine. The queries of the benchmark are
+executed in a sequential manner, and each query of the benchmark is executed 3
+times. Since <code>toybench-simple</code> contains the queries <code>tq1</code>, <code>tq2</code>, <code>tq3</code>, in the
+example experiment the queries will be executed with the following order: <code>tq1</code>,
+<code>tq2</code>, <code>tq3</code>, <code>tq1</code>, <code>tq2</code>, <code>tq3</code>, <code>tq1</code>, <code>tq2</code>, <code>tq3</code>.</p>
+<h2 id="examples">Examples</h2>
+<p>We have already prepared several experiment specifications to experiment with:</p>
+<ul>
+<li><a href="https://github.com/semagrow/kobe/tree/devel//experiment-fedbench">experiment-fedbench</a></li>
+<li><a href="https://github.com/semagrow/kobe/tree/devel//experiment-geofedbench">experiment-geofedbench</a></li>
+<li><a href="https://github.com/semagrow/kobe/tree/devel//experiment-geographica">experiment-geographica</a></li>
+<li><a href="https://github.com/semagrow/kobe/tree/devel//experiment-toybench">experiment-toybench</a></li>
+</ul>
+<blockquote>
+<p>Notice: We plan to define more experiment specifications in the future. We
+place all experiment specifications in the <a href="https://github.com/semagrow/kobe/tree/devel//examples/">examples/</a> directory
+under a subdirectory with the prefix <code>experiment-*</code>. </p>
+</blockquote>
                 
               
               
