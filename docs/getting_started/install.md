@@ -8,7 +8,7 @@ This guide illustrates the steps required to install KOBE in your system.
 - `nfs-commons` installed in the nodes of the cluster. If in debian or
    Ubuntu you can install it using `apt-get install nfs-common`
 
-## Download kOBE
+## Download KOBE
 
 To download KOBE in your system, just do the following:
 
