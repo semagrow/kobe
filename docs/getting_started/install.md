@@ -8,7 +8,17 @@ This guide illustrates the steps required to install KOBE in your system.
 - `nfs-commons` installed in the nodes of the cluster. If in debian or
    Ubuntu you can install it using `apt-get install nfs-common`
 
-## Installation of the Kubernetes operator
+## Download kOBE
+
+To download KOBE in your system, just do the following:
+
+```
+git clone https://github.com/semagrow/kobe.git
+cd kobe
+```
+
+
+## Installation of the Deployment subsystem
 
 KOBE needs the Kubernetes operator to be installed in the Kubernetes cluster. To
 quickly install the KOBE operator in a Kubernetes cluster. 
@@ -35,7 +45,7 @@ You will get a confirmation message that each resource has successfully been
 created. This will set the operator running in your Kubernetes cluster and needs
 to be done only once.
 
-## Installation of Networking subsystem
+## Installation of the Networking subsystem
 
 KOBE uses istio to support network delays between the different deployments. To
 install istio you can run the following:
