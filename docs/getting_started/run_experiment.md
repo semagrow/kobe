@@ -4,7 +4,7 @@ In the following, we show the steps for deploying an experiment on a simple
 benchmark that comprises three queries over a Semagrow federation of two
 Virtuoso endpoints.
 
-You can use the `kobectl` script found in the
+You can use the `kobectl` [script](../references/kobectl.md) found in the
 [bin](https://github.com/semagrow/kobe/tree/devel/bin)
 directory for cotrolling your experiments:
 
