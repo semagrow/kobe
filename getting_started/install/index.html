@@ -337,15 +337,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-of-the-kubernetes-operator" class="md-nav__link">
-    Installation of the Kubernetes operator
+  <a href="#download-kobe" class="md-nav__link">
+    Download kOBE
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-of-networking-subsystem" class="md-nav__link">
-    Installation of Networking subsystem
+  <a href="#installation-of-the-deployment-subsystem" class="md-nav__link">
+    Installation of the Deployment subsystem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-of-the-networking-subsystem" class="md-nav__link">
+    Installation of the Networking subsystem
   </a>
   
 </li>
@@ -631,15 +638,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-of-the-kubernetes-operator" class="md-nav__link">
-    Installation of the Kubernetes operator
+  <a href="#download-kobe" class="md-nav__link">
+    Download kOBE
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-of-networking-subsystem" class="md-nav__link">
-    Installation of Networking subsystem
+  <a href="#installation-of-the-deployment-subsystem" class="md-nav__link">
+    Installation of the Deployment subsystem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-of-the-networking-subsystem" class="md-nav__link">
+    Installation of the Networking subsystem
   </a>
   
 </li>
@@ -676,10 +690,15 @@
 <li><code>nfs-commons</code> installed in the nodes of the cluster. If in debian or
    Ubuntu you can install it using <code>apt-get install nfs-common</code></li>
 </ul>
-<h2 id="installation-of-the-kubernetes-operator">Installation of the Kubernetes operator</h2>
+<h2 id="download-kobe">Download kOBE</h2>
+<p>To download KOBE in your system, just do the following:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/semagrow/kobe.git
+cd kobe
+</code></pre></div>
+<h2 id="installation-of-the-deployment-subsystem">Installation of the Deployment subsystem</h2>
 <p>KOBE needs the Kubernetes operator to be installed in the Kubernetes cluster. To
 quickly install the KOBE operator in a Kubernetes cluster. </p>
-<p>You can use the <code>kobectl</code> script found in the
+<p>You can use the <code>kobectl</code> <a href="../../references/kobectl/">script</a> found in the
 <a href="https://github.com/semagrow/kobe/tree/devel/bin">bin</a> directory:</p>
 <div class="highlight"><pre><span></span><code>export PATH=`pwd`/bin:$PATH
 kobectl install operator .
@@ -695,7 +714,7 @@ kubectl apply -f operator/deploy/operator.yaml
 <p>You will get a confirmation message that each resource has successfully been
 created. This will set the operator running in your Kubernetes cluster and needs
 to be done only once.</p>
-<h2 id="installation-of-networking-subsystem">Installation of Networking subsystem</h2>
+<h2 id="installation-of-the-networking-subsystem">Installation of the Networking subsystem</h2>
 <p>KOBE uses istio to support network delays between the different deployments. To
 install istio you can run the following:
 <div class="highlight"><pre><span></span><code>kobectl install istio .

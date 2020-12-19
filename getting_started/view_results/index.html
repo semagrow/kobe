@@ -360,6 +360,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#details-of-a-specific-experiment-execution" class="md-nav__link">
+    Details of a specific experiment execution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparisons-of-experiment-runs" class="md-nav__link">
+    Comparisons of experiment runs
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -609,6 +623,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#details-of-a-specific-experiment-execution" class="md-nav__link">
+    Details of a specific experiment execution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparisons-of-experiment-runs" class="md-nav__link">
+    Comparisons of experiment runs
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -637,6 +665,40 @@ subsystem of KOBE.</p>
 where <code>&lt;NODE-IP&gt;</code> the IP of any of the Kubernetes cluster nodes and <code>&lt;NODEPORT&gt;</code>
 the result of <code>kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services
 kibana-kibana</code>.</p>
+<p>There are three available dashboards, which can be shown below.</p>
+<h2 id="details-of-a-specific-experiment-execution">Details of a specific experiment execution</h2>
+<p>The first dashboard focuses on a specific experiment execution. It comprises:</p>
+<ol>
+<li>Time of each phase of the query processing for each query of the experiment.</li>
+<li>Total time to receive the complete result set for each query of the experiment.</li>
+<li>Number of sources accessed for each query of the experiment.</li>
+<li>Number of returned results for each query of the experiment.</li>
+</ol>
+<p><img alt="Dashboard 1" src="../../img/dashboard_1a.png" /></p>
+<p>The first and the third visualizations are obtained from the logs of the
+federator engine, if available. The second and the fourth visualizations are obtained
+from the logs of the evaluator, so they are available even for federators that do
+not provide KOBE-specific logs. The values in each visualization can be also
+exported in a CSV file for further processing.</p>
+<p><img alt="Dashboard 1 - CSV export" src="../../img/dashboard_1b.png" /></p>
+<h2 id="comparisons-of-experiment-runs">Comparisons of experiment runs</h2>
+<p>The remaining two dasbhoards can be used to draw comparisons between several
+experiment runs in order to directly compare different configurations of a
+benchmark. The following dashboard can be used for comparing several experiment
+executions. It consists of two visualizations:</p>
+<ol>
+<li>Total time to receive the complete result set for each experiment execution.</li>
+<li>Number of returned results for each specified experiment execution.</li>
+</ol>
+<p>Each bar refers to a single query of the experiments presented.</p>
+<p><img alt="Dashboard 2" src="../../img/dashboard_2.png" /></p>
+<p>Finally, the last dashboard displays plays the same metrics. The main difference
+though, is that it focuses on a specific query and compares all runs of this query
+for several experiment executions. Contrary to the visualizations of the other two
+dashboards, each bar refers to a single experiment run, and all runs are grouped
+according to the experiment execution they belong.</p>
+<p><img alt="Dashboard 3" src="../../img/dashboard_3.png" /></p>
+<p>These visualizations are obtained from the logs of the evaluator.</p>
                 
               
               
