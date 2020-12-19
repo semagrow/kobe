@@ -56,6 +56,15 @@ following:
    ```
    ^I - [^ ]+ [^ ]+ - .{12} - .{20} - [^ ]+ -  - Experiment: (?<experiment>[^ ]+) - Date: (?<date>[^ ]+ [^ ]+) - Query: (?<query>[^ ]+) - Run: (?<run>[0-9]+) - Source Selection Time: (?<source_selection_time>[0-9]+) - Compile Time: (?<compile_time>[0-9]+) - Sources: (?<sources>[0-9]+) - Execution time: (?<execution_time>[0-9]+)$
    ```
+   
+   where
+  * `<experiment>`, `<date>`, `<query>`, `<run>` are obtained by the SPARQL
+     comment of the query string.
+  * `<source_selection_time>` is the time to perform source selection.
+  * `<compile_time>` is the time to provide a query execution plan.
+  * `<execution_time>` is the time to execute the plan.
+  * `<sources>` is the number of sources that appear in the query plan.
+
 
 ## Example
 
