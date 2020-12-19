@@ -23,7 +23,7 @@ cd kobe
 KOBE needs the Kubernetes operator to be installed in the Kubernetes cluster. To
 quickly install the KOBE operator in a Kubernetes cluster. 
 
-You can use the `kobectl` script found in the
+You can use the `kobectl` [script](../references/kobectl.md) found in the
 [bin](https://github.com/semagrow/kobe/tree/devel/bin) directory:
 
 ```
