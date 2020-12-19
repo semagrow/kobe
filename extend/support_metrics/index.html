@@ -212,7 +212,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../references/components/" class="md-tabs__link">
+      <a href="../../references/api/" class="md-tabs__link">
         References
       </a>
     </li>
@@ -558,18 +558,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../references/components/" class="md-nav__link">
-      Components
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../references/api/" class="md-nav__link">
       API
     </a>
@@ -665,7 +653,7 @@ number of retured results and 2) the total time to reciece the full result set
 to experimenter "for free" if you choose to not follow this step.</p>
 </blockquote>
 <h2 id="logging-subsystem-concepts-and-available-metrcs">Logging subsystem concepts and available metrcs</h2>
-<p>One important feature of Kobe is that the experimenter can have easy access on
+<p>One important feature of KOBE is that the experimenter can have easy access on
 a set of several statistics and key performance indicators for each conducted
 experiment. The metrics currently supported are the following:</p>
 <ul>
@@ -679,7 +667,7 @@ experiment. The metrics currently supported are the following:</p>
 <p>Of these evaluation metrics, only the first two can can be computed by the
 client side. Thus, the remaining metrics should be calculated by the federation
 engine itself and can be presented via a log message. However, in order for
-Kobe to be able to link the log message with its corresponding experiment
+KOBE to be able to link the log message with its corresponding experiment
 execution and with its specific query run, the log message should contain also
 the following information:</p>
 <ul>
@@ -688,7 +676,7 @@ the following information:</p>
 <li>Query name</li>
 <li>Run</li>
 </ul>
-<p>These parameters are passed from the evaluator of Kobe to the federation engine
+<p>These parameters are passed from the evaluator of KOBE to the federation engine
 via a SPARQL comment that is attached in the query string.</p>
 <h2 id="step-1-provide-support-for-all-evaluation-metrics">Step 1. Provide support for all evaluation metrics</h2>
 <p>In order to provide full support for evaluation metrics, you should do the
@@ -706,6 +694,13 @@ following:</p>
 </ol>
 <div class="highlight"><pre><span></span><code>^I - [^ ]+ [^ ]+ - .{12} - .{20} - [^ ]+ -  - Experiment: (?&lt;experiment&gt;[^ ]+) - Date: (?&lt;date&gt;[^ ]+ [^ ]+) - Query: (?&lt;query&gt;[^ ]+) - Run: (?&lt;run&gt;[0-9]+) - Source Selection Time: (?&lt;source_selection_time&gt;[0-9]+) - Compile Time: (?&lt;compile_time&gt;[0-9]+) - Sources: (?&lt;sources&gt;[0-9]+) - Execution time: (?&lt;execution_time&gt;[0-9]+)$
 </code></pre></div>
+<p>where
+    * <code>&lt;experiment&gt;</code>, <code>&lt;date&gt;</code>, <code>&lt;query&gt;</code>, <code>&lt;run&gt;</code> are obtained by the SPARQL
+       comment of the query string.
+    * <code>&lt;source_selection_time&gt;</code> is the time to perform source selection.
+    * <code>&lt;compile_time&gt;</code> is the time to provide a query execution plan.
+    * <code>&lt;execution_time&gt;</code> is the time to execute the plan.
+    * <code>&lt;sources&gt;</code> is the number of sources that appear in the query plan.</p>
 <h2 id="example">Example</h2>
 <p>As an example, consider this <a href="https://github.com/semagrow/semagrow/pull/52">pull request</a>
 which contains the integration needed for KOBE in the case for the Semagrow

@@ -212,7 +212,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../references/components/" class="md-tabs__link">
+      <a href="../../references/api/" class="md-tabs__link">
         References
       </a>
     </li>
@@ -565,18 +565,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../references/components/" class="md-nav__link">
-      Components
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../references/api/" class="md-nav__link">
       API
     </a>
@@ -697,10 +685,10 @@ various tasks into three separate images. More specifically:</p>
   executed only once. </li>
 <li>A docker image that starts the dataset server and exposes its SPARQL endpoint.</li>
 </ul>
-<p>The environment variables are initialized by the Kobe operator according to the
+<p>The environment variables are initialized by the KOBE operator according to the
 specification of the benchmark to be executed. Moreover, the shared volumes are
-managed through the Kobe operator too (ref. <a href="https://github.com/semagrow/kobe/tree/devel/operator/docs/storage.md">here</a>
-for details about the shared storage of Kobe).</p>
+managed through the KOBE operator too (ref. <a href="https://github.com/semagrow/kobe/tree/devel/operator/docs/storage.md">here</a>
+for details about the shared storage of KOBE).</p>
 <blockquote>
 <p>In the bechmark walkthrough, we
 <a href="../../use/create_benchmark/#step-1-prepare-your-dataset-dumps">suggest</a> that the
@@ -718,7 +706,7 @@ and Strabon).</p>
   <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-init">here</a>), and
   <code>semagrow/virtuoso-main</code> (source code
   <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-main">here</a>). We use the shared storage
-  of Kobe, to keep a backup of the <code>/database</code> directory of Virtuoso, which is
+  of KOBE, to keep a backup of the <code>/database</code> directory of Virtuoso, which is
   used to keep all the files used by the database. The last two images are built
   upon <code>openlink/virtuoso-opensource-7</code>.</p>
 </li>
@@ -728,7 +716,7 @@ and Strabon).</p>
   code <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-init">here</a>), and
   <code>semagrow/strabon-main</code> (source code
   <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-main">here</a>). We use the shared storage
-  of Kobe, to keep a backup of the PostGIS database (directory
+  of KOBE, to keep a backup of the PostGIS database (directory
   <code>/var/lib/postgresql/9.4/main</code>) which is where the data are kept inside
   Strabon. The last two images are built using the docker file of KR-suite (see
   http://github.com/GiorgosMandi/KR-Suite-docker)`.</p>
@@ -808,13 +796,13 @@ directory under a subdirectory with the prefix <code>dataset-*</code>. </p>
           </a>
         
         
-          <a href="../../references/components/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../references/api/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Components
+                API
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

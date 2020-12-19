@@ -58,6 +58,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#add-a-new-evaluator" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -207,7 +212,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../references/components/" class="md-tabs__link">
+      <a href="../../references/api/" class="md-tabs__link">
         References
       </a>
     </li>
@@ -457,10 +462,48 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Add a new evaluator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Add a new evaluator
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-prepare-your-docker-image" class="md-nav__link">
+    Step 1. Prepare your Docker image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -508,18 +551,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../references/components/" class="md-nav__link">
-      Components
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../references/api/" class="md-nav__link">
       API
     </a>
@@ -550,6 +581,43 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-prepare-your-docker-image" class="md-nav__link">
+    Step 1. Prepare your Docker image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -560,9 +628,71 @@
                   </a>
                 
                 
-                  <h1>Add a new evaluator</h1>
-                
-                <p>Under Construction</p>
+                <h1 id="add-a-new-evaluator">Add a new evaluator</h1>
+<p>This walkthrough illustrates the steps required from the <em>experimenter</em>
+in order to implement a custom evaluator for KOBE.</p>
+<p>In KOBE, evaluators is defined using a single Docker image, and are used
+in the <a href="../../use/create_experiment/">Experiment</a> specifications in order
+to apply a query load to the SPARQL endpoint of a federation engine.</p>
+<h2 id="step-1-prepare-your-docker-image">Step 1. Prepare your Docker image</h2>
+<p>Given a set of query strings and the SPARQL endpoint of the federator,
+the evaluator should issue each query of the queryset one or more times
+to the endpoint. For each query, it should calculate the number of the
+returned results and the time passed to receive the results, and export
+this information via a log message. </p>
+<p>KOBE provides the following input to the evaluator:</p>
+<ul>
+<li>All queries of the experiment are stored in the <code>/queries</code> directory.
+  For each query, there exists a text file that contains the SPARQL
+  query. The name of the file is the is used to uniquely identify each
+  query of the experiment.</li>
+<li>The SPARQL endpoint of the federation engine appears in the <code>$ENDPOINT</code>
+  environment variable.</li>
+<li>The environment variable <code>$EVAL_RUNS</code> specify how many times each
+  query of the experiment should be executed.</li>
+<li>The name of the experiment to be executed appeoars in the <code>$EXPERIMENT</code>
+  environment variable. This information is mainly used for logging
+  purposes.</li>
+</ul>
+<p>Given this information, the evaluator can proceed in the evaluation of
+the queryset with its strategy of choice. However, the evaluator for
+each query should do the following:</p>
+<ul>
+<li>Before executing each query, attach a SPARQL comment in the first
+  line of the query. The comment should look like this:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>^\#kobeQueryDesc Experiment: (?&lt;experiment&gt;[^ ]+) - Date: (?&lt;date&gt;[^ ]+ [^ ]+) - Query: (?&lt;query&gt;[^ ]+) - Run: (?&lt;run&gt;[0-9]+)$
+</code></pre></div>
+<p>where
+  * <code>&lt;experiment&gt;</code> is the name of the experiment, obtained by <code>$EXPERIMENT</code>.
+  * <code>&lt;date&gt;</code> is the date and time that this specific experiment started - same
+    for all queries of this experiment.
+  * <code>&lt;query&gt;</code> is the filename of the query that is going to be executed.
+  * <code>&lt;run&gt;</code>  which is a number between 1 and <code>$EVAL_RUNS</code> and is used to
+    identify the run of this query.</p>
+<ul>
+<li>After executing each query, output a log message of the following form:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>^I - [^ ]+ [^ ]+ - .{12} - .{20} - [^ ]+ - Experiment: (?&lt;experiment&gt;[^ ]+) - Date: (?&lt;date&gt;[^ ]+ [^ ]+) - Query: (?&lt;query&gt;[^ ]+) - Run: (?&lt;run&gt;[0-9]+) - Query Evaluation Time: (?&lt;evaluation_time&gt;[0-9]+) - Results: (?&lt;results&gt;[0-9]+)$
+</code></pre></div>
+<p>where
+  * <code>&lt;experiment&gt;</code>, <code>&lt;date&gt;</code>, <code>&lt;query&gt;</code>, <code>&lt;run&gt;</code> are defined as previously.
+  * <code>&lt;evaluation_time&gt;</code> is the time passed in ms to get the full
+     result set of the query.
+  * <code>&lt;results&gt;</code> is number of returned results of the query.</p>
+<blockquote>
+<p>NOTICE: This guide describes the steps for the standard evaluator metrics in
+KOBE. If you want to add more metrics from the side of the evaluator, please
+refer to this <a href="../add_metrics/">guide</a>.</p>
+</blockquote>
+<h2 id="example">Example</h2>
+<p>As an example, we have prepared <code>semagrow/kobe-sequential-evaluator</code>,
+which evaluates the queries in a sequential order, which is a slightly modyfied
+varsion of that of <a href="https://code.google.com/archive/p/fbench/">Fedbench</a>.</p>
+<ul>
+<li><a href="https://github.com/semagrow/kobe/tree/devel/evaluator">./evaluator</a></li>
+</ul>
+<p>We plan to implement more evaluators in the future.</p>
                 
               
               
