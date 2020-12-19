@@ -66,7 +66,7 @@ each query should do the following:
 
 ## Example
 
-As an example, we have prepared we currently `semagrow/kobe-sequential-evaluator`,
+As an example, we have prepared `semagrow/kobe-sequential-evaluator`,
 which evaluates the queries in a sequential order, which is a slightly modyfied
 varsion of that of [Fedbench](https://code.google.com/archive/p/fbench/).
 
