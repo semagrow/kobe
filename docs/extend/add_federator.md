@@ -40,7 +40,7 @@ files of the source endpoints. More specifically, prepare the following images:
 * A docker image that starts the federation engine and exposes its SPARQL
   endpoint.
 
-The environment variables are initialized by the Kobe operator according to the
+The environment variables are initialized by the KOBE operator according to the
 specification of the benchmark to be executed.
 
 As an example, we present the images for two federation engines (namely fedx and

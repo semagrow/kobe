@@ -33,10 +33,10 @@ various tasks into three separate images. More specifically:
   executed only once. 
 * A docker image that starts the dataset server and exposes its SPARQL endpoint.
 
-The environment variables are initialized by the Kobe operator according to the
+The environment variables are initialized by the KOBE operator according to the
 specification of the benchmark to be executed. Moreover, the shared volumes are
-managed through the Kobe operator too (ref. [here](https://github.com/semagrow/kobe/tree/devel/operator/docs/storage.md)
-for details about the shared storage of Kobe).
+managed through the KOBE operator too (ref. [here](https://github.com/semagrow/kobe/tree/devel/operator/docs/storage.md)
+for details about the shared storage of KOBE).
 
 > In the bechmark walkthrough, we
 > [suggest](../use/create_benchmark.md#step-1-prepare-your-dataset-dumps) that the
@@ -53,7 +53,7 @@ and Strabon).
   [here](https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-init)), and
   `semagrow/virtuoso-main` (source code
   [here](https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-main)). We use the shared storage
-  of Kobe, to keep a backup of the `/database` directory of Virtuoso, which is
+  of KOBE, to keep a backup of the `/database` directory of Virtuoso, which is
   used to keep all the files used by the database. The last two images are built
   upon `openlink/virtuoso-opensource-7`.
 
@@ -62,7 +62,7 @@ and Strabon).
   code [here](https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-init)), and
   `semagrow/strabon-main` (source code
   [here](https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-main)). We use the shared storage
-  of Kobe, to keep a backup of the PostGIS database (directory
+  of KOBE, to keep a backup of the PostGIS database (directory
   `/var/lib/postgresql/9.4/main`) which is where the data are kept inside
   Strabon. The last two images are built using the docker file of KR-suite (see
   http://github.com/GiorgosMandi/KR-Suite-docker)`.
