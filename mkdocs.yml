@@ -20,7 +20,6 @@ nav:
      - 'Add a new evaluator': extend/add_evaluator.md
      - 'Add a new dataset server': extend/add_dataset_server.md
   - 'References':
-     - 'Components': references/components.md
      - 'API': references/api.md
      - 'Command line': references/kobectl.md
 
