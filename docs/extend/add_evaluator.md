@@ -55,10 +55,10 @@ each query should do the following:
   ```
   
   where
-  * `<experiment>`, `<date>`, `<query>`, `<run>` defined as previously.
-  * `<evaluation_time>` which is the time passed in ms to get the full
+  * `<experiment>`, `<date>`, `<query>`, `<run>` are defined as previously.
+  * `<evaluation_time>` is the time passed in ms to get the full
      result set of the query.
-  * `<results>` number of returned results of the query.
+  * `<results>` is number of returned results of the query.
   
 > NOTICE: This guide describes the steps for the standard evaluator metrics in
 > KOBE. If you want to add more metrics from the side of the evaluator, please
