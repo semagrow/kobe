@@ -58,6 +58,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#kobectl" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -518,10 +523,55 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Command line
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Command line
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -538,6 +588,50 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -548,9 +642,66 @@
                   </a>
                 
                 
-                  <h1>Command line</h1>
-                
-                
+                <h1 id="kobectl">kobectl</h1>
+<p>kobectl controls the KOBE open benchmarking engine.</p>
+<h2 id="commands">Commands</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>apply</code></td>
+<td align="left">apply a resource using a .yaml configuration file</td>
+</tr>
+<tr>
+<td align="left"><code>get</code></td>
+<td align="left">display all resources of specific type</td>
+</tr>
+<tr>
+<td align="left"><code>show</code></td>
+<td align="left">show the state of a benchmark or an experiment</td>
+</tr>
+<tr>
+<td align="left"><code>delete</code></td>
+<td align="left">delete a resource of specific type</td>
+</tr>
+<tr>
+<td align="left"><code>install</code></td>
+<td align="left">install KOBE components</td>
+</tr>
+<tr>
+<td align="left"><code>purge</code></td>
+<td align="left">uninstall KOBE</td>
+</tr>
+<tr>
+<td align="left"><code>help</code></td>
+<td align="left">print a help message</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage">Usage</h2>
+<ul>
+<li><code>kobectl apply [configuration_file]</code></li>
+<li><code>kobectl get [resource_type]</code></li>
+<li><code>kobectl show [resource_type] [resource]</code></li>
+<li><code>kobectl delete [resource_type] [resource]</code></li>
+<li><code>kobectl install [component] [kobe-directory]</code></li>
+<li><code>kobectl purge [kobe-directory]</code></li>
+</ul>
+<p><code>[resource_type]</code> can be any of:
+  <code>benchmark(s)</code>,
+  <code>experiment(s)</code>,
+  <code>federatortemplate(s)</code>,
+  <code>datasettemplate(s)</code>.</p>
+<p><code>[component]</code> can be any of:
+  <code>operator</code>, <code>operator-v1</code>, <code>operator-v1beta1</code>, <code>istio</code>, <code>efk</code>, <code>full</code></p>
+<h2 id="other">Other</h2>
+<p>For more advanced control options for KOBE,
+use <a href="https://kubernetes.io/docs/reference/kubectl/overview/">kubectl</a>.</p>
                 
               
               
