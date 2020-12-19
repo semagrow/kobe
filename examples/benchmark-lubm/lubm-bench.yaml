@@ -1,0 +1,149 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Benchmark
+metadata:
+  name: lubm-bench
+spec:
+  datasets:
+    - name: lubm-univ00
+      files:
+        - url: https://users.iit.demokritos.gr/~antru/dumps/lubm.tar.gz
+      templateRef: virtuosotemplate
+  queries:
+    - name: LUBM-01
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+        SELECT ?X	
+        WHERE
+        { ?X rdf:type ub:GraduateStudent .
+          ?X ub:takesCourse <http://www.Department0.University0.edu/GraduateCourse0> }'
+
+    - name: LUBM-02
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X ?Y ?Z
+      WHERE
+      { ?X rdf:type ub:GraduateStudent .
+        ?Y rdf:type ub:University .
+        ?Z rdf:type ub:Department .
+        ?X ub:memberOf ?Z .
+        ?Z ub:subOrganizationOf ?Y .
+        ?X ub:undergraduateDegreeFrom ?Y  }'
+
+    - name: LUBM-03
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X
+      WHERE
+      { ?X rdf:type ub:Publication .
+        ?X ub:publicationAuthor <http://www.Department0.University0.edu/AssistantProfessor0> }'
+
+    - name: LUBM-04
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X ?Y1 ?Y2 ?Y3
+      WHERE
+      { ?X rdf:type ub:Professor .
+        ?X ub:worksFor <http://www.Department0.University0.edu> .
+        ?X ub:name ?Y1 .
+        ?X ub:emailAddress ?Y2 .
+        ?X ub:telephone ?Y3 }'
+
+    - name: LUBM-05
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X
+      WHERE
+      { ?X rdf:type ub:Person .
+        ?X ub:memberOf <http://www.Department0.University0.edu> }'
+
+    - name: LUBM-06
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X WHERE { ?X rdf:type ub:Student }'
+
+    - name: LUBM-07
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X ?Y
+      WHERE 
+      { ?X rdf:type ub:Student .
+        ?Y rdf:type ub:Course .
+        ?X ub:takesCourse ?Y .
+        <http://www.Department0.University0.edu/AssociateProfessor0> ub:teacherOf ?Y }'
+
+    - name: LUBM-08
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X ?Y ?Z
+      WHERE
+      { ?X rdf:type ub:Student .
+        ?Y rdf:type ub:Department .
+        ?X ub:memberOf ?Y .
+        ?Y ub:subOrganizationOf <http://www.University0.edu> .
+        ?X ub:emailAddress ?Z }'
+
+    - name: LUBM-09
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X ?Y ?Z
+      WHERE
+      { ?X rdf:type ub:Student .
+        ?Y rdf:type ub:Faculty .
+        ?Z rdf:type ub:Course .
+        ?X ub:advisor ?Y .
+        ?Y ub:teacherOf ?Z .
+        ?X ub:takesCourse ?Z }'
+
+    - name: LUBM-10
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X
+      WHERE
+      { ?X rdf:type ub:Student .
+        ?X ub:takesCourse <http://www.Department0.University0.edu/GraduateCourse0> }'
+
+    - name: LUBM-11
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X
+      WHERE
+      { ?X rdf:type ub:ResearchGroup .
+        ?X ub:subOrganizationOf <http://www.University0.edu> }'
+
+    - name: LUBM-12
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X ?Y
+      WHERE
+      { ?X rdf:type ub:Chair .
+        ?Y rdf:type ub:Department .
+        ?X ub:worksFor ?Y .
+        ?Y ub:subOrganizationOf <http://www.University0.edu> }'
+
+    - name: LUBM-13
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X
+      WHERE
+      { ?X rdf:type ub:Person .
+        <http://www.University0.edu> ub:hasAlumnus ?X }'
+
+    - name: LUBM-14
+      language: sparql
+      queryString: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#>
+      SELECT ?X
+      WHERE { ?X rdf:type ub:UndergraduateStudent }'

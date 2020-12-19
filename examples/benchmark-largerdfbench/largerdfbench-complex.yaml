@@ -1,0 +1,288 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Benchmark
+metadata:
+  name: largerdbench-complex
+spec:
+  datasets:
+    - name: chebi
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/ChEBI.tar.gz
+      templateRef: virtuosotemplate
+    - name: dbpedia
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/DBPedia-Subset.tar.gz
+      templateRef: virtuosotemplate
+    - name: drugbank
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/DrugBank.tar.gz
+      templateRef: virtuosotemplate
+    - name: geonames
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/GeoNames.tar.gz
+      templateRef: virtuosotemplate
+    - name: jamendo
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/Jamendo.tar.gz
+      templateRef: virtuosotemplate
+    - name: kegg
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/KEGG.tar.gz
+      templateRef: virtuosotemplate
+    - name: lmdb
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/LMDB.tar.gz
+      templateRef: virtuosotemplate
+    - name: nyt
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/NYT.tar.gz
+      templateRef: virtuosotemplate
+    - name: swdfood
+      files:
+        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/SWDFood.tar.gz
+      templateRef: virtuosotemplate
+    - name: ltga-a
+      files:
+        - url: https://users.iit.demokritos.gr/~antru/largerdfbench/LinkedTCGA-A.tar.gz
+      templateRef: virtuosotemplate
+  queries:
+    - name: c01
+      language: sparql
+      queryString: "
+        PREFIX drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/> 
+        PREFIX drugtype: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugtype/>
+        PREFIX kegg: <http://bio2rdf.org/ns/kegg#>
+        PREFIX chebi: <http://bio2rdf.org/ns/bio2rdf#>
+        PREFIX purl: <http://purl.org/dc/elements/1.1/>
+        SELECT DISTINCT ?drug ?drugDesc ?molecularWeightAverage ?compound ?ReactionTitle ?ChemicalEquation 
+        WHERE
+        {
+          ?drug drugbank:description ?drugDesc .
+          ?drug drugbank:drugType drugtype:smallMolecule .
+          ?drug drugbank:keggCompoundId ?compound . 
+          ?enzyme kegg:xSubstrate ?compound .
+          ?Chemicalreaction kegg:xEnzyme ?enzyme .
+          ?Chemicalreaction kegg:equation ?ChemicalEquation .
+          ?Chemicalreaction purl:title ?ReactionTitle
+          OPTIONAL 
+          {
+            ?drug drugbank:molecularWeightAverage ?molecularWeightAverage .
+            FILTER (?molecularWeightAverage > 114) 
+          }
+        }
+        LIMIT 1000"
+    - name: c02
+      language: sparql
+      queryString: "
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/>
+        PREFIX kegg: <http://bio2rdf.org/ns/kegg#>
+        PREFIX chebi: <http://bio2rdf.org/ns/chebi#>
+        PREFIX purl: <http://purl.org/dc/elements/1.1/>
+        PREFIX bio2RDF: <http://bio2rdf.org/ns/bio2rdf#>
+        SELECT ?drug ?keggmass ?chebiIupacName 
+        WHERE 
+        {
+          ?drug rdf:type drugbank:drugs .
+          ?drug drugbank:keggCompoundId ?keggDrug .
+          ?keggDrug bio2RDF:mass ?keggmass .
+          ?drug drugbank:genericName ?drugBankName .
+          ?chebiDrug purl:title ?drugBankName .
+          ?chebiDrug chebi:iupacName ?chebiIupacName .
+          OPTIONAL
+          { 
+            ?drug drugbank:inchiIdentifier ?drugbankInchi .
+            ?chebiDrug bio2RDF:inchi ?chebiInchi .
+            FILTER (?drugbankInchi = ?chebiInchi) 
+          }
+        }"
+    - name: c03
+      language: sparql
+      queryString: "
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX geonames: <http://www.geonames.org/ontology#>
+        PREFIX mo: <http://purl.org/ontology/mo/>
+        PREFIX nytimes: <http://data.nytimes.com/elements/>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        SELECT DISTINCT ?artist ?name ?location ?anylocation
+        WHERE {
+          ?artist a mo:MusicArtist ;
+            foaf:name ?name ;
+            foaf:based_near ?location .
+          ?location geonames:parentFeature ?locationName .
+          ?locationName geonames:name ?anylocation .
+          ?nytLocation owl:sameAs ?location .
+          ?nytLocation nytimes:topicPage ?news 
+          OPTIONAL
+          {
+            ?locationName geonames:name 'Islamic Republic of Afghanistan' .
+          }
+        }"
+    - name: c04
+      language: sparql
+      queryString: "
+        PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+        PREFIX geonames: <http://www.geonames.org/ontology#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX dbpedia: <http://dbpedia.org/ontology/>
+        SELECT DISTINCT ?countryName ?countryCode ?locationMap ?population ?longitude ?latitude ?nationalAnthem ?foundingDate ?largestCity ?ethnicGroup ?motto
+        WHERE
+        {
+          ?NYTplace geonames:name ?countryName ;
+            geonames:countryCode ?countryCode ;
+            geonames:population ?population ;
+            geo:long ?longitude ;
+            geo:lat ?latitude ;
+            owl:sameAs ?geonameplace .
+          OPTIONAL
+          {
+            ?geonameplace dbpedia:capital ?capital ;
+              dbpedia:anthem ?nationalAnthem ;
+              dbpedia:foundingDate ?foundingDate ;
+              dbpedia:largestCity ?largestCity ;
+              dbpedia:ethnicGroup ?ethnicGroup ;
+              dbpedia:motto ?motto .
+          }
+        }
+        LIMIT 50"
+    - name: c05
+      language: sparql
+      queryString: "
+        PREFIX linkedmdb: <http://data.linkedmdb.org/resource/movie/>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX dbpedia: <http://dbpedia.org/ontology/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        SELECT ?actor ?movie ?movieTitle ?movieDate ?birthDate ?spouseName
+        WHERE
+        {
+          ?actor rdfs:label ?actor_name_en ;
+            dbpedia:birthDate ?birthDate ;
+            dbpedia:spouse ?spouseURI .
+          ?spouseURI rdfs:label ?spouseName .
+          ?imdbactor linkedmdb:actor_name ?actor_name .
+          ?movie linkedmdb:actor ?imdbactor ;
+            dcterms:title ?movieTitle ;
+            dcterms:date ?movieDate
+          FILTER(STR(?actor_name_en) = STR(?actor_name))
+
+        }
+        LIMIT 500"
+    - name: c06
+      language: sparql
+      queryString: "
+        PREFIX linkedmdb: <http://data.linkedmdb.org/resource/movie/>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX purl: <http://purl.org/dc/terms/>
+        PREFIX nytimes: <http://data.nytimes.com/elements/>
+        SELECT ?actor ?filmTitle ?news ?variants ?articleCount ?first_use ?latest_use
+        WHERE 
+        {
+          ?film purl:title ?filmTitle .
+          ?film linkedmdb:actor ?actor .
+          ?actor owl:sameAs ?dbpediaURI .
+          ?nytURI owl:sameAs ?dbpediaURI .
+          ?nytURI nytimes:topicPage ?news ;
+            nytimes:number_of_variants ?variants ;
+            nytimes:associated_article_count ?articleCount ;
+            nytimes:first_use ?first_use ;
+            nytimes:latest_use ?latest_use
+        }
+        ORDER BY (?actor)"
+    - name: c07
+      language: sparql
+      queryString: "
+        PREFIX swc: <http://data.semanticweb.org/ns/swc/ontology#>
+        PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+        PREFIX eswc: <http://data.semanticweb.org/conference/eswc/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX dbpedia: <http://dbpedia.org/ontology/>
+        PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+        SELECT DISTINCT ?author ?role ?paper ?place ?capital ?latitude ?longitude  ?proceedings
+        WHERE 
+        {
+          ?role swc:isRoleAt eswc:2010 .
+          ?role swc:heldBy ?author .
+          ?proceedings swc:relatedToEvent eswc:2010 .
+          ?paper swrc:author ?author .
+          ?author foaf:based_near ?place .
+          ?paper swc:isPartOf ?proceedings . 
+          OPTIONAL
+          {
+            ?place dbpedia:capital ?capital ;
+              geo:lat ?latitude ;
+              geo:long ?longitude .
+          }
+        }"
+    - name: c08
+      language: sparql
+      queryString: "
+        PREFIX swc: <http://data.semanticweb.org/ns/swc/ontology#>
+        PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+        PREFIX eswc: <http://data.semanticweb.org/conference/eswc/>
+        PREFIX iswc:  <http://data.semanticweb.org/conference/iswc/2009/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX purl: <http://purl.org/ontology/bibo/>
+        PREFIX dbpedia: <http://dbpedia.org/ontology/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        SELECT DISTINCT * WHERE 
+        {
+          ?paper swc:isPartOf iswc:proceedings .
+          iswc:proceedings swrc:address ?proceedingAddress .
+          ?paper swrc:author ?author .
+          ?author swrc:affiliation ?affiliation ;
+          rdfs:label ?fullnames ;
+          foaf:based_near ?place .
+          OPTIONAL
+          {
+          ?place dbpedia:capital ?capital ;
+            dbpedia:populationDensity ?populationDensity ;
+            dbpedia:governmentType ?governmentType ;
+            dbpedia:language ?language ;
+            dbpedia:leaderTitle ?leaderTitle .
+          }
+        }"
+    - name: c09
+      language: sparql
+      queryString: "PREFIX dbpedia: <http://dbpedia.org/ontology/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/>
+        SELECT * WHERE 
+        {
+          ?Drug rdf:type dbpedia:Drug .
+          ?drugbankDrug owl:sameAs ?Drug .
+          ?InteractionName drugbank:interactionDrug1 ?drugbankDrug .
+          ?InteractionName drugbank:interactionDrug2 ?drugbankDrug2 .
+          ?InteractionName drugbank:text ?IntEffect 
+          OPTIONAL
+          {
+            ?drugbankDrug drugbank:affectedOrganism 'Humans and other mammals';
+              drugbank:description ?description ;
+              drugbank:structure ?structure ;
+              drugbank:casRegistryNumber ?casRegistryNumber
+          }
+        }
+        ORDER BY (?drugbankDrug)
+        LIMIT 100"
+    - name: c10
+      language: sparql
+      queryString: "PREFIX tcga: <http://tcga.deri.ie/schema/>
+        PREFIX kegg: <http://bio2rdf.org/ns/kegg#>
+        PREFIX dbpedia: <http://dbpedia.org/ontology/>
+        PREFIX drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/>
+        PREFIX purl: <http://purl.org/dc/terms/>
+        SELECT DISTINCT ?patient ?gender ?country ?popDensity ?drugName ?indication ?formula ?compound 
+        WHERE
+        {
+          ?uri tcga:bcr_patient_barcode ?patient .
+          ?patient tcga:gender ?gender.
+          ?patient dbpedia:country ?country.
+          ?country dbpedia:populationDensity ?popDensity.
+          ?patient tcga:bcr_drug_barcode ?drugbcr.
+          ?drugbcr tcga:drug_name ?drugName. 
+          ?drgBnkDrg drugbank:genericName ?drugName.
+          ?drgBnkDrg drugbank:indication ?indication.
+          ?drgBnkDrg drugbank:chemicalFormula ?formula.
+          ?drgBnkDrg drugbank:keggCompoundId ?compound .
+        }"
