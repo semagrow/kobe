@@ -58,12 +58,12 @@ following:
    ```
    
    where
-    * `<experiment>`, `<date>`, `<query>`, `<run>` are obtained by the SPARQL
-       comment of the query string.
-    * `<source_selection_time>` is the time to perform source selection.
-    * `<compile_time>` is the time to provide a query execution plan.
-    * `<execution_time>` is the time to execute the plan.
-    * `<sources>` is the number of sources that appear in the query plan.
+   * `<experiment>`, `<date>`, `<query>`, `<run>` are obtained by the SPARQL
+    comment of the query string.
+   * `<source_selection_time>` is the time to perform source selection.
+   * `<compile_time>` is the time to provide a query execution plan.
+   * `<execution_time>` is the time to execute the plan.
+   * `<sources>` is the number of sources that appear in the query plan.
 
 
 ## Example
