@@ -695,12 +695,12 @@ following:</p>
 <div class="highlight"><pre><span></span><code>^I - [^ ]+ [^ ]+ - .{12} - .{20} - [^ ]+ -  - Experiment: (?&lt;experiment&gt;[^ ]+) - Date: (?&lt;date&gt;[^ ]+ [^ ]+) - Query: (?&lt;query&gt;[^ ]+) - Run: (?&lt;run&gt;[0-9]+) - Source Selection Time: (?&lt;source_selection_time&gt;[0-9]+) - Compile Time: (?&lt;compile_time&gt;[0-9]+) - Sources: (?&lt;sources&gt;[0-9]+) - Execution time: (?&lt;execution_time&gt;[0-9]+)$
 </code></pre></div>
 <p>where
-    * <code>&lt;experiment&gt;</code>, <code>&lt;date&gt;</code>, <code>&lt;query&gt;</code>, <code>&lt;run&gt;</code> are obtained by the SPARQL
+      * <code>&lt;experiment&gt;</code>, <code>&lt;date&gt;</code>, <code>&lt;query&gt;</code>, <code>&lt;run&gt;</code> are obtained by the SPARQL
        comment of the query string.
-    * <code>&lt;source_selection_time&gt;</code> is the time to perform source selection.
-    * <code>&lt;compile_time&gt;</code> is the time to provide a query execution plan.
-    * <code>&lt;execution_time&gt;</code> is the time to execute the plan.
-    * <code>&lt;sources&gt;</code> is the number of sources that appear in the query plan.</p>
+      * <code>&lt;source_selection_time&gt;</code> is the time to perform source selection.
+      * <code>&lt;compile_time&gt;</code> is the time to provide a query execution plan.
+      * <code>&lt;execution_time&gt;</code> is the time to execute the plan.
+      * <code>&lt;sources&gt;</code> is the number of sources that appear in the query plan.</p>
 <h2 id="example">Example</h2>
 <p>As an example, consider this <a href="https://github.com/semagrow/semagrow/pull/52">pull request</a>
 which contains the integration needed for KOBE in the case for the Semagrow
