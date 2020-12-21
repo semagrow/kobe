@@ -41,12 +41,12 @@ each query should do the following:
   ```
   
   where
-  * `<experiment>` is the name of the experiment, obtained by `$EXPERIMENT`.
-  * `<date>` is the date and time that this specific experiment started - same
-    for all queries of this experiment.
-  * `<query>` is the filename of the query that is going to be executed.
-  * `<run>`  which is a number between 1 and `$EVAL_RUNS` and is used to
-    identify the run of this query.
+    * `<experiment>` is the name of the experiment, obtained by `$EXPERIMENT`.
+    * `<date>` is the date and time that this specific experiment started - same
+      for all queries of this experiment.
+    * `<query>` is the filename of the query that is going to be executed.
+    * `<run>`  which is a number between 1 and `$EVAL_RUNS` and is used to
+      identify the run of this query.
  
 * After executing each query, output a log message of the following form:
   
@@ -55,10 +55,10 @@ each query should do the following:
   ```
   
   where
-  * `<experiment>`, `<date>`, `<query>`, `<run>` are defined as previously.
-  * `<evaluation_time>` is the time passed in ms to get the full
-     result set of the query.
-  * `<results>` is number of returned results of the query.
+    * `<experiment>`, `<date>`, `<query>`, `<run>` are defined as previously.
+    * `<evaluation_time>` is the time passed in ms to get the full
+       result set of the query.
+    * `<results>` is number of returned results of the query.
   
 > NOTICE: This guide describes the steps for the standard evaluator metrics in
 > KOBE. If you want to add more metrics from the side of the evaluator, please
