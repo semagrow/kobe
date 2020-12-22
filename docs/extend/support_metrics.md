@@ -65,6 +65,9 @@ following:
       * `<execution_time>` is the time to execute the plan.
       * `<sources>` is the number of sources that appear in the query plan.
 
+> NOTICE: This guide describes the steps for the standard federator metrics in
+> KOBE. If you want to add more metrics from the side of the federator, please
+> refer to this [guide](./add_metrics.md).
 
 ## Example
 
