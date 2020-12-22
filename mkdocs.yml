@@ -16,8 +16,8 @@ nav:
   - 'Extending KOBE':
      - 'Add a new federator': extend/add_federator.md
      - 'Provide metric support': extend/support_metrics.md
-     - 'Add new metrics': extend/add_metrics.md
      - 'Add a new evaluator': extend/add_evaluator.md
+     - 'Add new metrics': extend/add_metrics.md
      - 'Add a new dataset server': extend/add_dataset_server.md
   - 'References':
      - 'API': references/api.md
