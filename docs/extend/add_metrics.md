@@ -1,7 +1,6 @@
 # Add new metrics
 
 In this section we describe the process of adding new metrics in KOBE.
-New metrics can be added in a federator or in an evaluator.
 
 ## Step 1. Produce a log message that contains the metric
 
