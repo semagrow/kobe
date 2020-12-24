@@ -732,7 +732,8 @@ the <code>operator/deploy/efk-config/fluentd-values.yaml</code> file and add ano
 Fluentd filter at <code>containers.input.conf</code> for the introduced log pattern of the
 metric.</p>
 <p>For example if the log pattern is</p>
-<p><code>^Experiment: (?&lt;experiment&gt;[^ ]+) - Date: (?&lt;date&gt;[^ ]+ [^ ]+) - Query: (?&lt;query&gt;[^ ]+) - Run: (?&lt;run&gt;[0-9]+) - MyMetric: (?&lt;my_metric&gt;[0-9]+)$</code></p>
+<div class="highlight"><pre><span></span><code>^Experiment: (?&lt;experiment&gt;[^ ]+) - Date: (?&lt;date&gt;[^ ]+ [^ ]+) - Query: (?&lt;query&gt;[^ ]+) - Run: (?&lt;run&gt;[0-9]+) - MyMetric: (?&lt;my_metric&gt;[0-9]+)$
+</code></pre></div>
 <p>you must add filter</p>
 <div class="highlight"><pre><span></span><code>&lt;filter kubernetes.**&gt;
   @type parser

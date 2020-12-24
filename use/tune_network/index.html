@@ -714,11 +714,9 @@ every source dataset of the benchmark, you can:</p>
 <li>inject delay in the connection between the given source endpoint and <em>another
   source endpoint</em>.</li>
 </ul>
-<blockquote>
 <p>The reason for injecting delays between the federated sources is the fact that
 every SPARQL endpoint can issue a SPARQL query to every other endpoint using
 the SERVICE SPARQL keyword.</p>
-</blockquote>
 <p>The latency of each source can be configured using the following <a href="../../references/api/#delay">delay
 parameters</a>. The functionality of these
 parameters is offered by Istio. Check this
