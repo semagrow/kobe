@@ -193,7 +193,7 @@
   
     <li class="md-tabs__item">
       <a href="../../use/create_benchmark/" class="md-tabs__link">
-        Using KOBE
+        Use
       </a>
     </li>
   
@@ -211,7 +211,7 @@
   
     <li class="md-tabs__item">
       <a href="../add_federator/" class="md-tabs__link md-tabs__link--active">
-        Extending KOBE
+        Extend
       </a>
     </li>
   
@@ -373,13 +373,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     
     <label class="md-nav__link" for="nav-3">
-      Using KOBE
+      Use
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Using KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Use" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon"></span>
-        Using KOBE
+        Use
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -443,13 +443,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
-      Extending KOBE
+      Extend
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Extending KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Extend" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
-        Extending KOBE
+        Extend
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -505,8 +505,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#logging-subsystem-concepts-and-available-metrcs" class="md-nav__link">
-    Logging subsystem concepts and available metrcs
+  <a href="#logging-subsystem-concepts-and-available-metrics" class="md-nav__link">
+    Logging subsystem concepts and available metrics
   </a>
   
 </li>
@@ -656,8 +656,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#logging-subsystem-concepts-and-available-metrcs" class="md-nav__link">
-    Logging subsystem concepts and available metrcs
+  <a href="#logging-subsystem-concepts-and-available-metrics" class="md-nav__link">
+    Logging subsystem concepts and available metrics
   </a>
   
 </li>
@@ -695,21 +695,22 @@
                 
                 <h1 id="provide-metric-support">Provide metric support</h1>
 <p>This walkthrough illustrates the steps required from the <em>implementor of a
-federation engine</em> in order to provide full support for the available
-benchmark metrics.</p>
-<blockquote>
-<p>NOTICE: This step is optional, in a sense that it is only needed in order to
+federation engine</em> in order to provide full support for the available benchmark
+metrics.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This step is optional, in a sense that it is only needed in order to
 support all evaluation metrics of KOBE. KOBE will be able to visualize 1) the
-number of retured results and 2) the total time to reciece the full result set
-to experimenter "for free" if you choose to not follow this step.</p>
-</blockquote>
-<h2 id="logging-subsystem-concepts-and-available-metrcs">Logging subsystem concepts and available metrcs</h2>
+number of returned results and 2) the total time to receive the full result
+set to experimenter "for free" if you choose to not follow this step.</p>
+</div>
+<h2 id="logging-subsystem-concepts-and-available-metrics">Logging subsystem concepts and available metrics</h2>
 <p>One important feature of KOBE is that the experimenter can have easy access on
 a set of several statistics and key performance indicators for each conducted
 experiment. The metrics currently supported are the following:</p>
 <ul>
 <li>Number of returned results</li>
-<li>Total time to recieve the full result set</li>
+<li>Total time to receive the full result set</li>
 <li>Source selection time</li>
 <li>Query planning time</li>
 <li>Query execution time</li>
@@ -717,10 +718,10 @@ experiment. The metrics currently supported are the following:</p>
 </ul>
 <p>Of these evaluation metrics, only the first two can can be computed by the
 client side. Thus, the remaining metrics should be calculated by the federation
-engine itself and can be presented via a log message. However, in order for
-KOBE to be able to link the log message with its corresponding experiment
-execution and with its specific query run, the log message should contain also
-the following information:</p>
+engine itself and can be presented via a log message. However, in order for KOBE
+to be able to link the log message with its corresponding experiment execution
+and with its specific query run, the log message should contain also the
+following information:</p>
 <ul>
 <li>Experiment name</li>
 <li>Start time of the experiment</li>
@@ -752,15 +753,16 @@ following:</p>
       * <code>&lt;compile_time&gt;</code> is the time to provide a query execution plan.
       * <code>&lt;execution_time&gt;</code> is the time to execute the plan.
       * <code>&lt;sources&gt;</code> is the number of sources that appear in the query plan.</p>
-<blockquote>
-<p>NOTICE: This guide describes the steps for the standard federator metrics in
-KOBE. If you want to add more metrics from the side of the federator, please
-refer to this <a href="../add_metrics/">guide</a>.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This guide describes the steps for the standard federator metrics in KOBE.
+If you want to add more metrics from the side of the federator, please refer
+to this <a href="../add_metrics/">guide</a>.</p>
+</div>
 <h2 id="example">Example</h2>
 <p>As an example, consider this <a href="https://github.com/semagrow/semagrow/pull/52">pull request</a>
 which contains the integration needed for KOBE in the case for the Semagrow
-federation engine. </p>
+federation engine.</p>
                 
               
               

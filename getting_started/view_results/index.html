@@ -195,7 +195,7 @@
   
     <li class="md-tabs__item">
       <a href="../../use/create_benchmark/" class="md-tabs__link">
-        Using KOBE
+        Use
       </a>
     </li>
   
@@ -211,7 +211,7 @@
   
     <li class="md-tabs__item">
       <a href="../../extend/add_federator/" class="md-tabs__link">
-        Extending KOBE
+        Extend
       </a>
     </li>
   
@@ -427,13 +427,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     
     <label class="md-nav__link" for="nav-3">
-      Using KOBE
+      Use
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Using KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Use" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon"></span>
-        Using KOBE
+        Use
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -495,13 +495,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     
     <label class="md-nav__link" for="nav-4">
-      Extending KOBE
+      Extend
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Extending KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Extend" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
-        Extending KOBE
+        Extend
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -700,10 +700,11 @@
 subsystem of KOBE.</p>
 <p>After all pods are in Running state Kibana dashboards can be accessed at 
 <div class="highlight"><pre><span></span><code>http://&lt;NODE-IP&gt;:&lt;NODEPORT&gt;/app/kibana#/dashboard/
+</code></pre></div></p>
+<p>where <code>&lt;NODE-IP&gt;</code> the IP of any of the Kubernetes cluster nodes and <code>&lt;NODEPORT&gt;</code>
+the result of </p>
+<div class="highlight"><pre><span></span><code>kubectl get -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.ports[0].nodePort}&quot;</span> services kibana-kibana
 </code></pre></div>
-where <code>&lt;NODE-IP&gt;</code> the IP of any of the Kubernetes cluster nodes and <code>&lt;NODEPORT&gt;</code>
-the result of <code>kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services
-kibana-kibana</code>.</p>
 <p>There are three available dashboards, which can be shown below.</p>
 <h2 id="details-of-a-specific-experiment-execution">Details of a specific experiment execution</h2>
 <p>The first dashboard focuses on a specific experiment execution. It comprises:</p>
@@ -713,15 +714,15 @@ kibana-kibana</code>.</p>
 <li>Number of sources accessed for each query of the experiment.</li>
 <li>Number of returned results for each query of the experiment.</li>
 </ol>
-<p><img alt="Dashboard 1" src="../../img/dashboard_1a.png" /></p>
+<p><img alt="Dashboard 1" src="../../assets/screenshots/dashboard_1a.png" /></p>
 <p>The first and the third visualizations are obtained from the logs of the
-federator engine, if available. The second and the fourth visualizations are obtained
-from the logs of the evaluator, so they are available even for federators that do
-not provide KOBE-specific logs. The values in each visualization can be also
-exported in a CSV file for further processing.</p>
-<p><img alt="Dashboard 1 - CSV export" src="../../img/dashboard_1b.png" /></p>
+federator engine, if available. The second and the fourth visualizations are
+obtained from the logs of the evaluator, so they are available even for
+federators that do not provide KOBE-specific logs. The values in each
+visualization can be also exported in a CSV file for further processing.</p>
+<p><img alt="Dashboard 1 - CSV export" src="../../assets/screenshots/dashboard_1b.png" /></p>
 <h2 id="comparisons-of-experiment-runs">Comparisons of experiment runs</h2>
-<p>The remaining two dasbhoards can be used to draw comparisons between several
+<p>The remaining two dashboards can be used to draw comparisons between several
 experiment runs in order to directly compare different configurations of a
 benchmark. The following dashboard can be used for comparing several experiment
 executions. It consists of two visualizations:</p>
@@ -730,13 +731,13 @@ executions. It consists of two visualizations:</p>
 <li>Number of returned results for each specified experiment execution.</li>
 </ol>
 <p>Each bar refers to a single query of the experiments presented.</p>
-<p><img alt="Dashboard 2" src="../../img/dashboard_2.png" /></p>
+<p><img alt="Dashboard 2" src="../../assets/screenshots/dashboard_2.png" /></p>
 <p>Finally, the last dashboard displays plays the same metrics. The main difference
-though, is that it focuses on a specific query and compares all runs of this query
-for several experiment executions. Contrary to the visualizations of the other two
-dashboards, each bar refers to a single experiment run, and all runs are grouped
-according to the experiment execution they belong.</p>
-<p><img alt="Dashboard 3" src="../../img/dashboard_3.png" /></p>
+though, is that it focuses on a specific query and compares all runs of this
+query for several experiment executions. Contrary to the visualizations of the
+other two dashboards, each bar refers to a single experiment run, and all runs
+are grouped according to the experiment execution they belong.</p>
+<p><img alt="Dashboard 3" src="../../assets/screenshots/dashboard_3.png" /></p>
 <p>These visualizations are obtained from the logs of the evaluator.</p>
                 
               

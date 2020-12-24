@@ -195,7 +195,7 @@
   
     <li class="md-tabs__item">
       <a href="../create_benchmark/" class="md-tabs__link md-tabs__link--active">
-        Using KOBE
+        Use
       </a>
     </li>
   
@@ -211,7 +211,7 @@
   
     <li class="md-tabs__item">
       <a href="../../extend/add_federator/" class="md-tabs__link">
-        Extending KOBE
+        Extend
       </a>
     </li>
   
@@ -375,13 +375,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
-      Using KOBE
+      Use
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Using KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Use" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon"></span>
-        Using KOBE
+        Use
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -495,13 +495,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     
     <label class="md-nav__link" for="nav-4">
-      Extending KOBE
+      Extend
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Extending KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Extend" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
-        Extending KOBE
+        Extend
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -695,18 +695,16 @@
                 
                 <h1 id="tune-network-settings">Tune network settings</h1>
 <p>This walkthrough illustrates the steps required from the <em>benchmark designer</em> in
-order to configure the latency of the data sources of a
-<a href="../../references/api/#benchmark">Benchmark</a> specification.</p>
+order to configure the latency of the data sources of a <a href="../../references/api/#benchmark">Benchmark</a>
+specification.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>In this walkthrough we assume that you already have already prepared the
 following:</p>
 <ul>
-<li>A <a href="../../references/api/#benchmark">Benchmark</a> for the benchmark you want to
-  change the network parameters.</li>
+<li>A <a href="../../references/api/#benchmark">Benchmark</a> for the benchmark you want to change the network parameters.</li>
 </ul>
-<p>We have already prepared several benchmarks to use. If
-you want to create your own benchmark specification, check out <a href="../create_benchmark/">this
-guide</a>.</p>
+<p>We have already prepared several benchmarks to use. If you want to create your
+own benchmark specification, check out <a href="../create_benchmark/">this guide</a>.</p>
 <h2 id="step-1-inject-latency-for-each-source-endpoint">Step 1 - Inject latency for each source endpoint</h2>
 <p>KOBE allows simulating network traffic for all sources of the benchmark. For
 every source dataset of the benchmark, you can:</p>
@@ -760,20 +758,23 @@ delays:</p>
 <li><a href="https://github.com/semagrow/kobe/tree/devel/examples/benchmark-toybench/toybench-delays.yaml">benchmark-toybench/toybench-delays.yaml</a></li>
 </ul>
 <p>This benchmark contains three SPARQL queries and two datasets (namely <code>toy1</code> and
-<code>toy2</code>). All responces from <code>toy1</code> to the federator are delayed by 2 seconds and
-150 milliseconds, all responces from <code>toy2</code> to the federator are delayed by 2
-seconds, and the 50% of the responces from <code>toy1</code> to <code>toy2</code> are delayed by 3
+<code>toy2</code>). All responses from <code>toy1</code> to the federator are delayed by 2 seconds and
+150 milliseconds, all responses from <code>toy2</code> to the federator are delayed by 2
+seconds, and the 50% of the responses from <code>toy1</code> to <code>toy2</code> are delayed by 3
 seconds.</p>
 <h2 id="examples">Examples</h2>
-<p>We have already prepared a benchmark specification with delays to experiment with:</p>
+<p>We have already prepared a benchmark specification with delays to experiment
+with:</p>
 <ul>
 <li><a href="https://github.com/semagrow/kobe/tree/devel/examples/benchmark-toybench">benchmark-toybench</a></li>
 </ul>
-<blockquote>
-<p>Notice: We plan to define more benchmark specifications with delays in the future. We
-place all benchmark specifications in the <a href="https://github.com/semagrow/kobe/tree/devel/examples/">examples/</a> directory
-under a subdirectory with the prefix <code>benchmark-*</code>. </p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We plan to define more benchmark specifications in the future. We place all
+benchmark specifications in the
+<a href="https://github.com/semagrow/kobe/tree/devel/examples/">examples/</a> directory
+under a subdirectory with the prefix <code>benchmark-*</code>.</p>
+</div>
                 
               
               

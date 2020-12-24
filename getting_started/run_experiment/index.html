@@ -195,7 +195,7 @@
   
     <li class="md-tabs__item">
       <a href="../../use/create_benchmark/" class="md-tabs__link">
-        Using KOBE
+        Use
       </a>
     </li>
   
@@ -211,7 +211,7 @@
   
     <li class="md-tabs__item">
       <a href="../../extend/add_federator/" class="md-tabs__link">
-        Extending KOBE
+        Extend
       </a>
     </li>
   
@@ -384,13 +384,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     
     <label class="md-nav__link" for="nav-3">
-      Using KOBE
+      Use
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Using KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Use" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon"></span>
-        Using KOBE
+        Use
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -452,13 +452,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     
     <label class="md-nav__link" for="nav-4">
-      Extending KOBE
+      Extend
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Extending KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Extend" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
-        Extending KOBE
+        Extend
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -623,19 +623,19 @@
                 
                 <h1 id="perform-a-benchmark-experiment">Perform a benchmark experiment</h1>
 <p>In the following, we show the steps for deploying an experiment on a simple
-benchmark that comprises three queries over a Semagrow federation of two
+benchmark that comprises three queries over a <a href="https://semagrow.github.io">semagrow</a> federation of two
 Virtuoso endpoints.</p>
-<p>You can use the <code>kobectl</code> <a href="../../references/kobectl/">script</a> found in the
-<a href="https://github.com/semagrow/kobe/tree/devel/bin">bin</a>
-directory for cotrolling your experiments:</p>
+<p>You can use the <a href="../../references/kobectl/">kobectl</a> found in the
+<a href="https://github.com/semagrow/kobe/tree/devel/bin">bin</a> directory for controlling
+your experiments:</p>
 <div class="highlight"><pre><span></span><code>export PATH=`pwd`/bin:$PATH
 kobectl help
 </code></pre></div>
-<p>First, apply the templates for Virtuoso and Semagrow:</p>
-<p><div class="highlight"><pre><span></span><code>kobectl apply examples/dataset-virtuoso/virtuosotemplate.yaml
+<p>First, apply the templates for Virtuoso and <a href="https://semagrow.github.io">semagrow</a>:</p>
+<div class="highlight"><pre><span></span><code>kobectl apply examples/dataset-virtuoso/virtuosotemplate.yaml
 kobectl apply examples/federator-semagrow/semagrowtemplate.yaml
 </code></pre></div>
-Then, apply the benchmark.</p>
+<p>Then, apply the benchmark.</p>
 <div class="highlight"><pre><span></span><code>kobectl apply examples/benchmark-toybench/toybench-simple.yaml
 </code></pre></div>
 <p>Before running the experiment, you should verify that the datasets are loaded.

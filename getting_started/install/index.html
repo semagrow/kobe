@@ -195,7 +195,7 @@
   
     <li class="md-tabs__item">
       <a href="../../use/create_benchmark/" class="md-tabs__link">
-        Using KOBE
+        Use
       </a>
     </li>
   
@@ -211,7 +211,7 @@
   
     <li class="md-tabs__item">
       <a href="../../extend/add_federator/" class="md-tabs__link">
-        Extending KOBE
+        Extend
       </a>
     </li>
   
@@ -441,13 +441,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     
     <label class="md-nav__link" for="nav-3">
-      Using KOBE
+      Use
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Using KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Use" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon"></span>
-        Using KOBE
+        Use
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -509,13 +509,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     
     <label class="md-nav__link" for="nav-4">
-      Extending KOBE
+      Extend
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Extending KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Extend" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
-        Extending KOBE
+        Extend
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -726,64 +726,60 @@
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li><code>Kubernetes</code> &gt;= 1.8.0</li>
-<li><code>nfs-commons</code> installed in the nodes of the cluster. If in debian or
+<li><code>nfs-commons</code> installed in the nodes of the cluster. If in Debian or
    Ubuntu you can install it using <code>apt-get install nfs-common</code></li>
 </ul>
 <h2 id="download-kobe">Download KOBE</h2>
 <p>To download KOBE in your system, just do the following:</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/semagrow/kobe.git
-cd kobe
+<span class="nb">cd</span> kobe
 </code></pre></div>
 <h2 id="installation-of-the-deployment-subsystem">Installation of the Deployment subsystem</h2>
 <p>KOBE needs the Kubernetes operator to be installed in the Kubernetes cluster. To
 quickly install the KOBE operator in a Kubernetes cluster. </p>
-<p>You can use the <code>kobectl</code> <a href="../../references/kobectl/">script</a> found in the
+<p>You can use the <a href="../../references/kobectl/">kobectl</a> found in the
 <a href="https://github.com/semagrow/kobe/tree/devel/bin">bin</a> directory:</p>
-<div class="highlight"><pre><span></span><code>export PATH=`pwd`/bin:$PATH
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/bin:<span class="nv">$PATH</span>
 kobectl install operator .
 </code></pre></div>
-<p>Alternatively, you could run the following commands:
+<p>Alternatively, you could run the following commands:</p>
 <div class="highlight"><pre><span></span><code>kubectl apply -f operator/deploy/crds
 kubectl apply -f operator/deploy/service_account.yaml
 kubectl apply -f operator/deploy/clusterrole.yaml
 kubectl apply -f operator/deploy/clusterrole_binding.yaml
 kubectl apply -f operator/deploy/role.yaml
 kubectl apply -f operator/deploy/operator.yaml
-</code></pre></div></p>
+</code></pre></div>
 <p>You will get a confirmation message that each resource has successfully been
 created. This will set the operator running in your Kubernetes cluster and needs
 to be done only once.</p>
 <h2 id="installation-of-the-networking-subsystem">Installation of the Networking subsystem</h2>
-<p>KOBE uses istio to support network delays between the different deployments. To
-install istio you can run the following:
+<p>KOBE uses <a href="https://istio.io/">istio</a> to support network delays between the different deployments.
+To install istio you can run the following:</p>
 <div class="highlight"><pre><span></span><code>kobectl install istio .
 </code></pre></div>
-Alternatively, you can consult the official <a href="https://istio.io/docs/setup/getting-started/">installation
+<p>Alternatively, you can consult the official <a href="https://istio.io/docs/setup/getting-started/">installation
 guide</a> or you can type the
 following commands.</p>
-<div class="highlight"><pre><span></span><code>curl -L https://istio.io/downloadIstio | sh -
-export PATH=`pwd`/istio-1.6.0/bin:$PATH
-istioctl manifest apply --set profile=default
+<div class="highlight"><pre><span></span><code>curl -L https://istio.io/downloadIstio <span class="p">|</span> sh -
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/istio-1.6.0/bin:<span class="nv">$PATH</span>
+istioctl manifest apply --set <span class="nv">profile</span><span class="o">=</span>default
 </code></pre></div>
 <h2 id="installation-of-the-logging-subsystem">Installation of the Logging subsystem</h2>
-<p>To enable the evaluation metrics extraction subsystem, run
+<p>To enable the evaluation metrics extraction subsystem, run</p>
 <div class="highlight"><pre><span></span><code>kobectl install efk .
 </code></pre></div>
-or alternatively the following
+<p>or alternatively the following</p>
 <div class="highlight"><pre><span></span><code>helm repo add elastic https://helm.elastic.co
 helm repo add kiwigrid https://kiwigrid.github.io
-helm install elastic/elasticsearch --name elasticsearch --set persistence.enabled=false --set replicas=1 --version 7.6.2
-helm install elastic/kibana --name kibana --set service.type=NodePort --version 7.6.2
-helm install --name fluentd -f operator/deploy/efk-config/fluentd-values.yaml kiwigrid/fluentd-elasticsearch --version 8.0.1
+helm install elastic/elasticsearch --name elasticsearch --set persistence.enabled<span class="o">=</span><span class="nb">false</span> --set <span class="nv">replicas</span><span class="o">=</span><span class="m">1</span> --version <span class="m">7</span>.6.2
+helm install elastic/kibana --name kibana --set service.type<span class="o">=</span>NodePort --version <span class="m">7</span>.6.2
+helm install --name fluentd -f operator/deploy/efk-config/fluentd-values.yaml kiwigrid/fluentd-elasticsearch --version <span class="m">8</span>.0.1
 kubectl apply -f operator/deploy/efk-config/kobe-kibana-configuration.yaml
-</code></pre></div></p>
-<p>These result in the simplest setup of an one-node
-<a href="https://github.com/elastic/helm-charts/blob/master/elasticsearch">Elasticsearch</a>
-that does not persist data across pod recreation, a
-<a href="https://github.com/kiwigrid/helm-charts/tree/master/charts/fluentd-elasticsearch">Fluentd</a>
-<code>DaemonSet</code> and a
-<a href="https://github.com/elastic/helm-charts/tree/master/kibana">Kibana</a>
-node that exposes a <code>NodePort</code>. </p>
+</code></pre></div>
+<p>These result in the simplest setup of an one-node <a href="https://github.com/elastic/helm-charts/blob/master/elasticsearch">Elasticsearch</a> that does not
+persist data across pod recreation, a <a href="https://github.com/kiwigrid/helm-charts/tree/master/charts/fluentd-elasticsearch">Fluentd</a> <code>DaemonSet</code> and a <a href="https://github.com/elastic/helm-charts/tree/master/kibana">Kibana</a> node
+that exposes a <code>NodePort</code>. </p>
 <p>The setup can be customized by changing the configuration parameters of each
 helm chart. Please check the corresponding documentation of each chart for more
 info.</p>

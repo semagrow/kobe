@@ -193,7 +193,7 @@
   
     <li class="md-tabs__item">
       <a href="../../use/create_benchmark/" class="md-tabs__link">
-        Using KOBE
+        Use
       </a>
     </li>
   
@@ -211,7 +211,7 @@
   
     <li class="md-tabs__item">
       <a href="../add_federator/" class="md-tabs__link md-tabs__link--active">
-        Extending KOBE
+        Extend
       </a>
     </li>
   
@@ -373,13 +373,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     
     <label class="md-nav__link" for="nav-3">
-      Using KOBE
+      Use
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Using KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Use" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon"></span>
-        Using KOBE
+        Use
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -443,13 +443,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
-      Extending KOBE
+      Extend
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Extending KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Extend" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
-        Extending KOBE
+        Extend
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -709,13 +709,11 @@
                 
                 <h1 id="add-a-new-dataset-server">Add a new dataset server</h1>
 <p>This walkthrough illustrates the steps required from the <em>implementor of a
-dataset server</em> in order to create a
-<a href="../../references/api/#datasettemplate">DatasetTemplate</a> specification.</p>
+dataset server</em> in order to create a <a href="../../references/api/#datasettemplate">DatasetTemplate</a> specification.</p>
 <p>In KOBE, a dataset template is defined using a set of Docker images. Additional
 parameters include the port and the path that the container will listen for
-queries. Dataset templates are used in the
-<a href="../../references/api/#benchmark">Benchmark</a> specifications in order to define
-the dataset server of the federated endpoints.</p>
+queries. Dataset templates are used in the <a href="../../references/api/#benchmark">Benchmark</a> specifications in order
+to define the dataset server of the federated endpoints.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>In this walkthrough we assume that you already have already prepared a Docker
 image that provides the SPARQL endpoint of the dataset server (e.g.,
@@ -738,13 +736,15 @@ various tasks into three separate images. More specifically:</p>
 </ul>
 <p>The environment variables are initialized by the KOBE operator according to the
 specification of the benchmark to be executed. Moreover, the shared volumes are
-managed through the KOBE operator too (ref. <a href="https://github.com/semagrow/kobe/tree/devel/operator/docs/storage.md">here</a>
-for details about the shared storage of KOBE).</p>
+managed through the KOBE operator too (ref.
+<a href="https://github.com/semagrow/kobe/tree/devel/operator/docs/storage.md">here</a> for
+details about the shared storage of KOBE).</p>
 <blockquote>
-<p>In the bechmark walkthrough, we
-<a href="../../use/create_benchmark/#step-1-prepare-your-dataset-dumps">suggest</a> that the
-dataset dumps should follow a specific format. Therefore, feel free to use
-<code>semagrow/url-donwnloader</code> (source code <a href="https://github.com/semagrow/kobe/tree/devel/dockers/url-downloader">here</a>) as
+<p>In the benchmark walkthrough, we
+<a href="../../use/create_benchmark/#step-1-prepare-your-dataset-dumps">suggest</a> that
+the dataset dumps should follow a specific format. Therefore, feel free to use
+<code>semagrow/url-donwnloader</code> (source code
+<a href="https://github.com/semagrow/kobe/tree/devel/dockers/url-downloader">here</a>) as
 your first image. However, if you optionally want your template to support
 more dataset dump formats, you can implement your own url downloader. </p>
 </blockquote>
@@ -752,25 +752,25 @@ more dataset dump formats, you can implement your own url downloader. </p>
 and Strabon).</p>
 <ul>
 <li>
-<p>Regarding the <a href="https://virtuoso.openlinksw.com/">Virtuoso</a> RDF store, we use
-  the images <code>semagrow/url-donwnloader</code>, <code>semagrow/virtuoso-init</code> (source code
-  <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-init">here</a>), and
-  <code>semagrow/virtuoso-main</code> (source code
-  <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-main">here</a>). We use the shared storage
-  of KOBE, to keep a backup of the <code>/database</code> directory of Virtuoso, which is
-  used to keep all the files used by the database. The last two images are built
-  upon <code>openlink/virtuoso-opensource-7</code>.</p>
+<p>Regarding the <a href="https://virtuoso.openlinksw.com/">Virtuoso</a> RDF store, we use the images
+  <code>semagrow/url-donwnloader</code>, <code>semagrow/virtuoso-init</code> (source code
+  <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-init">here</a>),
+  and <code>semagrow/virtuoso-main</code> (source code
+  <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-virtuoso/virtuoso-main">here</a>).
+  We use the shared storage of KOBE, to keep a backup of the <code>/database</code>
+  directory of Virtuoso, which is used to keep all the files used by the
+  database. The last two images are built upon <code>openlink/virtuoso-opensource-7</code>.</p>
 </li>
 <li>
-<p>Regarding the <a href="http://strabon.di.uoa.gr/">Strabon</a> geospatial RDF store, we
-  use the images <code>semagrow/url-donwnloader</code>, <code>semagrow/strabon-init</code> (source
-  code <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-init">here</a>), and
-  <code>semagrow/strabon-main</code> (source code
-  <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-main">here</a>). We use the shared storage
-  of KOBE, to keep a backup of the PostGIS database (directory
-  <code>/var/lib/postgresql/9.4/main</code>) which is where the data are kept inside
-  Strabon. The last two images are built using the docker file of KR-suite (see
-  http://github.com/GiorgosMandi/KR-Suite-docker)`.</p>
+<p>Regarding the <a href="http://strabon.di.uoa.gr/">Strabon</a> geospatial RDF store, we use the images
+  <code>semagrow/url-downloader</code>, <code>semagrow/strabon-init</code> (source code
+  <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-init">here</a>),
+  and <code>semagrow/strabon-main</code> (source code
+  <a href="https://github.com/semagrow/kobe/tree/devel//examples/dataset-strabon/strabon-main">here</a>).
+  We use the shared storage of KOBE, to keep a backup of the PostGIS database
+  (directory <code>/var/lib/postgresql/9.4/main</code>) which is where the data are kept
+  inside <a href="http://strabon.di.uoa.gr/">Strabon</a>. The last two images are built using the docker file of
+  KR-suite (see http://github.com/GiorgosMandi/KR-Suite-docker)`.</p>
 </li>
 </ul>
 <h2 id="step-2-prepare-your-yaml-file">Step 2. Prepare your YAML file</h2>
@@ -799,7 +799,7 @@ like this (we use as an example the template for Virtuoso):</p>
   <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8890</span>     <span class="c1"># port to listen for queries</span>
   <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/sparql</span>  <span class="c1"># path to listen for queries</span>
 </code></pre></div>
-<p>The default URL for the SPARQL endpoint for Virtuoso is
+<p>The default URL for the SPARQL endpoint for <a href="https://virtuoso.openlinksw.com/">Virtuoso</a> is
 <code>http://localhost:8890/sparql</code>, hence the port and the path to listen for
 queries are <code>8890</code> and <code>/sparql</code> respectively.</p>
 <h2 id="examples">Examples</h2>
@@ -809,11 +809,13 @@ with:</p>
 <li><a href="https://github.com/semagrow/kobe/tree/devel/examples/dataset-virtuoso">dataset-virtuoso</a></li>
 <li><a href="https://github.com/semagrow/kobe/tree/devel/examples/dataset-strabon">dataset-strabon</a></li>
 </ul>
-<blockquote>
-<p>Notice: We plan to define more dataset template specifications in the future.
-We place all dataset template specifications in the <a href="https://github.com/semagrow/kobe/tree/devel//examples/">examples/</a>
-directory under a subdirectory with the prefix <code>dataset-*</code>. </p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We plan to define more dataset template specifications in the future. We
+place all dataset template specifications in the
+<a href="https://github.com/semagrow/kobe/tree/devel/examples/">examples/</a> directory
+under a subdirectory with the prefix <code>dataset-*</code>. </p>
+</div>
                 
               
               

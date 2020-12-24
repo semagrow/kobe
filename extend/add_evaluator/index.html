@@ -193,7 +193,7 @@
   
     <li class="md-tabs__item">
       <a href="../../use/create_benchmark/" class="md-tabs__link">
-        Using KOBE
+        Use
       </a>
     </li>
   
@@ -211,7 +211,7 @@
   
     <li class="md-tabs__item">
       <a href="../add_federator/" class="md-tabs__link md-tabs__link--active">
-        Extending KOBE
+        Extend
       </a>
     </li>
   
@@ -373,13 +373,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     
     <label class="md-nav__link" for="nav-3">
-      Using KOBE
+      Use
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Using KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Use" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon"></span>
-        Using KOBE
+        Use
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -443,13 +443,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
-      Extending KOBE
+      Extend
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Extending KOBE" data-md-level="1">
+    <nav class="md-nav" aria-label="Extend" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
-        Extending KOBE
+        Extend
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -680,37 +680,35 @@
                 
                 
                 <h1 id="add-a-new-evaluator">Add a new evaluator</h1>
-<p>This walkthrough illustrates the steps required from the <em>experimenter</em>
-in order to implement a custom evaluator for KOBE.</p>
-<p>In KOBE, evaluators is defined using a single Docker image, and are used
-in the <a href="../../use/create_experiment/">Experiment</a> specifications in order
-to apply a query load to the SPARQL endpoint of a federation engine.</p>
+<p>This walkthrough illustrates the steps required from the <em>experimenter</em> in order
+to implement a custom evaluator for KOBE.</p>
+<p>In KOBE, evaluators is defined using a single Docker image, and are used in the
+<a href="../../use/create_experiment/">Experiment</a> specifications in order to apply a query load to the SPARQL
+endpoint of a federation engine.</p>
 <h2 id="step-1-prepare-your-docker-image">Step 1. Prepare your Docker image</h2>
-<p>Given a set of query strings and the SPARQL endpoint of the federator,
-the evaluator should issue each query of the queryset one or more times
-to the endpoint. For each query, it should calculate the number of the
-returned results and the time passed to receive the results, and export
-this information via a log message. </p>
+<p>Given a set of query strings and the SPARQL endpoint of the federator, the
+evaluator should issue each query of the queryset one or more times to the
+endpoint. For each query, it should calculate the number of the returned results
+and the time passed to receive the results, and export this information via a
+log message.</p>
 <p>KOBE provides the following input to the evaluator:</p>
 <ul>
-<li>All queries of the experiment are stored in the <code>/queries</code> directory.
-  For each query, there exists a text file that contains the SPARQL
-  query. The name of the file is the is used to uniquely identify each
-  query of the experiment.</li>
+<li>All queries of the experiment are stored in the <code>/queries</code> directory. For each
+  query, there exists a text file that contains the SPARQL query. The name of
+  the file is the is used to uniquely identify each query of the experiment.</li>
 <li>The SPARQL endpoint of the federation engine appears in the <code>$ENDPOINT</code>
   environment variable.</li>
-<li>The environment variable <code>$EVAL_RUNS</code> specify how many times each
-  query of the experiment should be executed.</li>
-<li>The name of the experiment to be executed appeoars in the <code>$EXPERIMENT</code>
-  environment variable. This information is mainly used for logging
-  purposes.</li>
+<li>The environment variable <code>$EVAL_RUNS</code> specify how many times each query of the
+  experiment should be executed.</li>
+<li>The name of the experiment to be executed appears in the <code>$EXPERIMENT</code>
+  environment variable. This information is mainly used for logging purposes.</li>
 </ul>
-<p>Given this information, the evaluator can proceed in the evaluation of
-the queryset with its strategy of choice. However, the evaluator for
-each query should do the following:</p>
+<p>Given this information, the evaluator can proceed in the evaluation of the
+queryset with its strategy of choice. However, the evaluator for each query
+should do the following:</p>
 <ul>
-<li>Before executing each query, attach a SPARQL comment in the first
-  line of the query. The comment should look like this:</li>
+<li>Before executing each query, attach a SPARQL comment in the first line of the
+  query. The comment should look like this:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>^\#kobeQueryDesc Experiment: (?&lt;experiment&gt;[^ ]+) - Date: (?&lt;date&gt;[^ ]+ [^ ]+) - Query: (?&lt;query&gt;[^ ]+) - Run: (?&lt;run&gt;[0-9]+)$
 </code></pre></div>
@@ -737,9 +735,9 @@ KOBE. If you want to add more metrics from the side of the evaluator, please
 refer to this <a href="../add_metrics/">guide</a>.</p>
 </blockquote>
 <h2 id="example">Example</h2>
-<p>As an example, we have prepared <code>semagrow/kobe-sequential-evaluator</code>,
-which evaluates the queries in a sequential order, which is a slightly modyfied
-varsion of that of <a href="https://code.google.com/archive/p/fbench/">Fedbench</a>.</p>
+<p>As an example, we have prepared <code>semagrow/kobe-sequential-evaluator</code>, which
+evaluates the queries in a sequential order, which is a slightly modified
+version of that of <a href="https://code.google.com/archive/p/fbench/">FedBench</a>.</p>
 <ul>
 <li><a href="https://github.com/semagrow/kobe/tree/devel/evaluator">./evaluator</a></li>
 </ul>
