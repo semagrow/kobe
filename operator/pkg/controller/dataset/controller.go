@@ -110,7 +110,7 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 	//check if template in the template field exists. If not try to find a reference template and set that to the template fields .
 	if instance.Spec.SystemSpec == nil {
 		foundTemplate := &api.DatasetTemplate{}
-		reqLogger.Info("Finding the template reference specified for " + instance.Name + " %v\n")
+		reqLogger.Info("Finding the template reference specified for " + instance.Name + "\n")
 		err := r.client.Get(context.TODO(), types.NamespacedName{
 			Name:      instance.Spec.TemplateRef,
 			Namespace: corev1.NamespaceDefault},
@@ -119,11 +119,10 @@ func (r *ReconcileDataset) Reconcile(request reconcile.Request) (reconcile.Resul
 			reqLogger.Info("Failed to find the requested dataset template: ", err)
 			return reconcile.Result{}, err
 		}
-		reqLogger.Info("POUTSES: " + foundTemplate.Name)
 		instance.Spec.SystemSpec = &foundTemplate.Spec
 		err = r.client.Update(context.TODO(), instance)
 		if err != nil {
-			reqLogger.Info("failed to update the template of the dataset: %v", instance.Spec.Name)
+			reqLogger.Info("failed to update the template of the dataset"+instance.Spec.Name+": %v", instance.Spec.Name)
 			return reconcile.Result{}, err
 		}
 	}
@@ -188,12 +187,12 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 		reqLogger.Info("Making a new pod for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
 		pod := r.newPod(instance)
 		if pod == nil {
-			reqLogger.Info("Pod was not created. Nfs is not up (yet)! Requeue after waiting for 10 seconds\n")
+			reqLogger.Info("Pod was not created. Requeue after waiting for 10 seconds\n")
 			return true, nil
 		}
 		err = r.client.Create(context.TODO(), pod)
 		if err != nil {
-			reqLogger.Info("Failed to create new Pod: %v\n", err)
+			reqLogger.Info("Failed to create new Pod : %v\n", err)
 			return false, err
 		}
 		return true, nil
@@ -218,7 +217,7 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 		instance.Status.PodNames = podNames
 		err := r.client.Update(context.TODO(), instance)
 		if err != nil {
-			reqLogger.Info("failed to update node status: %v", err)
+			reqLogger.Info("Failed to update the Dataset status: %v", err)
 			return false, err
 		}
 	}
@@ -230,7 +229,7 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 			err = r.client.Get(context.TODO(), types.NamespacedName{Name: podName, Namespace: instance.Namespace}, podForDelete)
 			err = r.client.Delete(context.TODO(), podForDelete, client.PropagationPolicy(metav1.DeletionPropagation("Background")))
 			if err != nil {
-				reqLogger.Info("Failed to delete the federation job from the cluster\n")
+				reqLogger.Info("Failed to delete the extra pod from the cluster\n")
 				return false, err
 			}
 		}
@@ -240,11 +239,26 @@ func (r *ReconcileDataset) reconcilePods(instance *api.EphemeralDataset) (bool, 
 
 func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	labels := labelsForDataset(m)
-	//reqLogger := log
+	reqLogger := log
 
 	envs := []corev1.EnvVar{
 		{Name: "DOWNLOAD_URL", Value: m.Spec.Files[0].URL},
 		{Name: "DATASET_NAME", Value: m.Name},
+	}
+	// fetch the benchmark to check for istio usage
+	foundBenchmark := &api.Benchmark{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: m.Namespace, Namespace: corev1.NamespaceDefault}, foundBenchmark)
+	if err != nil {
+		reqLogger.Info("Failed to find the Benchmark this Dataset belongs to: %v\n", err)
+		return nil
+	}
+	if foundBenchmark.Status.Istio == api.IstioUse {
+		envs = append(envs, corev1.EnvVar{Name: "USE_ISTIO", Value: "YES"})
+	} else if foundBenchmark.Status.Istio == api.IstioNotUse {
+		envs = append(envs, corev1.EnvVar{Name: "USE_ISTIO", Value: "NO"})
+	} else {
+		reqLogger.Info("Status field for Istio Usage not properly set.\n")
+		return nil
 	}
 
 	if m.Status.ForceLoad == true {
@@ -255,15 +269,19 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	for i, container := range m.Spec.SystemSpec.Containers {
 		m.Spec.SystemSpec.Containers[i].Env = append(container.Env, envs...)
 	}
-	//remove the pv claim cause it doesnt work from different namespaces and add the mount directly
 
-	// volume := corev1.Volume{
-	// 	Name: "nfs",
-	// 	VolumeSource: corev1.VolumeSource{
-	// 		PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{ClaimName: "kobepvc"}}}
+	for i, container := range m.Spec.SystemSpec.InitContainers {
+		m.Spec.SystemSpec.InitContainers[i].Env = append(container.Env, envs...)
+	}
+
+	for i, container := range m.Spec.SystemSpec.ImportContainers {
+		m.Spec.SystemSpec.InitContainers[i].Env = append(container.Env, envs...)
+	}
+
 	nfsPodFound := &corev1.Pod{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: corev1.NamespaceDefault}, nfsPodFound)
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: corev1.NamespaceDefault}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {
+		reqLogger.Info("Nfs server is not online yet: %v\n", err)
 		return nil
 	}
 	nfsip := nfsPodFound.Status.PodIP //it seems we need this cause dns for service of the nfs doesnt work in kubernetes
@@ -272,17 +290,6 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	volumes := []corev1.Volume{}
 	volumes = append(volumes, volume)
 
-	initContainers := m.Spec.SystemSpec.InitContainers
-	//test init container
-	// dummyInit := corev1.Container{
-	// 	Image:           "busybox",
-	// 	Name:            m.Name,
-	// 	ImagePullPolicy: corev1.PullIfNotPresent,
-	// 	Command:         []string{"sh", "-c"},
-	// 	Args:            []string{"sleep 120 ; wget http://users.iit.demokritos.gr/~antru/dumps/toy1.tar.gz"},
-	// }
-	//initContainers = append(initContainers, dummyInit)
-	// add volumemounts to importcontainers
 	volumemount := corev1.VolumeMount{
 		Name:      "nfs",
 		MountPath: "/kobe/dataset"}
@@ -290,13 +297,19 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 	volumemounts := []corev1.VolumeMount{}
 	volumemounts = append(volumemounts, volumemount)
 
-	initContainers = append(initContainers, m.Spec.SystemSpec.ImportContainers...)
-
 	//supply all containers with their mount to the nfs
 	//currently we give same mounts to every container in the pod
 	for i := range m.Spec.SystemSpec.Containers {
 		m.Spec.SystemSpec.Containers[i].VolumeMounts = append(m.Spec.SystemSpec.Containers[i].VolumeMounts, volumemounts...)
 	}
+	for i := range m.Spec.SystemSpec.InitContainers {
+		m.Spec.SystemSpec.InitContainers[i].VolumeMounts = append(m.Spec.SystemSpec.InitContainers[i].VolumeMounts, volumemounts...)
+	}
+	for i := range m.Spec.SystemSpec.ImportContainers {
+		m.Spec.SystemSpec.ImportContainers[i].VolumeMounts = append(m.Spec.SystemSpec.ImportContainers[i].VolumeMounts, volumemounts...)
+	}
+	initContainers := m.Spec.SystemSpec.InitContainers
+	initContainers = append(initContainers, m.Spec.SystemSpec.ImportContainers...)
 
 	pod := &corev1.Pod{
 		ObjectMeta: metav1.ObjectMeta{
@@ -317,8 +330,17 @@ func (r *ReconcileDataset) newPod(m *api.EphemeralDataset) *corev1.Pod {
 
 func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) (bool, error) {
 	reqLogger := log
+
+	//find the associated benchmark and check the status field for istio
+	foundBenchmark := &api.Benchmark{}
+	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Namespace, Namespace: corev1.NamespaceDefault}, foundBenchmark)
+	if err != nil {
+		reqLogger.Info("Failed to find the Benchmark this Dataset belongs to: %v\n", err)
+		return true, err
+	}
+
 	foundService := &corev1.Service{}
-	err := r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
+	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundService)
 
 	if err != nil && errors.IsNotFound(err) {
 		reqLogger.Info("Making a new service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
@@ -334,23 +356,30 @@ func (r *ReconcileDataset) reconcileSvc(instance *api.EphemeralDataset) (bool, e
 		return true, err
 	}
 
-	foundVirtualService := &istioclient.VirtualService{}
-	err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundVirtualService)
+	if foundBenchmark.Status.Istio == api.IstioNotUse {
+		return false, nil
+	} else if foundBenchmark.Status.Istio == api.IstioUse {
 
-	if err != nil && errors.IsNotFound(err) {
-		reqLogger.Info("Making a new virtual service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
-		service := r.newVirtualSvc(instance)
-		reqLogger.Info("Creating a new VRITUAL Service %s/%s\n", service.Namespace, service.Name)
-		err = r.client.Create(context.TODO(), service)
-		if err != nil {
-			reqLogger.Info("Failed to create new Virtual Service: %v\n", err)
+		foundVirtualService := &istioclient.VirtualService{}
+		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundVirtualService)
+
+		if err != nil && errors.IsNotFound(err) {
+			reqLogger.Info("Making a new virtual service for dataset", "instance.Namespace", instance.Namespace, "instance.Name", instance.Name)
+			service := r.newVirtualSvc(instance)
+			reqLogger.Info("Creating a new VRITUAL Service %s/%s\n", service.Namespace, service.Name)
+			err = r.client.Create(context.TODO(), service)
+			if err != nil {
+				reqLogger.Info("Failed to create new Virtual Service: %v\n", err)
+				return true, err
+			}
+			return true, nil
+		} else if err != nil {
 			return true, err
 		}
+	} else {
+		reqLogger.Info("Flag to use Istio not set")
 		return true, nil
-	} else if err != nil {
-		return true, err
 	}
-
 	return false, nil
 }
 

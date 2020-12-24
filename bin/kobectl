@@ -124,22 +124,6 @@ case $COMMAND in
             continue
           fi
           
-          if [ $STATUS = "Running" ]
-          then
-            LOADED_S=`kubectl logs $DATASET-pod -n $RESOURCE -c maincontainer \
-                      | grep "Data stored successfully!"`
-            LOADED_V=`kubectl logs $DATASET-pod -n $RESOURCE -c maincontainer \
-                      | grep "Server online at 1111"`
-            LOADED_P=`kubectl logs $DATASET-pod -n $RESOURCE -c maincontainer \
-                      | grep "database system is ready to accept connections" \
-                      | wc -l | grep 2`
-            
-            if [ -z "$LOADED_S$LOADED_V$LOADED_P" ]
-            then
-              STATUS="Loading"
-            fi
-          fi
-          
           OUTPUT="$OUTPUT$DATASET $STATUS\n"
         done
         
@@ -198,6 +182,12 @@ case $COMMAND in
       "operator")
         OPERATOR="true"
         ;;
+      "operator-v1")
+        OPERATOR="true"
+        ;;
+      "operator-v1beta1")
+        OPERATOR_BETA="true"
+        ;;
       "istio")
         ISTIO="true"
         ;;
@@ -218,6 +208,16 @@ case $COMMAND in
     if [ ! -z $OPERATOR ]
     then
       kubectl apply -f operator/deploy/crds
+      kubectl apply -f operator/deploy/service_account.yaml
+      kubectl apply -f operator/deploy/clusterrole.yaml
+      kubectl apply -f operator/deploy/clusterrole_binding.yaml
+      kubectl apply -f operator/deploy/role.yaml
+      kubectl apply -f operator/deploy/operator.yaml
+    fi
+    
+    if [ ! -z $OPERATOR_BETA ]
+    then
+      kubectl apply -f operator/deploy/crds-v1beta1
       kubectl apply -f operator/deploy/service_account.yaml
       kubectl apply -f operator/deploy/clusterrole.yaml
       kubectl apply -f operator/deploy/clusterrole_binding.yaml
@@ -323,7 +323,8 @@ case $COMMAND in
     echo "  federatortemplate(s),"
     echo "  datasettemplate(s)."
     echo ""
-    echo "[component] can be any of: operator, istio, efk, full"
+    echo "[component] can be any of:"
+    echo "  operator, operator-v1, operator-v1beta1, istio, efk, full"
     echo ""
     echo "for more advanced control options for KOBE, use kubectl."
     ;;
