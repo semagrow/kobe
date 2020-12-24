@@ -1,0 +1,40 @@
+site_name: KOBE Open Benchmarking Engine
+site_url: https://semagrow.github.com/kobe/
+repo_url: https://github.com/semagrow/kobe/
+repo_name: 'GitHub'
+docs_dir: 'docs'
+nav:
+  - 'Home': index.md
+  - 'Getting started':
+     - 'Installation': getting_started/install.md
+     - 'Perform an experiment': getting_started/run_experiment.md
+     - 'Evaluate the results': getting_started/view_results.md
+  - 'Use':
+     - 'Create benchmarks': use/create_benchmark.md
+     - 'Tune network settings': use/tune_network.md
+     - 'Create experiments': use/create_experiment.md
+  - 'Extend':
+     - 'Add data federators': extend/add_federator.md
+     - 'Provide metric support': extend/support_metrics.md
+     - 'Add query evaluators': extend/add_evaluator.md
+     - 'Add evaluation metrics': extend/add_metrics.md
+     - 'Add dataset servers': extend/add_dataset_server.md
+  - 'References':
+     - 'API': references/api.md
+     - 'Command line': references/kobectl.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - search
+    - header.autohide
+
+markdown_extensions:
+  - admonition
+  - pymdownx.tabbed
+  - fenced_code
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - sane_lists
+
