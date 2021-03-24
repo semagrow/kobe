@@ -237,14 +237,13 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] ;
-  void:sparqlEndpoint <http://adm1.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm1.gssbench.svc:8080/Strabon/Query> ;
   void:triples "4621"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
   void:entities "358"^^xsd:int ;
   void:distinctSubjects "358"^^xsd:int ;
-  void:distinctObjects "994"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((15.99334621 46.83306121826183, 15.99334621 48.12062836, 17.16236115 48.12062836, 17.16236115 46.83306121826183, 15.99334621 46.83306121826183))"^^geo:wktLiteral .
+  void:distinctObjects "994"^^xsd:int .
 
 ###################################################################### GADM2
 
@@ -479,14 +478,13 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] ;
-  void:sparqlEndpoint <http://adm2.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm2.gssbench.svc:8080/Strabon/Query> ;
   void:triples "3682"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
   void:entities "286"^^xsd:int ;
   void:distinctSubjects "286"^^xsd:int ;
-  void:distinctObjects "826"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.65397167 46.37481689, 12.65397167 47.12885666, 15.05605221 47.12885666, 15.05605221 46.37481689, 12.65397167 46.37481689))"^^geo:wktLiteral .
+  void:distinctObjects "826"^^xsd:int .
 
 ###################################################################### GADM3
 
@@ -721,14 +719,13 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] ;
-  void:sparqlEndpoint <http://adm3.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm3.gssbench.svc:8080/Strabon/Query> ;
   void:triples "15597"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
   void:entities "1206"^^xsd:int ;
   void:distinctSubjects "1206"^^xsd:int ;
-  void:distinctObjects "3205"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((14.41055393 47.4217453, 14.41055393 49.01704407, 17.070072174072322 49.01704407, 17.070072174072322 47.4217453, 14.41055393 47.4217453))"^^geo:wktLiteral .
+  void:distinctObjects "3205"^^xsd:int .
 
 ###################################################################### GADM4
 
@@ -963,14 +960,13 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] ;
-  void:sparqlEndpoint <http://adm4.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm4.gssbench.svc:8080/Strabon/Query> ;
   void:triples "11848"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
   void:entities "916"^^xsd:int ;
   void:distinctSubjects "916"^^xsd:int ;
-  void:distinctObjects "2451"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.74912548 47.462608337402344, 12.74912548 48.772830963134766, 14.99431515 48.772830963134766, 14.99431515 47.462608337402344, 12.74912548 47.462608337402344))"^^geo:wktLiteral .
+  void:distinctObjects "2451"^^xsd:int .
 
 ###################################################################### GADM5
 
@@ -1205,14 +1201,13 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] ;
-  void:sparqlEndpoint <http://adm5.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm5.gssbench.svc:8080/Strabon/Query> ;
   void:triples "3252"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
   void:entities "252"^^xsd:int ;
   void:distinctSubjects "252"^^xsd:int ;
-  void:distinctObjects "739"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.075905799865666 46.94158554, 12.075905799865666 48.03981781005865, 13.98939991 48.03981781005865, 13.98939991 46.94158554, 12.075905799865666 46.94158554))"^^geo:wktLiteral .
+  void:distinctObjects "739"^^xsd:int .
 
 ###################################################################### GADM6
 
@@ -1447,14 +1442,13 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] ;
-  void:sparqlEndpoint <http://adm6.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm6.gssbench.svc:8080/Strabon/Query> ;
   void:triples "7781"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
   void:entities "602"^^xsd:int ;
   void:distinctSubjects "602"^^xsd:int ;
-  void:distinctObjects "1668"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((13.563186645507926 46.61191177, 13.563186645507926 47.82654190063488, 16.16966629028326 47.82654190063488, 16.16966629028326 46.61191177, 13.563186645507926 46.61191177))"^^geo:wktLiteral .
+  void:distinctObjects "1668"^^xsd:int .
 
 ###################################################################### GADM7
 
@@ -1689,14 +1683,13 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] ;
-  void:sparqlEndpoint <http://adm7.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm7.gssbench.svc:8080/Strabon/Query> ;
   void:triples "7481"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
   void:entities "578"^^xsd:int ;
   void:distinctSubjects "578"^^xsd:int ;
-  void:distinctObjects "1605"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((10.097385406494197 46.65433883666992, 10.097385406494197 47.74300766, 12.95786381 47.74300766, 12.95786381 46.65433883666992, 10.097385406494197 46.65433883666992))"^^geo:wktLiteral .
+  void:distinctObjects "1605"^^xsd:int .
 
 ###################################################################### GADM8
 
@@ -1931,14 +1924,13 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] ;
-  void:sparqlEndpoint <http://adm8.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm8.gssbench.svc:8080/Strabon/Query> ;
   void:triples "2761"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
   void:entities "214"^^xsd:int ;
   void:distinctSubjects "214"^^xsd:int ;
-  void:distinctObjects "625"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((9.53372383 46.8424263, 9.53372383 47.59598541259771, 10.23701096 47.59598541259771, 10.23701096 46.8424263, 9.53372383 46.8424263))"^^geo:wktLiteral .
+  void:distinctObjects "625"^^xsd:int .
 
 ###################################################################### GADM9
 
@@ -2173,14 +2165,13 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] ;
-  void:sparqlEndpoint <http://adm9.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm9.gssbench.svc:8080/Strabon/Query> ;
   void:triples "641"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
   void:entities "50"^^xsd:int ;
   void:distinctSubjects "50"^^xsd:int ;
-  void:distinctObjects "163"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((16.18627166748047 48.1214714050293, 16.18627166748047 48.3261604309082, 16.58042336 48.3261604309082, 16.58042336 48.1214714050293, 16.18627166748047 48.1214714050293))"^^geo:wktLiteral .
+  void:distinctObjects "163"^^xsd:int .
 
 ########################################################################################## INVEKOS1
 
@@ -2229,14 +2220,13 @@
     void:distinctObjects "119668"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/BU/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos1.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos1.gssbench.svc:8080/Strabon/Query> ;
   void:triples "837676"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "239336"^^xsd:integer ;
-  void:distinctObjects "478768"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((15.99334621 46.83306121826183, 15.99334621 48.12062836, 17.16236115 48.12062836, 17.16236115 46.83306121826183, 15.99334621 46.83306121826183))"^^geo:wktLiteral .
+  void:distinctObjects "478768"^^xsd:integer .
 
 ########################################################################################## INVEKOS2
 
@@ -2285,14 +2275,13 @@
     void:distinctObjects "189404"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/KA/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos2.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos2.gssbench.svc:8080/Strabon/Query> ;
   void:triples "1325828"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "378808"^^xsd:integer ;
-  void:distinctObjects "757712"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.65397167 46.37481689, 12.65397167 47.12885666, 15.05605221 47.12885666, 15.05605221 46.37481689, 12.65397167 46.37481689))"^^geo:wktLiteral .
+  void:distinctObjects "757712"^^xsd:integer .
 
 ########################################################################################## INVEKOS3
 
@@ -2341,14 +2330,13 @@
     void:distinctObjects "590900"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/NO/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos3.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos3.gssbench.svc:8080/Strabon/Query> ;
   void:triples "4136300"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "1181800"^^xsd:integer ;
-  void:distinctObjects "2363696"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((14.41055393 47.4217453, 14.41055393 49.01704407, 17.070072174072322 49.01704407, 17.070072174072322 47.4217453, 14.41055393 47.4217453))"^^geo:wktLiteral .
+  void:distinctObjects "2363696"^^xsd:integer .
 
 ########################################################################################## INVEKOS4
 
@@ -2397,14 +2385,13 @@
     void:distinctObjects "356390"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/OO/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos4.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos4.gssbench.svc:8080/Strabon/Query> ;
   void:triples "2494730"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "712780"^^xsd:integer ;
-  void:distinctObjects "1425656"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.74912548 47.462608337402344, 12.74912548 48.772830963134766, 14.99431515 48.772830963134766, 14.99431515 47.462608337402344, 12.74912548 47.462608337402344))"^^geo:wktLiteral .
+  void:distinctObjects "1425656"^^xsd:integer .
 
 ########################################################################################## INVEKOS5
 
@@ -2453,14 +2440,13 @@
     void:distinctObjects "146465"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/SZ/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos5.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos5.gssbench.svc:8080/Strabon/Query> ;
   void:triples "1025255"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "292930"^^xsd:integer ;
-  void:distinctObjects "585956"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.075905799865666 46.94158554, 12.075905799865666 48.03981781005865, 13.98939991 48.03981781005865, 13.98939991 46.94158554, 12.075905799865666 46.94158554))"^^geo:wktLiteral .
+  void:distinctObjects "585956"^^xsd:integer .
 
 ########################################################################################## INVEKOS6
 
@@ -2509,14 +2495,13 @@
     void:distinctObjects "332460"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/ST/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos6.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos6.gssbench.svc:8080/Strabon/Query> ;
   void:triples "2327220"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "664920"^^xsd:integer ;
-  void:distinctObjects "1329936"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((13.563186645507926 46.61191177, 13.563186645507926 47.82654190063488, 16.16966629028326 47.82654190063488, 16.16966629028326 46.61191177, 13.563186645507926 46.61191177))"^^geo:wktLiteral .
+  void:distinctObjects "1329936"^^xsd:integer .
 
 ########################################################################################## INVEKOS7
 
@@ -2565,14 +2550,13 @@
     void:distinctObjects "206275"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/TR/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos7.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos7.gssbench.svc:8080/Strabon/Query> ;
   void:triples "1443925"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "412550"^^xsd:integer ;
-  void:distinctObjects "825196"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((10.097385406494197 46.65433883666992, 10.097385406494197 47.74300766, 12.95786381 47.74300766, 12.95786381 46.65433883666992, 10.097385406494197 46.65433883666992))"^^geo:wktLiteral .
+  void:distinctObjects "825196"^^xsd:integer .
 
 ########################################################################################## INVEKOS8
 
@@ -2621,14 +2605,13 @@
     void:distinctObjects "64161"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/VO/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos8.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos8.gssbench.svc:8080/Strabon/Query> ;
   void:triples "449127"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "128322"^^xsd:integer ;
-  void:distinctObjects "256740"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((9.53372383 46.8424263, 9.53372383 47.59598541259771, 10.23701096 47.59598541259771, 10.23701096 46.8424263, 9.53372383 46.8424263))"^^geo:wktLiteral .
+  void:distinctObjects "256740"^^xsd:integer .
 
 ########################################################################################## INVEKOS9
 
@@ -2677,14 +2660,13 @@
     void:distinctObjects "2414"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/WI/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos9.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos9.gssbench.svc:8080/Strabon/Query> ;
   void:triples "16898"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "4828"^^xsd:integer ;
-  void:distinctObjects "9752"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((16.18627166748047 48.1214714050293, 16.18627166748047 48.3261604309082, 16.58042336 48.3261604309082, 16.58042336 48.1214714050293, 16.18627166748047 48.1214714050293))"^^geo:wktLiteral .
+  void:distinctObjects "9752"^^xsd:integer .
 
 ########################################################################################## SNOW1
 
@@ -2727,14 +2709,13 @@
     void:entities "1281"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/BU/" ;
   ] ;
-  void:sparqlEndpoint <http://snow1.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow1.gssbench.svc:8080/Strabon/Query> ;
   void:triples "6405"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
   void:entities "1281"^^xsd:int ;
   void:distinctSubjects "2562"^^xsd:int ;
-  void:distinctObjects "2604"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((15.99334621 46.83306121826183, 15.99334621 48.12062836, 17.16236115 48.12062836, 17.16236115 46.83306121826183, 15.99334621 46.83306121826183))"^^geo:wktLiteral .
+  void:distinctObjects "2604"^^xsd:int .
 
 ########################################################################################## SNOW2
 
@@ -2777,14 +2758,13 @@
     void:entities "7377"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/KA/" ;
   ] ;
-  void:sparqlEndpoint <http://snow2.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow2.gssbench.svc:8080/Strabon/Query> ;
   void:triples "36885"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
   void:entities "7377"^^xsd:int ;
   void:distinctSubjects "14754"^^xsd:int ;
-  void:distinctObjects "14796"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.65397167 46.37481689, 12.65397167 47.12885666, 15.05605221 47.12885666, 15.05605221 46.37481689, 12.65397167 46.37481689))"^^geo:wktLiteral .
+  void:distinctObjects "14796"^^xsd:int .
 
 ########################################################################################## SNOW3
 
@@ -2827,14 +2807,13 @@
     void:entities "7217"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/NO/" ;
   ] ;
-  void:sparqlEndpoint <http://snow3.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow3.gssbench.svc:8080/Strabon/Query> ;
   void:triples "36085"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
   void:entities "7217"^^xsd:int ;
   void:distinctSubjects "14434"^^xsd:int ;
-  void:distinctObjects "14476"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((14.41055393 47.4217453, 14.41055393 49.01704407, 17.070072174072322 49.01704407, 17.070072174072322 47.4217453, 14.41055393 47.4217453))"^^geo:wktLiteral .
+  void:distinctObjects "14476"^^xsd:int .
 
 ########################################################################################## SNOW4
 
@@ -2877,14 +2856,13 @@
     void:entities "6996"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/OO/" ;
   ] ;
-  void:sparqlEndpoint <http://snow4.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow4.gssbench.svc:8080/Strabon/Query> ;
   void:triples "34980"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
   void:entities "6996"^^xsd:int ;
   void:distinctSubjects "13992"^^xsd:int ;
-  void:distinctObjects "14034"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.74912548 47.462608337402344, 12.74912548 48.772830963134766, 14.99431515 48.772830963134766, 14.99431515 47.462608337402344, 12.74912548 47.462608337402344))"^^geo:wktLiteral .
+  void:distinctObjects "14034"^^xsd:int .
 
 ########################################################################################## SNOW5
 
@@ -2927,14 +2905,13 @@
     void:entities "9654"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/SZ/" ;
   ] ;
-  void:sparqlEndpoint <http://snow5.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow5.gssbench.svc:8080/Strabon/Query> ;
   void:triples "48270"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
   void:entities "9654"^^xsd:int ;
   void:distinctSubjects "19308"^^xsd:int ;
-  void:distinctObjects "19350"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.075905799865666 46.94158554, 12.075905799865666 48.03981781005865, 13.98939991 48.03981781005865, 13.98939991 46.94158554, 12.075905799865666 46.94158554))"^^geo:wktLiteral .
+  void:distinctObjects "19350"^^xsd:int .
 
 ########################################################################################## SNOW6
 
@@ -2977,14 +2954,13 @@
     void:entities "13806"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/ST/" ;
   ] ;
-  void:sparqlEndpoint <http://snow6.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow6.gssbench.svc:8080/Strabon/Query> ;
   void:triples "69030"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
   void:entities "13806"^^xsd:int ;
   void:distinctSubjects "27612"^^xsd:int ;
-  void:distinctObjects "27654"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((13.563186645507926 46.61191177, 13.563186645507926 47.82654190063488, 16.16966629028326 47.82654190063488, 16.16966629028326 46.61191177, 13.563186645507926 46.61191177))"^^geo:wktLiteral .
+  void:distinctObjects "27654"^^xsd:int .
 
 ########################################################################################## SNOW7
 
@@ -3027,14 +3003,13 @@
     void:entities "16606"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/TR/" ;
   ] ;
-  void:sparqlEndpoint <http://snow7.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow7.gssbench.svc:8080/Strabon/Query> ;
   void:triples "83030"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
   void:entities "16606"^^xsd:int ;
   void:distinctSubjects "33212"^^xsd:int ;
-  void:distinctObjects "33254"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((10.097385406494197 46.65433883666992, 10.097385406494197 47.74300766, 12.95786381 47.74300766, 12.95786381 46.65433883666992, 10.097385406494197 46.65433883666992))"^^geo:wktLiteral .
+  void:distinctObjects "33254"^^xsd:int .
 
 ########################################################################################## SNOW8
 
@@ -3077,14 +3052,13 @@
     void:entities "3191"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/VO/" ;
   ] ;
-  void:sparqlEndpoint <http://snow8.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow8.gssbench.svc:8080/Strabon/Query> ;
   void:triples "15955"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
   void:entities "3191"^^xsd:int ;
   void:distinctSubjects "6382"^^xsd:int ;
-  void:distinctObjects "6424"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((9.53372383 46.8424263, 9.53372383 47.59598541259771, 10.23701096 47.59598541259771, 10.23701096 46.8424263, 9.53372383 46.8424263))"^^geo:wktLiteral .
+  void:distinctObjects "6424"^^xsd:int .
 
 ########################################################################################## SNOW9
 
@@ -3127,11 +3101,10 @@
     void:entities "110"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/WI/" ;
   ] ;
-  void:sparqlEndpoint <http://snow9.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow9.gssbench.svc:8080/Strabon/Query> ;
   void:triples "550"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
   void:entities "110"^^xsd:int ;
   void:distinctSubjects "220"^^xsd:int ;
-  void:distinctObjects "262"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((16.18627166748047 48.1214714050293, 16.18627166748047 48.3261604309082, 16.58042336 48.3261604309082, 16.58042336 48.1214714050293, 16.18627166748047 48.1214714050293))"^^geo:wktLiteral .
+  void:distinctObjects "262"^^xsd:int .

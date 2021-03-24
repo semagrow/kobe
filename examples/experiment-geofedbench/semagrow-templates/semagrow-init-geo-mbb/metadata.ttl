@@ -237,7 +237,7 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] ;
-  void:sparqlEndpoint <http://adm1.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm1.gssbench.svc:8080/Strabon/Query> ;
   void:triples "4621"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
@@ -479,7 +479,7 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] ;
-  void:sparqlEndpoint <http://adm2.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm2.gssbench.svc:8080/Strabon/Query> ;
   void:triples "3682"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
@@ -721,7 +721,7 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] ;
-  void:sparqlEndpoint <http://adm3.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm3.gssbench.svc:8080/Strabon/Query> ;
   void:triples "15597"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
@@ -963,7 +963,7 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] ;
-  void:sparqlEndpoint <http://adm4.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm4.gssbench.svc:8080/Strabon/Query> ;
   void:triples "11848"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
@@ -1205,7 +1205,7 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] ;
-  void:sparqlEndpoint <http://adm5.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm5.gssbench.svc:8080/Strabon/Query> ;
   void:triples "3252"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
@@ -1447,7 +1447,7 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] ;
-  void:sparqlEndpoint <http://adm6.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm6.gssbench.svc:8080/Strabon/Query> ;
   void:triples "7781"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
@@ -1689,7 +1689,7 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] ;
-  void:sparqlEndpoint <http://adm7.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm7.gssbench.svc:8080/Strabon/Query> ;
   void:triples "7481"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
@@ -1931,7 +1931,7 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] ;
-  void:sparqlEndpoint <http://adm8.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm8.gssbench.svc:8080/Strabon/Query> ;
   void:triples "2761"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
@@ -2173,7 +2173,7 @@
     void:entities "1"^^xsd:int ;
     svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] ;
-  void:sparqlEndpoint <http://adm9.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://adm9.gssbench.svc:8080/Strabon/Query> ;
   void:triples "641"^^xsd:int ;
   void:properties "35"^^xsd:int ;
   void:classes "4"^^xsd:int ;
@@ -2229,7 +2229,7 @@
     void:distinctObjects "119668"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/BU/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos1.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos1.gssbench.svc:8080/Strabon/Query> ;
   void:triples "837676"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
@@ -2285,7 +2285,7 @@
     void:distinctObjects "189404"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/KA/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos2.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos2.gssbench.svc:8080/Strabon/Query> ;
   void:triples "1325828"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
@@ -2341,7 +2341,7 @@
     void:distinctObjects "590900"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/NO/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos3.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos3.gssbench.svc:8080/Strabon/Query> ;
   void:triples "4136300"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
@@ -2397,7 +2397,7 @@
     void:distinctObjects "356390"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/OO/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos4.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos4.gssbench.svc:8080/Strabon/Query> ;
   void:triples "2494730"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
@@ -2453,7 +2453,7 @@
     void:distinctObjects "146465"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/SZ/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos5.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos5.gssbench.svc:8080/Strabon/Query> ;
   void:triples "1025255"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
@@ -2509,7 +2509,7 @@
     void:distinctObjects "332460"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/ST/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos6.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos6.gssbench.svc:8080/Strabon/Query> ;
   void:triples "2327220"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
@@ -2565,7 +2565,7 @@
     void:distinctObjects "206275"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/TR/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos7.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos7.gssbench.svc:8080/Strabon/Query> ;
   void:triples "1443925"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
@@ -2621,7 +2621,7 @@
     void:distinctObjects "64161"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/VO/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos8.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos8.gssbench.svc:8080/Strabon/Query> ;
   void:triples "449127"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
@@ -2677,7 +2677,7 @@
     void:distinctObjects "2414"^^xsd:integer ;
     svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/WI/" ;
   ] ;
-  void:sparqlEndpoint <http://invekos9.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://invekos9.gssbench.svc:8080/Strabon/Query> ;
   void:triples "16898"^^xsd:integer ;
   void:properties "7"^^xsd:integer ;
   void:classes "0"^^xsd:integer ;
@@ -2727,7 +2727,7 @@
     void:entities "1281"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/BU/" ;
   ] ;
-  void:sparqlEndpoint <http://snow1.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow1.gssbench.svc:8080/Strabon/Query> ;
   void:triples "6405"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
@@ -2777,7 +2777,7 @@
     void:entities "7377"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/KA/" ;
   ] ;
-  void:sparqlEndpoint <http://snow2.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow2.gssbench.svc:8080/Strabon/Query> ;
   void:triples "36885"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
@@ -2827,7 +2827,7 @@
     void:entities "7217"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/NO/" ;
   ] ;
-  void:sparqlEndpoint <http://snow3.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow3.gssbench.svc:8080/Strabon/Query> ;
   void:triples "36085"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
@@ -2877,7 +2877,7 @@
     void:entities "6996"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/OO/" ;
   ] ;
-  void:sparqlEndpoint <http://snow4.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow4.gssbench.svc:8080/Strabon/Query> ;
   void:triples "34980"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
@@ -2927,7 +2927,7 @@
     void:entities "9654"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/SZ/" ;
   ] ;
-  void:sparqlEndpoint <http://snow5.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow5.gssbench.svc:8080/Strabon/Query> ;
   void:triples "48270"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
@@ -2977,7 +2977,7 @@
     void:entities "13806"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/ST/" ;
   ] ;
-  void:sparqlEndpoint <http://snow6.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow6.gssbench.svc:8080/Strabon/Query> ;
   void:triples "69030"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
@@ -3027,7 +3027,7 @@
     void:entities "16606"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/TR/" ;
   ] ;
-  void:sparqlEndpoint <http://snow7.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow7.gssbench.svc:8080/Strabon/Query> ;
   void:triples "83030"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
@@ -3077,7 +3077,7 @@
     void:entities "3191"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/VO/" ;
   ] ;
-  void:sparqlEndpoint <http://snow8.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow8.gssbench.svc:8080/Strabon/Query> ;
   void:triples "15955"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;
@@ -3127,7 +3127,7 @@
     void:entities "110"^^xsd:int ;
     svd:subjectRegexPattern "http://earthanalytics.eu/fs/WI/" ;
   ] ;
-  void:sparqlEndpoint <http://snow9.gssbench.svc:8080/strabon/Query> ;
+  void:sparqlEndpoint <http://snow9.gssbench.svc:8080/Strabon/Query> ;
   void:triples "550"^^xsd:int ;
   void:properties "5"^^xsd:int ;
   void:classes "1"^^xsd:int ;

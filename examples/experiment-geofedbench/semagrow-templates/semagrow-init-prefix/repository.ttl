@@ -12,6 +12,6 @@
          sail:sailType "semagrow:SemagrowSail" ;
          semagrow:metadataInit "/etc/default/semagrow/metadata.ttl" ;
          semagrow:executorBatchSize "1" ;
-	 semagrow:sourceSelectors "ASK"
+         semagrow:sourceSelectors "ASK,PREFIX"
       ]
    ] . 
