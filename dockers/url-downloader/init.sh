@@ -15,7 +15,7 @@ then
       cd toLoad
     
       echo "starting data downloading"
-      wget $DOWNLOAD_URL
+      wget --no-check-certificate $DOWNLOAD_URL
       echo "finished downloading"
       
       tar xzvf *.tar.gz
