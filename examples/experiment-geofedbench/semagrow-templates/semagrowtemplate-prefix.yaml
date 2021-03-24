@@ -10,7 +10,7 @@ spec:
       - containerPort: 8080
   port: 8080
   path: /SemaGrow/sparql
-  confFromFileImage: antru6/dummy
+  confFromFileImage: alpine:3
   inputDumpDir: /semagrow/input
   outputDumpDir: /semagrow/output
   confImage: antru6/semagrow-init-prefix
