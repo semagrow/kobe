@@ -1,17 +1,17 @@
 apiVersion: kobe.semagrow.org/v1alpha1
 kind: Experiment
 metadata:
-  name: gssbench-exp-a-mbb
+  name: gssbench-exp-basic
 spec:
   benchmark: gssbench
-  federatorName: semagrow-a-mbb
-  federatorTemplateRef: semagrowtemplate-a-mbb
+  federatorName: semagrow-basic
+  federatorTemplateRef: semagrowtemplate-basic
   evaluator:
     image: semagrow/kobe-sequential-evaluator
     env:
      - name: TIMEOUT
-       value: "1000000"
-  timesToRun: 1
+       value: "300000"
+  timesToRun: 3
   dryRun: false
   forceNewInit: false 
 
