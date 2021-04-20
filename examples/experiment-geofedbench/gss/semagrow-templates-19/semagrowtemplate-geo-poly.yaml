@@ -1,7 +1,7 @@
 apiVersion: kobe.semagrow.org/v1alpha1
 kind: FederatorTemplate
 metadata:
-  name: semagrowtemplate-prefix
+  name: semagrowtemplate-geo-poly
 spec:
   containers:
     - name: maincontainer 
@@ -13,7 +13,7 @@ spec:
   confFromFileImage: alpine:3
   inputDumpDir: /semagrow/input
   outputDumpDir: /semagrow/output
-  confImage: antru6/semagrow-init-prefix-2
+  confImage: antru6/semagrow-init-geo-poly-19
   inputDir: /input
   outputDir: /output
   fedConfDir: /etc/default/semagrow

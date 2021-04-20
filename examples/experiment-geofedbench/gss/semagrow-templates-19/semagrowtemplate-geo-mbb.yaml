@@ -13,7 +13,7 @@ spec:
   confFromFileImage: alpine:3
   inputDumpDir: /semagrow/input
   outputDumpDir: /semagrow/output
-  confImage: antru6/semagrow-init-geo-mbb-2
+  confImage: antru6/semagrow-init-geo-mbb-19
   inputDir: /input
   outputDir: /output
   fedConfDir: /etc/default/semagrow

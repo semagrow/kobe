@@ -3,7 +3,7 @@ kind: Benchmark
 metadata:apiVersion: kobe.semagrow.org/v1alpha1
 kind: Benchmark
 metadata:
-  name: gssbench2
+  name: gssbench
 spec:
   datasets:
     - name: adm1
