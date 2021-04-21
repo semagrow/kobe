@@ -8,111 +8,111 @@ spec:
   datasets:
     - name: adm1
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/adm1.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/adm1.tar.gz
       templateRef: strabontemplate
     - name: adm2
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/adm2.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/adm2.tar.gz
       templateRef: strabontemplate
     - name: adm3
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/adm3.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/adm3.tar.gz
       templateRef: strabontemplate
     - name: adm4
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/adm4.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/adm4.tar.gz
       templateRef: strabontemplate
     - name: adm5
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/adm5.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/adm5.tar.gz
       templateRef: strabontemplate
     - name: adm6
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/adm6.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/adm6.tar.gz
       templateRef: strabontemplate
     - name: adm7
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/adm7.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/adm7.tar.gz
       templateRef: strabontemplate
     - name: adm8
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/adm8.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/adm8.tar.gz
       templateRef: strabontemplate
     - name: adm9
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/adm9.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/adm9.tar.gz
       templateRef: strabontemplate
     - name: invekos1
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/invekos1.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/invekos1.tar.gz
       templateRef: strabontemplate
     - name: invekos2
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/invekos2.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/invekos2.tar.gz
       templateRef: strabontemplate
     - name: invekos3
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/invekos3.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/invekos3.tar.gz
       templateRef: strabontemplate
     - name: invekos4
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/invekos4.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/invekos4.tar.gz
       templateRef: strabontemplate
     - name: invekos5
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/invekos5.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/invekos5.tar.gz
       templateRef: strabontemplate
     - name: invekos6
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/invekos6.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/invekos6.tar.gz
       templateRef: strabontemplate
     - name: invekos7
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/invekos7.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/invekos7.tar.gz
       templateRef: strabontemplate
     - name: invekos8
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/invekos8.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/invekos8.tar.gz
       templateRef: strabontemplate
     - name: invekos9
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/invekos9.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/invekos9.tar.gz
       templateRef: strabontemplate
     - name: snow1
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/snow1.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/snow1.tar.gz
       templateRef: strabontemplate
     - name: snow2
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/snow2.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/snow2.tar.gz
       templateRef: strabontemplate
     - name: snow3
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/snow3.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/snow3.tar.gz
       templateRef: strabontemplate
     - name: snow4
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/snow4.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/snow4.tar.gz
       templateRef: strabontemplate
     - name: snow5
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/snow5.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/snow5.tar.gz
       templateRef: strabontemplate
     - name: snow6
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/snow6.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/snow6.tar.gz
       templateRef: strabontemplate
     - name: snow7
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/snow7.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/snow7.tar.gz
       templateRef: strabontemplate
     - name: snow8
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/snow8.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/snow8.tar.gz
       templateRef: strabontemplate
     - name: snow9
       files:
-        - url: https://users.iit.demokritos.gr/~antru/dumps/gss/snow9.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gss/snow9.tar.gz
       templateRef: strabontemplate
   queries:
     - name: GQ1
