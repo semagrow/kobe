@@ -244,7 +244,7 @@
   void:entities "358"^^xsd:int ;
   void:distinctSubjects "358"^^xsd:int ;
   void:distinctObjects "994"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((15.99334621 46.83306121826183, 15.99334621 48.12062836, 17.16236115 48.12062836, 17.16236115 46.83306121826183, 15.99334621 46.83306121826183))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((15.99334621 46.83306121826183, 15.99334621 48.12062836, 17.16236115 48.12062836, 17.16236115 46.83306121826183, 15.99334621 46.83306121826183))"^^geo:wktLiteral .
 
 ###################################################################### GADM2
 
@@ -486,7 +486,7 @@
   void:entities "286"^^xsd:int ;
   void:distinctSubjects "286"^^xsd:int ;
   void:distinctObjects "826"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.65397167 46.37481689, 12.65397167 47.12885666, 15.05605221 47.12885666, 15.05605221 46.37481689, 12.65397167 46.37481689))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.65397167 46.37481689, 12.65397167 47.12885666, 15.05605221 47.12885666, 15.05605221 46.37481689, 12.65397167 46.37481689))"^^geo:wktLiteral .
 
 ###################################################################### GADM3
 
@@ -728,7 +728,7 @@
   void:entities "1206"^^xsd:int ;
   void:distinctSubjects "1206"^^xsd:int ;
   void:distinctObjects "3205"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((14.41055393 47.4217453, 14.41055393 49.01704407, 17.070072174072322 49.01704407, 17.070072174072322 47.4217453, 14.41055393 47.4217453))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((14.41055393 47.4217453, 14.41055393 49.01704407, 17.070072174072322 49.01704407, 17.070072174072322 47.4217453, 14.41055393 47.4217453))"^^geo:wktLiteral .
 
 ###################################################################### GADM4
 
@@ -970,7 +970,7 @@
   void:entities "916"^^xsd:int ;
   void:distinctSubjects "916"^^xsd:int ;
   void:distinctObjects "2451"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.74912548 47.462608337402344, 12.74912548 48.772830963134766, 14.99431515 48.772830963134766, 14.99431515 47.462608337402344, 12.74912548 47.462608337402344))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.74912548 47.462608337402344, 12.74912548 48.772830963134766, 14.99431515 48.772830963134766, 14.99431515 47.462608337402344, 12.74912548 47.462608337402344))"^^geo:wktLiteral .
 
 ###################################################################### GADM5
 
@@ -1212,7 +1212,7 @@
   void:entities "252"^^xsd:int ;
   void:distinctSubjects "252"^^xsd:int ;
   void:distinctObjects "739"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.075905799865666 46.94158554, 12.075905799865666 48.03981781005865, 13.98939991 48.03981781005865, 13.98939991 46.94158554, 12.075905799865666 46.94158554))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.075905799865666 46.94158554, 12.075905799865666 48.03981781005865, 13.98939991 48.03981781005865, 13.98939991 46.94158554, 12.075905799865666 46.94158554))"^^geo:wktLiteral .
 
 ###################################################################### GADM6
 
@@ -1454,7 +1454,7 @@
   void:entities "602"^^xsd:int ;
   void:distinctSubjects "602"^^xsd:int ;
   void:distinctObjects "1668"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((13.563186645507926 46.61191177, 13.563186645507926 47.82654190063488, 16.16966629028326 47.82654190063488, 16.16966629028326 46.61191177, 13.563186645507926 46.61191177))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((13.563186645507926 46.61191177, 13.563186645507926 47.82654190063488, 16.16966629028326 47.82654190063488, 16.16966629028326 46.61191177, 13.563186645507926 46.61191177))"^^geo:wktLiteral .
 
 ###################################################################### GADM7
 
@@ -1696,7 +1696,7 @@
   void:entities "578"^^xsd:int ;
   void:distinctSubjects "578"^^xsd:int ;
   void:distinctObjects "1605"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((10.097385406494197 46.65433883666992, 10.097385406494197 47.74300766, 12.95786381 47.74300766, 12.95786381 46.65433883666992, 10.097385406494197 46.65433883666992))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((10.097385406494197 46.65433883666992, 10.097385406494197 47.74300766, 12.95786381 47.74300766, 12.95786381 46.65433883666992, 10.097385406494197 46.65433883666992))"^^geo:wktLiteral .
 
 ###################################################################### GADM8
 
@@ -1938,7 +1938,7 @@
   void:entities "214"^^xsd:int ;
   void:distinctSubjects "214"^^xsd:int ;
   void:distinctObjects "625"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((9.53372383 46.8424263, 9.53372383 47.59598541259771, 10.23701096 47.59598541259771, 10.23701096 46.8424263, 9.53372383 46.8424263))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((9.53372383 46.8424263, 9.53372383 47.59598541259771, 10.23701096 47.59598541259771, 10.23701096 46.8424263, 9.53372383 46.8424263))"^^geo:wktLiteral .
 
 ###################################################################### GADM9
 
@@ -2180,7 +2180,7 @@
   void:entities "50"^^xsd:int ;
   void:distinctSubjects "50"^^xsd:int ;
   void:distinctObjects "163"^^xsd:int ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((16.18627166748047 48.1214714050293, 16.18627166748047 48.3261604309082, 16.58042336 48.3261604309082, 16.58042336 48.1214714050293, 16.18627166748047 48.1214714050293))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((16.18627166748047 48.1214714050293, 16.18627166748047 48.3261604309082, 16.58042336 48.3261604309082, 16.58042336 48.1214714050293, 16.18627166748047 48.1214714050293))"^^geo:wktLiteral .
 
 ########################################################################################## INVEKOS1
 
@@ -2236,7 +2236,7 @@
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "239336"^^xsd:integer ;
   void:distinctObjects "478768"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((15.99334621 46.83306121826183, 15.99334621 48.12062836, 17.16236115 48.12062836, 17.16236115 46.83306121826183, 15.99334621 46.83306121826183))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((15.99334621 46.83306121826183, 15.99334621 48.12062836, 17.16236115 48.12062836, 17.16236115 46.83306121826183, 15.99334621 46.83306121826183))"^^geo:wktLiteral .
 
 ########################################################################################## INVEKOS2
 
@@ -2292,7 +2292,7 @@
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "378808"^^xsd:integer ;
   void:distinctObjects "757712"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.65397167 46.37481689, 12.65397167 47.12885666, 15.05605221 47.12885666, 15.05605221 46.37481689, 12.65397167 46.37481689))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.65397167 46.37481689, 12.65397167 47.12885666, 15.05605221 47.12885666, 15.05605221 46.37481689, 12.65397167 46.37481689))"^^geo:wktLiteral .
 
 ########################################################################################## INVEKOS3
 
@@ -2348,7 +2348,7 @@
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "1181800"^^xsd:integer ;
   void:distinctObjects "2363696"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((14.41055393 47.4217453, 14.41055393 49.01704407, 17.070072174072322 49.01704407, 17.070072174072322 47.4217453, 14.41055393 47.4217453))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((14.41055393 47.4217453, 14.41055393 49.01704407, 17.070072174072322 49.01704407, 17.070072174072322 47.4217453, 14.41055393 47.4217453))"^^geo:wktLiteral .
 
 ########################################################################################## INVEKOS4
 
@@ -2404,7 +2404,7 @@
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "712780"^^xsd:integer ;
   void:distinctObjects "1425656"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.74912548 47.462608337402344, 12.74912548 48.772830963134766, 14.99431515 48.772830963134766, 14.99431515 47.462608337402344, 12.74912548 47.462608337402344))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.74912548 47.462608337402344, 12.74912548 48.772830963134766, 14.99431515 48.772830963134766, 14.99431515 47.462608337402344, 12.74912548 47.462608337402344))"^^geo:wktLiteral .
 
 ########################################################################################## INVEKOS5
 
@@ -2460,7 +2460,7 @@
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "292930"^^xsd:integer ;
   void:distinctObjects "585956"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.075905799865666 46.94158554, 12.075905799865666 48.03981781005865, 13.98939991 48.03981781005865, 13.98939991 46.94158554, 12.075905799865666 46.94158554))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((12.075905799865666 46.94158554, 12.075905799865666 48.03981781005865, 13.98939991 48.03981781005865, 13.98939991 46.94158554, 12.075905799865666 46.94158554))"^^geo:wktLiteral .
 
 ########################################################################################## INVEKOS6
 
@@ -2516,7 +2516,7 @@
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "664920"^^xsd:integer ;
   void:distinctObjects "1329936"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((13.563186645507926 46.61191177, 13.563186645507926 47.82654190063488, 16.16966629028326 47.82654190063488, 16.16966629028326 46.61191177, 13.563186645507926 46.61191177))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((13.563186645507926 46.61191177, 13.563186645507926 47.82654190063488, 16.16966629028326 47.82654190063488, 16.16966629028326 46.61191177, 13.563186645507926 46.61191177))"^^geo:wktLiteral .
 
 ########################################################################################## INVEKOS7
 
@@ -2572,7 +2572,7 @@
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "412550"^^xsd:integer ;
   void:distinctObjects "825196"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((10.097385406494197 46.65433883666992, 10.097385406494197 47.74300766, 12.95786381 47.74300766, 12.95786381 46.65433883666992, 10.097385406494197 46.65433883666992))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((10.097385406494197 46.65433883666992, 10.097385406494197 47.74300766, 12.95786381 47.74300766, 12.95786381 46.65433883666992, 10.097385406494197 46.65433883666992))"^^geo:wktLiteral .
 
 ########################################################################################## INVEKOS8
 
@@ -2628,7 +2628,7 @@
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "128322"^^xsd:integer ;
   void:distinctObjects "256740"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((9.53372383 46.8424263, 9.53372383 47.59598541259771, 10.23701096 47.59598541259771, 10.23701096 46.8424263, 9.53372383 46.8424263))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((9.53372383 46.8424263, 9.53372383 47.59598541259771, 10.23701096 47.59598541259771, 10.23701096 46.8424263, 9.53372383 46.8424263))"^^geo:wktLiteral .
 
 ########################################################################################## INVEKOS9
 
@@ -2684,7 +2684,7 @@
   void:entities "0"^^xsd:integer ;
   void:distinctSubjects "4828"^^xsd:integer ;
   void:distinctObjects "9752"^^xsd:integer ;
-  svd:boundingPolygon "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((16.18627166748047 48.1214714050293, 16.18627166748047 48.3261604309082, 16.58042336 48.3261604309082, 16.58042336 48.1214714050293, 16.18627166748047 48.1214714050293))"^^geo:wktLiteral .
+  svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((16.18627166748047 48.1214714050293, 16.18627166748047 48.3261604309082, 16.58042336 48.3261604309082, 16.58042336 48.1214714050293, 16.18627166748047 48.1214714050293))"^^geo:wktLiteral .
 
 ########################################################################################## SNOW-ALL
 
