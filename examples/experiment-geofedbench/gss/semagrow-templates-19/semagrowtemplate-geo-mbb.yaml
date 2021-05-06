@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: maincontainer 
-      image: semagrow/semagrow:gss
+      image: semagrow/semagrow:2.2.0
       ports:
       - containerPort: 8080
   port: 8080
@@ -13,7 +13,7 @@ spec:
   confFromFileImage: alpine:3
   inputDumpDir: /semagrow/input
   outputDumpDir: /semagrow/output
-  confImage: antru6/semagrow-init-geo-mbb-19
+  confImage: antru6/semagrow-init:gss-19-geo-mbb
   inputDir: /input
   outputDir: /output
   fedConfDir: /etc/default/semagrow

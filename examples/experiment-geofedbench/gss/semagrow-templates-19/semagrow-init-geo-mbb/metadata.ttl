@@ -1,5 +1,5 @@
 @prefix void: <http://rdfs.org/ns/void#> .
-@prefix svd: <http://rdf.iit.demokritos.gr/2013/sevod#> .
+@prefix svd: <http://www.w3.org/2015/03/sevod#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
