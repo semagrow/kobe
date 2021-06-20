@@ -10,13 +10,13 @@ do
   sleep 3
 done
 
-until curl --head localhost:15000
-do
-  echo "Waiting for Sidecar"
-  sleep 3
-done
+#until curl --head localhost:15000
+#do
+#  echo "Waiting for Sidecar"
+#  sleep 3
+#done
 
-sleep 10
+#sleep 10
 
 #
 # Downloading the dataset
@@ -67,8 +67,8 @@ echo "Loading the dataset"
 
 cd /kobe/dataset/$DATASET_NAME/dump
 
-createdb -U postgres semdb
+createdb -U postgres $DATASET_NAME
 
-cat *.sql | psql -U postgres -d semdb
+cat *.sql | psql -U postgres -d $DATASET_NAME
 
 echo "done"
