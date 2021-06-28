@@ -1,0 +1,31 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix svd: <http://www.w3.org/2015/03/sevod#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a void:Dataset ;
+    void:propertyPartition [
+    void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
+    void:triples "5"^^xsd:integer ;
+    void:distinctSubjects "5"^^xsd:integer ;
+    void:distinctObjects "5"^^xsd:integer ;
+    svd:subjectRegexPattern "http://rdf.semagrow.org/pgm/toy3/resource/"^^xsd:string ;
+  ] , [
+    void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+    void:triples "5"^^xsd:int ;
+    void:distinctSubjects "5"^^xsd:int ;
+    void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://rdf.semagrow.org/pgm/toy3/resource/"^^xsd:string ;
+    svd:objectRegexPattern "http://rdf.semagrow.org/pgm/toy3/geometry"^^xsd:string ;
+  ] ;
+  void:classPartition [
+    void:class <http://rdf.semagrow.org/pgm/toy3/geometry> ;
+    void:entities "5"^^xsd:int ;
+    svd:subjectRegexPattern "http://rdf.semagrow.org/pgm/toy3/resource/"^^xsd:string ;
+  ] ;
+  void:sparqlEndpoint <postgis://toy3.toybench-postgis.svc:5432/toy3> ;
+  void:triples "10"^^xsd:integer ;
+  void:properties "2"^^xsd:integer ;
+  void:classes "1"^^xsd:integer ;
+  void:entities "10"^^xsd:integer ;
+  void:distinctSubjects "10"^^xsd:integer ;
+  void:distinctObjects "6"^^xsd:integer .

@@ -1,0 +1,20 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: FederatorTemplate
+metadata:
+  name: semagrowpgtoytemplate
+spec:
+  containers:
+    - name: maincontainer 
+      image: nefelipk/semagrow-postgis-opt
+      ports:
+      - containerPort: 8080
+  port: 8080
+  path: /SemaGrow/sparql
+  confFromFileImage: alpine:3
+  inputDumpDir: /semagrow/input
+  outputDumpDir: /semagrow/output
+  confImage: antru6/semagrow-init-pgtoy
+  inputDir: /input
+  outputDir: /output
+  fedConfDir: /etc/default/semagrow
+ 

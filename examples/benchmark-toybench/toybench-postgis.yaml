@@ -1,0 +1,17 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Benchmark
+metadata:
+  name: toybench-postgis
+spec:
+  datasets:
+    - name: toy3
+      files:
+        - url: https://users.iit.demokritos.gr/~antru/dumps/toy3.tar.gz
+      templateRef: postgistemplate
+  queries:
+    - name: tq4
+      language: sparql
+      queryString: "SELECT * WHERE {
+        ?s <http://www.opengis.net/ont/geosparql#asWKT> ?w .
+      }"
+
