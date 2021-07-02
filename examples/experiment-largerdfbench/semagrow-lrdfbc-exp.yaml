@@ -1,0 +1,14 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Experiment
+metadata:
+  name: semagrow-lrdfbc-exp
+spec:
+  benchmark: largerdbench-complex
+  federatorName: semagrow-lrdfbc
+  federatorTemplateRef: semagrowtemplate
+  evaluator:
+    image: semagrow/kobe-sequential-evaluator
+  timesToRun: 3
+  dryRun: false
+  forceNewInit: false 
+

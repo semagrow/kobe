@@ -72,8 +72,6 @@ type ReconcileBenchmark struct {
 
 // Reconcile reads that state of the cluster for a Benchmark object and makes changes based on the state read
 // and what is in the Benchmark.Spec
-// TODO(user): Modify this Reconcile function to implement your Controller logic.  This example creates
-// a Pod as an example
 // Note:
 // The Controller will requeue the Request to be processed again if the returned error is non-nil or
 // Result.Requeue is true, otherwise upon completion it will remove the work from the queue.
@@ -103,9 +101,37 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		return reconcile.Result{}, err
 	}
 
-	//create the new namespace
-	//istio label for the namespace
+	//check if the benchmark has already set its status to use or not istio
+	//if not then check if there is no network topology and federation connection set for all datasets in this benchmark
+	//if yes set the status of the benchmark to not use istio
+	//this tells the operator to not use istio injection flag and not create virtual services
+	//this also informs any federation that will be tested on this benchmark to not create a virtual service as well
+	if (instance.Status.Istio != api.IstioNotUse) && (instance.Status.Istio != api.IstioUse) {
+		FlagUse := false
+		for _, dataset := range instance.Spec.Datasets {
+			if (dataset.NetworkTopology != nil) || (len(dataset.NetworkTopology) != 0) || (dataset.FederatorConnection != nil) {
+				FlagUse = true
+			}
+		}
+		if FlagUse == true {
+			instance.Status.Istio = api.IstioUse
+		} else {
+			instance.Status.Istio = api.IstioNotUse
+		}
+		err = r.client.Status().Update(context.TODO(), instance)
+		if err != nil {
+			reqLogger.Info("Failed to update the istio status field")
+			return reconcile.Result{RequeueAfter: 1000000000}, err
+		}
+		return reconcile.Result{RequeueAfter: 1000000000}, nil
+	}
+	// new namespace with istio enabled flag
 	ns := &corev1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: instance.Name, Labels: map[string]string{"istio-injection": "enabled"}}}
+	//create the new namespace
+	if instance.Status.Istio == api.IstioNotUse {
+		//istio label set to disabled for the namespace
+		ns = &corev1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: instance.Name, Labels: map[string]string{"istio-injection": "disabled"}}}
+	}
 	config, err := clientcmd.BuildConfigFromFlags("", "")
 	// if err != nil {
 	// 	reqLogger.Info("Failed client connection: %v\n", err)
@@ -126,7 +152,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 	//add finalizer to the resource . If the benchmark gets deleted the finalizer logic deletes the entire benchmark namespace
 	//this automatically collects EVERYTHING related to this benchmark including any running federators from experiments.
 	//it leaves experiments
-	nsFinalizer := "delete.the.fking.ns.kobe"
+	nsFinalizer := "delete.the.benchmark.ns"
 
 	// examine DeletionTimestamp to determine if object is under deletion
 	if instance.ObjectMeta.DeletionTimestamp.IsZero() {
@@ -156,7 +182,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		// Stop reconciliation as the item is being deleted
 		return reconcile.Result{}, nil
 	}
-	reqLogger.Info("NOW I LL CHECK ABOUT THE CONFIG MAP\n")
+	reqLogger.Info("Checking if the config map exists for the queriess. \n")
 	//check if config map exists else create it
 	//config map contains the queries assosciated with this benchmark setup in seperate files .
 	foundConfig := &corev1.ConfigMap{}
@@ -173,7 +199,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		configMap := r.newConfigMapForQueries(instance, querymap)
 		err := r.client.Create(context.TODO(), configMap)
 		if err != nil {
-			reqLogger.Info("FAILED to create the configmap for this set of queries for the benchmark")
+			reqLogger.Info("Failed to create the configmap for this set of queries for the benchmark")
 			return reconcile.Result{}, err
 		}
 		return reconcile.Result{Requeue: true}, nil
@@ -194,7 +220,7 @@ func (r *ReconcileBenchmark) Reconcile(request reconcile.Request) (reconcile.Res
 		}
 	}
 
-	reqLogger.Info("FINISHED RECONCILING LOOP FOR BENCHMARK SUCCESSFULLY\n")
+	reqLogger.Info("Finished reconciling loop for this benchmark successfully\n")
 	return reconcile.Result{}, nil
 }
 
@@ -233,7 +259,7 @@ func ensureNFS(client client.Client, ns string) (bool, error) {
 		return true, nil
 	}
 
-	//check for  the nfs pod if it exist and wait if not
+	//check for the nfs pod if it exist and wait if not
 	nfsPodFound := &corev1.Pod{}
 	err = client.Get(context.TODO(), types.NamespacedName{Name: "kobenfs", Namespace: ns}, nfsPodFound)
 	if err != nil && errors.IsNotFound(err) {

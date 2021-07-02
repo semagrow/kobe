@@ -1,0 +1,267 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Benchmark
+metadata:
+  name: geofedbench
+spec:
+  datasets:
+    - name: lucas-all
+      files:
+        - url: https://users.iit.demokritos.gr/~nefelipk/dumps/lucas-all.tar.gz
+      templateRef: strabontemplate
+    - name: invekos-all
+      files:
+        - url: https://users.iit.demokritos.gr/~nefelipk/dumps/invekos-all.tar.gz
+      templateRef: strabontemplate
+  queries:
+    - name: CQ1a
+      language: sparql
+      queryString: 'PREFIX lucas: <http://deg.iit.demokritos.gr/lucas/>
+      PREFIX lucas_r: <http://deg.iit.demokritos.gr/lucas/resource/>
+      PREFIX invekos: <http://deg.iit.demokritos.gr/invekos/>
+      PREFIX lictm: <http://deg.iit.demokritos.gr/>
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+      PREFIX opengis: <http://www.opengis.net/def/uom/OGC/1.0/>
+      
+      SELECT * WHERE {
+        {
+          SELECT * WHERE {
+            lucas_r:5245 geo:hasGeometry ?l_geom_id .
+            ?l_geom_id geo:asWKT ?l_geom .
+            ?inv invekos:hasCropTypeNumber ?i_ctype .
+            ?inv geo:hasGeometry ?i_geom_id .
+            ?i_geom_id geo:asWKT ?i_geom .
+            BIND(geof:distance(?l_geom,?i_geom,opengis:metre) as ?distance) .
+            FILTER(?distance < 10) .
+          }
+          ORDER BY ASC(?distance)
+          LIMIT 1
+        }
+        lucas_r:5245 lucas:hasLC1 ?lc1 .
+        lucas_r:5245 lucas:hasLC1_SPEC ?lc1_sp .
+        ?c lictm:lucasLC1 ?lc1 .
+        ?c lictm:lucasLC1_spec ?lc1_sp .
+        ?c lictm:invekosCropTypeNumber ?l_ctype .
+        FILTER(?l_ctype = ?i_ctype) .
+      }'
+    - name: CQ1b
+      language: sparql
+      queryString: 'PREFIX lucas: <http://deg.iit.demokritos.gr/lucas/>
+      PREFIX lucas_r: <http://deg.iit.demokritos.gr/lucas/resource/>
+      PREFIX invekos: <http://deg.iit.demokritos.gr/invekos/>
+      PREFIX lictm: <http://deg.iit.demokritos.gr/>
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+      PREFIX opengis: <http://www.opengis.net/def/uom/OGC/1.0/>
+      
+      SELECT * WHERE {
+        {
+          SELECT * WHERE {
+            lucas_r:8653 geo:hasGeometry ?l_geom_id .
+            ?l_geom_id geo:asWKT ?l_geom .
+            ?inv invekos:hasCropTypeNumber ?i_ctype .
+            ?inv geo:hasGeometry ?i_geom_id .
+            ?i_geom_id geo:asWKT ?i_geom .
+            BIND(geof:distance(?l_geom,?i_geom,opengis:metre) as ?distance) .
+            FILTER(?distance < 10) .
+          }
+          ORDER BY ASC(?distance)
+          LIMIT 1
+        }
+        lucas_r:8653 lucas:hasLC1 ?lc1 .
+        lucas_r:8653 lucas:hasLC1_SPEC ?lc1_sp .
+        ?c lictm:lucasLC1 ?lc1 .
+        ?c lictm:lucasLC1_spec ?lc1_sp .
+        ?c lictm:invekosCropTypeNumber ?l_ctype .
+        FILTER(?l_ctype = ?i_ctype) .
+      }'
+    - name: CQ1c
+      language: sparql
+      queryString: 'PREFIX lucas: <http://deg.iit.demokritos.gr/lucas/>
+      PREFIX lucas_r: <http://deg.iit.demokritos.gr/lucas/resource/>
+      PREFIX invekos: <http://deg.iit.demokritos.gr/invekos/>
+      PREFIX lictm: <http://deg.iit.demokritos.gr/>
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+      PREFIX opengis: <http://www.opengis.net/def/uom/OGC/1.0/>
+      
+      SELECT * WHERE {
+        {
+          SELECT * WHERE {
+            lucas_r:7077 geo:hasGeometry ?l_geom_id .
+            ?l_geom_id geo:asWKT ?l_geom .
+            ?inv invekos:hasCropTypeNumber ?i_ctype .
+            ?inv geo:hasGeometry ?i_geom_id .
+            ?i_geom_id geo:asWKT ?i_geom .
+            BIND(geof:distance(?l_geom,?i_geom,opengis:metre) as ?distance) .
+            FILTER(?distance < 10) .
+          }
+          ORDER BY ASC(?distance)
+          LIMIT 1
+        }
+        lucas_r:7077 lucas:hasLC1 ?lc1 .
+        lucas_r:7077 lucas:hasLC1_SPEC ?lc1_sp .
+        ?c lictm:lucasLC1 ?lc1 .
+        ?c lictm:lucasLC1_spec ?lc1_sp .
+        ?c lictm:invekosCropTypeNumber ?l_ctype .
+        FILTER(?l_ctype = ?i_ctype) .
+      }'
+    - name: CQ2a
+      language: sparql
+      queryString: 'PREFIX lucas: <http://deg.iit.demokritos.gr/lucas/>
+      PREFIX lucas_r: <http://deg.iit.demokritos.gr/lucas/resource/>
+      PREFIX invekos: <http://deg.iit.demokritos.gr/invekos/>
+      PREFIX lictm: <http://deg.iit.demokritos.gr/>
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+      PREFIX opengis: <http://www.opengis.net/def/uom/OGC/1.0/>
+      
+      SELECT * WHERE {
+        {
+          SELECT * WHERE {
+            lucas_r:2542 geo:hasGeometry ?l_geom_id .
+            ?l_geom_id geo:asWKT ?l_geom .
+            ?inv invekos:hasCropTypeNumber ?i_ctype .
+            ?inv geo:hasGeometry ?i_geom_id .
+            ?i_geom_id geo:asWKT ?i_geom .
+            BIND(geof:distance(?l_geom,?i_geom,opengis:metre) as ?distance) .
+            FILTER(?distance < 10) .
+          }
+          ORDER BY ASC(?distance)
+          LIMIT 1
+        }
+        FILTER NOT EXISTS {
+          lucas_r:2542 lucas:hasLC1 ?lc1 .
+          lucas_r:2542 lucas:hasLC1_SPEC ?lc1_sp .
+          ?c lictm:lucasLC1 ?lc1 .
+          ?c lictm:lucasLC1_spec ?lc1_sp .
+          ?c lictm:invekosCropTypeNumber ?l_ctype .
+          FILTER(?l_ctype = ?i_ctype) .
+        }
+      }'
+    - name: CQ2b
+      language: sparql
+      queryString: 'PREFIX lucas: <http://deg.iit.demokritos.gr/lucas/>
+      PREFIX lucas_r: <http://deg.iit.demokritos.gr/lucas/resource/>
+      PREFIX invekos: <http://deg.iit.demokritos.gr/invekos/>
+      PREFIX lictm: <http://deg.iit.demokritos.gr/>
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+      PREFIX opengis: <http://www.opengis.net/def/uom/OGC/1.0/>
+      
+      SELECT * WHERE {
+        {
+          SELECT * WHERE {
+            lucas_r:8538 geo:hasGeometry ?l_geom_id .
+            ?l_geom_id geo:asWKT ?l_geom .
+            ?inv invekos:hasCropTypeNumber ?i_ctype .
+            ?inv geo:hasGeometry ?i_geom_id .
+            ?i_geom_id geo:asWKT ?i_geom .
+            BIND(geof:distance(?l_geom,?i_geom,opengis:metre) as ?distance) .
+            FILTER(?distance < 10) .
+          }
+          ORDER BY ASC(?distance)
+          LIMIT 1
+        }
+        FILTER NOT EXISTS {
+          lucas_r:8538 lucas:hasLC1 ?lc1 .
+          lucas_r:8538 lucas:hasLC1_SPEC ?lc1_sp .
+          ?c lictm:lucasLC1 ?lc1 .
+          ?c lictm:lucasLC1_spec ?lc1_sp .
+          ?c lictm:invekosCropTypeNumber ?l_ctype .
+          FILTER(?l_ctype = ?i_ctype) .
+        }
+      }'
+    - name: CQ2c
+      language: sparql
+      queryString: 'PREFIX lucas: <http://deg.iit.demokritos.gr/lucas/>
+      PREFIX lucas_r: <http://deg.iit.demokritos.gr/lucas/resource/>
+      PREFIX invekos: <http://deg.iit.demokritos.gr/invekos/>
+      PREFIX lictm: <http://deg.iit.demokritos.gr/>
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+      PREFIX opengis: <http://www.opengis.net/def/uom/OGC/1.0/>
+      
+      SELECT * WHERE {
+        {
+          SELECT * WHERE {
+            lucas_r:5151 geo:hasGeometry ?l_geom_id .
+            ?l_geom_id geo:asWKT ?l_geom .
+            ?inv invekos:hasCropTypeNumber ?i_ctype .
+            ?inv geo:hasGeometry ?i_geom_id .
+            ?i_geom_id geo:asWKT ?i_geom .
+            BIND(geof:distance(?l_geom,?i_geom,opengis:metre) as ?distance) .
+            FILTER(?distance < 10) .
+          }
+          ORDER BY ASC(?distance)
+          LIMIT 1
+        }
+        FILTER NOT EXISTS {
+          lucas_r:5151 lucas:hasLC1 ?lc1 .
+          lucas_r:5151 lucas:hasLC1_SPEC ?lc1_sp .
+          ?c lictm:lucasLC1 ?lc1 .
+          ?c lictm:lucasLC1_spec ?lc1_sp .
+          ?c lictm:invekosCropTypeNumber ?l_ctype .
+          FILTER(?l_ctype = ?i_ctype) .
+        }
+      }'
+    - name: CQ3a
+      language: sparql
+      queryString: 'PREFIX lucas: <http://deg.iit.demokritos.gr/lucas/>
+      PREFIX lucas_r: <http://deg.iit.demokritos.gr/lucas/resource/>
+      PREFIX invekos: <http://deg.iit.demokritos.gr/invekos/>
+      PREFIX lictm: <http://deg.iit.demokritos.gr/>
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+      PREFIX opengis: <http://www.opengis.net/def/uom/OGC/1.0/>
+      SELECT * WHERE {
+        lucas_r:2239 lucas:hasLC1 ?lc1 .
+        FILTER NOT EXISTS {
+          lucas_r:2239 geo:hasGeometry ?l_geom_id .
+          ?l_geom_id geo:asWKT ?l_geom .
+          ?inv invekos:hasCropTypeNumber ?i_ctype .
+          ?inv geo:hasGeometry ?i_geom_id .
+          ?i_geom_id geo:asWKT ?i_geom .
+          FILTER (geof:distance(?l_geom,?i_geom,opengis:metre) < 10) .
+        }
+      }'
+    - name: CQ3b
+      language: sparql
+      queryString: 'PREFIX lucas: <http://deg.iit.demokritos.gr/lucas/>
+      PREFIX lucas_r: <http://deg.iit.demokritos.gr/lucas/resource/>
+      PREFIX invekos: <http://deg.iit.demokritos.gr/invekos/>
+      PREFIX lictm: <http://deg.iit.demokritos.gr/>
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+      PREFIX opengis: <http://www.opengis.net/def/uom/OGC/1.0/>
+      SELECT * WHERE {
+        lucas_r:3033 lucas:hasLC1 ?lc1 .
+        FILTER NOT EXISTS {
+          lucas_r:3033 geo:hasGeometry ?l_geom_id .
+          ?l_geom_id geo:asWKT ?l_geom .
+          ?inv invekos:hasCropTypeNumber ?i_ctype .
+          ?inv geo:hasGeometry ?i_geom_id .
+          ?i_geom_id geo:asWKT ?i_geom .
+          FILTER (geof:distance(?l_geom,?i_geom,opengis:metre) < 10) .
+        }
+      }'
+    - name: CQ3c
+      language: sparql
+      queryString: 'PREFIX lucas: <http://deg.iit.demokritos.gr/lucas/>
+      PREFIX lucas_r: <http://deg.iit.demokritos.gr/lucas/resource/>
+      PREFIX invekos: <http://deg.iit.demokritos.gr/invekos/>
+      PREFIX lictm: <http://deg.iit.demokritos.gr/>
+      PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+      PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+      PREFIX opengis: <http://www.opengis.net/def/uom/OGC/1.0/>
+      SELECT * WHERE {
+        lucas_r:6689 lucas:hasLC1 ?lc1 .
+        FILTER NOT EXISTS {
+          lucas_r:6689 geo:hasGeometry ?l_geom_id .
+          ?l_geom_id geo:asWKT ?l_geom .
+          ?inv invekos:hasCropTypeNumber ?i_ctype .
+          ?inv geo:hasGeometry ?i_geom_id .
+          ?i_geom_id geo:asWKT ?i_geom .
+          FILTER (geof:distance(?l_geom,?i_geom,opengis:metre) < 10) .
+        }
+      }'

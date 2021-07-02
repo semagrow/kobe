@@ -1,0 +1,388 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Benchmark
+metadata:
+  name: opfbench
+spec:
+  datasets:
+    - name: aers
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/aers.tar.gz
+      templateRef: virtuosotemplate
+    - name: bao
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/bao.tar.gz
+      templateRef: virtuosotemplate
+    - name: caloha
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/caloha.tar.gz
+      templateRef: virtuosotemplate
+    - name: chebi-opf
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/chebi.tar.gz
+      templateRef: virtuosotemplate
+    - name: chembl
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/chembl.tar.gz
+      templateRef: virtuosotemplate
+    - name: conceptwiki
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/conceptwiki.tar.gz
+      templateRef: virtuosotemplate
+    - name: disgenet
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/disgenet.tar.gz
+      templateRef: virtuosotemplate
+    - name: doid
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/doid.tar.gz
+      templateRef: virtuosotemplate
+    - name: drugbank-opf
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/drugbank.tar.gz
+      templateRef: virtuosotemplate
+    - name: enzyme
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/enzyme.tar.gz
+      templateRef: virtuosotemplate
+    - name: go
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/go.tar.gz
+      templateRef: virtuosotemplate
+    - name: goa
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/goa.tar.gz
+      templateRef: virtuosotemplate
+    - name: ncats
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/ncats.tar.gz
+      templateRef: virtuosotemplate
+    - name: nextprot
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/nextprot.tar.gz
+      templateRef: virtuosotemplate
+    - name: ocrs
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/ocrs.tar.gz
+      templateRef: virtuosotemplate
+    - name: uniprot
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/uniprot.tar.gz
+      templateRef: virtuosotemplate
+    - name: wikipathways
+      files:
+        - url: https://data.openphacts.org/free/2.0/rdf/wikipathways.tar.gz
+      templateRef: virtuosotemplate
+    - name: ims
+      files:
+        - url: https://data.openphacts.org/free/2.0/ims/ims-linksets-2.0.tar.gz
+      templateRef: virtuosotemplate
+  queries:
+    - name: OPF01
+      language: sparql
+      queryString: '
+        PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        SELECT ?target ?compound
+        WHERE {
+          ?item rdf:type chembl:Activity .
+          ?item chembl:hasMolecule ?compound .
+          ?item chembl:pChembl ?pChembl . 
+          FILTER (?pChembl > 7) .
+          ?item chembl:hasAssay ?assay_uri .
+          ?assay_uri chembl:hasTarget ?target .
+          ?target rdf:type ?target_type .
+          { ?target chembl:organismName "Homo sapiens" }
+          UNION
+          { ?target chembl:organismName "Mus musculus" } .
+        }'
+    - name: OPF03
+      language: sparql
+      queryString: '
+        PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        SELECT ?molecule ?pChembl ?activity_type ?activity_value
+        WHERE {
+          VALUES ?cw_uri {
+            <http://www.conceptwiki.org/concept/ee7e6001-0279-4670-ac05-34bbb050b6e2>
+          }
+          VALUES ?target_type {
+            chembl:ProteinComplex
+            chembl:ProteinComplexGroup
+            chembl:ProteinFamily
+            chembl:ProteinProteinInteraction
+            chembl:SingleProtein
+          }
+          ?cw_uri skos:exactMatch ?ims_uri .
+          ?target_uri skos:relatedMatch ?ims_uri.
+          {
+            SELECT DISTINCT ?molecule
+            WHERE {
+          ?assay_uri chembl:hasTarget ?target_uri .
+          ?uri chembl:hasAssay ?assay_uri .
+          ?uri chembl:hasMolecule ?molecule .
+          ?uri chembl:pChembl ?pChembl . FILTER (?pChembl > 5).
+            }
+          }
+          ?act rdf:type chembl:Activity.
+          ?act chembl:hasMolecule ?molecule .
+          ?act chembl:hasAssay ?assay_uri .
+          ?assay_uri chembl:hasTarget ?target_uri .
+          ?target_uri rdf:type ?target_type .
+          ?act chembl:standardType ?activity_type .
+          ?act chembl:standardRelation ?activity_relation .
+          ?act chembl:pChembl ?pChembl . 
+          FILTER (?pChembl >= 0) .
+          ?act chembl:standardValue ?standard_value .
+          BIND (xsd:decimal(?standard_value) AS ?activity_value) .
+        }'
+    - name: OPF06
+      language: sparql
+      queryString: '
+        PREFIX bibo: <http://purl.org/ontology/bibo/>
+        PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+        PREFIX cheminf: <http://semanticscience.org/resource/>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        SELECT ?assay_uri ?assay_description ?compound_uri ?compound_name ?smiles
+        WHERE {
+          ?target_uri chembl:hasProteinClassification <http://rdf.ebi.ac.uk/resource/chembl/protclass/CHEMBL_PC_206> .
+          ?target_uri  chembl:hasTargetComponent ?protein .
+          ?target_uri  dcterms:title ?target_title .
+          ?assay_uri   chembl:hasTarget ?target_uri .
+          OPTIONAL { ?assay_uri   dcterms:description ?assay_description . }
+          ?uri  chembl:hasAssay ?assay_uri .
+          ?uri  chembl:hasMolecule ?compound_uri .
+          ?cw_compound skos:exactMatch ?compound_uri .
+          ?cw_compound skos:prefLabel ?compound_name .
+          ?ims_ocrs_compound_uri skos:exactMatch ?compound_uri.
+          ?ims_ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
+        }'
+    - name: OPF07
+      language: sparql
+      queryString: '
+        PREFIX bibo: <http://purl.org/ontology/bibo/>
+        PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+        PREFIX cheminf: <http://semanticscience.org/resource/>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        SELECT ?target_uri ?assay_uri ?assay_description ?assay_organism ?activity_type ?activity_relation ?activity_value ?compound_uri ?compound_name ?smiles
+        WHERE {
+          <http://www.conceptwiki.org/concept/ee7e6001-0279-4670-ac05-34bbb050b6e2> skos:exactMatch ?ims_uri .
+          ?target_uri skos:relatedMatch ?ims_uri .
+          ?assay_uri chembl:hasTarget ?target_uri .
+          ?assay_uri dcterms:description ?assay_description .
+          ?assay_uri chembl:organismName ?assay_organism .
+          ?assay_uri chembl:hasActivity ?item .
+          ?item chembl:pChembl ?pChembl . 
+          FILTER (?pChembl > 5).
+          ?item chembl:standardType ?activity_type .
+          ?item chembl:standardRelation ?activity_relation .
+          ?item chembl:standardValue ?standard_value .
+          BIND (xsd:decimal(?standard_value) AS ?activity_value) .
+          ?item chembl:standardUnits ?activity_unit .
+          ?item chembl:hasMolecule ?compound_uri .
+          ?cw_compound skos:exactMatch ?compound_uri .
+          ?cw_compound skos:prefLabel ?compound_name .
+          ?ims_ocrs_compound_uri skos:exactMatch ?compound_uri. 
+          ?ims_ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
+        }'
+    - name: OPF08
+      language: sparql
+      queryString: '
+        PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        SELECT ?target_uri ?target_title ?assay_uri ?assay_description ?pChembl ?protein ?protein_name
+        WHERE {
+          ?target_uri rdf:type chembl:ProteinProteinInteraction.
+          ?assay_uri  chembl:hasTarget ?target_uri .
+          ?assay_uri  chembl:hasActivity ?uri .
+          ?target_uri dcterms:title ?target_title .
+          ?target_uri  chembl:hasTargetComponent ?protein .
+          ?assay_uri  dcterms:description ?assay_description .
+          ?uri chembl:pChembl ?pChembl .
+          FILTER (?pChembl > 5) .
+          ?cw_target skos:exactMatch ?protein .
+          ?cw_target skos:prefLabel ?protein_name .
+        }'
+    - name: OPF09
+      language: sparql
+      queryString: '
+        PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+        PREFIX cheminf: <http://semanticscience.org/resource/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        SELECT *
+        WHERE {
+          VALUES ?activity_type {
+            "IC50"
+            "EC50"
+            "AC50"
+            "Ki"
+            "Kd"
+            "Potency"
+          }
+          <http://ops.rsc.org/OPS980348> skos:exactMatch ?chembl_compound_uri .
+          ?item chembl:hasMolecule ?chembl_compound_uri .
+          ?item chembl:hasAssay ?assay_uri .
+          ?assay_uri chembl:hasTarget ?target_uri .
+          ?target_uri rdf:type ?target_type .
+          ?target_uri chembl:organismName ?target_organism .
+          ?item chembl:standardType ?activity_type .
+          ?item chembl:standardRelation ?activity_relation .
+          ?item chembl:standardValue ?standard_value .
+          BIND (xsd:decimal(?standard_value) as ?activity_value) .
+          FILTER (?activity_value <= 1.0e8) .
+          ?item chembl:pChembl ?pChembl .
+          ?ocrs_compound_uri skos:exactMatch ?chembl_compound_uri .
+          ?ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
+        }'
+    - name: OPF15
+      language: sparql
+      queryString: '
+        PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+        PREFIX cheminf: <http://semanticscience.org/resource/>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        SELECT ?chebi_label (COUNT(?chebi_label) AS ?count)
+        WHERE {
+          ?chembl_comp skos:exactMatch <http://purl.uniprot.org/uniprot/P00918>.
+          ?target_uri chembl:hasTargetComponent ?chembl_comp.
+          ?assay_uri chembl:hasTarget ?target_uri.
+          ?activity chembl:hasAssay ?assay_uri.
+          ?activity chembl:hasMolecule ?molecule .
+          ?molecule skos:exactMatch ?chebi_compound .
+          ?activity chembl:pChembl ?pChembl.
+          FILTER (?pChembl > 5).
+          {
+            ?chebi_compound rdfs:subClassOf ?chebi_class .
+            ?chebi_class rdfs:label ?chebi_label .
+          }
+          UNION
+          {
+            ?chebi_compound rdfs:subClassOf ?class .
+            ?class owl:someValuesFrom ?chebi_class .
+            ?chebi_class rdfs:label ?chebi_label .
+          }
+        }
+        GROUP BY ?chebi_label'
+    - name: OPF15b
+      language: sparql
+      queryString: '
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+        PREFIX sio: <http://semanticscience.org/resource/>
+        SELECT ?description ?primarySource ?diseaseName ?gene_uri
+        WHERE {
+          ?item sio:SIO_000628 <http://linkedlifedata.com/resource/umls/id/C0004238> .
+          ?item sio:SIO_000253 ?primarySource.
+          ?item dcterms:description ?description.
+          <http://linkedlifedata.com/resource/umls/id/C0004238> foaf:name ?diseaseName.
+          ?item sio:SIO_000628 ?gene_uri .
+          ?gene_uri a ncit:C16612 .
+        }'
+    - name: OPF16
+      language: sparql
+      queryString: '
+        PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+        PREFIX sio: <http://semanticscience.org/resource/>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        SELECT ?target_uri ?chembl_compound
+        WHERE {
+          VALUES ?umls_disease_uri {
+            <http://linkedlifedata.com/resource/umls/id/C0002395>
+            <http://linkedlifedata.com/resource/umls/id/C0030567>
+          }
+          ?gene_disease_assoc sio:SIO_000628 ?disease_uri .
+          ?disease_uri a ncit:C16612 .
+          ?umls_disease_uri foaf:name ?diseaseName .
+          ?gene_disease_assoc sio:SIO_000628 ?umls_disease_uri .
+          ?disease_uri skos:closeMatch ?b .
+          ?b skos:exactMatch ?s .
+          ?ss chembl:targetCmptXref ?s .
+          ?target_uri chembl:hasTargetComponent ?ss .
+          ?assay_uri chembl:hasActivity ?item .
+          ?assay_uri chembl:hasTarget ?target_uri .
+          ?item chembl:pChembl ?pChembl. 
+          FILTER (?pChembl > 5) .
+          ?item chembl:hasMolecule ?chembl_compound .
+        }'
+    - name: OPF18
+      language: sparql
+      queryString: '
+        PREFIX bibo: <http://purl.org/ontology/bibo/>
+        PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+        PREFIX dc: <http://purl.org/dc/elements/1.1/>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        SELECT ?title ?target_organism ?activity_value ?doc_uri ?pmid
+        WHERE {
+          ?rev dc:identifier <http://identifiers.org/wikipathways/WP179> .
+          ?rev dc:title ?title .
+          ?gene_product_internal dcterms:isPartOf ?rev .
+          ?gene_product_internal a ?type .
+          ?gene_product_internal dc:identifier ?gene_product .
+          FILTER( ?type = wp:GeneProduct || ?type = wp:Protein ).
+          ?gene_product skos:closeMatch ?s .
+          ?s skos:exactMatch ?item .
+          ?ss chembl:targetCmptXref ?item .
+          ?chembl_target_uri chembl:hasTargetComponent ?ss .
+          ?assay_uri chembl:hasTarget ?chembl_target_uri .
+          ?chembl_target_uri dcterms:title ?target_name_chembl .
+          ?chembl_target_uri chembl:organismName ?target_organism .
+          ?assay_uri chembl:hasActivity ?act .
+          ?act chembl:standardUnits "nM".
+          ?act chembl:standardType "Potency" .
+          ?act chembl:standardValue ?standard_value .
+          BIND (xsd:decimal(?standard_value) AS ?activity_value).
+          FILTER (?activity_value <= 1000).
+          OPTIONAL { ?act chembl:hasDocument ?doc_uri .
+                ?doc_uri bibo:pmid ?pmid . }
+        }'
+    - name: OPF19
+      language: sparql
+      queryString: '
+        PREFIX chembl: <http://rdf.ebi.ac.uk/terms/chembl#>
+        PREFIX cheminf: <http://semanticscience.org/resource/>
+        PREFIX dc: <http://purl.org/dc/elements/1.1/>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
+        SELECT ?smiles (COUNT(distinct ?chembl_target_uri) as ?count)
+        WHERE {
+          ?rev dc:identifier <http://identifiers.org/wikipathways/WP382> .
+          ?rev dc:title ?title .
+          ?gene_product_internal dcterms:isPartOf ?rev .
+          ?gene_product_internal rdf:type ?type .
+          ?gene_product_internal dc:identifier ?gene_product .
+          FILTER ( ?type = wp:GeneProduct || ?type = wp:Protein ) .
+          FILTER (! REGEX(?gene_product,"/DataNode/noIdentifier")) .
+          ?gene_product skos:closeMatch ?s .
+          ?s skos:exactMatch ?item .
+          ?ss chembl:targetCmptXref ?item .
+          ?chembl_target_uri chembl:hasTargetComponent ?ss .
+          ?assay_uri chembl:hasActivity ?act .
+          ?assay_uri chembl:hasTarget ?chembl_target_uri .
+          ?chembl_target_uri dcterms:title ?target_name_chembl .
+          ?chembl_target_uri chembl:organismName ?target_organism .
+          ?act chembl:hasMolecule ?chembl_compound .
+          ?act chembl:pChembl ?pChembl .
+          FILTER (?pChembl > 5) .
+          ?ims_ocrs_compound_uri  skos:exactMatch ?chembl_compound.
+          ?ims_ocrs_compound_uri cheminf:CHEMINF_000018 ?smiles .
+        }
+        GROUP BY ?smiles
+        HAVING(COUNT(distinct ?chembl_target_uri) > 1)'

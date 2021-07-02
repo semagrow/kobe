@@ -1,0 +1,13 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Experiment
+metadata:
+  name: opfbench-exp
+spec:
+  benchmark: opfbench
+  federatorName: semagrow-opfbench
+  federatorTemplateRef: semagrowtemplate
+  evaluator:
+    image: semagrow/kobe-sequential-evaluator
+  timesToRun: 1
+  dryRun: false
+  forceNewInit: false
