@@ -3,10 +3,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix dataset: <http://rdf.semagrow.org/svd/resource/> .
 
 ###################################################################### GADM1
 
-[] a void:Dataset ;
+dataset:gadm1 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "179"^^xsd:int ;
@@ -248,7 +249,7 @@
 
 ###################################################################### GADM2
 
-[] a void:Dataset ;
+dataset:gadm2 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "143"^^xsd:int ;
@@ -490,7 +491,7 @@
 
 ###################################################################### GADM3
 
-[] a void:Dataset ;
+dataset:gadm3 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "603"^^xsd:int ;
@@ -732,7 +733,7 @@
 
 ###################################################################### GADM4
 
-[] a void:Dataset ;
+dataset:gadm4 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "458"^^xsd:int ;
@@ -974,7 +975,7 @@
 
 ###################################################################### GADM5
 
-[] a void:Dataset ;
+dataset:gadm5 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "126"^^xsd:int ;
@@ -1216,7 +1217,7 @@
 
 ###################################################################### GADM6
 
-[] a void:Dataset ;
+dataset:gadm6 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "301"^^xsd:int ;
@@ -1458,7 +1459,7 @@
 
 ###################################################################### GADM7
 
-[] a void:Dataset ;
+dataset:gadm7 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "289"^^xsd:int ;
@@ -1700,7 +1701,7 @@
 
 ###################################################################### GADM8
 
-[] a void:Dataset ;
+dataset:gadm8 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "107"^^xsd:int ;
@@ -1942,7 +1943,7 @@
 
 ###################################################################### GADM9
 
-[] a void:Dataset ;
+dataset:gadm9 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "25"^^xsd:int ;
@@ -2184,7 +2185,7 @@
 
 ########################################################################################## INVEKOS1
 
-[] a void:Dataset ;
+dataset:invekos1 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "119668"^^xsd:integer ;
@@ -2240,7 +2241,7 @@
 
 ########################################################################################## INVEKOS2
 
-[] a void:Dataset ;
+dataset:invekos2 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "189404"^^xsd:integer ;
@@ -2296,7 +2297,7 @@
 
 ########################################################################################## INVEKOS3
 
-[] a void:Dataset ;
+dataset:invekos3 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "590900"^^xsd:integer ;
@@ -2352,7 +2353,7 @@
 
 ########################################################################################## INVEKOS4
 
-[] a void:Dataset ;
+dataset:invekos4 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "356390"^^xsd:integer ;
@@ -2408,7 +2409,7 @@
 
 ########################################################################################## INVEKOS5
 
-[] a void:Dataset ;
+dataset:invekos5 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "146465"^^xsd:integer ;
@@ -2464,7 +2465,7 @@
 
 ########################################################################################## INVEKOS6
 
-[] a void:Dataset ;
+dataset:invekos6 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "332460"^^xsd:integer ;
@@ -2520,7 +2521,7 @@
 
 ########################################################################################## INVEKOS7
 
-[] a void:Dataset ;
+dataset:invekos7 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "206275"^^xsd:integer ;
@@ -2576,7 +2577,7 @@
 
 ########################################################################################## INVEKOS8
 
-[] a void:Dataset ;
+dataset:invekos8 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "64161"^^xsd:integer ;
@@ -2632,7 +2633,7 @@
 
 ########################################################################################## INVEKOS9
 
-[] a void:Dataset ;
+dataset:invekos9 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "2414"^^xsd:integer ;
@@ -2688,7 +2689,7 @@
 
 ########################################################################################## SNOW1
 
-[] a void:Dataset ;
+dataset:snow1 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "1281"^^xsd:int ;
@@ -2738,7 +2739,7 @@
 
 ########################################################################################## SNOW2
 
-[] a void:Dataset ;
+dataset:snow2 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "7377"^^xsd:int ;
@@ -2788,7 +2789,7 @@
 
 ########################################################################################## SNOW3
 
-[] a void:Dataset ;
+dataset:snow3 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "7217"^^xsd:int ;
@@ -2838,7 +2839,7 @@
 
 ########################################################################################## SNOW4
 
-[] a void:Dataset ;
+dataset:snow4 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "6996"^^xsd:int ;
@@ -2888,7 +2889,7 @@
 
 ########################################################################################## SNOW5
 
-[] a void:Dataset ;
+dataset:snow5 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "9654"^^xsd:int ;
@@ -2938,7 +2939,7 @@
 
 ########################################################################################## SNOW6
 
-[] a void:Dataset ;
+dataset:snow6 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "13806"^^xsd:int ;
@@ -2988,7 +2989,7 @@
 
 ########################################################################################## SNOW7
 
-[] a void:Dataset ;
+dataset:snow7 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "16606"^^xsd:int ;
@@ -3038,7 +3039,7 @@
 
 ########################################################################################## SNOW8
 
-[] a void:Dataset ;
+dataset:snow8 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "3191"^^xsd:int ;
@@ -3088,7 +3089,7 @@
 
 ########################################################################################## SNOW9
 
-[] a void:Dataset ;
+dataset:snow9 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "110"^^xsd:int ;
@@ -3135,3 +3136,46 @@
   void:distinctSubjects "220"^^xsd:int ;
   void:distinctObjects "262"^^xsd:int ;
   svd:boundingWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((16.18627166748047 48.1214714050293, 16.18627166748047 48.3261604309082, 16.58042336 48.3261604309082, 16.58042336 48.1214714050293, 16.18627166748047 48.1214714050293))"^^geo:wktLiteral .
+
+########################################################################################## DISJOINT
+
+[] a svd:Join ;
+  svd:joins
+    dataset:gadm1,
+    dataset:gadm2,
+    dataset:gadm3,
+    dataset:gadm4,
+    dataset:gadm5,
+    dataset:gadm6,
+    dataset:gadm7,
+    dataset:gadm8,
+    dataset:gadm9;
+  svd:selectivity [ svd:selectivityValue "0"^^xsd:int ] .
+
+[] a svd:Join ;
+  svd:joins
+    dataset:invekos1,
+    dataset:invekos2,
+    dataset:invekos3,
+    dataset:invekos4,
+    dataset:invekos5,
+    dataset:invekos6,
+    dataset:invekos7,
+    dataset:invekos8,
+    dataset:invekos9;
+  svd:selectivity [ svd:selectivityValue "0"^^xsd:int ] .
+
+[] a svd:Join ;
+  svd:joins
+    dataset:snow1,
+    dataset:snow2,
+    dataset:snow3,
+    dataset:snow4,
+    dataset:snow5,
+    dataset:snow6,
+    dataset:snow7,
+    dataset:snow8,
+    dataset:snow9;
+  svd:selectivity [ svd:selectivityValue "0"^^xsd:int ] .
+
+

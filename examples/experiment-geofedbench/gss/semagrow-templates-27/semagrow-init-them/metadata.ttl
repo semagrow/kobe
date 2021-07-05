@@ -3,198 +3,240 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix dataset: <http://rdf.semagrow.org/svd/resource/> .
 
 ###################################################################### GADM1
 
-[] a void:Dataset ;
+dataset:gadm1 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "179"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
+    svd:objectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_1> ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_0> ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_1> ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_3> ;
     void:triples "169"^^xsd:int ;
     void:distinctSubjects "169"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_2> ;
     void:triples "9"^^xsd:int ;
     void:distinctSubjects "9"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_3> ;
     void:triples "169"^^xsd:int ;
     void:distinctSubjects "169"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_2> ;
     void:triples "178"^^xsd:int ;
     void:distinctSubjects "178"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_2> ;
     void:triples "9"^^xsd:int ;
     void:distinctSubjects "9"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property geo:spatialDimension ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property geo:isSimple ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_3> ;
     void:triples "169"^^xsd:int ;
     void:distinctSubjects "169"^^xsd:int ;
     void:distinctObjects "169"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property geo:isEmpty ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_3> ;
     void:triples "169"^^xsd:int ;
     void:distinctSubjects "169"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property geo:asWKT ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "179"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_2> ;
     void:triples "9"^^xsd:int ;
     void:distinctSubjects "9"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property geo:coordinateDimension ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "88"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property geo:is3D ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property geo:dimension ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "88"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_3> ;
     void:triples "169"^^xsd:int ;
     void:distinctSubjects "169"^^xsd:int ;
     void:distinctObjects "169"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_2> ;
     void:triples "178"^^xsd:int ;
     void:distinctSubjects "178"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_3> ;
     void:triples "169"^^xsd:int ;
     void:distinctSubjects "169"^^xsd:int ;
     void:distinctObjects "169"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_3> ;
     void:triples "169"^^xsd:int ;
     void:distinctSubjects "169"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_2> ;
     void:triples "9"^^xsd:int ;
     void:distinctSubjects "9"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_0> ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_1> ;
     void:triples "179"^^xsd:int ;
     void:distinctSubjects "179"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_3> ;
     void:triples "169"^^xsd:int ;
     void:distinctSubjects "169"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "358"^^xsd:int ;
     void:distinctSubjects "358"^^xsd:int ;
     void:distinctObjects "4"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
+    svd:objectRegexPattern "http://gadm.org/ontology#AdministrativeUnit" , "http://www.opengis.net/ont/geosparql" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_2> ;
     void:triples "9"^^xsd:int ;
     void:distinctSubjects "9"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_2> ;
     void:triples "178"^^xsd:int ;
     void:distinctSubjects "178"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] ;
   void:classPartition [
     void:class <http://gadm.org/ontology#AdministrativeUnit3> ;
     void:entities "169"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit2> ;
     void:entities "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:class geo:Geometry ;
     void:entities "179"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit1> ;
     void:entities "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/BU/" ;
   ] ;
   void:sparqlEndpoint <http://adm1.gssbench.svc:8080/Strabon/Query> ;
   void:triples "4621"^^xsd:int ;
@@ -206,195 +248,236 @@
 
 ###################################################################### GADM2
 
-[] a void:Dataset ;
+dataset:gadm2 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "143"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
+    svd:objectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_1> ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_0> ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_1> ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_3> ;
     void:triples "132"^^xsd:int ;
     void:distinctSubjects "132"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_2> ;
     void:triples "10"^^xsd:int ;
     void:distinctSubjects "10"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_3> ;
     void:triples "132"^^xsd:int ;
     void:distinctSubjects "132"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_2> ;
     void:triples "142"^^xsd:int ;
     void:distinctSubjects "142"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_2> ;
     void:triples "10"^^xsd:int ;
     void:distinctSubjects "10"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property geo:spatialDimension ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property geo:isSimple ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_3> ;
     void:triples "132"^^xsd:int ;
     void:distinctSubjects "132"^^xsd:int ;
     void:distinctObjects "132"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property geo:isEmpty ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_3> ;
     void:triples "132"^^xsd:int ;
     void:distinctSubjects "132"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property geo:asWKT ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "143"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_2> ;
     void:triples "10"^^xsd:int ;
     void:distinctSubjects "10"^^xsd:int ;
     void:distinctObjects "10"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property geo:coordinateDimension ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "97"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property geo:is3D ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property geo:dimension ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "97"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_3> ;
     void:triples "132"^^xsd:int ;
     void:distinctSubjects "132"^^xsd:int ;
     void:distinctObjects "132"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_2> ;
     void:triples "142"^^xsd:int ;
     void:distinctSubjects "142"^^xsd:int ;
     void:distinctObjects "10"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_3> ;
     void:triples "132"^^xsd:int ;
     void:distinctSubjects "132"^^xsd:int ;
     void:distinctObjects "132"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_3> ;
     void:triples "132"^^xsd:int ;
     void:distinctSubjects "132"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_2> ;
     void:triples "10"^^xsd:int ;
     void:distinctSubjects "10"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_0> ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_1> ;
     void:triples "143"^^xsd:int ;
     void:distinctSubjects "143"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_3> ;
     void:triples "132"^^xsd:int ;
     void:distinctSubjects "132"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "286"^^xsd:int ;
     void:distinctSubjects "286"^^xsd:int ;
     void:distinctObjects "4"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
+    svd:objectRegexPattern "http://gadm.org/ontology#AdministrativeUnit" , "http://www.opengis.net/ont/geosparql" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_2> ;
     void:triples "10"^^xsd:int ;
     void:distinctSubjects "10"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_2> ;
     void:triples "142"^^xsd:int ;
     void:distinctSubjects "142"^^xsd:int ;
     void:distinctObjects "10"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] ;
   void:classPartition [
     void:class <http://gadm.org/ontology#AdministrativeUnit3> ;
     void:entities "132"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit2> ;
     void:entities "10"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:class geo:Geometry ;
     void:entities "143"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit1> ;
     void:entities "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/KA/" ;
   ] ;
   void:sparqlEndpoint <http://adm2.gssbench.svc:8080/Strabon/Query> ;
   void:triples "3682"^^xsd:int ;
@@ -406,195 +489,236 @@
 
 ###################################################################### GADM3
 
-[] a void:Dataset ;
+dataset:gadm3 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "603"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
+    svd:objectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_1> ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_0> ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_1> ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_3> ;
     void:triples "577"^^xsd:int ;
     void:distinctSubjects "577"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_2> ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_3> ;
     void:triples "577"^^xsd:int ;
     void:distinctSubjects "577"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_2> ;
     void:triples "602"^^xsd:int ;
     void:distinctSubjects "602"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_2> ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property geo:spatialDimension ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property geo:isSimple ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_3> ;
     void:triples "577"^^xsd:int ;
     void:distinctSubjects "577"^^xsd:int ;
     void:distinctObjects "577"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property geo:isEmpty ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_3> ;
     void:triples "577"^^xsd:int ;
     void:distinctSubjects "577"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property geo:asWKT ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "603"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_2> ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "25"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property geo:coordinateDimension ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "189"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property geo:is3D ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property geo:dimension ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "189"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_3> ;
     void:triples "577"^^xsd:int ;
     void:distinctSubjects "577"^^xsd:int ;
     void:distinctObjects "577"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_2> ;
     void:triples "602"^^xsd:int ;
     void:distinctSubjects "602"^^xsd:int ;
     void:distinctObjects "25"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_3> ;
     void:triples "577"^^xsd:int ;
     void:distinctSubjects "577"^^xsd:int ;
     void:distinctObjects "577"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_3> ;
     void:triples "577"^^xsd:int ;
     void:distinctSubjects "577"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_2> ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_0> ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_1> ;
     void:triples "603"^^xsd:int ;
     void:distinctSubjects "603"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_3> ;
     void:triples "577"^^xsd:int ;
     void:distinctSubjects "577"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "1206"^^xsd:int ;
     void:distinctSubjects "1206"^^xsd:int ;
     void:distinctObjects "4"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
+    svd:objectRegexPattern "http://gadm.org/ontology#AdministrativeUnit" , "http://www.opengis.net/ont/geosparql" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_2> ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_2> ;
     void:triples "602"^^xsd:int ;
     void:distinctSubjects "602"^^xsd:int ;
     void:distinctObjects "25"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] ;
   void:classPartition [
     void:class <http://gadm.org/ontology#AdministrativeUnit3> ;
     void:entities "577"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit2> ;
     void:entities "25"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:class geo:Geometry ;
     void:entities "603"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit1> ;
     void:entities "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/NO/" ;
   ] ;
   void:sparqlEndpoint <http://adm3.gssbench.svc:8080/Strabon/Query> ;
   void:triples "15597"^^xsd:int ;
@@ -606,195 +730,236 @@
 
 ###################################################################### GADM4
 
-[] a void:Dataset ;
+dataset:gadm4 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "458"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
+    svd:objectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_1> ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_0> ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_1> ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_3> ;
     void:triples "439"^^xsd:int ;
     void:distinctSubjects "439"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_2> ;
     void:triples "18"^^xsd:int ;
     void:distinctSubjects "18"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_3> ;
     void:triples "439"^^xsd:int ;
     void:distinctSubjects "439"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_2> ;
     void:triples "457"^^xsd:int ;
     void:distinctSubjects "457"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_2> ;
     void:triples "18"^^xsd:int ;
     void:distinctSubjects "18"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property geo:spatialDimension ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property geo:isSimple ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_3> ;
     void:triples "439"^^xsd:int ;
     void:distinctSubjects "439"^^xsd:int ;
     void:distinctObjects "439"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property geo:isEmpty ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_3> ;
     void:triples "439"^^xsd:int ;
     void:distinctSubjects "439"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property geo:asWKT ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "458"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_2> ;
     void:triples "18"^^xsd:int ;
     void:distinctSubjects "18"^^xsd:int ;
     void:distinctObjects "18"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property geo:coordinateDimension ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "155"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property geo:is3D ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property geo:dimension ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "155"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_3> ;
     void:triples "439"^^xsd:int ;
     void:distinctSubjects "439"^^xsd:int ;
     void:distinctObjects "439"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_2> ;
     void:triples "457"^^xsd:int ;
     void:distinctSubjects "457"^^xsd:int ;
     void:distinctObjects "18"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_3> ;
     void:triples "439"^^xsd:int ;
     void:distinctSubjects "439"^^xsd:int ;
     void:distinctObjects "439"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_3> ;
     void:triples "439"^^xsd:int ;
     void:distinctSubjects "439"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_2> ;
     void:triples "18"^^xsd:int ;
     void:distinctSubjects "18"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_0> ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_1> ;
     void:triples "458"^^xsd:int ;
     void:distinctSubjects "458"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_3> ;
     void:triples "439"^^xsd:int ;
     void:distinctSubjects "439"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "916"^^xsd:int ;
     void:distinctSubjects "916"^^xsd:int ;
     void:distinctObjects "4"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
+    svd:objectRegexPattern "http://gadm.org/ontology#AdministrativeUnit" , "http://www.opengis.net/ont/geosparql" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_2> ;
     void:triples "18"^^xsd:int ;
     void:distinctSubjects "18"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_2> ;
     void:triples "457"^^xsd:int ;
     void:distinctSubjects "457"^^xsd:int ;
     void:distinctObjects "18"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] ;
   void:classPartition [
     void:class <http://gadm.org/ontology#AdministrativeUnit3> ;
     void:entities "439"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit2> ;
     void:entities "18"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:class geo:Geometry ;
     void:entities "458"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit1> ;
     void:entities "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/OO/" ;
   ] ;
   void:sparqlEndpoint <http://adm4.gssbench.svc:8080/Strabon/Query> ;
   void:triples "11848"^^xsd:int ;
@@ -806,195 +971,236 @@
 
 ###################################################################### GADM5
 
-[] a void:Dataset ;
+dataset:gadm5 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "126"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
+    svd:objectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_1> ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_0> ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_1> ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_3> ;
     void:triples "119"^^xsd:int ;
     void:distinctSubjects "119"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_2> ;
     void:triples "6"^^xsd:int ;
     void:distinctSubjects "6"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_3> ;
     void:triples "119"^^xsd:int ;
     void:distinctSubjects "119"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_2> ;
     void:triples "125"^^xsd:int ;
     void:distinctSubjects "125"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_2> ;
     void:triples "6"^^xsd:int ;
     void:distinctSubjects "6"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property geo:spatialDimension ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property geo:isSimple ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_3> ;
     void:triples "119"^^xsd:int ;
     void:distinctSubjects "119"^^xsd:int ;
     void:distinctObjects "119"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property geo:isEmpty ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_3> ;
     void:triples "119"^^xsd:int ;
     void:distinctSubjects "119"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property geo:asWKT ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "126"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_2> ;
     void:triples "6"^^xsd:int ;
     void:distinctSubjects "6"^^xsd:int ;
     void:distinctObjects "6"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property geo:coordinateDimension ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "96"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property geo:is3D ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property geo:dimension ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "96"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_3> ;
     void:triples "119"^^xsd:int ;
     void:distinctSubjects "119"^^xsd:int ;
     void:distinctObjects "119"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_2> ;
     void:triples "125"^^xsd:int ;
     void:distinctSubjects "125"^^xsd:int ;
     void:distinctObjects "6"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_3> ;
     void:triples "119"^^xsd:int ;
     void:distinctSubjects "119"^^xsd:int ;
     void:distinctObjects "119"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_3> ;
     void:triples "119"^^xsd:int ;
     void:distinctSubjects "119"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_2> ;
     void:triples "6"^^xsd:int ;
     void:distinctSubjects "6"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_0> ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_1> ;
     void:triples "126"^^xsd:int ;
     void:distinctSubjects "126"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_3> ;
     void:triples "119"^^xsd:int ;
     void:distinctSubjects "119"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "252"^^xsd:int ;
     void:distinctSubjects "252"^^xsd:int ;
     void:distinctObjects "4"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
+    svd:objectRegexPattern "http://gadm.org/ontology#AdministrativeUnit" , "http://www.opengis.net/ont/geosparql" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_2> ;
     void:triples "6"^^xsd:int ;
     void:distinctSubjects "6"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_2> ;
     void:triples "125"^^xsd:int ;
     void:distinctSubjects "125"^^xsd:int ;
     void:distinctObjects "6"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] ;
   void:classPartition [
     void:class <http://gadm.org/ontology#AdministrativeUnit3> ;
     void:entities "119"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit2> ;
     void:entities "6"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:class geo:Geometry ;
     void:entities "126"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit1> ;
     void:entities "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/SZ/" ;
   ] ;
   void:sparqlEndpoint <http://adm5.gssbench.svc:8080/Strabon/Query> ;
   void:triples "3252"^^xsd:int ;
@@ -1006,195 +1212,236 @@
 
 ###################################################################### GADM6
 
-[] a void:Dataset ;
+dataset:gadm6 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "301"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
+    svd:objectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_1> ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_0> ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_1> ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_3> ;
     void:triples "287"^^xsd:int ;
     void:distinctSubjects "287"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_2> ;
     void:triples "13"^^xsd:int ;
     void:distinctSubjects "13"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_3> ;
     void:triples "287"^^xsd:int ;
     void:distinctSubjects "287"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_2> ;
     void:triples "300"^^xsd:int ;
     void:distinctSubjects "300"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_2> ;
     void:triples "13"^^xsd:int ;
     void:distinctSubjects "13"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property geo:spatialDimension ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property geo:isSimple ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_3> ;
     void:triples "287"^^xsd:int ;
     void:distinctSubjects "287"^^xsd:int ;
     void:distinctObjects "286"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property geo:isEmpty ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_3> ;
     void:triples "287"^^xsd:int ;
     void:distinctSubjects "287"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property geo:asWKT ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "301"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_2> ;
     void:triples "13"^^xsd:int ;
     void:distinctSubjects "13"^^xsd:int ;
     void:distinctObjects "13"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property geo:coordinateDimension ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "153"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property geo:is3D ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property geo:dimension ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "153"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_3> ;
     void:triples "287"^^xsd:int ;
     void:distinctSubjects "287"^^xsd:int ;
     void:distinctObjects "287"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_2> ;
     void:triples "300"^^xsd:int ;
     void:distinctSubjects "300"^^xsd:int ;
     void:distinctObjects "13"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_3> ;
     void:triples "287"^^xsd:int ;
     void:distinctSubjects "287"^^xsd:int ;
     void:distinctObjects "287"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_3> ;
     void:triples "287"^^xsd:int ;
     void:distinctSubjects "287"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_2> ;
     void:triples "13"^^xsd:int ;
     void:distinctSubjects "13"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_0> ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_1> ;
     void:triples "301"^^xsd:int ;
     void:distinctSubjects "301"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_3> ;
     void:triples "287"^^xsd:int ;
     void:distinctSubjects "287"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "602"^^xsd:int ;
     void:distinctSubjects "602"^^xsd:int ;
     void:distinctObjects "4"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
+    svd:objectRegexPattern "http://gadm.org/ontology#AdministrativeUnit" , "http://www.opengis.net/ont/geosparql" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_2> ;
     void:triples "13"^^xsd:int ;
     void:distinctSubjects "13"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_2> ;
     void:triples "300"^^xsd:int ;
     void:distinctSubjects "300"^^xsd:int ;
     void:distinctObjects "13"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] ;
   void:classPartition [
     void:class <http://gadm.org/ontology#AdministrativeUnit3> ;
     void:entities "287"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit2> ;
     void:entities "13"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:class geo:Geometry ;
     void:entities "301"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit1> ;
     void:entities "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/ST/" ;
   ] ;
   void:sparqlEndpoint <http://adm6.gssbench.svc:8080/Strabon/Query> ;
   void:triples "7781"^^xsd:int ;
@@ -1206,195 +1453,236 @@
 
 ###################################################################### GADM7
 
-[] a void:Dataset ;
+dataset:gadm7 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "289"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
+    svd:objectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_1> ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_0> ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_1> ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_3> ;
     void:triples "279"^^xsd:int ;
     void:distinctSubjects "279"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_2> ;
     void:triples "9"^^xsd:int ;
     void:distinctSubjects "9"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_3> ;
     void:triples "279"^^xsd:int ;
     void:distinctSubjects "279"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_2> ;
     void:triples "288"^^xsd:int ;
     void:distinctSubjects "288"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_2> ;
     void:triples "9"^^xsd:int ;
     void:distinctSubjects "9"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property geo:spatialDimension ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property geo:isSimple ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_3> ;
     void:triples "279"^^xsd:int ;
     void:distinctSubjects "279"^^xsd:int ;
     void:distinctObjects "279"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property geo:isEmpty ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_3> ;
     void:triples "279"^^xsd:int ;
     void:distinctSubjects "279"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property geo:asWKT ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "289"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_2> ;
     void:triples "9"^^xsd:int ;
     void:distinctSubjects "9"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property geo:coordinateDimension ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "149"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property geo:is3D ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property geo:dimension ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "149"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_3> ;
     void:triples "279"^^xsd:int ;
     void:distinctSubjects "279"^^xsd:int ;
     void:distinctObjects "279"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_2> ;
     void:triples "288"^^xsd:int ;
     void:distinctSubjects "288"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_3> ;
     void:triples "279"^^xsd:int ;
     void:distinctSubjects "279"^^xsd:int ;
     void:distinctObjects "279"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_3> ;
     void:triples "279"^^xsd:int ;
     void:distinctSubjects "279"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_2> ;
     void:triples "9"^^xsd:int ;
     void:distinctSubjects "9"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_0> ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_1> ;
     void:triples "289"^^xsd:int ;
     void:distinctSubjects "289"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_3> ;
     void:triples "279"^^xsd:int ;
     void:distinctSubjects "279"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "578"^^xsd:int ;
     void:distinctSubjects "578"^^xsd:int ;
     void:distinctObjects "4"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
+    svd:objectRegexPattern "http://gadm.org/ontology#AdministrativeUnit" , "http://www.opengis.net/ont/geosparql" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_2> ;
     void:triples "9"^^xsd:int ;
     void:distinctSubjects "9"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_2> ;
     void:triples "288"^^xsd:int ;
     void:distinctSubjects "288"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] ;
   void:classPartition [
     void:class <http://gadm.org/ontology#AdministrativeUnit3> ;
     void:entities "279"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit2> ;
     void:entities "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:class geo:Geometry ;
     void:entities "289"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit1> ;
     void:entities "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/TR/" ;
   ] ;
   void:sparqlEndpoint <http://adm7.gssbench.svc:8080/Strabon/Query> ;
   void:triples "7481"^^xsd:int ;
@@ -1406,195 +1694,236 @@
 
 ###################################################################### GADM8
 
-[] a void:Dataset ;
+dataset:gadm8 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "107"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
+    svd:objectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_1> ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_0> ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_1> ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_3> ;
     void:triples "101"^^xsd:int ;
     void:distinctSubjects "101"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_2> ;
     void:triples "5"^^xsd:int ;
     void:distinctSubjects "5"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_3> ;
     void:triples "101"^^xsd:int ;
     void:distinctSubjects "101"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_2> ;
     void:triples "106"^^xsd:int ;
     void:distinctSubjects "106"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_2> ;
     void:triples "5"^^xsd:int ;
     void:distinctSubjects "5"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property geo:spatialDimension ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property geo:isSimple ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_3> ;
     void:triples "101"^^xsd:int ;
     void:distinctSubjects "101"^^xsd:int ;
     void:distinctObjects "97"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property geo:isEmpty ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_3> ;
     void:triples "101"^^xsd:int ;
     void:distinctSubjects "101"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property geo:asWKT ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "107"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_2> ;
     void:triples "5"^^xsd:int ;
     void:distinctSubjects "5"^^xsd:int ;
     void:distinctObjects "5"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property geo:coordinateDimension ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "82"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property geo:is3D ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property geo:dimension ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "82"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_3> ;
     void:triples "101"^^xsd:int ;
     void:distinctSubjects "101"^^xsd:int ;
     void:distinctObjects "101"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_2> ;
     void:triples "106"^^xsd:int ;
     void:distinctSubjects "106"^^xsd:int ;
     void:distinctObjects "5"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_3> ;
     void:triples "101"^^xsd:int ;
     void:distinctSubjects "101"^^xsd:int ;
     void:distinctObjects "101"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_3> ;
     void:triples "101"^^xsd:int ;
     void:distinctSubjects "101"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_2> ;
     void:triples "5"^^xsd:int ;
     void:distinctSubjects "5"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_0> ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_1> ;
     void:triples "107"^^xsd:int ;
     void:distinctSubjects "107"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_3> ;
     void:triples "101"^^xsd:int ;
     void:distinctSubjects "101"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "214"^^xsd:int ;
     void:distinctSubjects "214"^^xsd:int ;
     void:distinctObjects "4"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
+    svd:objectRegexPattern "http://gadm.org/ontology#AdministrativeUnit" , "http://www.opengis.net/ont/geosparql" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_2> ;
     void:triples "5"^^xsd:int ;
     void:distinctSubjects "5"^^xsd:int ;
     void:distinctObjects "2"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_2> ;
     void:triples "106"^^xsd:int ;
     void:distinctSubjects "106"^^xsd:int ;
     void:distinctObjects "5"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] ;
   void:classPartition [
     void:class <http://gadm.org/ontology#AdministrativeUnit3> ;
     void:entities "101"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit2> ;
     void:entities "5"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:class geo:Geometry ;
     void:entities "107"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit1> ;
     void:entities "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/VO/" ;
   ] ;
   void:sparqlEndpoint <http://adm8.gssbench.svc:8080/Strabon/Query> ;
   void:triples "2761"^^xsd:int ;
@@ -1606,195 +1935,236 @@
 
 ###################################################################### GADM9
 
-[] a void:Dataset ;
+dataset:gadm9 a void:Dataset ;
   void:propertyPartition [
     void:property geo:hasGeometry ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "25"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
+    svd:objectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_1> ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_0> ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_1> ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_3> ;
     void:triples "23"^^xsd:int ;
     void:distinctSubjects "23"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_2> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_ENGTYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_3> ;
     void:triples "23"^^xsd:int ;
     void:distinctSubjects "23"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NL_NAME_2> ;
     void:triples "24"^^xsd:int ;
     void:distinctSubjects "24"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_2> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property geo:spatialDimension ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property geo:isSimple ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_3> ;
     void:triples "23"^^xsd:int ;
     void:distinctSubjects "23"^^xsd:int ;
     void:distinctObjects "23"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property geo:isEmpty ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_CC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_3> ;
     void:triples "23"^^xsd:int ;
     void:distinctSubjects "23"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property geo:asWKT ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "24"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_HASC_2> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property geo:coordinateDimension ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "23"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property geo:is3D ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property geo:dimension ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "23"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_3> ;
     void:triples "23"^^xsd:int ;
     void:distinctSubjects "23"^^xsd:int ;
     void:distinctObjects "23"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_GID_2> ;
     void:triples "24"^^xsd:int ;
     void:distinctSubjects "24"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_3> ;
     void:triples "23"^^xsd:int ;
     void:distinctSubjects "23"^^xsd:int ;
     void:distinctObjects "23"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_3> ;
     void:triples "23"^^xsd:int ;
     void:distinctSubjects "23"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_VARNAME_2> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_1> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_0> ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_1> ;
     void:triples "25"^^xsd:int ;
     void:distinctSubjects "25"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_3> ;
     void:triples "23"^^xsd:int ;
     void:distinctSubjects "23"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "50"^^xsd:int ;
     void:distinctSubjects "50"^^xsd:int ;
     void:distinctObjects "4"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
+    svd:objectRegexPattern "http://gadm.org/ontology#AdministrativeUnit" , "http://www.opengis.net/ont/geosparql" ;
   ] , [
     void:property <http://gadm.org/ontology#has_TYPE_2> ;
     void:triples "1"^^xsd:int ;
     void:distinctSubjects "1"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:property <http://gadm.org/ontology#has_NAME_2> ;
     void:triples "24"^^xsd:int ;
     void:distinctSubjects "24"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] ;
   void:classPartition [
     void:class <http://gadm.org/ontology#AdministrativeUnit3> ;
     void:entities "23"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit2> ;
     void:entities "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:class geo:Geometry ;
     void:entities "25"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] , [
     void:class <http://gadm.org/ontology#AdministrativeUnit1> ;
     void:entities "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://gadm.org/AUT/WI/" ;
   ] ;
   void:sparqlEndpoint <http://adm9.gssbench.svc:8080/Strabon/Query> ;
   void:triples "641"^^xsd:int ;
@@ -1806,42 +2176,50 @@
 
 ########################################################################################## INVEKOS1
 
-[] a void:Dataset ;
+dataset:invekos1 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "119668"^^xsd:integer ;
     void:distinctSubjects "119668"^^xsd:integer ;
     void:distinctObjects "119668"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/BU/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeName> ;
     void:triples "119668"^^xsd:integer ;
     void:distinctSubjects "119668"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/BU/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeNumber> ;
     void:triples "119668"^^xsd:integer ;
     void:distinctSubjects "119668"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/BU/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasArea> ;
     void:triples "119668"^^xsd:integer ;
     void:distinctSubjects "119668"^^xsd:integer ;
     void:distinctObjects "119668"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/BU/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasDescription> ;
     void:triples "119668"^^xsd:integer ;
     void:distinctSubjects "119668"^^xsd:integer ;
     void:distinctObjects "62"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/BU/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "119668"^^xsd:integer ;
     void:distinctSubjects "119668"^^xsd:integer ;
     void:distinctObjects "119668"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/BU/" ;
+    svd:objectRegexPattern "http://deg.iit.demokritos.gr/invekos/BU/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "119668"^^xsd:integer ;
     void:distinctSubjects "119668"^^xsd:integer ;
     void:distinctObjects "119668"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/BU/" ;
   ] ;
   void:sparqlEndpoint <http://invekos1.gssbench.svc:8080/Strabon/Query> ;
   void:triples "837676"^^xsd:integer ;
@@ -1853,42 +2231,50 @@
 
 ########################################################################################## INVEKOS2
 
-[] a void:Dataset ;
+dataset:invekos2 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "189404"^^xsd:integer ;
     void:distinctSubjects "189404"^^xsd:integer ;
     void:distinctObjects "189404"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/KA/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeName> ;
     void:triples "189404"^^xsd:integer ;
     void:distinctSubjects "189404"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/KA/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeNumber> ;
     void:triples "189404"^^xsd:integer ;
     void:distinctSubjects "189404"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/KA/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasArea> ;
     void:triples "189404"^^xsd:integer ;
     void:distinctSubjects "189404"^^xsd:integer ;
     void:distinctObjects "189404"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/KA/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasDescription> ;
     void:triples "189404"^^xsd:integer ;
     void:distinctSubjects "189404"^^xsd:integer ;
     void:distinctObjects "62"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/KA/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "189404"^^xsd:integer ;
     void:distinctSubjects "189404"^^xsd:integer ;
     void:distinctObjects "189404"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/KA/" ;
+    svd:objectRegexPattern "http://deg.iit.demokritos.gr/invekos/KA/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "189404"^^xsd:integer ;
     void:distinctSubjects "189404"^^xsd:integer ;
     void:distinctObjects "189404"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/KA/" ;
   ] ;
   void:sparqlEndpoint <http://invekos2.gssbench.svc:8080/Strabon/Query> ;
   void:triples "1325828"^^xsd:integer ;
@@ -1900,42 +2286,50 @@
 
 ########################################################################################## INVEKOS3
 
-[] a void:Dataset ;
+dataset:invekos3 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "590900"^^xsd:integer ;
     void:distinctSubjects "590900"^^xsd:integer ;
     void:distinctObjects "590900"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/NO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeName> ;
     void:triples "590900"^^xsd:integer ;
     void:distinctSubjects "590900"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/NO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeNumber> ;
     void:triples "590900"^^xsd:integer ;
     void:distinctSubjects "590900"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/NO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasArea> ;
     void:triples "590900"^^xsd:integer ;
     void:distinctSubjects "590900"^^xsd:integer ;
     void:distinctObjects "590900"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/NO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasDescription> ;
     void:triples "590900"^^xsd:integer ;
     void:distinctSubjects "590900"^^xsd:integer ;
     void:distinctObjects "62"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/NO/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "590900"^^xsd:integer ;
     void:distinctSubjects "590900"^^xsd:integer ;
     void:distinctObjects "590900"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/NO/" ;
+    svd:objectRegexPattern "http://deg.iit.demokritos.gr/invekos/NO/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "590900"^^xsd:integer ;
     void:distinctSubjects "590900"^^xsd:integer ;
     void:distinctObjects "590900"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/NO/" ;
   ] ;
   void:sparqlEndpoint <http://invekos3.gssbench.svc:8080/Strabon/Query> ;
   void:triples "4136300"^^xsd:integer ;
@@ -1947,42 +2341,50 @@
 
 ########################################################################################## INVEKOS4
 
-[] a void:Dataset ;
+dataset:invekos4 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "356390"^^xsd:integer ;
     void:distinctSubjects "356390"^^xsd:integer ;
     void:distinctObjects "356390"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/OO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeName> ;
     void:triples "356390"^^xsd:integer ;
     void:distinctSubjects "356390"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/OO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeNumber> ;
     void:triples "356390"^^xsd:integer ;
     void:distinctSubjects "356390"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/OO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasArea> ;
     void:triples "356390"^^xsd:integer ;
     void:distinctSubjects "356390"^^xsd:integer ;
     void:distinctObjects "356390"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/OO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasDescription> ;
     void:triples "356390"^^xsd:integer ;
     void:distinctSubjects "356390"^^xsd:integer ;
     void:distinctObjects "62"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/OO/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "356390"^^xsd:integer ;
     void:distinctSubjects "356390"^^xsd:integer ;
     void:distinctObjects "356390"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/OO/" ;
+    svd:objectRegexPattern "http://deg.iit.demokritos.gr/invekos/OO/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "356390"^^xsd:integer ;
     void:distinctSubjects "356390"^^xsd:integer ;
     void:distinctObjects "356390"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/OO/" ;
   ] ;
   void:sparqlEndpoint <http://invekos4.gssbench.svc:8080/Strabon/Query> ;
   void:triples "2494730"^^xsd:integer ;
@@ -1994,42 +2396,50 @@
 
 ########################################################################################## INVEKOS5
 
-[] a void:Dataset ;
+dataset:invekos5 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "146465"^^xsd:integer ;
     void:distinctSubjects "146465"^^xsd:integer ;
     void:distinctObjects "146465"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/SZ/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeName> ;
     void:triples "146465"^^xsd:integer ;
     void:distinctSubjects "146465"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/SZ/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeNumber> ;
     void:triples "146465"^^xsd:integer ;
     void:distinctSubjects "146465"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/SZ/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasArea> ;
     void:triples "146465"^^xsd:integer ;
     void:distinctSubjects "146465"^^xsd:integer ;
     void:distinctObjects "146465"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/SZ/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasDescription> ;
     void:triples "146465"^^xsd:integer ;
     void:distinctSubjects "146465"^^xsd:integer ;
     void:distinctObjects "62"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/SZ/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "146465"^^xsd:integer ;
     void:distinctSubjects "146465"^^xsd:integer ;
     void:distinctObjects "146465"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/SZ/" ;
+    svd:objectRegexPattern "http://deg.iit.demokritos.gr/invekos/SZ/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "146465"^^xsd:integer ;
     void:distinctSubjects "146465"^^xsd:integer ;
     void:distinctObjects "146465"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/SZ/" ;
   ] ;
   void:sparqlEndpoint <http://invekos5.gssbench.svc:8080/Strabon/Query> ;
   void:triples "1025255"^^xsd:integer ;
@@ -2041,42 +2451,50 @@
 
 ########################################################################################## INVEKOS6
 
-[] a void:Dataset ;
+dataset:invekos6 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "332460"^^xsd:integer ;
     void:distinctSubjects "332460"^^xsd:integer ;
     void:distinctObjects "332460"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/ST/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeName> ;
     void:triples "332460"^^xsd:integer ;
     void:distinctSubjects "332460"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/ST/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeNumber> ;
     void:triples "332460"^^xsd:integer ;
     void:distinctSubjects "332460"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/ST/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasArea> ;
     void:triples "332460"^^xsd:integer ;
     void:distinctSubjects "332460"^^xsd:integer ;
     void:distinctObjects "332460"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/ST/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasDescription> ;
     void:triples "332460"^^xsd:integer ;
     void:distinctSubjects "332460"^^xsd:integer ;
     void:distinctObjects "62"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/ST/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "332460"^^xsd:integer ;
     void:distinctSubjects "332460"^^xsd:integer ;
     void:distinctObjects "332460"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/ST/" ;
+    svd:objectRegexPattern "http://deg.iit.demokritos.gr/invekos/ST/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "332460"^^xsd:integer ;
     void:distinctSubjects "332460"^^xsd:integer ;
     void:distinctObjects "332460"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/ST/" ;
   ] ;
   void:sparqlEndpoint <http://invekos6.gssbench.svc:8080/Strabon/Query> ;
   void:triples "2327220"^^xsd:integer ;
@@ -2088,42 +2506,50 @@
 
 ########################################################################################## INVEKOS7
 
-[] a void:Dataset ;
+dataset:invekos7 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "206275"^^xsd:integer ;
     void:distinctSubjects "206275"^^xsd:integer ;
     void:distinctObjects "206275"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/TR/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeName> ;
     void:triples "206275"^^xsd:integer ;
     void:distinctSubjects "206275"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/TR/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeNumber> ;
     void:triples "206275"^^xsd:integer ;
     void:distinctSubjects "206275"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/TR/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasArea> ;
     void:triples "206275"^^xsd:integer ;
     void:distinctSubjects "206275"^^xsd:integer ;
     void:distinctObjects "206275"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/TR/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasDescription> ;
     void:triples "206275"^^xsd:integer ;
     void:distinctSubjects "206275"^^xsd:integer ;
     void:distinctObjects "62"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/TR/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "206275"^^xsd:integer ;
     void:distinctSubjects "206275"^^xsd:integer ;
     void:distinctObjects "206275"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/TR/" ;
+    svd:objectRegexPattern "http://deg.iit.demokritos.gr/invekos/TR/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "206275"^^xsd:integer ;
     void:distinctSubjects "206275"^^xsd:integer ;
     void:distinctObjects "206275"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/TR/" ;
   ] ;
   void:sparqlEndpoint <http://invekos7.gssbench.svc:8080/Strabon/Query> ;
   void:triples "1443925"^^xsd:integer ;
@@ -2135,42 +2561,50 @@
 
 ########################################################################################## INVEKOS8
 
-[] a void:Dataset ;
+dataset:invekos8 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "64161"^^xsd:integer ;
     void:distinctSubjects "64161"^^xsd:integer ;
     void:distinctObjects "64161"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/VO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeName> ;
     void:triples "64161"^^xsd:integer ;
     void:distinctSubjects "64161"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/VO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeNumber> ;
     void:triples "64161"^^xsd:integer ;
     void:distinctSubjects "64161"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/VO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasArea> ;
     void:triples "64161"^^xsd:integer ;
     void:distinctSubjects "64161"^^xsd:integer ;
     void:distinctObjects "64161"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/VO/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasDescription> ;
     void:triples "64161"^^xsd:integer ;
     void:distinctSubjects "64161"^^xsd:integer ;
     void:distinctObjects "62"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/VO/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "64161"^^xsd:integer ;
     void:distinctSubjects "64161"^^xsd:integer ;
     void:distinctObjects "64161"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/VO/" ;
+    svd:objectRegexPattern "http://deg.iit.demokritos.gr/invekos/VO/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "64161"^^xsd:integer ;
     void:distinctSubjects "64161"^^xsd:integer ;
     void:distinctObjects "64161"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/VO/" ;
   ] ;
   void:sparqlEndpoint <http://invekos8.gssbench.svc:8080/Strabon/Query> ;
   void:triples "449127"^^xsd:integer ;
@@ -2182,42 +2616,50 @@
 
 ########################################################################################## INVEKOS9
 
-[] a void:Dataset ;
+dataset:invekos9 a void:Dataset ;
   void:propertyPartition [
     void:property <http://deg.iit.demokritos.gr/invekos/hasID> ;
     void:triples "2414"^^xsd:integer ;
     void:distinctSubjects "2414"^^xsd:integer ;
     void:distinctObjects "2414"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/WI/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeName> ;
     void:triples "2414"^^xsd:integer ;
     void:distinctSubjects "2414"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/WI/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasCropTypeNumber> ;
     void:triples "2414"^^xsd:integer ;
     void:distinctSubjects "2414"^^xsd:integer ;
     void:distinctObjects "17"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/WI/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasArea> ;
     void:triples "2414"^^xsd:integer ;
     void:distinctSubjects "2414"^^xsd:integer ;
     void:distinctObjects "2414"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/WI/" ;
   ] , [
     void:property <http://deg.iit.demokritos.gr/invekos/hasDescription> ;
     void:triples "2414"^^xsd:integer ;
     void:distinctSubjects "2414"^^xsd:integer ;
     void:distinctObjects "62"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/WI/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "2414"^^xsd:integer ;
     void:distinctSubjects "2414"^^xsd:integer ;
     void:distinctObjects "2414"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/WI/" ;
+    svd:objectRegexPattern "http://deg.iit.demokritos.gr/invekos/WI/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "2414"^^xsd:integer ;
     void:distinctSubjects "2414"^^xsd:integer ;
     void:distinctObjects "2414"^^xsd:integer ;
+    svd:subjectRegexPattern "http://deg.iit.demokritos.gr/invekos/WI/" ;
   ] ;
   void:sparqlEndpoint <http://invekos9.gssbench.svc:8080/Strabon/Query> ;
   void:triples "16898"^^xsd:integer ;
@@ -2229,36 +2671,44 @@
 
 ########################################################################################## SNOW1
 
-[] a void:Dataset ;
+dataset:snow1 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "1281"^^xsd:int ;
     void:distinctSubjects "1281"^^xsd:int ;
     void:distinctObjects "1281"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/BU/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "1281"^^xsd:int ;
     void:distinctSubjects "1281"^^xsd:int ;
     void:distinctObjects "1281"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/BU/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/BU/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasRECDATE> ;
     void:triples "1281"^^xsd:int ;
     void:distinctSubjects "1281"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/BU/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasDN> ;
     void:triples "1281"^^xsd:int ;
     void:distinctSubjects "1281"^^xsd:int ;
     void:distinctObjects "32"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/BU/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "1281"^^xsd:int ;
     void:distinctSubjects "1281"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/BU/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/ontology/FoodSecurityObservation" ;
   ] ;
   void:classPartition [
     void:class <http://earthanalytics.eu/fs/ontology/FoodSecurityObservation> ;
     void:entities "1281"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/BU/" ;
   ] ;
   void:sparqlEndpoint <http://snow1.gssbench.svc:8080/Strabon/Query> ;
   void:triples "6405"^^xsd:int ;
@@ -2270,36 +2720,44 @@
 
 ########################################################################################## SNOW2
 
-[] a void:Dataset ;
+dataset:snow2 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "7377"^^xsd:int ;
     void:distinctSubjects "7377"^^xsd:int ;
     void:distinctObjects "7377"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/KA/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "7377"^^xsd:int ;
     void:distinctSubjects "7377"^^xsd:int ;
     void:distinctObjects "7377"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/KA/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/KA/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasRECDATE> ;
     void:triples "7377"^^xsd:int ;
     void:distinctSubjects "7377"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/KA/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasDN> ;
     void:triples "7377"^^xsd:int ;
     void:distinctSubjects "7377"^^xsd:int ;
     void:distinctObjects "32"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/KA/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "7377"^^xsd:int ;
     void:distinctSubjects "7377"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/KA/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/ontology/FoodSecurityObservation" ;
   ] ;
   void:classPartition [
     void:class <http://earthanalytics.eu/fs/ontology/FoodSecurityObservation> ;
     void:entities "7377"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/KA/" ;
   ] ;
   void:sparqlEndpoint <http://snow2.gssbench.svc:8080/Strabon/Query> ;
   void:triples "36885"^^xsd:int ;
@@ -2311,36 +2769,44 @@
 
 ########################################################################################## SNOW3
 
-[] a void:Dataset ;
+dataset:snow3 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "7217"^^xsd:int ;
     void:distinctSubjects "7217"^^xsd:int ;
     void:distinctObjects "7217"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/NO/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "7217"^^xsd:int ;
     void:distinctSubjects "7217"^^xsd:int ;
     void:distinctObjects "7217"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/NO/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/NO/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasRECDATE> ;
     void:triples "7217"^^xsd:int ;
     void:distinctSubjects "7217"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/NO/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasDN> ;
     void:triples "7217"^^xsd:int ;
     void:distinctSubjects "7217"^^xsd:int ;
     void:distinctObjects "32"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/NO/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "7217"^^xsd:int ;
     void:distinctSubjects "7217"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/NO/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/ontology/FoodSecurityObservation" ;
   ] ;
   void:classPartition [
     void:class <http://earthanalytics.eu/fs/ontology/FoodSecurityObservation> ;
     void:entities "7217"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/NO/" ;
   ] ;
   void:sparqlEndpoint <http://snow3.gssbench.svc:8080/Strabon/Query> ;
   void:triples "36085"^^xsd:int ;
@@ -2352,36 +2818,44 @@
 
 ########################################################################################## SNOW4
 
-[] a void:Dataset ;
+dataset:snow4 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "6996"^^xsd:int ;
     void:distinctSubjects "6996"^^xsd:int ;
     void:distinctObjects "6996"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/OO/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "6996"^^xsd:int ;
     void:distinctSubjects "6996"^^xsd:int ;
     void:distinctObjects "6996"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/OO/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/OO/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasRECDATE> ;
     void:triples "6996"^^xsd:int ;
     void:distinctSubjects "6996"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/OO/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasDN> ;
     void:triples "6996"^^xsd:int ;
     void:distinctSubjects "6996"^^xsd:int ;
     void:distinctObjects "32"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/OO/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "6996"^^xsd:int ;
     void:distinctSubjects "6996"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/OO/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/ontology/FoodSecurityObservation" ;
   ] ;
   void:classPartition [
     void:class <http://earthanalytics.eu/fs/ontology/FoodSecurityObservation> ;
     void:entities "6996"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/OO/" ;
   ] ;
   void:sparqlEndpoint <http://snow4.gssbench.svc:8080/Strabon/Query> ;
   void:triples "34980"^^xsd:int ;
@@ -2393,36 +2867,44 @@
 
 ########################################################################################## SNOW5
 
-[] a void:Dataset ;
+dataset:snow5 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "9654"^^xsd:int ;
     void:distinctSubjects "9654"^^xsd:int ;
     void:distinctObjects "9654"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/SZ/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "9654"^^xsd:int ;
     void:distinctSubjects "9654"^^xsd:int ;
     void:distinctObjects "9654"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/SZ/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/SZ/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasRECDATE> ;
     void:triples "9654"^^xsd:int ;
     void:distinctSubjects "9654"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/SZ/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasDN> ;
     void:triples "9654"^^xsd:int ;
     void:distinctSubjects "9654"^^xsd:int ;
     void:distinctObjects "32"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/SZ/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "9654"^^xsd:int ;
     void:distinctSubjects "9654"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/SZ/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/ontology/FoodSecurityObservation" ;
   ] ;
   void:classPartition [
     void:class <http://earthanalytics.eu/fs/ontology/FoodSecurityObservation> ;
     void:entities "9654"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/SZ/" ;
   ] ;
   void:sparqlEndpoint <http://snow5.gssbench.svc:8080/Strabon/Query> ;
   void:triples "48270"^^xsd:int ;
@@ -2434,36 +2916,44 @@
 
 ########################################################################################## SNOW6
 
-[] a void:Dataset ;
+dataset:snow6 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "13806"^^xsd:int ;
     void:distinctSubjects "13806"^^xsd:int ;
     void:distinctObjects "13806"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/ST/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "13806"^^xsd:int ;
     void:distinctSubjects "13806"^^xsd:int ;
     void:distinctObjects "13806"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/ST/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/ST/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasRECDATE> ;
     void:triples "13806"^^xsd:int ;
     void:distinctSubjects "13806"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/ST/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasDN> ;
     void:triples "13806"^^xsd:int ;
     void:distinctSubjects "13806"^^xsd:int ;
     void:distinctObjects "32"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/ST/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "13806"^^xsd:int ;
     void:distinctSubjects "13806"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/ST/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/ontology/FoodSecurityObservation" ;
   ] ;
   void:classPartition [
     void:class <http://earthanalytics.eu/fs/ontology/FoodSecurityObservation> ;
     void:entities "13806"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/ST/" ;
   ] ;
   void:sparqlEndpoint <http://snow6.gssbench.svc:8080/Strabon/Query> ;
   void:triples "69030"^^xsd:int ;
@@ -2475,36 +2965,44 @@
 
 ########################################################################################## SNOW7
 
-[] a void:Dataset ;
+dataset:snow7 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "16606"^^xsd:int ;
     void:distinctSubjects "16606"^^xsd:int ;
     void:distinctObjects "16606"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/TR/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "16606"^^xsd:int ;
     void:distinctSubjects "16606"^^xsd:int ;
     void:distinctObjects "16606"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/TR/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/TR/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasRECDATE> ;
     void:triples "16606"^^xsd:int ;
     void:distinctSubjects "16606"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/TR/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasDN> ;
     void:triples "16606"^^xsd:int ;
     void:distinctSubjects "16606"^^xsd:int ;
     void:distinctObjects "32"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/TR/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "16606"^^xsd:int ;
     void:distinctSubjects "16606"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/TR/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/ontology/FoodSecurityObservation" ;
   ] ;
   void:classPartition [
     void:class <http://earthanalytics.eu/fs/ontology/FoodSecurityObservation> ;
     void:entities "16606"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/TR/" ;
   ] ;
   void:sparqlEndpoint <http://snow7.gssbench.svc:8080/Strabon/Query> ;
   void:triples "83030"^^xsd:int ;
@@ -2516,36 +3014,44 @@
 
 ########################################################################################## SNOW8
 
-[] a void:Dataset ;
+dataset:snow8 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "3191"^^xsd:int ;
     void:distinctSubjects "3191"^^xsd:int ;
     void:distinctObjects "3191"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/VO/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "3191"^^xsd:int ;
     void:distinctSubjects "3191"^^xsd:int ;
     void:distinctObjects "3191"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/VO/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/VO/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasRECDATE> ;
     void:triples "3191"^^xsd:int ;
     void:distinctSubjects "3191"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/VO/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasDN> ;
     void:triples "3191"^^xsd:int ;
     void:distinctSubjects "3191"^^xsd:int ;
     void:distinctObjects "32"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/VO/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "3191"^^xsd:int ;
     void:distinctSubjects "3191"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/VO/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/ontology/FoodSecurityObservation" ;
   ] ;
   void:classPartition [
     void:class <http://earthanalytics.eu/fs/ontology/FoodSecurityObservation> ;
     void:entities "3191"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/VO/" ;
   ] ;
   void:sparqlEndpoint <http://snow8.gssbench.svc:8080/Strabon/Query> ;
   void:triples "15955"^^xsd:int ;
@@ -2557,36 +3063,44 @@
 
 ########################################################################################## SNOW9
 
-[] a void:Dataset ;
+dataset:snow9 a void:Dataset ;
   void:propertyPartition [
     void:property <http://www.opengis.net/ont/geosparql#asWKT> ;
     void:triples "110"^^xsd:int ;
     void:distinctSubjects "110"^^xsd:int ;
     void:distinctObjects "110"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/WI/" ;
   ] , [
     void:property <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     void:triples "110"^^xsd:int ;
     void:distinctSubjects "110"^^xsd:int ;
     void:distinctObjects "110"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/WI/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/WI/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasRECDATE> ;
     void:triples "110"^^xsd:int ;
     void:distinctSubjects "110"^^xsd:int ;
     void:distinctObjects "9"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/WI/" ;
   ] , [
     void:property <http://earthanalytics.eu/fs/ontology/hasDN> ;
     void:triples "110"^^xsd:int ;
     void:distinctSubjects "110"^^xsd:int ;
     void:distinctObjects "32"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/WI/" ;
   ] , [
     void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
     void:triples "110"^^xsd:int ;
     void:distinctSubjects "110"^^xsd:int ;
     void:distinctObjects "1"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/WI/" ;
+    svd:objectRegexPattern "http://earthanalytics.eu/fs/ontology/FoodSecurityObservation" ;
   ] ;
   void:classPartition [
     void:class <http://earthanalytics.eu/fs/ontology/FoodSecurityObservation> ;
     void:entities "110"^^xsd:int ;
+    svd:subjectRegexPattern "http://earthanalytics.eu/fs/WI/" ;
   ] ;
   void:sparqlEndpoint <http://snow9.gssbench.svc:8080/Strabon/Query> ;
   void:triples "550"^^xsd:int ;
@@ -2595,3 +3109,45 @@
   void:entities "110"^^xsd:int ;
   void:distinctSubjects "220"^^xsd:int ;
   void:distinctObjects "262"^^xsd:int .
+
+########################################################################################## DISJOINT
+
+[] a svd:Join ;
+  svd:joins
+    dataset:gadm1,
+    dataset:gadm2,
+    dataset:gadm3,
+    dataset:gadm4,
+    dataset:gadm5,
+    dataset:gadm6,
+    dataset:gadm7,
+    dataset:gadm8,
+    dataset:gadm9;
+  svd:selectivity [ svd:selectivityValue "0"^^xsd:int ] .
+
+[] a svd:Join ;
+  svd:joins
+    dataset:invekos1,
+    dataset:invekos2,
+    dataset:invekos3,
+    dataset:invekos4,
+    dataset:invekos5,
+    dataset:invekos6,
+    dataset:invekos7,
+    dataset:invekos8,
+    dataset:invekos9;
+  svd:selectivity [ svd:selectivityValue "0"^^xsd:int ] .
+
+[] a svd:Join ;
+  svd:joins
+    dataset:snow1,
+    dataset:snow2,
+    dataset:snow3,
+    dataset:snow4,
+    dataset:snow5,
+    dataset:snow6,
+    dataset:snow7,
+    dataset:snow8,
+    dataset:snow9;
+  svd:selectivity [ svd:selectivityValue "0"^^xsd:int ] .
+

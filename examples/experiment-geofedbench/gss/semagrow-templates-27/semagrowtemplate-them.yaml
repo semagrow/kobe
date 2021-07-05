@@ -13,7 +13,7 @@ spec:
   confFromFileImage: alpine:3
   inputDumpDir: /semagrow/input
   outputDumpDir: /semagrow/output
-  confImage: antru6/semagrow-init:gss-27-prefix
+  confImage: antru6/semagrow-init-gss:them-27
   inputDir: /input
   outputDir: /output
   fedConfDir: /etc/default/semagrow
