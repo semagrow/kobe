@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: maincontainer 
-      image: semagrow/semagrow:2.2.0
+      image: antru6/semagrow-xearth-jpd
       ports:
       - containerPort: 8080
   port: 8080
