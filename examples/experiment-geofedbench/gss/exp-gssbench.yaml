@@ -1,11 +1,11 @@
 apiVersion: kobe.semagrow.org/v1alpha1
 kind: Experiment
 metadata:
-  name: gssbench-exp-prefix
+  name: exp-gssbench
 spec:
   benchmark: gssbench
-  federatorName: semagrow-prefix
-  federatorTemplateRef: semagrowtemplate-prefix
+  federatorName: semagrow-gss
+  federatorTemplateRef: semagrowgsstemplate
   evaluator:
     image: semagrow/kobe-sequential-evaluator
     env:
