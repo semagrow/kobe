@@ -653,7 +653,7 @@ func (r *ReconcileFederation) reconcileSvc(instance *api.Federation) (bool, erro
 
 	if foundBenchmark.Status.Istio == api.IstioNotUse {
 		return false, nil
-	} else if foundBenchmark.Status.Istio == api.IstioNotUse {
+	} else if foundBenchmark.Status.Istio == api.IstioUse {
 		foundVirtualService := &istioclient.VirtualService{}
 		err = r.client.Get(context.TODO(), types.NamespacedName{Name: instance.Name, Namespace: instance.Namespace}, foundVirtualService)
 
