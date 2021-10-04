@@ -19,6 +19,15 @@ else
   echo "dataset name not specified"
 fi
 
+if [ "$USE_ISTIO" == "YES" ]
+then
+  until curl --head localhost:15021
+  do echo "Waiting for Sidecar"
+    sleep 3
+  done
+  echo "Sidecar available"
+fi
+
 service postgresql start
 
 /usr/local/bin/rocket.sh
