@@ -123,7 +123,7 @@ at
 ```
 http://<NODE-IP>:<NODEPORT>/app/kibana#/dashboard/
 ``` 
-where `<NODE-IP>` the IP of any of the Kubernetes cluster nodes and
+where `<NODE-IP>` the IP of any of the Kubernetes worker nodes and
 `<NODEPORT>` the result of `kubectl get -o
 jsonpath="{.spec.ports[0].nodePort}" services kibana-kibana`.
 
