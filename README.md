@@ -33,7 +33,7 @@ following objectives in mind:
 - `Kubernetes` >= 1.8.0
 - `kubectl` configured for the Kubernetes cluster
 - `Helm` version 3 (for the Evaluation Metrics Extraction subsystem)
-- `nfs-commons` installed in the nodes of the cluster. If in debian or
+- `nfs-commons` installed in the nodes of the cluster. If in Debian or
    Ubuntu you can install it using `apt-get install nfs-common`
 
 ### Installation of the Kubernetes operator
@@ -61,7 +61,7 @@ kubectl apply -f operator/deploy/clusterrole.yaml
 kubectl apply -f operator/deploy/clusterrole_binding.yaml
 kubectl apply -f operator/deploy/operator.yaml
 ```
-For kubernetes version 1.15 and below  swap
+For Kubernetes version 1.15 and below  swap
 
 ```
 kubectl apply -f operator/deploy/crds
@@ -78,8 +78,14 @@ needs to be done only once.
 
 ### Installation of Networking subsystem
 
-KOBE uses istio to support network delays between the different 
-deployments. To install istio you can run the following:
+KOBE uses [Istio](https://istio.io/) to support network delays between the different 
+deployments. To install Istio first define the version (KOBE was tested with version 1.11.3)
+
+```
+export ISTIO_VERSION=1.11.3
+```
+
+then deploy Istio:
 ```
 kobectl install istio .
 ```
