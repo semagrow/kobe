@@ -151,7 +151,7 @@ Several examples of the above specifications can be found in the [examples](exam
 In the following, we show the steps for deploying an experiment on a simple benchmark that comprises
 three queries over a Semagrow federation of two Virtuoso endpoints.
 
-You can use the `kobectl` script found in the [bin](bin/) directory for cotrolling your experiments:
+You can use the `kobectl` script found in the [bin](bin/) directory for controlling your experiments:
 
 ```
 export PATH=`pwd`/bin:$PATH
