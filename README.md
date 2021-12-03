@@ -105,9 +105,9 @@ or alternatively the following
 ```
 helm repo add elastic https://helm.elastic.co
 helm repo add kiwigrid https://kiwigrid.github.io
-helm install elastic/elasticsearch --name elasticsearch --set persistence.enabled=false --set replicas=1 --version 7.6.2
-helm install elastic/kibana --name kibana --set service.type=NodePort --version 7.6.2
-helm install --name fluentd -f operator/deploy/efk-config/fluentd-values.yaml kiwigrid/fluentd-elasticsearch --version 8.0.1
+helm install elasticsearch elastic/elasticsearch --set persistence.enabled=false --set replicas=1 --version 7.6.2
+helm install elasticsearch elastic/elasticsearch --set persistence.enabled=false --set replicas=1 --version 7.6.2
+helm install fluentd kiwigrid/fluentd-elasticsearch -f operator/deploy/efk-config/fluentd-values.yaml --version 8.0.1
 kubectl apply -f operator/deploy/efk-config/kobe-kibana-configuration.yaml
 ```
 
