@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: maincontainer 
-      image: image: semagrow/fedx-server
+      image: semagrow/fedx-server
       ports:
       - containerPort: 8080
   port: 8080
