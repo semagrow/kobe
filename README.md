@@ -31,7 +31,8 @@ following objectives in mind:
 ### Prerequisites
 
 - `Kubernetes` >= 1.8.0
-- `kubectl` configured for the Kubernetes
+- `kubectl` configured for the Kubernetes cluster
+- `Helm` version 3 (for the Evaluation Metrics Extraction subsystem)
 - `nfs-commons` installed in the nodes of the cluster. If in debian or
    Ubuntu you can install it using `apt-get install nfs-common`
 
@@ -50,11 +51,8 @@ If you are using kubernetes version 1.15 and below you should instead use
 ```
 kobectl install operator-v1beta1 
 ```
-To find the version of kubernetes in your cluster you can use the following command
-```
-kobectl version 
-```
-Alternatively, you could run the following commends:
+
+Alternatively, you could run the following commands:
 
 ```
 kubectl apply -f operator/deploy/crds

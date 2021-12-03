@@ -286,6 +286,11 @@ case $COMMAND in
       helm repo remove kiwigrid
       kubectl delete jobs.batch kobe-kibana-configuration
       kubectl delete configmaps kobe-kibana-config
+      
+      echo "Kobe removed."
+      echo "To also remove fluentd pos and buffer files issue in each node:"
+      echo "rm -rf /var/log/fluentd-buffers"
+      echo "rm /var/log/containers.log.pos"
     fi
     
     ;;
