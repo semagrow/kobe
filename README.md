@@ -31,7 +31,8 @@ following objectives in mind:
 ### Prerequisites
 
 - `Kubernetes` >= 1.8.0
-- `kubectl` configured for the Kubernetes
+- `kubectl` configured for the Kubernetes cluster
+- `Helm` version 3 (for the Evaluation Metrics Extraction subsystem)
 - `nfs-commons` installed in the nodes of the cluster. If in debian or
    Ubuntu you can install it using `apt-get install nfs-common`
 
