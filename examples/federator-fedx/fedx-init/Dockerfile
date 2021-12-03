@@ -1,4 +1,4 @@
-FROM xqdocker/ubuntu-openjdk:jdk-8
+FROM alpine:3.7
 
 RUN mkdir /sevod-scraper
 RUN mkdir /sevod-scraper/output

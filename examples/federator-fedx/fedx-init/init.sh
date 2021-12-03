@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 FNAME="/sevod-scraper/output/"$DATASET_NAME".nt"
 
