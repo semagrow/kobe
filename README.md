@@ -43,7 +43,7 @@ Kubernetes cluster, you can use the `kobectl` script found in the
 
 ```
 export PATH=`pwd`/bin:$PATH
-kobectl install operator 
+kobectl install operator .
 ```
 If you are using kubernetes version 1.15 and below you should instead use 
 ```
