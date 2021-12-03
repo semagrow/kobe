@@ -279,9 +279,9 @@ case $COMMAND in
         | kubectl delete -f -
       kubectl delete namespace istio-system
       
-      helm delete --purge elasticsearch
-      helm delete --purge kibana
-      helm delete --purge fluentd
+      helm delete elasticsearch
+      helm delete kibana
+      helm delete fluentd
       helm repo remove elastic
       helm repo remove kiwigrid
       kubectl delete jobs.batch kobe-kibana-configuration
