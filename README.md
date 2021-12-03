@@ -91,8 +91,7 @@ or you can type the following commands.
 
 ```
 curl -L https://istio.io/downloadIstio | sh -
-export PATH=`pwd`/istio-1.6.0/bin:$PATH
-istioctl manifest apply --set profile=default
+./istio-*/bin/istioctl manifest apply --set profile=default
 ```
 
 ### Installation of the Evaluation Metrics Extraction subsystem
@@ -213,7 +212,7 @@ kubectl delete -f operator/deploy/crds
 ```
 To remove istio manually, run
 ```
-./istio-1.6.0/bin/istioctl manifest generate --set profile=default | kubectl delete -f -
+./istio-*/bin/istioctl manifest generate --set profile=default | kubectl delete -f -
 kubectl delete namespace istio-system
 ```
 To remove the evaluation metrics extraction subsystem manually, run

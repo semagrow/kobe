@@ -228,7 +228,7 @@ case $COMMAND in
     if [ ! -z $ISTIO ]
     then
       curl -L https://istio.io/downloadIstio | sh -
-      ./istio-1.6.*/bin/istioctl manifest apply --set profile=default
+      ./istio-*/bin/istioctl manifest apply --set profile=default
     fi
     
     if [ ! -z $EFK ]
@@ -275,7 +275,7 @@ case $COMMAND in
       kubectl delete -f operator/deploy/service_account.yaml
       kubectl delete -f operator/deploy/crds
       
-      ./istio-1.6.*/bin/istioctl manifest generate --set profile=default \
+      ./istio-*/bin/istioctl manifest generate --set profile=default \
         | kubectl delete -f -
       kubectl delete namespace istio-system
       
