@@ -228,21 +228,16 @@ case $COMMAND in
     if [ ! -z $ISTIO ]
     then
       curl -L https://istio.io/downloadIstio | sh -
-      ./istio-1.6.*/bin/istioctl manifest apply --set profile=default
+      ./istio-*/bin/istioctl manifest apply --set profile=default
     fi
     
     if [ ! -z $EFK ]
     then
       helm repo add elastic https://helm.elastic.co
       helm repo add kiwigrid https://kiwigrid.github.io
-      helm install elastic/elasticsearch \
-            --name elasticsearch --set persistence.enabled=false \
-            --set replicas=1 --version 7.6.2
-      helm install elastic/kibana \
-            --name kibana --set service.type=NodePort --version 7.6.2
-      helm install \
-            --name fluentd -f operator/deploy/efk-config/fluentd-values.yaml \
-            kiwigrid/fluentd-elasticsearch --version 8.0.1
+      helm install elasticsearch elastic/elasticsearch --set persistence.enabled=false --set replicas=1 --version 7.6.2
+      helm install kibana elastic/kibana --set service.type=NodePort --version 7.6.2
+      helm install fluentd kiwigrid/fluentd-elasticsearch -f operator/deploy/efk-config/fluentd-values.yaml --version 8.0.1
       kubectl apply -f operator/deploy/efk-config/kobe-kibana-configuration.yaml
     fi
     
@@ -280,17 +275,22 @@ case $COMMAND in
       kubectl delete -f operator/deploy/service_account.yaml
       kubectl delete -f operator/deploy/crds
       
-      ./istio-1.6.*/bin/istioctl manifest generate --set profile=default \
+      ./istio-*/bin/istioctl manifest generate --set profile=default \
         | kubectl delete -f -
       kubectl delete namespace istio-system
       
-      helm delete --purge elasticsearch
-      helm delete --purge kibana
-      helm delete --purge fluentd
+      helm delete elasticsearch
+      helm delete kibana
+      helm delete fluentd
       helm repo remove elastic
       helm repo remove kiwigrid
       kubectl delete jobs.batch kobe-kibana-configuration
       kubectl delete configmaps kobe-kibana-config
+      
+      echo "Kobe removed."
+      echo "To also remove fluentd pos and buffer files issue in each node:"
+      echo "rm -rf /var/log/fluentd-buffers"
+      echo "rm /var/log/containers.log.pos"
     fi
     
     ;;

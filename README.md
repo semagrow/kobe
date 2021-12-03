@@ -31,7 +31,9 @@ following objectives in mind:
 ### Prerequisites
 
 - `Kubernetes` >= 1.8.0
-- `nfs-commons` installed in the nodes of the cluster. If in debian or
+- `kubectl` configured for the Kubernetes cluster
+- `Helm` version 3 (for the Evaluation Metrics Extraction subsystem)
+- `nfs-commons` installed in the nodes of the cluster. If in Debian or
    Ubuntu you can install it using `apt-get install nfs-common`
 
 ### Installation of the Kubernetes operator
@@ -43,17 +45,14 @@ Kubernetes cluster, you can use the `kobectl` script found in the
 
 ```
 export PATH=`pwd`/bin:$PATH
-kobectl install operator 
+kobectl install operator .
 ```
 If you are using kubernetes version 1.15 and below you should instead use 
 ```
 kobectl install operator-v1beta1 
 ```
-To find the version of kubernetes in your cluster you can use the following command
-```
-kobectl version 
-```
-Alternatively, you could run the following commends:
+
+Alternatively, you could run the following commands:
 
 ```
 kubectl apply -f operator/deploy/crds
@@ -62,7 +61,7 @@ kubectl apply -f operator/deploy/clusterrole.yaml
 kubectl apply -f operator/deploy/clusterrole_binding.yaml
 kubectl apply -f operator/deploy/operator.yaml
 ```
-For kubernetes version 1.15 and below  swap
+For Kubernetes version 1.15 and below  swap
 
 ```
 kubectl apply -f operator/deploy/crds
@@ -79,8 +78,14 @@ needs to be done only once.
 
 ### Installation of Networking subsystem
 
-KOBE uses istio to support network delays between the different 
-deployments. To install istio you can run the following:
+KOBE uses [Istio](https://istio.io/) to support network delays between the different 
+deployments. To install Istio first define the version (KOBE was tested with version 1.11.3)
+
+```
+export ISTIO_VERSION=1.11.3
+```
+
+then deploy Istio:
 ```
 kobectl install istio .
 ```
@@ -90,8 +95,7 @@ or you can type the following commands.
 
 ```
 curl -L https://istio.io/downloadIstio | sh -
-export PATH=`pwd`/istio-1.6.0/bin:$PATH
-istioctl manifest apply --set profile=default
+./istio-*/bin/istioctl manifest apply --set profile=default
 ```
 
 ### Installation of the Evaluation Metrics Extraction subsystem
@@ -104,13 +108,13 @@ or alternatively the following
 ```
 helm repo add elastic https://helm.elastic.co
 helm repo add kiwigrid https://kiwigrid.github.io
-helm install elastic/elasticsearch --name elasticsearch --set persistence.enabled=false --set replicas=1 --version 7.6.2
-helm install elastic/kibana --name kibana --set service.type=NodePort --version 7.6.2
-helm install --name fluentd -f operator/deploy/efk-config/fluentd-values.yaml kiwigrid/fluentd-elasticsearch --version 8.0.1
+helm install elasticsearch elastic/elasticsearch --set persistence.enabled=false --set replicas=1 --version 7.6.2
+helm install elasticsearch elastic/elasticsearch --set persistence.enabled=false --set replicas=1 --version 7.6.2
+helm install fluentd kiwigrid/fluentd-elasticsearch -f operator/deploy/efk-config/fluentd-values.yaml --version 8.0.1
 kubectl apply -f operator/deploy/efk-config/kobe-kibana-configuration.yaml
 ```
 
-These result in the simplest setup of an one-node
+These result in the simplest setup of an single-node
 [Elasticsearch](https://github.com/elastic/helm-charts/blob/master/elasticsearch)
 that does not persist data across pod recreation, a
 [Fluentd](https://github.com/kiwigrid/helm-charts/tree/master/charts/fluentd-elasticsearch)
@@ -118,12 +122,12 @@ that does not persist data across pod recreation, a
 [Kibana](https://github.com/elastic/helm-charts/tree/master/kibana)
 node that exposes a `NodePort`. 
 
-After all pods are in Running state Kibana dashboards can be accessed
+After all pods are in `Running` state Kibana dashboards can be accessed
 at 
 ```
 http://<NODE-IP>:<NODEPORT>/app/kibana#/dashboard/
 ``` 
-where `<NODE-IP>` the IP of any of the Kubernetes cluster nodes and
+where `<NODE-IP>` the IP of any of the Kubernetes worker nodes and
 `<NODEPORT>` the result of `kubectl get -o
 jsonpath="{.spec.ports[0].nodePort}" services kibana-kibana`.
 
@@ -147,7 +151,7 @@ Several examples of the above specifications can be found in the [examples](exam
 In the following, we show the steps for deploying an experiment on a simple benchmark that comprises
 three queries over a Semagrow federation of two Virtuoso endpoints.
 
-You can use the `kobectl` script found in the [bin](bin/) directory for cotrolling your experiments:
+You can use the `kobectl` script found in the [bin](bin/) directory for controlling your experiments:
 
 ```
 export PATH=`pwd`/bin:$PATH
@@ -197,11 +201,11 @@ For more advanced control options for KOBE, use [kubectl](https://kubernetes.io/
 
 ## Removal
 
-To remove KOBE from your cluster, go to the run the following command:
+To remove KOBE from your cluster, run the following command:
 ```
 kobectl purge .
 ```
-To remove the operator manually, run
+To remove KOBE operator manually, run
 ```
 kubectl delete -f operator/deploy/operator.yaml
 kubectl delete -f operator/deploy/role.yaml
@@ -210,9 +214,9 @@ kubectl delete -f operator/deploy/clusterrole.yaml
 kubectl delete -f operator/deploy/service_account.yaml
 kubectl delete -f operator/deploy/crds
 ```
-To remove istio manually, run
+To remove Istio manually, run
 ```
-./istio-1.6.0/bin/istioctl manifest generate --set profile=default | kubectl delete -f -
+./istio-*/bin/istioctl manifest generate --set profile=default | kubectl delete -f -
 kubectl delete namespace istio-system
 ```
 To remove the evaluation metrics extraction subsystem manually, run
