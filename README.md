@@ -31,6 +31,7 @@ following objectives in mind:
 ### Prerequisites
 
 - `Kubernetes` >= 1.8.0
+- `kubectl` configured for the Kubernetes
 - `nfs-commons` installed in the nodes of the cluster. If in debian or
    Ubuntu you can install it using `apt-get install nfs-common`
 
