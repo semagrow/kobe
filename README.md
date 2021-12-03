@@ -114,7 +114,7 @@ helm install fluentd kiwigrid/fluentd-elasticsearch -f operator/deploy/efk-confi
 kubectl apply -f operator/deploy/efk-config/kobe-kibana-configuration.yaml
 ```
 
-These result in the simplest setup of an one-node
+These result in the simplest setup of an single-node
 [Elasticsearch](https://github.com/elastic/helm-charts/blob/master/elasticsearch)
 that does not persist data across pod recreation, a
 [Fluentd](https://github.com/kiwigrid/helm-charts/tree/master/charts/fluentd-elasticsearch)
@@ -122,7 +122,7 @@ that does not persist data across pod recreation, a
 [Kibana](https://github.com/elastic/helm-charts/tree/master/kibana)
 node that exposes a `NodePort`. 
 
-After all pods are in Running state Kibana dashboards can be accessed
+After all pods are in `Running` state Kibana dashboards can be accessed
 at 
 ```
 http://<NODE-IP>:<NODEPORT>/app/kibana#/dashboard/
@@ -201,11 +201,11 @@ For more advanced control options for KOBE, use [kubectl](https://kubernetes.io/
 
 ## Removal
 
-To remove KOBE from your cluster, go to the run the following command:
+To remove KOBE from your cluster, run the following command:
 ```
 kobectl purge .
 ```
-To remove the operator manually, run
+To remove KOBE operator manually, run
 ```
 kubectl delete -f operator/deploy/operator.yaml
 kubectl delete -f operator/deploy/role.yaml
@@ -214,7 +214,7 @@ kubectl delete -f operator/deploy/clusterrole.yaml
 kubectl delete -f operator/deploy/service_account.yaml
 kubectl delete -f operator/deploy/crds
 ```
-To remove istio manually, run
+To remove Istio manually, run
 ```
 ./istio-*/bin/istioctl manifest generate --set profile=default | kubectl delete -f -
 kubectl delete namespace istio-system
