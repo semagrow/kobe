@@ -5,7 +5,7 @@ metadata:
 spec:
   benchmark: toybench-simple
   federatorName: fedx-toy-simple
-  federatorTemplateRef: fedxtemplate
+  federatorTemplateRef: fedx-noask-template
   evaluator:
     image: semagrow/kobe-sequential-evaluator
   timesToRun: 3
