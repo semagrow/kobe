@@ -1,0 +1,13 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: Experiment
+metadata:
+  name: toyexp-fedx
+spec:
+  benchmark: toybench-simple
+  federatorName: fedx-toy-simple
+  federatorTemplateRef: fedx-noask-template
+  evaluator:
+    image: semagrow/kobe-sequential-evaluator
+  timesToRun: 3
+  dryRun: false
+  forceNewInit: true 

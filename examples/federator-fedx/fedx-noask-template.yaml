@@ -1,11 +1,11 @@
 apiVersion: kobe.semagrow.org/v1alpha1
 kind: FederatorTemplate
 metadata:
-  name: fedxtemplate
+  name: fedx-noask-template
 spec:
   containers:
     - name: maincontainer 
-      image: image: semagrow/fedx-server
+      image: semagrow/fedx-server
       ports:
       - containerPort: 8080
   port: 8080
