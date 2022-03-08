@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export VIRTUOSO_INI_FILE="/virtuoso.ini"
+
 if [ "$DATASET_NAME" ]
 then
   mkdir -p /kobe/dataset/$DATASET_NAME
@@ -7,7 +9,7 @@ then
   if [ -f "/kobe/dataset/$DATASET_NAME/data_downloaded" ]
   then
     if [ ! -f "/kobe/dataset/$DATASET_NAME/data_loaded" ]
-    then     
+    then
       /virtuoso-entrypoint.sh &
       
       until nc -z localhost 1111
