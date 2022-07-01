@@ -1,0 +1,17 @@
+apiVersion: kobe.semagrow.org/v1alpha1
+kind: DatasetTemplate
+metadata:
+  name: ldfservertemplate
+spec:
+  initContainers:
+    - name: initcontainer
+      image: semagrow/ldfserver-init
+  containers:
+    - name: maincontainer
+      image: semagrow/ldfserver-main
+      ports:
+        - containerPort: 3000
+  port: 3000
+  path: /data
+  initPolicy: ForceInit
+
