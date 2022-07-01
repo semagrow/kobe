@@ -1,0 +1,16 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@ldf/server/^3.0.0/components/context.jsonld",
+  "@id": "urn:ldf-server:my",
+  "import": "preset-qpf:config-defaults.json",
+
+  "datasources": [
+    {
+      "@id": "urn:ldf-server:myDataset",
+      "@type": "NTriplesDatasource",
+      "datasourceTitle": "DATASET_NAME",
+      "description": "A dump file with a NTriples back-end",
+      "datasourcePath": "data",
+      "file": "/tmp/dump.nt"
+    }
+  ]
+}
