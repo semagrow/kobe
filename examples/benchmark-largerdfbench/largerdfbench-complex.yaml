@@ -6,43 +6,43 @@ spec:
   datasets:
     - name: chebi
       files:
-        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/ChEBI.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gmouchakis/ChEBI.tar.gz
       templateRef: virtuosotemplate
     - name: dbpedia
       files:
-        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/DBPedia-Subset.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gmouchakis/DBPedia-Subset.tar.gz
       templateRef: virtuosotemplate
     - name: drugbank
       files:
-        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/DrugBank.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gmouchakis/DrugBank.tar.gz
       templateRef: virtuosotemplate
     - name: geonames
       files:
-        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/GeoNames.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gmouchakis/GeoNames.tar.gz
       templateRef: virtuosotemplate
     - name: jamendo
       files:
-        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/Jamendo.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gmouchakis/Jamendo.tar.gz
       templateRef: virtuosotemplate
     - name: kegg
       files:
-        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/KEGG.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gmouchakis/KEGG.tar.gz
       templateRef: virtuosotemplate
     - name: lmdb
       files:
-        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/LMDB.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gmouchakis/LMDB.tar.gz
       templateRef: virtuosotemplate
     - name: nyt
       files:
-        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/NYT.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gmouchakis/NYT.tar.gz
       templateRef: virtuosotemplate
     - name: swdfood
       files:
-        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/SWDFood.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gmouchakis/SWDFood.tar.gz
       templateRef: virtuosotemplate
     - name: ltga-a
       files:
-        - url: https://users.iit.demokritos.gr/~antru/largerdfbench/LinkedTCGA-A.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/largerdfbench/LinkedTCGA-A.tar.gz
       templateRef: virtuosotemplate
   queries:
     - name: c01

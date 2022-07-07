@@ -6,23 +6,23 @@ spec:
   datasets:
     - name: affymetrix
       files:
-        - url: https://users.iit.demokritos.gr/~antru/largerdfbench/Affymetrix.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/largerdfbench/Affymetrix.tar.gz
       templateRef: virtuosotemplate
     - name: dbpedia
       files:
-        - url: https://users.iit.demokritos.gr/~gmouchakis/dumps/DBPedia-Subset.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/gmouchakis/DBPedia-Subset.tar.gz
       templateRef: virtuosotemplate
     - name: ltga-a
       files:
-        - url: https://users.iit.demokritos.gr/~antru/largerdfbench/LinkedTCGA-A.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/largerdfbench/LinkedTCGA-A.tar.gz
       templateRef: virtuosotemplate
     - name: ltga-e
       files:
-        - url: https://users.iit.demokritos.gr/~antru/largerdfbench/LinkedTCGA-E.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/largerdfbench/LinkedTCGA-E.tar.gz
       templateRef: virtuosotemplate
     - name: ltga-m
       files:
-        - url: https://users.iit.demokritos.gr/~antru/largerdfbench/LinkedTCGA-M.tar.gz
+        - url: http://rdf.iit.demokritos.gr/dumps/largerdfbench/LinkedTCGA-M.tar.gz
       templateRef: virtuosotemplate
   queries:
     - name: l1
