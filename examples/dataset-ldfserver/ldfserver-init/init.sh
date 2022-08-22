@@ -10,7 +10,8 @@ then
     if [ "$DOWNLOAD_URL" ]
     then
     
-      touch dump.nt
+      mkdir dump
+      touch dump/dump.nt
       
       mkdir tmp
       cd tmp
@@ -23,7 +24,7 @@ then
       
       for FILE in `ls */*.*`
       do
-        rapper -i guess -o ntriples $FILE >> ../dump.nt
+        rapper -i guess -o ntriples $FILE >> ../dump/dump.nt
       done
       
       cd ..

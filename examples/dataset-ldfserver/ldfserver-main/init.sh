@@ -4,7 +4,7 @@ if [ "$DATASET_NAME" ]
 then
   if [ -f "/kobe/dataset/$DATASET_NAME/data_downloaded" ]
   then
-    cp /kobe/dataset/$DATASET_NAME/dump.nt /tmp
+    cp /kobe/dataset/$DATASET_NAME/dump/dump.nt /tmp
     cp /kobe/dataset/$DATASET_NAME/config.json /tmp
   else
     echo "data not already loaded"
